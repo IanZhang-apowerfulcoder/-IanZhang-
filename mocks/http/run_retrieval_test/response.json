@@ -1,0 +1,38 @@
+{
+  "operation_id": "run_retrieval_test",
+  "status_code": 202,
+  "content_type": "application/json",
+  "body": {
+    "code": "SUCCESS",
+    "message": "成功",
+    "data": {
+      "retrieval_test_run_id": "99999999-9999-4999-8999-999999999999",
+      "knowledge_base_version_id": "77777777-7777-4777-8777-777777777777",
+      "hit_rate_at_k": 0.8,
+      "mean_reciprocal_rank": 0.8,
+      "case_results": [
+        {
+          "test_case_id": "4da8b4a1-c284-4251-89bb-67017b29d6b3",
+          "passed": true,
+          "hits": [
+            {
+              "evidence_id": "fd111111-1111-4111-8111-111111111111",
+              "document_id": "55555555-5555-4555-8555-555555555555",
+              "chunk_id": "fd211111-1111-4111-8111-111111111111",
+              "knowledge_node_id": "fcb8a5ae-f1f5-41cf-887e-560f136fff0f",
+              "rank_no": 1,
+              "relevance_score": 0.91,
+              "citation_text": "示例citation_text"
+            }
+          ]
+        }
+      ],
+      "completed_at": "2026-07-30T12:00:00Z"
+    },
+    "meta": {
+      "request_id": "fe311111-1111-4111-8111-111111111111",
+      "schema_version": "1.0.0",
+      "timestamp": "2026-07-30T12:00:00Z"
+    }
+  }
+}

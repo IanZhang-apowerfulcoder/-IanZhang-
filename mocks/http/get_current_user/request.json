@@ -1,0 +1,12 @@
+{
+  "operation_id": "get_current_user",
+  "method": "GET",
+  "path_template": "/api/v1/me",
+  "path_params": {},
+  "query_params": {},
+  "headers": {
+    "Authorization": "Bearer mock_access_token"
+  },
+  "content_type": null,
+  "body": null
+}

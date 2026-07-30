@@ -1,0 +1,94 @@
+member: X
+member_code: P8
+role: 学习端页面与决策回放实现
+level: 成长型成员
+mentor: 陈尧
+reviewers:
+- 陈尧
+- 张英赫
+- 杨欣怡
+required_reading:
+- README.md
+- CONTRIBUTING.md
+- docs/01_项目重点与范围.md
+- docs/06_系统模块边界.md
+- docs/10_命名与字段契约.md
+- docs/11_接口所有权与变更流程.md
+- docs/14_测试与验收标准.md
+- docs/15_AI辅助开发约束.md
+- docs/16_任务卡与PR规则.md
+- docs/21_端到端用户流程与接口审计.md
+- docs/22_跨模块数据传输契约矩阵.md
+- docs/23_标识符与关联键生命周期.md
+- docs/25_异步任务轮询与状态规则.md
+- docs/26_字段冻结清单.md
+- docs/28_九成员开发文件总教程.md
+- docs/12_前端页面接口依赖.md
+- docs/18_演示与评测指标.md
+- api/openapi.yaml
+- project/boundary_contract_manifest.yaml
+api_scope:
+  contract_owner_operations: []
+  implementation_owner_operations: []
+  consumer_operations:
+  - cancel_learning_session
+  - create_session_feedback
+  - get_assessment_attempt_result
+  - get_assignment
+  - get_current_action
+  - get_current_assessment
+  - get_current_user
+  - get_decision_cycle
+  - get_decision_trace
+  - get_evidence
+  - get_latest_decision
+  - get_learner_profile
+  - get_learning_path
+  - get_learning_resource
+  - get_learning_session
+  - get_organization
+  - list_decision_cycles
+  - list_learner_assignments
+  - list_learning_sessions
+  - list_profile_history
+  - list_session_events
+  - list_session_resources
+  - login
+  - logout
+  - record_behavior_events
+  - refresh_token
+  - start_learning_session
+  - submit_assessment_attempt
+  - update_resource_progress
+internal_scope:
+  member: X
+  owner_interfaces: []
+  design_owner_interfaces: []
+  consumer_interfaces: []
+  boundary_numbers:
+  - 1
+  - 8
+  - 20
+  - 27
+  interface_definitions: {}
+allowed_modules:
+- apps/web/src/features/learner/**
+- apps/web/src/features/decision-trace/**
+- tests/learner/**
+forbidden_actions:
+- 直接读取智能体原始输出
+- 自行修改接口返回结构
+- 修改后端业务规则
+phase_tasks:
+- 阶段0：学习端接口切片和Mock
+- 阶段1：任务、会话、当前动作和基础时间线
+- 阶段2：知识来源与构建状态提示
+- 阶段3：画像、路径和任务页面
+- 阶段4：资源与测评页面导航联调
+- 阶段5：分歧、证据、审核和最终决策回放
+- 阶段6：响应式和性能修复
+- 阶段7：演示操作配合
+mock_index: members/P8_X/mock_index.yaml
+openapi_scope: members/P8_X/openapi_scope.yaml
+internal_scope_file: members/P8_X/internal_scope.yaml
+contract_status: frozen_v6

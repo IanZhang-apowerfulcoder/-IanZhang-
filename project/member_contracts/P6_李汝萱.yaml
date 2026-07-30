@@ -1,0 +1,110 @@
+member: 李汝萱
+member_code: P6
+role: 测评智能体与练习页面
+level: 成长型成员
+mentor: 杨欣怡
+reviewers:
+- 杨欣怡
+- 陈尧
+required_reading:
+- README.md
+- CONTRIBUTING.md
+- docs/01_项目重点与范围.md
+- docs/06_系统模块边界.md
+- docs/10_命名与字段契约.md
+- docs/11_接口所有权与变更流程.md
+- docs/14_测试与验收标准.md
+- docs/15_AI辅助开发约束.md
+- docs/16_任务卡与PR规则.md
+- docs/21_端到端用户流程与接口审计.md
+- docs/22_跨模块数据传输契约矩阵.md
+- docs/23_标识符与关联键生命周期.md
+- docs/25_异步任务轮询与状态规则.md
+- docs/26_字段冻结清单.md
+- docs/28_九成员开发文件总教程.md
+- docs/07_六智能体职责与接口.md
+- docs/12_前端页面接口依赖.md
+- api/internal_agent_interfaces.yaml
+- contracts/jsonschema/agents/assessment_input.schema.json
+- contracts/jsonschema/agents/assessment_output.schema.json
+api_scope:
+  contract_owner_operations: []
+  implementation_owner_operations:
+  - get_assessment_attempt_result
+  - get_current_assessment
+  - submit_assessment_attempt
+  consumer_operations:
+  - get_assessment_attempt_result
+  - get_current_assessment
+  - get_evidence
+  - get_learner_profile
+  - get_learning_path
+  - submit_assessment_attempt
+internal_scope:
+  member: 李汝萱
+  owner_interfaces:
+  - assessment_agent
+  design_owner_interfaces: []
+  consumer_interfaces:
+  - path_planning_agent
+  - review_agent
+  boundary_numbers:
+  - 16
+  - 22
+  - 23
+  interface_definitions:
+    assessment_agent:
+      owner: 李汝萱
+      design_owner: 杨欣怡
+      function_name: run_assessment_generation
+      input: assessment_input.schema.json
+      output: assessment_output.schema.json
+      timeout_seconds: 60
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/assessment_input.schema.json
+      output_schema: contracts/jsonschema/agents/assessment_output.schema.json
+      contract_status: frozen_v6
+    path_planning_agent:
+      owner: 杨欣怡
+      design_owner: 杨欣怡
+      function_name: run_path_planning
+      input: path_plan_input.schema.json
+      output: path_plan_output.schema.json
+      timeout_seconds: 45
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/path_plan_input.schema.json
+      output_schema: contracts/jsonschema/agents/path_plan_output.schema.json
+      contract_status: frozen_v6
+    review_agent:
+      owner: 李佳乐
+      design_owner: 李佳乐
+      function_name: run_review
+      input: review_input.schema.json
+      output: review_output.schema.json
+      timeout_seconds: 45
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/review_input.schema.json
+      output_schema: contracts/jsonschema/agents/review_output.schema.json
+      contract_status: frozen_v6
+allowed_modules:
+- services/agents/assessment/**
+- services/assessment/**
+- apps/web/src/features/assessment/**
+- tests/assessment/**
+forbidden_actions:
+- 向未作答页面返回正确答案
+- 修改公共字段名
+- 修改编排器
+phase_tasks:
+- 阶段0：学习测评输入输出契约和Mock
+- 阶段1：用Mock完成题目、作答和结果页面
+- 阶段2：整理题库与引用展示
+- 阶段3：接入画像和目标知识节点
+- 阶段4：实现测评生成、提交和评分联调
+- 阶段5：实现驳回后重新出题
+- 阶段6：边界测试和修复
+- 阶段7：演示配合
+mock_index: members/P6_李汝萱/mock_index.yaml
+openapi_scope: members/P6_李汝萱/openapi_scope.yaml
+internal_scope_file: members/P6_李汝萱/internal_scope.yaml
+contract_status: frozen_v6

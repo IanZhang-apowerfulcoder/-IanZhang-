@@ -1,0 +1,15 @@
+{
+  "operation_id": "get_learner_profile",
+  "method": "GET",
+  "path_template": "/api/v1/organizations/{organization_id}/learners/{learner_id}/profile",
+  "path_params": {
+    "organization_id": "11111111-1111-4111-8111-111111111111",
+    "learner_id": "33333333-3333-4333-8333-333333333333"
+  },
+  "query_params": {},
+  "headers": {
+    "Authorization": "Bearer mock_access_token"
+  },
+  "content_type": null,
+  "body": null
+}

@@ -1,0 +1,6 @@
+{
+  "operation_id": "logout",
+  "status_code": 204,
+  "content_type": null,
+  "body": null
+}

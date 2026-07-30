@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "学习会话启动事件",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "organization_id",
+    "learner_id",
+    "assignment_id",
+    "session_id",
+    "profile_snapshot_id",
+    "knowledge_base_version_id",
+    "correlation_id",
+    "occurred_at"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "organization_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "learner_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assignment_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "session_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "profile_snapshot_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "knowledge_base_version_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "correlation_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

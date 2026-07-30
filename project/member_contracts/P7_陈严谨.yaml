@@ -1,0 +1,131 @@
+member: 陈严谨
+member_code: P7
+role: 管理端、知识库页面与明确范围的简单接口
+level: 成长型成员
+mentor: 李佳乐
+reviewers:
+- 李佳乐
+- 陈尧
+required_reading:
+- README.md
+- CONTRIBUTING.md
+- docs/01_项目重点与范围.md
+- docs/06_系统模块边界.md
+- docs/10_命名与字段契约.md
+- docs/11_接口所有权与变更流程.md
+- docs/14_测试与验收标准.md
+- docs/15_AI辅助开发约束.md
+- docs/16_任务卡与PR规则.md
+- docs/21_端到端用户流程与接口审计.md
+- docs/22_跨模块数据传输契约矩阵.md
+- docs/23_标识符与关联键生命周期.md
+- docs/25_异步任务轮询与状态规则.md
+- docs/26_字段冻结清单.md
+- docs/28_九成员开发文件总教程.md
+- docs/12_前端页面接口依赖.md
+- api/openapi.yaml
+- project/boundary_contract_manifest.yaml
+- docs/25_异步任务轮询与状态规则.md
+api_scope:
+  contract_owner_operations: []
+  implementation_owner_operations:
+  - archive_document
+  - archive_knowledge_base
+  - create_assignments
+  - create_knowledge_base
+  - create_training_program
+  - get_assignment
+  - get_build_run
+  - get_document
+  - get_knowledge_base
+  - get_knowledge_base_version
+  - get_knowledge_graph
+  - get_learner
+  - get_quality_report
+  - get_training_program
+  - list_build_events
+  - list_build_runs
+  - list_documents
+  - list_knowledge_base_versions
+  - list_knowledge_bases
+  - list_learner_assignments
+  - list_learners
+  - list_program_assignments
+  - list_training_programs
+  - publish_training_program
+  - retry_document_parse
+  - update_knowledge_base
+  - update_training_program
+  - upload_document
+  consumer_operations:
+  - activate_knowledge_base_version
+  - archive_document
+  - archive_knowledge_base
+  - cancel_build_run
+  - create_assignments
+  - create_build_run
+  - create_knowledge_base
+  - create_training_program
+  - get_build_run
+  - get_current_user
+  - get_document
+  - get_human_review_task
+  - get_knowledge_base
+  - get_knowledge_base_version
+  - get_knowledge_graph
+  - get_learner
+  - get_organization
+  - get_quality_report
+  - get_training_program
+  - list_build_events
+  - list_build_runs
+  - list_documents
+  - list_human_review_tasks
+  - list_knowledge_base_versions
+  - list_knowledge_bases
+  - list_learners
+  - list_program_assignments
+  - list_training_programs
+  - login
+  - publish_knowledge_base_version
+  - publish_training_program
+  - retry_document_parse
+  - run_retrieval_test
+  - update_knowledge_base
+  - update_training_program
+  - upload_document
+internal_scope:
+  member: 陈严谨
+  owner_interfaces: []
+  design_owner_interfaces: []
+  consumer_interfaces: []
+  boundary_numbers:
+  - 2
+  - 3
+  - 6
+  - 7
+  - 26
+  interface_definitions: {}
+allowed_modules:
+- apps/web/src/features/admin/**
+- services/knowledge/api/**
+- services/training/api/**
+- tests/admin/**
+forbidden_actions:
+- 修改多租户权限规则
+- 修改知识构建算法
+- 修改数据库核心表
+- 修改公共契约
+phase_tasks:
+- 阶段0：学习管理端接口切片和Mock
+- 阶段1：实现知识库、文档、构建状态Mock页面
+- 阶段2：实现批准的简单接口并联调真实构建
+- 阶段3：实现学习者、培训项目和分配页面
+- 阶段4：管理端只读查看资源与测评记录
+- 阶段5：人工审核和智能体运行记录只读页面
+- 阶段6：错误状态与回归修复
+- 阶段7：演示数据检查
+mock_index: members/P7_陈严谨/mock_index.yaml
+openapi_scope: members/P7_陈严谨/openapi_scope.yaml
+internal_scope_file: members/P7_陈严谨/internal_scope.yaml
+contract_status: frozen_v6

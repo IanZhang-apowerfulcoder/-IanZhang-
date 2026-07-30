@@ -1,0 +1,37 @@
+{
+  "operation_id": "get_agent_run",
+  "status_code": 200,
+  "content_type": "application/json",
+  "body": {
+    "code": "SUCCESS",
+    "message": "成功",
+    "data": {
+      "agent_run_id": "eeeeeeee-eeee-4eee-8eee-eeeeeeeeeeee",
+      "organization_id": "11111111-1111-4111-8111-111111111111",
+      "session_id": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "decision_cycle_id": "dddddddd-dddd-4ddd-8ddd-dddddddddddd",
+      "agent_code": "示例agent_code",
+      "agent_run_status": "succeeded",
+      "input_schema_version": "示例input_schema_version",
+      "output_schema_version": "示例output_schema_version",
+      "input_reference_ids": [
+        "4917d29e-f036-4684-85e1-3d4ae5f26709"
+      ],
+      "output_proposal_id": "c5eb89ce-2eb9-4876-8682-29b80da51b66",
+      "model_provider_code": "示例model_provider_code",
+      "model_name": "示例model_name",
+      "latency_ms": 1,
+      "input_token_count": 1,
+      "output_token_count": 1,
+      "estimated_cost_amount": 0.8,
+      "error_code": "示例error_code",
+      "started_at": "2026-07-30T12:00:00Z",
+      "finished_at": "2026-07-30T12:00:00Z"
+    },
+    "meta": {
+      "request_id": "fe311111-1111-4111-8111-111111111111",
+      "schema_version": "1.0.0",
+      "timestamp": "2026-07-30T12:00:00Z"
+    }
+  }
+}

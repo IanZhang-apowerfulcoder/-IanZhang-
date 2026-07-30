@@ -1,0 +1,15 @@
+{
+  "operation_id": "get_assignment",
+  "method": "GET",
+  "path_template": "/api/v1/organizations/{organization_id}/assignments/{assignment_id}",
+  "path_params": {
+    "organization_id": "11111111-1111-4111-8111-111111111111",
+    "assignment_id": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb"
+  },
+  "query_params": {},
+  "headers": {
+    "Authorization": "Bearer mock_access_token"
+  },
+  "content_type": null,
+  "body": null
+}

@@ -1,0 +1,30 @@
+version: 1.0.0
+contract_status: frozen_v6
+errors:
+- code: VALIDATION_ERROR
+  http_status: 400
+  meaning: 请求字段名、类型或必填项不符合契约
+- code: UNAUTHORIZED
+  http_status: 401
+  meaning: 未登录或访问令牌失效
+- code: FORBIDDEN
+  http_status: 403
+  meaning: 无组织或资源访问权限
+- code: RESOURCE_NOT_FOUND
+  http_status: 404
+  meaning: 资源不存在或不属于当前组织
+- code: CONFLICT
+  http_status: 409
+  meaning: 状态冲突、版本冲突或幂等键冲突
+- code: SCHEMA_VALIDATION_FAILED
+  http_status: 422
+  meaning: 智能体输出未通过JSON Schema校验
+- code: KNOWLEDGE_BUILD_FAILED
+  http_status: 500
+  meaning: 知识构建任务失败
+- code: AGENT_RUN_FAILED
+  http_status: 500
+  meaning: 智能体执行失败
+- code: HUMAN_REVIEW_REQUIRED
+  http_status: 409
+  meaning: 流程需要人工审核后继续

@@ -1,0 +1,11 @@
+member: 陈严谨
+owner_interfaces: []
+design_owner_interfaces: []
+consumer_interfaces: []
+boundary_numbers:
+- 2
+- 3
+- 6
+- 7
+- 26
+interface_definitions: {}

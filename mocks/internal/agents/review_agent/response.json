@@ -1,0 +1,19 @@
+{
+  "review_id": "f4111111-1111-4111-8111-111111111111",
+  "proposal_id": "f1411111-1111-4111-8111-111111111111",
+  "reviewed_proposal_id": "f1111111-1111-4111-8111-111111111111",
+  "review_result": "approved",
+  "overall_score": 92,
+  "checks": {
+    "schema_valid": true,
+    "evidence_supported": true,
+    "factual_consistent": true,
+    "no_conflict": true,
+    "answer_verifiable": true
+  },
+  "issues": [],
+  "repair_action": "none",
+  "repair_instructions": [],
+  "confidence": 0.94,
+  "requires_human_review": false
+}

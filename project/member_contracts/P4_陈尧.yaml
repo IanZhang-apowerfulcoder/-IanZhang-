@@ -1,0 +1,153 @@
+member: 陈尧
+member_code: P4
+role: 前端架构、联合决策可视化与评测分析
+level: 核心成员
+mentor: null
+reviewers:
+- 张英赫
+required_reading:
+- README.md
+- CONTRIBUTING.md
+- docs/01_项目重点与范围.md
+- docs/06_系统模块边界.md
+- docs/10_命名与字段契约.md
+- docs/11_接口所有权与变更流程.md
+- docs/14_测试与验收标准.md
+- docs/15_AI辅助开发约束.md
+- docs/16_任务卡与PR规则.md
+- docs/21_端到端用户流程与接口审计.md
+- docs/22_跨模块数据传输契约矩阵.md
+- docs/23_标识符与关联键生命周期.md
+- docs/25_异步任务轮询与状态规则.md
+- docs/26_字段冻结清单.md
+- docs/28_九成员开发文件总教程.md
+- docs/12_前端页面接口依赖.md
+- docs/18_演示与评测指标.md
+- api/openapi.yaml
+- mocks/http/index.yaml
+- project/boundary_contract_manifest.yaml
+api_scope:
+  contract_owner_operations:
+  - get_agent_metrics
+  implementation_owner_operations: []
+  consumer_operations:
+  - get_agent_metrics
+  - get_agent_run
+  - get_current_action
+  - get_decision_cycle
+  - get_decision_trace
+  - get_evidence
+  - get_human_review_task
+  - get_knowledge_graph
+  - get_latest_decision
+  - get_learner_profile
+  - get_learning_path
+  - get_learning_session
+  - get_quality_report
+  - list_decision_cycles
+  - list_human_review_tasks
+  - list_learning_sessions
+  - list_profile_history
+  - list_session_events
+internal_scope:
+  member: 陈尧
+  owner_interfaces: []
+  design_owner_interfaces: []
+  consumer_interfaces:
+  - diagnosis_agent
+  - path_planning_agent
+  - resource_generation_agent
+  - assessment_agent
+  - review_agent
+  - arbitration_agent
+  boundary_numbers:
+  - 20
+  - 27
+  interface_definitions:
+    arbitration_agent:
+      owner: 张英赫
+      design_owner: 张英赫
+      function_name: run_arbitration
+      input: arbitration_input.schema.json
+      output: arbitration_output.schema.json
+      timeout_seconds: 60
+      max_retries: 1
+      input_schema: contracts/jsonschema/agents/arbitration_input.schema.json
+      output_schema: contracts/jsonschema/agents/arbitration_output.schema.json
+      contract_status: frozen_v6
+    assessment_agent:
+      owner: 李汝萱
+      design_owner: 杨欣怡
+      function_name: run_assessment_generation
+      input: assessment_input.schema.json
+      output: assessment_output.schema.json
+      timeout_seconds: 60
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/assessment_input.schema.json
+      output_schema: contracts/jsonschema/agents/assessment_output.schema.json
+      contract_status: frozen_v6
+    diagnosis_agent:
+      owner: 杨欣怡
+      design_owner: 杨欣怡
+      function_name: run_diagnosis
+      input: diagnosis_input.schema.json
+      output: diagnosis_output.schema.json
+      timeout_seconds: 45
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/diagnosis_input.schema.json
+      output_schema: contracts/jsonschema/agents/diagnosis_output.schema.json
+      contract_status: frozen_v6
+    path_planning_agent:
+      owner: 杨欣怡
+      design_owner: 杨欣怡
+      function_name: run_path_planning
+      input: path_plan_input.schema.json
+      output: path_plan_output.schema.json
+      timeout_seconds: 45
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/path_plan_input.schema.json
+      output_schema: contracts/jsonschema/agents/path_plan_output.schema.json
+      contract_status: frozen_v6
+    resource_generation_agent:
+      owner: 郑翘楚
+      design_owner: 杨欣怡
+      function_name: run_resource_generation
+      input: resource_input.schema.json
+      output: resource_output.schema.json
+      timeout_seconds: 60
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/resource_input.schema.json
+      output_schema: contracts/jsonschema/agents/resource_output.schema.json
+      contract_status: frozen_v6
+    review_agent:
+      owner: 李佳乐
+      design_owner: 李佳乐
+      function_name: run_review
+      input: review_input.schema.json
+      output: review_output.schema.json
+      timeout_seconds: 45
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/review_input.schema.json
+      output_schema: contracts/jsonschema/agents/review_output.schema.json
+      contract_status: frozen_v6
+allowed_modules:
+- apps/web/**
+- contracts/typescript/**
+- mocks/**
+- docs/**
+forbidden_actions:
+- 前端直接解析模型原始输出
+- 绕过公开接口读取后端数据库
+phase_tasks:
+- 阶段0：冻结页面地图、展示模型和图表字段
+- 阶段1：建立前端骨架、请求层和Mock页面
+- 阶段2：知识质量、图谱和引用可视化
+- 阶段3：画像和学习路径可视化
+- 阶段4：资源和测评展示审核
+- 阶段5：时间线、分歧、证据链和仲裁可视化
+- 阶段6：指标看板与演示图表
+- 阶段7：演示与答辩素材
+mock_index: members/P4_陈尧/mock_index.yaml
+openapi_scope: members/P4_陈尧/openapi_scope.yaml
+internal_scope_file: members/P4_陈尧/internal_scope.yaml
+contract_status: frozen_v6

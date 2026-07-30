@@ -1,0 +1,168 @@
+member: 李佳乐
+member_code: P2
+role: 智能体基础设施、自动知识工程、检索与审核纠偏
+level: 核心成员
+mentor: null
+reviewers:
+- 张英赫
+required_reading:
+- README.md
+- CONTRIBUTING.md
+- docs/01_项目重点与范围.md
+- docs/06_系统模块边界.md
+- docs/10_命名与字段契约.md
+- docs/11_接口所有权与变更流程.md
+- docs/14_测试与验收标准.md
+- docs/15_AI辅助开发约束.md
+- docs/16_任务卡与PR规则.md
+- docs/21_端到端用户流程与接口审计.md
+- docs/22_跨模块数据传输契约矩阵.md
+- docs/23_标识符与关联键生命周期.md
+- docs/25_异步任务轮询与状态规则.md
+- docs/26_字段冻结清单.md
+- docs/28_九成员开发文件总教程.md
+- docs/07_六智能体职责与接口.md
+- docs/08_联合决策状态机.md
+- docs/09_数据流与调用链.md
+- docs/13_数据库与持久化约束.md
+- api/openapi.yaml
+- api/internal_agent_interfaces.yaml
+- project/boundary_contract_manifest.yaml
+api_scope:
+  contract_owner_operations:
+  - activate_knowledge_base_version
+  - archive_document
+  - archive_knowledge_base
+  - cancel_build_run
+  - create_build_run
+  - create_knowledge_base
+  - get_agent_run
+  - get_build_run
+  - get_document
+  - get_evidence
+  - get_human_review_task
+  - get_knowledge_base
+  - get_knowledge_base_version
+  - get_knowledge_graph
+  - get_quality_report
+  - list_build_events
+  - list_build_runs
+  - list_documents
+  - list_human_review_tasks
+  - list_knowledge_base_versions
+  - list_knowledge_bases
+  - publish_knowledge_base_version
+  - resolve_human_review_task
+  - retry_document_parse
+  - run_retrieval_test
+  - update_knowledge_base
+  - upload_document
+  implementation_owner_operations:
+  - activate_knowledge_base_version
+  - cancel_build_run
+  - create_build_run
+  - get_agent_run
+  - get_evidence
+  - get_human_review_task
+  - list_human_review_tasks
+  - publish_knowledge_base_version
+  - resolve_human_review_task
+  - run_retrieval_test
+  consumer_operations: []
+internal_scope:
+  member: 李佳乐
+  owner_interfaces:
+  - review_agent
+  design_owner_interfaces: []
+  consumer_interfaces:
+  - diagnosis_agent
+  - path_planning_agent
+  - resource_generation_agent
+  - assessment_agent
+  boundary_numbers:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 12
+  - 17
+  - 25
+  - 26
+  interface_definitions:
+    assessment_agent:
+      owner: 李汝萱
+      design_owner: 杨欣怡
+      function_name: run_assessment_generation
+      input: assessment_input.schema.json
+      output: assessment_output.schema.json
+      timeout_seconds: 60
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/assessment_input.schema.json
+      output_schema: contracts/jsonschema/agents/assessment_output.schema.json
+      contract_status: frozen_v6
+    diagnosis_agent:
+      owner: 杨欣怡
+      design_owner: 杨欣怡
+      function_name: run_diagnosis
+      input: diagnosis_input.schema.json
+      output: diagnosis_output.schema.json
+      timeout_seconds: 45
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/diagnosis_input.schema.json
+      output_schema: contracts/jsonschema/agents/diagnosis_output.schema.json
+      contract_status: frozen_v6
+    path_planning_agent:
+      owner: 杨欣怡
+      design_owner: 杨欣怡
+      function_name: run_path_planning
+      input: path_plan_input.schema.json
+      output: path_plan_output.schema.json
+      timeout_seconds: 45
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/path_plan_input.schema.json
+      output_schema: contracts/jsonschema/agents/path_plan_output.schema.json
+      contract_status: frozen_v6
+    resource_generation_agent:
+      owner: 郑翘楚
+      design_owner: 杨欣怡
+      function_name: run_resource_generation
+      input: resource_input.schema.json
+      output: resource_output.schema.json
+      timeout_seconds: 60
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/resource_input.schema.json
+      output_schema: contracts/jsonschema/agents/resource_output.schema.json
+      contract_status: frozen_v6
+    review_agent:
+      owner: 李佳乐
+      design_owner: 李佳乐
+      function_name: run_review
+      input: review_input.schema.json
+      output: review_output.schema.json
+      timeout_seconds: 45
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/review_input.schema.json
+      output_schema: contracts/jsonschema/agents/review_output.schema.json
+      contract_status: frozen_v6
+allowed_modules:
+- services/knowledge/**
+- services/retrieval/**
+- services/agents/review/**
+- services/agent-runtime/**
+- contracts/**
+forbidden_actions:
+- 擅自修改学习路径业务规则
+- 绕过张英赫修改编排状态机
+phase_tasks:
+- 阶段0：冻结知识、证据、审核和运行时契约
+- 阶段1：提供Mock检索、证据和审核结果
+- 阶段2：实现真实知识工程、检索和质量评测
+- 阶段3：为诊断与路径提供受控检索
+- 阶段4：为资源与测评提供受控检索
+- 阶段5：实现审核纠偏与自动修复
+- 阶段6：知识、证据和异常回归
+- 阶段7：离线知识库兜底
+mock_index: members/P2_李佳乐/mock_index.yaml
+openapi_scope: members/P2_李佳乐/openapi_scope.yaml
+internal_scope_file: members/P2_李佳乐/internal_scope.yaml
+contract_status: frozen_v6

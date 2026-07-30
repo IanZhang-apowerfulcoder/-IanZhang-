@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "知识构建结果",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "build_run_id",
+    "knowledge_base_id",
+    "knowledge_base_version_id",
+    "quality_report_id",
+    "index_reference_id",
+    "publishable"
+  ],
+  "properties": {
+    "build_run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "knowledge_base_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "knowledge_base_version_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "quality_report_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "index_reference_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "publishable": {
+      "type": "boolean"
+    }
+  }
+}

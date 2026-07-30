@@ -1,0 +1,10 @@
+member: X
+owner_interfaces: []
+design_owner_interfaces: []
+consumer_interfaces: []
+boundary_numbers:
+- 1
+- 8
+- 20
+- 27
+interface_definitions: {}

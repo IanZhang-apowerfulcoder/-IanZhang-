@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "行为汇总结果",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "behavior_summary_id",
+    "learner_id",
+    "session_id",
+    "behavior_feature_values",
+    "generated_at"
+  ],
+  "properties": {
+    "behavior_summary_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "learner_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "session_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "behavior_feature_values": {
+      "type": "object"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

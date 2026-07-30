@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "决策动作命令",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision_id",
+    "action_execution_id",
+    "action_type",
+    "reference_id",
+    "idempotency_key"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "action_execution_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "action_type": {
+      "type": "string",
+      "enum": [
+        "study_resource",
+        "complete_assessment",
+        "wait_human_review",
+        "complete_session"
+      ]
+    },
+    "reference_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "idempotency_key": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "retrieval_request_id": "fd311111-1111-4111-8111-111111111111",
+  "knowledge_base_version_id": "77777777-7777-4777-8777-777777777777",
+  "query_text": "链表反转时三个指针应如何更新？",
+  "top_k": 5,
+  "filters": {}
+}

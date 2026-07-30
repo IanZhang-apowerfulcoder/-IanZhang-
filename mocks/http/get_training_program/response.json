@@ -1,0 +1,26 @@
+{
+  "operation_id": "get_training_program",
+  "status_code": 200,
+  "content_type": "application/json",
+  "body": {
+    "code": "SUCCESS",
+    "message": "成功",
+    "data": {
+      "training_program_id": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "organization_id": "11111111-1111-4111-8111-111111111111",
+      "program_name": "大模型应用开发实训计划",
+      "knowledge_base_id": "44444444-4444-4444-8444-444444444444",
+      "knowledge_base_version_id": "77777777-7777-4777-8777-777777777777",
+      "program_status": "published",
+      "target_description": "掌握检索增强生成与智能体开发基础",
+      "created_by_user_id": "22222222-2222-4222-8222-222222222222",
+      "created_at": "2026-07-30T12:00:00Z",
+      "updated_at": "2026-07-30T12:00:00Z"
+    },
+    "meta": {
+      "request_id": "fe311111-1111-4111-8111-111111111111",
+      "schema_version": "1.0.0",
+      "timestamp": "2026-07-30T12:00:00Z"
+    }
+  }
+}

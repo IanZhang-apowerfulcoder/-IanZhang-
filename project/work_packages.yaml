@@ -1,0 +1,120 @@
+version: 1.0.0
+source_of_truth: project/member_contracts/
+members:
+- member: 张英赫
+  member_code: P1
+  role: 项目负责人、总架构、编排与仲裁
+  phase_tasks:
+  - 阶段0：冻结公共契约、字段和联合决策状态机
+  - 阶段1：用Mock跑通学习会话与决策轮次
+  - 阶段2：接入知识工程结果与检索上下文
+  - 阶段3：接入诊断和路径智能体
+  - 阶段4：接入资源和测评智能体
+  - 阶段5：实现审核、仲裁、重试与人工介入
+  - 阶段6：完整集成、性能和回归
+  - 阶段7：发布、演示与答辩
+  contract_file: project/member_contracts/P1_张英赫.yaml
+- member: 李佳乐
+  member_code: P2
+  role: 智能体基础设施、自动知识工程、检索与审核纠偏
+  phase_tasks:
+  - 阶段0：冻结知识、证据、审核和运行时契约
+  - 阶段1：提供Mock检索、证据和审核结果
+  - 阶段2：实现真实知识工程、检索和质量评测
+  - 阶段3：为诊断与路径提供受控检索
+  - 阶段4：为资源与测评提供受控检索
+  - 阶段5：实现审核纠偏与自动修复
+  - 阶段6：知识、证据和异常回归
+  - 阶段7：离线知识库兜底
+  contract_file: project/member_contracts/P2_李佳乐.yaml
+- member: 杨欣怡
+  member_code: P3
+  role: 诊断、学习路径、画像与学习业务契约
+  phase_tasks:
+  - 阶段0：冻结诊断、路径、资源、测评和画像契约
+  - 阶段1：提供四类业务Mock
+  - 阶段2：定义知识节点与画像证据映射
+  - 阶段3：实现诊断、路径和画像更新
+  - 阶段4：审核资源和测评实现
+  - 阶段5：补充分歧提案与仲裁输入
+  - 阶段6：业务准确性评测
+  - 阶段7：个性化闭环答辩
+  contract_file: project/member_contracts/P3_杨欣怡.yaml
+- member: 陈尧
+  member_code: P4
+  role: 前端架构、联合决策可视化与评测分析
+  phase_tasks:
+  - 阶段0：冻结页面地图、展示模型和图表字段
+  - 阶段1：建立前端骨架、请求层和Mock页面
+  - 阶段2：知识质量、图谱和引用可视化
+  - 阶段3：画像和学习路径可视化
+  - 阶段4：资源和测评展示审核
+  - 阶段5：时间线、分歧、证据链和仲裁可视化
+  - 阶段6：指标看板与演示图表
+  - 阶段7：演示与答辩素材
+  contract_file: project/member_contracts/P4_陈尧.yaml
+- member: 郑翘楚
+  member_code: P5
+  role: 资源生成智能体与学习资料页面
+  phase_tasks:
+  - 阶段0：学习资源输入输出契约和Mock
+  - 阶段1：用Mock完成资源列表、详情、引用与进度页面
+  - 阶段2：修复引用展示问题
+  - 阶段3：接入画像和路径上下文
+  - 阶段4：实现资源生成智能体并联调
+  - 阶段5：实现审核驳回后的重新生成
+  - 阶段6：补测试和修复
+  - 阶段7：演示配合
+  contract_file: project/member_contracts/P5_郑翘楚.yaml
+- member: 李汝萱
+  member_code: P6
+  role: 测评智能体与练习页面
+  phase_tasks:
+  - 阶段0：学习测评输入输出契约和Mock
+  - 阶段1：用Mock完成题目、作答和结果页面
+  - 阶段2：整理题库与引用展示
+  - 阶段3：接入画像和目标知识节点
+  - 阶段4：实现测评生成、提交和评分联调
+  - 阶段5：实现驳回后重新出题
+  - 阶段6：边界测试和修复
+  - 阶段7：演示配合
+  contract_file: project/member_contracts/P6_李汝萱.yaml
+- member: 陈严谨
+  member_code: P7
+  role: 管理端、知识库页面与明确范围的简单接口
+  phase_tasks:
+  - 阶段0：学习管理端接口切片和Mock
+  - 阶段1：实现知识库、文档、构建状态Mock页面
+  - 阶段2：实现批准的简单接口并联调真实构建
+  - 阶段3：实现学习者、培训项目和分配页面
+  - 阶段4：管理端只读查看资源与测评记录
+  - 阶段5：人工审核和智能体运行记录只读页面
+  - 阶段6：错误状态与回归修复
+  - 阶段7：演示数据检查
+  contract_file: project/member_contracts/P7_陈严谨.yaml
+- member: X
+  member_code: P8
+  role: 学习端页面与决策回放实现
+  phase_tasks:
+  - 阶段0：学习端接口切片和Mock
+  - 阶段1：任务、会话、当前动作和基础时间线
+  - 阶段2：知识来源与构建状态提示
+  - 阶段3：画像、路径和任务页面
+  - 阶段4：资源与测评页面导航联调
+  - 阶段5：分歧、证据、审核和最终决策回放
+  - 阶段6：响应式和性能修复
+  - 阶段7：演示操作配合
+  contract_file: project/member_contracts/P8_X.yaml
+- member: 斯汀
+  member_code: P9
+  role: 质量保障、评测数据与演示材料
+  phase_tasks:
+  - 阶段0：验证所有契约和Mock可读
+  - 阶段1：验证所有Mock页面状态
+  - 阶段2：建立检索、无答案、冲突和租户隔离数据集
+  - 阶段3：建立诊断、路径和画像预期样本
+  - 阶段4：建立资源质量和题目答案评测集
+  - 阶段5：建立分歧、修订、仲裁和人工介入场景
+  - 阶段6：执行完整回归并形成指标
+  - 阶段7：三轮演示检查
+  contract_file: project/member_contracts/P9_斯汀.yaml

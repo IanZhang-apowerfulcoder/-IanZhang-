@@ -1,0 +1,86 @@
+{
+  "workflow_name": "学习者完成一次联合决策学习闭环",
+  "steps": [
+    {
+      "sequence_no": 1,
+      "operation_id": "list_learner_assignments",
+      "output_ids": {
+        "assignment_id": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb"
+      }
+    },
+    {
+      "sequence_no": 2,
+      "operation_id": "start_learning_session",
+      "output_ids": {
+        "session_id": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+        "profile_snapshot_id": "fc111111-1111-4111-8111-111111111111",
+        "knowledge_base_version_id": "77777777-7777-4777-8777-777777777777"
+      }
+    },
+    {
+      "sequence_no": 3,
+      "internal_interface": "diagnosis_agent",
+      "output_ids": {
+        "proposal_id": "f2111111-1111-4111-8111-111111111111"
+      }
+    },
+    {
+      "sequence_no": 4,
+      "internal_interface": "path_planning_agent",
+      "output_ids": {
+        "proposal_id": "f3111111-1111-4111-8111-111111111111",
+        "path_step_id": "fe611111-1111-4111-8111-111111111111"
+      }
+    },
+    {
+      "sequence_no": 5,
+      "internal_interface": "resource_generation_agent",
+      "output_ids": {
+        "proposal_id": "f1111111-1111-4111-8111-111111111111",
+        "resource_draft_id": "f7121111-1111-4111-8111-111111111111"
+      }
+    },
+    {
+      "sequence_no": 6,
+      "internal_interface": "review_agent",
+      "output_ids": {
+        "review_id": "f4111111-1111-4111-8111-111111111111",
+        "review_result": "approved"
+      }
+    },
+    {
+      "sequence_no": 7,
+      "internal_interface": "arbitration_agent",
+      "output_ids": {
+        "proposal_id": "f1511111-1111-4111-8111-111111111111",
+        "decision_type": "deliver_resource"
+      }
+    },
+    {
+      "sequence_no": 8,
+      "operation_id": "get_current_action",
+      "output_ids": {
+        "resource_id": "f7111111-1111-4111-8111-111111111111",
+        "action_status": "available"
+      }
+    },
+    {
+      "sequence_no": 9,
+      "operation_id": "update_resource_progress",
+      "output_ids": {
+        "resource_id": "f7111111-1111-4111-8111-111111111111",
+        "progress_status": "completed",
+        "progress_percent": 100,
+        "updated_at": "2026-07-30T12:00:00Z"
+      }
+    },
+    {
+      "sequence_no": 10,
+      "operation_id": "get_learner_profile",
+      "output_ids": {
+        "profile_snapshot_id": "fc211111-1111-4111-8111-111111111111",
+        "profile_version_no": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+member: 张英赫
+member_code: P1
+role: 项目负责人、总架构、编排与仲裁
+level: 核心成员
+mentor: null
+reviewers:
+- 李佳乐
+- 杨欣怡
+- 陈尧
+required_reading:
+- README.md
+- CONTRIBUTING.md
+- docs/01_项目重点与范围.md
+- docs/06_系统模块边界.md
+- docs/10_命名与字段契约.md
+- docs/11_接口所有权与变更流程.md
+- docs/14_测试与验收标准.md
+- docs/15_AI辅助开发约束.md
+- docs/16_任务卡与PR规则.md
+- docs/21_端到端用户流程与接口审计.md
+- docs/22_跨模块数据传输契约矩阵.md
+- docs/23_标识符与关联键生命周期.md
+- docs/25_异步任务轮询与状态规则.md
+- docs/26_字段冻结清单.md
+- docs/28_九成员开发文件总教程.md
+- docs/07_六智能体职责与接口.md
+- docs/08_联合决策状态机.md
+- docs/09_数据流与调用链.md
+- docs/13_数据库与持久化约束.md
+- api/openapi.yaml
+- api/internal_agent_interfaces.yaml
+- project/boundary_contract_manifest.yaml
+api_scope:
+  contract_owner_operations:
+  - cancel_learning_session
+  - get_current_action
+  - get_current_user
+  - get_decision_cycle
+  - get_decision_trace
+  - get_latest_decision
+  - get_learning_session
+  - get_organization
+  - health_check
+  - list_decision_cycles
+  - list_learning_sessions
+  - list_session_events
+  - login
+  - logout
+  - refresh_token
+  - start_learning_session
+  implementation_owner_operations:
+  - cancel_learning_session
+  - get_agent_metrics
+  - get_current_action
+  - get_current_user
+  - get_decision_cycle
+  - get_decision_trace
+  - get_latest_decision
+  - get_learning_session
+  - get_organization
+  - health_check
+  - list_decision_cycles
+  - list_learning_sessions
+  - list_session_events
+  - login
+  - logout
+  - refresh_token
+  - start_learning_session
+  consumer_operations: []
+internal_scope:
+  member: 张英赫
+  owner_interfaces:
+  - arbitration_agent
+  design_owner_interfaces: []
+  consumer_interfaces:
+  - diagnosis_agent
+  - path_planning_agent
+  - resource_generation_agent
+  - assessment_agent
+  - review_agent
+  - arbitration_agent
+  boundary_numbers:
+  - 1
+  - 8
+  - 9
+  - 18
+  - 19
+  interface_definitions:
+    arbitration_agent:
+      owner: 张英赫
+      design_owner: 张英赫
+      function_name: run_arbitration
+      input: arbitration_input.schema.json
+      output: arbitration_output.schema.json
+      timeout_seconds: 60
+      max_retries: 1
+      input_schema: contracts/jsonschema/agents/arbitration_input.schema.json
+      output_schema: contracts/jsonschema/agents/arbitration_output.schema.json
+      contract_status: frozen_v6
+    assessment_agent:
+      owner: 李汝萱
+      design_owner: 杨欣怡
+      function_name: run_assessment_generation
+      input: assessment_input.schema.json
+      output: assessment_output.schema.json
+      timeout_seconds: 60
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/assessment_input.schema.json
+      output_schema: contracts/jsonschema/agents/assessment_output.schema.json
+      contract_status: frozen_v6
+    diagnosis_agent:
+      owner: 杨欣怡
+      design_owner: 杨欣怡
+      function_name: run_diagnosis
+      input: diagnosis_input.schema.json
+      output: diagnosis_output.schema.json
+      timeout_seconds: 45
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/diagnosis_input.schema.json
+      output_schema: contracts/jsonschema/agents/diagnosis_output.schema.json
+      contract_status: frozen_v6
+    path_planning_agent:
+      owner: 杨欣怡
+      design_owner: 杨欣怡
+      function_name: run_path_planning
+      input: path_plan_input.schema.json
+      output: path_plan_output.schema.json
+      timeout_seconds: 45
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/path_plan_input.schema.json
+      output_schema: contracts/jsonschema/agents/path_plan_output.schema.json
+      contract_status: frozen_v6
+    resource_generation_agent:
+      owner: 郑翘楚
+      design_owner: 杨欣怡
+      function_name: run_resource_generation
+      input: resource_input.schema.json
+      output: resource_output.schema.json
+      timeout_seconds: 60
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/resource_input.schema.json
+      output_schema: contracts/jsonschema/agents/resource_output.schema.json
+      contract_status: frozen_v6
+    review_agent:
+      owner: 李佳乐
+      design_owner: 李佳乐
+      function_name: run_review
+      input: review_input.schema.json
+      output: review_output.schema.json
+      timeout_seconds: 45
+      max_retries: 2
+      input_schema: contracts/jsonschema/agents/review_input.schema.json
+      output_schema: contracts/jsonschema/agents/review_output.schema.json
+      contract_status: frozen_v6
+allowed_modules:
+- services/orchestrator/**
+- services/arbitration/**
+- services/session/**
+- contracts/**
+- project/**
+- docs/**
+forbidden_actions:
+- 未经模块负责人同意直接重写知识工程核心
+- 长期代写普通页面与基础增删改查
+phase_tasks:
+- 阶段0：冻结公共契约、字段和联合决策状态机
+- 阶段1：用Mock跑通学习会话与决策轮次
+- 阶段2：接入知识工程结果与检索上下文
+- 阶段3：接入诊断和路径智能体
+- 阶段4：接入资源和测评智能体
+- 阶段5：实现审核、仲裁、重试与人工介入
+- 阶段6：完整集成、性能和回归
+- 阶段7：发布、演示与答辩
+mock_index: members/P1_张英赫/mock_index.yaml
+openapi_scope: members/P1_张英赫/openapi_scope.yaml
+internal_scope_file: members/P1_张英赫/internal_scope.yaml
+contract_status: frozen_v6

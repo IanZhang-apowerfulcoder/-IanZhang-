@@ -1,0 +1,25 @@
+{
+  "operation_id": "get_decision_cycle",
+  "status_code": 200,
+  "content_type": "application/json",
+  "body": {
+    "code": "SUCCESS",
+    "message": "成功",
+    "data": {
+      "decision_cycle_id": "dddddddd-dddd-4ddd-8ddd-dddddddddddd",
+      "session_id": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "cycle_no": 1,
+      "trigger_type": "session_started",
+      "trigger_reference_id": "c37bf02f-7341-4588-8108-02f711c8d26d",
+      "decision_cycle_status": "queued",
+      "started_at": "2026-07-30T12:00:00Z",
+      "finished_at": "2026-07-30T12:00:00Z",
+      "failure_code": "示例failure_code"
+    },
+    "meta": {
+      "request_id": "fe311111-1111-4111-8111-111111111111",
+      "schema_version": "1.0.0",
+      "timestamp": "2026-07-30T12:00:00Z"
+    }
+  }
+}

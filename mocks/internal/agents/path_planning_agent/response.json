@@ -1,0 +1,28 @@
+{
+  "proposal_id": "f3111111-1111-4111-8111-111111111111",
+  "goal": "掌握链表反转中的指针更新顺序",
+  "candidate_steps": [
+    {
+      "path_step_id": "fe611111-1111-4111-8111-111111111111",
+      "sequence_no": 1,
+      "knowledge_node_ids": [
+        "linked_list_pointer"
+      ],
+      "action_type": "review",
+      "resource_type": "mixed",
+      "difficulty_level": 2,
+      "estimated_minutes": 15,
+      "prerequisite_path_step_ids": [],
+      "success_criteria": [
+        "能够说明三个指针的更新顺序"
+      ]
+    }
+  ],
+  "alternative_paths": [],
+  "confidence": 0.8,
+  "evidence_ids": [
+    "fd111111-1111-4111-8111-111111111111"
+  ],
+  "reasoning_summary": "先补齐指针概念，再进入链表反转练习。",
+  "requires_human_review": false
+}

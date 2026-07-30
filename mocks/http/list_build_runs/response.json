@@ -1,0 +1,66 @@
+{
+  "operation_id": "list_build_runs",
+  "status_code": 200,
+  "content_type": "application/json",
+  "body": {
+    "code": "SUCCESS",
+    "message": "成功",
+    "data": {
+      "items": [
+        {
+          "build_run_id": "66666666-6666-4666-8666-666666666666",
+          "knowledge_base_id": "44444444-4444-4444-8444-444444444444",
+          "status": "succeeded",
+          "current_stage": "completed",
+          "progress_percent": 60,
+          "selected_strategy": null,
+          "error_code": "示例error_code",
+          "error_message": "示例error_message",
+          "created_at": "2026-07-30T12:00:00Z",
+          "finished_at": "2026-07-30T12:00:00Z",
+          "requested_document_ids": [
+            "74d369a8-7972-49f0-8a08-ca63e275cc8e"
+          ],
+          "build_mode": "full",
+          "build_status": "succeeded",
+          "current_stage_code": "示例current_stage_code",
+          "target_version_id": "df886e59-a1b9-4d43-83fe-20e94a89db1a",
+          "requested_by_user_id": "418a9354-8393-4fa2-8bef-152228f9da78",
+          "started_at": "2026-07-30T12:00:00Z"
+        },
+        {
+          "build_run_id": "66666666-6666-4666-8666-666666666666",
+          "knowledge_base_id": "44444444-4444-4444-8444-444444444444",
+          "status": "succeeded",
+          "current_stage": "completed",
+          "progress_percent": 60,
+          "selected_strategy": null,
+          "error_code": "示例error_code",
+          "error_message": "示例error_message",
+          "created_at": "2026-07-30T12:00:00Z",
+          "finished_at": "2026-07-30T12:00:00Z",
+          "requested_document_ids": [
+            "74d369a8-7972-49f0-8a08-ca63e275cc8e"
+          ],
+          "build_mode": "full",
+          "build_status": "succeeded",
+          "current_stage_code": "示例current_stage_code",
+          "target_version_id": "df886e59-a1b9-4d43-83fe-20e94a89db1a",
+          "requested_by_user_id": "418a9354-8393-4fa2-8bef-152228f9da78",
+          "started_at": "2026-07-30T12:00:00Z"
+        }
+      ],
+      "page": {
+        "page_no": 1,
+        "page_size": 20,
+        "total_count": 1,
+        "has_next": true
+      }
+    },
+    "meta": {
+      "request_id": "fe311111-1111-4111-8111-111111111111",
+      "schema_version": "1.0.0",
+      "timestamp": "2026-07-30T12:00:00Z"
+    }
+  }
+}

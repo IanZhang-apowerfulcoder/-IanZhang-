@@ -1,0 +1,45 @@
+{
+  "workflow_name": "审核驳回并重新生成",
+  "steps": [
+    {
+      "sequence_no": 1,
+      "internal_interface": "resource_generation_agent",
+      "output_ids": {
+        "proposal_id": "f1111111-1111-4111-8111-111111111111",
+        "resource_draft_id": "f7121111-1111-4111-8111-111111111111"
+      }
+    },
+    {
+      "sequence_no": 2,
+      "internal_interface": "review_agent",
+      "override": {
+        "review_result": "needs_revision",
+        "repair_action": "regenerate"
+      },
+      "output_ids": {
+        "review_id": "f4111111-1111-4111-8111-111111111111"
+      }
+    },
+    {
+      "sequence_no": 3,
+      "internal_interface": "resource_generation_agent",
+      "input_link": {
+        "review_id": "f4111111-1111-4111-8111-111111111111"
+      },
+      "output_ids": {
+        "proposal_id": "f1611111-1111-4111-8111-111111111111",
+        "resource_draft_id": "f1621111-1111-4111-8111-111111111111"
+      }
+    },
+    {
+      "sequence_no": 4,
+      "internal_interface": "review_agent",
+      "override": {
+        "review_result": "approved"
+      },
+      "output_ids": {
+        "review_id": "f1631111-1111-4111-8111-111111111111"
+      }
+    }
+  ]
+}

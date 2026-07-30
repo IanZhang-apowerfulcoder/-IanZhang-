@@ -1,0 +1,36 @@
+{
+  "operation_id": "get_latest_decision",
+  "status_code": 200,
+  "content_type": "application/json",
+  "body": {
+    "code": "SUCCESS",
+    "message": "成功",
+    "data": {
+      "decision_id": "f5111111-1111-4111-8111-111111111111",
+      "organization_id": "11111111-1111-4111-8111-111111111111",
+      "session_id": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+      "decision_cycle_id": "dddddddd-dddd-4ddd-8ddd-dddddddddddd",
+      "proposal_id": "f1111111-1111-4111-8111-111111111111",
+      "decision_type": "present_resource",
+      "selected_reference_id": "458c8391-d02b-4b45-8478-99ea0d5d553e",
+      "target_knowledge_node_ids": [
+        "9df8c02d-cf2b-4fa0-8683-fa6420bd1300"
+      ],
+      "decision_summary": "示例decision_summary",
+      "reasoning_summary": "综合画像、行为与证据后作出的结构化判断。",
+      "confidence": 0.86,
+      "evidence_ids": [
+        "fd111111-1111-4111-8111-111111111111"
+      ],
+      "requires_human_review": false,
+      "decision_status": "approved",
+      "created_at": "2026-07-30T12:00:00Z",
+      "applied_at": "2026-07-30T12:00:00Z"
+    },
+    "meta": {
+      "request_id": "fe311111-1111-4111-8111-111111111111",
+      "schema_version": "1.0.0",
+      "timestamp": "2026-07-30T12:00:00Z"
+    }
+  }
+}

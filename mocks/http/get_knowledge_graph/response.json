@@ -1,0 +1,35 @@
+{
+  "operation_id": "get_knowledge_graph",
+  "status_code": 200,
+  "content_type": "application/json",
+  "body": {
+    "code": "SUCCESS",
+    "message": "成功",
+    "data": {
+      "knowledge_base_version_id": "77777777-7777-4777-8777-777777777777",
+      "node_count": 1,
+      "edge_count": 1,
+      "nodes": [
+        {
+          "knowledge_node_id": "fcb8a5ae-f1f5-41cf-887e-560f136fff0f",
+          "node_name": "示例node_name",
+          "node_type": "示例node_type",
+          "importance_score": 0.8
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "df37d0b4-d733-4f6d-8ecb-5bf2f818d161",
+          "source_knowledge_node_id": "84bf1f8a-65bc-40cf-8918-4f6eecf0fa7c",
+          "target_knowledge_node_id": "9df8c02d-cf2b-4fa0-8683-fa6420bd1300",
+          "relation_type": "示例relation_type"
+        }
+      ]
+    },
+    "meta": {
+      "request_id": "fe311111-1111-4111-8111-111111111111",
+      "schema_version": "1.0.0",
+      "timestamp": "2026-07-30T12:00:00Z"
+    }
+  }
+}

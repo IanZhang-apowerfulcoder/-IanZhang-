@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "画像更新结果",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "learner_id",
+    "new_profile_snapshot_id",
+    "new_profile_version_no",
+    "updated_at"
+  ],
+  "properties": {
+    "learner_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "new_profile_snapshot_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "new_profile_version_no": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

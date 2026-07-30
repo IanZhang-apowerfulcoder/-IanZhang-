@@ -1,0 +1,88 @@
+version: 1.0.0
+rules:
+- member: 张英赫
+  allowed_modules:
+  - services/orchestrator/**
+  - services/arbitration/**
+  - services/session/**
+  - contracts/**
+  - project/**
+  - docs/**
+  reviewers:
+  - 李佳乐
+  - 杨欣怡
+  - 陈尧
+- member: 李佳乐
+  allowed_modules:
+  - services/knowledge/**
+  - services/retrieval/**
+  - services/agents/review/**
+  - services/agent-runtime/**
+  - contracts/**
+  reviewers:
+  - 张英赫
+- member: 杨欣怡
+  allowed_modules:
+  - services/agents/diagnosis/**
+  - services/agents/path-planning/**
+  - services/profile/**
+  - services/training/**
+  - contracts/**
+  reviewers:
+  - 张英赫
+- member: 陈尧
+  allowed_modules:
+  - apps/web/**
+  - contracts/typescript/**
+  - mocks/**
+  - docs/**
+  reviewers:
+  - 张英赫
+- member: 郑翘楚
+  allowed_modules:
+  - services/agents/resource-generation/**
+  - services/resources/**
+  - apps/web/src/features/resources/**
+  - tests/resources/**
+  reviewers:
+  - 杨欣怡
+  - 陈尧
+- member: 李汝萱
+  allowed_modules:
+  - services/agents/assessment/**
+  - services/assessment/**
+  - apps/web/src/features/assessment/**
+  - tests/assessment/**
+  reviewers:
+  - 杨欣怡
+  - 陈尧
+- member: 陈严谨
+  allowed_modules:
+  - apps/web/src/features/admin/**
+  - services/knowledge/api/**
+  - services/training/api/**
+  - tests/admin/**
+  reviewers:
+  - 李佳乐
+  - 陈尧
+- member: X
+  allowed_modules:
+  - apps/web/src/features/learner/**
+  - apps/web/src/features/decision-trace/**
+  - tests/learner/**
+  reviewers:
+  - 陈尧
+  - 张英赫
+  - 杨欣怡
+- member: 斯汀
+  allowed_modules:
+  - tests/**
+  - evaluation/**
+  - mocks/**
+  - docs/test-reports/**
+  - demo-data/**
+  reviewers:
+  - 张英赫
+  - 李佳乐
+  - 杨欣怡
+  - 陈尧

@@ -1,0 +1,12 @@
+{
+  "operation_id": "health_check",
+  "method": "GET",
+  "path_template": "/api/v1/health",
+  "path_params": {},
+  "query_params": {},
+  "headers": {
+    "Authorization": "Bearer mock_access_token"
+  },
+  "content_type": null,
+  "body": null
+}

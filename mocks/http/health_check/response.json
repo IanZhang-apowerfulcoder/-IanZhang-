@@ -1,0 +1,18 @@
+{
+  "operation_id": "health_check",
+  "status_code": 200,
+  "content_type": "application/json",
+  "body": {
+    "code": "OK",
+    "message": "成功",
+    "data": {
+      "status": "ok",
+      "version": "示例version"
+    },
+    "meta": {
+      "request_id": "fe311111-1111-4111-8111-111111111111",
+      "schema_version": "1.0.0",
+      "timestamp": "2026-07-30T12:00:00Z"
+    }
+  }
+}
