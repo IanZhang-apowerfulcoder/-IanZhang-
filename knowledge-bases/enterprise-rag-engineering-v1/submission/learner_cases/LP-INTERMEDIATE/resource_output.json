@@ -1,0 +1,57 @@
+{
+  "proposal_id": "d2d874dd-2746-56c5-add3-569dd5b367f2",
+  "resource_draft_id": "64613ef9-a85c-594f-be10-11376f319eb3",
+  "title": "混合检索、分数融合与RRF个性化学习单元",
+  "resource_type": "mixed",
+  "difficulty_level": 3,
+  "target_knowledge_node_ids": [
+    "RAG-M03-N04"
+  ],
+  "summary": "面向学习者B：做过基础向量问答但质量不稳定的混合检索、分数融合与RRF资源。混合检索利用关键词的精确匹配和向量的语义匹配。RRF按照多个结果列表中的排名融合，不要求原始分数位于同一尺度，适合作为稳定基线。",
+  "resource_sections": [
+    {
+      "resource_section_id": "88b754d8-af7e-5b19-b5a0-7b82a12ee0df",
+      "heading": "互补召回",
+      "body_markdown": "稠密检索可以召回同义表达，稀疏检索擅长精确术语。先分别召回候选，再融合和重排，通常比只依赖单一路径更稳健。",
+      "key_points": [
+        "互补召回",
+        "融合前保留原始排名"
+      ],
+      "evidence_ids": [
+        "7d448bf9-e164-5a44-81cd-86a76d56dcfa"
+      ]
+    },
+    {
+      "resource_section_id": "51ffb244-9bca-590b-9440-885f56380432",
+      "heading": "分数归一化",
+      "body_markdown": "不同检索器的原始分数含义和范围不同，直接加权可能让某一路径支配结果。分数融合需要归一化、权重和边界测试。",
+      "key_points": [
+        "分数归一化",
+        "融合前保留原始排名"
+      ],
+      "evidence_ids": [
+        "3a1befcf-aede-53f8-9b53-b51f618c12b4"
+      ]
+    },
+    {
+      "resource_section_id": "946b755b-0b70-5bb2-91b0-df2b37f8d928",
+      "heading": "RRF",
+      "body_markdown": "RRF根据文档在各结果列表中的名次累加倒数排名贡献，避免直接比较异构分数。rank constant影响头部排名差异，仍需在本地问题集上评测。",
+      "key_points": [
+        "RRF",
+        "融合前保留原始排名"
+      ],
+      "evidence_ids": [
+        "0c530834-1e07-54de-8e39-8511bc1658c0"
+      ]
+    }
+  ],
+  "code_examples": [],
+  "evidence_ids": [
+    "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+    "3a1befcf-aede-53f8-9b53-b51f618c12b4",
+    "0c530834-1e07-54de-8e39-8511bc1658c0",
+    "716788a5-719d-5bd2-b841-55fc952f6160"
+  ],
+  "confidence": 0.9595
+}

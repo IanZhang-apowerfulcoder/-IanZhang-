@@ -1,0 +1,73 @@
+{
+  "proposal_id": "fa4bc506-6e7d-5b96-b43f-7921f4f57fb4",
+  "goal": "掌握安全、GraphRAG、Agentic RAG和生产治理",
+  "candidate_steps": [
+    {
+      "path_step_id": "0726601f-8a5f-53df-98a3-55429566f2d0",
+      "sequence_no": 1,
+      "knowledge_node_ids": [
+        "RAG-M05-N04"
+      ],
+      "action_type": "learn",
+      "resource_type": "mixed",
+      "difficulty_level": 5,
+      "estimated_minutes": 60,
+      "prerequisite_path_step_ids": [],
+      "success_criteria": [
+        "概念题正确率达到80%",
+        "能说明适用边界"
+      ]
+    },
+    {
+      "path_step_id": "6154bde5-0725-5a4b-b212-e3176ea1f7a3",
+      "sequence_no": 2,
+      "knowledge_node_ids": [
+        "RAG-M07-N03"
+      ],
+      "action_type": "practice",
+      "resource_type": "exercise",
+      "difficulty_level": 5,
+      "estimated_minutes": 90,
+      "prerequisite_path_step_ids": [
+        "0726601f-8a5f-53df-98a3-55429566f2d0"
+      ],
+      "success_criteria": [
+        "完成工程任务",
+        "Rubric得分不低于75"
+      ]
+    }
+  ],
+  "alternative_paths": [
+    {
+      "alternative_path_id": "6408c5ef-233d-5175-9c29-28cbdd54f3a2",
+      "summary": "若关键误区未纠正，则在原难度增加一次概念巩固。",
+      "steps": [
+        {
+          "path_step_id": "ab291765-d94d-50c3-83bd-2b5f2e044a06",
+          "sequence_no": 1,
+          "knowledge_node_ids": [
+            "RAG-M05-N04"
+          ],
+          "action_type": "review",
+          "resource_type": "mixed",
+          "difficulty_level": 5,
+          "estimated_minutes": 60,
+          "prerequisite_path_step_ids": [],
+          "success_criteria": [
+            "概念题正确率达到80%",
+            "能说明适用边界"
+          ]
+        }
+      ]
+    }
+  ],
+  "confidence": 0.8483,
+  "evidence_ids": [
+    "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+    "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+    "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+    "56475a80-f5aa-571b-96a9-5cf4a4a59630"
+  ],
+  "reasoning_summary": "路径遵守知识图谱前置关系，并根据画像选择资源难度。",
+  "requires_human_review": false
+}

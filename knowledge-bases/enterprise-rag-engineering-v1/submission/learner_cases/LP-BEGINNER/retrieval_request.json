@@ -1,0 +1,13 @@
+{
+  "retrieval_request_id": "00c791b1-05e8-594a-8370-3f38b694a26f",
+  "knowledge_base_version_id": "fd400183-2242-50aa-8b83-d670c1ce5a1f",
+  "query_text": "为学习者A：会Python但不了解RAG检索RAG的定义、目标与边界的专业证据与实操内容",
+  "top_k": 4,
+  "filters": {
+    "knowledge_node_ids": [
+      "RAG-M01-N01",
+      "RAG-M01-N02"
+    ],
+    "max_difficulty_level": 2
+  }
+}

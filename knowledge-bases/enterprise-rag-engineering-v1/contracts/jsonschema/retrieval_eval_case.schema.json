@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Retrieval Evaluation Case",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "test_case_id",
+    "query_text",
+    "expected_knowledge_node_ids",
+    "top_k",
+    "filters"
+  ],
+  "properties": {
+    "test_case_id": {
+      "type": "string"
+    },
+    "query_text": {
+      "type": "string"
+    },
+    "expected_knowledge_node_ids": {
+      "type": "array",
+      "minItems": 1
+    },
+    "top_k": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

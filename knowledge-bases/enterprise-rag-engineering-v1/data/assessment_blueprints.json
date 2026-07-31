@@ -1,0 +1,378 @@
+[
+  {
+    "assessment_blueprint_id": "0b38292d-f37a-5f71-8d9f-d04dd8cffc36",
+    "module_id": "RAG-M01",
+    "title": "RAG基础与方案选择模块评测蓝图",
+    "target_knowledge_node_ids": [
+      "RAG-M01-N01",
+      "RAG-M01-N02",
+      "RAG-M01-N03",
+      "RAG-M01-N04"
+    ],
+    "question_mix": {
+      "single_choice": 4,
+      "true_false": 4,
+      "short_answer": 4,
+      "scenario": 2
+    },
+    "difficulty_distribution": {
+      "L1_L2": 0.35,
+      "L3": 0.4,
+      "L4_L5": 0.25
+    },
+    "pass_score_ratio": 0.75,
+    "mastery_rules": [
+      "客观题正确率低于60%：标记基础概念薄弱",
+      "开放题缺少边界或验收方法：标记工程应用不足",
+      "任务出现阻断规则：不得进入下一模块",
+      "总分达到75且核心知识点均不低于60%：允许进阶"
+    ],
+    "question_ids": [
+      "9ad3d8eb-9df9-52f2-b51a-ce6cc22ea1c3",
+      "b50ae04c-402c-5c8f-b4d1-0c208af1fffd",
+      "529607c2-6969-5725-aef9-853c0e1f57af",
+      "3564cdfe-1447-5c14-88b9-c37dccd817b8",
+      "2e0fd2d1-c74b-58d6-b20d-2657aaa16182",
+      "177eb494-17cc-534b-83e7-c97892c37937",
+      "fa229a6b-5a33-554e-8e34-2312f6a4bacb",
+      "8e8274be-683b-5942-a054-1c73ba67d52b",
+      "900afc0e-62a5-51b2-bc05-e2648563c19f",
+      "3955e800-f2a0-5a0c-8be8-c084c2e0b0a6",
+      "be009074-de3f-5998-baf3-c6e3a66b74b1",
+      "53bc4786-a4d2-5118-ba12-9a7fb0a8cf95",
+      "f821294f-fc56-522d-9666-2ea8f956833d",
+      "245e49c7-0cbd-59ce-9273-bf5349d0c66f",
+      "e6f4201d-134a-534f-9453-8c4e383bec5c",
+      "d4e21d64-2bea-51ce-91b2-5137ee748b6b"
+    ]
+  },
+  {
+    "assessment_blueprint_id": "09196730-6ac7-53b2-8105-53bb63108d56",
+    "module_id": "RAG-M02",
+    "title": "数据治理与知识构建模块评测蓝图",
+    "target_knowledge_node_ids": [
+      "RAG-M02-N01",
+      "RAG-M02-N02",
+      "RAG-M02-N03",
+      "RAG-M02-N04"
+    ],
+    "question_mix": {
+      "single_choice": 4,
+      "true_false": 4,
+      "short_answer": 4,
+      "scenario": 2
+    },
+    "difficulty_distribution": {
+      "L1_L2": 0.35,
+      "L3": 0.4,
+      "L4_L5": 0.25
+    },
+    "pass_score_ratio": 0.75,
+    "mastery_rules": [
+      "客观题正确率低于60%：标记基础概念薄弱",
+      "开放题缺少边界或验收方法：标记工程应用不足",
+      "任务出现阻断规则：不得进入下一模块",
+      "总分达到75且核心知识点均不低于60%：允许进阶"
+    ],
+    "question_ids": [
+      "e5c86546-2d95-5a91-bb45-303a60db8e5b",
+      "ce1b6ab6-5708-5aaa-be9a-d54b584c3a1b",
+      "bd5878c8-8b59-5a29-af36-81bcdb03a4b4",
+      "80073267-c059-5190-8b71-df7eaa603dfd",
+      "b9d71edc-d04f-580f-abb3-330c23752cc2",
+      "ac02b1b1-f6df-539c-bd21-b365ab51ee06",
+      "4b60625b-8cba-5203-8b03-fc3924d50eed",
+      "472a1bc9-eded-5312-83c7-b91803981b02",
+      "7d875457-ec0b-535d-aaaa-8729de995df7",
+      "22055101-d133-5b4f-9757-8ebd6a30eba9",
+      "4d4ad22d-37b5-5d0e-b357-99e930ed554a",
+      "5d72df24-5bf6-53c4-9016-dd3525fc2318",
+      "2dce8c93-a0a5-5123-9a14-1fba8a6a8291",
+      "15a95d30-8ec7-508e-8ba6-bf0a4c154149",
+      "5b121759-64ae-58ad-b351-cddeeef6be36",
+      "434aaf76-a914-5d0b-b423-a0e77630fb67"
+    ]
+  },
+  {
+    "assessment_blueprint_id": "9f870b61-ba92-569b-ae15-9915bcfda9cc",
+    "module_id": "RAG-M03",
+    "title": "表示、索引与基础检索模块评测蓝图",
+    "target_knowledge_node_ids": [
+      "RAG-M03-N01",
+      "RAG-M03-N02",
+      "RAG-M03-N03",
+      "RAG-M03-N04"
+    ],
+    "question_mix": {
+      "single_choice": 4,
+      "true_false": 4,
+      "short_answer": 4,
+      "scenario": 2
+    },
+    "difficulty_distribution": {
+      "L1_L2": 0.35,
+      "L3": 0.4,
+      "L4_L5": 0.25
+    },
+    "pass_score_ratio": 0.75,
+    "mastery_rules": [
+      "客观题正确率低于60%：标记基础概念薄弱",
+      "开放题缺少边界或验收方法：标记工程应用不足",
+      "任务出现阻断规则：不得进入下一模块",
+      "总分达到75且核心知识点均不低于60%：允许进阶"
+    ],
+    "question_ids": [
+      "1f84c524-c4bb-5ec5-adef-da6c3895f1cb",
+      "cfdbb776-c268-57d5-851f-ecc3e4962409",
+      "90d329c1-2d5b-50e7-a5c6-ec2faff4c8fa",
+      "ca677501-0fe7-5a92-9a39-5daea21edc60",
+      "1f3b5424-e624-5cb5-a15b-ec28bd24817c",
+      "9024e22a-d0d0-5d31-8f42-fa2a624e90fa",
+      "27aa7850-9970-59f0-81ec-24a30e6f0f6c",
+      "0e065e56-d383-5f21-9970-5f8cb01258bf",
+      "935700bc-dcf8-5fb8-9f6a-483142fcfd14",
+      "d64f8e18-c6df-5fbf-a446-53a058e8cbc6",
+      "42e02728-0041-5700-901d-dcca9d454a4c",
+      "07a5aa99-659b-5615-9107-dd6e2e0dc41e",
+      "6f4d0398-017c-598e-b2dd-399a9f5f7cd3",
+      "7bf91f88-964a-5bef-92cc-d64916df427a",
+      "19232db4-b957-5e62-a9af-b554d7f03fe7",
+      "be7c37e1-b087-56e6-a14d-942167405b3e"
+    ]
+  },
+  {
+    "assessment_blueprint_id": "eb0408b1-19d2-5a65-831c-fd400fd97930",
+    "module_id": "RAG-M04",
+    "title": "检索增强与上下文工程模块评测蓝图",
+    "target_knowledge_node_ids": [
+      "RAG-M04-N01",
+      "RAG-M04-N02",
+      "RAG-M04-N03",
+      "RAG-M04-N04"
+    ],
+    "question_mix": {
+      "single_choice": 4,
+      "true_false": 4,
+      "short_answer": 4,
+      "scenario": 2
+    },
+    "difficulty_distribution": {
+      "L1_L2": 0.35,
+      "L3": 0.4,
+      "L4_L5": 0.25
+    },
+    "pass_score_ratio": 0.75,
+    "mastery_rules": [
+      "客观题正确率低于60%：标记基础概念薄弱",
+      "开放题缺少边界或验收方法：标记工程应用不足",
+      "任务出现阻断规则：不得进入下一模块",
+      "总分达到75且核心知识点均不低于60%：允许进阶"
+    ],
+    "question_ids": [
+      "2304111c-2732-5d2b-b236-ee9fcf2fb7b7",
+      "8bfc6fbd-fc2c-5283-a7ff-dd0368fe0b7c",
+      "96d1e7ad-23ab-5ec6-9268-735c5b3643a5",
+      "23fb1dd8-2889-5c25-b979-dbbf6360de54",
+      "7d81ce6e-8939-5616-aba5-26aa306be6c5",
+      "3911b957-8047-590c-b2ef-68f1506da2bf",
+      "37fa19f9-70a3-54ea-b108-f28c5c40fa2a",
+      "cbf269be-52f0-5a86-bd82-9f125cbf225c",
+      "55ca6c77-b6b1-56ec-b26a-6036a3d10e32",
+      "ac80ecd0-15c9-5fec-b7e2-d476e9590c9e",
+      "6b0bff72-1dbc-5dd2-84b0-c6165c777a79",
+      "542074ac-6c20-5b5d-a99a-d335a086ef6b",
+      "1d4c7ecd-db46-531f-b325-1573a0c8aee6",
+      "df27b8ca-e758-5fdc-b228-29138fc2b2ca",
+      "843bf3e9-7ccc-58b4-87e7-e6d89aec9d86",
+      "06087d4d-8e68-5cb8-91a9-b197402f9f87"
+    ]
+  },
+  {
+    "assessment_blueprint_id": "c8c0a575-332f-58bc-bad8-37d015580379",
+    "module_id": "RAG-M05",
+    "title": "可信生成与安全控制模块评测蓝图",
+    "target_knowledge_node_ids": [
+      "RAG-M05-N01",
+      "RAG-M05-N02",
+      "RAG-M05-N03",
+      "RAG-M05-N04"
+    ],
+    "question_mix": {
+      "single_choice": 4,
+      "true_false": 4,
+      "short_answer": 4,
+      "scenario": 2
+    },
+    "difficulty_distribution": {
+      "L1_L2": 0.35,
+      "L3": 0.4,
+      "L4_L5": 0.25
+    },
+    "pass_score_ratio": 0.75,
+    "mastery_rules": [
+      "客观题正确率低于60%：标记基础概念薄弱",
+      "开放题缺少边界或验收方法：标记工程应用不足",
+      "任务出现阻断规则：不得进入下一模块",
+      "总分达到75且核心知识点均不低于60%：允许进阶"
+    ],
+    "question_ids": [
+      "b5c713de-e2ea-5fa7-9804-05da33d43e42",
+      "702a6a80-ad08-5b35-809b-5cf5423b592d",
+      "96a9770a-98f9-53e6-b5af-6d610cc8f12c",
+      "1adc725b-ee56-54b9-bf80-7e38051af247",
+      "8ca8ccc0-0491-5d61-b2e1-6394a9a6ba86",
+      "bed426fe-71c4-5bb8-9a10-ae5e7c93713c",
+      "209496ca-7ee1-5923-95bf-de0f320f3128",
+      "95887f9f-84ef-50f7-ac91-7e0353d47746",
+      "2515eb3c-cf0b-57d5-99ed-c480d6da143a",
+      "c098dc61-2565-578c-a060-932b859948fc",
+      "5f4ccc73-d23a-5e4e-859b-ae2e09c6ffab",
+      "0ddcd914-c349-514b-9016-f361056e173a",
+      "84c81423-7047-527f-a7da-43c6ac4c98e4",
+      "3ca33772-1233-56a2-990f-de37583d1b95",
+      "2444176a-3115-591c-b404-3c351fb8161d",
+      "bea51dc7-faee-5681-8d46-83e48a1d783f"
+    ]
+  },
+  {
+    "assessment_blueprint_id": "ff1a60fa-8f34-5faa-ba5b-c4175820fe18",
+    "module_id": "RAG-M06",
+    "title": "评测、观测与持续改进模块评测蓝图",
+    "target_knowledge_node_ids": [
+      "RAG-M06-N01",
+      "RAG-M06-N02",
+      "RAG-M06-N03",
+      "RAG-M06-N04"
+    ],
+    "question_mix": {
+      "single_choice": 4,
+      "true_false": 4,
+      "short_answer": 4,
+      "scenario": 2
+    },
+    "difficulty_distribution": {
+      "L1_L2": 0.35,
+      "L3": 0.4,
+      "L4_L5": 0.25
+    },
+    "pass_score_ratio": 0.75,
+    "mastery_rules": [
+      "客观题正确率低于60%：标记基础概念薄弱",
+      "开放题缺少边界或验收方法：标记工程应用不足",
+      "任务出现阻断规则：不得进入下一模块",
+      "总分达到75且核心知识点均不低于60%：允许进阶"
+    ],
+    "question_ids": [
+      "fbff1d94-73a6-5d70-918e-a07c9938b95c",
+      "ad847984-8fee-5b43-97dd-73175d79b155",
+      "706639b8-80c6-5b3c-93bf-a048b5b118cc",
+      "796d1156-4639-57b3-9c58-6d8600a21880",
+      "fdbecb0b-fe0b-5354-8c28-9a2e4781f78f",
+      "b2eed670-3187-5538-8a67-897009f35cfa",
+      "a3b2930f-b9de-5202-b6fd-cc72adc2768c",
+      "d8343fd4-1850-5d58-b8ab-0f2912ccda27",
+      "ca1ffdcf-555a-5034-9153-0a80781b8695",
+      "b45712ce-956c-529e-b627-b689a7cec1b8",
+      "7ab6bc32-f780-554e-8607-68d8de82c25d",
+      "91ae2b40-0312-5fbd-92b8-9d507cec3321",
+      "7bb26836-ae9a-5a10-9343-34ec615e2195",
+      "25fdfb9f-4961-5f3d-bf53-d9a3045a1022",
+      "02f04ee2-8206-54ca-b17b-84989dccf42b",
+      "a2a21fef-f0e4-53cc-afe2-3f96caa0c916"
+    ]
+  },
+  {
+    "assessment_blueprint_id": "e673f31c-d39a-5020-b1cc-c4b03f877be6",
+    "module_id": "RAG-M07",
+    "title": "高级RAG架构模块评测蓝图",
+    "target_knowledge_node_ids": [
+      "RAG-M07-N01",
+      "RAG-M07-N02",
+      "RAG-M07-N03",
+      "RAG-M07-N04"
+    ],
+    "question_mix": {
+      "single_choice": 4,
+      "true_false": 4,
+      "short_answer": 4,
+      "scenario": 2
+    },
+    "difficulty_distribution": {
+      "L1_L2": 0.35,
+      "L3": 0.4,
+      "L4_L5": 0.25
+    },
+    "pass_score_ratio": 0.75,
+    "mastery_rules": [
+      "客观题正确率低于60%：标记基础概念薄弱",
+      "开放题缺少边界或验收方法：标记工程应用不足",
+      "任务出现阻断规则：不得进入下一模块",
+      "总分达到75且核心知识点均不低于60%：允许进阶"
+    ],
+    "question_ids": [
+      "1385ed20-8453-527d-91b2-1a90604fc358",
+      "4b5e3323-0bb5-5bd2-bc61-bf60aa5de202",
+      "6ad9096c-7257-5199-baba-9bc7057b66d2",
+      "48839c86-e376-51e2-bd62-ee21ccb5c863",
+      "b5a2fbb0-9565-5ef6-a7ee-8f6d5937512b",
+      "55c974e7-e5b2-56b6-877f-553b3fbb8fcc",
+      "65903ff1-8eb7-5d13-9aee-3f6cc9afd9e8",
+      "377f487d-a49a-5fdd-b6f1-7bf15fc5485f",
+      "d7272419-3b60-5043-a11d-88bd948446bf",
+      "0a75505d-ab4a-535f-9138-b548ffcf685d",
+      "da49160a-9ada-5a98-a937-3216f5cb9e19",
+      "d70a829f-db40-5c30-8831-145074e778f2",
+      "8032296b-1777-5115-b6d0-0c4940aee637",
+      "e8d5c315-23e2-523d-a474-1cea308600c4",
+      "47a150ee-281f-5931-9b75-0afa43572eb0",
+      "2cec83e3-c42c-59a9-8aec-35c718f13611"
+    ]
+  },
+  {
+    "assessment_blueprint_id": "02cc51c4-cca8-5c63-8335-2a5337ff8b5b",
+    "module_id": "RAG-M08",
+    "title": "API、性能与生产部署模块评测蓝图",
+    "target_knowledge_node_ids": [
+      "RAG-M08-N01",
+      "RAG-M08-N02",
+      "RAG-M08-N03",
+      "RAG-M08-N04"
+    ],
+    "question_mix": {
+      "single_choice": 4,
+      "true_false": 4,
+      "short_answer": 4,
+      "scenario": 2
+    },
+    "difficulty_distribution": {
+      "L1_L2": 0.35,
+      "L3": 0.4,
+      "L4_L5": 0.25
+    },
+    "pass_score_ratio": 0.75,
+    "mastery_rules": [
+      "客观题正确率低于60%：标记基础概念薄弱",
+      "开放题缺少边界或验收方法：标记工程应用不足",
+      "任务出现阻断规则：不得进入下一模块",
+      "总分达到75且核心知识点均不低于60%：允许进阶"
+    ],
+    "question_ids": [
+      "2c5feecb-0d16-5626-a41b-148bb4cdda89",
+      "76be89d2-59ba-509d-8cf9-f9148805deae",
+      "10d1a726-d68b-5662-91a3-f85953577560",
+      "5ad25c33-f846-52ff-9640-dc97131495cd",
+      "29c38019-3f10-54e8-a472-4a2ef25efdfa",
+      "09b88e28-ee79-566c-bacd-eb67e5f10e58",
+      "bfc66c50-0bc4-546d-84d2-c83dad1e550d",
+      "00cf91a7-b2d6-55aa-8f9f-0a2eb0e24bf9",
+      "9bef8762-504c-57e1-87e5-122534b796a9",
+      "597e0e87-34ba-5cee-b67f-e4cb557af15b",
+      "0e30ea1f-4c51-511b-8e0e-aa34dedb4043",
+      "a599e6d6-f7bb-5938-ad28-a1496ee0bec9",
+      "72786715-1e9f-5610-8331-acd28ca76717",
+      "d2a54873-b2a2-5e9a-80b1-fd11b6d06f05",
+      "3b97f129-ea3f-56a2-acae-9721ba9e7c37",
+      "bfd10eb2-200c-5442-9cc3-2171793b84ff"
+    ]
+  }
+]

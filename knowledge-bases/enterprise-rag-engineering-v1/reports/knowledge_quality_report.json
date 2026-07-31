@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "domain_pack_id": "9cad1d21-24ee-58d2-998c-ea11b5cb9904",
+  "version": "1.0.0",
+  "inventory": {
+    "modules": 8,
+    "knowledge_nodes": 32,
+    "core_nodes": 26,
+    "advanced_nodes": 6,
+    "knowledge_edges": 91,
+    "chunks": 128,
+    "sources": 14,
+    "concept_cards": 32,
+    "faq": 96,
+    "error_cases": 64,
+    "questions": 128,
+    "tasks": 32,
+    "rubrics": 32,
+    "retrieval_eval_cases": 96,
+    "generation_eval_cases": 32,
+    "learner_cases": 3
+  },
+  "content_statistics": {
+    "min_chunk_chars": 117,
+    "avg_chunk_chars": 143.52,
+    "max_chunk_chars": 215,
+    "module_node_counts": {
+      "RAG-M01": 4,
+      "RAG-M02": 4,
+      "RAG-M03": 4,
+      "RAG-M04": 4,
+      "RAG-M05": 4,
+      "RAG-M06": 4,
+      "RAG-M07": 4,
+      "RAG-M08": 4
+    }
+  },
+  "source_statistics": {
+    "source_ids_used": 13,
+    "top_source_usage": [
+      [
+        "SRC-NIST-AI-RMF",
+        65
+      ],
+      [
+        "SRC-RAGAS-2023",
+        21
+      ],
+      [
+        "SRC-COMPETITION-XH-202630",
+        15
+      ],
+      [
+        "SRC-LLAMAINDEX-HIERARCHY",
+        12
+      ],
+      [
+        "SRC-PGVECTOR-OFFICIAL",
+        11
+      ],
+      [
+        "SRC-OWASP-PROMPT-INJECTION",
+        10
+      ],
+      [
+        "SRC-GRAPHRAG-OFFICIAL",
+        8
+      ],
+      [
+        "SRC-OPENSEARCH-HYBRID",
+        6
+      ],
+      [
+        "SRC-OPENAPI-31",
+        6
+      ],
+      [
+        "SRC-RAG-LEWIS-2020",
+        4
+      ],
+      [
+        "SRC-LOST-MIDDLE-2024",
+        4
+      ],
+      [
+        "SRC-SBERT-2019",
+        2
+      ],
+      [
+        "SRC-COLBERT-2020",
+        2
+      ]
+    ]
+  },
+  "quality_results": {
+    "schema_and_reference_validation": "PASS",
+    "core_content_coverage_rate": 1.0,
+    "retrieval_baseline": {
+      "evaluator": "bm25_char_ngram_metadata_baseline",
+      "case_count": 96,
+      "hit_rate_at_1": 0.9896,
+      "hit_rate_at_5": 1.0,
+      "mean_reciprocal_rank": 0.9948,
+      "target_met": true
+    },
+    "existing_agent_schema_compatibility": "PASS (3 complete learner cases, 8 outputs per case)",
+    "service_tests": "PASS (4 pytest cases)"
+  },
+  "not_yet_claimed": {
+    "professional_error_rate": "requires real generation model + human/reference review",
+    "difficulty_match_accuracy": "requires real generation model + calibrated learner-label evaluation",
+    "dense_vector_retrieval": "embedding model not frozen; vectors intentionally absent",
+    "cross_encoder_reranking": "adapter and evaluation required"
+  },
+  "release_decision": "Knowledge content and lexical retrieval baseline accepted as Domain Pack v1.0 candidate; production activation requires project database import and model-specific evaluation."
+}

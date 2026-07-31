@@ -1,0 +1,13 @@
+{
+  "retrieval_request_id": "e86e202f-3986-5cc1-acc5-2e9932e26d5b",
+  "knowledge_base_version_id": "fd400183-2242-50aa-8b83-d670c1ce5a1f",
+  "query_text": "为学习者B：做过基础向量问答但质量不稳定检索混合检索、分数融合与RRF的专业证据与实操内容",
+  "top_k": 4,
+  "filters": {
+    "knowledge_node_ids": [
+      "RAG-M03-N04",
+      "RAG-M06-N01"
+    ],
+    "max_difficulty_level": 4
+  }
+}

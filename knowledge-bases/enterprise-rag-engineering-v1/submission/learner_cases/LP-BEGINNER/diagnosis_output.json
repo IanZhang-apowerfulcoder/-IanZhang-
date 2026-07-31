@@ -1,0 +1,54 @@
+{
+  "proposal_id": "3f8ea6e3-f5ef-5a30-bf58-4ed9e2e8fb88",
+  "mastered_knowledge_nodes": [
+    {
+      "knowledge_node_id": "RAG-M01-N01",
+      "mastery_score": 0.25,
+      "evidence_ids": [
+        "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34"
+      ]
+    }
+  ],
+  "weak_knowledge_nodes": [
+    {
+      "knowledge_node_id": "RAG-M01-N01",
+      "mastery_score": 0.25,
+      "evidence_ids": [
+        "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+        "c170ae95-9b55-5e85-9857-46a84b4e7711"
+      ]
+    },
+    {
+      "knowledge_node_id": "RAG-M01-N02",
+      "mastery_score": 0.15,
+      "evidence_ids": [
+        "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+        "c170ae95-9b55-5e85-9857-46a84b4e7711"
+      ]
+    }
+  ],
+  "error_patterns": [
+    {
+      "error_type_code": "CONCEPT_GAP",
+      "severity": "high",
+      "description": "在RAG的定义、目标与边界相关知识上存在证据支持的能力缺口。",
+      "evidence_ids": [
+        "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+        "c170ae95-9b55-5e85-9857-46a84b4e7711"
+      ]
+    }
+  ],
+  "recommended_focus_node_ids": [
+    "RAG-M01-N01",
+    "RAG-M01-N02"
+  ],
+  "confidence": 0.8899,
+  "evidence_ids": [
+    "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+    "c170ae95-9b55-5e85-9857-46a84b4e7711",
+    "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+    "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3"
+  ],
+  "reasoning_summary": "根据初始画像和固定测试数据，优先学习RAG的定义、目标与边界及其直接关联节点。",
+  "requires_human_review": false
+}

@@ -1,0 +1,19 @@
+{
+  "chunk_id": "UUID",
+  "evidence_id": "UUID",
+  "document_id": "UUID",
+  "knowledge_base_version_id": "UUID",
+  "knowledge_node_id": "RAG-MXX-NXX",
+  "module_id": "RAG-MXX",
+  "title": "切片标题",
+  "content": "自包含、可引用的切片内容。",
+  "difficulty_level": 2,
+  "is_core": true,
+  "source_ids": ["SRC-UNIQUE-ID"],
+  "source_tier": "A",
+  "aliases": [],
+  "tags": [],
+  "citation_text": "模块 / 知识点 / 主题",
+  "language": "zh-CN",
+  "embedding_status": "not_generated"
+}

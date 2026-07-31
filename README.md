@@ -13,8 +13,8 @@
 系统大致流程是：
 
 ```text
-企业上传资料
-→ 系统构建知识库
+系统加载预先建设并验证的专业知识库
+→ （可选扩展）企业上传资料生成候选知识版本并经审核发布
 → 学习者开始学习
 → 多个智能体共同诊断、规划、生成资料、出题、审核和仲裁
 → 前端展示学习资料、测评、画像和决策过程
@@ -139,6 +139,8 @@
 6. database/schema.sql
 7. mocks/
 8. 个人开发说明
+9. `knowledge-bases/enterprise-rag-engineering-v1/`（知识内容与知识包内部契约）
+10. `api/knowledge_domain_api.yaml`（知识服务参考接口）
 ```
 
 含义如下：
@@ -176,6 +178,11 @@
 已经准备好的模拟请求、模拟响应和错误情况。
 
 ---
+
+
+### 预建专业知识库
+
+比赛主闭环默认使用 `knowledge-bases/enterprise-rag-engineering-v1/`。知识内容、切片、题库、评测集和接入说明以该目录为准；自动知识工程只生成候选版本，未经质量门禁和人工批准不得激活。
 
 ## 六、什么变量可以自己改，什么变量绝对不能改
 
@@ -437,3 +444,7 @@ fix/x-learning-session-error
 接口不够先申请，不能私自修改。
 代码通过 PR 合并到 develop。
 ```
+
+### 知识库团队接入
+
+完整接入、验收和变更规则见 `docs/34_知识库交付清单与团队接入.md`；知识包自身的快速入口见 `knowledge-bases/enterprise-rag-engineering-v1/DELIVERY.md`。

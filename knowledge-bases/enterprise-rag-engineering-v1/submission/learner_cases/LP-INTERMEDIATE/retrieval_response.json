@@ -1,0 +1,33 @@
+{
+  "retrieval_request_id": "e86e202f-3986-5cc1-acc5-2e9932e26d5b",
+  "evidence_items": [
+    {
+      "evidence_id": "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+      "chunk_id": "6a4e0281-c2bf-56c9-9b34-5ff4d0f292ac",
+      "document_id": "aa97b612-7af8-5818-ac29-7e05e50d5f1f",
+      "content_excerpt": "知识点：混合检索、分数融合与RRF\n主题：互补召回\n稠密检索可以召回同义表达，稀疏检索擅长精确术语。先分别召回候选，再融合和重排，通常比只依赖单一路径更稳健。\n适用边界：融合前保留原始排名；禁止跨权限融合；必须报告单路与混合的消融结果",
+      "relevance_score": 0.96
+    },
+    {
+      "evidence_id": "3a1befcf-aede-53f8-9b53-b51f618c12b4",
+      "chunk_id": "8d9a0faf-059d-550c-8c4b-46ef30642e18",
+      "document_id": "aa97b612-7af8-5818-ac29-7e05e50d5f1f",
+      "content_excerpt": "知识点：混合检索、分数融合与RRF\n主题：分数归一化\n不同检索器的原始分数含义和范围不同，直接加权可能让某一路径支配结果。分数融合需要归一化、权重和边界测试。\n适用边界：融合前保留原始排名；禁止跨权限融合；必须报告单路与混合的消融结果",
+      "relevance_score": 0.92
+    },
+    {
+      "evidence_id": "0c530834-1e07-54de-8e39-8511bc1658c0",
+      "chunk_id": "161e924d-c776-510f-b485-226593719af4",
+      "document_id": "aa97b612-7af8-5818-ac29-7e05e50d5f1f",
+      "content_excerpt": "知识点：混合检索、分数融合与RRF\n主题：RRF\nRRF根据文档在各结果列表中的名次累加倒数排名贡献，避免直接比较异构分数。rank constant影响头部排名差异，仍需在本地问题集上评测。\n适用边界：融合前保留原始排名；禁止跨权限融合；必须报告单路与混合的消融结果",
+      "relevance_score": 0.88
+    },
+    {
+      "evidence_id": "716788a5-719d-5bd2-b841-55fc952f6160",
+      "chunk_id": "1f0be406-ef15-56c4-93a2-e565f08acb9d",
+      "document_id": "aa97b612-7af8-5818-ac29-7e05e50d5f1f",
+      "content_excerpt": "知识点：混合检索、分数融合与RRF\n主题：融合后仍需过滤与去重\n同一父文档的高度重叠切片可能占满top-k。融合后应按权限和版本过滤、按内容哈希或父节点去重，并保留各检索路径的贡献，便于解释。\n适用边界：融合前保留原始排名；禁止跨权限融合；必须报告单路与混合的消融结果",
+      "relevance_score": 0.84
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "proposal_id": "89b27026-0975-53ca-b389-01acd842342f",
+  "mastered_knowledge_nodes": [
+    {
+      "knowledge_node_id": "RAG-M01-N01",
+      "mastery_score": 0.85,
+      "evidence_ids": [
+        "7d448bf9-e164-5a44-81cd-86a76d56dcfa"
+      ]
+    }
+  ],
+  "weak_knowledge_nodes": [
+    {
+      "knowledge_node_id": "RAG-M03-N04",
+      "mastery_score": 0.3,
+      "evidence_ids": [
+        "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+        "3a1befcf-aede-53f8-9b53-b51f618c12b4"
+      ]
+    },
+    {
+      "knowledge_node_id": "RAG-M06-N01",
+      "mastery_score": 0.15,
+      "evidence_ids": [
+        "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+        "3a1befcf-aede-53f8-9b53-b51f618c12b4"
+      ]
+    }
+  ],
+  "error_patterns": [
+    {
+      "error_type_code": "CONCEPT_GAP",
+      "severity": "medium",
+      "description": "在混合检索、分数融合与RRF相关知识上存在证据支持的能力缺口。",
+      "evidence_ids": [
+        "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+        "3a1befcf-aede-53f8-9b53-b51f618c12b4"
+      ]
+    }
+  ],
+  "recommended_focus_node_ids": [
+    "RAG-M03-N04",
+    "RAG-M06-N01"
+  ],
+  "confidence": 0.784,
+  "evidence_ids": [
+    "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+    "3a1befcf-aede-53f8-9b53-b51f618c12b4",
+    "0c530834-1e07-54de-8e39-8511bc1658c0",
+    "716788a5-719d-5bd2-b841-55fc952f6160"
+  ],
+  "reasoning_summary": "根据初始画像和固定测试数据，优先学习混合检索、分数融合与RRF及其直接关联节点。",
+  "requires_human_review": false
+}

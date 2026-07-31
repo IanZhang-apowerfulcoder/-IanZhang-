@@ -1,0 +1,74 @@
+[
+  {
+    "module_id": "RAG-M01",
+    "name": "RAG基础与方案选择",
+    "difficulty_range": [
+      1,
+      2
+    ],
+    "order": 1
+  },
+  {
+    "module_id": "RAG-M02",
+    "name": "数据治理与知识构建",
+    "difficulty_range": [
+      1,
+      3
+    ],
+    "order": 2
+  },
+  {
+    "module_id": "RAG-M03",
+    "name": "表示、索引与基础检索",
+    "difficulty_range": [
+      2,
+      3
+    ],
+    "order": 3
+  },
+  {
+    "module_id": "RAG-M04",
+    "name": "检索增强与上下文工程",
+    "difficulty_range": [
+      2,
+      4
+    ],
+    "order": 4
+  },
+  {
+    "module_id": "RAG-M05",
+    "name": "可信生成与安全控制",
+    "difficulty_range": [
+      2,
+      4
+    ],
+    "order": 5
+  },
+  {
+    "module_id": "RAG-M06",
+    "name": "评测、观测与持续改进",
+    "difficulty_range": [
+      2,
+      4
+    ],
+    "order": 6
+  },
+  {
+    "module_id": "RAG-M07",
+    "name": "高级RAG架构",
+    "difficulty_range": [
+      3,
+      5
+    ],
+    "order": 7
+  },
+  {
+    "module_id": "RAG-M08",
+    "name": "API、性能与生产部署",
+    "difficulty_range": [
+      2,
+      5
+    ],
+    "order": 8
+  }
+]

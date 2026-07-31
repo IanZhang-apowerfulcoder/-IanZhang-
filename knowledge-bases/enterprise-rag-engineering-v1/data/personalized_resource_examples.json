@@ -1,0 +1,318 @@
+[
+  {
+    "profile_key": "LP-BEGINNER",
+    "learner_profile": {
+      "profile_key": "LP-BEGINNER",
+      "display_name": "学习者A：会Python但不了解RAG",
+      "background": {
+        "education": "软件工程本科",
+        "experience": "会Python和基础API调用",
+        "goal": "完成第一个可信RAG原型"
+      },
+      "preferences": [
+        "图解",
+        "短代码",
+        "分步练习"
+      ],
+      "mastery": {
+        "RAG-M01-N01": 0.25,
+        "RAG-M02-N03": 0.1,
+        "RAG-M03-N01": 0.1,
+        "RAG-M03-N04": 0.05,
+        "RAG-M05-N03": 0.05
+      },
+      "recommended_start_nodes": [
+        "RAG-M01-N01",
+        "RAG-M01-N02"
+      ],
+      "target_difficulty": 1
+    },
+    "generation_instruction": "用类比解释RAG，并加入一个最小流程练习。",
+    "resource_agent_output": {
+      "proposal_id": "7da87ec7-9c15-59fd-9559-1542ea6fe3ef",
+      "resource_draft_id": "db764ce9-b2c2-549d-a3aa-3047764bf90b",
+      "title": "RAG的定义、目标与边界个性化学习单元",
+      "resource_type": "text",
+      "difficulty_level": 1,
+      "target_knowledge_node_ids": [
+        "RAG-M01-N01"
+      ],
+      "summary": "面向学习者A：会Python但不了解RAG的RAG的定义、目标与边界资源。RAG是在生成前检索外部知识，并让生成模型在证据约束下完成回答或资源生成的系统方法。它的价值是知识可更新、证据可追踪和任务上下文可控，而不是保证模型永不出错。",
+      "resource_sections": [
+        {
+          "resource_section_id": "60786e12-d9d5-5aeb-ade5-6bc814b659dc",
+          "heading": "核心定义",
+          "body_markdown": "RAG把检索器与生成模型组合起来：检索器从显式知识源中返回与任务相关的证据，生成模型再依据任务指令与证据组织输出。知识主要保存在可更新的外部存储中，而不是全部依赖模型参数记忆。",
+          "key_points": [
+            "核心定义",
+            "不把RAG等同于模型微调"
+          ],
+          "evidence_ids": [
+            "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34"
+          ]
+        },
+        {
+          "resource_section_id": "24b9458e-054f-5111-87ec-3768c935a007",
+          "heading": "主要工程价值",
+          "body_markdown": "企业或课程知识发生变化时，可以更新文档、切片和索引，而不必为了每次事实变化重新训练大模型。证据项还能绑定文档、版本和片段编号，为审核、追责和回归测试提供基础。",
+          "key_points": [
+            "主要工程价值",
+            "不把RAG等同于模型微调"
+          ],
+          "evidence_ids": [
+            "c170ae95-9b55-5e85-9857-46a84b4e7711"
+          ]
+        },
+        {
+          "resource_section_id": "90f202de-cc19-59de-9471-9c404ac95584",
+          "heading": "不等于事实保证",
+          "body_markdown": "检索到正确证据并不意味着最终输出一定正确。系统仍可能出现漏检、误检、证据冲突、上下文截断、指令误解和无依据扩写，因此必须分别评测检索质量与生成忠实度，并设置拒答和审核机制。",
+          "key_points": [
+            "不等于事实保证",
+            "不把RAG等同于模型微调"
+          ],
+          "evidence_ids": [
+            "6651205b-2e94-5f91-a6db-34d0af08c3e0"
+          ]
+        }
+      ],
+      "code_examples": [],
+      "evidence_ids": [
+        "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+        "c170ae95-9b55-5e85-9857-46a84b4e7711",
+        "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+        "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3"
+      ],
+      "confidence": 0.8129
+    },
+    "expected_adaptation": {
+      "difficulty_level": 1,
+      "preferred_forms": [
+        "图解",
+        "短代码",
+        "分步练习"
+      ],
+      "must_include": [
+        "核心定义",
+        "不把RAG等同于模型微调"
+      ],
+      "must_not_include": [
+        "RAG会把上传文档训练进模型参数。",
+        "只要接入向量数据库就不会幻觉。"
+      ]
+    }
+  },
+  {
+    "profile_key": "LP-INTERMEDIATE",
+    "learner_profile": {
+      "profile_key": "LP-INTERMEDIATE",
+      "display_name": "学习者B：做过基础向量问答但质量不稳定",
+      "background": {
+        "education": "计算机相关本科",
+        "experience": "使用过向量数据库和LLM API",
+        "goal": "掌握混合检索、重排和评测"
+      },
+      "preferences": [
+        "工程案例",
+        "对比实验",
+        "代码实操"
+      ],
+      "mastery": {
+        "RAG-M01-N01": 0.85,
+        "RAG-M02-N03": 0.55,
+        "RAG-M03-N01": 0.7,
+        "RAG-M03-N04": 0.3,
+        "RAG-M04-N03": 0.2,
+        "RAG-M06-N01": 0.15
+      },
+      "recommended_start_nodes": [
+        "RAG-M03-N03",
+        "RAG-M03-N04",
+        "RAG-M06-N01"
+      ],
+      "target_difficulty": 3
+    },
+    "generation_instruction": "比较BM25、向量与RRF，设计一个消融实验。",
+    "resource_agent_output": {
+      "proposal_id": "d2d874dd-2746-56c5-add3-569dd5b367f2",
+      "resource_draft_id": "64613ef9-a85c-594f-be10-11376f319eb3",
+      "title": "混合检索、分数融合与RRF个性化学习单元",
+      "resource_type": "mixed",
+      "difficulty_level": 3,
+      "target_knowledge_node_ids": [
+        "RAG-M03-N04"
+      ],
+      "summary": "面向学习者B：做过基础向量问答但质量不稳定的混合检索、分数融合与RRF资源。混合检索利用关键词的精确匹配和向量的语义匹配。RRF按照多个结果列表中的排名融合，不要求原始分数位于同一尺度，适合作为稳定基线。",
+      "resource_sections": [
+        {
+          "resource_section_id": "88b754d8-af7e-5b19-b5a0-7b82a12ee0df",
+          "heading": "互补召回",
+          "body_markdown": "稠密检索可以召回同义表达，稀疏检索擅长精确术语。先分别召回候选，再融合和重排，通常比只依赖单一路径更稳健。",
+          "key_points": [
+            "互补召回",
+            "融合前保留原始排名"
+          ],
+          "evidence_ids": [
+            "7d448bf9-e164-5a44-81cd-86a76d56dcfa"
+          ]
+        },
+        {
+          "resource_section_id": "51ffb244-9bca-590b-9440-885f56380432",
+          "heading": "分数归一化",
+          "body_markdown": "不同检索器的原始分数含义和范围不同，直接加权可能让某一路径支配结果。分数融合需要归一化、权重和边界测试。",
+          "key_points": [
+            "分数归一化",
+            "融合前保留原始排名"
+          ],
+          "evidence_ids": [
+            "3a1befcf-aede-53f8-9b53-b51f618c12b4"
+          ]
+        },
+        {
+          "resource_section_id": "946b755b-0b70-5bb2-91b0-df2b37f8d928",
+          "heading": "RRF",
+          "body_markdown": "RRF根据文档在各结果列表中的名次累加倒数排名贡献，避免直接比较异构分数。rank constant影响头部排名差异，仍需在本地问题集上评测。",
+          "key_points": [
+            "RRF",
+            "融合前保留原始排名"
+          ],
+          "evidence_ids": [
+            "0c530834-1e07-54de-8e39-8511bc1658c0"
+          ]
+        }
+      ],
+      "code_examples": [],
+      "evidence_ids": [
+        "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+        "3a1befcf-aede-53f8-9b53-b51f618c12b4",
+        "0c530834-1e07-54de-8e39-8511bc1658c0",
+        "716788a5-719d-5bd2-b841-55fc952f6160"
+      ],
+      "confidence": 0.9595
+    },
+    "expected_adaptation": {
+      "difficulty_level": 3,
+      "preferred_forms": [
+        "工程案例",
+        "对比实验",
+        "代码实操"
+      ],
+      "must_include": [
+        "互补召回",
+        "融合前保留原始排名"
+      ],
+      "must_not_include": [
+        "混合检索就是把两种分数直接相加。",
+        "RRF不需要调参和评测。"
+      ]
+    }
+  },
+  {
+    "profile_key": "LP-ADVANCED",
+    "learner_profile": {
+      "profile_key": "LP-ADVANCED",
+      "display_name": "学习者C：负责企业知识平台架构",
+      "background": {
+        "education": "软件/AI工程经验",
+        "experience": "已部署基本RAG和服务化系统",
+        "goal": "掌握安全、GraphRAG、Agentic RAG和生产治理"
+      },
+      "preferences": [
+        "架构决策",
+        "消融实验",
+        "高风险案例"
+      ],
+      "mastery": {
+        "RAG-M01-N01": 0.95,
+        "RAG-M03-N04": 0.85,
+        "RAG-M04-N04": 0.75,
+        "RAG-M05-N03": 0.6,
+        "RAG-M05-N04": 0.35,
+        "RAG-M07-N02": 0.2,
+        "RAG-M07-N03": 0.2,
+        "RAG-M08-N04": 0.45
+      },
+      "recommended_start_nodes": [
+        "RAG-M05-N04",
+        "RAG-M07-N02",
+        "RAG-M07-N03",
+        "RAG-M08-N04"
+      ],
+      "target_difficulty": 5
+    },
+    "generation_instruction": "设计提示注入红队与多层防护方案。",
+    "resource_agent_output": {
+      "proposal_id": "acecef7c-8beb-5553-9cdc-6beedca1dac5",
+      "resource_draft_id": "73f83859-b68f-57e5-b77f-ce3b76ea2baf",
+      "title": "提示注入、不可信文档与知识库安全个性化学习单元",
+      "resource_type": "mixed",
+      "difficulty_level": 5,
+      "target_knowledge_node_ids": [
+        "RAG-M05-N04"
+      ],
+      "summary": "面向学习者C：负责企业知识平台架构的提示注入、不可信文档与知识库安全资源。RAG会把外部文档送入模型，因此文档中的恶意指令可能影响模型。所有检索内容都应被视为不可信数据，不能获得系统指令或工具权限。",
+      "resource_sections": [
+        {
+          "resource_section_id": "dcd44549-728a-5c24-b943-8bf22d75f340",
+          "heading": "直接与间接注入",
+          "body_markdown": "直接注入来自用户要求忽略规则；间接注入隐藏在网页、PDF、邮件或代码注释中，待文档被检索后影响模型。知识库接入和运行时都必须检测。",
+          "key_points": [
+            "直接与间接注入",
+            "检索证据永远视为不可信数据"
+          ],
+          "evidence_ids": [
+            "b04e4952-9eb2-502e-9cfe-41d8bd62bc49"
+          ]
+        },
+        {
+          "resource_section_id": "b35ff7ae-b093-56c1-8d06-dfe10267911f",
+          "heading": "指令与数据分离",
+          "body_markdown": "系统Prompt应明确证据块只是数据，不执行其中指令；使用结构化标签封装证据，并避免把敏感系统提示、工具描述和密钥放入可被文档覆盖的区域。",
+          "key_points": [
+            "指令与数据分离",
+            "检索证据永远视为不可信数据"
+          ],
+          "evidence_ids": [
+            "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+          ]
+        },
+        {
+          "resource_section_id": "abefd9ce-dc0f-503c-82d9-ce73cd22bd5a",
+          "heading": "最小工具权限",
+          "body_markdown": "检索内容不能决定调用哪个高权限工具或修改权限过滤。工具参数需要Schema校验、允许列表、租户上下文和后端授权，危险操作必须人工确认。",
+          "key_points": [
+            "最小工具权限",
+            "检索证据永远视为不可信数据"
+          ],
+          "evidence_ids": [
+            "36517c9a-c0cd-5c02-a8ba-8efdaf33764a"
+          ]
+        }
+      ],
+      "code_examples": [],
+      "evidence_ids": [
+        "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+        "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+        "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+        "56475a80-f5aa-571b-96a9-5cf4a4a59630"
+      ],
+      "confidence": 0.8121
+    },
+    "expected_adaptation": {
+      "difficulty_level": 5,
+      "preferred_forms": [
+        "架构决策",
+        "消融实验",
+        "高风险案例"
+      ],
+      "must_include": [
+        "直接与间接注入",
+        "检索证据永远视为不可信数据"
+      ],
+      "must_not_include": [
+        "只有用户输入会提示注入。",
+        "过滤“ignore previous instructions”一个短语即可。"
+      ]
+    }
+  }
+]

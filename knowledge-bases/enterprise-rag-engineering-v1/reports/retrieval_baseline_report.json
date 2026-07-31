@@ -1,0 +1,1165 @@
+{
+  "evaluator": "bm25_char_ngram_metadata_baseline",
+  "knowledge_base_version_id": "fd400183-2242-50aa-8b83-d670c1ce5a1f",
+  "case_count": 96,
+  "hit_rate_at_1": 0.9896,
+  "hit_rate_at_5": 1.0,
+  "mean_reciprocal_rank": 0.9948,
+  "target_hit_rate_at_5": 0.9,
+  "target_met": true,
+  "limitations": "词法+元数据基线；不代表稠密向量、重排器或真实生成模型的最终质量。",
+  "case_results": [
+    {
+      "test_case_id": "RET-RAG-M01-N01-01",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M06-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M06-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M07-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M06-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M05-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M01-N04",
+        "RAG-M06-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M02-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M02-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M02-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M02-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M06-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M01-N04"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "proposal_id": "38c52ab1-53d7-5f86-9da5-56fb5844c0ec",
+  "assessment_draft_id": "0c4b7aaf-1f46-56ec-b2f4-a0579f2f7238",
+  "title": "提示注入、不可信文档与知识库安全分阶测评",
+  "assessment_type": "checkpoint",
+  "instructions": "完成概念辨析与工程边界说明；所有开放题按Rubric评分。",
+  "questions": [
+    {
+      "question_id": "2bfbd982-370e-5755-a96f-b5fa97126e1f",
+      "question_type": "single_choice",
+      "stem": "提示注入、不可信文档与知识库安全的核心目标是什么？",
+      "options": [
+        {
+          "option_id": "9c12a9a7-e2e1-56a0-bf5f-02dbeb2e080f",
+          "option_text": "只有用户输入会提示注入。"
+        },
+        {
+          "option_id": "535d12e4-0827-58dc-bb6b-b6b0fcf77fe8",
+          "option_text": "直接注入来自用户要求忽略规则；间接注入隐藏在网页、PDF、邮件或代码注释中，待文档被检索后影响模型。知识库接入和运行时都必须检测。"
+        },
+        {
+          "option_id": "386f4c0b-ae5f-5e07-9451-59da365155fb",
+          "option_text": "不需要证据或版本管理"
+        },
+        {
+          "option_id": "4d2aeedf-f6e1-5fab-88d3-c7e5fc237781",
+          "option_text": "只用于展示动画"
+        }
+      ],
+      "correct_answer": "535d12e4-0827-58dc-bb6b-b6b0fcf77fe8",
+      "score_points": 10,
+      "scoring_rubric": [
+        "专业事实准确",
+        "包含适用边界",
+        "能给出可验证证据"
+      ],
+      "explanation": "直接注入来自用户要求忽略规则；间接注入隐藏在网页、PDF、邮件或代码注释中，待文档被检索后影响模型。知识库接入和运行时都必须检测。",
+      "evidence_ids": [
+        "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+        "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+      ]
+    },
+    {
+      "question_id": "38236e07-8c38-52d7-8ac5-d297c32207d1",
+      "question_type": "true_false",
+      "stem": "只有用户输入会提示注入。",
+      "options": [
+        {
+          "option_id": "52bb828c-1b2f-59c5-969b-173a14f69a93",
+          "option_text": "正确"
+        },
+        {
+          "option_id": "941094e0-3246-5894-b8f6-30e1614589bc",
+          "option_text": "错误"
+        }
+      ],
+      "correct_answer": "941094e0-3246-5894-b8f6-30e1614589bc",
+      "score_points": 10,
+      "scoring_rubric": [
+        "专业事实准确",
+        "包含适用边界",
+        "能给出可验证证据"
+      ],
+      "explanation": "被检索的外部文档同样可能包含间接注入。",
+      "evidence_ids": [
+        "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+        "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+      ]
+    },
+    {
+      "question_id": "dad2ade1-96f1-5c29-8a22-adf088c9220f",
+      "question_type": "short_answer",
+      "stem": "请说明提示注入、不可信文档与知识库安全的一项适用边界和验收方法。",
+      "options": [],
+      "correct_answer": {
+        "required_points": [
+          "检索证据永远视为不可信数据",
+          "识别用户直接注入和文档间接注入"
+        ]
+      },
+      "score_points": 20,
+      "scoring_rubric": [
+        "专业事实准确",
+        "包含适用边界",
+        "能给出可验证证据"
+      ],
+      "explanation": "被检索的外部文档同样可能包含间接注入。",
+      "evidence_ids": [
+        "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+        "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+      ]
+    }
+  ],
+  "total_score_points": 40,
+  "pass_score_points": 30,
+  "evidence_ids": [
+    "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+    "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+    "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+    "56475a80-f5aa-571b-96a9-5cf4a4a59630"
+  ],
+  "confidence": 0.8922
+}

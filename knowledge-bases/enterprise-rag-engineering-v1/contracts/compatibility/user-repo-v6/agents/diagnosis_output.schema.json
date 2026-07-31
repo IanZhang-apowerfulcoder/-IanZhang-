@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "诊断智能体输出",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "proposal_id",
+    "mastered_knowledge_nodes",
+    "weak_knowledge_nodes",
+    "error_patterns",
+    "recommended_focus_node_ids",
+    "confidence",
+    "evidence_ids",
+    "reasoning_summary",
+    "requires_human_review"
+  ],
+  "properties": {
+    "proposal_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "mastered_knowledge_nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/mastery_item"
+      }
+    },
+    "weak_knowledge_nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/mastery_item"
+      }
+    },
+    "error_patterns": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/error_pattern"
+      }
+    },
+    "recommended_focus_node_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "reasoning_summary": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    }
+  },
+  "$defs": {
+    "mastery_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "knowledge_node_id",
+        "mastery_score",
+        "evidence_ids"
+      ],
+      "properties": {
+        "knowledge_node_id": {
+          "type": "string"
+        },
+        "mastery_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      }
+    },
+    "error_pattern": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "error_type_code",
+        "severity",
+        "description",
+        "evidence_ids"
+      ],
+      "properties": {
+        "error_type_code": {
+          "type": "string"
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      }
+    }
+  }
+}

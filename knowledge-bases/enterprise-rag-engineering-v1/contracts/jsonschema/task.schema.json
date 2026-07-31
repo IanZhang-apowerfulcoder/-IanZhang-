@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Practice Task",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "task_id",
+    "knowledge_node_id",
+    "title",
+    "description",
+    "deliverable",
+    "difficulty_level",
+    "rubric_id",
+    "evidence_ids"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "knowledge_node_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "rubric_id": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rubric",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "rubric_id",
+    "task_id",
+    "total_score",
+    "pass_score",
+    "criteria",
+    "blocking_rules"
+  ],
+  "properties": {
+    "rubric_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "task_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "total_score": {
+      "const": 100
+    },
+    "criteria": {
+      "type": "array",
+      "minItems": 4
+    }
+  }
+}

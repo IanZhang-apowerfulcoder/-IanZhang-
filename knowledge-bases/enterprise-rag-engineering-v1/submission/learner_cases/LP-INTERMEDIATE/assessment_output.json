@@ -1,0 +1,103 @@
+{
+  "proposal_id": "f697c73c-e21c-5099-bce6-def00f9b63f0",
+  "assessment_draft_id": "d57f825f-5a86-54a1-8015-a91d416893ac",
+  "title": "混合检索、分数融合与RRF分阶测评",
+  "assessment_type": "checkpoint",
+  "instructions": "完成概念辨析与工程边界说明；所有开放题按Rubric评分。",
+  "questions": [
+    {
+      "question_id": "c387717e-0934-5188-b704-d0a9b456feb6",
+      "question_type": "single_choice",
+      "stem": "混合检索、分数融合与RRF的核心目标是什么？",
+      "options": [
+        {
+          "option_id": "16e1f215-b314-5b91-b707-4d85d51d8001",
+          "option_text": "混合检索就是把两种分数直接相加。"
+        },
+        {
+          "option_id": "17f402eb-d189-547b-904c-b41d7d35f57d",
+          "option_text": "稠密检索可以召回同义表达，稀疏检索擅长精确术语。先分别召回候选，再融合和重排，通常比只依赖单一路径更稳健。"
+        },
+        {
+          "option_id": "7ba4b986-ff4a-59d0-8887-224a74a8f76e",
+          "option_text": "不需要证据或版本管理"
+        },
+        {
+          "option_id": "bebb13ac-7830-583d-9c47-4413ac68eef6",
+          "option_text": "只用于展示动画"
+        }
+      ],
+      "correct_answer": "17f402eb-d189-547b-904c-b41d7d35f57d",
+      "score_points": 10,
+      "scoring_rubric": [
+        "专业事实准确",
+        "包含适用边界",
+        "能给出可验证证据"
+      ],
+      "explanation": "稠密检索可以召回同义表达，稀疏检索擅长精确术语。先分别召回候选，再融合和重排，通常比只依赖单一路径更稳健。",
+      "evidence_ids": [
+        "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+        "3a1befcf-aede-53f8-9b53-b51f618c12b4"
+      ]
+    },
+    {
+      "question_id": "bae2b92c-d2b3-58a6-b765-4a38bdfba489",
+      "question_type": "true_false",
+      "stem": "混合检索就是把两种分数直接相加。",
+      "options": [
+        {
+          "option_id": "411e01b1-2015-537c-b362-f1b4507b45a4",
+          "option_text": "正确"
+        },
+        {
+          "option_id": "62c34970-1af0-5ba0-8e41-76fecfc14ec4",
+          "option_text": "错误"
+        }
+      ],
+      "correct_answer": "62c34970-1af0-5ba0-8e41-76fecfc14ec4",
+      "score_points": 10,
+      "scoring_rubric": [
+        "专业事实准确",
+        "包含适用边界",
+        "能给出可验证证据"
+      ],
+      "explanation": "需要处理分数尺度、权重、排名融合、过滤和去重。",
+      "evidence_ids": [
+        "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+        "3a1befcf-aede-53f8-9b53-b51f618c12b4"
+      ]
+    },
+    {
+      "question_id": "5b0bb598-7170-57d5-aa82-2a22d9090a34",
+      "question_type": "short_answer",
+      "stem": "请说明混合检索、分数融合与RRF的一项适用边界和验收方法。",
+      "options": [],
+      "correct_answer": {
+        "required_points": [
+          "融合前保留原始排名",
+          "组合关键词和向量检索结果"
+        ]
+      },
+      "score_points": 20,
+      "scoring_rubric": [
+        "专业事实准确",
+        "包含适用边界",
+        "能给出可验证证据"
+      ],
+      "explanation": "需要处理分数尺度、权重、排名融合、过滤和去重。",
+      "evidence_ids": [
+        "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+        "3a1befcf-aede-53f8-9b53-b51f618c12b4"
+      ]
+    }
+  ],
+  "total_score_points": 40,
+  "pass_score_points": 30,
+  "evidence_ids": [
+    "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+    "3a1befcf-aede-53f8-9b53-b51f618c12b4",
+    "0c530834-1e07-54de-8e39-8511bc1658c0",
+    "716788a5-719d-5bd2-b841-55fc952f6160"
+  ],
+  "confidence": 0.8802
+}

@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "仲裁智能体输出",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "proposal_id",
+    "decision_type",
+    "selected_proposal_ids",
+    "rejected_proposals",
+    "target_knowledge_node_ids",
+    "rationale_summary",
+    "supporting_evidence_ids",
+    "confidence",
+    "requires_human_review",
+    "human_review_reason"
+  ],
+  "properties": {
+    "proposal_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "decision_type": {
+      "type": "string",
+      "enum": [
+        "deliver_resource",
+        "start_assessment",
+        "revise_resource",
+        "regenerate_assessment",
+        "rerun_diagnosis",
+        "replan_path",
+        "request_more_evidence",
+        "human_review",
+        "complete_session"
+      ]
+    },
+    "selected_proposal_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "rejected_proposals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "proposal_id",
+          "agent_name",
+          "reason"
+        ],
+        "properties": {
+          "proposal_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "agent_name": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "target_knowledge_node_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rationale_summary": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "supporting_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "human_review_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

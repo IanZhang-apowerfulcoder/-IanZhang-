@@ -1,0 +1,11 @@
+{
+  "question_id": "UUID",
+  "knowledge_node_id": "RAG-MXX-NXX",
+  "question_type": "single_choice",
+  "difficulty_level": 2,
+  "stem": "题干",
+  "options": ["A", "B", "C", "D"],
+  "answer": "B",
+  "explanation": "答案依据与错误选项说明。",
+  "evidence_ids": ["UUID"]
+}

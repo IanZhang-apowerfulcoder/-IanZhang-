@@ -1,0 +1,360 @@
+[
+  {
+    "term": "RAG的定义、目标与边界",
+    "aliases": [
+      "检索增强生成",
+      "Retrieval-Augmented Generation",
+      "RAG基础"
+    ],
+    "definition": "RAG是在生成前检索外部知识，并让生成模型在证据约束下完成回答或资源生成的系统方法。它的价值是知识可更新、证据可追踪和任务上下文可控，而不是保证模型永不出错。",
+    "knowledge_node_id": "RAG-M01-N01",
+    "evidence_id": "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34"
+  },
+  {
+    "term": "RAG端到端流水线与责任分层",
+    "aliases": [
+      "RAG pipeline",
+      "检索生成流程",
+      "RAG系统链路"
+    ],
+    "definition": "生产级RAG不是一次模型调用，而是离线知识工程与在线查询链路共同组成的系统。每个阶段都必须有版本、日志和可独立评测的契约。",
+    "knowledge_node_id": "RAG-M01-N02",
+    "evidence_id": "e03a7e60-d324-5f5e-834f-7381739e0810"
+  },
+  {
+    "term": "RAG、微调、长上下文与工具调用的选择",
+    "aliases": [
+      "RAG与微调",
+      "RAG vs Fine-tuning",
+      "长上下文方案选择"
+    ],
+    "definition": "RAG适合外部知识注入和来源追溯，微调更适合稳定行为模式，长上下文适合一次性材料，工具调用适合执行可验证操作。架构选择应由问题特征而不是技术热度决定。",
+    "knowledge_node_id": "RAG-M01-N03",
+    "evidence_id": "f2b2fa8a-fee3-586e-bbc3-98b5ecb5f1af"
+  },
+  {
+    "term": "需求分析、成功指标与RAG架构决策",
+    "aliases": [
+      "RAG需求分析",
+      "RAG技术选型",
+      "成功标准"
+    ],
+    "definition": "RAG项目应从用户任务、答案证据和失败代价出发。没有固定评测集和门禁，系统无法证明改动有效，也无法决定何时使用普通混合检索、层级检索、图检索或结构化查询。",
+    "knowledge_node_id": "RAG-M01-N04",
+    "evidence_id": "3ed623c7-fb38-5e39-bc64-befbff600e5a"
+  },
+  {
+    "term": "知识源治理、可信等级与准入",
+    "aliases": [
+      "source governance",
+      "知识来源管理",
+      "资料准入"
+    ],
+    "definition": "知识库质量首先取决于来源，而不是向量模型。每份资料都应有来源、所有者、适用范围、版本、授权状态和失效条件，模型生成的内容不能自动升级为权威事实。",
+    "knowledge_node_id": "RAG-M02-N01",
+    "evidence_id": "3e812057-6f3c-58b4-879c-b84b70205ca3"
+  },
+  {
+    "term": "文档解析、清洗与结构保真",
+    "aliases": [
+      "document parsing",
+      "文档清洗",
+      "版面解析"
+    ],
+    "definition": "解析阶段必须尽可能保留标题层级、列表、表格、代码块和页码等结构。错误解析会污染后续所有切片和检索，不能靠更强模型自动弥补。",
+    "knowledge_node_id": "RAG-M02-N02",
+    "evidence_id": "507145bd-82bf-57de-ba2c-02e7c516d149"
+  },
+  {
+    "term": "切片策略、语义边界与父子结构",
+    "aliases": [
+      "chunking",
+      "文档切片",
+      "parent-child chunks"
+    ],
+    "definition": "切片不是简单按固定字符截断，而是把资料转化为可独立检索、又保留必要上下文的证据单元。最佳策略需要用真实问题集评测，不能只凭经验设置长度。",
+    "knowledge_node_id": "RAG-M02-N03",
+    "evidence_id": "afb69292-46aa-55c7-b4b5-5b895d9d4513"
+  },
+  {
+    "term": "元数据、版本、血缘与知识发布",
+    "aliases": [
+      "metadata",
+      "knowledge versioning",
+      "provenance"
+    ],
+    "definition": "元数据是知识库治理与检索控制面。一个可发布的知识版本应固定文档、切片、索引、嵌入模型、图结构、评测结果和审批记录，不能在运行中悄然变化。",
+    "knowledge_node_id": "RAG-M02-N04",
+    "evidence_id": "110a39ee-0b6b-56b0-9c4f-626fbb785b1a"
+  },
+  {
+    "term": "文本嵌入、向量表示与相似度",
+    "aliases": [
+      "embedding",
+      "sentence embedding",
+      "语义向量"
+    ],
+    "definition": "文本嵌入把查询和知识片段映射到向量空间，使语义相近内容可以通过距离或相似度检索。模型语言、领域、维度和归一化方式必须与索引及评测保持一致。",
+    "knowledge_node_id": "RAG-M03-N01",
+    "evidence_id": "d2603583-8af0-5455-9b44-3d5e989c94c1"
+  },
+  {
+    "term": "向量存储、精确搜索、HNSW与IVFFlat",
+    "aliases": [
+      "vector database",
+      "pgvector",
+      "HNSW",
+      "IVFFlat"
+    ],
+    "definition": "向量存储负责保存嵌入和执行最近邻搜索。精确搜索提供基准召回；HNSW通常有较好的速度-召回权衡但构建和内存成本较高；IVFFlat构建更轻但需要训练和调参。",
+    "knowledge_node_id": "RAG-M03-N02",
+    "evidence_id": "0db4adce-4113-5ed8-844f-89563f132422"
+  },
+  {
+    "term": "BM25、关键词检索与精确术语召回",
+    "aliases": [
+      "BM25",
+      "sparse retrieval",
+      "全文检索",
+      "关键词检索"
+    ],
+    "definition": "关键词检索根据词项出现和区分度排序，擅长编号、产品名、错误码、函数名和罕见术语。它与向量检索互补，是混合检索不可缺少的基线。",
+    "knowledge_node_id": "RAG-M03-N03",
+    "evidence_id": "6cf90763-ba94-5e6b-af2b-df4a83374646"
+  },
+  {
+    "term": "混合检索、分数融合与RRF",
+    "aliases": [
+      "hybrid search",
+      "reciprocal rank fusion",
+      "稀疏稠密融合"
+    ],
+    "definition": "混合检索利用关键词的精确匹配和向量的语义匹配。RRF按照多个结果列表中的排名融合，不要求原始分数位于同一尺度，适合作为稳定基线。",
+    "knowledge_node_id": "RAG-M03-N04",
+    "evidence_id": "7d448bf9-e164-5a44-81cd-86a76d56dcfa"
+  },
+  {
+    "term": "查询理解、意图识别与查询改写",
+    "aliases": [
+      "query rewriting",
+      "query understanding",
+      "查询扩展"
+    ],
+    "definition": "用户问题往往包含省略、上下文指代、拼写和多个子问题。查询处理应在不改变原意的前提下生成检索计划，并保留原始问题用于审计。",
+    "knowledge_node_id": "RAG-M04-N01",
+    "evidence_id": "2216241f-58cb-509e-abb0-41c1c55bdf1f"
+  },
+  {
+    "term": "元数据过滤、租户隔离与权限检索",
+    "aliases": [
+      "metadata filter",
+      "access control retrieval",
+      "权限过滤"
+    ],
+    "definition": "权限必须在检索层实施，而不是先检索敏感内容再让生成模型“不要显示”。所有查询都应绑定调用者、组织、激活知识版本和允许的安全标签。",
+    "knowledge_node_id": "RAG-M04-N02",
+    "evidence_id": "060b18e5-ed29-50d7-9cf1-d2cb7ae22fed"
+  },
+  {
+    "term": "候选重排、交叉编码器与多阶段检索",
+    "aliases": [
+      "reranking",
+      "cross-encoder",
+      "多阶段检索"
+    ],
+    "definition": "第一阶段检索追求召回，重排阶段用更精细的查询-片段交互提高头部相关性。重排不是替代召回；候选中没有正确证据时，再强的重排也无法恢复。",
+    "knowledge_node_id": "RAG-M04-N03",
+    "evidence_id": "cea9d066-c4b0-5d51-826e-5bf6970b3b7b"
+  },
+  {
+    "term": "上下文选择、压缩、排序与引用封装",
+    "aliases": [
+      "context packing",
+      "context compression",
+      "上下文工程"
+    ],
+    "definition": "最终送入模型的不是检索结果列表，而是经过权限校验、去重、冲突标记、压缩和排序的证据包。更多上下文不一定更好，关键证据应保持完整并可引用。",
+    "knowledge_node_id": "RAG-M04-N04",
+    "evidence_id": "24c5e9d9-1f5f-5cb1-afb7-793c9235f9c3"
+  },
+  {
+    "term": "证据约束生成、引用与答案结构",
+    "aliases": [
+      "grounded generation",
+      "faithful generation",
+      "证据约束回答"
+    ],
+    "definition": "可信生成要求模型明确知道可用证据、允许的任务和禁止扩写范围。答案中的关键专业结论应绑定证据，推断应被标注，证据不足时不能用常识补齐。",
+    "knowledge_node_id": "RAG-M05-N01",
+    "evidence_id": "5a8c0f89-8b27-5101-ae21-3040ab75bbc2"
+  },
+  {
+    "term": "证据不足、拒答、追问与人工转交",
+    "aliases": [
+      "abstention",
+      "refusal",
+      "insufficient evidence",
+      "拒答策略"
+    ],
+    "definition": "可信系统必须知道何时不回答。证据不足不应被视为失败，而应触发扩大检索、澄清问题、说明知识边界或转人工的确定性策略。",
+    "knowledge_node_id": "RAG-M05-N02",
+    "evidence_id": "af19c081-bf31-5030-801c-104069fdfa03"
+  },
+  {
+    "term": "幻觉分类、事实审核与交叉验证",
+    "aliases": [
+      "hallucination audit",
+      "事实一致性",
+      "内容审核"
+    ],
+    "definition": "幻觉不能只用一个总分表示。审核应逐项识别无证据陈述、与证据矛盾、引用不支持、条件丢失、数值或代码错误，并给出通过、修改、补检索或人工审核动作。",
+    "knowledge_node_id": "RAG-M05-N03",
+    "evidence_id": "d2eaf759-6ded-5884-918f-e0e4e66766ba"
+  },
+  {
+    "term": "提示注入、不可信文档与知识库安全",
+    "aliases": [
+      "prompt injection",
+      "indirect prompt injection",
+      "RAG security"
+    ],
+    "definition": "RAG会把外部文档送入模型，因此文档中的恶意指令可能影响模型。所有检索内容都应被视为不可信数据，不能获得系统指令或工具权限。",
+    "knowledge_node_id": "RAG-M05-N04",
+    "evidence_id": "b04e4952-9eb2-502e-9cfe-41d8bd62bc49"
+  },
+  {
+    "term": "检索评测：Hit Rate、Recall、MRR与nDCG",
+    "aliases": [
+      "retrieval evaluation",
+      "Recall@k",
+      "MRR",
+      "nDCG"
+    ],
+    "definition": "检索评测必须脱离生成模型单独进行。Hit Rate关注是否命中，Recall关注相关证据覆盖，MRR关注首个相关结果位置，nDCG考虑多级相关性和排序。",
+    "knowledge_node_id": "RAG-M06-N01",
+    "evidence_id": "adffd192-5ddc-5a39-b49e-54daa48cbee2"
+  },
+  {
+    "term": "生成评测：忠实度、引用、完整性与适配",
+    "aliases": [
+      "generation evaluation",
+      "faithfulness",
+      "citation correctness",
+      "难度适配"
+    ],
+    "definition": "生成评测应判断答案是否被证据支持、是否覆盖任务要求、引用是否准确、表达是否适合目标学习者。一个答案可能事实正确但不完整，也可能难度错配。",
+    "knowledge_node_id": "RAG-M06-N02",
+    "evidence_id": "03235f85-f938-56aa-b0ff-4bc1532ba277"
+  },
+  {
+    "term": "端到端回归、消融实验与发布门禁",
+    "aliases": [
+      "RAG regression",
+      "ablation study",
+      "quality gate"
+    ],
+    "definition": "RAG系统的改动可能改善一个指标同时损害另一个。每次知识、切片、嵌入、检索、重排、Prompt或模型变更，都应在固定数据集上回归并与基线比较。",
+    "knowledge_node_id": "RAG-M06-N03",
+    "evidence_id": "e8b6e6b1-8456-52aa-ab72-cb0f6a40cf88"
+  },
+  {
+    "term": "可观测性、成本、时延与故障定位",
+    "aliases": [
+      "RAG observability",
+      "tracing",
+      "cost monitoring"
+    ],
+    "definition": "生产RAG需要把一次请求拆解为可观测事件。关联ID、知识版本、检索结果、模型调用、审核和决策必须串联，才能解释系统为何给出某个结果。",
+    "knowledge_node_id": "RAG-M06-N04",
+    "evidence_id": "f7a56088-095a-51e7-85ad-8b2fe9133c6f"
+  },
+  {
+    "term": "父子检索、层级检索与长文档问答",
+    "aliases": [
+      "parent-child retrieval",
+      "hierarchical retrieval",
+      "层级RAG"
+    ],
+    "definition": "层级检索用较小叶子节点提高命中精度，再返回对应父节点或邻接节点补充完整上下文，适合教材、规范和章节结构明显的长文档。",
+    "knowledge_node_id": "RAG-M07-N01",
+    "evidence_id": "8a6d4207-0b73-570f-88a9-0a286da9db8d"
+  },
+  {
+    "term": "GraphRAG、实体关系与局部/全局查询",
+    "aliases": [
+      "GraphRAG",
+      "knowledge graph RAG",
+      "图检索"
+    ],
+    "definition": "GraphRAG把实体、关系和社区结构用于检索，适合多跳关系、依赖链和整体主题问题。它不是普通问答的默认方案，图抽取错误和构建成本必须通过评测证明值得。",
+    "knowledge_node_id": "RAG-M07-N02",
+    "evidence_id": "98506802-b517-54d1-830d-4593bd3abca6"
+  },
+  {
+    "term": "Agentic RAG、问题分解与检索自修复",
+    "aliases": [
+      "Agentic RAG",
+      "adaptive retrieval",
+      "multi-step retrieval"
+    ],
+    "definition": "Agentic RAG把固定检索流水线扩展为受策略约束的计划-执行-检查循环。它适合复杂、多跳或证据不足的问题，普通事实问题仍应走低成本确定性路径。",
+    "knowledge_node_id": "RAG-M07-N03",
+    "evidence_id": "48d5743b-bdaa-59ed-9b3c-6afd2a6a238d"
+  },
+  {
+    "term": "结构化、代码与多模态知识路由",
+    "aliases": [
+      "structured RAG",
+      "code RAG",
+      "multimodal RAG",
+      "知识类型路由"
+    ],
+    "definition": "不是所有知识都应转成普通文本向量。表格和实时指标应结构化查询，代码应保留符号与调用关系，图片和流程图需要视觉或说明索引，再由检索计划组合证据。",
+    "knowledge_node_id": "RAG-M07-N04",
+    "evidence_id": "62932873-51ea-5a17-86b5-b386af4b4671"
+  },
+  {
+    "term": "知识服务API、契约与Agent集成",
+    "aliases": [
+      "knowledge API",
+      "retrieval service",
+      "Agent interface"
+    ],
+    "definition": "知识库应作为可替换服务或模块向后端和Agent提供稳定契约。调用者传入知识版本、查询、top-k和不可覆盖的过滤条件，返回结构化证据而不是自由文本答案。",
+    "knowledge_node_id": "RAG-M08-N01",
+    "evidence_id": "a7da9668-9a0f-5eb3-8d65-1e2f8a3f2cfb"
+  },
+  {
+    "term": "持久化、事务、缓存与一致性",
+    "aliases": [
+      "RAG persistence",
+      "database consistency",
+      "cache invalidation"
+    ],
+    "definition": "PostgreSQL保存权威元数据、画像、证据和事件；对象存储保存原始大文件；Redis用于缓存、锁和短期队列。前端和专业Agent均不直接任意写数据库。",
+    "knowledge_node_id": "RAG-M08-N02",
+    "evidence_id": "a0691617-7aef-5cbb-999b-318ce930f4d5"
+  },
+  {
+    "term": "性能、批处理、缓存与容量规划",
+    "aliases": [
+      "RAG performance",
+      "latency optimization",
+      "capacity planning"
+    ],
+    "definition": "性能优化必须建立在质量门禁之上。通过批量嵌入、索引调优、缓存、并行召回和分层模型降低成本，同时监测召回退化和长尾时延。",
+    "knowledge_node_id": "RAG-M08-N03",
+    "evidence_id": "8d9b1474-edc1-5907-9284-c13592082a29"
+  },
+  {
+    "term": "本地开发、容器部署、安全与运维",
+    "aliases": [
+      "RAG deployment",
+      "Docker Compose",
+      "production hardening"
+    ],
+    "definition": "开发期可以在本机用Docker Compose运行完整依赖，代码通过GitHub协作；部署时将同样的服务边界迁移到Linux服务器。逻辑分离比是否同一台机器更重要。",
+    "knowledge_node_id": "RAG-M08-N04",
+    "evidence_id": "0af1e8e2-843f-554e-af8f-c5115de5ccd8"
+  }
+]

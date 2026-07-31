@@ -1,0 +1,47 @@
+{
+  "domain_pack_id": "9cad1d21-24ee-58d2-998c-ea11b5cb9904",
+  "slug": "enterprise-rag-engineering-v1",
+  "version": "1.0.0",
+  "status": "candidate_validated",
+  "name_zh": "企业级 RAG 系统工程与可信知识应用实训知识库",
+  "name_en": "Enterprise RAG Engineering and Trustworthy Knowledge Applications",
+  "vertical_domain": "特定软件开发 / 人工智能工程",
+  "target_users": [
+    "高校计算机专业学生",
+    "企业初级AI工程师",
+    "需要转岗到大模型应用工程的开发者"
+  ],
+  "training_goal": "能够设计、实现、评测并部署一个可追溯、可审核、可迭代的企业级RAG系统。",
+  "scope_in": [
+    "RAG基础与选型",
+    "知识源治理",
+    "文档解析和切片",
+    "稀疏/稠密/混合检索",
+    "重排与上下文工程",
+    "可信生成和拒答",
+    "提示注入防护",
+    "RAG评测",
+    "GraphRAG/Agentic RAG等高级架构",
+    "API、数据、性能与部署"
+  ],
+  "scope_out": [
+    "训练基础大模型",
+    "未经审核的医疗/法律/金融专业建议",
+    "任意互联网自动抓取并直接发布",
+    "承诺绝对零幻觉"
+  ],
+  "knowledge_base_id": "5ee91131-667d-5877-9d59-c9cf6a6917ca",
+  "knowledge_base_version_id": "fd400183-2242-50aa-8b83-d670c1ce5a1f",
+  "organization_id": "b3907f75-2307-5f64-b428-06ae3a6eb30d",
+  "source_build_run_id": "df866783-ca69-5929-97ab-0df64aba8b22",
+  "created_at": "2026-07-31T10:00:00Z",
+  "license": "原创教学内容；引用来源仅用于事实依据与延伸阅读，需遵守各来源许可。",
+  "quality_targets": {
+    "core_knowledge_coverage_rate": 0.9,
+    "retrieval_hit_rate_at_5": 0.9,
+    "professional_error_rate_max": 0.05,
+    "learner_resource_difficulty_match_accuracy": 0.85,
+    "schema_pass_rate": 1.0
+  },
+  "notes": "本版本提供可立即运行的词法+元数据基线；生产向量需在选定嵌入模型后由脚本生成，不伪造向量。"
+}

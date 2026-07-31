@@ -1,0 +1,54 @@
+{
+  "proposal_id": "cbeb0cfd-37a1-5df0-b4e4-8c7d030fe299",
+  "mastered_knowledge_nodes": [
+    {
+      "knowledge_node_id": "RAG-M01-N01",
+      "mastery_score": 0.95,
+      "evidence_ids": [
+        "b04e4952-9eb2-502e-9cfe-41d8bd62bc49"
+      ]
+    }
+  ],
+  "weak_knowledge_nodes": [
+    {
+      "knowledge_node_id": "RAG-M05-N04",
+      "mastery_score": 0.35,
+      "evidence_ids": [
+        "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+        "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+      ]
+    },
+    {
+      "knowledge_node_id": "RAG-M07-N03",
+      "mastery_score": 0.2,
+      "evidence_ids": [
+        "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+        "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+      ]
+    }
+  ],
+  "error_patterns": [
+    {
+      "error_type_code": "CONCEPT_GAP",
+      "severity": "medium",
+      "description": "在提示注入、不可信文档与知识库安全相关知识上存在证据支持的能力缺口。",
+      "evidence_ids": [
+        "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+        "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+      ]
+    }
+  ],
+  "recommended_focus_node_ids": [
+    "RAG-M05-N04",
+    "RAG-M07-N03"
+  ],
+  "confidence": 0.8887,
+  "evidence_ids": [
+    "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+    "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+    "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+    "56475a80-f5aa-571b-96a9-5cf4a4a59630"
+  ],
+  "reasoning_summary": "根据初始画像和固定测试数据，优先学习提示注入、不可信文档与知识库安全及其直接关联节点。",
+  "requires_human_review": false
+}

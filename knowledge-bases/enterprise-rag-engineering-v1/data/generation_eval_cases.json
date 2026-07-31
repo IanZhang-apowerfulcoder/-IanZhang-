@@ -1,0 +1,898 @@
+[
+  {
+    "test_case_id": "GEN-RAG-M01-N01-01",
+    "knowledge_node_id": "RAG-M01-N01",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“RAG的定义、目标与边界”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "核心定义",
+      "主要工程价值",
+      "不等于事实保证",
+      "本项目中的角色"
+    ],
+    "required_evidence_ids": [
+      "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+      "c170ae95-9b55-5e85-9857-46a84b4e7711",
+      "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+      "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3"
+    ],
+    "forbidden_claims": [
+      "RAG会把上传文档训练进模型参数。",
+      "只要接入向量数据库就不会幻觉。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 1
+  },
+  {
+    "test_case_id": "GEN-RAG-M01-N02-01",
+    "knowledge_node_id": "RAG-M01-N02",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“RAG端到端流水线与责任分层”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "离线知识构建",
+      "在线查询链路",
+      "阶段责任隔离",
+      "可观测与回放"
+    ],
+    "required_evidence_ids": [
+      "e03a7e60-d324-5f5e-834f-7381739e0810",
+      "01c56b02-c15f-576b-9b9d-68c47d67916b",
+      "4f80f1b6-c99f-5f35-8eac-065eadf712ad",
+      "0cbdabc0-1c7f-5315-b264-d7240cc87b5d"
+    ],
+    "forbidden_claims": [
+      "RAG流水线就是“embedding后top-k再问模型”。",
+      "所有阶段由一个Agent完成更简单。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 1
+  },
+  {
+    "test_case_id": "GEN-RAG-M01-N03-01",
+    "knowledge_node_id": "RAG-M01-N03",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“RAG、微调、长上下文与工具调用的选择”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "RAG适用条件",
+      "微调的主要位置",
+      "长上下文的限制",
+      "工具调用的职责"
+    ],
+    "required_evidence_ids": [
+      "f2b2fa8a-fee3-586e-bbc3-98b5ecb5f1af",
+      "3bbdce74-b29f-52ac-8394-06056f2e85f0",
+      "bdafa642-49da-5f6f-897b-a1302eae874a",
+      "135c2547-e958-5725-b386-ba992f9a2714"
+    ],
+    "forbidden_claims": [
+      "微调以后就不需要知识库。",
+      "上下文窗口足够大就可以永远不检索。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 2
+  },
+  {
+    "test_case_id": "GEN-RAG-M01-N04-01",
+    "knowledge_node_id": "RAG-M01-N04",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“需求分析、成功指标与RAG架构决策”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "先定义用户任务",
+      "建立黄金问题集",
+      "指标分层",
+      "知识形态驱动架构"
+    ],
+    "required_evidence_ids": [
+      "3ed623c7-fb38-5e39-bc64-befbff600e5a",
+      "f48d4afb-0300-5ea2-a1e3-aad1427e3a34",
+      "0a53a5bd-4026-5071-82ac-2b8e27cba817",
+      "3d5cd78b-15d8-54f0-b2b4-db02eb10b962"
+    ],
+    "forbidden_claims": [
+      "先把系统做出来，再找一些问题测试。",
+      "一个准确率就能代表RAG质量。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 2
+  },
+  {
+    "test_case_id": "GEN-RAG-M02-N01-01",
+    "knowledge_node_id": "RAG-M02-N01",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“知识源治理、可信等级与准入”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "来源登记",
+      "可信等级",
+      "派生内容可追溯",
+      "冲突与失效"
+    ],
+    "required_evidence_ids": [
+      "3e812057-6f3c-58b4-879c-b84b70205ca3",
+      "7e8f9330-fd2c-5cf2-aee7-1101bd092085",
+      "33ddfbdd-4719-5f27-bf5d-b22f52551dcf",
+      "19a5d2af-6eb3-5673-b2cb-087fac1fa0be"
+    ],
+    "forbidden_claims": [
+      "公开网页都可以直接作为权威知识。",
+      "模型总结后的内容可以替代原始来源。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 1
+  },
+  {
+    "test_case_id": "GEN-RAG-M02-N02-01",
+    "knowledge_node_id": "RAG-M02-N02",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“文档解析、清洗与结构保真”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "按文件类型选择解析器",
+      "结构保真",
+      "清洗原则",
+      "解析验收"
+    ],
+    "required_evidence_ids": [
+      "507145bd-82bf-57de-ba2c-02e7c516d149",
+      "459f4320-ffba-555d-9b05-e679be68ff95",
+      "44da0ddb-5f54-55a7-a6d2-dd3665dbd829",
+      "d3ec5725-8e5f-57b6-aec7-c0f45172e0bb"
+    ],
+    "forbidden_claims": [
+      "所有PDF都可以直接提取文本。",
+      "解析只要看起来有文字就算成功。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 2
+  },
+  {
+    "test_case_id": "GEN-RAG-M02-N03-01",
+    "knowledge_node_id": "RAG-M02-N03",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“切片策略、语义边界与父子结构”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "语义完整性优先",
+      "长度与重叠权衡",
+      "父子层级",
+      "按内容类型切片"
+    ],
+    "required_evidence_ids": [
+      "afb69292-46aa-55c7-b4b5-5b895d9d4513",
+      "42e17c0b-2db3-52ac-b398-eca5dc702b4f",
+      "f4b2772e-9f5f-5419-9b2b-cd8a22ef39de",
+      "8ccfef39-f6ff-5035-a27f-e0413f934758"
+    ],
+    "forbidden_claims": [
+      "chunk size越大，模型得到的信息越多，所以越好。",
+      "overlap越大越保险。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 2
+  },
+  {
+    "test_case_id": "GEN-RAG-M02-N04-01",
+    "knowledge_node_id": "RAG-M02-N04",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“元数据、版本、血缘与知识发布”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "最小元数据集",
+      "不可变版本",
+      "血缘链",
+      "发布门禁"
+    ],
+    "required_evidence_ids": [
+      "110a39ee-0b6b-56b0-9c4f-626fbb785b1a",
+      "de2d06e7-6962-5ce2-b3f9-b8d983be22b8",
+      "8682abe8-16eb-58ff-8869-c1fa1c56290c",
+      "4cb0290e-cbda-526c-b420-5e1044866f55"
+    ],
+    "forbidden_claims": [
+      "metadata只是方便展示，可以后补。",
+      "修改数据库里的旧切片比新建版本简单。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 3
+  },
+  {
+    "test_case_id": "GEN-RAG-M03-N01-01",
+    "knowledge_node_id": "RAG-M03-N01",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“文本嵌入、向量表示与相似度”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "语义表示",
+      "距离函数一致性",
+      "模型选型",
+      "嵌入版本化"
+    ],
+    "required_evidence_ids": [
+      "d2603583-8af0-5455-9b44-3d5e989c94c1",
+      "32df7ce1-8afb-5cfb-9b25-91de8fed3532",
+      "9b9b3e6f-796b-5b9e-b2ac-7dd455c1f2f0",
+      "2e9c8abd-4f76-5113-9886-e0d3edd77542"
+    ],
+    "forbidden_claims": [
+      "语义相关就一定事实相关。",
+      "所有模型输出都可以使用同一种距离函数。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 2
+  },
+  {
+    "test_case_id": "GEN-RAG-M03-N02-01",
+    "knowledge_node_id": "RAG-M03-N02",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“向量存储、精确搜索、HNSW与IVFFlat”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "精确与近似检索",
+      "HNSW",
+      "IVFFlat",
+      "过滤与索引"
+    ],
+    "required_evidence_ids": [
+      "0db4adce-4113-5ed8-844f-89563f132422",
+      "5e8ced64-0f8f-5a42-906f-fa6ec450dc0f",
+      "383e3b96-5fe2-5637-975e-836e1a294892",
+      "881618b9-0202-5397-b16b-fb002bf8a858"
+    ],
+    "forbidden_claims": [
+      "上了HNSW以后结果和精确搜索完全相同。",
+      "IVFFlat创建后不需要调参。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 3
+  },
+  {
+    "test_case_id": "GEN-RAG-M03-N03-01",
+    "knowledge_node_id": "RAG-M03-N03",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“BM25、关键词检索与精确术语召回”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "BM25直觉",
+      "精确术语优势",
+      "中文分词与词典",
+      "基线价值"
+    ],
+    "required_evidence_ids": [
+      "6cf90763-ba94-5e6b-af2b-df4a83374646",
+      "d95931d9-b4cc-59ae-883d-8742ad35e137",
+      "6eae105b-244f-5e5f-8fdd-4ef9df1231dd",
+      "518d537b-59a6-5d48-8df2-0b35bb37c0b8"
+    ],
+    "forbidden_claims": [
+      "向量检索出现后关键词检索已经过时。",
+      "关键词检索不需要数据治理。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 2
+  },
+  {
+    "test_case_id": "GEN-RAG-M03-N04-01",
+    "knowledge_node_id": "RAG-M03-N04",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“混合检索、分数融合与RRF”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "互补召回",
+      "分数归一化",
+      "RRF",
+      "融合后仍需过滤与去重"
+    ],
+    "required_evidence_ids": [
+      "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+      "3a1befcf-aede-53f8-9b53-b51f618c12b4",
+      "0c530834-1e07-54de-8e39-8511bc1658c0",
+      "716788a5-719d-5bd2-b841-55fc952f6160"
+    ],
+    "forbidden_claims": [
+      "混合检索就是把两种分数直接相加。",
+      "RRF不需要调参和评测。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 3
+  },
+  {
+    "test_case_id": "GEN-RAG-M04-N01-01",
+    "knowledge_node_id": "RAG-M04-N01",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“查询理解、意图识别与查询改写”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "意图决定检索策略",
+      "规范化与改写",
+      "多查询扩展",
+      "防止语义漂移"
+    ],
+    "required_evidence_ids": [
+      "2216241f-58cb-509e-abb0-41c1c55bdf1f",
+      "65b31f9f-9013-512f-bbda-cc2200a4f140",
+      "9856893b-3706-5d35-9fd0-b1563a39dcba",
+      "bb2ff342-0006-574c-8c09-7a5c49b1524f"
+    ],
+    "forbidden_claims": [
+      "把问题改得越长越容易检索。",
+      "改写后的问题可以替代用户原话。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 2
+  },
+  {
+    "test_case_id": "GEN-RAG-M04-N02-01",
+    "knowledge_node_id": "RAG-M04-N02",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“元数据过滤、租户隔离与权限检索”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "检索前授权",
+      "版本与有效期",
+      "近似检索交互",
+      "越权测试"
+    ],
+    "required_evidence_ids": [
+      "060b18e5-ed29-50d7-9cf1-d2cb7ae22fed",
+      "190248c5-ff2b-5d24-8f12-8dca4b602d96",
+      "772c18e9-a423-5492-80df-214c3e326a87",
+      "4e5f6c43-7704-5ab0-be5b-c059a68e3b4b"
+    ],
+    "forbidden_claims": [
+      "在Prompt里写“不要泄露敏感信息”就足够。",
+      "top-k返回不足只需降低过滤条件。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 3
+  },
+  {
+    "test_case_id": "GEN-RAG-M04-N03-01",
+    "knowledge_node_id": "RAG-M04-N03",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“候选重排、交叉编码器与多阶段检索”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "两阶段职责",
+      "交叉编码与晚交互",
+      "评测重排收益",
+      "多样性与去重"
+    ],
+    "required_evidence_ids": [
+      "cea9d066-c4b0-5d51-826e-5bf6970b3b7b",
+      "825fd4ce-5fd5-5a03-b094-ae387480ea2d",
+      "f485d3df-f7e5-552d-b6f5-f7cb733477a0",
+      "77e2ed0e-4e52-5024-90b5-73020341f9ce"
+    ],
+    "forbidden_claims": [
+      "重排器可以修复第一阶段漏检。",
+      "重排模型越大越好。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 3
+  },
+  {
+    "test_case_id": "GEN-RAG-M04-N04-01",
+    "knowledge_node_id": "RAG-M04-N04",
+    "learner_level": "advanced",
+    "prompt": "基于给定证据，为目标学习者生成“上下文选择、压缩、排序与引用封装”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "预算分配",
+      "压缩不改写事实",
+      "顺序与位置",
+      "证据封装"
+    ],
+    "required_evidence_ids": [
+      "24c5e9d9-1f5f-5cb1-afb7-793c9235f9c3",
+      "d6441eb5-e28a-5b0b-9cd7-f1b5b94fb8a9",
+      "382852a1-407f-5cb3-910f-79f9e64b28fc",
+      "b7d7f4c7-aef7-535b-a226-a6cfbb0300ef"
+    ],
+    "forbidden_claims": [
+      "把检索到的50段全部放进上下文最安全。",
+      "生成式摘要天然等价于原文。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 4
+  },
+  {
+    "test_case_id": "GEN-RAG-M05-N01-01",
+    "knowledge_node_id": "RAG-M05-N01",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“证据约束生成、引用与答案结构”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "生成契约",
+      "陈述级证据绑定",
+      "事实与教学转换",
+      "结构化输出"
+    ],
+    "required_evidence_ids": [
+      "5a8c0f89-8b27-5101-ae21-3040ab75bbc2",
+      "09f16411-041b-5ae5-bb68-b3f3c8583d6c",
+      "621966e1-03ad-5c30-bf27-683c4ace0ac7",
+      "9740184c-c0fc-50fe-9086-8aee85a60791"
+    ],
+    "forbidden_claims": [
+      "提示词写“不要幻觉”就能保证可信。",
+      "答案带了来源链接就一定有依据。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 2
+  },
+  {
+    "test_case_id": "GEN-RAG-M05-N02-01",
+    "knowledge_node_id": "RAG-M05-N02",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“证据不足、拒答、追问与人工转交”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "证据充分性",
+      "四种动作",
+      "拒答内容",
+      "拒答评测"
+    ],
+    "required_evidence_ids": [
+      "af19c081-bf31-5030-801c-104069fdfa03",
+      "c56bbccd-b251-5073-b1ff-750e44f7463d",
+      "29ed0fa1-79e7-50dc-8ee3-6758da64fb0f",
+      "a765ce4c-c074-57e5-bfab-cceb6b9ca895"
+    ],
+    "forbidden_claims": [
+      "拒答越多越安全。",
+      "找不到证据时可以用模型常识补充。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 2
+  },
+  {
+    "test_case_id": "GEN-RAG-M05-N03-01",
+    "knowledge_node_id": "RAG-M05-N03",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“幻觉分类、事实审核与交叉验证”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "错误分类",
+      "独立审核上下文",
+      "交叉验证",
+      "谬误率口径"
+    ],
+    "required_evidence_ids": [
+      "d2eaf759-6ded-5884-918f-e0e4e66766ba",
+      "370b0b20-3e5b-5db5-bf19-622c6c4717e1",
+      "16963fcf-b840-5d52-a6aa-faa7ce33f419",
+      "ce4b5efc-3fd0-513c-a7bc-8c51b0a5f37b"
+    ],
+    "forbidden_claims": [
+      "让同一个模型再读一遍就叫交叉验证。",
+      "整体读起来通顺就说明专业正确。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 3
+  },
+  {
+    "test_case_id": "GEN-RAG-M05-N04-01",
+    "knowledge_node_id": "RAG-M05-N04",
+    "learner_level": "advanced",
+    "prompt": "基于给定证据，为目标学习者生成“提示注入、不可信文档与知识库安全”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "直接与间接注入",
+      "指令与数据分离",
+      "最小工具权限",
+      "多层检测与响应"
+    ],
+    "required_evidence_ids": [
+      "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+      "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+      "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+      "56475a80-f5aa-571b-96a9-5cf4a4a59630"
+    ],
+    "forbidden_claims": [
+      "只有用户输入会提示注入。",
+      "过滤“ignore previous instructions”一个短语即可。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 4
+  },
+  {
+    "test_case_id": "GEN-RAG-M06-N01-01",
+    "knowledge_node_id": "RAG-M06-N01",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“检索评测：Hit Rate、Recall、MRR与nDCG”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "评测单元",
+      "Hit与Recall",
+      "MRR与nDCG",
+      "分层分析"
+    ],
+    "required_evidence_ids": [
+      "adffd192-5ddc-5a39-b49e-54daa48cbee2",
+      "b5f3a63c-bf7f-5ec5-bc9a-017bdbad9ed8",
+      "c3f82abd-e2ee-5035-9af9-47b1efad9b83",
+      "4664f323-58f4-55a0-8727-58b743ad4ea0"
+    ],
+    "forbidden_claims": [
+      "Hit@5高就说明上下文一定优质。",
+      "用最终模型答案评估检索即可。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 2
+  },
+  {
+    "test_case_id": "GEN-RAG-M06-N02-01",
+    "knowledge_node_id": "RAG-M06-N02",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“生成评测：忠实度、引用、完整性与适配”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "忠实度",
+      "引用正确与完整",
+      "答案完整与任务符合",
+      "难度适配"
+    ],
+    "required_evidence_ids": [
+      "03235f85-f938-56aa-b0ff-4bc1532ba277",
+      "1d95d51a-ea33-537f-b172-a64a41a50afe",
+      "5df563d9-8637-503b-8c51-890b1420fda8",
+      "6424993c-4943-51fa-963a-7e9abafc2354"
+    ],
+    "forbidden_claims": [
+      "答案事实正确就代表适合学习者。",
+      "LLM-as-a-judge分数可以直接当最终结论。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 3
+  },
+  {
+    "test_case_id": "GEN-RAG-M06-N03-01",
+    "knowledge_node_id": "RAG-M06-N03",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“端到端回归、消融实验与发布门禁”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "版本回归范围",
+      "消融实验",
+      "门禁与容差",
+      "失败案例资产化"
+    ],
+    "required_evidence_ids": [
+      "e8b6e6b1-8456-52aa-ab72-cb0f6a40cf88",
+      "50735323-f303-5a3e-8a00-d9daade93e7f",
+      "4e94d552-1552-5c99-9560-33aff792912d",
+      "025bbb14-294e-56d7-8d1d-26b3906bec88"
+    ],
+    "forbidden_claims": [
+      "新版本总体平均分更高就可以发布。",
+      "消融实验只适合论文。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 3
+  },
+  {
+    "test_case_id": "GEN-RAG-M06-N04-01",
+    "knowledge_node_id": "RAG-M06-N04",
+    "learner_level": "advanced",
+    "prompt": "基于给定证据，为目标学习者生成“可观测性、成本、时延与故障定位”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "关联标识",
+      "时延分解",
+      "成本归因",
+      "事件与回放"
+    ],
+    "required_evidence_ids": [
+      "f7a56088-095a-51e7-85ad-8b2fe9133c6f",
+      "620c5f33-f3ff-5aea-8bed-876495e857a4",
+      "b3f5a569-1ddd-5d60-9ab1-62aa03ffc24b",
+      "9f9cf91f-b805-56c0-ae09-037cfe9a2ece"
+    ],
+    "forbidden_claims": [
+      "只记录最终答案和报错就够。",
+      "实时日志可以直接保存全部Prompt和文档。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 4
+  },
+  {
+    "test_case_id": "GEN-RAG-M07-N01-01",
+    "knowledge_node_id": "RAG-M07-N01",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“父子检索、层级检索与长文档问答”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "层级节点",
+      "小块检索大块返回",
+      "合并与预算",
+      "适用边界"
+    ],
+    "required_evidence_ids": [
+      "8a6d4207-0b73-570f-88a9-0a286da9db8d",
+      "8662dadf-3f31-5802-8bf9-9a4024d1fda3",
+      "5beb2f8c-4908-51ba-b2b5-8020e17bcf3c",
+      "38a85343-ee96-5bb6-a36d-102b65702aee"
+    ],
+    "forbidden_claims": [
+      "父子检索只是把chunk size设置成两个值。",
+      "返回完整父章节一定更好。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 3
+  },
+  {
+    "test_case_id": "GEN-RAG-M07-N02-01",
+    "knowledge_node_id": "RAG-M07-N02",
+    "learner_level": "advanced",
+    "prompt": "基于给定证据，为目标学习者生成“GraphRAG、实体关系与局部/全局查询”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "图结构价值",
+      "Local Search",
+      "Global Search",
+      "图质量与边界"
+    ],
+    "required_evidence_ids": [
+      "98506802-b517-54d1-830d-4593bd3abca6",
+      "52ab22c2-b150-504d-a10c-3c4d2f8bf0e5",
+      "2d40b0bf-895a-5c32-8073-ecf7ecf35403",
+      "34ab589e-3895-5dda-af1f-7ba8ebf76721"
+    ],
+    "forbidden_claims": [
+      "GraphRAG在所有问题上都比向量检索强。",
+      "模型抽取出的关系可以直接当事实。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 4
+  },
+  {
+    "test_case_id": "GEN-RAG-M07-N03-01",
+    "knowledge_node_id": "RAG-M07-N03",
+    "learner_level": "advanced",
+    "prompt": "基于给定证据，为目标学习者生成“Agentic RAG、问题分解与检索自修复”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "计划与工具选择",
+      "证据检查循环",
+      "确定性边界",
+      "评测与回放"
+    ],
+    "required_evidence_ids": [
+      "48d5743b-bdaa-59ed-9b3c-6afd2a6a238d",
+      "9122166e-62a5-5f90-aa9f-6b701a509ac9",
+      "a06b3a62-37a7-5230-9a9a-f0ca5d15f1e9",
+      "6c831bf7-0966-5b49-bcb0-319c51feb9fa"
+    ],
+    "forbidden_claims": [
+      "Agentic RAG就是让模型自由决定所有步骤。",
+      "所有问题都应该走多步Agent。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 4
+  },
+  {
+    "test_case_id": "GEN-RAG-M07-N04-01",
+    "knowledge_node_id": "RAG-M07-N04",
+    "learner_level": "advanced",
+    "prompt": "基于给定证据，为目标学习者生成“结构化、代码与多模态知识路由”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "结构化知识",
+      "代码知识",
+      "多模态知识",
+      "路由与融合"
+    ],
+    "required_evidence_ids": [
+      "62932873-51ea-5a17-86b5-b386af4b4671",
+      "cc8a5bcb-a904-508d-becf-7c11bae4e059",
+      "08c393ce-e227-59c9-b152-c945db8c3b40",
+      "597a13ad-5a95-5959-953b-1121d00ba127"
+    ],
+    "forbidden_claims": [
+      "把表格、代码和图片转成文本就完全等价。",
+      "自动路由模型的选择不需要测试。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 5
+  },
+  {
+    "test_case_id": "GEN-RAG-M08-N01-01",
+    "knowledge_node_id": "RAG-M08-N01",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“知识服务API、契约与Agent集成”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "检索请求",
+      "证据响应",
+      "契约优先",
+      "兼容与变更"
+    ],
+    "required_evidence_ids": [
+      "a7da9668-9a0f-5eb3-8d65-1e2f8a3f2cfb",
+      "a9903154-d349-5bb0-84f1-96c0c210e11e",
+      "e706b43c-21c6-5e1e-be27-a6d15bf6dca6",
+      "a089978b-f264-5e1f-8ec5-299595c46819"
+    ],
+    "forbidden_claims": [
+      "Agent之间直接传任意JSON更灵活。",
+      "检索API应该直接返回最终答案。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 2
+  },
+  {
+    "test_case_id": "GEN-RAG-M08-N02-01",
+    "knowledge_node_id": "RAG-M08-N02",
+    "learner_level": "intermediate",
+    "prompt": "基于给定证据，为目标学习者生成“持久化、事务、缓存与一致性”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "存储分层",
+      "写入所有权",
+      "缓存键",
+      "事件一致性"
+    ],
+    "required_evidence_ids": [
+      "a0691617-7aef-5cbb-999b-318ce930f4d5",
+      "216cb12a-abee-5c74-a2e2-8ad16395fae0",
+      "83d3d7ce-7589-50b3-ae42-99e860593e20",
+      "e5980c5c-382b-51b1-a425-0f896e0d688e"
+    ],
+    "forbidden_claims": [
+      "数据库也是通过前端API直接连接。",
+      "Redis里的状态足以恢复工作流。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 3
+  },
+  {
+    "test_case_id": "GEN-RAG-M08-N03-01",
+    "knowledge_node_id": "RAG-M08-N03",
+    "learner_level": "advanced",
+    "prompt": "基于给定证据，为目标学习者生成“性能、批处理、缓存与容量规划”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "容量变量",
+      "批处理与索引",
+      "并行与缓存",
+      "降级策略"
+    ],
+    "required_evidence_ids": [
+      "8d9b1474-edc1-5907-9284-c13592082a29",
+      "4c1d2fed-7251-5c77-8fb9-405983e2e002",
+      "a7caef67-cf4a-5fc4-a770-9f695ad627f6",
+      "fd6ae84e-23a4-5b44-85a7-d12f8246b9f4"
+    ],
+    "forbidden_claims": [
+      "减少top-k一定能同时提高速度和质量。",
+      "缓存越多越好。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 4
+  },
+  {
+    "test_case_id": "GEN-RAG-M08-N04-01",
+    "knowledge_node_id": "RAG-M08-N04",
+    "learner_level": "advanced",
+    "prompt": "基于给定证据，为目标学习者生成“本地开发、容器部署、安全与运维”的讲义、实操步骤和三道分阶题。",
+    "expected_key_points": [
+      "本地开发拓扑",
+      "服务边界",
+      "配置与密钥",
+      "发布与恢复"
+    ],
+    "required_evidence_ids": [
+      "0af1e8e2-843f-554e-af8f-c5115de5ccd8",
+      "9ee66678-89ed-5378-b51f-57bc0edfe9a9",
+      "cceb5911-0533-57ae-8400-8f5f80f11680",
+      "58052dfe-4dc7-5155-a507-14fde93333d3"
+    ],
+    "forbidden_claims": [
+      "本地开发后部署只需把代码复制到服务器。",
+      "服务在同一台服务器就不需要内部权限。"
+    ],
+    "required_resource_types": [
+      "lecture",
+      "practice_guide",
+      "graded_questions"
+    ],
+    "difficulty_level": 5
+  }
+]

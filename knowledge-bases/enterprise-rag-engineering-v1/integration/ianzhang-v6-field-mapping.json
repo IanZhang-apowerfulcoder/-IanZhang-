@@ -1,0 +1,74 @@
+{
+  "target_repository": "-IanZhang--main V6.1",
+  "domain_pack": {
+    "slug": "enterprise-rag-engineering-v1",
+    "version": "1.0.0",
+    "knowledge_base_id": "5ee91131-667d-5877-9d59-c9cf6a6917ca",
+    "knowledge_base_version_id": "fd400183-2242-50aa-8b83-d670c1ce5a1f"
+  },
+  "compatibility": {
+    "retrieval_request_schema": "contracts/jsonschema/services/retrieval_request.schema.json",
+    "retrieval_response_schema": "contracts/jsonschema/services/retrieval_response.schema.json",
+    "resource_output_schema": "contracts/jsonschema/agents/resource_output.schema.json",
+    "assessment_output_schema": "contracts/jsonschema/agents/assessment_output.schema.json",
+    "review_output_schema": "contracts/jsonschema/agents/review_output.schema.json",
+    "arbitration_output_schema": "contracts/jsonschema/agents/arbitration_output.schema.json"
+  },
+  "field_mapping": [
+    {
+      "domain_pack_field": "knowledge_base_version_id",
+      "project_field": "knowledge_base_version_id",
+      "rule": "exact"
+    },
+    {
+      "domain_pack_field": "knowledge_node_id",
+      "project_field": "target_knowledge_node_ids[]",
+      "rule": "exact string ID"
+    },
+    {
+      "domain_pack_field": "evidence_id",
+      "project_field": "retrieval_evidence_ids[] / evidence_ids[]",
+      "rule": "UUID exact"
+    },
+    {
+      "domain_pack_field": "chunk_id",
+      "project_field": "evidence_items[].chunk_id",
+      "rule": "UUID exact"
+    },
+    {
+      "domain_pack_field": "document_id",
+      "project_field": "evidence_items[].document_id",
+      "rule": "UUID exact"
+    },
+    {
+      "domain_pack_field": "content_excerpt",
+      "project_field": "evidence_items[].content_excerpt",
+      "rule": "exact"
+    },
+    {
+      "domain_pack_field": "difficulty_level",
+      "project_field": "difficulty_level",
+      "rule": "integer 1-5"
+    },
+    {
+      "domain_pack_field": "task rubric",
+      "project_field": "assessment scoring rubric / task evaluation",
+      "rule": "adapter required"
+    }
+  ],
+  "integration_steps": [
+    "复制Domain Pack到knowledge-bases/enterprise-rag-engineering-v1/",
+    "应用database/migrations/002_enterprise_rag_domain_pack.sql或使用包内迁移",
+    "运行python scripts/validate_pack.py与检索评测",
+    "用import_to_postgres.py导入候选版本",
+    "后端把该knowledge_base_version_id绑定到训练项目",
+    "Retrieval模块返回冻结retrieval_response格式",
+    "Agent只引用evidence_id，不直接读取本地文件路径"
+  ],
+  "breaking_changes": [],
+  "recommended_non_breaking_additions": [
+    "在管理端增加Domain Pack统计接口",
+    "在质量报告中展示节点覆盖与检索基线",
+    "在知识版本页面显示source registry"
+  ]
+}

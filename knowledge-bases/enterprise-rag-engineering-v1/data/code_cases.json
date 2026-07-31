@@ -1,0 +1,82 @@
+[
+  {
+    "code_case_id": "505c53cd-7f20-5794-abcf-f823e00156b5",
+    "title": "兼容检索请求",
+    "language": "python",
+    "knowledge_node_ids": [
+      "RAG-M08-N01"
+    ],
+    "code": "request = {\"retrieval_request_id\": str(uuid4()), \"knowledge_base_version_id\": KB_VERSION_ID, \"query_text\": \"RRF如何融合结果？\", \"top_k\": 5, \"filters\": {}}\nresponse = client.post(\"/api/v1/retrieval/search\", json=request)\nresponse.raise_for_status()",
+    "explanation": "前端不直接调用此内部能力；业务后端或Agent Runtime以冻结Schema调用。"
+  },
+  {
+    "code_case_id": "f780c8d6-d86d-56c8-92bb-9a48d0ff1033",
+    "title": "pgvector余弦检索",
+    "language": "sql",
+    "knowledge_node_ids": [
+      "RAG-M03-N02"
+    ],
+    "code": "SELECT chunk_id, 1 - (embedding <=> :query_vector) AS similarity\nFROM knowledge_chunks_ext\nWHERE knowledge_base_version_id = :version_id\nORDER BY embedding <=> :query_vector\nLIMIT :top_k;",
+    "explanation": "查询向量与文档向量必须使用相同模型、维度和归一化配置。"
+  },
+  {
+    "code_case_id": "a9d22af2-cead-577b-bccf-135c0afcaaa2",
+    "title": "RRF融合伪代码",
+    "language": "python",
+    "knowledge_node_ids": [
+      "RAG-M03-N04"
+    ],
+    "code": "def rrf(rankings, k=60):\n    scores = defaultdict(float)\n    for ranking in rankings:\n        for rank, doc_id in enumerate(ranking, 1):\n            scores[doc_id] += 1.0 / (k + rank)\n    return sorted(scores, key=scores.get, reverse=True)",
+    "explanation": "RRF按排名而不是异构原始分数融合；候选池和k仍需评测。"
+  },
+  {
+    "code_case_id": "00ebefd4-acf2-57db-baef-233590a8f7d9",
+    "title": "不可覆盖权限过滤",
+    "language": "python",
+    "knowledge_node_ids": [
+      "RAG-M04-N02"
+    ],
+    "code": "effective_filters = {**agent_filters, \"organization_id\": auth.organization_id, \"knowledge_base_version_id\": active_version_id, \"allowed_labels\": auth.allowed_labels}",
+    "explanation": "可信后端字段最后覆盖，Agent不能扩大组织和安全权限。"
+  },
+  {
+    "code_case_id": "e69a5dc3-6c6d-5d9f-a6c7-163653c17327",
+    "title": "审核结果分支",
+    "language": "python",
+    "knowledge_node_ids": [
+      "RAG-M05-N03"
+    ],
+    "code": "match review.review_result:\n    case \"approved\": publish(resource)\n    case \"needs_revision\": retry_generation(review.repair_instructions)\n    case \"rejected\": block_cycle()\n    case \"human_required\": create_human_review()",
+    "explanation": "审核业务结果与Agent运行成功状态分开记录。"
+  },
+  {
+    "code_case_id": "4232489d-2a29-5bf3-8239-12eb14bcd78f",
+    "title": "MRR计算",
+    "language": "python",
+    "knowledge_node_ids": [
+      "RAG-M06-N01"
+    ],
+    "code": "mrr = sum(0 if rank is None else 1.0 / rank for rank in first_relevant_ranks) / len(first_relevant_ranks)",
+    "explanation": "MRR关注第一个相关结果的位置，需和Recall/nDCG一起使用。"
+  },
+  {
+    "code_case_id": "31447550-8e6e-5005-a375-7de8fa905efb",
+    "title": "受控Agentic RAG状态边",
+    "language": "yaml",
+    "knowledge_node_ids": [
+      "RAG-M07-N03"
+    ],
+    "code": "routes:\n  - from: evidence_check\n    when: sufficient\n    to: generation\n  - from: evidence_check\n    when: insufficient and retries < 2\n    to: retrieval\n  - from: evidence_check\n    when: insufficient\n    to: abstain_or_human",
+    "explanation": "工作流边由代码和策略冻结，模型只提供结构化判断。"
+  },
+  {
+    "code_case_id": "5b4c9eeb-2d5b-5d8e-8e99-d8d57948d073",
+    "title": "权限安全的检索缓存键",
+    "language": "python",
+    "knowledge_node_ids": [
+      "RAG-M08-N02"
+    ],
+    "code": "cache_key = sha256(f\"{version_id}|{normalized_query}|{sorted(filters.items())}|{strategy}|{top_k}\".encode()).hexdigest()",
+    "explanation": "缓存键必须包含版本、权限过滤、策略和参数，防止过期或越权复用。"
+  }
+]

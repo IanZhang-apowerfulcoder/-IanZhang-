@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "资源生成智能体输出",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "proposal_id",
+    "resource_draft_id",
+    "title",
+    "resource_type",
+    "difficulty_level",
+    "target_knowledge_node_ids",
+    "summary",
+    "resource_sections",
+    "code_examples",
+    "evidence_ids",
+    "confidence"
+  ],
+  "properties": {
+    "proposal_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "resource_draft_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "resource_type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "example",
+        "code",
+        "diagram",
+        "mixed"
+      ]
+    },
+    "difficulty_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "target_knowledge_node_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "string"
+    },
+    "resource_sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/resource_section"
+      }
+    },
+    "code_examples": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/code_example"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+  "$defs": {
+    "resource_section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "resource_section_id",
+        "heading",
+        "body_markdown",
+        "key_points",
+        "evidence_ids"
+      ],
+      "properties": {
+        "resource_section_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "body_markdown": {
+          "type": "string"
+        },
+        "key_points": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      }
+    },
+    "code_example": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "language",
+        "code",
+        "explanation",
+        "evidence_ids"
+      ],
+      "properties": {
+        "language": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      }
+    }
+  }
+}
