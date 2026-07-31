@@ -1,0 +1,57 @@
+version: 7.0.0
+owner: P1
+principles:
+- prebuilt_versioned_knowledge_base
+- router_plans_retrieval_engine_executes
+- limited_parallelism
+- unique_arbitration
+- agents_cannot_write_authoritative_business_tables
+- all_professional_claims_require_evidence_id
+core_agents:
+- diagnosis
+- path_planning
+- rag_router
+- resource_coordinator
+- assessment_evaluation
+- review_coordinator
+- arbitration
+parallel_groups:
+  resource_generation:
+    coordinator: resource_coordinator
+    members:
+    - explanation_generator
+    - practice_generator
+    - quiz_draft_generator
+    minimum_success_count: 3
+    partial_success_policy: human_review_or_explicit_degraded_resource
+  multidimensional_review:
+    coordinator: review_coordinator
+    members:
+    - factuality_reviewer
+    - difficulty_reviewer
+    - assessment_quality_reviewer
+    - safety_reviewer
+    minimum_success_count: 4
+    blocking_dimensions:
+    - factuality
+    - assessment_quality
+    - safety
+retrieval:
+  router_agent: rag_router
+  execution_service: services/retrieval
+  strategies:
+  - metadata_filtered
+  - hybrid
+  - graph_assisted
+  - parent_child
+  - agentic_decomposition
+  limits:
+    max_steps: 5
+    max_retries: 2
+    max_parallel_strategies: 3
+    max_total_hits_before_fusion: 60
+final_authority:
+  agent: arbitration
+  business_writer: apps/api
+  rule: Arbitration produces a command proposal; the backend validates idempotency, tenant, state and schema before authoritative
+    write.

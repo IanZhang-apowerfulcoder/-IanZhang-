@@ -1,0 +1,1225 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "evaluation_case_id": "eval_accuracy_rag_definition",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“RAG基本定义”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "rag_definition"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_rag_definition_principle",
+        "chunk_rag_definition_engineering",
+        "chunk_rag_definition_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 1,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_rag_end_to_end_architecture",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“RAG端到端架构”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "rag_end_to_end_architecture"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_rag_end_to_end_architecture_principle",
+        "chunk_rag_end_to_end_architecture_engineering",
+        "chunk_rag_end_to_end_architecture_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 1,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_parametric_nonparametric_memory",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“参数记忆与外部记忆”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "parametric_nonparametric_memory"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_parametric_nonparametric_memory_principle",
+        "chunk_parametric_nonparametric_memory_engineering",
+        "chunk_parametric_nonparametric_memory_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_rag_applicability",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“RAG适用性判断”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "rag_applicability"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_rag_applicability_principle",
+        "chunk_rag_applicability_engineering",
+        "chunk_rag_applicability_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_rag_failure_taxonomy",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“RAG失败类型”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "rag_failure_taxonomy"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_rag_failure_taxonomy_principle",
+        "chunk_rag_failure_taxonomy_engineering",
+        "chunk_rag_failure_taxonomy_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_knowledge_source_selection",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“知识源选择”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "knowledge_source_selection"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_knowledge_source_selection_principle",
+        "chunk_knowledge_source_selection_engineering",
+        "chunk_knowledge_source_selection_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 1,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_source_authority_provenance",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“来源权威性与溯源”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "source_authority_provenance"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_source_authority_provenance_principle",
+        "chunk_source_authority_provenance_engineering",
+        "chunk_source_authority_provenance_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_versioning_freshness",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“版本与时效治理”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "versioning_freshness"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_versioning_freshness_principle",
+        "chunk_versioning_freshness_engineering",
+        "chunk_versioning_freshness_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_licensing_compliance",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“许可与合规”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "licensing_compliance"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_licensing_compliance_principle",
+        "chunk_licensing_compliance_engineering",
+        "chunk_licensing_compliance_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_access_control_tenant_isolation",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“权限过滤与多租户隔离”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "access_control_tenant_isolation"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_access_control_tenant_isolation_principle",
+        "chunk_access_control_tenant_isolation_engineering",
+        "chunk_access_control_tenant_isolation_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_document_parsing",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“文档解析”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "document_parsing"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_document_parsing_principle",
+        "chunk_document_parsing_engineering",
+        "chunk_document_parsing_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 1,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_layout_table_extraction",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“版面与表格提取”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "layout_table_extraction"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_layout_table_extraction_principle",
+        "chunk_layout_table_extraction_engineering",
+        "chunk_layout_table_extraction_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_text_cleaning_normalization",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“文本清洗与规范化”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "text_cleaning_normalization"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_text_cleaning_normalization_principle",
+        "chunk_text_cleaning_normalization_engineering",
+        "chunk_text_cleaning_normalization_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 1,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_deduplication",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“内容去重”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "deduplication"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_deduplication_principle",
+        "chunk_deduplication_engineering",
+        "chunk_deduplication_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_document_quality_checks",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“文档质量门禁”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "document_quality_checks"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_document_quality_checks_principle",
+        "chunk_document_quality_checks_engineering",
+        "chunk_document_quality_checks_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_chunking_objectives",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“文档切分目标”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "chunking_objectives"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_chunking_objectives_principle",
+        "chunk_chunking_objectives_engineering",
+        "chunk_chunking_objectives_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 1,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_fixed_window_chunking",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“固定窗口切分”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "fixed_window_chunking"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_fixed_window_chunking_principle",
+        "chunk_fixed_window_chunking_engineering",
+        "chunk_fixed_window_chunking_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 1,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_structure_aware_chunking",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“结构感知切分”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "structure_aware_chunking"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_structure_aware_chunking_principle",
+        "chunk_structure_aware_chunking_engineering",
+        "chunk_structure_aware_chunking_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_semantic_chunking",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“语义切分”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "semantic_chunking"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_semantic_chunking_principle",
+        "chunk_semantic_chunking_engineering",
+        "chunk_semantic_chunking_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_parent_child_multigranular",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“父子与多粒度检索”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "parent_child_multigranular"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_parent_child_multigranular_principle",
+        "chunk_parent_child_multigranular_engineering",
+        "chunk_parent_child_multigranular_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_metadata_schema",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“元数据Schema设计”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "metadata_schema"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_metadata_schema_principle",
+        "chunk_metadata_schema_engineering",
+        "chunk_metadata_schema_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_embedding_fundamentals",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“文本嵌入基础”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "embedding_fundamentals"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_embedding_fundamentals_principle",
+        "chunk_embedding_fundamentals_engineering",
+        "chunk_embedding_fundamentals_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_embedding_model_selection",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“嵌入模型选择”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "embedding_model_selection"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_embedding_model_selection_principle",
+        "chunk_embedding_model_selection_engineering",
+        "chunk_embedding_model_selection_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_similarity_metrics",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“向量相似度与归一化”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "similarity_metrics"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_similarity_metrics_principle",
+        "chunk_similarity_metrics_engineering",
+        "chunk_similarity_metrics_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_vector_index_hnsw_ivf",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“向量索引与近似最近邻”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "vector_index_hnsw_ivf"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_vector_index_hnsw_ivf_principle",
+        "chunk_vector_index_hnsw_ivf_engineering",
+        "chunk_vector_index_hnsw_ivf_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_bm25_sparse_retrieval",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“BM25与稀疏检索”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "bm25_sparse_retrieval"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_bm25_sparse_retrieval_principle",
+        "chunk_bm25_sparse_retrieval_engineering",
+        "chunk_bm25_sparse_retrieval_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_dense_retrieval",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“稠密语义检索”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "dense_retrieval"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_dense_retrieval_principle",
+        "chunk_dense_retrieval_engineering",
+        "chunk_dense_retrieval_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_hybrid_retrieval",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“混合检索”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "hybrid_retrieval"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_hybrid_retrieval_principle",
+        "chunk_hybrid_retrieval_engineering",
+        "chunk_hybrid_retrieval_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_metadata_filtering",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“元数据过滤”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "metadata_filtering"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_metadata_filtering_principle",
+        "chunk_metadata_filtering_engineering",
+        "chunk_metadata_filtering_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_multi_query_expansion",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“多查询与查询扩展”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "multi_query_expansion"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_multi_query_expansion_principle",
+        "chunk_multi_query_expansion_engineering",
+        "chunk_multi_query_expansion_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_query_rewriting",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“查询改写”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "query_rewriting"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_query_rewriting_principle",
+        "chunk_query_rewriting_engineering",
+        "chunk_query_rewriting_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_hyde_retrieval",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“HyDE假设文档检索”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "hyde_retrieval"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_hyde_retrieval_principle",
+        "chunk_hyde_retrieval_engineering",
+        "chunk_hyde_retrieval_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 4,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_cross_encoder_reranking",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“交叉编码器重排序”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "cross_encoder_reranking"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_cross_encoder_reranking_principle",
+        "chunk_cross_encoder_reranking_engineering",
+        "chunk_cross_encoder_reranking_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_colbert_late_interaction",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“ColBERT晚交互检索”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "colbert_late_interaction"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_colbert_late_interaction_principle",
+        "chunk_colbert_late_interaction_engineering",
+        "chunk_colbert_late_interaction_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 4,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_diversity_mmr",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“MMR多样性选择”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "diversity_mmr"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_diversity_mmr_principle",
+        "chunk_diversity_mmr_engineering",
+        "chunk_diversity_mmr_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_rank_fusion_rrf",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“RRF名次融合”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "rank_fusion_rrf"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_rank_fusion_rrf_principle",
+        "chunk_rank_fusion_rrf_engineering",
+        "chunk_rank_fusion_rrf_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_context_selection_budget",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“上下文选择与Token预算”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "context_selection_budget"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_context_selection_budget_principle",
+        "chunk_context_selection_budget_engineering",
+        "chunk_context_selection_budget_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_lost_in_the_middle",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“长上下文位置效应”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "lost_in_the_middle"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_lost_in_the_middle_principle",
+        "chunk_lost_in_the_middle_engineering",
+        "chunk_lost_in_the_middle_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_prompt_grounding",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“证据约束提示词”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "prompt_grounding"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_prompt_grounding_principle",
+        "chunk_prompt_grounding_engineering",
+        "chunk_prompt_grounding_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_answer_abstention",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“拒答与不确定性”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "answer_abstention"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_answer_abstention_principle",
+        "chunk_answer_abstention_engineering",
+        "chunk_answer_abstention_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_citation_generation_verification",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“引用生成与验证”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "citation_generation_verification"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_citation_generation_verification_principle",
+        "chunk_citation_generation_verification_engineering",
+        "chunk_citation_generation_verification_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_hallucination_types",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“幻觉类型与根因”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "hallucination_types"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_hallucination_types_principle",
+        "chunk_hallucination_types_engineering",
+        "chunk_hallucination_types_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_evidence_entailment",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“证据支持关系检查”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "evidence_entailment"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_evidence_entailment_principle",
+        "chunk_evidence_entailment_engineering",
+        "chunk_evidence_entailment_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 4,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_review_correction_loop",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“审核与纠偏闭环”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "review_correction_loop"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_review_correction_loop_principle",
+        "chunk_review_correction_loop_engineering",
+        "chunk_review_correction_loop_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_prompt_injection_defense",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“提示词注入防护”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "prompt_injection_defense"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_prompt_injection_defense_principle",
+        "chunk_prompt_injection_defense_engineering",
+        "chunk_prompt_injection_defense_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 4,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_sensitive_data_privacy",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“敏感数据与隐私保护”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "sensitive_data_privacy"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_sensitive_data_privacy_principle",
+        "chunk_sensitive_data_privacy_engineering",
+        "chunk_sensitive_data_privacy_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_retrieval_metrics",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“检索评测指标”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "retrieval_metrics"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_retrieval_metrics_principle",
+        "chunk_retrieval_metrics_engineering",
+        "chunk_retrieval_metrics_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 2,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_generation_metrics",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“生成质量指标”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "generation_metrics"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_generation_metrics_principle",
+        "chunk_generation_metrics_engineering",
+        "chunk_generation_metrics_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_end_to_end_evaluation",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“端到端RAG评测”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "end_to_end_evaluation"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_end_to_end_evaluation_principle",
+        "chunk_end_to_end_evaluation_engineering",
+        "chunk_end_to_end_evaluation_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_golden_dataset_design",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“黄金评测集设计”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "golden_dataset_design"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_golden_dataset_design_principle",
+        "chunk_golden_dataset_design_engineering",
+        "chunk_golden_dataset_design_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_online_monitoring_feedback",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“在线监控与反馈”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "online_monitoring_feedback"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_online_monitoring_feedback_principle",
+        "chunk_online_monitoring_feedback_engineering",
+        "chunk_online_monitoring_feedback_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 4,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_agentic_rag",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“Agentic RAG”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "agentic_rag"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_agentic_rag_principle",
+        "chunk_agentic_rag_engineering",
+        "chunk_agentic_rag_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 4,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_self_rag",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“Self-RAG自反思检索生成”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "self_rag"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_self_rag_principle",
+        "chunk_self_rag_engineering",
+        "chunk_self_rag_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 5,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_corrective_rag",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“Corrective RAG”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "corrective_rag"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_corrective_rag_principle",
+        "chunk_corrective_rag_engineering",
+        "chunk_corrective_rag_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 4,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_graph_rag",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“Graph RAG”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "graph_rag"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_graph_rag_principle",
+        "chunk_graph_rag_engineering",
+        "chunk_graph_rag_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 5,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_tool_routing_multi_source",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“多源路由与工具选择”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "tool_routing_multi_source"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_tool_routing_multi_source_principle",
+        "chunk_tool_routing_multi_source_engineering",
+        "chunk_tool_routing_multi_source_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 4,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_observability_tracing",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“可观测性与链路追踪”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "observability_tracing"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_observability_tracing_principle",
+        "chunk_observability_tracing_engineering",
+        "chunk_observability_tracing_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_latency_cost_optimization",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“延迟与成本优化”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "latency_cost_optimization"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_latency_cost_optimization_principle",
+        "chunk_latency_cost_optimization_engineering",
+        "chunk_latency_cost_optimization_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 4,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_caching_idempotency",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“缓存与幂等”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "caching_idempotency"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_caching_idempotency_principle",
+        "chunk_caching_idempotency_engineering",
+        "chunk_caching_idempotency_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 3,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_deployment_fallback",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“部署与降级”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "deployment_fallback"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_deployment_fallback_principle",
+        "chunk_deployment_fallback_engineering",
+        "chunk_deployment_fallback_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 4,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    },
+    {
+      "evaluation_case_id": "eval_accuracy_continuous_updates_regression",
+      "case_type": "knowledge_accuracy",
+      "persona_template_code": "junior_enterprise_engineer",
+      "prompt": "请解释“持续更新与回归”的核心原理、工程实施要点和一个常见错误。",
+      "expected_knowledge_node_ids": [
+        "continuous_updates_regression"
+      ],
+      "expected_evidence_chunk_ids": [
+        "chunk_continuous_updates_regression_principle",
+        "chunk_continuous_updates_regression_engineering",
+        "chunk_continuous_updates_regression_pitfalls"
+      ],
+      "expected_action": "generate_grounded_explanation",
+      "expected_resource_type": "custom_lecture",
+      "expected_difficulty_level": 4,
+      "must_cite_evidence": true,
+      "must_refuse_unsupported": false,
+      "review_status": "internal_verified"
+    }
+  ]
+}

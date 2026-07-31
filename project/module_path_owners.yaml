@@ -1,88 +1,79 @@
-version: 1.0.0
-rules:
-- member: 张英赫
-  allowed_modules:
-  - services/orchestrator/**
-  - services/arbitration/**
-  - services/session/**
-  - contracts/**
-  - project/**
-  - docs/**
+version: 7.0.0
+paths:
+- path: docs/
+  owner: P1
   reviewers:
-  - 李佳乐
-  - 杨欣怡
-  - 陈尧
-- member: 李佳乐
-  allowed_modules:
-  - services/knowledge/**
-  - services/retrieval/**
-  - services/agents/review/**
-  - services/agent-runtime/**
-  - contracts/**
+  - P9
+- path: apps/web/
+  owner: P4
   reviewers:
-  - 张英赫
-- member: 杨欣怡
-  allowed_modules:
-  - services/agents/diagnosis/**
-  - services/agents/path-planning/**
-  - services/profile/**
-  - services/training/**
-  - contracts/**
+  - P5
+  - P9
+- path: apps/api/
+  owner: P5
   reviewers:
-  - 张英赫
-- member: 陈尧
-  allowed_modules:
-  - apps/web/**
-  - contracts/typescript/**
-  - mocks/**
-  - docs/**
+  - P1
+  - P6
+  - P9
+- path: services/agent_runtime/
+  owner: P2
   reviewers:
-  - 张英赫
-- member: 郑翘楚
-  allowed_modules:
-  - services/agents/resource-generation/**
-  - services/resources/**
-  - apps/web/src/features/resources/**
-  - tests/resources/**
+  - P1
+  - P5
+  - P9
+- path: services/retrieval/
+  owner: P7
   reviewers:
-  - 杨欣怡
-  - 陈尧
-- member: 李汝萱
-  allowed_modules:
-  - services/agents/assessment/**
-  - services/assessment/**
-  - apps/web/src/features/assessment/**
-  - tests/assessment/**
+  - P2
+  - P9
+- path: services/agents/diagnosis/
+  owner: P3
   reviewers:
-  - 杨欣怡
-  - 陈尧
-- member: 陈严谨
-  allowed_modules:
-  - apps/web/src/features/admin/**
-  - services/knowledge/api/**
-  - services/training/api/**
-  - tests/admin/**
+  - P1
+  - P9
+- path: services/agents/path_planning/
+  owner: P3
   reviewers:
-  - 李佳乐
-  - 陈尧
-- member: X
-  allowed_modules:
-  - apps/web/src/features/learner/**
-  - apps/web/src/features/decision-trace/**
-  - tests/learner/**
+  - P1
+  - P9
+- path: services/agents/assessment_evaluation/
+  owner: P3
   reviewers:
-  - 陈尧
-  - 张英赫
-  - 杨欣怡
-- member: 斯汀
-  allowed_modules:
-  - tests/**
-  - evaluation/**
-  - mocks/**
-  - docs/test-reports/**
-  - demo-data/**
+  - P1
+  - P9
+- path: services/agents/generation/
+  owner: P8
   reviewers:
-  - 张英赫
-  - 李佳乐
-  - 杨欣怡
-  - 陈尧
+  - P3
+  - P7
+  - P9
+- path: services/agents/review/
+  owner: P9
+  reviewers:
+  - P1
+  - P3
+  - P7
+- path: database/
+  owner: P6
+  reviewers:
+  - P5
+  - P9
+- path: knowledge-bases/
+  owner: P7
+  reviewers:
+  - P1
+  - P9
+- path: api/
+  owner: P5
+  contract_approver: P1
+- path: contracts/
+  owner: P1
+  reviewers:
+  - P2
+  - P3
+  - P5
+  - P7
+  - P8
+  - P9
+- path: mocks/
+  owner: P9

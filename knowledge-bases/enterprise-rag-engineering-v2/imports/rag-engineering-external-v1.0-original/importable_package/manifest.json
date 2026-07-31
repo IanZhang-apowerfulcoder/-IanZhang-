@@ -1,0 +1,109 @@
+{
+  "package_schema_version": "1.1.0",
+  "package_id": "rag_engineering_competition_v1",
+  "domain_code": "rag_engineering",
+  "domain_name": "RAG工程实训",
+  "package_version": "1.0.0",
+  "language": "zh-CN",
+  "created_at": "2026-07-31T12:00:00Z",
+  "created_by": "OpenAI辅助构建；项目团队需完成最终专家复核",
+  "source_policy": "traceable_sources_required",
+  "files": [
+    {
+      "file_name": "sources.json",
+      "sha256": "cdbcec382696a25a8151d3e0cf426fb4f36d01e20eb2f138da05a3915b18220a",
+      "record_count": 28,
+      "required": true
+    },
+    {
+      "file_name": "knowledge_nodes.json",
+      "sha256": "cefeedd92622afb8724d343c2db2c1c7789a9ad0646b80485287bbce310fcf60",
+      "record_count": 61,
+      "required": true
+    },
+    {
+      "file_name": "knowledge_edges.json",
+      "sha256": "729dfd23ce2b0ac042da12654cdf8a7a3485581b90a06717853848e162633f10",
+      "record_count": 100,
+      "required": true
+    },
+    {
+      "file_name": "rag_chunks.json",
+      "sha256": "a3c2b3709b198efc9c6c2df5014c81f523f3cb0ce1398bf709628c7236591702",
+      "record_count": 244,
+      "required": true
+    },
+    {
+      "file_name": "practical_tasks.json",
+      "sha256": "c93d0eef743e8388d93a5efb0067e7696fac0cd1cc19a673f7b6e1ef8b7904ac",
+      "record_count": 15,
+      "required": true
+    },
+    {
+      "file_name": "question_bank.json",
+      "sha256": "3af61d67e9192a0fd170690a5238cd9944197cab4542b8bd4fbb5a0a9e98e581",
+      "record_count": 183,
+      "required": true
+    },
+    {
+      "file_name": "evaluation_cases.json",
+      "sha256": "80429907e672e705d4728cd23cf5947d9de91d4d38a3738e894850fbf05a62e5",
+      "record_count": 141,
+      "required": true
+    }
+  ],
+  "supported_resource_types": [
+    "custom_lecture",
+    "practical_guide",
+    "worked_example",
+    "code_walkthrough",
+    "micro_lesson",
+    "mixed"
+  ],
+  "core_knowledge_node_ids": [
+    "rag_definition",
+    "rag_end_to_end_architecture",
+    "rag_failure_taxonomy",
+    "knowledge_source_selection",
+    "source_authority_provenance",
+    "versioning_freshness",
+    "access_control_tenant_isolation",
+    "document_parsing",
+    "text_cleaning_normalization",
+    "document_quality_checks",
+    "chunking_objectives",
+    "structure_aware_chunking",
+    "metadata_schema",
+    "embedding_fundamentals",
+    "embedding_model_selection",
+    "vector_index_hnsw_ivf",
+    "bm25_sparse_retrieval",
+    "dense_retrieval",
+    "hybrid_retrieval",
+    "metadata_filtering",
+    "query_rewriting",
+    "cross_encoder_reranking",
+    "context_selection_budget",
+    "prompt_grounding",
+    "answer_abstention",
+    "citation_generation_verification",
+    "hallucination_types",
+    "evidence_entailment",
+    "review_correction_loop",
+    "prompt_injection_defense",
+    "sensitive_data_privacy",
+    "retrieval_metrics",
+    "generation_metrics",
+    "end_to_end_evaluation",
+    "golden_dataset_design",
+    "observability_tracing",
+    "deployment_fallback",
+    "continuous_updates_regression"
+  ],
+  "license_notice": "本包为原创中文技术释义和结构化教学数据；仅登记来源，不复制大段受版权保护原文。企业使用前应确认来源许可和内部审核。",
+  "notes": "面向挑战杯XH-202630与企业RAG工程培训的可导入候选知识库。结构、引用与覆盖已自动校验；专业内容仍建议由指导教师或领域专家抽样签字确认。",
+  "content_readiness": "development_fixture",
+  "expert_review_status": "pending_review",
+  "reviewed_by": null,
+  "reviewed_at": null
+}

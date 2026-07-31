@@ -1,0 +1,1048 @@
+{
+  "schema_version": "1.1.0",
+  "items": [
+    {
+      "knowledge_node_id": "rag_definition",
+      "node_name": "RAG基本定义",
+      "description": "理解检索增强生成如何把外部知识检索与语言模型生成结合起来。",
+      "importance": "core",
+      "difficulty_level": 1,
+      "tags": [
+        "rag_engineering",
+        "01_RAG基础",
+        "foundation",
+        "architecture",
+        "retrieval",
+        "generation"
+      ],
+      "competency_codes": [
+        "RAG-COMP-001"
+      ]
+    },
+    {
+      "knowledge_node_id": "rag_end_to_end_architecture",
+      "node_name": "RAG端到端架构",
+      "description": "掌握从知识接入到检索、生成、引用、反馈和评测的完整链路。",
+      "importance": "core",
+      "difficulty_level": 1,
+      "tags": [
+        "rag_engineering",
+        "01_RAG基础",
+        "architecture",
+        "offline_pipeline",
+        "online_pipeline",
+        "observability"
+      ],
+      "competency_codes": [
+        "RAG-COMP-002"
+      ]
+    },
+    {
+      "knowledge_node_id": "parametric_nonparametric_memory",
+      "node_name": "参数记忆与外部记忆",
+      "description": "区分模型参数中的知识与可检索外部知识，并理解二者协作方式。",
+      "importance": "important",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "01_RAG基础",
+        "parametric_memory",
+        "nonparametric_memory",
+        "provenance"
+      ],
+      "competency_codes": [
+        "RAG-COMP-003"
+      ]
+    },
+    {
+      "knowledge_node_id": "rag_applicability",
+      "node_name": "RAG适用性判断",
+      "description": "判断某个业务问题是否应该采用RAG，以及应采用多复杂的方案。",
+      "importance": "important",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "01_RAG基础",
+        "requirements",
+        "risk",
+        "scenario_selection"
+      ],
+      "competency_codes": [
+        "RAG-COMP-004"
+      ]
+    },
+    {
+      "knowledge_node_id": "rag_failure_taxonomy",
+      "node_name": "RAG失败类型",
+      "description": "能够把错误拆分为知识、检索、上下文、生成和治理等不同类别。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "01_RAG基础",
+        "failure_analysis",
+        "debugging",
+        "evaluation"
+      ],
+      "competency_codes": [
+        "RAG-COMP-005"
+      ]
+    },
+    {
+      "knowledge_node_id": "knowledge_source_selection",
+      "node_name": "知识源选择",
+      "description": "选择覆盖目标岗位且具备权威性、时效性和可授权性的知识来源。",
+      "importance": "core",
+      "difficulty_level": 1,
+      "tags": [
+        "rag_engineering",
+        "02_知识源治理",
+        "source_governance",
+        "authority",
+        "coverage"
+      ],
+      "competency_codes": [
+        "RAG-COMP-006"
+      ]
+    },
+    {
+      "knowledge_node_id": "source_authority_provenance",
+      "node_name": "来源权威性与溯源",
+      "description": "为知识片段建立从回答到原始来源的完整证据链。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "02_知识源治理",
+        "provenance",
+        "citation",
+        "auditability"
+      ],
+      "competency_codes": [
+        "RAG-COMP-007"
+      ]
+    },
+    {
+      "knowledge_node_id": "versioning_freshness",
+      "node_name": "版本与时效治理",
+      "description": "控制知识库、文档、片段和索引版本，防止过时内容参与回答。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "02_知识源治理",
+        "versioning",
+        "freshness",
+        "rollback"
+      ],
+      "competency_codes": [
+        "RAG-COMP-008"
+      ]
+    },
+    {
+      "knowledge_node_id": "licensing_compliance",
+      "node_name": "许可与合规",
+      "description": "识别知识来源的版权、使用许可和隐私要求。",
+      "importance": "important",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "02_知识源治理",
+        "licensing",
+        "privacy",
+        "compliance"
+      ],
+      "competency_codes": [
+        "RAG-COMP-009"
+      ]
+    },
+    {
+      "knowledge_node_id": "access_control_tenant_isolation",
+      "node_name": "权限过滤与多租户隔离",
+      "description": "确保用户只能检索和查看其组织、角色和项目授权的知识。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "02_知识源治理",
+        "security",
+        "multi_tenancy",
+        "authorization"
+      ],
+      "competency_codes": [
+        "RAG-COMP-010"
+      ]
+    },
+    {
+      "knowledge_node_id": "document_parsing",
+      "node_name": "文档解析",
+      "description": "从多种文档中提取文本、结构、页码和对象信息。",
+      "importance": "core",
+      "difficulty_level": 1,
+      "tags": [
+        "rag_engineering",
+        "03_解析清洗",
+        "parsing",
+        "layout",
+        "ocr"
+      ],
+      "competency_codes": [
+        "RAG-COMP-011"
+      ]
+    },
+    {
+      "knowledge_node_id": "layout_table_extraction",
+      "node_name": "版面与表格提取",
+      "description": "正确处理多栏版面、表格、图注和代码块，避免语义错位。",
+      "importance": "important",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "03_解析清洗",
+        "layout",
+        "tables",
+        "code_blocks"
+      ],
+      "competency_codes": [
+        "RAG-COMP-012"
+      ]
+    },
+    {
+      "knowledge_node_id": "text_cleaning_normalization",
+      "node_name": "文本清洗与规范化",
+      "description": "去除噪声并统一格式，同时避免删除有业务意义的内容。",
+      "importance": "core",
+      "difficulty_level": 1,
+      "tags": [
+        "rag_engineering",
+        "03_解析清洗",
+        "cleaning",
+        "normalization",
+        "quality"
+      ],
+      "competency_codes": [
+        "RAG-COMP-013"
+      ]
+    },
+    {
+      "knowledge_node_id": "deduplication",
+      "node_name": "内容去重",
+      "description": "识别完全重复、近似重复和版本重复，减少检索冗余。",
+      "importance": "important",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "03_解析清洗",
+        "deduplication",
+        "canonicalization",
+        "versions"
+      ],
+      "competency_codes": [
+        "RAG-COMP-014"
+      ]
+    },
+    {
+      "knowledge_node_id": "document_quality_checks",
+      "node_name": "文档质量门禁",
+      "description": "在入库前检测解析完整性、乱码、缺页、来源和结构问题。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "03_解析清洗",
+        "quality_gate",
+        "parsing_validation",
+        "blocking_issues"
+      ],
+      "competency_codes": [
+        "RAG-COMP-015"
+      ]
+    },
+    {
+      "knowledge_node_id": "chunking_objectives",
+      "node_name": "文档切分目标",
+      "description": "理解切分对召回、上下文完整性、引用粒度和成本的影响。",
+      "importance": "core",
+      "difficulty_level": 1,
+      "tags": [
+        "rag_engineering",
+        "04_切分与上下文",
+        "chunking",
+        "granularity",
+        "context"
+      ],
+      "competency_codes": [
+        "RAG-COMP-016"
+      ]
+    },
+    {
+      "knowledge_node_id": "fixed_window_chunking",
+      "node_name": "固定窗口切分",
+      "description": "掌握按字符或Token窗口切分及重叠策略。",
+      "importance": "important",
+      "difficulty_level": 1,
+      "tags": [
+        "rag_engineering",
+        "04_切分与上下文",
+        "chunking",
+        "fixed_window",
+        "baseline"
+      ],
+      "competency_codes": [
+        "RAG-COMP-017"
+      ]
+    },
+    {
+      "knowledge_node_id": "structure_aware_chunking",
+      "node_name": "结构感知切分",
+      "description": "按标题、段落、列表、表格和代码块边界构造片段。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "04_切分与上下文",
+        "chunking",
+        "headings",
+        "document_tree"
+      ],
+      "competency_codes": [
+        "RAG-COMP-018"
+      ]
+    },
+    {
+      "knowledge_node_id": "semantic_chunking",
+      "node_name": "语义切分",
+      "description": "依据主题变化和句子语义相似度确定边界。",
+      "importance": "advanced",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "04_切分与上下文",
+        "chunking",
+        "semantic",
+        "embedding"
+      ],
+      "competency_codes": [
+        "RAG-COMP-019"
+      ]
+    },
+    {
+      "knowledge_node_id": "parent_child_multigranular",
+      "node_name": "父子与多粒度检索",
+      "description": "同时保留小粒度检索精度和大粒度上下文完整性。",
+      "importance": "advanced",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "04_切分与上下文",
+        "chunking",
+        "parent_child",
+        "multi_granularity"
+      ],
+      "competency_codes": [
+        "RAG-COMP-020"
+      ]
+    },
+    {
+      "knowledge_node_id": "metadata_schema",
+      "node_name": "元数据Schema设计",
+      "description": "定义支持过滤、溯源、版本和评测的片段元数据。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "05_向量与索引",
+        "metadata",
+        "schema",
+        "filtering"
+      ],
+      "competency_codes": [
+        "RAG-COMP-021"
+      ]
+    },
+    {
+      "knowledge_node_id": "embedding_fundamentals",
+      "node_name": "文本嵌入基础",
+      "description": "理解双编码器、向量空间和语义相似度的基本机制。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "05_向量与索引",
+        "embedding",
+        "dual_encoder",
+        "semantic_search"
+      ],
+      "competency_codes": [
+        "RAG-COMP-022"
+      ]
+    },
+    {
+      "knowledge_node_id": "embedding_model_selection",
+      "node_name": "嵌入模型选择",
+      "description": "根据语言、领域、任务、成本和部署约束选择嵌入模型。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "05_向量与索引",
+        "embedding",
+        "model_selection",
+        "benchmark"
+      ],
+      "competency_codes": [
+        "RAG-COMP-023"
+      ]
+    },
+    {
+      "knowledge_node_id": "similarity_metrics",
+      "node_name": "向量相似度与归一化",
+      "description": "理解余弦相似度、内积和欧氏距离及其配置关系。",
+      "importance": "important",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "05_向量与索引",
+        "similarity",
+        "cosine",
+        "inner_product"
+      ],
+      "competency_codes": [
+        "RAG-COMP-024"
+      ]
+    },
+    {
+      "knowledge_node_id": "vector_index_hnsw_ivf",
+      "node_name": "向量索引与近似最近邻",
+      "description": "理解精确搜索、HNSW、IVF等索引的召回、延迟和内存权衡。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "05_向量与索引",
+        "vector_index",
+        "ann",
+        "hnsw",
+        "ivf"
+      ],
+      "competency_codes": [
+        "RAG-COMP-025"
+      ]
+    },
+    {
+      "knowledge_node_id": "bm25_sparse_retrieval",
+      "node_name": "BM25与稀疏检索",
+      "description": "掌握关键词匹配在精确术语、编号和专名查询中的作用。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "06_检索策略",
+        "bm25",
+        "sparse_retrieval",
+        "lexical"
+      ],
+      "competency_codes": [
+        "RAG-COMP-026"
+      ]
+    },
+    {
+      "knowledge_node_id": "dense_retrieval",
+      "node_name": "稠密语义检索",
+      "description": "使用嵌入召回语义相关但词面不同的片段。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "06_检索策略",
+        "dense_retrieval",
+        "semantic_search",
+        "embeddings"
+      ],
+      "competency_codes": [
+        "RAG-COMP-027"
+      ]
+    },
+    {
+      "knowledge_node_id": "hybrid_retrieval",
+      "node_name": "混合检索",
+      "description": "融合稀疏与稠密检索，提高不同查询类型下的鲁棒性。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "06_检索策略",
+        "hybrid_search",
+        "fusion",
+        "rrf"
+      ],
+      "competency_codes": [
+        "RAG-COMP-028"
+      ]
+    },
+    {
+      "knowledge_node_id": "metadata_filtering",
+      "node_name": "元数据过滤",
+      "description": "在语义排序前后利用权限、版本、时间、语言和业务标签缩小候选。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "06_检索策略",
+        "filtering",
+        "authorization",
+        "metadata"
+      ],
+      "competency_codes": [
+        "RAG-COMP-029"
+      ]
+    },
+    {
+      "knowledge_node_id": "multi_query_expansion",
+      "node_name": "多查询与查询扩展",
+      "description": "通过同义改写、子问题和多角度查询提高召回。",
+      "importance": "advanced",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "06_检索策略",
+        "query_expansion",
+        "multi_query",
+        "recall"
+      ],
+      "competency_codes": [
+        "RAG-COMP-030"
+      ]
+    },
+    {
+      "knowledge_node_id": "query_rewriting",
+      "node_name": "查询改写",
+      "description": "将口语化、上下文依赖或不完整的问题转换成可检索查询。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "07_查询与重排",
+        "query_rewrite",
+        "conversation",
+        "intent"
+      ],
+      "competency_codes": [
+        "RAG-COMP-031"
+      ]
+    },
+    {
+      "knowledge_node_id": "hyde_retrieval",
+      "node_name": "HyDE假设文档检索",
+      "description": "利用生成的假设性文档表示查询语义，以改善零样本稠密检索。",
+      "importance": "advanced",
+      "difficulty_level": 4,
+      "tags": [
+        "rag_engineering",
+        "07_查询与重排",
+        "hyde",
+        "query_expansion",
+        "zero_shot"
+      ],
+      "competency_codes": [
+        "RAG-COMP-032"
+      ]
+    },
+    {
+      "knowledge_node_id": "cross_encoder_reranking",
+      "node_name": "交叉编码器重排序",
+      "description": "使用查询与候选片段联合编码，提高候选排序精度。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "07_查询与重排",
+        "reranking",
+        "cross_encoder",
+        "precision"
+      ],
+      "competency_codes": [
+        "RAG-COMP-033"
+      ]
+    },
+    {
+      "knowledge_node_id": "colbert_late_interaction",
+      "node_name": "ColBERT晚交互检索",
+      "description": "理解Token级晚交互在效率与细粒度匹配之间的折中。",
+      "importance": "advanced",
+      "difficulty_level": 4,
+      "tags": [
+        "rag_engineering",
+        "07_查询与重排",
+        "colbert",
+        "late_interaction",
+        "retrieval"
+      ],
+      "competency_codes": [
+        "RAG-COMP-034"
+      ]
+    },
+    {
+      "knowledge_node_id": "diversity_mmr",
+      "node_name": "MMR多样性选择",
+      "description": "在相关性和候选多样性之间平衡，减少上下文重复。",
+      "importance": "important",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "07_查询与重排",
+        "mmr",
+        "diversity",
+        "context_selection"
+      ],
+      "competency_codes": [
+        "RAG-COMP-035"
+      ]
+    },
+    {
+      "knowledge_node_id": "rank_fusion_rrf",
+      "node_name": "RRF名次融合",
+      "description": "用排名而非原始分数融合多个检索列表。",
+      "importance": "important",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "07_查询与重排",
+        "rrf",
+        "rank_fusion",
+        "hybrid_search"
+      ],
+      "competency_codes": [
+        "RAG-COMP-036"
+      ]
+    },
+    {
+      "knowledge_node_id": "context_selection_budget",
+      "node_name": "上下文选择与Token预算",
+      "description": "在有限上下文中选择最有用、互补且可追溯的证据。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "08_上下文与生成",
+        "context",
+        "token_budget",
+        "evidence_selection"
+      ],
+      "competency_codes": [
+        "RAG-COMP-037"
+      ]
+    },
+    {
+      "knowledge_node_id": "lost_in_the_middle",
+      "node_name": "长上下文位置效应",
+      "description": "理解模型对长上下文中间信息利用不稳定的问题。",
+      "importance": "important",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "08_上下文与生成",
+        "long_context",
+        "position_bias",
+        "context_order"
+      ],
+      "competency_codes": [
+        "RAG-COMP-038"
+      ]
+    },
+    {
+      "knowledge_node_id": "prompt_grounding",
+      "node_name": "证据约束提示词",
+      "description": "通过明确指令让模型仅基于提供证据回答并声明限制。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "08_上下文与生成",
+        "prompt",
+        "grounding",
+        "structured_output"
+      ],
+      "competency_codes": [
+        "RAG-COMP-039"
+      ]
+    },
+    {
+      "knowledge_node_id": "answer_abstention",
+      "node_name": "拒答与不确定性",
+      "description": "在证据不足、冲突或越权时停止生成确定性答案。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "08_上下文与生成",
+        "abstention",
+        "uncertainty",
+        "risk"
+      ],
+      "competency_codes": [
+        "RAG-COMP-040"
+      ]
+    },
+    {
+      "knowledge_node_id": "citation_generation_verification",
+      "node_name": "引用生成与验证",
+      "description": "生成可点击、可核验且真正支持结论的证据引用。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "08_上下文与生成",
+        "citation",
+        "verification",
+        "traceability"
+      ],
+      "competency_codes": [
+        "RAG-COMP-041"
+      ]
+    },
+    {
+      "knowledge_node_id": "hallucination_types",
+      "node_name": "幻觉类型与根因",
+      "description": "区分无依据生成、证据矛盾、错误归因和过度推断等问题。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "09_可信与安全",
+        "hallucination",
+        "taxonomy",
+        "root_cause"
+      ],
+      "competency_codes": [
+        "RAG-COMP-042"
+      ]
+    },
+    {
+      "knowledge_node_id": "evidence_entailment",
+      "node_name": "证据支持关系检查",
+      "description": "判断证据是否直接支持、反驳或无法判断某个结论。",
+      "importance": "core",
+      "difficulty_level": 4,
+      "tags": [
+        "rag_engineering",
+        "09_可信与安全",
+        "entailment",
+        "evidence_check",
+        "faithfulness"
+      ],
+      "competency_codes": [
+        "RAG-COMP-043"
+      ]
+    },
+    {
+      "knowledge_node_id": "review_correction_loop",
+      "node_name": "审核与纠偏闭环",
+      "description": "对生成资源、题目和决策进行通过、退回、修复与升级处理。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "09_可信与安全",
+        "review",
+        "repair",
+        "quality_gate"
+      ],
+      "competency_codes": [
+        "RAG-COMP-044"
+      ]
+    },
+    {
+      "knowledge_node_id": "prompt_injection_defense",
+      "node_name": "提示词注入防护",
+      "description": "防止知识文档或用户输入劫持模型规则、泄露数据或调用危险工具。",
+      "importance": "core",
+      "difficulty_level": 4,
+      "tags": [
+        "rag_engineering",
+        "09_可信与安全",
+        "security",
+        "prompt_injection",
+        "tool_safety"
+      ],
+      "competency_codes": [
+        "RAG-COMP-045"
+      ]
+    },
+    {
+      "knowledge_node_id": "sensitive_data_privacy",
+      "node_name": "敏感数据与隐私保护",
+      "description": "保护企业资料、学习者画像和交互日志中的敏感信息。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "09_可信与安全",
+        "privacy",
+        "data_protection",
+        "logging"
+      ],
+      "competency_codes": [
+        "RAG-COMP-046"
+      ]
+    },
+    {
+      "knowledge_node_id": "retrieval_metrics",
+      "node_name": "检索评测指标",
+      "description": "使用Recall@K、Precision@K、MRR、nDCG等指标测量候选质量。",
+      "importance": "core",
+      "difficulty_level": 2,
+      "tags": [
+        "rag_engineering",
+        "10_评测与监控",
+        "evaluation",
+        "recall",
+        "mrr",
+        "ndcg"
+      ],
+      "competency_codes": [
+        "RAG-COMP-047"
+      ]
+    },
+    {
+      "knowledge_node_id": "generation_metrics",
+      "node_name": "生成质量指标",
+      "description": "评估答案忠实度、正确性、完整性、引用和表达质量。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "10_评测与监控",
+        "evaluation",
+        "faithfulness",
+        "correctness",
+        "citations"
+      ],
+      "competency_codes": [
+        "RAG-COMP-048"
+      ]
+    },
+    {
+      "knowledge_node_id": "end_to_end_evaluation",
+      "node_name": "端到端RAG评测",
+      "description": "同时评价检索、生成、拒答、延迟、成本和用户任务完成度。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "10_评测与监控",
+        "end_to_end",
+        "benchmark",
+        "reproducibility"
+      ],
+      "competency_codes": [
+        "RAG-COMP-049"
+      ]
+    },
+    {
+      "knowledge_node_id": "golden_dataset_design",
+      "node_name": "黄金评测集设计",
+      "description": "构建覆盖知识、查询类型、难度、画像和失败边界的标注数据。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "10_评测与监控",
+        "dataset",
+        "golden_set",
+        "annotation"
+      ],
+      "competency_codes": [
+        "RAG-COMP-050"
+      ]
+    },
+    {
+      "knowledge_node_id": "online_monitoring_feedback",
+      "node_name": "在线监控与反馈",
+      "description": "将线上检索、生成和用户反馈转化为可定位的质量信号。",
+      "importance": "important",
+      "difficulty_level": 4,
+      "tags": [
+        "rag_engineering",
+        "10_评测与监控",
+        "monitoring",
+        "feedback",
+        "tracing"
+      ],
+      "competency_codes": [
+        "RAG-COMP-051"
+      ]
+    },
+    {
+      "knowledge_node_id": "agentic_rag",
+      "node_name": "Agentic RAG",
+      "description": "让智能体根据任务动态规划检索、工具调用和停止条件。",
+      "importance": "advanced",
+      "difficulty_level": 4,
+      "tags": [
+        "rag_engineering",
+        "11_高级RAG",
+        "agentic_rag",
+        "planning",
+        "tools"
+      ],
+      "competency_codes": [
+        "RAG-COMP-052"
+      ]
+    },
+    {
+      "knowledge_node_id": "self_rag",
+      "node_name": "Self-RAG自反思检索生成",
+      "description": "理解模型在生成过程中学习何时检索并评价自身输出的思路。",
+      "importance": "advanced",
+      "difficulty_level": 5,
+      "tags": [
+        "rag_engineering",
+        "11_高级RAG",
+        "self_rag",
+        "reflection",
+        "adaptive_retrieval"
+      ],
+      "competency_codes": [
+        "RAG-COMP-053"
+      ]
+    },
+    {
+      "knowledge_node_id": "corrective_rag",
+      "node_name": "Corrective RAG",
+      "description": "在检索质量不足时触发纠错、补充检索或降级。",
+      "importance": "advanced",
+      "difficulty_level": 4,
+      "tags": [
+        "rag_engineering",
+        "11_高级RAG",
+        "crag",
+        "corrective_retrieval",
+        "fallback"
+      ],
+      "competency_codes": [
+        "RAG-COMP-054"
+      ]
+    },
+    {
+      "knowledge_node_id": "graph_rag",
+      "node_name": "Graph RAG",
+      "description": "利用实体关系、社区摘要或图遍历支持跨文档关联问题。",
+      "importance": "advanced",
+      "difficulty_level": 5,
+      "tags": [
+        "rag_engineering",
+        "11_高级RAG",
+        "graph_rag",
+        "knowledge_graph",
+        "multi_hop"
+      ],
+      "competency_codes": [
+        "RAG-COMP-055"
+      ]
+    },
+    {
+      "knowledge_node_id": "tool_routing_multi_source",
+      "node_name": "多源路由与工具选择",
+      "description": "在向量库、关键词索引、数据库、API和知识图谱之间选择合适数据源。",
+      "importance": "advanced",
+      "difficulty_level": 4,
+      "tags": [
+        "rag_engineering",
+        "11_高级RAG",
+        "tool_routing",
+        "multi_source",
+        "sql",
+        "api"
+      ],
+      "competency_codes": [
+        "RAG-COMP-056"
+      ]
+    },
+    {
+      "knowledge_node_id": "observability_tracing",
+      "node_name": "可观测性与链路追踪",
+      "description": "追踪一次RAG请求经过的检索、重排、生成、审核和仲裁步骤。",
+      "importance": "core",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "12_生产工程",
+        "observability",
+        "tracing",
+        "metrics"
+      ],
+      "competency_codes": [
+        "RAG-COMP-057"
+      ]
+    },
+    {
+      "knowledge_node_id": "latency_cost_optimization",
+      "node_name": "延迟与成本优化",
+      "description": "在质量约束下优化检索、重排、上下文和模型调用成本。",
+      "importance": "important",
+      "difficulty_level": 4,
+      "tags": [
+        "rag_engineering",
+        "12_生产工程",
+        "latency",
+        "cost",
+        "optimization"
+      ],
+      "competency_codes": [
+        "RAG-COMP-058"
+      ]
+    },
+    {
+      "knowledge_node_id": "caching_idempotency",
+      "node_name": "缓存与幂等",
+      "description": "安全复用稳定结果并防止重试造成重复任务。",
+      "importance": "important",
+      "difficulty_level": 3,
+      "tags": [
+        "rag_engineering",
+        "12_生产工程",
+        "cache",
+        "idempotency",
+        "versioning"
+      ],
+      "competency_codes": [
+        "RAG-COMP-059"
+      ]
+    },
+    {
+      "knowledge_node_id": "deployment_fallback",
+      "node_name": "部署与降级",
+      "description": "保证模型、向量库或外部服务异常时系统可预测地降级。",
+      "importance": "core",
+      "difficulty_level": 4,
+      "tags": [
+        "rag_engineering",
+        "12_生产工程",
+        "deployment",
+        "fallback",
+        "resilience"
+      ],
+      "competency_codes": [
+        "RAG-COMP-060"
+      ]
+    },
+    {
+      "knowledge_node_id": "continuous_updates_regression",
+      "node_name": "持续更新与回归",
+      "description": "在知识、模型和提示词变化后保持质量可控。",
+      "importance": "core",
+      "difficulty_level": 4,
+      "tags": [
+        "rag_engineering",
+        "12_生产工程",
+        "continuous_delivery",
+        "regression",
+        "quality_gate"
+      ],
+      "competency_codes": [
+        "RAG-COMP-061"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+version: 7.0.0
+tools:
+- tool_name: get_learner_context
+  owner: P5
+  read_only: true
+  allowed_agents:
+  - diagnosis
+  - path_planning
+  - rag_router
+  - difficulty_reviewer
+  - assessment_evaluation
+- tool_name: get_knowledge_node_context
+  owner: P7
+  read_only: true
+  allowed_agents:
+  - diagnosis
+  - path_planning
+  - rag_router
+  - resource_coordinator
+  - assessment_evaluation
+  - factuality_reviewer
+- tool_name: execute_retrieval_plan
+  owner: P7
+  read_only: true
+  allowed_agents:
+  - rag_router
+- tool_name: get_rubric
+  owner: P5
+  read_only: true
+  allowed_agents:
+  - assessment_evaluation
+  - assessment_quality_reviewer
+- tool_name: objective_scoring
+  owner: P5
+  read_only: true
+  allowed_agents:
+  - assessment_evaluation
+  - assessment_quality_reviewer
+- tool_name: code_tests
+  owner: P5
+  read_only: false
+  sandboxed: true
+  allowed_agents:
+  - assessment_evaluation
+  - assessment_quality_reviewer
+- tool_name: store_agent_artifact
+  owner: P5
+  read_only: false
+  allowed_agents:
+  - resource_coordinator
+  - review_coordinator
+  - arbitration

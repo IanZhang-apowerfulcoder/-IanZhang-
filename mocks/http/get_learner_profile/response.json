@@ -1,51 +1,7 @@
 {
-  "operation_id": "get_learner_profile",
-  "status_code": 200,
-  "content_type": "application/json",
-  "body": {
-    "code": "SUCCESS",
-    "message": "成功",
-    "data": {
-      "profile_snapshot_id": "fc111111-1111-4111-8111-111111111111",
-      "profile_version_no": 1,
-      "organization_id": "11111111-1111-4111-8111-111111111111",
-      "learner_id": "33333333-3333-4333-8333-333333333333",
-      "overall_mastery_score": 0.62,
-      "mastery_items": [
-        {
-          "knowledge_node_id": "fcb8a5ae-f1f5-41cf-887e-560f136fff0f",
-          "knowledge_node_name": "示例knowledge_node_name",
-          "mastery_score": 0.45,
-          "confidence": 0.86,
-          "last_evidence_at": "2026-07-30T12:00:00Z",
-          "weakness_tags": [
-            "示例weakness_tag"
-          ]
-        },
-        {
-          "knowledge_node_id": "fcb8a5ae-f1f5-41cf-887e-560f136fff0f",
-          "knowledge_node_name": "示例knowledge_node_name",
-          "mastery_score": 0.45,
-          "confidence": 0.86,
-          "last_evidence_at": "2026-07-30T12:00:00Z",
-          "weakness_tags": [
-            "示例weakness_tag"
-          ]
-        }
-      ],
-      "learning_preference_tags": [
-        "示例learning_preference_tag"
-      ],
-      "risk_flags": [
-        "示例risk_flag"
-      ],
-      "derived_from_decision_cycle_id": "0b3a9333-6956-4e70-8687-4d52f20c7e60",
-      "created_at": "2026-07-30T12:00:00Z"
-    },
-    "meta": {
-      "request_id": "fe311111-1111-4111-8111-111111111111",
-      "schema_version": "1.0.0",
-      "timestamp": "2026-07-30T12:00:00Z"
-    }
-  }
+  "data": {
+    "operation_id": "get_learner_profile",
+    "status": "mock_success"
+  },
+  "request_id": "00000000-0000-4000-8000-000000000002"
 }

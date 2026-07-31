@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ParallelGroupResult",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "parallel_group_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "group_type": {
+      "type": "string",
+      "enum": [
+        "retrieval",
+        "generation",
+        "review"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "succeeded",
+        "partial",
+        "failed"
+      ]
+    },
+    "member_run_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "minItems": 1
+    },
+    "succeeded_run_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "minItems": 0
+    },
+    "failed_run_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "minItems": 0
+    },
+    "minimum_success_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "aggregation_result": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "parallel_group_id",
+    "group_type",
+    "status",
+    "member_run_ids",
+    "succeeded_run_ids",
+    "failed_run_ids",
+    "minimum_success_count",
+    "aggregation_result",
+    "started_at",
+    "completed_at"
+  ]
+}

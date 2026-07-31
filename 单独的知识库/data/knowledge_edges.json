@@ -1,0 +1,2894 @@
+[
+  {
+    "edge_id": "4a78b93a-980d-5844-9f30-c599b7a161ec",
+    "source_knowledge_node_id": "RAG-M01-N01",
+    "target_knowledge_node_id": "RAG-M01-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "RAG的定义、目标与边界是学习RAG端到端流水线与责任分层的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF",
+      "SRC-RAG-LEWIS-2020"
+    ]
+  },
+  {
+    "edge_id": "d2a380fd-5ea1-5cb2-af22-fa343cf7350a",
+    "source_knowledge_node_id": "RAG-M01-N01",
+    "target_knowledge_node_id": "RAG-M01-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "RAG的定义、目标与边界是学习RAG、微调、长上下文与工具调用的选择的前置知识。",
+    "evidence_source_ids": [
+      "SRC-RAG-LEWIS-2020"
+    ]
+  },
+  {
+    "edge_id": "472fc9b3-4591-5cc3-a444-e2a46eb2431d",
+    "source_knowledge_node_id": "RAG-M01-N02",
+    "target_knowledge_node_id": "RAG-M01-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "RAG端到端流水线与责任分层是学习需求分析、成功指标与RAG架构决策的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "4fe09200-f347-5f91-a9ee-daa5a7e20895",
+    "source_knowledge_node_id": "RAG-M01-N03",
+    "target_knowledge_node_id": "RAG-M01-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "RAG、微调、长上下文与工具调用的选择是学习需求分析、成功指标与RAG架构决策的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-RAG-LEWIS-2020"
+    ]
+  },
+  {
+    "edge_id": "4b8602a4-6176-5bb5-84e8-6f00bc382f0c",
+    "source_knowledge_node_id": "RAG-M01-N04",
+    "target_knowledge_node_id": "RAG-M02-N01",
+    "relation_type": "prerequisite_of",
+    "reason": "需求分析、成功指标与RAG架构决策是学习知识源治理、可信等级与准入的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "8878f329-8c72-533d-b7bb-1a9816fc0d08",
+    "source_knowledge_node_id": "RAG-M02-N01",
+    "target_knowledge_node_id": "RAG-M02-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "知识源治理、可信等级与准入是学习文档解析、清洗与结构保真的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "eb004c59-7863-58b1-bad1-6f1893033e61",
+    "source_knowledge_node_id": "RAG-M02-N02",
+    "target_knowledge_node_id": "RAG-M02-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "文档解析、清洗与结构保真是学习切片策略、语义边界与父子结构的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY"
+    ]
+  },
+  {
+    "edge_id": "7078b21f-852c-56eb-a39e-69331e82eaf5",
+    "source_knowledge_node_id": "RAG-M02-N01",
+    "target_knowledge_node_id": "RAG-M02-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "知识源治理、可信等级与准入是学习元数据、版本、血缘与知识发布的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "c2d67410-6cea-5c5a-b8a2-e52e9ebea9fa",
+    "source_knowledge_node_id": "RAG-M02-N03",
+    "target_knowledge_node_id": "RAG-M02-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "切片策略、语义边界与父子结构是学习元数据、版本、血缘与知识发布的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "b9b7a3c7-6baa-5532-a197-d4639bc80028",
+    "source_knowledge_node_id": "RAG-M02-N03",
+    "target_knowledge_node_id": "RAG-M03-N01",
+    "relation_type": "prerequisite_of",
+    "reason": "切片策略、语义边界与父子结构是学习文本嵌入、向量表示与相似度的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-SBERT-2019"
+    ]
+  },
+  {
+    "edge_id": "bcac1fc6-9daf-57c6-82bd-1816fd710568",
+    "source_knowledge_node_id": "RAG-M03-N01",
+    "target_knowledge_node_id": "RAG-M03-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "文本嵌入、向量表示与相似度是学习向量存储、精确搜索、HNSW与IVFFlat的前置知识。",
+    "evidence_source_ids": [
+      "SRC-PGVECTOR-OFFICIAL",
+      "SRC-SBERT-2019"
+    ]
+  },
+  {
+    "edge_id": "365dded9-c354-5f6c-b9ad-68d9ac64eea0",
+    "source_knowledge_node_id": "RAG-M02-N04",
+    "target_knowledge_node_id": "RAG-M03-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "元数据、版本、血缘与知识发布是学习向量存储、精确搜索、HNSW与IVFFlat的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "9409d5b0-f0c3-5b2c-b463-696668195c71",
+    "source_knowledge_node_id": "RAG-M02-N03",
+    "target_knowledge_node_id": "RAG-M03-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "切片策略、语义边界与父子结构是学习BM25、关键词检索与精确术语召回的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-OPENSEARCH-HYBRID"
+    ]
+  },
+  {
+    "edge_id": "d6fee8c0-24a0-5b52-825a-56cc2b11b4c8",
+    "source_knowledge_node_id": "RAG-M03-N01",
+    "target_knowledge_node_id": "RAG-M03-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "文本嵌入、向量表示与相似度是学习混合检索、分数融合与RRF的前置知识。",
+    "evidence_source_ids": [
+      "SRC-OPENSEARCH-HYBRID",
+      "SRC-SBERT-2019"
+    ]
+  },
+  {
+    "edge_id": "22fc6412-1cc3-5c8a-a3ee-c6b897ab4af5",
+    "source_knowledge_node_id": "RAG-M03-N03",
+    "target_knowledge_node_id": "RAG-M03-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "BM25、关键词检索与精确术语召回是学习混合检索、分数融合与RRF的前置知识。",
+    "evidence_source_ids": [
+      "SRC-OPENSEARCH-HYBRID"
+    ]
+  },
+  {
+    "edge_id": "d01120cd-cc80-5dbf-82e5-29253aeb6052",
+    "source_knowledge_node_id": "RAG-M03-N04",
+    "target_knowledge_node_id": "RAG-M04-N01",
+    "relation_type": "prerequisite_of",
+    "reason": "混合检索、分数融合与RRF是学习查询理解、意图识别与查询改写的前置知识。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENSEARCH-HYBRID"
+    ]
+  },
+  {
+    "edge_id": "b88e4a8c-e799-5881-b448-287e7749e09f",
+    "source_knowledge_node_id": "RAG-M02-N04",
+    "target_knowledge_node_id": "RAG-M04-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "元数据、版本、血缘与知识发布是学习元数据过滤、租户隔离与权限检索的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF",
+      "SRC-OWASP-PROMPT-INJECTION"
+    ]
+  },
+  {
+    "edge_id": "21b52b42-a07d-5851-8673-e42a66a0e61e",
+    "source_knowledge_node_id": "RAG-M04-N01",
+    "target_knowledge_node_id": "RAG-M04-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "查询理解、意图识别与查询改写是学习元数据过滤、租户隔离与权限检索的前置知识。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-NIST-AI-RMF",
+      "SRC-OWASP-PROMPT-INJECTION"
+    ]
+  },
+  {
+    "edge_id": "a91c16e2-2f10-51bd-bc15-322b44f040a7",
+    "source_knowledge_node_id": "RAG-M03-N04",
+    "target_knowledge_node_id": "RAG-M04-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "混合检索、分数融合与RRF是学习候选重排、交叉编码器与多阶段检索的前置知识。",
+    "evidence_source_ids": [
+      "SRC-COLBERT-2020",
+      "SRC-OPENSEARCH-HYBRID"
+    ]
+  },
+  {
+    "edge_id": "c17b7242-4f43-51df-a44a-6b38ffb14a12",
+    "source_knowledge_node_id": "RAG-M04-N02",
+    "target_knowledge_node_id": "RAG-M04-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "元数据过滤、租户隔离与权限检索是学习候选重排、交叉编码器与多阶段检索的前置知识。",
+    "evidence_source_ids": [
+      "SRC-COLBERT-2020",
+      "SRC-NIST-AI-RMF",
+      "SRC-OWASP-PROMPT-INJECTION"
+    ]
+  },
+  {
+    "edge_id": "1e7e5164-e77b-5036-8be7-921560a7681b",
+    "source_knowledge_node_id": "RAG-M04-N03",
+    "target_knowledge_node_id": "RAG-M04-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "候选重排、交叉编码器与多阶段检索是学习上下文选择、压缩、排序与引用封装的前置知识。",
+    "evidence_source_ids": [
+      "SRC-COLBERT-2020",
+      "SRC-LOST-MIDDLE-2024",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "c9eea124-8cdd-5832-a960-72f5f81058c7",
+    "source_knowledge_node_id": "RAG-M04-N04",
+    "target_knowledge_node_id": "RAG-M05-N01",
+    "relation_type": "prerequisite_of",
+    "reason": "上下文选择、压缩、排序与引用封装是学习证据约束生成、引用与答案结构的前置知识。",
+    "evidence_source_ids": [
+      "SRC-COMPETITION-XH-202630",
+      "SRC-LOST-MIDDLE-2024",
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENAPI-31"
+    ]
+  },
+  {
+    "edge_id": "adf57974-7102-5055-af0e-0e167ad68c5b",
+    "source_knowledge_node_id": "RAG-M05-N01",
+    "target_knowledge_node_id": "RAG-M05-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "证据约束生成、引用与答案结构是学习证据不足、拒答、追问与人工转交的前置知识。",
+    "evidence_source_ids": [
+      "SRC-COMPETITION-XH-202630",
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENAPI-31",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "8ab6cb6d-a607-58c0-9fe9-e0c3fb085a0b",
+    "source_knowledge_node_id": "RAG-M05-N01",
+    "target_knowledge_node_id": "RAG-M05-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "证据约束生成、引用与答案结构是学习幻觉分类、事实审核与交叉验证的前置知识。",
+    "evidence_source_ids": [
+      "SRC-COMPETITION-XH-202630",
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENAPI-31",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "64ae5ab5-cf3d-5fc6-aa24-4606a16cb026",
+    "source_knowledge_node_id": "RAG-M05-N02",
+    "target_knowledge_node_id": "RAG-M05-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "证据不足、拒答、追问与人工转交是学习幻觉分类、事实审核与交叉验证的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "c8192812-5118-593d-8aa1-fc94c14ff89b",
+    "source_knowledge_node_id": "RAG-M02-N01",
+    "target_knowledge_node_id": "RAG-M05-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "知识源治理、可信等级与准入是学习提示注入、不可信文档与知识库安全的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-OWASP-PROMPT-INJECTION"
+    ]
+  },
+  {
+    "edge_id": "37226f7e-15ea-568f-bf92-0aae23fa260f",
+    "source_knowledge_node_id": "RAG-M04-N02",
+    "target_knowledge_node_id": "RAG-M05-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "元数据过滤、租户隔离与权限检索是学习提示注入、不可信文档与知识库安全的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-OWASP-PROMPT-INJECTION"
+    ]
+  },
+  {
+    "edge_id": "1716665c-b208-5698-a89f-6ac481c60eef",
+    "source_knowledge_node_id": "RAG-M05-N03",
+    "target_knowledge_node_id": "RAG-M05-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "幻觉分类、事实审核与交叉验证是学习提示注入、不可信文档与知识库安全的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-OWASP-PROMPT-INJECTION",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "925700f3-d094-5940-990d-9a8d19210d6f",
+    "source_knowledge_node_id": "RAG-M01-N04",
+    "target_knowledge_node_id": "RAG-M06-N01",
+    "relation_type": "prerequisite_of",
+    "reason": "需求分析、成功指标与RAG架构决策是学习检索评测：Hit Rate、Recall、MRR与nDCG的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "969cae71-6907-536d-9e7d-2a4b3d03182f",
+    "source_knowledge_node_id": "RAG-M04-N03",
+    "target_knowledge_node_id": "RAG-M06-N01",
+    "relation_type": "prerequisite_of",
+    "reason": "候选重排、交叉编码器与多阶段检索是学习检索评测：Hit Rate、Recall、MRR与nDCG的前置知识。",
+    "evidence_source_ids": [
+      "SRC-COLBERT-2020",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "1fb214e6-7446-5048-97fe-994aaf71c2db",
+    "source_knowledge_node_id": "RAG-M05-N03",
+    "target_knowledge_node_id": "RAG-M06-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "幻觉分类、事实审核与交叉验证是学习生成评测：忠实度、引用、完整性与适配的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "74e05ed9-84d1-5aca-90e9-cf7a34585f9e",
+    "source_knowledge_node_id": "RAG-M06-N01",
+    "target_knowledge_node_id": "RAG-M06-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "检索评测：Hit Rate、Recall、MRR与nDCG是学习生成评测：忠实度、引用、完整性与适配的前置知识。",
+    "evidence_source_ids": [
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "623812b5-3308-5792-9ce9-76314248aa09",
+    "source_knowledge_node_id": "RAG-M06-N01",
+    "target_knowledge_node_id": "RAG-M06-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "检索评测：Hit Rate、Recall、MRR与nDCG是学习端到端回归、消融实验与发布门禁的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "ea129f82-8da6-59bf-8fe7-fceeb79a9476",
+    "source_knowledge_node_id": "RAG-M06-N02",
+    "target_knowledge_node_id": "RAG-M06-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "生成评测：忠实度、引用、完整性与适配是学习端到端回归、消融实验与发布门禁的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "5c6d7f21-1f10-5e87-aaab-d7d783cf01de",
+    "source_knowledge_node_id": "RAG-M01-N02",
+    "target_knowledge_node_id": "RAG-M06-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "RAG端到端流水线与责任分层是学习可观测性、成本、时延与故障定位的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "58a8bcf5-57cf-53ab-8eac-1cd6d5084cd6",
+    "source_knowledge_node_id": "RAG-M06-N03",
+    "target_knowledge_node_id": "RAG-M06-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "端到端回归、消融实验与发布门禁是学习可观测性、成本、时延与故障定位的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "edc43433-cef3-5924-be60-aee120a1a7d5",
+    "source_knowledge_node_id": "RAG-M02-N03",
+    "target_knowledge_node_id": "RAG-M07-N01",
+    "relation_type": "prerequisite_of",
+    "reason": "切片策略、语义边界与父子结构是学习父子检索、层级检索与长文档问答的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY"
+    ]
+  },
+  {
+    "edge_id": "e9681566-81f7-5377-bb90-705e2d292f3d",
+    "source_knowledge_node_id": "RAG-M04-N04",
+    "target_knowledge_node_id": "RAG-M07-N01",
+    "relation_type": "prerequisite_of",
+    "reason": "上下文选择、压缩、排序与引用封装是学习父子检索、层级检索与长文档问答的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-LOST-MIDDLE-2024",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "ef127f9e-60ac-5d02-983b-4412d55e55bd",
+    "source_knowledge_node_id": "RAG-M02-N04",
+    "target_knowledge_node_id": "RAG-M07-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "元数据、版本、血缘与知识发布是学习GraphRAG、实体关系与局部/全局查询的前置知识。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "44e3bd55-5e92-5749-aeb4-a5db0450c8e8",
+    "source_knowledge_node_id": "RAG-M06-N01",
+    "target_knowledge_node_id": "RAG-M07-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "检索评测：Hit Rate、Recall、MRR与nDCG是学习GraphRAG、实体关系与局部/全局查询的前置知识。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "3d31605e-c813-5521-9cce-892f4d54985b",
+    "source_knowledge_node_id": "RAG-M04-N01",
+    "target_knowledge_node_id": "RAG-M07-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "查询理解、意图识别与查询改写是学习Agentic RAG、问题分解与检索自修复的前置知识。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "597586c0-f820-5620-9fc2-78b4c55f7d70",
+    "source_knowledge_node_id": "RAG-M05-N02",
+    "target_knowledge_node_id": "RAG-M07-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "证据不足、拒答、追问与人工转交是学习Agentic RAG、问题分解与检索自修复的前置知识。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-NIST-AI-RMF",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "b382b827-9b8c-54a6-9b32-ce6d262d1129",
+    "source_knowledge_node_id": "RAG-M06-N04",
+    "target_knowledge_node_id": "RAG-M07-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "可观测性、成本、时延与故障定位是学习Agentic RAG、问题分解与检索自修复的前置知识。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "7fd5b540-cca3-53f6-8765-efdc8a1fa5b9",
+    "source_knowledge_node_id": "RAG-M01-N04",
+    "target_knowledge_node_id": "RAG-M07-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "需求分析、成功指标与RAG架构决策是学习结构化、代码与多模态知识路由的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "cf7b9179-acff-5f52-ba57-729b5cb66a3c",
+    "source_knowledge_node_id": "RAG-M07-N03",
+    "target_knowledge_node_id": "RAG-M07-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "Agentic RAG、问题分解与检索自修复是学习结构化、代码与多模态知识路由的前置知识。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "9c9186ce-1a0d-52b2-a7d3-392c337bfcc7",
+    "source_knowledge_node_id": "RAG-M01-N02",
+    "target_knowledge_node_id": "RAG-M08-N01",
+    "relation_type": "prerequisite_of",
+    "reason": "RAG端到端流水线与责任分层是学习知识服务API、契约与Agent集成的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENAPI-31"
+    ]
+  },
+  {
+    "edge_id": "5ba42607-4f58-5703-8097-80d35f6dd649",
+    "source_knowledge_node_id": "RAG-M02-N04",
+    "target_knowledge_node_id": "RAG-M08-N01",
+    "relation_type": "prerequisite_of",
+    "reason": "元数据、版本、血缘与知识发布是学习知识服务API、契约与Agent集成的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENAPI-31"
+    ]
+  },
+  {
+    "edge_id": "91961e87-e33c-5ebb-a382-8a9382aa74d9",
+    "source_knowledge_node_id": "RAG-M02-N04",
+    "target_knowledge_node_id": "RAG-M08-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "元数据、版本、血缘与知识发布是学习持久化、事务、缓存与一致性的前置知识。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "c89ed355-7187-5388-8619-75c99f150d70",
+    "source_knowledge_node_id": "RAG-M08-N01",
+    "target_knowledge_node_id": "RAG-M08-N02",
+    "relation_type": "prerequisite_of",
+    "reason": "知识服务API、契约与Agent集成是学习持久化、事务、缓存与一致性的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENAPI-31",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "1fe45461-30ff-5956-aaa3-32b50f87ac72",
+    "source_knowledge_node_id": "RAG-M03-N02",
+    "target_knowledge_node_id": "RAG-M08-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "向量存储、精确搜索、HNSW与IVFFlat是学习性能、批处理、缓存与容量规划的前置知识。",
+    "evidence_source_ids": [
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "4c6ff446-5574-500c-9051-8552375e0bc7",
+    "source_knowledge_node_id": "RAG-M06-N04",
+    "target_knowledge_node_id": "RAG-M08-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "可观测性、成本、时延与故障定位是学习性能、批处理、缓存与容量规划的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "135fc380-e27c-55fd-b3de-e7f89f9989af",
+    "source_knowledge_node_id": "RAG-M08-N02",
+    "target_knowledge_node_id": "RAG-M08-N03",
+    "relation_type": "prerequisite_of",
+    "reason": "持久化、事务、缓存与一致性是学习性能、批处理、缓存与容量规划的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "da031eab-ef53-5588-97aa-620aba852ad2",
+    "source_knowledge_node_id": "RAG-M08-N01",
+    "target_knowledge_node_id": "RAG-M08-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "知识服务API、契约与Agent集成是学习本地开发、容器部署、安全与运维的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENAPI-31",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "b4218efe-bc79-5a2f-a9d2-b9a29032edcc",
+    "source_knowledge_node_id": "RAG-M08-N02",
+    "target_knowledge_node_id": "RAG-M08-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "持久化、事务、缓存与一致性是学习本地开发、容器部署、安全与运维的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "561fa7da-a280-5f52-ae3e-0f0ac0d1b9cb",
+    "source_knowledge_node_id": "RAG-M08-N03",
+    "target_knowledge_node_id": "RAG-M08-N04",
+    "relation_type": "prerequisite_of",
+    "reason": "性能、批处理、缓存与容量规划是学习本地开发、容器部署、安全与运维的前置知识。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "6bd2c9eb-ca1f-524e-83f9-dc3ce2d961ec",
+    "source_knowledge_node_id": "RAG-M01-N01",
+    "target_knowledge_node_id": "RAG-M01-N02",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF",
+      "SRC-RAG-LEWIS-2020"
+    ]
+  },
+  {
+    "edge_id": "161a46d5-0afb-5dcb-9bff-a5b17f159594",
+    "source_knowledge_node_id": "RAG-M01-N02",
+    "target_knowledge_node_id": "RAG-M01-N03",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF",
+      "SRC-RAG-LEWIS-2020"
+    ]
+  },
+  {
+    "edge_id": "2995d693-58e4-5bed-a310-8c00306504a9",
+    "source_knowledge_node_id": "RAG-M01-N03",
+    "target_knowledge_node_id": "RAG-M01-N04",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-RAG-LEWIS-2020"
+    ]
+  },
+  {
+    "edge_id": "60f4daa1-4806-56c4-9a99-a144db6f21cd",
+    "source_knowledge_node_id": "RAG-M02-N01",
+    "target_knowledge_node_id": "RAG-M02-N02",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "f06384f8-4e98-5b96-b16e-fa02a498eba5",
+    "source_knowledge_node_id": "RAG-M02-N02",
+    "target_knowledge_node_id": "RAG-M02-N03",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY"
+    ]
+  },
+  {
+    "edge_id": "161cf4a8-5006-57fc-85f2-9bef0aa54260",
+    "source_knowledge_node_id": "RAG-M02-N03",
+    "target_knowledge_node_id": "RAG-M02-N04",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "f8cd6327-3d76-528c-950b-ae8ef3da2c25",
+    "source_knowledge_node_id": "RAG-M03-N01",
+    "target_knowledge_node_id": "RAG-M03-N02",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-PGVECTOR-OFFICIAL",
+      "SRC-SBERT-2019"
+    ]
+  },
+  {
+    "edge_id": "df02e17e-be3d-5385-92d9-7dc9d64ebb09",
+    "source_knowledge_node_id": "RAG-M03-N02",
+    "target_knowledge_node_id": "RAG-M03-N03",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-OPENSEARCH-HYBRID",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "7da81319-b93d-566d-9e1a-a3088e69e1a8",
+    "source_knowledge_node_id": "RAG-M03-N03",
+    "target_knowledge_node_id": "RAG-M03-N04",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-OPENSEARCH-HYBRID"
+    ]
+  },
+  {
+    "edge_id": "f4a64b28-1224-53a2-8163-02acf7644222",
+    "source_knowledge_node_id": "RAG-M04-N01",
+    "target_knowledge_node_id": "RAG-M04-N02",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-NIST-AI-RMF",
+      "SRC-OWASP-PROMPT-INJECTION"
+    ]
+  },
+  {
+    "edge_id": "86ce56f1-7732-52de-af14-a40ada445167",
+    "source_knowledge_node_id": "RAG-M04-N02",
+    "target_knowledge_node_id": "RAG-M04-N03",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-COLBERT-2020",
+      "SRC-NIST-AI-RMF",
+      "SRC-OWASP-PROMPT-INJECTION"
+    ]
+  },
+  {
+    "edge_id": "a0137e42-9ebd-581a-98f2-be495f5b9848",
+    "source_knowledge_node_id": "RAG-M04-N03",
+    "target_knowledge_node_id": "RAG-M04-N04",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-COLBERT-2020",
+      "SRC-LOST-MIDDLE-2024",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "3e13bf02-4b7f-5efe-86c7-b1cb8436f066",
+    "source_knowledge_node_id": "RAG-M05-N01",
+    "target_knowledge_node_id": "RAG-M05-N02",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-COMPETITION-XH-202630",
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENAPI-31",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "0cc229f2-159d-523a-af6b-90cc9e322c5a",
+    "source_knowledge_node_id": "RAG-M05-N02",
+    "target_knowledge_node_id": "RAG-M05-N03",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "7e7fb0be-0c98-5f7e-ac07-3bc0394c4222",
+    "source_knowledge_node_id": "RAG-M05-N03",
+    "target_knowledge_node_id": "RAG-M05-N04",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-OWASP-PROMPT-INJECTION",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "d7544760-78fa-5b8c-b43e-66ca36dea55b",
+    "source_knowledge_node_id": "RAG-M06-N01",
+    "target_knowledge_node_id": "RAG-M06-N02",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "536dbdf1-7a17-5304-a3ac-33524a7d4bbd",
+    "source_knowledge_node_id": "RAG-M06-N02",
+    "target_knowledge_node_id": "RAG-M06-N03",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "9cce92b2-c122-5d25-979e-85e0d16e2ba9",
+    "source_knowledge_node_id": "RAG-M06-N03",
+    "target_knowledge_node_id": "RAG-M06-N04",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "816c8b3d-a8b3-5774-9a1e-c1122d6ee053",
+    "source_knowledge_node_id": "RAG-M07-N01",
+    "target_knowledge_node_id": "RAG-M07-N02",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-LLAMAINDEX-HIERARCHY"
+    ]
+  },
+  {
+    "edge_id": "e880304e-ff56-5093-a12f-4c57ef9a3062",
+    "source_knowledge_node_id": "RAG-M07-N02",
+    "target_knowledge_node_id": "RAG-M07-N03",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "25f57170-af3d-503c-a04c-a9a8082ef2dd",
+    "source_knowledge_node_id": "RAG-M07-N03",
+    "target_knowledge_node_id": "RAG-M07-N04",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "6b6c56bb-b6ce-55ca-8dc1-755169951f64",
+    "source_knowledge_node_id": "RAG-M08-N01",
+    "target_knowledge_node_id": "RAG-M08-N02",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENAPI-31",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "6e9b9ab6-5cf3-53af-b220-fadacfd28131",
+    "source_knowledge_node_id": "RAG-M08-N02",
+    "target_knowledge_node_id": "RAG-M08-N03",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "ca79c6e1-ddb2-598d-80d5-1958e0ecf1f8",
+    "source_knowledge_node_id": "RAG-M08-N03",
+    "target_knowledge_node_id": "RAG-M08-N04",
+    "relation_type": "recommended_before",
+    "reason": "同一模块中的建议学习顺序。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "a60d5682-8abd-5f3c-8f27-a87f327968a3",
+    "source_knowledge_node_id": "RAG-M01-N01",
+    "target_knowledge_node_id": "RAG-M01-N03",
+    "relation_type": "compared_with",
+    "reason": "RAG的定义、目标与边界与RAG、微调、长上下文与工具调用的选择在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-RAG-LEWIS-2020"
+    ]
+  },
+  {
+    "edge_id": "588fa053-c817-5f3d-9765-52353626b46d",
+    "source_knowledge_node_id": "RAG-M03-N01",
+    "target_knowledge_node_id": "RAG-M03-N03",
+    "relation_type": "complements",
+    "reason": "文本嵌入、向量表示与相似度与BM25、关键词检索与精确术语召回在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-OPENSEARCH-HYBRID",
+      "SRC-SBERT-2019"
+    ]
+  },
+  {
+    "edge_id": "8226e49e-7192-58d6-b73d-778b89bdfdac",
+    "source_knowledge_node_id": "RAG-M03-N02",
+    "target_knowledge_node_id": "RAG-M03-N04",
+    "relation_type": "supports",
+    "reason": "向量存储、精确搜索、HNSW与IVFFlat与混合检索、分数融合与RRF在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-OPENSEARCH-HYBRID",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "e8e728ae-8207-51d5-8948-b4d84e5b2c2b",
+    "source_knowledge_node_id": "RAG-M04-N03",
+    "target_knowledge_node_id": "RAG-M04-N04",
+    "relation_type": "prepares",
+    "reason": "候选重排、交叉编码器与多阶段检索与上下文选择、压缩、排序与引用封装在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-COLBERT-2020",
+      "SRC-LOST-MIDDLE-2024",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "3726a6fe-2f0d-5b36-b487-0fa8a135d70b",
+    "source_knowledge_node_id": "RAG-M05-N01",
+    "target_knowledge_node_id": "RAG-M05-N03",
+    "relation_type": "reviewed_by",
+    "reason": "证据约束生成、引用与答案结构与幻觉分类、事实审核与交叉验证在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-COMPETITION-XH-202630",
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENAPI-31",
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "8089ca43-06da-53f7-84bd-8a873e589aa0",
+    "source_knowledge_node_id": "RAG-M06-N01",
+    "target_knowledge_node_id": "RAG-M06-N02",
+    "relation_type": "complements",
+    "reason": "检索评测：Hit Rate、Recall、MRR与nDCG与生成评测：忠实度、引用、完整性与适配在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "f63e6c6c-595f-5ae1-801a-5749df650ae1",
+    "source_knowledge_node_id": "RAG-M07-N01",
+    "target_knowledge_node_id": "RAG-M07-N02",
+    "relation_type": "compared_with",
+    "reason": "父子检索、层级检索与长文档问答与GraphRAG、实体关系与局部/全局查询在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-LLAMAINDEX-HIERARCHY"
+    ]
+  },
+  {
+    "edge_id": "e5acfdc6-5356-5c57-82bb-9b86854ac9e0",
+    "source_knowledge_node_id": "RAG-M07-N02",
+    "target_knowledge_node_id": "RAG-M07-N03",
+    "relation_type": "can_be_orchestrated_by",
+    "reason": "GraphRAG、实体关系与局部/全局查询与Agentic RAG、问题分解与检索自修复在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-GRAPHRAG-OFFICIAL",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "5890c3cb-18cc-5cd5-a64c-4fe27de7770e",
+    "source_knowledge_node_id": "RAG-M08-N01",
+    "target_knowledge_node_id": "RAG-M08-N02",
+    "relation_type": "implemented_with",
+    "reason": "知识服务API、契约与Agent集成与持久化、事务、缓存与一致性在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-NIST-AI-RMF",
+      "SRC-OPENAPI-31",
+      "SRC-PGVECTOR-OFFICIAL"
+    ]
+  },
+  {
+    "edge_id": "d50b0a5b-fe69-57b3-942d-a979b741be61",
+    "source_knowledge_node_id": "RAG-M02-N03",
+    "target_knowledge_node_id": "RAG-M04-N04",
+    "relation_type": "often_confused_with",
+    "reason": "切片策略、语义边界与父子结构与上下文选择、压缩、排序与引用封装在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-LLAMAINDEX-HIERARCHY",
+      "SRC-LOST-MIDDLE-2024",
+      "SRC-NIST-AI-RMF"
+    ]
+  },
+  {
+    "edge_id": "6d3102c4-d57f-50d5-85a4-dafa73124dfa",
+    "source_knowledge_node_id": "RAG-M03-N01",
+    "target_knowledge_node_id": "RAG-M03-N02",
+    "relation_type": "often_confused_with",
+    "reason": "文本嵌入、向量表示与相似度与向量存储、精确搜索、HNSW与IVFFlat在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-PGVECTOR-OFFICIAL",
+      "SRC-SBERT-2019"
+    ]
+  },
+  {
+    "edge_id": "921ba31d-c72e-52c4-ace8-3ce7c62439a3",
+    "source_knowledge_node_id": "RAG-M06-N01",
+    "target_knowledge_node_id": "RAG-M06-N02",
+    "relation_type": "often_confused_with",
+    "reason": "检索评测：Hit Rate、Recall、MRR与nDCG与生成评测：忠实度、引用、完整性与适配在工程中需要联合理解。",
+    "evidence_source_ids": [
+      "SRC-RAGAS-2023"
+    ]
+  },
+  {
+    "edge_id": "6f062a36-48d5-5058-a767-9d9cd4b0b13f",
+    "source_knowledge_node_id": "RAG-M01-N01",
+    "target_knowledge_node_id": "RAG-SUB-rag_definition",
+    "relation_type": "has_subtopic",
+    "reason": "RAG基本定义是“RAG的定义、目标与边界”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "5f3b78b9-b201-57bd-9c4b-7cd91fdf3032",
+    "source_knowledge_node_id": "RAG-M01-N02",
+    "target_knowledge_node_id": "RAG-SUB-rag_end_to_end_architecture",
+    "relation_type": "has_subtopic",
+    "reason": "RAG端到端架构是“RAG端到端流水线与责任分层”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "3ece744e-1851-5b24-bf5c-75650bacbcd4",
+    "source_knowledge_node_id": "RAG-M01-N01",
+    "target_knowledge_node_id": "RAG-SUB-parametric_nonparametric_memory",
+    "relation_type": "has_subtopic",
+    "reason": "参数记忆与外部记忆是“RAG的定义、目标与边界”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "8e223cbd-3889-571d-b9ce-735930439921",
+    "source_knowledge_node_id": "RAG-M01-N04",
+    "target_knowledge_node_id": "RAG-SUB-rag_applicability",
+    "relation_type": "has_subtopic",
+    "reason": "RAG适用性判断是“需求分析、成功指标与RAG架构决策”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "ca48d5e2-2db1-5344-b748-c1826cb3f034",
+    "source_knowledge_node_id": "RAG-M01-N02",
+    "target_knowledge_node_id": "RAG-SUB-rag_failure_taxonomy",
+    "relation_type": "has_subtopic",
+    "reason": "RAG失败类型是“RAG端到端流水线与责任分层”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "98f6e63d-5c23-5adc-b866-4b2474d0c77b",
+    "source_knowledge_node_id": "RAG-M02-N01",
+    "target_knowledge_node_id": "RAG-SUB-knowledge_source_selection",
+    "relation_type": "has_subtopic",
+    "reason": "知识源选择是“知识源治理、可信等级与准入”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "221f16f9-a6af-5c80-b0e7-d63e2cae36d0",
+    "source_knowledge_node_id": "RAG-M02-N01",
+    "target_knowledge_node_id": "RAG-SUB-source_authority_provenance",
+    "relation_type": "has_subtopic",
+    "reason": "来源权威性与溯源是“知识源治理、可信等级与准入”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "2c576fe3-a209-5dd0-bf86-432fdb0168d8",
+    "source_knowledge_node_id": "RAG-M02-N04",
+    "target_knowledge_node_id": "RAG-SUB-versioning_freshness",
+    "relation_type": "has_subtopic",
+    "reason": "版本与时效治理是“元数据、版本、血缘与知识发布”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "c3eb3727-d397-5075-871d-40544012c913",
+    "source_knowledge_node_id": "RAG-M02-N01",
+    "target_knowledge_node_id": "RAG-SUB-licensing_compliance",
+    "relation_type": "has_subtopic",
+    "reason": "许可与合规是“知识源治理、可信等级与准入”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "226ab421-d787-5be5-921a-83691384bd4f",
+    "source_knowledge_node_id": "RAG-M04-N02",
+    "target_knowledge_node_id": "RAG-SUB-access_control_tenant_isolation",
+    "relation_type": "has_subtopic",
+    "reason": "权限过滤与多租户隔离是“元数据过滤、租户隔离与权限检索”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "c30b9f86-3554-5e45-a3e0-b73775724d7d",
+    "source_knowledge_node_id": "RAG-M02-N02",
+    "target_knowledge_node_id": "RAG-SUB-document_parsing",
+    "relation_type": "has_subtopic",
+    "reason": "文档解析是“文档解析、清洗与结构保真”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "7cbe5e13-6f26-52d2-b9bd-04d4ca6918f1",
+    "source_knowledge_node_id": "RAG-M02-N02",
+    "target_knowledge_node_id": "RAG-SUB-layout_table_extraction",
+    "relation_type": "has_subtopic",
+    "reason": "版面与表格提取是“文档解析、清洗与结构保真”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "dd3de76b-7203-5339-9e85-ccd46124c644",
+    "source_knowledge_node_id": "RAG-M02-N02",
+    "target_knowledge_node_id": "RAG-SUB-text_cleaning_normalization",
+    "relation_type": "has_subtopic",
+    "reason": "文本清洗与规范化是“文档解析、清洗与结构保真”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "a8a4732e-5148-58b0-b237-4b424df4ca87",
+    "source_knowledge_node_id": "RAG-M02-N02",
+    "target_knowledge_node_id": "RAG-SUB-deduplication",
+    "relation_type": "has_subtopic",
+    "reason": "内容去重是“文档解析、清洗与结构保真”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "ccbca8cb-50bc-5430-8124-617ab3efcf86",
+    "source_knowledge_node_id": "RAG-M02-N04",
+    "target_knowledge_node_id": "RAG-SUB-document_quality_checks",
+    "relation_type": "has_subtopic",
+    "reason": "文档质量门禁是“元数据、版本、血缘与知识发布”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "a9964a9f-dd84-59d1-8fbc-4520b7e4ef95",
+    "source_knowledge_node_id": "RAG-M02-N03",
+    "target_knowledge_node_id": "RAG-SUB-chunking_objectives",
+    "relation_type": "has_subtopic",
+    "reason": "文档切分目标是“切片策略、语义边界与父子结构”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "968778d1-38c7-5939-abd5-f2a8f653b756",
+    "source_knowledge_node_id": "RAG-M02-N03",
+    "target_knowledge_node_id": "RAG-SUB-fixed_window_chunking",
+    "relation_type": "has_subtopic",
+    "reason": "固定窗口切分是“切片策略、语义边界与父子结构”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "7cfa87b2-cece-5b9a-a5c9-8b6d0a4999a7",
+    "source_knowledge_node_id": "RAG-M02-N03",
+    "target_knowledge_node_id": "RAG-SUB-structure_aware_chunking",
+    "relation_type": "has_subtopic",
+    "reason": "结构感知切分是“切片策略、语义边界与父子结构”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "07e68436-db40-59b6-8710-d3d6911c927c",
+    "source_knowledge_node_id": "RAG-M02-N03",
+    "target_knowledge_node_id": "RAG-SUB-semantic_chunking",
+    "relation_type": "has_subtopic",
+    "reason": "语义切分是“切片策略、语义边界与父子结构”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "991d17bd-3d81-5640-b57c-a3cee2fa4506",
+    "source_knowledge_node_id": "RAG-M07-N01",
+    "target_knowledge_node_id": "RAG-SUB-parent_child_multigranular",
+    "relation_type": "has_subtopic",
+    "reason": "父子与多粒度检索是“父子检索、层级检索与长文档问答”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "42fd7353-36b8-58ec-94d1-ca43335ebe8f",
+    "source_knowledge_node_id": "RAG-M02-N04",
+    "target_knowledge_node_id": "RAG-SUB-metadata_schema",
+    "relation_type": "has_subtopic",
+    "reason": "元数据Schema设计是“元数据、版本、血缘与知识发布”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "b5784ea6-0d2f-58ce-a21d-99276e9b239a",
+    "source_knowledge_node_id": "RAG-M03-N01",
+    "target_knowledge_node_id": "RAG-SUB-embedding_fundamentals",
+    "relation_type": "has_subtopic",
+    "reason": "文本嵌入基础是“文本嵌入、向量表示与相似度”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "fefd387d-b53b-5dd8-b39d-7cc6c8dc22cd",
+    "source_knowledge_node_id": "RAG-M03-N01",
+    "target_knowledge_node_id": "RAG-SUB-embedding_model_selection",
+    "relation_type": "has_subtopic",
+    "reason": "嵌入模型选择是“文本嵌入、向量表示与相似度”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "00e77f7c-794c-59f2-a51b-df4c0537d0f8",
+    "source_knowledge_node_id": "RAG-M03-N01",
+    "target_knowledge_node_id": "RAG-SUB-similarity_metrics",
+    "relation_type": "has_subtopic",
+    "reason": "向量相似度与归一化是“文本嵌入、向量表示与相似度”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "abf09e6d-6d14-5e1d-890a-e6fa4e9c424b",
+    "source_knowledge_node_id": "RAG-M03-N02",
+    "target_knowledge_node_id": "RAG-SUB-vector_index_hnsw_ivf",
+    "relation_type": "has_subtopic",
+    "reason": "向量索引与近似最近邻是“向量存储、精确搜索、HNSW与IVFFlat”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "64bc39e2-7437-503f-ac11-d325885d0204",
+    "source_knowledge_node_id": "RAG-M03-N03",
+    "target_knowledge_node_id": "RAG-SUB-bm25_sparse_retrieval",
+    "relation_type": "has_subtopic",
+    "reason": "BM25与稀疏检索是“BM25、关键词检索与精确术语召回”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "266ae761-f992-5e61-bcdc-9929d5e693a3",
+    "source_knowledge_node_id": "RAG-M03-N01",
+    "target_knowledge_node_id": "RAG-SUB-dense_retrieval",
+    "relation_type": "has_subtopic",
+    "reason": "稠密语义检索是“文本嵌入、向量表示与相似度”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "a5c4319d-1ab0-5479-95cf-846903818d67",
+    "source_knowledge_node_id": "RAG-M03-N04",
+    "target_knowledge_node_id": "RAG-SUB-hybrid_retrieval",
+    "relation_type": "has_subtopic",
+    "reason": "混合检索是“混合检索、分数融合与RRF”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "ecfaf0bb-abdf-5211-9b37-e8fa32e15943",
+    "source_knowledge_node_id": "RAG-M04-N02",
+    "target_knowledge_node_id": "RAG-SUB-metadata_filtering",
+    "relation_type": "has_subtopic",
+    "reason": "元数据过滤是“元数据过滤、租户隔离与权限检索”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "ad21123d-2257-5c81-b1fb-c83d9c715672",
+    "source_knowledge_node_id": "RAG-M04-N01",
+    "target_knowledge_node_id": "RAG-SUB-multi_query_expansion",
+    "relation_type": "has_subtopic",
+    "reason": "多查询与查询扩展是“查询理解、意图识别与查询改写”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "4cd120f1-eb5d-511e-9211-72d2439026dc",
+    "source_knowledge_node_id": "RAG-M04-N01",
+    "target_knowledge_node_id": "RAG-SUB-query_rewriting",
+    "relation_type": "has_subtopic",
+    "reason": "查询改写是“查询理解、意图识别与查询改写”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "d108ebf3-427e-599f-a800-9c572231dbb9",
+    "source_knowledge_node_id": "RAG-M07-N03",
+    "target_knowledge_node_id": "RAG-SUB-hyde_retrieval",
+    "relation_type": "has_subtopic",
+    "reason": "HyDE假设文档检索是“Agentic RAG、问题分解与检索自修复”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "bfc7b926-edbe-57bf-bc64-84979de5e61b",
+    "source_knowledge_node_id": "RAG-M04-N03",
+    "target_knowledge_node_id": "RAG-SUB-cross_encoder_reranking",
+    "relation_type": "has_subtopic",
+    "reason": "交叉编码器重排序是“候选重排、交叉编码器与多阶段检索”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "16c12cd1-c271-5943-bb44-fc16c253e2d9",
+    "source_knowledge_node_id": "RAG-M04-N03",
+    "target_knowledge_node_id": "RAG-SUB-colbert_late_interaction",
+    "relation_type": "has_subtopic",
+    "reason": "ColBERT晚交互检索是“候选重排、交叉编码器与多阶段检索”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "53f7e5fc-e749-51a9-9110-aabc55f35a00",
+    "source_knowledge_node_id": "RAG-M04-N03",
+    "target_knowledge_node_id": "RAG-SUB-diversity_mmr",
+    "relation_type": "has_subtopic",
+    "reason": "MMR多样性选择是“候选重排、交叉编码器与多阶段检索”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "2b40e89c-9947-5846-bc48-cd235d1348a7",
+    "source_knowledge_node_id": "RAG-M03-N04",
+    "target_knowledge_node_id": "RAG-SUB-rank_fusion_rrf",
+    "relation_type": "has_subtopic",
+    "reason": "RRF名次融合是“混合检索、分数融合与RRF”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "6189f766-0093-5934-9f09-2513956e40f0",
+    "source_knowledge_node_id": "RAG-M04-N04",
+    "target_knowledge_node_id": "RAG-SUB-context_selection_budget",
+    "relation_type": "has_subtopic",
+    "reason": "上下文选择与Token预算是“上下文选择、压缩、排序与引用封装”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "ee69fba4-9259-5dd1-82c5-375a1c7ee598",
+    "source_knowledge_node_id": "RAG-M04-N04",
+    "target_knowledge_node_id": "RAG-SUB-lost_in_the_middle",
+    "relation_type": "has_subtopic",
+    "reason": "长上下文位置效应是“上下文选择、压缩、排序与引用封装”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "51f9f815-94e2-5428-87fe-5eebe6db6d4c",
+    "source_knowledge_node_id": "RAG-M05-N01",
+    "target_knowledge_node_id": "RAG-SUB-prompt_grounding",
+    "relation_type": "has_subtopic",
+    "reason": "证据约束提示词是“证据约束生成、引用与答案结构”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "d4929d50-c361-5096-92d0-0be603376d6a",
+    "source_knowledge_node_id": "RAG-M05-N02",
+    "target_knowledge_node_id": "RAG-SUB-answer_abstention",
+    "relation_type": "has_subtopic",
+    "reason": "拒答与不确定性是“证据不足、拒答、追问与人工转交”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "ab07df83-1af7-50f4-b032-1d0ed9873794",
+    "source_knowledge_node_id": "RAG-M05-N01",
+    "target_knowledge_node_id": "RAG-SUB-citation_generation_verification",
+    "relation_type": "has_subtopic",
+    "reason": "引用生成与验证是“证据约束生成、引用与答案结构”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "80221742-7466-5e42-a204-7c062a806b31",
+    "source_knowledge_node_id": "RAG-M05-N03",
+    "target_knowledge_node_id": "RAG-SUB-hallucination_types",
+    "relation_type": "has_subtopic",
+    "reason": "幻觉类型与根因是“幻觉分类、事实审核与交叉验证”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "6cba100d-21bb-5de6-9dcc-38411c78181b",
+    "source_knowledge_node_id": "RAG-M05-N03",
+    "target_knowledge_node_id": "RAG-SUB-evidence_entailment",
+    "relation_type": "has_subtopic",
+    "reason": "证据支持关系检查是“幻觉分类、事实审核与交叉验证”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "1cb64bb8-c8a6-54ba-a092-fc9dadea17d9",
+    "source_knowledge_node_id": "RAG-M05-N03",
+    "target_knowledge_node_id": "RAG-SUB-review_correction_loop",
+    "relation_type": "has_subtopic",
+    "reason": "审核与纠偏闭环是“幻觉分类、事实审核与交叉验证”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "eace1230-1e7f-52d4-b6b3-b6ddf0b820fe",
+    "source_knowledge_node_id": "RAG-M05-N04",
+    "target_knowledge_node_id": "RAG-SUB-prompt_injection_defense",
+    "relation_type": "has_subtopic",
+    "reason": "提示词注入防护是“提示注入、不可信文档与知识库安全”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "33b774d7-e83d-57bf-8a46-18932f2da7ce",
+    "source_knowledge_node_id": "RAG-M05-N04",
+    "target_knowledge_node_id": "RAG-SUB-sensitive_data_privacy",
+    "relation_type": "has_subtopic",
+    "reason": "敏感数据与隐私保护是“提示注入、不可信文档与知识库安全”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "664d0e9a-a290-5d5d-9ab8-c58d4f4e01d7",
+    "source_knowledge_node_id": "RAG-M06-N01",
+    "target_knowledge_node_id": "RAG-SUB-retrieval_metrics",
+    "relation_type": "has_subtopic",
+    "reason": "检索评测指标是“检索评测：Hit Rate、Recall、MRR与nDCG”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "24757b54-9a67-51a6-956d-7c4f704b431f",
+    "source_knowledge_node_id": "RAG-M06-N02",
+    "target_knowledge_node_id": "RAG-SUB-generation_metrics",
+    "relation_type": "has_subtopic",
+    "reason": "生成质量指标是“生成评测：忠实度、引用、完整性与适配”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "7cdd14f4-9e0c-5306-b7c5-43fe9c421fc8",
+    "source_knowledge_node_id": "RAG-M06-N03",
+    "target_knowledge_node_id": "RAG-SUB-end_to_end_evaluation",
+    "relation_type": "has_subtopic",
+    "reason": "端到端RAG评测是“端到端回归、消融实验与发布门禁”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "1c36df1a-87c5-5e40-989f-536277891121",
+    "source_knowledge_node_id": "RAG-M06-N03",
+    "target_knowledge_node_id": "RAG-SUB-golden_dataset_design",
+    "relation_type": "has_subtopic",
+    "reason": "黄金评测集设计是“端到端回归、消融实验与发布门禁”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "77c96f5f-af45-542f-923c-8278cbb719bd",
+    "source_knowledge_node_id": "RAG-M06-N04",
+    "target_knowledge_node_id": "RAG-SUB-online_monitoring_feedback",
+    "relation_type": "has_subtopic",
+    "reason": "在线监控与反馈是“可观测性、成本、时延与故障定位”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "a3783009-0917-544e-8e41-b6922ec4238e",
+    "source_knowledge_node_id": "RAG-M07-N03",
+    "target_knowledge_node_id": "RAG-SUB-agentic_rag",
+    "relation_type": "has_subtopic",
+    "reason": "Agentic RAG是“Agentic RAG、问题分解与检索自修复”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "cd9661cd-040e-5eb0-92fb-16c0ad15eb8e",
+    "source_knowledge_node_id": "RAG-M07-N03",
+    "target_knowledge_node_id": "RAG-SUB-self_rag",
+    "relation_type": "has_subtopic",
+    "reason": "Self-RAG自反思检索生成是“Agentic RAG、问题分解与检索自修复”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "89a2efd6-d576-5616-9e01-27d6939fac60",
+    "source_knowledge_node_id": "RAG-M07-N03",
+    "target_knowledge_node_id": "RAG-SUB-corrective_rag",
+    "relation_type": "has_subtopic",
+    "reason": "Corrective RAG是“Agentic RAG、问题分解与检索自修复”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "803605d4-0d47-5000-a640-1e81ea211acf",
+    "source_knowledge_node_id": "RAG-M07-N02",
+    "target_knowledge_node_id": "RAG-SUB-graph_rag",
+    "relation_type": "has_subtopic",
+    "reason": "Graph RAG是“GraphRAG、实体关系与局部/全局查询”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "6a608954-f524-576b-b224-a75438a478bf",
+    "source_knowledge_node_id": "RAG-M07-N04",
+    "target_knowledge_node_id": "RAG-SUB-tool_routing_multi_source",
+    "relation_type": "has_subtopic",
+    "reason": "多源路由与工具选择是“结构化、代码与多模态知识路由”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "57b571a4-0307-5469-a731-bcb6900bb943",
+    "source_knowledge_node_id": "RAG-M06-N04",
+    "target_knowledge_node_id": "RAG-SUB-observability_tracing",
+    "relation_type": "has_subtopic",
+    "reason": "可观测性与链路追踪是“可观测性、成本、时延与故障定位”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "31371edf-b8eb-5f26-bfc3-c2caf659cd27",
+    "source_knowledge_node_id": "RAG-M08-N03",
+    "target_knowledge_node_id": "RAG-SUB-latency_cost_optimization",
+    "relation_type": "has_subtopic",
+    "reason": "延迟与成本优化是“性能、批处理、缓存与容量规划”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "8a6dd8cf-b5c9-5eaf-bdef-cd3103360d8f",
+    "source_knowledge_node_id": "RAG-M08-N02",
+    "target_knowledge_node_id": "RAG-SUB-caching_idempotency",
+    "relation_type": "has_subtopic",
+    "reason": "缓存与幂等是“持久化、事务、缓存与一致性”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "cfc844fa-affc-5882-9384-e5af6c611a76",
+    "source_knowledge_node_id": "RAG-M08-N04",
+    "target_knowledge_node_id": "RAG-SUB-deployment_fallback",
+    "relation_type": "has_subtopic",
+    "reason": "部署与降级是“本地开发、容器部署、安全与运维”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "78ca281e-2076-5dbc-8114-6a66a48ba830",
+    "source_knowledge_node_id": "RAG-M06-N03",
+    "target_knowledge_node_id": "RAG-SUB-continuous_updates_regression",
+    "relation_type": "has_subtopic",
+    "reason": "持续更新与回归是“端到端回归、消融实验与发布门禁”的细粒度主题。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0"
+    }
+  },
+  {
+    "edge_id": "c90173f0-9b57-5ccb-86dc-a2ab4c4a4eef",
+    "source_knowledge_node_id": "RAG-SUB-rag_definition",
+    "target_knowledge_node_id": "RAG-SUB-rag_end_to_end_architecture",
+    "relation_type": "prerequisite_of",
+    "reason": "RAG基本定义为学习RAG端到端架构提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "230ba848-1aa6-5573-86aa-15f7c03157cb",
+    "source_knowledge_node_id": "RAG-SUB-rag_end_to_end_architecture",
+    "target_knowledge_node_id": "RAG-SUB-parametric_nonparametric_memory",
+    "relation_type": "prerequisite_of",
+    "reason": "RAG端到端架构为学习参数记忆与外部记忆提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "b34484c5-84ce-5a19-9ce5-63483f3b33d9",
+    "source_knowledge_node_id": "RAG-SUB-parametric_nonparametric_memory",
+    "target_knowledge_node_id": "RAG-SUB-rag_applicability",
+    "relation_type": "prerequisite_of",
+    "reason": "参数记忆与外部记忆为学习RAG适用性判断提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "a939971c-2f26-54f9-9d2d-25ab0c92ce3f",
+    "source_knowledge_node_id": "RAG-SUB-rag_applicability",
+    "target_knowledge_node_id": "RAG-SUB-rag_failure_taxonomy",
+    "relation_type": "prerequisite_of",
+    "reason": "RAG适用性判断为学习RAG失败类型提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "99cb4e8d-262a-547a-a2fc-3efc66edf5c8",
+    "source_knowledge_node_id": "RAG-SUB-knowledge_source_selection",
+    "target_knowledge_node_id": "RAG-SUB-source_authority_provenance",
+    "relation_type": "prerequisite_of",
+    "reason": "知识源选择为学习来源权威性与溯源提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "f54f18f6-ca4c-5916-acf1-2db78b0fafec",
+    "source_knowledge_node_id": "RAG-SUB-source_authority_provenance",
+    "target_knowledge_node_id": "RAG-SUB-versioning_freshness",
+    "relation_type": "prerequisite_of",
+    "reason": "来源权威性与溯源为学习版本与时效治理提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "18317eac-dba3-5dcc-a1ea-f3e9e2e359ef",
+    "source_knowledge_node_id": "RAG-SUB-versioning_freshness",
+    "target_knowledge_node_id": "RAG-SUB-licensing_compliance",
+    "relation_type": "prerequisite_of",
+    "reason": "版本与时效治理为学习许可与合规提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "76ea3a59-ff8d-5a7a-b1f4-34b2842daf18",
+    "source_knowledge_node_id": "RAG-SUB-licensing_compliance",
+    "target_knowledge_node_id": "RAG-SUB-access_control_tenant_isolation",
+    "relation_type": "prerequisite_of",
+    "reason": "许可与合规为学习权限过滤与多租户隔离提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "586cd4ed-d0dc-5cee-8264-0f5890ca5b1b",
+    "source_knowledge_node_id": "RAG-SUB-document_parsing",
+    "target_knowledge_node_id": "RAG-SUB-layout_table_extraction",
+    "relation_type": "prerequisite_of",
+    "reason": "文档解析为学习版面与表格提取提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "f8afe43c-53b6-582b-aa27-d480f3d5b196",
+    "source_knowledge_node_id": "RAG-SUB-layout_table_extraction",
+    "target_knowledge_node_id": "RAG-SUB-text_cleaning_normalization",
+    "relation_type": "prerequisite_of",
+    "reason": "版面与表格提取为学习文本清洗与规范化提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "d9b4b59d-bdab-548b-8981-da616503534f",
+    "source_knowledge_node_id": "RAG-SUB-text_cleaning_normalization",
+    "target_knowledge_node_id": "RAG-SUB-deduplication",
+    "relation_type": "prerequisite_of",
+    "reason": "文本清洗与规范化为学习内容去重提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "580ae67f-d9f8-5c21-9c28-4a62d74c7696",
+    "source_knowledge_node_id": "RAG-SUB-deduplication",
+    "target_knowledge_node_id": "RAG-SUB-document_quality_checks",
+    "relation_type": "prerequisite_of",
+    "reason": "内容去重为学习文档质量门禁提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "ffbb906e-ebab-519b-8302-9ba9cfb53a18",
+    "source_knowledge_node_id": "RAG-SUB-chunking_objectives",
+    "target_knowledge_node_id": "RAG-SUB-fixed_window_chunking",
+    "relation_type": "prerequisite_of",
+    "reason": "文档切分目标为学习固定窗口切分提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "a78126bf-fcda-5c92-b7e1-235c6eda478e",
+    "source_knowledge_node_id": "RAG-SUB-fixed_window_chunking",
+    "target_knowledge_node_id": "RAG-SUB-structure_aware_chunking",
+    "relation_type": "prerequisite_of",
+    "reason": "固定窗口切分为学习结构感知切分提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "ae2db486-394d-5db7-8e47-8fa2f5db3059",
+    "source_knowledge_node_id": "RAG-SUB-structure_aware_chunking",
+    "target_knowledge_node_id": "RAG-SUB-semantic_chunking",
+    "relation_type": "prerequisite_of",
+    "reason": "结构感知切分为学习语义切分提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "9fc5d169-80d9-5934-9ec5-8db8ccb63f6b",
+    "source_knowledge_node_id": "RAG-SUB-semantic_chunking",
+    "target_knowledge_node_id": "RAG-SUB-parent_child_multigranular",
+    "relation_type": "prerequisite_of",
+    "reason": "语义切分为学习父子与多粒度检索提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "70541376-e746-5605-9b9d-269885e53bd5",
+    "source_knowledge_node_id": "RAG-SUB-metadata_schema",
+    "target_knowledge_node_id": "RAG-SUB-embedding_fundamentals",
+    "relation_type": "prerequisite_of",
+    "reason": "元数据Schema设计为学习文本嵌入基础提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "7b4a0a26-7c7a-5484-9cf8-21a8af740937",
+    "source_knowledge_node_id": "RAG-SUB-embedding_fundamentals",
+    "target_knowledge_node_id": "RAG-SUB-embedding_model_selection",
+    "relation_type": "prerequisite_of",
+    "reason": "文本嵌入基础为学习嵌入模型选择提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "2959209c-4005-5dd1-a45a-8f06d63d7c4f",
+    "source_knowledge_node_id": "RAG-SUB-embedding_model_selection",
+    "target_knowledge_node_id": "RAG-SUB-similarity_metrics",
+    "relation_type": "prerequisite_of",
+    "reason": "嵌入模型选择为学习向量相似度与归一化提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "1130cc5f-f0ca-5596-abaf-a2db9869bfaf",
+    "source_knowledge_node_id": "RAG-SUB-similarity_metrics",
+    "target_knowledge_node_id": "RAG-SUB-vector_index_hnsw_ivf",
+    "relation_type": "prerequisite_of",
+    "reason": "向量相似度与归一化为学习向量索引与近似最近邻提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "a4d19592-0cb1-5fcb-a799-9d1298a2a6b3",
+    "source_knowledge_node_id": "RAG-SUB-bm25_sparse_retrieval",
+    "target_knowledge_node_id": "RAG-SUB-dense_retrieval",
+    "relation_type": "prerequisite_of",
+    "reason": "BM25与稀疏检索为学习稠密语义检索提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "a742d06c-2da1-5332-887f-15181a92a55f",
+    "source_knowledge_node_id": "RAG-SUB-dense_retrieval",
+    "target_knowledge_node_id": "RAG-SUB-hybrid_retrieval",
+    "relation_type": "prerequisite_of",
+    "reason": "稠密语义检索为学习混合检索提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "05fffe71-db0e-5e0f-aa1c-169d1472b667",
+    "source_knowledge_node_id": "RAG-SUB-hybrid_retrieval",
+    "target_knowledge_node_id": "RAG-SUB-metadata_filtering",
+    "relation_type": "prerequisite_of",
+    "reason": "混合检索为学习元数据过滤提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "3b6df707-58a1-5c72-b8ae-f9c1ead7a30a",
+    "source_knowledge_node_id": "RAG-SUB-metadata_filtering",
+    "target_knowledge_node_id": "RAG-SUB-multi_query_expansion",
+    "relation_type": "prerequisite_of",
+    "reason": "元数据过滤为学习多查询与查询扩展提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "c4256c70-b463-5c13-bbfc-b4d00192b654",
+    "source_knowledge_node_id": "RAG-SUB-query_rewriting",
+    "target_knowledge_node_id": "RAG-SUB-hyde_retrieval",
+    "relation_type": "prerequisite_of",
+    "reason": "查询改写为学习HyDE假设文档检索提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "9013d575-9864-5fdf-9a8f-06e39e388a10",
+    "source_knowledge_node_id": "RAG-SUB-hyde_retrieval",
+    "target_knowledge_node_id": "RAG-SUB-cross_encoder_reranking",
+    "relation_type": "prerequisite_of",
+    "reason": "HyDE假设文档检索为学习交叉编码器重排序提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "99a45e48-1f5d-5942-99cc-36de265000e5",
+    "source_knowledge_node_id": "RAG-SUB-cross_encoder_reranking",
+    "target_knowledge_node_id": "RAG-SUB-colbert_late_interaction",
+    "relation_type": "prerequisite_of",
+    "reason": "交叉编码器重排序为学习ColBERT晚交互检索提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "8feedddb-02ab-54b7-8b98-5ca03a273fb8",
+    "source_knowledge_node_id": "RAG-SUB-colbert_late_interaction",
+    "target_knowledge_node_id": "RAG-SUB-diversity_mmr",
+    "relation_type": "prerequisite_of",
+    "reason": "ColBERT晚交互检索为学习MMR多样性选择提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "19404562-8cd4-5ae6-86e7-3cf9212ab9d8",
+    "source_knowledge_node_id": "RAG-SUB-diversity_mmr",
+    "target_knowledge_node_id": "RAG-SUB-rank_fusion_rrf",
+    "relation_type": "prerequisite_of",
+    "reason": "MMR多样性选择为学习RRF名次融合提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "4ff21896-eb9d-5b97-9c88-fd47655e663d",
+    "source_knowledge_node_id": "RAG-SUB-context_selection_budget",
+    "target_knowledge_node_id": "RAG-SUB-lost_in_the_middle",
+    "relation_type": "prerequisite_of",
+    "reason": "上下文选择与Token预算为学习长上下文位置效应提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "cb253594-dad4-5a63-97d6-0233f270eb53",
+    "source_knowledge_node_id": "RAG-SUB-lost_in_the_middle",
+    "target_knowledge_node_id": "RAG-SUB-prompt_grounding",
+    "relation_type": "prerequisite_of",
+    "reason": "长上下文位置效应为学习证据约束提示词提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "a4d89380-1ab4-5692-88cb-715f5712e9aa",
+    "source_knowledge_node_id": "RAG-SUB-prompt_grounding",
+    "target_knowledge_node_id": "RAG-SUB-answer_abstention",
+    "relation_type": "prerequisite_of",
+    "reason": "证据约束提示词为学习拒答与不确定性提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "e501e3b5-aa35-5828-93a2-cb27dd5e406a",
+    "source_knowledge_node_id": "RAG-SUB-answer_abstention",
+    "target_knowledge_node_id": "RAG-SUB-citation_generation_verification",
+    "relation_type": "prerequisite_of",
+    "reason": "拒答与不确定性为学习引用生成与验证提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "b6f14f12-ecc3-5f30-8164-fc4366fa43b1",
+    "source_knowledge_node_id": "RAG-SUB-hallucination_types",
+    "target_knowledge_node_id": "RAG-SUB-evidence_entailment",
+    "relation_type": "prerequisite_of",
+    "reason": "幻觉类型与根因为学习证据支持关系检查提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "781e6955-0e49-520b-af39-87c44ab9e844",
+    "source_knowledge_node_id": "RAG-SUB-evidence_entailment",
+    "target_knowledge_node_id": "RAG-SUB-review_correction_loop",
+    "relation_type": "prerequisite_of",
+    "reason": "证据支持关系检查为学习审核与纠偏闭环提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "436b64c8-a8e0-5d5e-b49d-f9c07792572d",
+    "source_knowledge_node_id": "RAG-SUB-review_correction_loop",
+    "target_knowledge_node_id": "RAG-SUB-prompt_injection_defense",
+    "relation_type": "prerequisite_of",
+    "reason": "审核与纠偏闭环为学习提示词注入防护提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "3a108f9f-7052-5a79-a675-1f585b2f2798",
+    "source_knowledge_node_id": "RAG-SUB-prompt_injection_defense",
+    "target_knowledge_node_id": "RAG-SUB-sensitive_data_privacy",
+    "relation_type": "prerequisite_of",
+    "reason": "提示词注入防护为学习敏感数据与隐私保护提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "c4a56ee9-5c46-55be-97fc-167be99ed79c",
+    "source_knowledge_node_id": "RAG-SUB-retrieval_metrics",
+    "target_knowledge_node_id": "RAG-SUB-generation_metrics",
+    "relation_type": "prerequisite_of",
+    "reason": "检索评测指标为学习生成质量指标提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "47e24623-1a97-5cda-91be-cfe22b647146",
+    "source_knowledge_node_id": "RAG-SUB-generation_metrics",
+    "target_knowledge_node_id": "RAG-SUB-end_to_end_evaluation",
+    "relation_type": "prerequisite_of",
+    "reason": "生成质量指标为学习端到端RAG评测提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "768865a4-4347-5c53-ac0f-bf5be41f1005",
+    "source_knowledge_node_id": "RAG-SUB-end_to_end_evaluation",
+    "target_knowledge_node_id": "RAG-SUB-golden_dataset_design",
+    "relation_type": "prerequisite_of",
+    "reason": "端到端RAG评测为学习黄金评测集设计提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "e7709cab-d2b6-58e5-8911-57c8971b2669",
+    "source_knowledge_node_id": "RAG-SUB-golden_dataset_design",
+    "target_knowledge_node_id": "RAG-SUB-online_monitoring_feedback",
+    "relation_type": "prerequisite_of",
+    "reason": "黄金评测集设计为学习在线监控与反馈提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "fd412ad9-aa23-5483-8a0e-0085c1e890e5",
+    "source_knowledge_node_id": "RAG-SUB-agentic_rag",
+    "target_knowledge_node_id": "RAG-SUB-self_rag",
+    "relation_type": "prerequisite_of",
+    "reason": "Agentic RAG为学习Self-RAG自反思检索生成提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "ad84db51-6a02-5e64-a48d-d4076e60394e",
+    "source_knowledge_node_id": "RAG-SUB-self_rag",
+    "target_knowledge_node_id": "RAG-SUB-corrective_rag",
+    "relation_type": "prerequisite_of",
+    "reason": "Self-RAG自反思检索生成为学习Corrective RAG提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "16fc7cb4-dbd3-505b-ba19-de42b1892590",
+    "source_knowledge_node_id": "RAG-SUB-corrective_rag",
+    "target_knowledge_node_id": "RAG-SUB-graph_rag",
+    "relation_type": "prerequisite_of",
+    "reason": "Corrective RAG为学习Graph RAG提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "a14742d7-e214-5c0a-bcf5-9d0bcb7dea81",
+    "source_knowledge_node_id": "RAG-SUB-graph_rag",
+    "target_knowledge_node_id": "RAG-SUB-tool_routing_multi_source",
+    "relation_type": "prerequisite_of",
+    "reason": "Graph RAG为学习多源路由与工具选择提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "711c085a-2125-5fb7-840f-a8c91b01ae1e",
+    "source_knowledge_node_id": "RAG-SUB-observability_tracing",
+    "target_knowledge_node_id": "RAG-SUB-latency_cost_optimization",
+    "relation_type": "prerequisite_of",
+    "reason": "可观测性与链路追踪为学习延迟与成本优化提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "73324288-7091-5265-bef8-e7565bd9b3a1",
+    "source_knowledge_node_id": "RAG-SUB-latency_cost_optimization",
+    "target_knowledge_node_id": "RAG-SUB-caching_idempotency",
+    "relation_type": "prerequisite_of",
+    "reason": "延迟与成本优化为学习缓存与幂等提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "bf0ef5f1-effe-52f8-8a73-f06a1f180071",
+    "source_knowledge_node_id": "RAG-SUB-caching_idempotency",
+    "target_knowledge_node_id": "RAG-SUB-deployment_fallback",
+    "relation_type": "prerequisite_of",
+    "reason": "缓存与幂等为学习部署与降级提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "7ba24cc3-0f0d-577e-bce6-bd4c1588db08",
+    "source_knowledge_node_id": "RAG-SUB-deployment_fallback",
+    "target_knowledge_node_id": "RAG-SUB-continuous_updates_regression",
+    "relation_type": "prerequisite_of",
+    "reason": "部署与降级为学习持续更新与回归提供前置基础。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "c11e9b2e-4309-522f-9a9d-2b188091300e",
+    "source_knowledge_node_id": "RAG-SUB-rag_failure_taxonomy",
+    "target_knowledge_node_id": "RAG-SUB-knowledge_source_selection",
+    "relation_type": "prerequisite_of",
+    "reason": "完成上一章节后进入知识源选择。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "5fddeed0-803d-5651-bef7-691ea03d056e",
+    "source_knowledge_node_id": "RAG-SUB-access_control_tenant_isolation",
+    "target_knowledge_node_id": "RAG-SUB-document_parsing",
+    "relation_type": "prerequisite_of",
+    "reason": "完成上一章节后进入文档解析。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "b6568684-7c6f-5138-b46f-ff996aee49de",
+    "source_knowledge_node_id": "RAG-SUB-document_quality_checks",
+    "target_knowledge_node_id": "RAG-SUB-chunking_objectives",
+    "relation_type": "prerequisite_of",
+    "reason": "完成上一章节后进入文档切分目标。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "7dc340fa-3cb4-5ccc-9288-e31f2e9a5738",
+    "source_knowledge_node_id": "RAG-SUB-parent_child_multigranular",
+    "target_knowledge_node_id": "RAG-SUB-metadata_schema",
+    "relation_type": "prerequisite_of",
+    "reason": "完成上一章节后进入元数据Schema设计。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "3b728a0a-6d71-5fe1-88dd-45c3d4cf1818",
+    "source_knowledge_node_id": "RAG-SUB-vector_index_hnsw_ivf",
+    "target_knowledge_node_id": "RAG-SUB-bm25_sparse_retrieval",
+    "relation_type": "prerequisite_of",
+    "reason": "完成上一章节后进入BM25与稀疏检索。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "3ce3b8be-5857-5e02-979c-6bef7ab9fdcc",
+    "source_knowledge_node_id": "RAG-SUB-multi_query_expansion",
+    "target_knowledge_node_id": "RAG-SUB-query_rewriting",
+    "relation_type": "prerequisite_of",
+    "reason": "完成上一章节后进入查询改写。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "0cb2e4fd-fddc-55ef-b23d-f2c1737c39a6",
+    "source_knowledge_node_id": "RAG-SUB-rank_fusion_rrf",
+    "target_knowledge_node_id": "RAG-SUB-context_selection_budget",
+    "relation_type": "prerequisite_of",
+    "reason": "完成上一章节后进入上下文选择与Token预算。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "49a0ef26-78af-5519-b31d-7bfe5f635cb9",
+    "source_knowledge_node_id": "RAG-SUB-citation_generation_verification",
+    "target_knowledge_node_id": "RAG-SUB-hallucination_types",
+    "relation_type": "prerequisite_of",
+    "reason": "完成上一章节后进入幻觉类型与根因。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "606c1b27-99ad-5723-92c5-4281d9602c1f",
+    "source_knowledge_node_id": "RAG-SUB-sensitive_data_privacy",
+    "target_knowledge_node_id": "RAG-SUB-retrieval_metrics",
+    "relation_type": "prerequisite_of",
+    "reason": "完成上一章节后进入检索评测指标。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "2e3cda15-2a80-55cb-a3f7-0d4a5afe86b2",
+    "source_knowledge_node_id": "RAG-SUB-online_monitoring_feedback",
+    "target_knowledge_node_id": "RAG-SUB-agentic_rag",
+    "relation_type": "prerequisite_of",
+    "reason": "完成上一章节后进入Agentic RAG。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "5d4ddace-662e-58e1-864d-152b566bd99a",
+    "source_knowledge_node_id": "RAG-SUB-tool_routing_multi_source",
+    "target_knowledge_node_id": "RAG-SUB-observability_tracing",
+    "relation_type": "prerequisite_of",
+    "reason": "完成上一章节后进入可观测性与链路追踪。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "9dad0153-958c-5db2-959e-72e16d976b49",
+    "source_knowledge_node_id": "RAG-SUB-knowledge_source_selection",
+    "target_knowledge_node_id": "RAG-SUB-source_authority_provenance",
+    "relation_type": "supports",
+    "reason": "高质量来源是可追溯证据的前提。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "b16ca8d9-dafb-5df4-8df2-17e4836566e7",
+    "source_knowledge_node_id": "RAG-SUB-versioning_freshness",
+    "target_knowledge_node_id": "RAG-SUB-continuous_updates_regression",
+    "relation_type": "supports",
+    "reason": "知识版本变化必须触发回归评测。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "65e06bf4-d345-557c-92b8-3cfe419572de",
+    "source_knowledge_node_id": "RAG-SUB-access_control_tenant_isolation",
+    "target_knowledge_node_id": "RAG-SUB-metadata_filtering",
+    "relation_type": "supports",
+    "reason": "权限元数据必须在检索阶段执行硬过滤。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "104a0c7f-b997-5c54-b051-ad3ef764e53c",
+    "source_knowledge_node_id": "RAG-SUB-document_parsing",
+    "target_knowledge_node_id": "RAG-SUB-structure_aware_chunking",
+    "relation_type": "supports",
+    "reason": "解析出的结构用于结构感知切分。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "a2b1d7d4-71b2-5c95-84af-efd6d8861fab",
+    "source_knowledge_node_id": "RAG-SUB-layout_table_extraction",
+    "target_knowledge_node_id": "RAG-SUB-structure_aware_chunking",
+    "relation_type": "supports",
+    "reason": "表格与代码块边界应被切分策略保护。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "07829b8f-6146-5bc4-9819-81c0a4ceb869",
+    "source_knowledge_node_id": "RAG-SUB-deduplication",
+    "target_knowledge_node_id": "RAG-SUB-diversity_mmr",
+    "relation_type": "supports",
+    "reason": "离线去重与在线多样性选择共同减少重复证据。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "d1903e8c-d33e-59fe-88db-c74f149ae7a3",
+    "source_knowledge_node_id": "RAG-SUB-chunking_objectives",
+    "target_knowledge_node_id": "RAG-SUB-parent_child_multigranular",
+    "relation_type": "supports",
+    "reason": "多粒度切分是精度与上下文完整性的折中。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "89af29cf-9c3a-54a3-8659-cc242e6eb047",
+    "source_knowledge_node_id": "RAG-SUB-metadata_schema",
+    "target_knowledge_node_id": "RAG-SUB-metadata_filtering",
+    "relation_type": "supports",
+    "reason": "过滤依赖稳定、完整的元数据Schema。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "af8e27ca-bf90-5230-8875-265d5f9d3118",
+    "source_knowledge_node_id": "RAG-SUB-embedding_model_selection",
+    "target_knowledge_node_id": "RAG-SUB-dense_retrieval",
+    "relation_type": "supports",
+    "reason": "稠密检索质量受嵌入模型直接影响。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "0754c32a-0a45-553c-9a6e-111361c61507",
+    "source_knowledge_node_id": "RAG-SUB-similarity_metrics",
+    "target_knowledge_node_id": "RAG-SUB-vector_index_hnsw_ivf",
+    "relation_type": "supports",
+    "reason": "索引距离配置必须匹配向量归一化与相似度。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "d8393b4a-8600-5c49-8031-de55a29eb939",
+    "source_knowledge_node_id": "RAG-SUB-bm25_sparse_retrieval",
+    "target_knowledge_node_id": "RAG-SUB-dense_retrieval",
+    "relation_type": "supports",
+    "reason": "稀疏与稠密是互补检索范式。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "27dc86d6-c2a7-5c8f-9c22-2320022d0490",
+    "source_knowledge_node_id": "RAG-SUB-bm25_sparse_retrieval",
+    "target_knowledge_node_id": "RAG-SUB-hybrid_retrieval",
+    "relation_type": "supports",
+    "reason": "混合检索融合关键词通道。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "7be47bfb-d354-5b26-b6fb-0239c73a25c4",
+    "source_knowledge_node_id": "RAG-SUB-dense_retrieval",
+    "target_knowledge_node_id": "RAG-SUB-hybrid_retrieval",
+    "relation_type": "supports",
+    "reason": "混合检索融合语义通道。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "d9da5281-b97a-50c4-9c6d-dd92db2c0284",
+    "source_knowledge_node_id": "RAG-SUB-hybrid_retrieval",
+    "target_knowledge_node_id": "RAG-SUB-rank_fusion_rrf",
+    "relation_type": "supports",
+    "reason": "RRF可作为混合检索的稳定融合方法。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "0397a1a5-adc9-50c5-93ad-743c8ff3f4ba",
+    "source_knowledge_node_id": "RAG-SUB-multi_query_expansion",
+    "target_knowledge_node_id": "RAG-SUB-query_rewriting",
+    "relation_type": "supports",
+    "reason": "两者都会改变检索表达，但目的和粒度不同。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "d3aaf9ca-5028-5e50-82ee-69d313dcbf05",
+    "source_knowledge_node_id": "RAG-SUB-query_rewriting",
+    "target_knowledge_node_id": "RAG-SUB-hyde_retrieval",
+    "relation_type": "supports",
+    "reason": "HyDE是一种更激进的查询表示扩展。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "8b480429-7d29-530a-91d7-918dfe23fa23",
+    "source_knowledge_node_id": "RAG-SUB-dense_retrieval",
+    "target_knowledge_node_id": "RAG-SUB-cross_encoder_reranking",
+    "relation_type": "supports",
+    "reason": "双编码器召回后可用交叉编码器提高精度。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "87359715-aa49-50e1-9d9d-dab100a717f8",
+    "source_knowledge_node_id": "RAG-SUB-cross_encoder_reranking",
+    "target_knowledge_node_id": "RAG-SUB-colbert_late_interaction",
+    "relation_type": "supports",
+    "reason": "晚交互在效率与细粒度交互之间折中。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "e79c9033-8efb-5649-a778-9660a5ceba79",
+    "source_knowledge_node_id": "RAG-SUB-diversity_mmr",
+    "target_knowledge_node_id": "RAG-SUB-context_selection_budget",
+    "relation_type": "supports",
+    "reason": "多样性选择服务于上下文证据组合。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "58f350b7-9e75-5b11-a847-5decb54c6056",
+    "source_knowledge_node_id": "RAG-SUB-context_selection_budget",
+    "target_knowledge_node_id": "RAG-SUB-lost_in_the_middle",
+    "relation_type": "supports",
+    "reason": "上下文长度和排序影响模型利用证据。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "1be2ff04-de97-5fa8-94ac-c6a528c229a2",
+    "source_knowledge_node_id": "RAG-SUB-prompt_grounding",
+    "target_knowledge_node_id": "RAG-SUB-answer_abstention",
+    "relation_type": "supports",
+    "reason": "证据约束提示词应定义不足时拒答。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "049519af-c9dd-5230-876b-5cc88caeecc9",
+    "source_knowledge_node_id": "RAG-SUB-citation_generation_verification",
+    "target_knowledge_node_id": "RAG-SUB-evidence_entailment",
+    "relation_type": "supports",
+    "reason": "引用必须经过支持关系验证。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "96a4715f-d72b-5822-8509-51a6205720b6",
+    "source_knowledge_node_id": "RAG-SUB-hallucination_types",
+    "target_knowledge_node_id": "RAG-SUB-review_correction_loop",
+    "relation_type": "supports",
+    "reason": "错误分类指导审核与修复动作。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "ff44247c-36d6-5344-9905-2dfb9088b821",
+    "source_knowledge_node_id": "RAG-SUB-prompt_injection_defense",
+    "target_knowledge_node_id": "RAG-SUB-tool_routing_multi_source",
+    "relation_type": "supports",
+    "reason": "工具路由必须满足最小权限和输入校验。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "d683a175-2557-5c6d-899c-d51e32dd0fec",
+    "source_knowledge_node_id": "RAG-SUB-retrieval_metrics",
+    "target_knowledge_node_id": "RAG-SUB-generation_metrics",
+    "relation_type": "supports",
+    "reason": "检索与生成需要分别评估。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "c47faede-be1f-561c-8fda-102d98eadd4b",
+    "source_knowledge_node_id": "RAG-SUB-retrieval_metrics",
+    "target_knowledge_node_id": "RAG-SUB-end_to_end_evaluation",
+    "relation_type": "supports",
+    "reason": "端到端指标建立在组件指标之上。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "5d551224-095b-561a-88e6-0ca6923bc739",
+    "source_knowledge_node_id": "RAG-SUB-golden_dataset_design",
+    "target_knowledge_node_id": "RAG-SUB-continuous_updates_regression",
+    "relation_type": "supports",
+    "reason": "锁定评测集用于持续回归。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "377b2c04-a7ef-5dc3-9746-a9fe126b142a",
+    "source_knowledge_node_id": "RAG-SUB-online_monitoring_feedback",
+    "target_knowledge_node_id": "RAG-SUB-continuous_updates_regression",
+    "relation_type": "supports",
+    "reason": "线上失败案例应进入回归集。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "12d416bf-a066-588b-bff9-5e1392537a4c",
+    "source_knowledge_node_id": "RAG-SUB-agentic_rag",
+    "target_knowledge_node_id": "RAG-SUB-review_correction_loop",
+    "relation_type": "supports",
+    "reason": "Agentic流程需要审核和停止条件。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "61fdefa9-aab7-5252-9ee3-b3801208baa6",
+    "source_knowledge_node_id": "RAG-SUB-self_rag",
+    "target_knowledge_node_id": "RAG-SUB-corrective_rag",
+    "relation_type": "supports",
+    "reason": "二者都引入检索与质量自适应，但实现机制不同。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "ca1949d3-ef93-5c3a-a078-658f7a21d332",
+    "source_knowledge_node_id": "RAG-SUB-graph_rag",
+    "target_knowledge_node_id": "RAG-SUB-tool_routing_multi_source",
+    "relation_type": "supports",
+    "reason": "图检索可作为多源工具之一。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "83b915cc-4ab0-5ae8-8b3c-7d53090c49b7",
+    "source_knowledge_node_id": "RAG-SUB-observability_tracing",
+    "target_knowledge_node_id": "RAG-SUB-latency_cost_optimization",
+    "relation_type": "supports",
+    "reason": "链路追踪用于定位延迟和成本瓶颈。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "9f21d213-f98c-59a1-8b88-7e275ee0b474",
+    "source_knowledge_node_id": "RAG-SUB-caching_idempotency",
+    "target_knowledge_node_id": "RAG-SUB-access_control_tenant_isolation",
+    "relation_type": "supports",
+    "reason": "缓存键必须包含租户和权限上下文。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "bfcc38b7-a982-5444-a64c-b4594867176d",
+    "source_knowledge_node_id": "RAG-SUB-deployment_fallback",
+    "target_knowledge_node_id": "RAG-SUB-answer_abstention",
+    "relation_type": "supports",
+    "reason": "依赖异常时应安全拒答或降级。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "4be33f89-8abd-5439-b9c5-72e0b0c5bef3",
+    "source_knowledge_node_id": "RAG-SUB-fixed_window_chunking",
+    "target_knowledge_node_id": "RAG-SUB-structure_aware_chunking",
+    "relation_type": "contrasts_with",
+    "reason": "固定窗口简单稳定，结构感知更能保护语义边界。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "6557a1b6-3baf-5f60-a7bb-a5c9bbe72861",
+    "source_knowledge_node_id": "RAG-SUB-bm25_sparse_retrieval",
+    "target_knowledge_node_id": "RAG-SUB-dense_retrieval",
+    "relation_type": "contrasts_with",
+    "reason": "BM25侧重词面，稠密检索侧重语义。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "2297cd99-b2f0-5529-a08f-1368b8e551b0",
+    "source_knowledge_node_id": "RAG-SUB-cross_encoder_reranking",
+    "target_knowledge_node_id": "RAG-SUB-colbert_late_interaction",
+    "relation_type": "contrasts_with",
+    "reason": "交叉编码器精度高但逐对计算，晚交互预编码文档Token。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "4990fb94-150c-52b8-b3ce-57d6763dbaa3",
+    "source_knowledge_node_id": "RAG-SUB-agentic_rag",
+    "target_knowledge_node_id": "RAG-SUB-rag_end_to_end_architecture",
+    "relation_type": "constraint",
+    "reason": "只有固定流程不足以处理复杂多步任务时才引入Agentic RAG。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "410d45d0-8c9b-52f1-8c05-3b133392934c",
+    "source_knowledge_node_id": "RAG-SUB-graph_rag",
+    "target_knowledge_node_id": "RAG-SUB-hybrid_retrieval",
+    "relation_type": "constraint",
+    "reason": "关系需求不明确时优先验证更简单的混合检索。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  },
+  {
+    "edge_id": "08dd63fc-5d73-5ee0-8253-e3c580944dbd",
+    "source_knowledge_node_id": "RAG-SUB-prompt_injection_defense",
+    "target_knowledge_node_id": "RAG-SUB-rag_applicability",
+    "relation_type": "constraint",
+    "reason": "含高权限工具的RAG必须进行额外安全设计。",
+    "evidence_source_ids": [],
+    "provenance": {
+      "origin_package": "RAG工程实训知识库_v1.0",
+      "review_status": "pending_team_review"
+    }
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RetrievalTrace",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "retrieval_run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "retrieval_plan": {
+      "$ref": "retrieval_plan.schema.json"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "workflow_event.schema.json"
+      },
+      "minItems": 0
+    },
+    "strategy_results": {
+      "type": "array",
+      "items": {
+        "$ref": "retrieval_strategy_result.schema.json"
+      },
+      "minItems": 0
+    },
+    "evidence_bundle": {
+      "$ref": "evidence_bundle.schema.json"
+    },
+    "sufficiency_checks": {
+      "type": "array",
+      "items": {
+        "$ref": "evidence_sufficiency.schema.json"
+      },
+      "minItems": 0
+    },
+    "final_status": {
+      "type": "string",
+      "enum": [
+        "completed",
+        "insufficient",
+        "failed",
+        "cancelled"
+      ]
+    }
+  },
+  "required": [
+    "retrieval_run_id",
+    "retrieval_plan",
+    "events",
+    "strategy_results",
+    "evidence_bundle",
+    "sufficiency_checks",
+    "final_status"
+  ]
+}

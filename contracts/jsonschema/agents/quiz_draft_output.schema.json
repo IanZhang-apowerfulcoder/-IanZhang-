@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QuizDraftOutput",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "7.0"
+    },
+    "run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "agent_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "succeeded",
+        "failed",
+        "needs_input",
+        "degraded"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "reasoning_summary": {
+      "type": "string"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "quiz_title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "QuizItem",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "question_id": {
+            "type": "string"
+          },
+          "question_type": {
+            "type": "string",
+            "enum": [
+              "single_choice",
+              "multiple_choice",
+              "true_false",
+              "short_answer",
+              "code"
+            ]
+          },
+          "stem": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            },
+            "minItems": 0
+          },
+          "correct_answer": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "scoring_rubric": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "difficulty_level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "question_id",
+          "question_type",
+          "stem",
+          "options",
+          "correct_answer",
+          "scoring_rubric",
+          "explanation",
+          "difficulty_level",
+          "evidence_ids"
+        ]
+      },
+      "minItems": 1
+    },
+    "coverage_knowledge_node_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "EvidenceReference",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "knowledge_node_id": {
+            "type": "string"
+          },
+          "claim_scope": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "evidence_id",
+          "knowledge_node_id"
+        ]
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "agent_name",
+    "status",
+    "confidence",
+    "reasoning_summary",
+    "warnings",
+    "requires_human_review",
+    "completed_at",
+    "quiz_title",
+    "items",
+    "coverage_knowledge_node_ids",
+    "evidence"
+  ]
+}

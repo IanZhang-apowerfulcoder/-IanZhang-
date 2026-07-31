@@ -1,0 +1,1533 @@
+[
+  {
+    "candidate_subtopic_id": "EXT-RAG-rag_definition",
+    "external_node_id": "rag_definition",
+    "mapped_knowledge_node_id": "RAG-M01-N01",
+    "mapped_knowledge_node_name": "RAG的定义、目标与边界",
+    "module_id": "RAG-M01",
+    "name": "RAG基本定义",
+    "description": "理解检索增强生成如何把外部知识检索与语言模型生成结合起来。",
+    "difficulty_level": 1,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "01_RAG基础",
+      "foundation",
+      "architecture",
+      "retrieval",
+      "generation"
+    ],
+    "competency_codes": [
+      "RAG-COMP-001"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-rag_end_to_end_architecture",
+    "external_node_id": "rag_end_to_end_architecture",
+    "mapped_knowledge_node_id": "RAG-M01-N02",
+    "mapped_knowledge_node_name": "RAG端到端流水线与责任分层",
+    "module_id": "RAG-M01",
+    "name": "RAG端到端架构",
+    "description": "掌握从知识接入到检索、生成、引用、反馈和评测的完整链路。",
+    "difficulty_level": 1,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "01_RAG基础",
+      "architecture",
+      "offline_pipeline",
+      "online_pipeline",
+      "observability"
+    ],
+    "competency_codes": [
+      "RAG-COMP-002"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-parametric_nonparametric_memory",
+    "external_node_id": "parametric_nonparametric_memory",
+    "mapped_knowledge_node_id": "RAG-M01-N01",
+    "mapped_knowledge_node_name": "RAG的定义、目标与边界",
+    "module_id": "RAG-M01",
+    "name": "参数记忆与外部记忆",
+    "description": "区分模型参数中的知识与可检索外部知识，并理解二者协作方式。",
+    "difficulty_level": 2,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "01_RAG基础",
+      "parametric_memory",
+      "nonparametric_memory",
+      "provenance"
+    ],
+    "competency_codes": [
+      "RAG-COMP-003"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-rag_applicability",
+    "external_node_id": "rag_applicability",
+    "mapped_knowledge_node_id": "RAG-M01-N04",
+    "mapped_knowledge_node_name": "需求分析、成功指标与RAG架构决策",
+    "module_id": "RAG-M01",
+    "name": "RAG适用性判断",
+    "description": "判断某个业务问题是否应该采用RAG，以及应采用多复杂的方案。",
+    "difficulty_level": 2,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "01_RAG基础",
+      "requirements",
+      "risk",
+      "scenario_selection"
+    ],
+    "competency_codes": [
+      "RAG-COMP-004"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-rag_failure_taxonomy",
+    "external_node_id": "rag_failure_taxonomy",
+    "mapped_knowledge_node_id": "RAG-M01-N02",
+    "mapped_knowledge_node_name": "RAG端到端流水线与责任分层",
+    "module_id": "RAG-M01",
+    "name": "RAG失败类型",
+    "description": "能够把错误拆分为知识、检索、上下文、生成和治理等不同类别。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "01_RAG基础",
+      "failure_analysis",
+      "debugging",
+      "evaluation"
+    ],
+    "competency_codes": [
+      "RAG-COMP-005"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-knowledge_source_selection",
+    "external_node_id": "knowledge_source_selection",
+    "mapped_knowledge_node_id": "RAG-M02-N01",
+    "mapped_knowledge_node_name": "知识源治理、可信等级与准入",
+    "module_id": "RAG-M02",
+    "name": "知识源选择",
+    "description": "选择覆盖目标岗位且具备权威性、时效性和可授权性的知识来源。",
+    "difficulty_level": 1,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "02_知识源治理",
+      "source_governance",
+      "authority",
+      "coverage"
+    ],
+    "competency_codes": [
+      "RAG-COMP-006"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-source_authority_provenance",
+    "external_node_id": "source_authority_provenance",
+    "mapped_knowledge_node_id": "RAG-M02-N01",
+    "mapped_knowledge_node_name": "知识源治理、可信等级与准入",
+    "module_id": "RAG-M02",
+    "name": "来源权威性与溯源",
+    "description": "为知识片段建立从回答到原始来源的完整证据链。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "02_知识源治理",
+      "provenance",
+      "citation",
+      "auditability"
+    ],
+    "competency_codes": [
+      "RAG-COMP-007"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-versioning_freshness",
+    "external_node_id": "versioning_freshness",
+    "mapped_knowledge_node_id": "RAG-M02-N04",
+    "mapped_knowledge_node_name": "元数据、版本、血缘与知识发布",
+    "module_id": "RAG-M02",
+    "name": "版本与时效治理",
+    "description": "控制知识库、文档、片段和索引版本，防止过时内容参与回答。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "02_知识源治理",
+      "versioning",
+      "freshness",
+      "rollback"
+    ],
+    "competency_codes": [
+      "RAG-COMP-008"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-licensing_compliance",
+    "external_node_id": "licensing_compliance",
+    "mapped_knowledge_node_id": "RAG-M02-N01",
+    "mapped_knowledge_node_name": "知识源治理、可信等级与准入",
+    "module_id": "RAG-M02",
+    "name": "许可与合规",
+    "description": "识别知识来源的版权、使用许可和隐私要求。",
+    "difficulty_level": 2,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "02_知识源治理",
+      "licensing",
+      "privacy",
+      "compliance"
+    ],
+    "competency_codes": [
+      "RAG-COMP-009"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-access_control_tenant_isolation",
+    "external_node_id": "access_control_tenant_isolation",
+    "mapped_knowledge_node_id": "RAG-M04-N02",
+    "mapped_knowledge_node_name": "元数据过滤、租户隔离与权限检索",
+    "module_id": "RAG-M04",
+    "name": "权限过滤与多租户隔离",
+    "description": "确保用户只能检索和查看其组织、角色和项目授权的知识。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "02_知识源治理",
+      "security",
+      "multi_tenancy",
+      "authorization"
+    ],
+    "competency_codes": [
+      "RAG-COMP-010"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-document_parsing",
+    "external_node_id": "document_parsing",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "mapped_knowledge_node_name": "文档解析、清洗与结构保真",
+    "module_id": "RAG-M02",
+    "name": "文档解析",
+    "description": "从多种文档中提取文本、结构、页码和对象信息。",
+    "difficulty_level": 1,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "03_解析清洗",
+      "parsing",
+      "layout",
+      "ocr"
+    ],
+    "competency_codes": [
+      "RAG-COMP-011"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-layout_table_extraction",
+    "external_node_id": "layout_table_extraction",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "mapped_knowledge_node_name": "文档解析、清洗与结构保真",
+    "module_id": "RAG-M02",
+    "name": "版面与表格提取",
+    "description": "正确处理多栏版面、表格、图注和代码块，避免语义错位。",
+    "difficulty_level": 2,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "03_解析清洗",
+      "layout",
+      "tables",
+      "code_blocks"
+    ],
+    "competency_codes": [
+      "RAG-COMP-012"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-text_cleaning_normalization",
+    "external_node_id": "text_cleaning_normalization",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "mapped_knowledge_node_name": "文档解析、清洗与结构保真",
+    "module_id": "RAG-M02",
+    "name": "文本清洗与规范化",
+    "description": "去除噪声并统一格式，同时避免删除有业务意义的内容。",
+    "difficulty_level": 1,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "03_解析清洗",
+      "cleaning",
+      "normalization",
+      "quality"
+    ],
+    "competency_codes": [
+      "RAG-COMP-013"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-deduplication",
+    "external_node_id": "deduplication",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "mapped_knowledge_node_name": "文档解析、清洗与结构保真",
+    "module_id": "RAG-M02",
+    "name": "内容去重",
+    "description": "识别完全重复、近似重复和版本重复，减少检索冗余。",
+    "difficulty_level": 2,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "03_解析清洗",
+      "deduplication",
+      "canonicalization",
+      "versions"
+    ],
+    "competency_codes": [
+      "RAG-COMP-014"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-document_quality_checks",
+    "external_node_id": "document_quality_checks",
+    "mapped_knowledge_node_id": "RAG-M02-N04",
+    "mapped_knowledge_node_name": "元数据、版本、血缘与知识发布",
+    "module_id": "RAG-M02",
+    "name": "文档质量门禁",
+    "description": "在入库前检测解析完整性、乱码、缺页、来源和结构问题。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "03_解析清洗",
+      "quality_gate",
+      "parsing_validation",
+      "blocking_issues"
+    ],
+    "competency_codes": [
+      "RAG-COMP-015"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-chunking_objectives",
+    "external_node_id": "chunking_objectives",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "mapped_knowledge_node_name": "切片策略、语义边界与父子结构",
+    "module_id": "RAG-M02",
+    "name": "文档切分目标",
+    "description": "理解切分对召回、上下文完整性、引用粒度和成本的影响。",
+    "difficulty_level": 1,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "04_切分与上下文",
+      "chunking",
+      "granularity",
+      "context"
+    ],
+    "competency_codes": [
+      "RAG-COMP-016"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-fixed_window_chunking",
+    "external_node_id": "fixed_window_chunking",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "mapped_knowledge_node_name": "切片策略、语义边界与父子结构",
+    "module_id": "RAG-M02",
+    "name": "固定窗口切分",
+    "description": "掌握按字符或Token窗口切分及重叠策略。",
+    "difficulty_level": 1,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "04_切分与上下文",
+      "chunking",
+      "fixed_window",
+      "baseline"
+    ],
+    "competency_codes": [
+      "RAG-COMP-017"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-structure_aware_chunking",
+    "external_node_id": "structure_aware_chunking",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "mapped_knowledge_node_name": "切片策略、语义边界与父子结构",
+    "module_id": "RAG-M02",
+    "name": "结构感知切分",
+    "description": "按标题、段落、列表、表格和代码块边界构造片段。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "04_切分与上下文",
+      "chunking",
+      "headings",
+      "document_tree"
+    ],
+    "competency_codes": [
+      "RAG-COMP-018"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-semantic_chunking",
+    "external_node_id": "semantic_chunking",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "mapped_knowledge_node_name": "切片策略、语义边界与父子结构",
+    "module_id": "RAG-M02",
+    "name": "语义切分",
+    "description": "依据主题变化和句子语义相似度确定边界。",
+    "difficulty_level": 3,
+    "importance": "advanced",
+    "tags": [
+      "rag_engineering",
+      "04_切分与上下文",
+      "chunking",
+      "semantic",
+      "embedding"
+    ],
+    "competency_codes": [
+      "RAG-COMP-019"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-parent_child_multigranular",
+    "external_node_id": "parent_child_multigranular",
+    "mapped_knowledge_node_id": "RAG-M07-N01",
+    "mapped_knowledge_node_name": "父子检索、层级检索与长文档问答",
+    "module_id": "RAG-M07",
+    "name": "父子与多粒度检索",
+    "description": "同时保留小粒度检索精度和大粒度上下文完整性。",
+    "difficulty_level": 3,
+    "importance": "advanced",
+    "tags": [
+      "rag_engineering",
+      "04_切分与上下文",
+      "chunking",
+      "parent_child",
+      "multi_granularity"
+    ],
+    "competency_codes": [
+      "RAG-COMP-020"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-metadata_schema",
+    "external_node_id": "metadata_schema",
+    "mapped_knowledge_node_id": "RAG-M02-N04",
+    "mapped_knowledge_node_name": "元数据、版本、血缘与知识发布",
+    "module_id": "RAG-M02",
+    "name": "元数据Schema设计",
+    "description": "定义支持过滤、溯源、版本和评测的片段元数据。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "05_向量与索引",
+      "metadata",
+      "schema",
+      "filtering"
+    ],
+    "competency_codes": [
+      "RAG-COMP-021"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-embedding_fundamentals",
+    "external_node_id": "embedding_fundamentals",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "mapped_knowledge_node_name": "文本嵌入、向量表示与相似度",
+    "module_id": "RAG-M03",
+    "name": "文本嵌入基础",
+    "description": "理解双编码器、向量空间和语义相似度的基本机制。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "05_向量与索引",
+      "embedding",
+      "dual_encoder",
+      "semantic_search"
+    ],
+    "competency_codes": [
+      "RAG-COMP-022"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-embedding_model_selection",
+    "external_node_id": "embedding_model_selection",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "mapped_knowledge_node_name": "文本嵌入、向量表示与相似度",
+    "module_id": "RAG-M03",
+    "name": "嵌入模型选择",
+    "description": "根据语言、领域、任务、成本和部署约束选择嵌入模型。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "05_向量与索引",
+      "embedding",
+      "model_selection",
+      "benchmark"
+    ],
+    "competency_codes": [
+      "RAG-COMP-023"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-similarity_metrics",
+    "external_node_id": "similarity_metrics",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "mapped_knowledge_node_name": "文本嵌入、向量表示与相似度",
+    "module_id": "RAG-M03",
+    "name": "向量相似度与归一化",
+    "description": "理解余弦相似度、内积和欧氏距离及其配置关系。",
+    "difficulty_level": 2,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "05_向量与索引",
+      "similarity",
+      "cosine",
+      "inner_product"
+    ],
+    "competency_codes": [
+      "RAG-COMP-024"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-vector_index_hnsw_ivf",
+    "external_node_id": "vector_index_hnsw_ivf",
+    "mapped_knowledge_node_id": "RAG-M03-N02",
+    "mapped_knowledge_node_name": "向量存储、精确搜索、HNSW与IVFFlat",
+    "module_id": "RAG-M03",
+    "name": "向量索引与近似最近邻",
+    "description": "理解精确搜索、HNSW、IVF等索引的召回、延迟和内存权衡。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "05_向量与索引",
+      "vector_index",
+      "ann",
+      "hnsw",
+      "ivf"
+    ],
+    "competency_codes": [
+      "RAG-COMP-025"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-bm25_sparse_retrieval",
+    "external_node_id": "bm25_sparse_retrieval",
+    "mapped_knowledge_node_id": "RAG-M03-N03",
+    "mapped_knowledge_node_name": "BM25、关键词检索与精确术语召回",
+    "module_id": "RAG-M03",
+    "name": "BM25与稀疏检索",
+    "description": "掌握关键词匹配在精确术语、编号和专名查询中的作用。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "06_检索策略",
+      "bm25",
+      "sparse_retrieval",
+      "lexical"
+    ],
+    "competency_codes": [
+      "RAG-COMP-026"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-dense_retrieval",
+    "external_node_id": "dense_retrieval",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "mapped_knowledge_node_name": "文本嵌入、向量表示与相似度",
+    "module_id": "RAG-M03",
+    "name": "稠密语义检索",
+    "description": "使用嵌入召回语义相关但词面不同的片段。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "06_检索策略",
+      "dense_retrieval",
+      "semantic_search",
+      "embeddings"
+    ],
+    "competency_codes": [
+      "RAG-COMP-027"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-hybrid_retrieval",
+    "external_node_id": "hybrid_retrieval",
+    "mapped_knowledge_node_id": "RAG-M03-N04",
+    "mapped_knowledge_node_name": "混合检索、分数融合与RRF",
+    "module_id": "RAG-M03",
+    "name": "混合检索",
+    "description": "融合稀疏与稠密检索，提高不同查询类型下的鲁棒性。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "06_检索策略",
+      "hybrid_search",
+      "fusion",
+      "rrf"
+    ],
+    "competency_codes": [
+      "RAG-COMP-028"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-metadata_filtering",
+    "external_node_id": "metadata_filtering",
+    "mapped_knowledge_node_id": "RAG-M04-N02",
+    "mapped_knowledge_node_name": "元数据过滤、租户隔离与权限检索",
+    "module_id": "RAG-M04",
+    "name": "元数据过滤",
+    "description": "在语义排序前后利用权限、版本、时间、语言和业务标签缩小候选。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "06_检索策略",
+      "filtering",
+      "authorization",
+      "metadata"
+    ],
+    "competency_codes": [
+      "RAG-COMP-029"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-multi_query_expansion",
+    "external_node_id": "multi_query_expansion",
+    "mapped_knowledge_node_id": "RAG-M04-N01",
+    "mapped_knowledge_node_name": "查询理解、意图识别与查询改写",
+    "module_id": "RAG-M04",
+    "name": "多查询与查询扩展",
+    "description": "通过同义改写、子问题和多角度查询提高召回。",
+    "difficulty_level": 3,
+    "importance": "advanced",
+    "tags": [
+      "rag_engineering",
+      "06_检索策略",
+      "query_expansion",
+      "multi_query",
+      "recall"
+    ],
+    "competency_codes": [
+      "RAG-COMP-030"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-query_rewriting",
+    "external_node_id": "query_rewriting",
+    "mapped_knowledge_node_id": "RAG-M04-N01",
+    "mapped_knowledge_node_name": "查询理解、意图识别与查询改写",
+    "module_id": "RAG-M04",
+    "name": "查询改写",
+    "description": "将口语化、上下文依赖或不完整的问题转换成可检索查询。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "07_查询与重排",
+      "query_rewrite",
+      "conversation",
+      "intent"
+    ],
+    "competency_codes": [
+      "RAG-COMP-031"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-hyde_retrieval",
+    "external_node_id": "hyde_retrieval",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "mapped_knowledge_node_name": "Agentic RAG、问题分解与检索自修复",
+    "module_id": "RAG-M07",
+    "name": "HyDE假设文档检索",
+    "description": "利用生成的假设性文档表示查询语义，以改善零样本稠密检索。",
+    "difficulty_level": 4,
+    "importance": "advanced",
+    "tags": [
+      "rag_engineering",
+      "07_查询与重排",
+      "hyde",
+      "query_expansion",
+      "zero_shot"
+    ],
+    "competency_codes": [
+      "RAG-COMP-032"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-cross_encoder_reranking",
+    "external_node_id": "cross_encoder_reranking",
+    "mapped_knowledge_node_id": "RAG-M04-N03",
+    "mapped_knowledge_node_name": "候选重排、交叉编码器与多阶段检索",
+    "module_id": "RAG-M04",
+    "name": "交叉编码器重排序",
+    "description": "使用查询与候选片段联合编码，提高候选排序精度。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "07_查询与重排",
+      "reranking",
+      "cross_encoder",
+      "precision"
+    ],
+    "competency_codes": [
+      "RAG-COMP-033"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-colbert_late_interaction",
+    "external_node_id": "colbert_late_interaction",
+    "mapped_knowledge_node_id": "RAG-M04-N03",
+    "mapped_knowledge_node_name": "候选重排、交叉编码器与多阶段检索",
+    "module_id": "RAG-M04",
+    "name": "ColBERT晚交互检索",
+    "description": "理解Token级晚交互在效率与细粒度匹配之间的折中。",
+    "difficulty_level": 4,
+    "importance": "advanced",
+    "tags": [
+      "rag_engineering",
+      "07_查询与重排",
+      "colbert",
+      "late_interaction",
+      "retrieval"
+    ],
+    "competency_codes": [
+      "RAG-COMP-034"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-diversity_mmr",
+    "external_node_id": "diversity_mmr",
+    "mapped_knowledge_node_id": "RAG-M04-N03",
+    "mapped_knowledge_node_name": "候选重排、交叉编码器与多阶段检索",
+    "module_id": "RAG-M04",
+    "name": "MMR多样性选择",
+    "description": "在相关性和候选多样性之间平衡，减少上下文重复。",
+    "difficulty_level": 3,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "07_查询与重排",
+      "mmr",
+      "diversity",
+      "context_selection"
+    ],
+    "competency_codes": [
+      "RAG-COMP-035"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-rank_fusion_rrf",
+    "external_node_id": "rank_fusion_rrf",
+    "mapped_knowledge_node_id": "RAG-M03-N04",
+    "mapped_knowledge_node_name": "混合检索、分数融合与RRF",
+    "module_id": "RAG-M03",
+    "name": "RRF名次融合",
+    "description": "用排名而非原始分数融合多个检索列表。",
+    "difficulty_level": 3,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "07_查询与重排",
+      "rrf",
+      "rank_fusion",
+      "hybrid_search"
+    ],
+    "competency_codes": [
+      "RAG-COMP-036"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-context_selection_budget",
+    "external_node_id": "context_selection_budget",
+    "mapped_knowledge_node_id": "RAG-M04-N04",
+    "mapped_knowledge_node_name": "上下文选择、压缩、排序与引用封装",
+    "module_id": "RAG-M04",
+    "name": "上下文选择与Token预算",
+    "description": "在有限上下文中选择最有用、互补且可追溯的证据。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "08_上下文与生成",
+      "context",
+      "token_budget",
+      "evidence_selection"
+    ],
+    "competency_codes": [
+      "RAG-COMP-037"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-lost_in_the_middle",
+    "external_node_id": "lost_in_the_middle",
+    "mapped_knowledge_node_id": "RAG-M04-N04",
+    "mapped_knowledge_node_name": "上下文选择、压缩、排序与引用封装",
+    "module_id": "RAG-M04",
+    "name": "长上下文位置效应",
+    "description": "理解模型对长上下文中间信息利用不稳定的问题。",
+    "difficulty_level": 3,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "08_上下文与生成",
+      "long_context",
+      "position_bias",
+      "context_order"
+    ],
+    "competency_codes": [
+      "RAG-COMP-038"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-prompt_grounding",
+    "external_node_id": "prompt_grounding",
+    "mapped_knowledge_node_id": "RAG-M05-N01",
+    "mapped_knowledge_node_name": "证据约束生成、引用与答案结构",
+    "module_id": "RAG-M05",
+    "name": "证据约束提示词",
+    "description": "通过明确指令让模型仅基于提供证据回答并声明限制。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "08_上下文与生成",
+      "prompt",
+      "grounding",
+      "structured_output"
+    ],
+    "competency_codes": [
+      "RAG-COMP-039"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-answer_abstention",
+    "external_node_id": "answer_abstention",
+    "mapped_knowledge_node_id": "RAG-M05-N02",
+    "mapped_knowledge_node_name": "证据不足、拒答、追问与人工转交",
+    "module_id": "RAG-M05",
+    "name": "拒答与不确定性",
+    "description": "在证据不足、冲突或越权时停止生成确定性答案。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "08_上下文与生成",
+      "abstention",
+      "uncertainty",
+      "risk"
+    ],
+    "competency_codes": [
+      "RAG-COMP-040"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-citation_generation_verification",
+    "external_node_id": "citation_generation_verification",
+    "mapped_knowledge_node_id": "RAG-M05-N01",
+    "mapped_knowledge_node_name": "证据约束生成、引用与答案结构",
+    "module_id": "RAG-M05",
+    "name": "引用生成与验证",
+    "description": "生成可点击、可核验且真正支持结论的证据引用。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "08_上下文与生成",
+      "citation",
+      "verification",
+      "traceability"
+    ],
+    "competency_codes": [
+      "RAG-COMP-041"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-hallucination_types",
+    "external_node_id": "hallucination_types",
+    "mapped_knowledge_node_id": "RAG-M05-N03",
+    "mapped_knowledge_node_name": "幻觉分类、事实审核与交叉验证",
+    "module_id": "RAG-M05",
+    "name": "幻觉类型与根因",
+    "description": "区分无依据生成、证据矛盾、错误归因和过度推断等问题。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "09_可信与安全",
+      "hallucination",
+      "taxonomy",
+      "root_cause"
+    ],
+    "competency_codes": [
+      "RAG-COMP-042"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-evidence_entailment",
+    "external_node_id": "evidence_entailment",
+    "mapped_knowledge_node_id": "RAG-M05-N03",
+    "mapped_knowledge_node_name": "幻觉分类、事实审核与交叉验证",
+    "module_id": "RAG-M05",
+    "name": "证据支持关系检查",
+    "description": "判断证据是否直接支持、反驳或无法判断某个结论。",
+    "difficulty_level": 4,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "09_可信与安全",
+      "entailment",
+      "evidence_check",
+      "faithfulness"
+    ],
+    "competency_codes": [
+      "RAG-COMP-043"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-review_correction_loop",
+    "external_node_id": "review_correction_loop",
+    "mapped_knowledge_node_id": "RAG-M05-N03",
+    "mapped_knowledge_node_name": "幻觉分类、事实审核与交叉验证",
+    "module_id": "RAG-M05",
+    "name": "审核与纠偏闭环",
+    "description": "对生成资源、题目和决策进行通过、退回、修复与升级处理。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "09_可信与安全",
+      "review",
+      "repair",
+      "quality_gate"
+    ],
+    "competency_codes": [
+      "RAG-COMP-044"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-prompt_injection_defense",
+    "external_node_id": "prompt_injection_defense",
+    "mapped_knowledge_node_id": "RAG-M05-N04",
+    "mapped_knowledge_node_name": "提示注入、不可信文档与知识库安全",
+    "module_id": "RAG-M05",
+    "name": "提示词注入防护",
+    "description": "防止知识文档或用户输入劫持模型规则、泄露数据或调用危险工具。",
+    "difficulty_level": 4,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "09_可信与安全",
+      "security",
+      "prompt_injection",
+      "tool_safety"
+    ],
+    "competency_codes": [
+      "RAG-COMP-045"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-sensitive_data_privacy",
+    "external_node_id": "sensitive_data_privacy",
+    "mapped_knowledge_node_id": "RAG-M05-N04",
+    "mapped_knowledge_node_name": "提示注入、不可信文档与知识库安全",
+    "module_id": "RAG-M05",
+    "name": "敏感数据与隐私保护",
+    "description": "保护企业资料、学习者画像和交互日志中的敏感信息。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "09_可信与安全",
+      "privacy",
+      "data_protection",
+      "logging"
+    ],
+    "competency_codes": [
+      "RAG-COMP-046"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-retrieval_metrics",
+    "external_node_id": "retrieval_metrics",
+    "mapped_knowledge_node_id": "RAG-M06-N01",
+    "mapped_knowledge_node_name": "检索评测：Hit Rate、Recall、MRR与nDCG",
+    "module_id": "RAG-M06",
+    "name": "检索评测指标",
+    "description": "使用Recall@K、Precision@K、MRR、nDCG等指标测量候选质量。",
+    "difficulty_level": 2,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "10_评测与监控",
+      "evaluation",
+      "recall",
+      "mrr",
+      "ndcg"
+    ],
+    "competency_codes": [
+      "RAG-COMP-047"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-generation_metrics",
+    "external_node_id": "generation_metrics",
+    "mapped_knowledge_node_id": "RAG-M06-N02",
+    "mapped_knowledge_node_name": "生成评测：忠实度、引用、完整性与适配",
+    "module_id": "RAG-M06",
+    "name": "生成质量指标",
+    "description": "评估答案忠实度、正确性、完整性、引用和表达质量。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "10_评测与监控",
+      "evaluation",
+      "faithfulness",
+      "correctness",
+      "citations"
+    ],
+    "competency_codes": [
+      "RAG-COMP-048"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-end_to_end_evaluation",
+    "external_node_id": "end_to_end_evaluation",
+    "mapped_knowledge_node_id": "RAG-M06-N03",
+    "mapped_knowledge_node_name": "端到端回归、消融实验与发布门禁",
+    "module_id": "RAG-M06",
+    "name": "端到端RAG评测",
+    "description": "同时评价检索、生成、拒答、延迟、成本和用户任务完成度。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "10_评测与监控",
+      "end_to_end",
+      "benchmark",
+      "reproducibility"
+    ],
+    "competency_codes": [
+      "RAG-COMP-049"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-golden_dataset_design",
+    "external_node_id": "golden_dataset_design",
+    "mapped_knowledge_node_id": "RAG-M06-N03",
+    "mapped_knowledge_node_name": "端到端回归、消融实验与发布门禁",
+    "module_id": "RAG-M06",
+    "name": "黄金评测集设计",
+    "description": "构建覆盖知识、查询类型、难度、画像和失败边界的标注数据。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "10_评测与监控",
+      "dataset",
+      "golden_set",
+      "annotation"
+    ],
+    "competency_codes": [
+      "RAG-COMP-050"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-online_monitoring_feedback",
+    "external_node_id": "online_monitoring_feedback",
+    "mapped_knowledge_node_id": "RAG-M06-N04",
+    "mapped_knowledge_node_name": "可观测性、成本、时延与故障定位",
+    "module_id": "RAG-M06",
+    "name": "在线监控与反馈",
+    "description": "将线上检索、生成和用户反馈转化为可定位的质量信号。",
+    "difficulty_level": 4,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "10_评测与监控",
+      "monitoring",
+      "feedback",
+      "tracing"
+    ],
+    "competency_codes": [
+      "RAG-COMP-051"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-agentic_rag",
+    "external_node_id": "agentic_rag",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "mapped_knowledge_node_name": "Agentic RAG、问题分解与检索自修复",
+    "module_id": "RAG-M07",
+    "name": "Agentic RAG",
+    "description": "让智能体根据任务动态规划检索、工具调用和停止条件。",
+    "difficulty_level": 4,
+    "importance": "advanced",
+    "tags": [
+      "rag_engineering",
+      "11_高级RAG",
+      "agentic_rag",
+      "planning",
+      "tools"
+    ],
+    "competency_codes": [
+      "RAG-COMP-052"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-self_rag",
+    "external_node_id": "self_rag",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "mapped_knowledge_node_name": "Agentic RAG、问题分解与检索自修复",
+    "module_id": "RAG-M07",
+    "name": "Self-RAG自反思检索生成",
+    "description": "理解模型在生成过程中学习何时检索并评价自身输出的思路。",
+    "difficulty_level": 5,
+    "importance": "advanced",
+    "tags": [
+      "rag_engineering",
+      "11_高级RAG",
+      "self_rag",
+      "reflection",
+      "adaptive_retrieval"
+    ],
+    "competency_codes": [
+      "RAG-COMP-053"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-corrective_rag",
+    "external_node_id": "corrective_rag",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "mapped_knowledge_node_name": "Agentic RAG、问题分解与检索自修复",
+    "module_id": "RAG-M07",
+    "name": "Corrective RAG",
+    "description": "在检索质量不足时触发纠错、补充检索或降级。",
+    "difficulty_level": 4,
+    "importance": "advanced",
+    "tags": [
+      "rag_engineering",
+      "11_高级RAG",
+      "crag",
+      "corrective_retrieval",
+      "fallback"
+    ],
+    "competency_codes": [
+      "RAG-COMP-054"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-graph_rag",
+    "external_node_id": "graph_rag",
+    "mapped_knowledge_node_id": "RAG-M07-N02",
+    "mapped_knowledge_node_name": "GraphRAG、实体关系与局部/全局查询",
+    "module_id": "RAG-M07",
+    "name": "Graph RAG",
+    "description": "利用实体关系、社区摘要或图遍历支持跨文档关联问题。",
+    "difficulty_level": 5,
+    "importance": "advanced",
+    "tags": [
+      "rag_engineering",
+      "11_高级RAG",
+      "graph_rag",
+      "knowledge_graph",
+      "multi_hop"
+    ],
+    "competency_codes": [
+      "RAG-COMP-055"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-tool_routing_multi_source",
+    "external_node_id": "tool_routing_multi_source",
+    "mapped_knowledge_node_id": "RAG-M07-N04",
+    "mapped_knowledge_node_name": "结构化、代码与多模态知识路由",
+    "module_id": "RAG-M07",
+    "name": "多源路由与工具选择",
+    "description": "在向量库、关键词索引、数据库、API和知识图谱之间选择合适数据源。",
+    "difficulty_level": 4,
+    "importance": "advanced",
+    "tags": [
+      "rag_engineering",
+      "11_高级RAG",
+      "tool_routing",
+      "multi_source",
+      "sql",
+      "api"
+    ],
+    "competency_codes": [
+      "RAG-COMP-056"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-observability_tracing",
+    "external_node_id": "observability_tracing",
+    "mapped_knowledge_node_id": "RAG-M06-N04",
+    "mapped_knowledge_node_name": "可观测性、成本、时延与故障定位",
+    "module_id": "RAG-M06",
+    "name": "可观测性与链路追踪",
+    "description": "追踪一次RAG请求经过的检索、重排、生成、审核和仲裁步骤。",
+    "difficulty_level": 3,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "12_生产工程",
+      "observability",
+      "tracing",
+      "metrics"
+    ],
+    "competency_codes": [
+      "RAG-COMP-057"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-latency_cost_optimization",
+    "external_node_id": "latency_cost_optimization",
+    "mapped_knowledge_node_id": "RAG-M08-N03",
+    "mapped_knowledge_node_name": "性能、批处理、缓存与容量规划",
+    "module_id": "RAG-M08",
+    "name": "延迟与成本优化",
+    "description": "在质量约束下优化检索、重排、上下文和模型调用成本。",
+    "difficulty_level": 4,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "12_生产工程",
+      "latency",
+      "cost",
+      "optimization"
+    ],
+    "competency_codes": [
+      "RAG-COMP-058"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-caching_idempotency",
+    "external_node_id": "caching_idempotency",
+    "mapped_knowledge_node_id": "RAG-M08-N02",
+    "mapped_knowledge_node_name": "持久化、事务、缓存与一致性",
+    "module_id": "RAG-M08",
+    "name": "缓存与幂等",
+    "description": "安全复用稳定结果并防止重试造成重复任务。",
+    "difficulty_level": 3,
+    "importance": "important",
+    "tags": [
+      "rag_engineering",
+      "12_生产工程",
+      "cache",
+      "idempotency",
+      "versioning"
+    ],
+    "competency_codes": [
+      "RAG-COMP-059"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-deployment_fallback",
+    "external_node_id": "deployment_fallback",
+    "mapped_knowledge_node_id": "RAG-M08-N04",
+    "mapped_knowledge_node_name": "本地开发、容器部署、安全与运维",
+    "module_id": "RAG-M08",
+    "name": "部署与降级",
+    "description": "保证模型、向量库或外部服务异常时系统可预测地降级。",
+    "difficulty_level": 4,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "12_生产工程",
+      "deployment",
+      "fallback",
+      "resilience"
+    ],
+    "competency_codes": [
+      "RAG-COMP-060"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-continuous_updates_regression",
+    "external_node_id": "continuous_updates_regression",
+    "mapped_knowledge_node_id": "RAG-M06-N03",
+    "mapped_knowledge_node_name": "端到端回归、消融实验与发布门禁",
+    "module_id": "RAG-M06",
+    "name": "持续更新与回归",
+    "description": "在知识、模型和提示词变化后保持质量可控。",
+    "difficulty_level": 4,
+    "importance": "core",
+    "tags": [
+      "rag_engineering",
+      "12_生产工程",
+      "continuous_delivery",
+      "regression",
+      "quality_gate"
+    ],
+    "competency_codes": [
+      "RAG-COMP-061"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review",
+    "promotion_target": "subtopic_or_supplemental_evidence",
+    "origin_package": "RAG工程实训知识库_v1.0"
+  }
+]

@@ -1,0 +1,490 @@
+[
+  {
+    "external_node_id": "rag_definition",
+    "external_node_name": "RAG基本定义",
+    "mapped_knowledge_node_id": "RAG-M01-N01",
+    "mapped_knowledge_node_name": "RAG的定义、目标与边界",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "rag_end_to_end_architecture",
+    "external_node_name": "RAG端到端架构",
+    "mapped_knowledge_node_id": "RAG-M01-N02",
+    "mapped_knowledge_node_name": "RAG端到端流水线与责任分层",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "parametric_nonparametric_memory",
+    "external_node_name": "参数记忆与外部记忆",
+    "mapped_knowledge_node_id": "RAG-M01-N01",
+    "mapped_knowledge_node_name": "RAG的定义、目标与边界",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "rag_applicability",
+    "external_node_name": "RAG适用性判断",
+    "mapped_knowledge_node_id": "RAG-M01-N04",
+    "mapped_knowledge_node_name": "需求分析、成功指标与RAG架构决策",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "rag_failure_taxonomy",
+    "external_node_name": "RAG失败类型",
+    "mapped_knowledge_node_id": "RAG-M01-N02",
+    "mapped_knowledge_node_name": "RAG端到端流水线与责任分层",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "knowledge_source_selection",
+    "external_node_name": "知识源选择",
+    "mapped_knowledge_node_id": "RAG-M02-N01",
+    "mapped_knowledge_node_name": "知识源治理、可信等级与准入",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "source_authority_provenance",
+    "external_node_name": "来源权威性与溯源",
+    "mapped_knowledge_node_id": "RAG-M02-N01",
+    "mapped_knowledge_node_name": "知识源治理、可信等级与准入",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "versioning_freshness",
+    "external_node_name": "版本与时效治理",
+    "mapped_knowledge_node_id": "RAG-M02-N04",
+    "mapped_knowledge_node_name": "元数据、版本、血缘与知识发布",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "licensing_compliance",
+    "external_node_name": "许可与合规",
+    "mapped_knowledge_node_id": "RAG-M02-N01",
+    "mapped_knowledge_node_name": "知识源治理、可信等级与准入",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "access_control_tenant_isolation",
+    "external_node_name": "权限过滤与多租户隔离",
+    "mapped_knowledge_node_id": "RAG-M04-N02",
+    "mapped_knowledge_node_name": "元数据过滤、租户隔离与权限检索",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "document_parsing",
+    "external_node_name": "文档解析",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "mapped_knowledge_node_name": "文档解析、清洗与结构保真",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "layout_table_extraction",
+    "external_node_name": "版面与表格提取",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "mapped_knowledge_node_name": "文档解析、清洗与结构保真",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "text_cleaning_normalization",
+    "external_node_name": "文本清洗与规范化",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "mapped_knowledge_node_name": "文档解析、清洗与结构保真",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "deduplication",
+    "external_node_name": "内容去重",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "mapped_knowledge_node_name": "文档解析、清洗与结构保真",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "document_quality_checks",
+    "external_node_name": "文档质量门禁",
+    "mapped_knowledge_node_id": "RAG-M02-N04",
+    "mapped_knowledge_node_name": "元数据、版本、血缘与知识发布",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "chunking_objectives",
+    "external_node_name": "文档切分目标",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "mapped_knowledge_node_name": "切片策略、语义边界与父子结构",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "fixed_window_chunking",
+    "external_node_name": "固定窗口切分",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "mapped_knowledge_node_name": "切片策略、语义边界与父子结构",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "structure_aware_chunking",
+    "external_node_name": "结构感知切分",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "mapped_knowledge_node_name": "切片策略、语义边界与父子结构",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "semantic_chunking",
+    "external_node_name": "语义切分",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "mapped_knowledge_node_name": "切片策略、语义边界与父子结构",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "parent_child_multigranular",
+    "external_node_name": "父子与多粒度检索",
+    "mapped_knowledge_node_id": "RAG-M07-N01",
+    "mapped_knowledge_node_name": "父子检索、层级检索与长文档问答",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "metadata_schema",
+    "external_node_name": "元数据Schema设计",
+    "mapped_knowledge_node_id": "RAG-M02-N04",
+    "mapped_knowledge_node_name": "元数据、版本、血缘与知识发布",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "embedding_fundamentals",
+    "external_node_name": "文本嵌入基础",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "mapped_knowledge_node_name": "文本嵌入、向量表示与相似度",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "embedding_model_selection",
+    "external_node_name": "嵌入模型选择",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "mapped_knowledge_node_name": "文本嵌入、向量表示与相似度",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "similarity_metrics",
+    "external_node_name": "向量相似度与归一化",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "mapped_knowledge_node_name": "文本嵌入、向量表示与相似度",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "vector_index_hnsw_ivf",
+    "external_node_name": "向量索引与近似最近邻",
+    "mapped_knowledge_node_id": "RAG-M03-N02",
+    "mapped_knowledge_node_name": "向量存储、精确搜索、HNSW与IVFFlat",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "bm25_sparse_retrieval",
+    "external_node_name": "BM25与稀疏检索",
+    "mapped_knowledge_node_id": "RAG-M03-N03",
+    "mapped_knowledge_node_name": "BM25、关键词检索与精确术语召回",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "dense_retrieval",
+    "external_node_name": "稠密语义检索",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "mapped_knowledge_node_name": "文本嵌入、向量表示与相似度",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "hybrid_retrieval",
+    "external_node_name": "混合检索",
+    "mapped_knowledge_node_id": "RAG-M03-N04",
+    "mapped_knowledge_node_name": "混合检索、分数融合与RRF",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "metadata_filtering",
+    "external_node_name": "元数据过滤",
+    "mapped_knowledge_node_id": "RAG-M04-N02",
+    "mapped_knowledge_node_name": "元数据过滤、租户隔离与权限检索",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "multi_query_expansion",
+    "external_node_name": "多查询与查询扩展",
+    "mapped_knowledge_node_id": "RAG-M04-N01",
+    "mapped_knowledge_node_name": "查询理解、意图识别与查询改写",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "query_rewriting",
+    "external_node_name": "查询改写",
+    "mapped_knowledge_node_id": "RAG-M04-N01",
+    "mapped_knowledge_node_name": "查询理解、意图识别与查询改写",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "hyde_retrieval",
+    "external_node_name": "HyDE假设文档检索",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "mapped_knowledge_node_name": "Agentic RAG、问题分解与检索自修复",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "cross_encoder_reranking",
+    "external_node_name": "交叉编码器重排序",
+    "mapped_knowledge_node_id": "RAG-M04-N03",
+    "mapped_knowledge_node_name": "候选重排、交叉编码器与多阶段检索",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "colbert_late_interaction",
+    "external_node_name": "ColBERT晚交互检索",
+    "mapped_knowledge_node_id": "RAG-M04-N03",
+    "mapped_knowledge_node_name": "候选重排、交叉编码器与多阶段检索",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "diversity_mmr",
+    "external_node_name": "MMR多样性选择",
+    "mapped_knowledge_node_id": "RAG-M04-N03",
+    "mapped_knowledge_node_name": "候选重排、交叉编码器与多阶段检索",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "rank_fusion_rrf",
+    "external_node_name": "RRF名次融合",
+    "mapped_knowledge_node_id": "RAG-M03-N04",
+    "mapped_knowledge_node_name": "混合检索、分数融合与RRF",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "context_selection_budget",
+    "external_node_name": "上下文选择与Token预算",
+    "mapped_knowledge_node_id": "RAG-M04-N04",
+    "mapped_knowledge_node_name": "上下文选择、压缩、排序与引用封装",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "lost_in_the_middle",
+    "external_node_name": "长上下文位置效应",
+    "mapped_knowledge_node_id": "RAG-M04-N04",
+    "mapped_knowledge_node_name": "上下文选择、压缩、排序与引用封装",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "prompt_grounding",
+    "external_node_name": "证据约束提示词",
+    "mapped_knowledge_node_id": "RAG-M05-N01",
+    "mapped_knowledge_node_name": "证据约束生成、引用与答案结构",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "answer_abstention",
+    "external_node_name": "拒答与不确定性",
+    "mapped_knowledge_node_id": "RAG-M05-N02",
+    "mapped_knowledge_node_name": "证据不足、拒答、追问与人工转交",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "citation_generation_verification",
+    "external_node_name": "引用生成与验证",
+    "mapped_knowledge_node_id": "RAG-M05-N01",
+    "mapped_knowledge_node_name": "证据约束生成、引用与答案结构",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "hallucination_types",
+    "external_node_name": "幻觉类型与根因",
+    "mapped_knowledge_node_id": "RAG-M05-N03",
+    "mapped_knowledge_node_name": "幻觉分类、事实审核与交叉验证",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "evidence_entailment",
+    "external_node_name": "证据支持关系检查",
+    "mapped_knowledge_node_id": "RAG-M05-N03",
+    "mapped_knowledge_node_name": "幻觉分类、事实审核与交叉验证",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "review_correction_loop",
+    "external_node_name": "审核与纠偏闭环",
+    "mapped_knowledge_node_id": "RAG-M05-N03",
+    "mapped_knowledge_node_name": "幻觉分类、事实审核与交叉验证",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "prompt_injection_defense",
+    "external_node_name": "提示词注入防护",
+    "mapped_knowledge_node_id": "RAG-M05-N04",
+    "mapped_knowledge_node_name": "提示注入、不可信文档与知识库安全",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "sensitive_data_privacy",
+    "external_node_name": "敏感数据与隐私保护",
+    "mapped_knowledge_node_id": "RAG-M05-N04",
+    "mapped_knowledge_node_name": "提示注入、不可信文档与知识库安全",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "retrieval_metrics",
+    "external_node_name": "检索评测指标",
+    "mapped_knowledge_node_id": "RAG-M06-N01",
+    "mapped_knowledge_node_name": "检索评测：Hit Rate、Recall、MRR与nDCG",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "generation_metrics",
+    "external_node_name": "生成质量指标",
+    "mapped_knowledge_node_id": "RAG-M06-N02",
+    "mapped_knowledge_node_name": "生成评测：忠实度、引用、完整性与适配",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "end_to_end_evaluation",
+    "external_node_name": "端到端RAG评测",
+    "mapped_knowledge_node_id": "RAG-M06-N03",
+    "mapped_knowledge_node_name": "端到端回归、消融实验与发布门禁",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "golden_dataset_design",
+    "external_node_name": "黄金评测集设计",
+    "mapped_knowledge_node_id": "RAG-M06-N03",
+    "mapped_knowledge_node_name": "端到端回归、消融实验与发布门禁",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "online_monitoring_feedback",
+    "external_node_name": "在线监控与反馈",
+    "mapped_knowledge_node_id": "RAG-M06-N04",
+    "mapped_knowledge_node_name": "可观测性、成本、时延与故障定位",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "agentic_rag",
+    "external_node_name": "Agentic RAG",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "mapped_knowledge_node_name": "Agentic RAG、问题分解与检索自修复",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "self_rag",
+    "external_node_name": "Self-RAG自反思检索生成",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "mapped_knowledge_node_name": "Agentic RAG、问题分解与检索自修复",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "corrective_rag",
+    "external_node_name": "Corrective RAG",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "mapped_knowledge_node_name": "Agentic RAG、问题分解与检索自修复",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "graph_rag",
+    "external_node_name": "Graph RAG",
+    "mapped_knowledge_node_id": "RAG-M07-N02",
+    "mapped_knowledge_node_name": "GraphRAG、实体关系与局部/全局查询",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "tool_routing_multi_source",
+    "external_node_name": "多源路由与工具选择",
+    "mapped_knowledge_node_id": "RAG-M07-N04",
+    "mapped_knowledge_node_name": "结构化、代码与多模态知识路由",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "observability_tracing",
+    "external_node_name": "可观测性与链路追踪",
+    "mapped_knowledge_node_id": "RAG-M06-N04",
+    "mapped_knowledge_node_name": "可观测性、成本、时延与故障定位",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "latency_cost_optimization",
+    "external_node_name": "延迟与成本优化",
+    "mapped_knowledge_node_id": "RAG-M08-N03",
+    "mapped_knowledge_node_name": "性能、批处理、缓存与容量规划",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "caching_idempotency",
+    "external_node_name": "缓存与幂等",
+    "mapped_knowledge_node_id": "RAG-M08-N02",
+    "mapped_knowledge_node_name": "持久化、事务、缓存与一致性",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "deployment_fallback",
+    "external_node_name": "部署与降级",
+    "mapped_knowledge_node_id": "RAG-M08-N04",
+    "mapped_knowledge_node_name": "本地开发、容器部署、安全与运维",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "external_node_id": "continuous_updates_regression",
+    "external_node_name": "持续更新与回归",
+    "mapped_knowledge_node_id": "RAG-M06-N03",
+    "mapped_knowledge_node_name": "端到端回归、消融实验与发布门禁",
+    "mapping_type": "candidate_subtopic_of",
+    "review_status": "pending_expert_review"
+  }
+]

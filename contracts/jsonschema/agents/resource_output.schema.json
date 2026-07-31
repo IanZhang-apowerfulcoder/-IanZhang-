@@ -1,41 +1,63 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "资源生成智能体输出",
+  "title": "ResourceOutput",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "proposal_id",
-    "resource_draft_id",
-    "title",
-    "resource_type",
-    "difficulty_level",
-    "target_knowledge_node_ids",
-    "summary",
-    "resource_sections",
-    "code_examples",
-    "evidence_ids",
-    "confidence"
-  ],
   "properties": {
-    "proposal_id": {
+    "schema_version": {
+      "type": "string",
+      "const": "7.0"
+    },
+    "run_id": {
       "type": "string",
       "format": "uuid"
+    },
+    "agent_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "succeeded",
+        "failed",
+        "needs_input",
+        "degraded"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "reasoning_summary": {
+      "type": "string"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
     },
     "resource_draft_id": {
       "type": "string",
       "format": "uuid"
     },
-    "title": {
+    "resource_title": {
       "type": "string"
     },
     "resource_type": {
       "type": "string",
       "enum": [
-        "text",
-        "example",
-        "code",
-        "diagram",
-        "mixed"
+        "learning_package",
+        "grounded_answer"
       ]
     },
     "difficulty_level": {
@@ -43,108 +65,99 @@
       "minimum": 1,
       "maximum": 5
     },
-    "target_knowledge_node_ids": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "string"
-      }
-    },
-    "summary": {
+    "personalization_reason": {
       "type": "string"
     },
-    "resource_sections": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/$defs/resource_section"
-      }
-    },
-    "code_examples": {
+    "sections": {
       "type": "array",
       "items": {
-        "$ref": "#/$defs/code_example"
-      }
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "ResourceSection",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "section_type": {
+            "type": "string",
+            "enum": [
+              "explanation",
+              "practice",
+              "quiz",
+              "summary",
+              "references"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "section_type",
+          "title",
+          "content",
+          "evidence_ids"
+        ]
+      },
+      "minItems": 1
     },
-    "evidence_ids": {
+    "coverage_knowledge_node_ids": {
       "type": "array",
-      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "all_evidence_ids": {
+      "type": "array",
       "items": {
         "type": "string",
         "format": "uuid"
-      }
+      },
+      "minItems": 1
     },
-    "confidence": {
-      "type": "number",
-      "minimum": 0,
-      "maximum": 1
+    "parallel_branch_run_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "minItems": 0
+    },
+    "revision_no": {
+      "type": "integer",
+      "minimum": 0
     }
   },
-  "$defs": {
-    "resource_section": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "resource_section_id",
-        "heading",
-        "body_markdown",
-        "key_points",
-        "evidence_ids"
-      ],
-      "properties": {
-        "resource_section_id": {
-          "type": "string",
-          "format": "uuid"
-        },
-        "heading": {
-          "type": "string"
-        },
-        "body_markdown": {
-          "type": "string"
-        },
-        "key_points": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "evidence_ids": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "string",
-            "format": "uuid"
-          }
-        }
-      }
-    },
-    "code_example": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "language",
-        "code",
-        "explanation",
-        "evidence_ids"
-      ],
-      "properties": {
-        "language": {
-          "type": "string"
-        },
-        "code": {
-          "type": "string"
-        },
-        "explanation": {
-          "type": "string"
-        },
-        "evidence_ids": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "format": "uuid"
-          }
-        }
-      }
-    }
-  }
+  "required": [
+    "schema_version",
+    "run_id",
+    "agent_name",
+    "status",
+    "confidence",
+    "reasoning_summary",
+    "warnings",
+    "requires_human_review",
+    "completed_at",
+    "resource_draft_id",
+    "resource_title",
+    "resource_type",
+    "difficulty_level",
+    "personalization_reason",
+    "sections",
+    "coverage_knowledge_node_ids",
+    "all_evidence_ids",
+    "parallel_branch_run_ids",
+    "revision_no"
+  ]
 }

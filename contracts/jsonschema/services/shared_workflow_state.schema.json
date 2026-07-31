@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SharedWorkflowState",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "workflow_run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "session_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "organization_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "learner_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "knowledge_base_version_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "current_state": {
+      "type": "string"
+    },
+    "profile_snapshot_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "diagnosis_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "path_plan_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "retrieval_run_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "minItems": 0
+    },
+    "resource_draft_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "review_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "assessment_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "decision_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "retry_counters": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "budget_usage": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "workflow_run_id",
+    "session_id",
+    "organization_id",
+    "learner_id",
+    "knowledge_base_version_id",
+    "current_state",
+    "profile_snapshot_id",
+    "diagnosis_ref",
+    "path_plan_ref",
+    "retrieval_run_ids",
+    "resource_draft_ref",
+    "review_ref",
+    "assessment_ref",
+    "decision_ref",
+    "retry_counters",
+    "budget_usage",
+    "updated_at"
+  ]
+}

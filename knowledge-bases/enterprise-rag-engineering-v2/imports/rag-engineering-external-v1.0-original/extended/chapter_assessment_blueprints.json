@@ -1,0 +1,619 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "chapter_code": "01_RAG基础",
+      "chapter_name": "RAG基础",
+      "knowledge_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory",
+        "rag_applicability",
+        "rag_failure_taxonomy"
+      ],
+      "learning_outcomes": [
+        "理解检索增强生成如何把外部知识检索与语言模型生成结合起来。",
+        "掌握从知识接入到检索、生成、引用、反馈和评测的完整链路。",
+        "区分模型参数中的知识与可检索外部知识，并理解二者协作方式。",
+        "判断某个业务问题是否应该采用RAG，以及应采用多复杂的方案。",
+        "能够把错误拆分为知识、检索、上下文、生成和治理等不同类别。"
+      ],
+      "recommended_sequence": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory",
+        "rag_applicability",
+        "rag_failure_taxonomy"
+      ],
+      "foundation_question_ids": [
+        "q_rag_definition_foundation",
+        "q_rag_end_to_end_architecture_foundation",
+        "q_parametric_nonparametric_memory_foundation",
+        "q_rag_applicability_foundation",
+        "q_rag_failure_taxonomy_foundation"
+      ],
+      "standard_question_ids": [
+        "q_rag_definition_standard",
+        "q_rag_end_to_end_architecture_standard",
+        "q_parametric_nonparametric_memory_standard",
+        "q_rag_applicability_standard",
+        "q_rag_failure_taxonomy_standard"
+      ],
+      "advanced_question_ids": [
+        "q_rag_definition_advanced",
+        "q_rag_end_to_end_architecture_advanced",
+        "q_parametric_nonparametric_memory_advanced",
+        "q_rag_applicability_advanced",
+        "q_rag_failure_taxonomy_advanced"
+      ],
+      "practical_task_ids": [
+        "task_minimal_rag"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    },
+    {
+      "chapter_code": "02_知识源治理",
+      "chapter_name": "知识源治理",
+      "knowledge_node_ids": [
+        "knowledge_source_selection",
+        "source_authority_provenance",
+        "versioning_freshness",
+        "licensing_compliance",
+        "access_control_tenant_isolation"
+      ],
+      "learning_outcomes": [
+        "选择覆盖目标岗位且具备权威性、时效性和可授权性的知识来源。",
+        "为知识片段建立从回答到原始来源的完整证据链。",
+        "控制知识库、文档、片段和索引版本，防止过时内容参与回答。",
+        "识别知识来源的版权、使用许可和隐私要求。",
+        "确保用户只能检索和查看其组织、角色和项目授权的知识。"
+      ],
+      "recommended_sequence": [
+        "knowledge_source_selection",
+        "source_authority_provenance",
+        "versioning_freshness",
+        "licensing_compliance",
+        "access_control_tenant_isolation"
+      ],
+      "foundation_question_ids": [
+        "q_knowledge_source_selection_foundation",
+        "q_source_authority_provenance_foundation",
+        "q_versioning_freshness_foundation",
+        "q_licensing_compliance_foundation",
+        "q_access_control_tenant_isolation_foundation"
+      ],
+      "standard_question_ids": [
+        "q_knowledge_source_selection_standard",
+        "q_source_authority_provenance_standard",
+        "q_versioning_freshness_standard",
+        "q_licensing_compliance_standard",
+        "q_access_control_tenant_isolation_standard"
+      ],
+      "advanced_question_ids": [
+        "q_knowledge_source_selection_advanced",
+        "q_source_authority_provenance_advanced",
+        "q_versioning_freshness_advanced",
+        "q_licensing_compliance_advanced",
+        "q_access_control_tenant_isolation_advanced"
+      ],
+      "practical_task_ids": [
+        "task_source_registry",
+        "task_security_redteam"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    },
+    {
+      "chapter_code": "03_解析清洗",
+      "chapter_name": "解析清洗",
+      "knowledge_node_ids": [
+        "document_parsing",
+        "layout_table_extraction",
+        "text_cleaning_normalization",
+        "deduplication",
+        "document_quality_checks"
+      ],
+      "learning_outcomes": [
+        "从多种文档中提取文本、结构、页码和对象信息。",
+        "正确处理多栏版面、表格、图注和代码块，避免语义错位。",
+        "去除噪声并统一格式，同时避免删除有业务意义的内容。",
+        "识别完全重复、近似重复和版本重复，减少检索冗余。",
+        "在入库前检测解析完整性、乱码、缺页、来源和结构问题。"
+      ],
+      "recommended_sequence": [
+        "document_parsing",
+        "layout_table_extraction",
+        "text_cleaning_normalization",
+        "deduplication",
+        "document_quality_checks"
+      ],
+      "foundation_question_ids": [
+        "q_document_parsing_foundation",
+        "q_layout_table_extraction_foundation",
+        "q_text_cleaning_normalization_foundation",
+        "q_deduplication_foundation",
+        "q_document_quality_checks_foundation"
+      ],
+      "standard_question_ids": [
+        "q_document_parsing_standard",
+        "q_layout_table_extraction_standard",
+        "q_text_cleaning_normalization_standard",
+        "q_deduplication_standard",
+        "q_document_quality_checks_standard"
+      ],
+      "advanced_question_ids": [
+        "q_document_parsing_advanced",
+        "q_layout_table_extraction_advanced",
+        "q_text_cleaning_normalization_advanced",
+        "q_deduplication_advanced",
+        "q_document_quality_checks_advanced"
+      ],
+      "practical_task_ids": [
+        "task_parse_quality"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    },
+    {
+      "chapter_code": "04_切分与上下文",
+      "chapter_name": "切分与上下文",
+      "knowledge_node_ids": [
+        "chunking_objectives",
+        "fixed_window_chunking",
+        "structure_aware_chunking",
+        "semantic_chunking",
+        "parent_child_multigranular"
+      ],
+      "learning_outcomes": [
+        "理解切分对召回、上下文完整性、引用粒度和成本的影响。",
+        "掌握按字符或Token窗口切分及重叠策略。",
+        "按标题、段落、列表、表格和代码块边界构造片段。",
+        "依据主题变化和句子语义相似度确定边界。",
+        "同时保留小粒度检索精度和大粒度上下文完整性。"
+      ],
+      "recommended_sequence": [
+        "chunking_objectives",
+        "fixed_window_chunking",
+        "structure_aware_chunking",
+        "semantic_chunking",
+        "parent_child_multigranular"
+      ],
+      "foundation_question_ids": [
+        "q_chunking_objectives_foundation",
+        "q_fixed_window_chunking_foundation",
+        "q_structure_aware_chunking_foundation",
+        "q_semantic_chunking_foundation",
+        "q_parent_child_multigranular_foundation"
+      ],
+      "standard_question_ids": [
+        "q_chunking_objectives_standard",
+        "q_fixed_window_chunking_standard",
+        "q_structure_aware_chunking_standard",
+        "q_semantic_chunking_standard",
+        "q_parent_child_multigranular_standard"
+      ],
+      "advanced_question_ids": [
+        "q_chunking_objectives_advanced",
+        "q_fixed_window_chunking_advanced",
+        "q_structure_aware_chunking_advanced",
+        "q_semantic_chunking_advanced",
+        "q_parent_child_multigranular_advanced"
+      ],
+      "practical_task_ids": [
+        "task_chunking_ab"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    },
+    {
+      "chapter_code": "05_向量与索引",
+      "chapter_name": "向量与索引",
+      "knowledge_node_ids": [
+        "metadata_schema",
+        "embedding_fundamentals",
+        "embedding_model_selection",
+        "similarity_metrics",
+        "vector_index_hnsw_ivf"
+      ],
+      "learning_outcomes": [
+        "定义支持过滤、溯源、版本和评测的片段元数据。",
+        "理解双编码器、向量空间和语义相似度的基本机制。",
+        "根据语言、领域、任务、成本和部署约束选择嵌入模型。",
+        "理解余弦相似度、内积和欧氏距离及其配置关系。",
+        "理解精确搜索、HNSW、IVF等索引的召回、延迟和内存权衡。"
+      ],
+      "recommended_sequence": [
+        "metadata_schema",
+        "embedding_fundamentals",
+        "embedding_model_selection",
+        "similarity_metrics",
+        "vector_index_hnsw_ivf"
+      ],
+      "foundation_question_ids": [
+        "q_metadata_schema_foundation",
+        "q_embedding_fundamentals_foundation",
+        "q_embedding_model_selection_foundation",
+        "q_similarity_metrics_foundation",
+        "q_vector_index_hnsw_ivf_foundation"
+      ],
+      "standard_question_ids": [
+        "q_metadata_schema_standard",
+        "q_embedding_fundamentals_standard",
+        "q_embedding_model_selection_standard",
+        "q_similarity_metrics_standard",
+        "q_vector_index_hnsw_ivf_standard"
+      ],
+      "advanced_question_ids": [
+        "q_metadata_schema_advanced",
+        "q_embedding_fundamentals_advanced",
+        "q_embedding_model_selection_advanced",
+        "q_similarity_metrics_advanced",
+        "q_vector_index_hnsw_ivf_advanced"
+      ],
+      "practical_task_ids": [
+        "task_embedding_ab",
+        "task_ann_tuning",
+        "task_graph_lightweight"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    },
+    {
+      "chapter_code": "06_检索策略",
+      "chapter_name": "检索策略",
+      "knowledge_node_ids": [
+        "bm25_sparse_retrieval",
+        "dense_retrieval",
+        "hybrid_retrieval",
+        "metadata_filtering",
+        "multi_query_expansion"
+      ],
+      "learning_outcomes": [
+        "掌握关键词匹配在精确术语、编号和专名查询中的作用。",
+        "使用嵌入召回语义相关但词面不同的片段。",
+        "融合稀疏与稠密检索，提高不同查询类型下的鲁棒性。",
+        "在语义排序前后利用权限、版本、时间、语言和业务标签缩小候选。",
+        "通过同义改写、子问题和多角度查询提高召回。"
+      ],
+      "recommended_sequence": [
+        "bm25_sparse_retrieval",
+        "dense_retrieval",
+        "hybrid_retrieval",
+        "metadata_filtering",
+        "multi_query_expansion"
+      ],
+      "foundation_question_ids": [
+        "q_bm25_sparse_retrieval_foundation",
+        "q_dense_retrieval_foundation",
+        "q_hybrid_retrieval_foundation",
+        "q_metadata_filtering_foundation",
+        "q_multi_query_expansion_foundation"
+      ],
+      "standard_question_ids": [
+        "q_bm25_sparse_retrieval_standard",
+        "q_dense_retrieval_standard",
+        "q_hybrid_retrieval_standard",
+        "q_metadata_filtering_standard",
+        "q_multi_query_expansion_standard"
+      ],
+      "advanced_question_ids": [
+        "q_bm25_sparse_retrieval_advanced",
+        "q_dense_retrieval_advanced",
+        "q_hybrid_retrieval_advanced",
+        "q_metadata_filtering_advanced",
+        "q_multi_query_expansion_advanced"
+      ],
+      "practical_task_ids": [
+        "task_hybrid_retrieval",
+        "task_query_rerank"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    },
+    {
+      "chapter_code": "07_查询与重排",
+      "chapter_name": "查询与重排",
+      "knowledge_node_ids": [
+        "query_rewriting",
+        "hyde_retrieval",
+        "cross_encoder_reranking",
+        "colbert_late_interaction",
+        "diversity_mmr",
+        "rank_fusion_rrf"
+      ],
+      "learning_outcomes": [
+        "将口语化、上下文依赖或不完整的问题转换成可检索查询。",
+        "利用生成的假设性文档表示查询语义，以改善零样本稠密检索。",
+        "使用查询与候选片段联合编码，提高候选排序精度。",
+        "理解Token级晚交互在效率与细粒度匹配之间的折中。",
+        "在相关性和候选多样性之间平衡，减少上下文重复。",
+        "用排名而非原始分数融合多个检索列表。"
+      ],
+      "recommended_sequence": [
+        "query_rewriting",
+        "hyde_retrieval",
+        "cross_encoder_reranking",
+        "colbert_late_interaction",
+        "diversity_mmr",
+        "rank_fusion_rrf"
+      ],
+      "foundation_question_ids": [
+        "q_query_rewriting_foundation",
+        "q_hyde_retrieval_foundation",
+        "q_cross_encoder_reranking_foundation",
+        "q_colbert_late_interaction_foundation",
+        "q_diversity_mmr_foundation",
+        "q_rank_fusion_rrf_foundation"
+      ],
+      "standard_question_ids": [
+        "q_query_rewriting_standard",
+        "q_hyde_retrieval_standard",
+        "q_cross_encoder_reranking_standard",
+        "q_colbert_late_interaction_standard",
+        "q_diversity_mmr_standard",
+        "q_rank_fusion_rrf_standard"
+      ],
+      "advanced_question_ids": [
+        "q_query_rewriting_advanced",
+        "q_hyde_retrieval_advanced",
+        "q_cross_encoder_reranking_advanced",
+        "q_colbert_late_interaction_advanced",
+        "q_diversity_mmr_advanced",
+        "q_rank_fusion_rrf_advanced"
+      ],
+      "practical_task_ids": [
+        "task_hybrid_retrieval",
+        "task_query_rerank"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    },
+    {
+      "chapter_code": "08_上下文与生成",
+      "chapter_name": "上下文与生成",
+      "knowledge_node_ids": [
+        "context_selection_budget",
+        "lost_in_the_middle",
+        "prompt_grounding",
+        "answer_abstention",
+        "citation_generation_verification"
+      ],
+      "learning_outcomes": [
+        "在有限上下文中选择最有用、互补且可追溯的证据。",
+        "理解模型对长上下文中间信息利用不稳定的问题。",
+        "通过明确指令让模型仅基于提供证据回答并声明限制。",
+        "在证据不足、冲突或越权时停止生成确定性答案。",
+        "生成可点击、可核验且真正支持结论的证据引用。"
+      ],
+      "recommended_sequence": [
+        "context_selection_budget",
+        "lost_in_the_middle",
+        "prompt_grounding",
+        "answer_abstention",
+        "citation_generation_verification"
+      ],
+      "foundation_question_ids": [
+        "q_context_selection_budget_foundation",
+        "q_lost_in_the_middle_foundation",
+        "q_prompt_grounding_foundation",
+        "q_answer_abstention_foundation",
+        "q_citation_generation_verification_foundation"
+      ],
+      "standard_question_ids": [
+        "q_context_selection_budget_standard",
+        "q_lost_in_the_middle_standard",
+        "q_prompt_grounding_standard",
+        "q_answer_abstention_standard",
+        "q_citation_generation_verification_standard"
+      ],
+      "advanced_question_ids": [
+        "q_context_selection_budget_advanced",
+        "q_lost_in_the_middle_advanced",
+        "q_prompt_grounding_advanced",
+        "q_answer_abstention_advanced",
+        "q_citation_generation_verification_advanced"
+      ],
+      "practical_task_ids": [
+        "task_minimal_rag",
+        "task_context_citation"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    },
+    {
+      "chapter_code": "09_可信与安全",
+      "chapter_name": "可信与安全",
+      "knowledge_node_ids": [
+        "hallucination_types",
+        "evidence_entailment",
+        "review_correction_loop",
+        "prompt_injection_defense",
+        "sensitive_data_privacy"
+      ],
+      "learning_outcomes": [
+        "区分无依据生成、证据矛盾、错误归因和过度推断等问题。",
+        "判断证据是否直接支持、反驳或无法判断某个结论。",
+        "对生成资源、题目和决策进行通过、退回、修复与升级处理。",
+        "防止知识文档或用户输入劫持模型规则、泄露数据或调用危险工具。",
+        "保护企业资料、学习者画像和交互日志中的敏感信息。"
+      ],
+      "recommended_sequence": [
+        "hallucination_types",
+        "evidence_entailment",
+        "review_correction_loop",
+        "prompt_injection_defense",
+        "sensitive_data_privacy"
+      ],
+      "foundation_question_ids": [
+        "q_hallucination_types_foundation",
+        "q_evidence_entailment_foundation",
+        "q_review_correction_loop_foundation",
+        "q_prompt_injection_defense_foundation",
+        "q_sensitive_data_privacy_foundation"
+      ],
+      "standard_question_ids": [
+        "q_hallucination_types_standard",
+        "q_evidence_entailment_standard",
+        "q_review_correction_loop_standard",
+        "q_prompt_injection_defense_standard",
+        "q_sensitive_data_privacy_standard"
+      ],
+      "advanced_question_ids": [
+        "q_hallucination_types_advanced",
+        "q_evidence_entailment_advanced",
+        "q_review_correction_loop_advanced",
+        "q_prompt_injection_defense_advanced",
+        "q_sensitive_data_privacy_advanced"
+      ],
+      "practical_task_ids": [
+        "task_security_redteam",
+        "task_review_repair"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    },
+    {
+      "chapter_code": "10_评测与监控",
+      "chapter_name": "评测与监控",
+      "knowledge_node_ids": [
+        "retrieval_metrics",
+        "generation_metrics",
+        "end_to_end_evaluation",
+        "golden_dataset_design",
+        "online_monitoring_feedback"
+      ],
+      "learning_outcomes": [
+        "使用Recall@K、Precision@K、MRR、nDCG等指标测量候选质量。",
+        "评估答案忠实度、正确性、完整性、引用和表达质量。",
+        "同时评价检索、生成、拒答、延迟、成本和用户任务完成度。",
+        "构建覆盖知识、查询类型、难度、画像和失败边界的标注数据。",
+        "将线上检索、生成和用户反馈转化为可定位的质量信号。"
+      ],
+      "recommended_sequence": [
+        "retrieval_metrics",
+        "generation_metrics",
+        "end_to_end_evaluation",
+        "golden_dataset_design",
+        "online_monitoring_feedback"
+      ],
+      "foundation_question_ids": [
+        "q_retrieval_metrics_foundation",
+        "q_generation_metrics_foundation",
+        "q_end_to_end_evaluation_foundation",
+        "q_golden_dataset_design_foundation",
+        "q_online_monitoring_feedback_foundation"
+      ],
+      "standard_question_ids": [
+        "q_retrieval_metrics_standard",
+        "q_generation_metrics_standard",
+        "q_end_to_end_evaluation_standard",
+        "q_golden_dataset_design_standard",
+        "q_online_monitoring_feedback_standard"
+      ],
+      "advanced_question_ids": [
+        "q_retrieval_metrics_advanced",
+        "q_generation_metrics_advanced",
+        "q_end_to_end_evaluation_advanced",
+        "q_golden_dataset_design_advanced",
+        "q_online_monitoring_feedback_advanced"
+      ],
+      "practical_task_ids": [
+        "task_eval_suite"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    },
+    {
+      "chapter_code": "11_高级RAG",
+      "chapter_name": "高级RAG",
+      "knowledge_node_ids": [
+        "agentic_rag",
+        "self_rag",
+        "corrective_rag",
+        "graph_rag",
+        "tool_routing_multi_source"
+      ],
+      "learning_outcomes": [
+        "让智能体根据任务动态规划检索、工具调用和停止条件。",
+        "理解模型在生成过程中学习何时检索并评价自身输出的思路。",
+        "在检索质量不足时触发纠错、补充检索或降级。",
+        "利用实体关系、社区摘要或图遍历支持跨文档关联问题。",
+        "在向量库、关键词索引、数据库、API和知识图谱之间选择合适数据源。"
+      ],
+      "recommended_sequence": [
+        "agentic_rag",
+        "self_rag",
+        "corrective_rag",
+        "graph_rag",
+        "tool_routing_multi_source"
+      ],
+      "foundation_question_ids": [
+        "q_agentic_rag_foundation",
+        "q_self_rag_foundation",
+        "q_corrective_rag_foundation",
+        "q_graph_rag_foundation",
+        "q_tool_routing_multi_source_foundation"
+      ],
+      "standard_question_ids": [
+        "q_agentic_rag_standard",
+        "q_self_rag_standard",
+        "q_corrective_rag_standard",
+        "q_graph_rag_standard",
+        "q_tool_routing_multi_source_standard"
+      ],
+      "advanced_question_ids": [
+        "q_agentic_rag_advanced",
+        "q_self_rag_advanced",
+        "q_corrective_rag_advanced",
+        "q_graph_rag_advanced",
+        "q_tool_routing_multi_source_advanced"
+      ],
+      "practical_task_ids": [
+        "task_agentic_state_machine",
+        "task_graph_lightweight"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    },
+    {
+      "chapter_code": "12_生产工程",
+      "chapter_name": "生产工程",
+      "knowledge_node_ids": [
+        "observability_tracing",
+        "latency_cost_optimization",
+        "caching_idempotency",
+        "deployment_fallback",
+        "continuous_updates_regression"
+      ],
+      "learning_outcomes": [
+        "追踪一次RAG请求经过的检索、重排、生成、审核和仲裁步骤。",
+        "在质量约束下优化检索、重排、上下文和模型调用成本。",
+        "安全复用稳定结果并防止重试造成重复任务。",
+        "保证模型、向量库或外部服务异常时系统可预测地降级。",
+        "在知识、模型和提示词变化后保持质量可控。"
+      ],
+      "recommended_sequence": [
+        "observability_tracing",
+        "latency_cost_optimization",
+        "caching_idempotency",
+        "deployment_fallback",
+        "continuous_updates_regression"
+      ],
+      "foundation_question_ids": [
+        "q_observability_tracing_foundation",
+        "q_latency_cost_optimization_foundation",
+        "q_caching_idempotency_foundation",
+        "q_deployment_fallback_foundation",
+        "q_continuous_updates_regression_foundation"
+      ],
+      "standard_question_ids": [
+        "q_observability_tracing_standard",
+        "q_latency_cost_optimization_standard",
+        "q_caching_idempotency_standard",
+        "q_deployment_fallback_standard",
+        "q_continuous_updates_regression_standard"
+      ],
+      "advanced_question_ids": [
+        "q_observability_tracing_advanced",
+        "q_latency_cost_optimization_advanced",
+        "q_caching_idempotency_advanced",
+        "q_deployment_fallback_advanced",
+        "q_continuous_updates_regression_advanced"
+      ],
+      "practical_task_ids": [
+        "task_production_observability"
+      ],
+      "passing_rule": "章节核心节点覆盖率达到80%，标准题得分达到70%，且至少完成一个相关实操任务。"
+    }
+  ]
+}

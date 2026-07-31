@@ -1,99 +1,72 @@
-version: 1.0.0
-contract_status: frozen_v6
-fields:
-- name: organization_id
-  type: uuid
-  meaning: 组织租户标识
-  owner: 张英赫
-- name: knowledge_base_id
-  type: uuid
-  meaning: 逻辑知识库标识
-  owner: 李佳乐
-- name: knowledge_base_version_id
-  type: uuid
-  meaning: 不可变知识库版本标识
-  owner: 李佳乐
-- name: document_id
-  type: uuid
-  meaning: 上传文档标识
-  owner: 李佳乐
-- name: build_run_id
-  type: uuid
-  meaning: 知识构建任务标识
-  owner: 李佳乐
-- name: learner_id
-  type: uuid
-  meaning: 学习者标识
-  owner: 杨欣怡
-- name: training_program_id
-  type: uuid
-  meaning: 培训项目标识
-  owner: 杨欣怡
-- name: assignment_id
-  type: uuid
-  meaning: 培训分配标识
-  owner: 杨欣怡
-- name: session_id
-  type: uuid
-  meaning: 一次完整学习会话标识
-  owner: 张英赫
-- name: decision_cycle_id
-  type: uuid
-  meaning: 会话内一轮联合决策标识
-  owner: 张英赫
-- name: agent_run_id
-  type: uuid
-  meaning: 一次智能体运行标识
-  owner: 张英赫
-- name: proposal_id
-  type: uuid
-  meaning: 智能体候选提案标识
-  owner: 张英赫
-- name: review_id
-  type: uuid
-  meaning: 审核记录标识
-  owner: 李佳乐
-- name: decision_id
-  type: uuid
-  meaning: 最终仲裁决策标识
-  owner: 张英赫
-- name: resource_draft_id
-  type: uuid
-  meaning: 未审核学习资源草稿标识
-  owner: 杨欣怡
-- name: resource_id
-  type: uuid
-  meaning: 审核发布后的学习资源标识
-  owner: 杨欣怡
-- name: assessment_draft_id
-  type: uuid
-  meaning: 未审核测评草稿标识
-  owner: 杨欣怡
-- name: assessment_id
-  type: uuid
-  meaning: 审核发布后的测评标识
-  owner: 杨欣怡
-- name: attempt_id
-  type: uuid
-  meaning: 一次作答记录标识
-  owner: 杨欣怡
-- name: profile_snapshot_id
-  type: uuid
-  meaning: 不可变学习画像快照标识
-  owner: 杨欣怡
-- name: evidence_id
-  type: uuid
-  meaning: 可追溯证据标识
-  owner: 李佳乐
-- name: correlation_id
-  type: uuid
-  meaning: 同一业务链路关联标识
-  owner: 张英赫
-- name: causation_id
-  type: uuid
-  meaning: 直接触发当前事件的上游标识
-  owner: 张英赫
-- name: idempotency_key
-  type: string
-  meaning: 避免重复创建或重复提交的幂等键
-  owner: 张英赫
+version: 7.0.0
+naming: snake_case
+identifiers:
+- organization_id
+- learner_id
+- knowledge_base_id
+- knowledge_base_version_id
+- session_id
+- workflow_run_id
+- agent_run_id
+- parallel_group_id
+- retrieval_request_id
+- retrieval_plan_id
+- retrieval_run_id
+- retrieval_step_id
+- evidence_bundle_id
+- evidence_id
+- resource_id
+- assessment_id
+- attempt_id
+- review_id
+- decision_id
+- correlation_id
+- causation_id
+- idempotency_key
+agent_names:
+- diagnosis
+- path_planning
+- rag_router
+- resource_coordinator
+- assessment_evaluation
+- review_coordinator
+- arbitration
+- explanation_generator
+- practice_generator
+- quiz_draft_generator
+- factuality_reviewer
+- difficulty_reviewer
+- assessment_quality_reviewer
+- safety_reviewer
+retrieval_strategies:
+- metadata_filtered
+- hybrid
+- graph_assisted
+- parent_child
+- agentic_decomposition
+workflow_statuses:
+- queued
+- running
+- waiting_tool
+- waiting_parallel
+- waiting_human_review
+- retrying
+- degraded
+- succeeded
+- failed
+- cancelled
+review_outcomes:
+- pass
+- revise
+- reject
+- human_review
+content_statuses:
+- draft
+- candidate
+- under_review
+- approved
+- published
+- deprecated
+- rejected
+- trusted_core
+- trusted_ai_generated

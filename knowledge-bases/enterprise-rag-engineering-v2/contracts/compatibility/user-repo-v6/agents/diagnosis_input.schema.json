@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "诊断智能体输入",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "learner_id",
+    "session_id",
+    "decision_cycle_id",
+    "profile_snapshot_id",
+    "assessment_attempt_id",
+    "behavior_summary_id",
+    "program_target_node_ids",
+    "evidence_ids"
+  ],
+  "properties": {
+    "learner_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "session_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "decision_cycle_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "profile_snapshot_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "assessment_attempt_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "behavior_summary_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "program_target_node_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "version": "2.0.0",
+  "package": "enterprise-rag-engineering-v2",
+  "content_validation": {
+    "status": "PASS",
+    "version": "2.0.0",
+    "errors": [],
+    "warnings": [],
+    "counts": {
+      "nodes": 93,
+      "edges": 252,
+      "chunks": 372,
+      "evidence": 372,
+      "questions": 372,
+      "tasks": 93,
+      "rubrics": 93,
+      "retrieval_eval_cases": 279,
+      "generation_eval_cases": 173,
+      "sources": 42,
+      "trusted_core_nodes": 32,
+      "trusted_ai_generated_nodes": 61,
+      "concept_cards": 93,
+      "faq": 279,
+      "error_cases": 186
+    },
+    "quality_layers": {
+      "trusted_core_full_coverage_rate": 1.0,
+      "trusted_ai_generated_basic_coverage_rate": 1.0,
+      "trusted_ai_generated_task_rubric_coverage_rate": 1.0,
+      "all_runtime_chunks_have_evidence": true
+    },
+    "governance": {
+      "imported_nodes_runtime_enabled": true,
+      "imported_nodes_review_status": "pending_team_review",
+      "published_version_is_immutable": true
+    }
+  },
+  "retrieval_baseline": {
+    "evaluator": "bm25_char_ngram_metadata_baseline",
+    "knowledge_base_version_id": "cd9998d7-e5d0-5722-b1fa-266d99162266",
+    "case_count": 279,
+    "hit_rate_at_1": 0.9427,
+    "hit_rate_at_5": 1.0,
+    "mean_reciprocal_rank": 0.9682,
+    "target_hit_rate_at_5": 0.9,
+    "target_met": true,
+    "limitations": "词法+元数据基线；不代表稠密向量、重排器或真实生成模型的最终质量。"
+  },
+  "automated_tests": {
+    "pytest": "13 passed",
+    "compatibility_artifacts": 24,
+    "learner_cases": 3,
+    "database_dry_run": "PASS"
+  },
+  "honesty_limits": [
+    "未接入最终生产embedding与reranker",
+    "未实测最终生成模型幻觉率",
+    "未实测最终画像—资源难度适配率",
+    "trusted_ai_generated内容仍待团队逐项复核"
+  ]
+}

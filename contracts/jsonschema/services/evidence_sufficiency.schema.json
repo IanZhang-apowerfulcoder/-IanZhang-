@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvidenceSufficiency",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "retrieval_run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "sufficient": {
+      "type": "boolean"
+    },
+    "coverage_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "quality_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "conflict_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "missing_aspects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "recommended_action": {
+      "type": "string",
+      "enum": [
+        "continue",
+        "rewrite_query",
+        "add_strategy",
+        "human_review",
+        "refuse"
+      ]
+    },
+    "reason_summary": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "retrieval_run_id",
+    "sufficient",
+    "coverage_score",
+    "quality_score",
+    "conflict_score",
+    "missing_aspects",
+    "recommended_action",
+    "reason_summary"
+  ]
+}

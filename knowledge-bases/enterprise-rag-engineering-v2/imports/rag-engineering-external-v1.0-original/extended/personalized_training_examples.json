@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "example_id": "personalized_beginner_student",
+      "persona": {
+        "persona_template_code": "beginner_student",
+        "display_name": "零基础本科生",
+        "education_background": "非计算机专业本科一年级",
+        "prior_skill_tags": [
+          "basic_computer_use"
+        ],
+        "theory_test_score": 28,
+        "learning_goal": "理解RAG基本链路并完成最小演示",
+        "learning_preference_tags": [
+          "diagram_first",
+          "step_by_step"
+        ],
+        "expected_difficulty_level": 1
+      },
+      "target_knowledge_node_ids": [
+        "rag_definition",
+        "hybrid_retrieval",
+        "hallucination_types"
+      ],
+      "diagnosis_summary": "需要从直观链路和术语基础开始。",
+      "recommended_resource_sequence": [
+        {
+          "knowledge_node_id": "rag_definition",
+          "resource_type": "micro_lesson",
+          "difficulty_level": 1
+        },
+        {
+          "knowledge_node_id": "hybrid_retrieval",
+          "resource_type": "worked_example",
+          "difficulty_level": 2
+        },
+        {
+          "knowledge_node_id": "hallucination_types",
+          "resource_type": "practical_guide",
+          "difficulty_level": 2
+        }
+      ],
+      "adaptation_reason": "根据先验技能、理论分数、目标和学习偏好调整解释深度、任务类型与难度。"
+    },
+    {
+      "example_id": "personalized_theory_strong_student",
+      "persona": {
+        "persona_template_code": "theory_strong_student",
+        "display_name": "理论较强的软件工程学生",
+        "education_background": "软件工程本科三年级",
+        "prior_skill_tags": [
+          "python",
+          "database",
+          "machine_learning_theory"
+        ],
+        "theory_test_score": 82,
+        "learning_goal": "掌握检索评测和工程实现",
+        "learning_preference_tags": [
+          "principle_first",
+          "experiment"
+        ],
+        "expected_difficulty_level": 3
+      },
+      "target_knowledge_node_ids": [
+        "rag_definition",
+        "hybrid_retrieval",
+        "hallucination_types"
+      ],
+      "diagnosis_summary": "具备部分基础，应通过实验和失败案例强化工程能力。",
+      "recommended_resource_sequence": [
+        {
+          "knowledge_node_id": "rag_definition",
+          "resource_type": "custom_lecture",
+          "difficulty_level": 3
+        },
+        {
+          "knowledge_node_id": "hybrid_retrieval",
+          "resource_type": "worked_example",
+          "difficulty_level": 4
+        },
+        {
+          "knowledge_node_id": "hallucination_types",
+          "resource_type": "practical_guide",
+          "difficulty_level": 4
+        }
+      ],
+      "adaptation_reason": "根据先验技能、理论分数、目标和学习偏好调整解释深度、任务类型与难度。"
+    },
+    {
+      "example_id": "personalized_junior_enterprise_engineer",
+      "persona": {
+        "persona_template_code": "junior_enterprise_engineer",
+        "display_name": "企业初级大模型工程师",
+        "education_background": "计算机相关本科，工作1年",
+        "prior_skill_tags": [
+          "python",
+          "fastapi",
+          "docker",
+          "llm_api"
+        ],
+        "theory_test_score": 68,
+        "learning_goal": "构建可部署、可评测的企业RAG系统",
+        "learning_preference_tags": [
+          "hands_on",
+          "failure_cases"
+        ],
+        "expected_difficulty_level": 3
+      },
+      "target_knowledge_node_ids": [
+        "rag_definition",
+        "hybrid_retrieval",
+        "hallucination_types"
+      ],
+      "diagnosis_summary": "具备部分基础，应通过实验和失败案例强化工程能力。",
+      "recommended_resource_sequence": [
+        {
+          "knowledge_node_id": "rag_definition",
+          "resource_type": "custom_lecture",
+          "difficulty_level": 3
+        },
+        {
+          "knowledge_node_id": "hybrid_retrieval",
+          "resource_type": "worked_example",
+          "difficulty_level": 4
+        },
+        {
+          "knowledge_node_id": "hallucination_types",
+          "resource_type": "practical_guide",
+          "difficulty_level": 4
+        }
+      ],
+      "adaptation_reason": "根据先验技能、理论分数、目标和学习偏好调整解释深度、任务类型与难度。"
+    }
+  ]
+}

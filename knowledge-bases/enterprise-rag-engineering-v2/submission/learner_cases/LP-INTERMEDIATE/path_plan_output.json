@@ -1,0 +1,73 @@
+{
+  "proposal_id": "626610d2-da6a-58f5-a53d-757cd14afd7d",
+  "goal": "掌握混合检索、重排和评测",
+  "candidate_steps": [
+    {
+      "path_step_id": "cb23ba56-675f-53f0-a78d-1abecd10494f",
+      "sequence_no": 1,
+      "knowledge_node_ids": [
+        "RAG-M03-N04"
+      ],
+      "action_type": "learn",
+      "resource_type": "mixed",
+      "difficulty_level": 3,
+      "estimated_minutes": 60,
+      "prerequisite_path_step_ids": [],
+      "success_criteria": [
+        "概念题正确率达到80%",
+        "能说明适用边界"
+      ]
+    },
+    {
+      "path_step_id": "8dd4e5e3-a4a4-5421-93c6-bb6a08319d26",
+      "sequence_no": 2,
+      "knowledge_node_ids": [
+        "RAG-M06-N01"
+      ],
+      "action_type": "practice",
+      "resource_type": "exercise",
+      "difficulty_level": 4,
+      "estimated_minutes": 90,
+      "prerequisite_path_step_ids": [
+        "cb23ba56-675f-53f0-a78d-1abecd10494f"
+      ],
+      "success_criteria": [
+        "完成工程任务",
+        "Rubric得分不低于75"
+      ]
+    }
+  ],
+  "alternative_paths": [
+    {
+      "alternative_path_id": "0e347755-504c-55ce-86d2-53ec82bf22bd",
+      "summary": "若关键误区未纠正，则在原难度增加一次概念巩固。",
+      "steps": [
+        {
+          "path_step_id": "161b3348-8fb3-53e6-96bf-7884f9c79bc3",
+          "sequence_no": 1,
+          "knowledge_node_ids": [
+            "RAG-M03-N04"
+          ],
+          "action_type": "review",
+          "resource_type": "mixed",
+          "difficulty_level": 3,
+          "estimated_minutes": 60,
+          "prerequisite_path_step_ids": [],
+          "success_criteria": [
+            "概念题正确率达到80%",
+            "能说明适用边界"
+          ]
+        }
+      ]
+    }
+  ],
+  "confidence": 0.9448,
+  "evidence_ids": [
+    "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+    "3a1befcf-aede-53f8-9b53-b51f618c12b4",
+    "0c530834-1e07-54de-8e39-8511bc1658c0",
+    "716788a5-719d-5bd2-b841-55fc952f6160"
+  ],
+  "reasoning_summary": "路径遵守知识图谱前置关系，并根据画像选择资源难度。",
+  "requires_human_review": false
+}

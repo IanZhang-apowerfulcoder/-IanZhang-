@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QueryAnalysis",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "query_type": {
+      "type": "string"
+    },
+    "complexity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "execution_mode": {
+      "type": "string",
+      "enum": [
+        "sequential",
+        "parallel",
+        "agentic",
+        "refuse"
+      ]
+    },
+    "selected_strategies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "metadata_filtered",
+          "hybrid",
+          "graph_assisted",
+          "parent_child",
+          "agentic_decomposition"
+        ]
+      },
+      "minItems": 1
+    },
+    "reason_summary": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "query_type",
+    "complexity",
+    "risk_level",
+    "execution_mode",
+    "selected_strategies",
+    "reason_summary"
+  ]
+}

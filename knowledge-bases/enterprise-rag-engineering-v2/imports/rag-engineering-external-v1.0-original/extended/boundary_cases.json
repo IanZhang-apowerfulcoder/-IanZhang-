@@ -1,0 +1,554 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "boundary_case_id": "boundary_rag_definition",
+      "knowledge_node_id": "rag_definition",
+      "decision_question": "是否应在当前项目中增加或强化RAG基本定义？",
+      "recommended_rule": "对完全不依赖外部事实的创意写作、闲聊或纯计算任务，RAG未必有收益；对高风险答案，RAG也不能替代人工审核和业务规则。",
+      "evidence_chunk_ids": [
+        "chunk_rag_definition_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_rag_end_to_end_architecture",
+      "knowledge_node_id": "rag_end_to_end_architecture",
+      "decision_question": "是否应在当前项目中增加或强化RAG端到端架构？",
+      "recommended_rule": "比赛原型可将模块部署在同一后端中，但接口和数据边界仍应明确；商业化后再按吞吐、隔离和运维需求拆分服务。",
+      "evidence_chunk_ids": [
+        "chunk_rag_end_to_end_architecture_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_parametric_nonparametric_memory",
+      "knowledge_node_id": "parametric_nonparametric_memory",
+      "decision_question": "是否应在当前项目中增加或强化参数记忆与外部记忆？",
+      "recommended_rule": "在证据不足时应拒答或请求补充资料，而不是让参数记忆补齐企业内部事实。",
+      "evidence_chunk_ids": [
+        "chunk_parametric_nonparametric_memory_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_rag_applicability",
+      "knowledge_node_id": "rag_applicability",
+      "decision_question": "是否应在当前项目中增加或强化RAG适用性判断？",
+      "recommended_rule": "实时交易、复杂计算或需要写入外部系统的任务，通常还需要工具调用、规则引擎或人工审批，不能仅依靠RAG。",
+      "evidence_chunk_ids": [
+        "chunk_rag_applicability_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_rag_failure_taxonomy",
+      "knowledge_node_id": "rag_failure_taxonomy",
+      "decision_question": "是否应在当前项目中增加或强化RAG失败类型？",
+      "recommended_rule": "根因无法确定时，先固定生成模型与提示词，对检索进行离线复现；再固定检索结果检查生成行为，逐段隔离问题。",
+      "evidence_chunk_ids": [
+        "chunk_rag_failure_taxonomy_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_knowledge_source_selection",
+      "knowledge_node_id": "knowledge_source_selection",
+      "decision_question": "是否应在当前项目中增加或强化知识源选择？",
+      "recommended_rule": "来源存在冲突时，应定义优先级并保留冲突记录；无法确认授权或真实性的材料只能作为待审核种子，不能用于正式高风险结论。",
+      "evidence_chunk_ids": [
+        "chunk_knowledge_source_selection_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_source_authority_provenance",
+      "knowledge_node_id": "source_authority_provenance",
+      "decision_question": "是否应在当前项目中增加或强化来源权威性与溯源？",
+      "recommended_rule": "对内部保密资料可以隐藏外部URI，但仍需保存内部文档编号和位置；对无法公开的证据，前端可展示受控摘要而非原文。",
+      "evidence_chunk_ids": [
+        "chunk_source_authority_provenance_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_versioning_freshness",
+      "knowledge_node_id": "versioning_freshness",
+      "decision_question": "是否应在当前项目中增加或强化版本与时效治理？",
+      "recommended_rule": "对时间敏感问题，应在检索阶段加入时间过滤或新鲜度排序；系统不能自动确认的时效内容，应在回答中说明数据截止时间。",
+      "evidence_chunk_ids": [
+        "chunk_versioning_freshness_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_licensing_compliance",
+      "knowledge_node_id": "licensing_compliance",
+      "decision_question": "是否应在当前项目中增加或强化许可与合规？",
+      "recommended_rule": "无法确认许可的来源只用于内部评测或等待授权，不得标记为企业正式知识；涉及法律、医疗或安全规范时应增加专业审批。",
+      "evidence_chunk_ids": [
+        "chunk_licensing_compliance_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_access_control_tenant_isolation",
+      "knowledge_node_id": "access_control_tenant_isolation",
+      "decision_question": "是否应在当前项目中增加或强化权限过滤与多租户隔离？",
+      "recommended_rule": "高敏感场景可采用物理隔离索引或独立部署；共享索引适合成本敏感场景，但必须有强制过滤、审计和越权测试。",
+      "evidence_chunk_ids": [
+        "chunk_access_control_tenant_isolation_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_document_parsing",
+      "knowledge_node_id": "document_parsing",
+      "decision_question": "是否应在当前项目中增加或强化文档解析？",
+      "recommended_rule": "比赛内置知识包可直接交付结构化内容，企业模式再逐步支持原始文档解析；对复杂表格和图纸，应保留人工确认入口。",
+      "evidence_chunk_ids": [
+        "chunk_document_parsing_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_layout_table_extraction",
+      "knowledge_node_id": "layout_table_extraction",
+      "decision_question": "是否应在当前项目中增加或强化版面与表格提取？",
+      "recommended_rule": "高度依赖图像或空间关系的内容仅靠文本RAG不够，应引入多模态解析或把人工生成的结构化说明作为权威来源。",
+      "evidence_chunk_ids": [
+        "chunk_layout_table_extraction_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_text_cleaning_normalization",
+      "knowledge_node_id": "text_cleaning_normalization",
+      "decision_question": "是否应在当前项目中增加或强化文本清洗与规范化？",
+      "recommended_rule": "对正式规范和代码文档，应采用保守清洗；对论坛或日志可采用更强去噪，但需明确不作为最高权威来源。",
+      "evidence_chunk_ids": [
+        "chunk_text_cleaning_normalization_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_deduplication",
+      "knowledge_node_id": "deduplication",
+      "decision_question": "是否应在当前项目中增加或强化内容去重？",
+      "recommended_rule": "多来源一致内容可保留一个主片段并关联多个source_id；法律或制度版本应按版本治理，不能只当作重复文本。",
+      "evidence_chunk_ids": [
+        "chunk_deduplication_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_document_quality_checks",
+      "knowledge_node_id": "document_quality_checks",
+      "decision_question": "是否应在当前项目中增加或强化文档质量门禁？",
+      "recommended_rule": "不同文档类型应使用不同阈值；比赛知识包可重点验证结构和引用完整性，企业原始资料还需增加许可与敏感信息检查。",
+      "evidence_chunk_ids": [
+        "chunk_document_quality_checks_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_chunking_objectives",
+      "knowledge_node_id": "chunking_objectives",
+      "decision_question": "是否应在当前项目中增加或强化文档切分目标？",
+      "recommended_rule": "不存在通用最佳长度。合同条款、代码、FAQ和长教程需要不同策略，最终选择必须由检索与生成评测共同决定。",
+      "evidence_chunk_ids": [
+        "chunk_chunking_objectives_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_fixed_window_chunking",
+      "knowledge_node_id": "fixed_window_chunking",
+      "decision_question": "是否应在当前项目中增加或强化固定窗口切分？",
+      "recommended_rule": "适合结构弱、内容较均匀的文本和快速基线；对表格、代码、制度条款或层级文档，通常应使用结构感知方案。",
+      "evidence_chunk_ids": [
+        "chunk_fixed_window_chunking_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_structure_aware_chunking",
+      "knowledge_node_id": "structure_aware_chunking",
+      "decision_question": "是否应在当前项目中增加或强化结构感知切分？",
+      "recommended_rule": "对结构清晰的手册、课程、API文档和制度文件优先采用；对无结构聊天记录可退回语义或窗口切分。",
+      "evidence_chunk_ids": [
+        "chunk_structure_aware_chunking_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_semantic_chunking",
+      "knowledge_node_id": "semantic_chunking",
+      "decision_question": "是否应在当前项目中增加或强化语义切分？",
+      "recommended_rule": "适合主题连续但标题稀疏的长文本。若结构感知切分已表现良好，不应仅为“高级”而引入语义切分。",
+      "evidence_chunk_ids": [
+        "chunk_semantic_chunking_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_parent_child_multigranular",
+      "knowledge_node_id": "parent_child_multigranular",
+      "decision_question": "是否应在当前项目中增加或强化父子与多粒度检索？",
+      "recommended_rule": "适合需要精确定位但答案依赖上下文的手册、长教程和法规。短FAQ库通常不需要复杂父子结构。",
+      "evidence_chunk_ids": [
+        "chunk_parent_child_multigranular_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_metadata_schema",
+      "knowledge_node_id": "metadata_schema",
+      "decision_question": "是否应在当前项目中增加或强化元数据Schema设计？",
+      "recommended_rule": "只保存业务确实使用的字段，避免过度建模；敏感元数据不应直接展示给终端用户。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_schema_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_embedding_fundamentals",
+      "knowledge_node_id": "embedding_fundamentals",
+      "decision_question": "是否应在当前项目中增加或强化文本嵌入基础？",
+      "recommended_rule": "嵌入是候选召回手段而非事实验证器。高风险答案仍需重排、证据检查和生成审核。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_fundamentals_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_embedding_model_selection",
+      "knowledge_node_id": "embedding_model_selection",
+      "decision_question": "是否应在当前项目中增加或强化嵌入模型选择？",
+      "recommended_rule": "比赛原型可选一个稳定多语模型作为基线，商业部署再根据数据与隐私决定API或本地模型。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_model_selection_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_similarity_metrics",
+      "knowledge_node_id": "similarity_metrics",
+      "decision_question": "是否应在当前项目中增加或强化向量相似度与归一化？",
+      "recommended_rule": "排序优先使用相对名次，拒答阈值需要在标注数据上校准；没有校准时不能声称某个固定分数代表“可信”。",
+      "evidence_chunk_ids": [
+        "chunk_similarity_metrics_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_vector_index_hnsw_ivf",
+      "knowledge_node_id": "vector_index_hnsw_ivf",
+      "decision_question": "是否应在当前项目中增加或强化向量索引与近似最近邻？",
+      "recommended_rule": "数据量较小时优先简单精确方案；规模增长后再采用ANN。索引选择还受过滤条件、更新频率和部署平台影响。",
+      "evidence_chunk_ids": [
+        "chunk_vector_index_hnsw_ivf_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_bm25_sparse_retrieval",
+      "knowledge_node_id": "bm25_sparse_retrieval",
+      "decision_question": "是否应在当前项目中增加或强化BM25与稀疏检索？",
+      "recommended_rule": "即使最终采用混合检索，也应保留BM25基线，用于判断复杂模型是否真正带来收益。",
+      "evidence_chunk_ids": [
+        "chunk_bm25_sparse_retrieval_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_dense_retrieval",
+      "knowledge_node_id": "dense_retrieval",
+      "decision_question": "是否应在当前项目中增加或强化稠密语义检索？",
+      "recommended_rule": "稠密检索适合自然语言查询，但不应默认替代稀疏检索；实际系统通常需要混合和重排。",
+      "evidence_chunk_ids": [
+        "chunk_dense_retrieval_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_hybrid_retrieval",
+      "knowledge_node_id": "hybrid_retrieval",
+      "decision_question": "是否应在当前项目中增加或强化混合检索？",
+      "recommended_rule": "混合检索适合企业文档、代码和术语混合场景。语料很小或查询单一时，复杂融合可能没有明显收益。",
+      "evidence_chunk_ids": [
+        "chunk_hybrid_retrieval_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_metadata_filtering",
+      "knowledge_node_id": "metadata_filtering",
+      "decision_question": "是否应在当前项目中增加或强化元数据过滤？",
+      "recommended_rule": "软偏好可作为重排特征，权限和版本必须作为硬过滤。空结果时应回退或提示，而不是取消权限条件。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_filtering_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_multi_query_expansion",
+      "knowledge_node_id": "multi_query_expansion",
+      "decision_question": "是否应在当前项目中增加或强化多查询与查询扩展？",
+      "recommended_rule": "只在长问题、歧义问题或基线召回不足时启用。精确编号查询通常不需要扩展。",
+      "evidence_chunk_ids": [
+        "chunk_multi_query_expansion_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_query_rewriting",
+      "knowledge_node_id": "query_rewriting",
+      "decision_question": "是否应在当前项目中增加或强化查询改写？",
+      "recommended_rule": "精确错误码、文件名和短关键词通常直接检索更好；改写模型置信度低时应保留原查询并并行检索。",
+      "evidence_chunk_ids": [
+        "chunk_query_rewriting_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_hyde_retrieval",
+      "knowledge_node_id": "hyde_retrieval",
+      "decision_question": "是否应在当前项目中增加或强化HyDE假设文档检索？",
+      "recommended_rule": "适合零样本语义检索困难且有强生成模型的场景。已有高质量领域嵌入或精确查询时不一定需要。",
+      "evidence_chunk_ids": [
+        "chunk_hyde_retrieval_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_cross_encoder_reranking",
+      "knowledge_node_id": "cross_encoder_reranking",
+      "decision_question": "是否应在当前项目中增加或强化交叉编码器重排序？",
+      "recommended_rule": "高价值问答和证据要求严格的场景优先使用；极低延迟或大批量查询可只在困难查询上启用。",
+      "evidence_chunk_ids": [
+        "chunk_cross_encoder_reranking_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_colbert_late_interaction",
+      "knowledge_node_id": "colbert_late_interaction",
+      "decision_question": "是否应在当前项目中增加或强化ColBERT晚交互检索？",
+      "recommended_rule": "适合需要高召回且可接受更高索引成本的检索系统；小规模比赛原型不是必选项。",
+      "evidence_chunk_ids": [
+        "chunk_colbert_late_interaction_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_diversity_mmr",
+      "knowledge_node_id": "diversity_mmr",
+      "decision_question": "是否应在当前项目中增加或强化MMR多样性选择？",
+      "recommended_rule": "适合多来源知识和概览型问题。对单一明确事实，应以相关性和权威性为主。",
+      "evidence_chunk_ids": [
+        "chunk_diversity_mmr_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_rank_fusion_rrf",
+      "knowledge_node_id": "rank_fusion_rrf",
+      "decision_question": "是否应在当前项目中增加或强化RRF名次融合？",
+      "recommended_rule": "适合先建立可靠混合基线。若有大量标注数据，可进一步学习融合权重，但必须保留可解释对照。",
+      "evidence_chunk_ids": [
+        "chunk_rank_fusion_rrf_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_context_selection_budget",
+      "knowledge_node_id": "context_selection_budget",
+      "decision_question": "是否应在当前项目中增加或强化上下文选择与Token预算？",
+      "recommended_rule": "高风险任务应减少证据数量并提高质量；综合报告可以使用分步摘要或多轮检索，而不是一次塞入全部资料。",
+      "evidence_chunk_ids": [
+        "chunk_context_selection_budget_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_lost_in_the_middle",
+      "knowledge_node_id": "lost_in_the_middle",
+      "decision_question": "是否应在当前项目中增加或强化长上下文位置效应？",
+      "recommended_rule": "不同模型行为不同，必须用目标模型实测。位置优化不能替代相关性和证据完整性。",
+      "evidence_chunk_ids": [
+        "chunk_lost_in_the_middle_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_prompt_grounding",
+      "knowledge_node_id": "prompt_grounding",
+      "decision_question": "是否应在当前项目中增加或强化证据约束提示词？",
+      "recommended_rule": "对于计算、权限、审批和安全判断，应由确定性代码执行，不能仅靠提示词约束。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_grounding_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_answer_abstention",
+      "knowledge_node_id": "answer_abstention",
+      "decision_question": "是否应在当前项目中增加或强化拒答与不确定性？",
+      "recommended_rule": "拒答策略应按风险分级。低风险教学解释可给出有限推断，高风险企业制度必须有明确证据。",
+      "evidence_chunk_ids": [
+        "chunk_answer_abstention_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_citation_generation_verification",
+      "knowledge_node_id": "citation_generation_verification",
+      "decision_question": "是否应在当前项目中增加或强化引用生成与验证？",
+      "recommended_rule": "对综合推理可使用多个证据，但应说明推理步骤；不能公开的内部来源只展示受控标识与摘要。",
+      "evidence_chunk_ids": [
+        "chunk_citation_generation_verification_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_hallucination_types",
+      "knowledge_node_id": "hallucination_types",
+      "decision_question": "是否应在当前项目中增加或强化幻觉类型与根因？",
+      "recommended_rule": "无法自动判断的高风险内容要进入人工审核。系统目标是测量并降低错误，而不是承诺绝对零幻觉。",
+      "evidence_chunk_ids": [
+        "chunk_hallucination_types_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_evidence_entailment",
+      "knowledge_node_id": "evidence_entailment",
+      "decision_question": "是否应在当前项目中增加或强化证据支持关系检查？",
+      "recommended_rule": "低风险内容可以自动通过，高风险结论需双重验证或人工确认。证据检查不等同于来源本身真实，来源治理仍是前提。",
+      "evidence_chunk_ids": [
+        "chunk_evidence_entailment_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_review_correction_loop",
+      "knowledge_node_id": "review_correction_loop",
+      "decision_question": "是否应在当前项目中增加或强化审核与纠偏闭环？",
+      "recommended_rule": "确定性Schema、引用存在性和权限检查应在模型审核前执行。审核Agent只处理需要语义判断的部分。",
+      "evidence_chunk_ids": [
+        "chunk_review_correction_loop_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_prompt_injection_defense",
+      "knowledge_node_id": "prompt_injection_defense",
+      "decision_question": "是否应在当前项目中增加或强化提示词注入防护？",
+      "recommended_rule": "只读问答风险低于可写工具Agent，但仍需防止数据泄露和错误引用。高权限场景应采用独立安全网关。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_injection_defense_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_sensitive_data_privacy",
+      "knowledge_node_id": "sensitive_data_privacy",
+      "decision_question": "是否应在当前项目中增加或强化敏感数据与隐私保护？",
+      "recommended_rule": "比赛阶段应全部使用虚拟学习者画像和可公开或授权的知识；企业试点再根据合同与法规配置保留策略。",
+      "evidence_chunk_ids": [
+        "chunk_sensitive_data_privacy_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_retrieval_metrics",
+      "knowledge_node_id": "retrieval_metrics",
+      "decision_question": "是否应在当前项目中增加或强化检索评测指标？",
+      "recommended_rule": "比赛可重点报告Recall@5、MRR和核心知识覆盖；生产系统还需按租户、版本和查询类型监控。",
+      "evidence_chunk_ids": [
+        "chunk_retrieval_metrics_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_generation_metrics",
+      "knowledge_node_id": "generation_metrics",
+      "decision_question": "是否应在当前项目中增加或强化生成质量指标？",
+      "recommended_rule": "比赛要求的幻觉率应先定义分母、错误类别和人工复核流程，不能仅引用框架默认分数。",
+      "evidence_chunk_ids": [
+        "chunk_generation_metrics_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_end_to_end_evaluation",
+      "knowledge_node_id": "end_to_end_evaluation",
+      "decision_question": "是否应在当前项目中增加或强化端到端RAG评测？",
+      "recommended_rule": "先建立可复现离线测试，再进行有限在线用户反馈。比赛指标与商业指标可共用底层数据，但目标阈值应明确。",
+      "evidence_chunk_ids": [
+        "chunk_end_to_end_evaluation_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_golden_dataset_design",
+      "knowledge_node_id": "golden_dataset_design",
+      "decision_question": "是否应在当前项目中增加或强化黄金评测集设计？",
+      "recommended_rule": "比赛文件要求至少完整测试方案和多画像用例，因此知识库应自带足量可复现案例，但最终指标必须由系统实测。",
+      "evidence_chunk_ids": [
+        "chunk_golden_dataset_design_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_online_monitoring_feedback",
+      "knowledge_node_id": "online_monitoring_feedback",
+      "decision_question": "是否应在当前项目中增加或强化在线监控与反馈？",
+      "recommended_rule": "反馈用于发现问题和构建评测案例，不应未经审核直接修改权威知识或自动提升内容可信等级。",
+      "evidence_chunk_ids": [
+        "chunk_online_monitoring_feedback_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_agentic_rag",
+      "knowledge_node_id": "agentic_rag",
+      "decision_question": "是否应在当前项目中增加或强化Agentic RAG？",
+      "recommended_rule": "简单FAQ不需要Agentic RAG。仅在多源、复杂任务或证据不足需迭代时使用，并与固定流程基线比较。",
+      "evidence_chunk_ids": [
+        "chunk_agentic_rag_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_self_rag",
+      "knowledge_node_id": "self_rag",
+      "decision_question": "是否应在当前项目中增加或强化Self-RAG自反思检索生成？",
+      "recommended_rule": "比赛系统可实现可解释的规则+审核Agent近似闭环，避免把高级论文名称当作未经验证的功能。",
+      "evidence_chunk_ids": [
+        "chunk_self_rag_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_corrective_rag",
+      "knowledge_node_id": "corrective_rag",
+      "decision_question": "是否应在当前项目中增加或强化Corrective RAG？",
+      "recommended_rule": "适合关键问题和多源系统。企业私有知识不能因失败就自动搜索公网并混入正式答案。",
+      "evidence_chunk_ids": [
+        "chunk_corrective_rag_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_graph_rag",
+      "knowledge_node_id": "graph_rag",
+      "decision_question": "是否应在当前项目中增加或强化Graph RAG？",
+      "recommended_rule": "关系密集、跨文档推理需求明确时才采用。RAG工程实训本身可将知识点前置关系做轻量图，无需一开始构建复杂企业知识图谱。",
+      "evidence_chunk_ids": [
+        "chunk_graph_rag_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_tool_routing_multi_source",
+      "knowledge_node_id": "tool_routing_multi_source",
+      "decision_question": "是否应在当前项目中增加或强化多源路由与工具选择？",
+      "recommended_rule": "比赛阶段可实现少量受控工具路由，商业化后再增加企业连接器。写操作必须与只读检索分离并增加审批。",
+      "evidence_chunk_ids": [
+        "chunk_tool_routing_multi_source_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_observability_tracing",
+      "knowledge_node_id": "observability_tracing",
+      "decision_question": "是否应在当前项目中增加或强化可观测性与链路追踪？",
+      "recommended_rule": "比赛原型至少应展示决策轨迹和证据链；生产系统再接入标准可观测平台与告警。",
+      "evidence_chunk_ids": [
+        "chunk_observability_tracing_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_latency_cost_optimization",
+      "knowledge_node_id": "latency_cost_optimization",
+      "decision_question": "是否应在当前项目中增加或强化延迟与成本优化？",
+      "recommended_rule": "设定质量底线和预算上限，按场景分级。比赛演示优先稳定，商业系统再做容量与成本工程。",
+      "evidence_chunk_ids": [
+        "chunk_latency_cost_optimization_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_caching_idempotency",
+      "knowledge_node_id": "caching_idempotency",
+      "decision_question": "是否应在当前项目中增加或强化缓存与幂等？",
+      "recommended_rule": "高风险回答可以只缓存检索候选，不缓存最终生成；涉及用户画像的结果必须包含profile_version。",
+      "evidence_chunk_ids": [
+        "chunk_caching_idempotency_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_deployment_fallback",
+      "knowledge_node_id": "deployment_fallback",
+      "decision_question": "是否应在当前项目中增加或强化部署与降级？",
+      "recommended_rule": "关键企业规则不应在降级时绕过审核或权限。比赛演示准备离线Mock降级仅用于保证流程展示，并必须标明。",
+      "evidence_chunk_ids": [
+        "chunk_deployment_fallback_boundary"
+      ]
+    },
+    {
+      "boundary_case_id": "boundary_continuous_updates_regression",
+      "knowledge_node_id": "continuous_updates_regression",
+      "decision_question": "是否应在当前项目中增加或强化持续更新与回归？",
+      "recommended_rule": "评测集也要版本化，并防止开发者针对测试答案过拟合。商业客户可拥有独立回归集和发布审批。",
+      "evidence_chunk_ids": [
+        "chunk_continuous_updates_regression_boundary"
+      ]
+    }
+  ]
+}

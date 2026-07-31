@@ -1,0 +1,27 @@
+workflow_key: structured_knowledge_maintenance
+version: 7.0.0
+agentless_mvp: true
+states:
+- import_received
+- schema_validating
+- diffing
+- review_queue_created
+- reviewing
+- reindexing
+- regression_testing
+- ready_to_publish
+- published
+- rejected
+- rolled_back
+allowed_imports:
+- domain_pack_zip
+- json_bundle
+- jsonl_bundle
+- csv_bundle
+- markdown_bundle
+rules:
+- no automatic publication
+- dry-run required before write
+- published version is immutable
+- activation is separate from publication
+- all changes retain provenance

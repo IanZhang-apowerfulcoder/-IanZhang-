@@ -1,0 +1,1286 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "error_case_id": "err_rag_definition_pitfall",
+      "knowledge_node_id": "rag_definition",
+      "symptom": "RAG基本定义环节结果不稳定或质量下降。",
+      "root_cause": "常见误区是把向量数据库等同于RAG，或认为接入知识库后就不会幻觉。若检索不到正确证据、上下文被截断或模型无视证据，仍会产生错误。",
+      "repair_guidance": "最小实现包含查询输入、检索器、候选证据、上下文构造、生成器和引用输出。先用一个小而可靠的知识库和固定问题集建立基线，再逐步增加查询改写、混合检索和重排序。",
+      "evidence_chunk_ids": [
+        "chunk_rag_definition_engineering",
+        "chunk_rag_definition_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_rag_definition_overengineering",
+      "knowledge_node_id": "rag_definition",
+      "symptom": "团队增加了RAG基本定义复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "对完全不依赖外部事实的创意写作、闲聊或纯计算任务，RAG未必有收益；对高风险答案，RAG也不能替代人工审核和业务规则。",
+      "evidence_chunk_ids": [
+        "chunk_rag_definition_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_rag_end_to_end_architecture_pitfall",
+      "knowledge_node_id": "rag_end_to_end_architecture",
+      "symptom": "RAG端到端架构环节结果不稳定或质量下降。",
+      "root_cause": "只记录最终答案会导致故障无法定位；知识库更新后不做回归，会出现旧问题突然失效；离线与在线使用不同切分或嵌入版本也会造成不一致。",
+      "repair_guidance": "建议为每次请求创建correlation_id，并保存query、retrieved_chunk_ids、scores、reranked_order、prompt_version、model_version、answer和latency。离线索引也要记录knowledge_base_version_id，保证结果可复现。",
+      "evidence_chunk_ids": [
+        "chunk_rag_end_to_end_architecture_engineering",
+        "chunk_rag_end_to_end_architecture_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_rag_end_to_end_architecture_overengineering",
+      "knowledge_node_id": "rag_end_to_end_architecture",
+      "symptom": "团队增加了RAG端到端架构复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "比赛原型可将模块部署在同一后端中，但接口和数据边界仍应明确；商业化后再按吞吐、隔离和运维需求拆分服务。",
+      "evidence_chunk_ids": [
+        "chunk_rag_end_to_end_architecture_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_parametric_nonparametric_memory_pitfall",
+      "knowledge_node_id": "parametric_nonparametric_memory",
+      "symptom": "参数记忆与外部记忆环节结果不稳定或质量下降。",
+      "root_cause": "把模型记忆当成权威来源会造成过时或不可审计的答案；反过来，要求每个常识词都必须检索，会增加延迟并降低自然度。",
+      "repair_guidance": "对事实性字段、企业规则和时效内容，应要求答案由外部证据支持；对语言组织、解释和概括，可利用模型能力。提示词中要明确哪些内容允许推理，哪些内容必须逐项引用。",
+      "evidence_chunk_ids": [
+        "chunk_parametric_nonparametric_memory_engineering",
+        "chunk_parametric_nonparametric_memory_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_parametric_nonparametric_memory_overengineering",
+      "knowledge_node_id": "parametric_nonparametric_memory",
+      "symptom": "团队增加了参数记忆与外部记忆复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "在证据不足时应拒答或请求补充资料，而不是让参数记忆补齐企业内部事实。",
+      "evidence_chunk_ids": [
+        "chunk_parametric_nonparametric_memory_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_rag_applicability_pitfall",
+      "knowledge_node_id": "rag_applicability",
+      "symptom": "RAG适用性判断环节结果不稳定或质量下降。",
+      "root_cause": "为了“使用AI”而上RAG会制造不必要复杂度；没有可靠知识源时，系统只能把低质量内容检索得更快；没有评测集时也无法证明RAG有效。",
+      "repair_guidance": "先用决策表评估：是否有可靠语料、是否能定义正确答案、是否要求引用、是否需要实时数据、是否涉及工具执行。简单FAQ可用稀疏或混合检索；跨文档关系问题可能需要图结构或多步检索。",
+      "evidence_chunk_ids": [
+        "chunk_rag_applicability_engineering",
+        "chunk_rag_applicability_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_rag_applicability_overengineering",
+      "knowledge_node_id": "rag_applicability",
+      "symptom": "团队增加了RAG适用性判断复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "实时交易、复杂计算或需要写入外部系统的任务，通常还需要工具调用、规则引擎或人工审批，不能仅依靠RAG。",
+      "evidence_chunk_ids": [
+        "chunk_rag_applicability_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_rag_failure_taxonomy_pitfall",
+      "knowledge_node_id": "rag_failure_taxonomy",
+      "symptom": "RAG失败类型环节结果不稳定或质量下降。",
+      "root_cause": "看到答案错误就盲目更换大模型，可能掩盖真正的检索缺陷；只看Recall@K也无法说明生成是否忠实；只看人工主观评分则难以回归。",
+      "repair_guidance": "建立错误案例表，至少记录问题、期望证据、实际证据、回答、错误阶段、根因和修复动作。评测报告应分别呈现检索指标和生成指标，避免用一个总分掩盖问题。",
+      "evidence_chunk_ids": [
+        "chunk_rag_failure_taxonomy_engineering",
+        "chunk_rag_failure_taxonomy_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_rag_failure_taxonomy_overengineering",
+      "knowledge_node_id": "rag_failure_taxonomy",
+      "symptom": "团队增加了RAG失败类型复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "根因无法确定时，先固定生成模型与提示词，对检索进行离线复现；再固定检索结果检查生成行为，逐段隔离问题。",
+      "evidence_chunk_ids": [
+        "chunk_rag_failure_taxonomy_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_knowledge_source_selection_pitfall",
+      "knowledge_node_id": "knowledge_source_selection",
+      "symptom": "知识源选择环节结果不稳定或质量下降。",
+      "root_cause": "把搜索结果、营销文章和未经审核的聊天记录直接混入正式知识库，会降低权威性；只追求文档数量也会引入重复、冲突和噪声。",
+      "repair_guidance": "建立来源登记表：source_id、标题、URI或文件标识、版本、发布时间、权限级别、许可说明、审核人和失效日期。导入前先做覆盖映射，确认每个核心知识点至少有可追溯来源。",
+      "evidence_chunk_ids": [
+        "chunk_knowledge_source_selection_engineering",
+        "chunk_knowledge_source_selection_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_knowledge_source_selection_overengineering",
+      "knowledge_node_id": "knowledge_source_selection",
+      "symptom": "团队增加了知识源选择复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "来源存在冲突时，应定义优先级并保留冲突记录；无法确认授权或真实性的材料只能作为待审核种子，不能用于正式高风险结论。",
+      "evidence_chunk_ids": [
+        "chunk_knowledge_source_selection_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_source_authority_provenance_pitfall",
+      "knowledge_node_id": "source_authority_provenance",
+      "symptom": "来源权威性与溯源环节结果不稳定或质量下降。",
+      "root_cause": "只有链接没有版本或段落位置，知识更新后就无法复现；引用一篇相关文档但证据并不支持具体结论，也属于错误引用。",
+      "repair_guidance": "片段元数据至少保存source_title、source_uri、source_locator、authority_level和content_hash。生成阶段输出引用编号，审核阶段验证引用存在、内容相关且确实支持结论。",
+      "evidence_chunk_ids": [
+        "chunk_source_authority_provenance_engineering",
+        "chunk_source_authority_provenance_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_source_authority_provenance_overengineering",
+      "knowledge_node_id": "source_authority_provenance",
+      "symptom": "团队增加了来源权威性与溯源复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "对内部保密资料可以隐藏外部URI，但仍需保存内部文档编号和位置；对无法公开的证据，前端可展示受控摘要而非原文。",
+      "evidence_chunk_ids": [
+        "chunk_source_authority_provenance_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_versioning_freshness_pitfall",
+      "knowledge_node_id": "versioning_freshness",
+      "symptom": "版本与时效治理环节结果不稳定或质量下降。",
+      "root_cause": "直接覆盖旧片段会使历史答案无法解释；只看文件修改时间会误判内容时效；索引版本和元数据版本不一致会返回已删除或无权限内容。",
+      "repair_guidance": "为来源设置valid_from、valid_to或review_due_at；构建增量更新流程，变更后只重建受影响片段和索引，并运行固定回归集。生产环境保留当前版本和至少一个可回滚版本。",
+      "evidence_chunk_ids": [
+        "chunk_versioning_freshness_engineering",
+        "chunk_versioning_freshness_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_versioning_freshness_overengineering",
+      "knowledge_node_id": "versioning_freshness",
+      "symptom": "团队增加了版本与时效治理复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "对时间敏感问题，应在检索阶段加入时间过滤或新鲜度排序；系统不能自动确认的时效内容，应在回答中说明数据截止时间。",
+      "evidence_chunk_ids": [
+        "chunk_versioning_freshness_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_licensing_compliance_pitfall",
+      "knowledge_node_id": "licensing_compliance",
+      "symptom": "许可与合规环节结果不稳定或质量下降。",
+      "root_cause": "忽略许可会导致商业化风险；把隐私字段写入向量或日志，可能在检索和调试中泄露；仅靠前端隐藏不能实现真正隔离。",
+      "repair_guidance": "导入流程增加许可确认与敏感信息扫描；对外展示时优先提供短引用和来源定位，避免大段复制；企业资料按租户隔离并记录访问日志。",
+      "evidence_chunk_ids": [
+        "chunk_licensing_compliance_engineering",
+        "chunk_licensing_compliance_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_licensing_compliance_overengineering",
+      "knowledge_node_id": "licensing_compliance",
+      "symptom": "团队增加了许可与合规复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "无法确认许可的来源只用于内部评测或等待授权，不得标记为企业正式知识；涉及法律、医疗或安全规范时应增加专业审批。",
+      "evidence_chunk_ids": [
+        "chunk_licensing_compliance_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_access_control_tenant_isolation_pitfall",
+      "knowledge_node_id": "access_control_tenant_isolation",
+      "symptom": "权限过滤与多租户隔离环节结果不稳定或质量下降。",
+      "root_cause": "在一个共享索引中遗漏过滤条件会造成严重串库；把权限信息仅放在提示词中无法阻止模型看到数据；缓存键缺少租户编号也会泄露结果。",
+      "repair_guidance": "服务端从认证上下文获取organization_id，而不是信任客户端提交；数据库可使用行级安全策略，向量检索与关键词检索必须使用同一过滤条件；跨租户测试应进入自动回归。",
+      "evidence_chunk_ids": [
+        "chunk_access_control_tenant_isolation_engineering",
+        "chunk_access_control_tenant_isolation_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_access_control_tenant_isolation_overengineering",
+      "knowledge_node_id": "access_control_tenant_isolation",
+      "symptom": "团队增加了权限过滤与多租户隔离复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "高敏感场景可采用物理隔离索引或独立部署；共享索引适合成本敏感场景，但必须有强制过滤、审计和越权测试。",
+      "evidence_chunk_ids": [
+        "chunk_access_control_tenant_isolation_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_document_parsing_pitfall",
+      "knowledge_node_id": "document_parsing",
+      "symptom": "文档解析环节结果不稳定或质量下降。",
+      "root_cause": "直接按PDF文本顺序读取可能打乱双栏、页眉页脚和表格；解析失败却继续建库，会把乱码和缺失内容变成错误知识。",
+      "repair_guidance": "为每种格式建立解析器适配层，输出统一中间结构；保存原始文件哈希、解析器版本和解析告警。扫描件需要OCR，但OCR结果应标记置信度并抽样复核。",
+      "evidence_chunk_ids": [
+        "chunk_document_parsing_engineering",
+        "chunk_document_parsing_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_document_parsing_overengineering",
+      "knowledge_node_id": "document_parsing",
+      "symptom": "团队增加了文档解析复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "比赛内置知识包可直接交付结构化内容，企业模式再逐步支持原始文档解析；对复杂表格和图纸，应保留人工确认入口。",
+      "evidence_chunk_ids": [
+        "chunk_document_parsing_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_layout_table_extraction_pitfall",
+      "knowledge_node_id": "layout_table_extraction",
+      "symptom": "版面与表格提取环节结果不稳定或质量下降。",
+      "root_cause": "丢失单位、表头或合并单元格会让生成答案产生严重误差；将每个单元格独立向量化会失去上下文；把代码与说明混排会降低检索精度。",
+      "repair_guidance": "为表格生成表名、字段名、单位和行键；检索时可以同时保存自然语言摘要与原始结构。代码块需保持缩进和语言标签，图表应保存说明与来源位置。",
+      "evidence_chunk_ids": [
+        "chunk_layout_table_extraction_engineering",
+        "chunk_layout_table_extraction_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_layout_table_extraction_overengineering",
+      "knowledge_node_id": "layout_table_extraction",
+      "symptom": "团队增加了版面与表格提取复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "高度依赖图像或空间关系的内容仅靠文本RAG不够，应引入多模态解析或把人工生成的结构化说明作为权威来源。",
+      "evidence_chunk_ids": [
+        "chunk_layout_table_extraction_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_text_cleaning_normalization_pitfall",
+      "knowledge_node_id": "text_cleaning_normalization",
+      "symptom": "文本清洗与规范化环节结果不稳定或质量下降。",
+      "root_cause": "过度清洗会删除负号、版本号、函数名或表格分隔符；不同语言使用同一规则可能破坏分词；清洗后不重新计算哈希会导致版本不一致。",
+      "repair_guidance": "先生成原始文本与清洗文本对照，统计字符损失率和异常符号；对日期、全角半角、Unicode和换行做标准化；保留source_locator以便回查。",
+      "evidence_chunk_ids": [
+        "chunk_text_cleaning_normalization_engineering",
+        "chunk_text_cleaning_normalization_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_text_cleaning_normalization_overengineering",
+      "knowledge_node_id": "text_cleaning_normalization",
+      "symptom": "团队增加了文本清洗与规范化复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "对正式规范和代码文档，应采用保守清洗；对论坛或日志可采用更强去噪，但需明确不作为最高权威来源。",
+      "evidence_chunk_ids": [
+        "chunk_text_cleaning_normalization_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_deduplication_pitfall",
+      "knowledge_node_id": "deduplication",
+      "symptom": "内容去重环节结果不稳定或质量下降。",
+      "root_cause": "仅按相似度删除可能误删不同版本的关键差异；不保留来源映射会破坏溯源；重复阈值过低会把同主题的互补内容合并。",
+      "repair_guidance": "文件级先比较哈希，片段级可使用规范化文本哈希、MinHash或嵌入相似度；保留canonical_chunk_id和duplicate_of关系，而不是直接丢弃所有副本。",
+      "evidence_chunk_ids": [
+        "chunk_deduplication_engineering",
+        "chunk_deduplication_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_deduplication_overengineering",
+      "knowledge_node_id": "deduplication",
+      "symptom": "团队增加了内容去重复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "多来源一致内容可保留一个主片段并关联多个source_id；法律或制度版本应按版本治理，不能只当作重复文本。",
+      "evidence_chunk_ids": [
+        "chunk_deduplication_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_document_quality_checks_pitfall",
+      "knowledge_node_id": "document_quality_checks",
+      "symptom": "文档质量门禁环节结果不稳定或质量下降。",
+      "root_cause": "仅判断“文件能打开”不能说明内容可用；把质量分平均后可能掩盖一个严重缺页；没有阻断级别会让低质量数据进入索引。",
+      "repair_guidance": "生成machine-readable质量报告，列出阻断问题和警告；抽样对比原文与解析结果；对扫描件、表格密集文档和低置信OCR提高抽样比例。",
+      "evidence_chunk_ids": [
+        "chunk_document_quality_checks_engineering",
+        "chunk_document_quality_checks_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_document_quality_checks_overengineering",
+      "knowledge_node_id": "document_quality_checks",
+      "symptom": "团队增加了文档质量门禁复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "不同文档类型应使用不同阈值；比赛知识包可重点验证结构和引用完整性，企业原始资料还需增加许可与敏感信息检查。",
+      "evidence_chunk_ids": [
+        "chunk_document_quality_checks_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_chunking_objectives_pitfall",
+      "knowledge_node_id": "chunking_objectives",
+      "symptom": "文档切分目标环节结果不稳定或质量下降。",
+      "root_cause": "盲目使用固定字符数会截断定义、步骤或表格；重叠过大造成重复检索和成本上升；片段过长使相关信息被无关内容稀释。",
+      "repair_guidance": "先按文档结构形成基础块，再根据模型上下文、查询类型和评测结果调整大小与重叠。记录chunk_strategy、token_count和parent_chunk_id，使用固定查询集比较不同方案。",
+      "evidence_chunk_ids": [
+        "chunk_chunking_objectives_engineering",
+        "chunk_chunking_objectives_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_chunking_objectives_overengineering",
+      "knowledge_node_id": "chunking_objectives",
+      "symptom": "团队增加了文档切分目标复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "不存在通用最佳长度。合同条款、代码、FAQ和长教程需要不同策略，最终选择必须由检索与生成评测共同决定。",
+      "evidence_chunk_ids": [
+        "chunk_chunking_objectives_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_fixed_window_chunking_pitfall",
+      "knowledge_node_id": "fixed_window_chunking",
+      "symptom": "固定窗口切分环节结果不稳定或质量下降。",
+      "root_cause": "固定窗口不理解标题、句子和代码边界，可能把步骤或定义切断。中文字符与Token比例也随模型变化，不能用固定经验值代替测量。",
+      "repair_guidance": "工程上应以Token而非字符估计模型上下文成本；保存chunk_start、chunk_end和overlap_size；先用多个窗口大小做离线对比。",
+      "evidence_chunk_ids": [
+        "chunk_fixed_window_chunking_engineering",
+        "chunk_fixed_window_chunking_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_fixed_window_chunking_overengineering",
+      "knowledge_node_id": "fixed_window_chunking",
+      "symptom": "团队增加了固定窗口切分复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "适合结构弱、内容较均匀的文本和快速基线；对表格、代码、制度条款或层级文档，通常应使用结构感知方案。",
+      "evidence_chunk_ids": [
+        "chunk_fixed_window_chunking_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_structure_aware_chunking_pitfall",
+      "knowledge_node_id": "structure_aware_chunking",
+      "symptom": "结构感知切分环节结果不稳定或质量下降。",
+      "root_cause": "标题解析错误会放大到所有片段；只按标题切分可能产生极短或超长块；将标题重复写入正文会增加索引噪声。",
+      "repair_guidance": "解析器先输出文档树，再按节点大小合并或拆分；标题路径加入metadata或上下文前缀；表格和代码块原则上保持完整。",
+      "evidence_chunk_ids": [
+        "chunk_structure_aware_chunking_engineering",
+        "chunk_structure_aware_chunking_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_structure_aware_chunking_overengineering",
+      "knowledge_node_id": "structure_aware_chunking",
+      "symptom": "团队增加了结构感知切分复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "对结构清晰的手册、课程、API文档和制度文件优先采用；对无结构聊天记录可退回语义或窗口切分。",
+      "evidence_chunk_ids": [
+        "chunk_structure_aware_chunking_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_semantic_chunking_pitfall",
+      "knowledge_node_id": "semantic_chunking",
+      "symptom": "语义切分环节结果不稳定或质量下降。",
+      "root_cause": "阈值对领域和模型敏感；计算成本高；对短句、列表和代码语义不稳定；如果缺少结构约束，可能生成大小极不均匀的片段。",
+      "repair_guidance": "先分句并生成局部嵌入，使用阈值或聚类寻找边界；必须设置长度上下限和结构保护规则，并在目标查询集上验证收益。",
+      "evidence_chunk_ids": [
+        "chunk_semantic_chunking_engineering",
+        "chunk_semantic_chunking_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_semantic_chunking_overengineering",
+      "knowledge_node_id": "semantic_chunking",
+      "symptom": "团队增加了语义切分复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "适合主题连续但标题稀疏的长文本。若结构感知切分已表现良好，不应仅为“高级”而引入语义切分。",
+      "evidence_chunk_ids": [
+        "chunk_semantic_chunking_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_parent_child_multigranular_pitfall",
+      "knowledge_node_id": "parent_child_multigranular",
+      "symptom": "父子与多粒度检索环节结果不稳定或质量下降。",
+      "root_cause": "无条件返回整个父块会挤占上下文；多个子块映射到同一父块时若不去重会重复；父块更新但子块未重建会产生版本错配。",
+      "repair_guidance": "为每个子块保存parent_chunk_id和section_path；检索命中子块后按去重规则扩展父块；控制扩展后的Token预算并保留命中位置。",
+      "evidence_chunk_ids": [
+        "chunk_parent_child_multigranular_engineering",
+        "chunk_parent_child_multigranular_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_parent_child_multigranular_overengineering",
+      "knowledge_node_id": "parent_child_multigranular",
+      "symptom": "团队增加了父子与多粒度检索复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "适合需要精确定位但答案依赖上下文的手册、长教程和法规。短FAQ库通常不需要复杂父子结构。",
+      "evidence_chunk_ids": [
+        "chunk_parent_child_multigranular_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_metadata_schema_pitfall",
+      "knowledge_node_id": "metadata_schema",
+      "symptom": "元数据Schema设计环节结果不稳定或质量下降。",
+      "root_cause": "自由文本标签会产生同义词和拼写漂移；遗漏版本或权限字段会破坏复现与隔离；把所有元数据都塞入向量文本会降低语义质量。",
+      "repair_guidance": "字段应有统一类型、枚举和缺省规则；在向量库、关键词索引和数据库之间保持一致；为高频过滤字段建立索引，并在契约中冻结跨模块名称。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_schema_engineering",
+        "chunk_metadata_schema_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_metadata_schema_overengineering",
+      "knowledge_node_id": "metadata_schema",
+      "symptom": "团队增加了元数据Schema设计复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "只保存业务确实使用的字段，避免过度建模；敏感元数据不应直接展示给终端用户。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_schema_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_embedding_fundamentals_pitfall",
+      "knowledge_node_id": "embedding_fundamentals",
+      "symptom": "文本嵌入基础环节结果不稳定或质量下降。",
+      "root_cause": "不同模型向量不能混用；只看维度不能判断质量；语义近并不总等于能回答问题，尤其是编号、代码和精确术语。",
+      "repair_guidance": "分别编码query与passage时要使用模型推荐前缀或任务类型；固定模型名称、维度和归一化设置；索引与查询必须使用兼容编码器。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_fundamentals_engineering",
+        "chunk_embedding_fundamentals_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_embedding_fundamentals_overengineering",
+      "knowledge_node_id": "embedding_fundamentals",
+      "symptom": "团队增加了文本嵌入基础复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "嵌入是候选召回手段而非事实验证器。高风险答案仍需重排、证据检查和生成审核。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_fundamentals_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_embedding_model_selection_pitfall",
+      "knowledge_node_id": "embedding_model_selection",
+      "symptom": "嵌入模型选择环节结果不稳定或质量下降。",
+      "root_cause": "只选排行榜第一名可能在本领域退化；更高维度增加存储但不保证更好；模型升级未重建索引会导致查询与文档向量不兼容。",
+      "repair_guidance": "建立小规模A/B：同一语料、同一切分和索引，比较Recall@K、MRR、延迟、存储和成本；对中文和中英混合查询单独统计。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_model_selection_engineering",
+        "chunk_embedding_model_selection_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_embedding_model_selection_overengineering",
+      "knowledge_node_id": "embedding_model_selection",
+      "symptom": "团队增加了嵌入模型选择复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "比赛原型可选一个稳定多语模型作为基线，商业部署再根据数据与隐私决定API或本地模型。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_model_selection_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_similarity_metrics_pitfall",
+      "knowledge_node_id": "similarity_metrics",
+      "symptom": "向量相似度与归一化环节结果不稳定或质量下降。",
+      "root_cause": "归一化设置不一致会造成线上召回异常；把相似度分数当概率会误设阈值；不同查询类型的分数分布也可能不同。",
+      "repair_guidance": "在建库时记录normalization与distance_metric；用已知正负样本检查分数分布；不要跨不同指标直接复用阈值。",
+      "evidence_chunk_ids": [
+        "chunk_similarity_metrics_engineering",
+        "chunk_similarity_metrics_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_similarity_metrics_overengineering",
+      "knowledge_node_id": "similarity_metrics",
+      "symptom": "团队增加了向量相似度与归一化复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "排序优先使用相对名次，拒答阈值需要在标注数据上校准；没有校准时不能声称某个固定分数代表“可信”。",
+      "evidence_chunk_ids": [
+        "chunk_similarity_metrics_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_vector_index_hnsw_ivf_pitfall",
+      "knowledge_node_id": "vector_index_hnsw_ivf",
+      "symptom": "向量索引与近似最近邻环节结果不稳定或质量下降。",
+      "root_cause": "只测延迟不测召回会得到“快但错”的索引；索引参数从样例数据复制到生产规模可能失效；删除和增量更新策略也需验证。",
+      "repair_guidance": "用固定查询集测量Recall@K、P95延迟、索引构建时间和内存；分别调节HNSW的构建/搜索参数或IVF的探测数量；保留精确搜索作为上限对照。",
+      "evidence_chunk_ids": [
+        "chunk_vector_index_hnsw_ivf_engineering",
+        "chunk_vector_index_hnsw_ivf_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_vector_index_hnsw_ivf_overengineering",
+      "knowledge_node_id": "vector_index_hnsw_ivf",
+      "symptom": "团队增加了向量索引与近似最近邻复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "数据量较小时优先简单精确方案；规模增长后再采用ANN。索引选择还受过滤条件、更新频率和部署平台影响。",
+      "evidence_chunk_ids": [
+        "chunk_vector_index_hnsw_ivf_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_bm25_sparse_retrieval_pitfall",
+      "knowledge_node_id": "bm25_sparse_retrieval",
+      "symptom": "BM25与稀疏检索环节结果不稳定或质量下降。",
+      "root_cause": "中文分词错误会破坏召回；过度停用会删除有意义短词；仅靠BM25难以处理同义表达和语义改写。",
+      "repair_guidance": "建立合适分词、停用词和字段权重；标题、代码和正文可使用不同权重；记录BM25分数但不要把它直接与向量分数相加，除非经过归一化或融合。",
+      "evidence_chunk_ids": [
+        "chunk_bm25_sparse_retrieval_engineering",
+        "chunk_bm25_sparse_retrieval_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_bm25_sparse_retrieval_overengineering",
+      "knowledge_node_id": "bm25_sparse_retrieval",
+      "symptom": "团队增加了BM25与稀疏检索复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "即使最终采用混合检索，也应保留BM25基线，用于判断复杂模型是否真正带来收益。",
+      "evidence_chunk_ids": [
+        "chunk_bm25_sparse_retrieval_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_dense_retrieval_pitfall",
+      "knowledge_node_id": "dense_retrieval",
+      "symptom": "稠密语义检索环节结果不稳定或质量下降。",
+      "root_cause": "语义相似不等于事实可回答；短编号和拼写变体可能被忽略；域外查询可能召回主题相关但答案错误的片段。",
+      "repair_guidance": "离线批量生成文档向量，在线编码查询并执行top_k搜索；保存模型版本和索引版本；对正例、难负例和无答案查询分别评测。",
+      "evidence_chunk_ids": [
+        "chunk_dense_retrieval_engineering",
+        "chunk_dense_retrieval_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_dense_retrieval_overengineering",
+      "knowledge_node_id": "dense_retrieval",
+      "symptom": "团队增加了稠密语义检索复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "稠密检索适合自然语言查询，但不应默认替代稀疏检索；实际系统通常需要混合和重排。",
+      "evidence_chunk_ids": [
+        "chunk_dense_retrieval_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_hybrid_retrieval_pitfall",
+      "knowledge_node_id": "hybrid_retrieval",
+      "symptom": "混合检索环节结果不稳定或质量下降。",
+      "root_cause": "直接相加不同尺度分数会产生偏置；固定权重可能只适合某类查询；两个通道都返回同一错误来源时，融合不会自动纠正。",
+      "repair_guidance": "分别运行BM25与向量检索，保留各自top_k和通道信息；先用RRF建立稳定基线，再通过标注查询调整权重；融合后仍需去重和重排。",
+      "evidence_chunk_ids": [
+        "chunk_hybrid_retrieval_engineering",
+        "chunk_hybrid_retrieval_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_hybrid_retrieval_overengineering",
+      "knowledge_node_id": "hybrid_retrieval",
+      "symptom": "团队增加了混合检索复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "混合检索适合企业文档、代码和术语混合场景。语料很小或查询单一时，复杂融合可能没有明显收益。",
+      "evidence_chunk_ids": [
+        "chunk_hybrid_retrieval_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_metadata_filtering_pitfall",
+      "knowledge_node_id": "metadata_filtering",
+      "symptom": "元数据过滤环节结果不稳定或质量下降。",
+      "root_cause": "把用户自由文本直接拼接到过滤语句会引入注入风险；索引不支持高效过滤时会造成性能下降；标签缺失会让正确内容被排除。",
+      "repair_guidance": "服务端生成过滤表达式并做白名单校验；向量与关键词通道使用一致过滤；统计过滤前后候选数量，避免过严条件导致空结果。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_filtering_engineering",
+        "chunk_metadata_filtering_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_metadata_filtering_overengineering",
+      "knowledge_node_id": "metadata_filtering",
+      "symptom": "团队增加了元数据过滤复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "软偏好可作为重排特征，权限和版本必须作为硬过滤。空结果时应回退或提示，而不是取消权限条件。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_filtering_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_multi_query_expansion_pitfall",
+      "knowledge_node_id": "multi_query_expansion",
+      "symptom": "多查询与查询扩展环节结果不稳定或质量下降。",
+      "root_cause": "过多查询会放大延迟与噪声；模型可能错误扩展概念；如果把生成的假设答案当作事实，会引入幻觉。",
+      "repair_guidance": "限制查询数量并记录原查询与派生查询；对每个查询独立检索，使用RRF或去重融合；对派生查询进行安全和范围校验。",
+      "evidence_chunk_ids": [
+        "chunk_multi_query_expansion_engineering",
+        "chunk_multi_query_expansion_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_multi_query_expansion_overengineering",
+      "knowledge_node_id": "multi_query_expansion",
+      "symptom": "团队增加了多查询与查询扩展复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "只在长问题、歧义问题或基线召回不足时启用。精确编号查询通常不需要扩展。",
+      "evidence_chunk_ids": [
+        "chunk_multi_query_expansion_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_query_rewriting_pitfall",
+      "knowledge_node_id": "query_rewriting",
+      "symptom": "查询改写环节结果不稳定或质量下降。",
+      "root_cause": "过度改写会改变问题；将模型猜测的产品或版本写入查询会误导检索；携带过多历史对话会引入无关信息。",
+      "repair_guidance": "输入原问题、必要会话摘要和允许的领域词典，输出standalone_query、keywords和filters；保存原查询用于审计，并在评测中比较改写前后召回。",
+      "evidence_chunk_ids": [
+        "chunk_query_rewriting_engineering",
+        "chunk_query_rewriting_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_query_rewriting_overengineering",
+      "knowledge_node_id": "query_rewriting",
+      "symptom": "团队增加了查询改写复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "精确错误码、文件名和短关键词通常直接检索更好；改写模型置信度低时应保留原查询并并行检索。",
+      "evidence_chunk_ids": [
+        "chunk_query_rewriting_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_hyde_retrieval_pitfall",
+      "knowledge_node_id": "hyde_retrieval",
+      "symptom": "HyDE假设文档检索环节结果不稳定或质量下降。",
+      "root_cause": "假设文档可能带偏检索，尤其在领域术语不熟或问题含错误前提时；生成成本和延迟也更高。",
+      "repair_guidance": "保存hypothetical_document并仅用于向量检索；与原查询检索并行，合并后由真实证据和重排决定候选；必须禁止直接引用假设文本。",
+      "evidence_chunk_ids": [
+        "chunk_hyde_retrieval_engineering",
+        "chunk_hyde_retrieval_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_hyde_retrieval_overengineering",
+      "knowledge_node_id": "hyde_retrieval",
+      "symptom": "团队增加了HyDE假设文档检索复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "适合零样本语义检索困难且有强生成模型的场景。已有高质量领域嵌入或精确查询时不一定需要。",
+      "evidence_chunk_ids": [
+        "chunk_hyde_retrieval_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_cross_encoder_reranking_pitfall",
+      "knowledge_node_id": "cross_encoder_reranking",
+      "symptom": "交叉编码器重排序环节结果不稳定或质量下降。",
+      "root_cause": "候选阶段没有召回正确证据，重排无法补救；候选太多会增加延迟；分数阈值需要校准，不能当成事实可信度。",
+      "repair_guidance": "先召回20至100个候选，再批量重排到最终top_n；在目标语种和领域上评测；记录reranker_model_version与重排分数。",
+      "evidence_chunk_ids": [
+        "chunk_cross_encoder_reranking_engineering",
+        "chunk_cross_encoder_reranking_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_cross_encoder_reranking_overengineering",
+      "knowledge_node_id": "cross_encoder_reranking",
+      "symptom": "团队增加了交叉编码器重排序复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "高价值问答和证据要求严格的场景优先使用；极低延迟或大批量查询可只在困难查询上启用。",
+      "evidence_chunk_ids": [
+        "chunk_cross_encoder_reranking_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_colbert_late_interaction_pitfall",
+      "knowledge_node_id": "colbert_late_interaction",
+      "symptom": "ColBERT晚交互检索环节结果不稳定或质量下降。",
+      "root_cause": "Token级索引存储较大，部署复杂度高；如果训练语料与业务领域差异大，细粒度能力也不保证有效。",
+      "repair_guidance": "评估索引体积、查询延迟和召回收益；对长文档需要合理切分；与BM25和单向量基线在同一数据集比较。",
+      "evidence_chunk_ids": [
+        "chunk_colbert_late_interaction_engineering",
+        "chunk_colbert_late_interaction_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_colbert_late_interaction_overengineering",
+      "knowledge_node_id": "colbert_late_interaction",
+      "symptom": "团队增加了ColBERT晚交互检索复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "适合需要高召回且可接受更高索引成本的检索系统；小规模比赛原型不是必选项。",
+      "evidence_chunk_ids": [
+        "chunk_colbert_late_interaction_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_diversity_mmr_pitfall",
+      "knowledge_node_id": "diversity_mmr",
+      "symptom": "MMR多样性选择环节结果不稳定或质量下降。",
+      "root_cause": "多样性权重过高会牺牲最相关证据；对需要多个相邻条款的问题，过度去重可能丢失完整上下文。",
+      "repair_guidance": "在重排后的候选上应用MMR，调节相关性与多样性权重；先进行权限过滤与来源去重；记录被多样性规则排除的候选。",
+      "evidence_chunk_ids": [
+        "chunk_diversity_mmr_engineering",
+        "chunk_diversity_mmr_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_diversity_mmr_overengineering",
+      "knowledge_node_id": "diversity_mmr",
+      "symptom": "团队增加了MMR多样性选择复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "适合多来源知识和概览型问题。对单一明确事实，应以相关性和权威性为主。",
+      "evidence_chunk_ids": [
+        "chunk_diversity_mmr_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_rank_fusion_rrf_pitfall",
+      "knowledge_node_id": "rank_fusion_rrf",
+      "symptom": "RRF名次融合环节结果不稳定或质量下降。",
+      "root_cause": "RRF不利用原始置信度，弱通道也可能贡献排名；候选深度过小会错过互补结果；同一来源重复片段会虚增优势。",
+      "repair_guidance": "为每个通道保留足够候选，使用固定rank_constant计算融合，按chunk_id去重；在不同查询类型上比较融合前后Recall与MRR。",
+      "evidence_chunk_ids": [
+        "chunk_rank_fusion_rrf_engineering",
+        "chunk_rank_fusion_rrf_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_rank_fusion_rrf_overengineering",
+      "knowledge_node_id": "rank_fusion_rrf",
+      "symptom": "团队增加了RRF名次融合复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "适合先建立可靠混合基线。若有大量标注数据，可进一步学习融合权重，但必须保留可解释对照。",
+      "evidence_chunk_ids": [
+        "chunk_rank_fusion_rrf_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_context_selection_budget_pitfall",
+      "knowledge_node_id": "context_selection_budget",
+      "symptom": "上下文选择与Token预算环节结果不稳定或质量下降。",
+      "root_cause": "片段越多不一定越好，噪声会干扰模型；只按相似度选取可能缺少关键约束；截断时如果从末尾直接裁剪会破坏完整证据。",
+      "repair_guidance": "先过滤低权威和重复候选，再按预算选取；为每段添加稳定引用编号和简短标题；保留问题、任务规则和证据之间清晰分隔。",
+      "evidence_chunk_ids": [
+        "chunk_context_selection_budget_engineering",
+        "chunk_context_selection_budget_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_context_selection_budget_overengineering",
+      "knowledge_node_id": "context_selection_budget",
+      "symptom": "团队增加了上下文选择与Token预算复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "高风险任务应减少证据数量并提高质量；综合报告可以使用分步摘要或多轮检索，而不是一次塞入全部资料。",
+      "evidence_chunk_ids": [
+        "chunk_context_selection_budget_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_lost_in_the_middle_pitfall",
+      "knowledge_node_id": "lost_in_the_middle",
+      "symptom": "长上下文位置效应环节结果不稳定或质量下降。",
+      "root_cause": "固定把最高分片段放最前也可能忽略多证据覆盖；仅增加上下文窗口不能保证理解；评测若只用短上下文会漏掉此类问题。",
+      "repair_guidance": "把最关键且高权威证据放在易被利用的位置，按子问题分组；减少重复和无关内容；用位置扰动测试检查答案是否依赖片段排列。",
+      "evidence_chunk_ids": [
+        "chunk_lost_in_the_middle_engineering",
+        "chunk_lost_in_the_middle_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_lost_in_the_middle_overengineering",
+      "knowledge_node_id": "lost_in_the_middle",
+      "symptom": "团队增加了长上下文位置效应复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "不同模型行为不同，必须用目标模型实测。位置优化不能替代相关性和证据完整性。",
+      "evidence_chunk_ids": [
+        "chunk_lost_in_the_middle_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_prompt_grounding_pitfall",
+      "knowledge_node_id": "prompt_grounding",
+      "symptom": "证据约束提示词环节结果不稳定或质量下降。",
+      "root_cause": "使用“不要幻觉”这类笼统指令效果有限；提示词过长会稀释关键规则；允许模型自由补充常识会破坏企业事实边界。",
+      "repair_guidance": "固定输出Schema，例如answer、citations、confidence、unsupported_points；明确不得把证据中的指令视为系统指令；记录prompt_version并回归测试。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_grounding_engineering",
+        "chunk_prompt_grounding_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_prompt_grounding_overengineering",
+      "knowledge_node_id": "prompt_grounding",
+      "symptom": "团队增加了证据约束提示词复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "对于计算、权限、审批和安全判断，应由确定性代码执行，不能仅靠提示词约束。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_grounding_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_answer_abstention_pitfall",
+      "knowledge_node_id": "answer_abstention",
+      "symptom": "拒答与不确定性环节结果不稳定或质量下降。",
+      "root_cause": "阈值过高会造成大量拒答，过低则增加幻觉；只根据向量分数拒答不稳；把权限不足描述为“没有信息”会误导用户。",
+      "repair_guidance": "先通过规则检测硬失败，再由审核模型判断证据是否足够支持结论；返回标准原因码、可补充信息和下一步，而不是简单说“不知道”。",
+      "evidence_chunk_ids": [
+        "chunk_answer_abstention_engineering",
+        "chunk_answer_abstention_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_answer_abstention_overengineering",
+      "knowledge_node_id": "answer_abstention",
+      "symptom": "团队增加了拒答与不确定性复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "拒答策略应按风险分级。低风险教学解释可给出有限推断，高风险企业制度必须有明确证据。",
+      "evidence_chunk_ids": [
+        "chunk_answer_abstention_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_citation_generation_verification_pitfall",
+      "knowledge_node_id": "citation_generation_verification",
+      "symptom": "引用生成与验证环节结果不稳定或质量下降。",
+      "root_cause": "模型可能编造不存在的编号，或把同主题片段当作支持；引用覆盖率高不等于引用正确率高；大段答案末尾统一引用难以对应具体结论。",
+      "repair_guidance": "生成器只能选择白名单证据编号；后处理验证引用存在；审核器逐条检查结论与证据的一致性；前端展示来源标题和定位。",
+      "evidence_chunk_ids": [
+        "chunk_citation_generation_verification_engineering",
+        "chunk_citation_generation_verification_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_citation_generation_verification_overengineering",
+      "knowledge_node_id": "citation_generation_verification",
+      "symptom": "团队增加了引用生成与验证复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "对综合推理可使用多个证据，但应说明推理步骤；不能公开的内部来源只展示受控标识与摘要。",
+      "evidence_chunk_ids": [
+        "chunk_citation_generation_verification_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_hallucination_types_pitfall",
+      "knowledge_node_id": "hallucination_types",
+      "symptom": "幻觉类型与根因环节结果不稳定或质量下降。",
+      "root_cause": "把所有错误都归因于大模型会忽略知识库和检索问题；只做事实核查可能漏掉权限和时效错误；用另一个模型审核也可能共享同一偏差。",
+      "repair_guidance": "错误标注至少包含unsupported_claim、contradicted_claim、wrong_citation、overgeneralization和out_of_scope。对每类建立测试集和修复策略。",
+      "evidence_chunk_ids": [
+        "chunk_hallucination_types_engineering",
+        "chunk_hallucination_types_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_hallucination_types_overengineering",
+      "knowledge_node_id": "hallucination_types",
+      "symptom": "团队增加了幻觉类型与根因复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "无法自动判断的高风险内容要进入人工审核。系统目标是测量并降低错误，而不是承诺绝对零幻觉。",
+      "evidence_chunk_ids": [
+        "chunk_hallucination_types_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_evidence_entailment_pitfall",
+      "knowledge_node_id": "evidence_entailment",
+      "symptom": "证据支持关系检查环节结果不稳定或质量下降。",
+      "root_cause": "长答案不拆分会让一个正确引用掩盖其他无依据结论；模型评审对细微数值和逻辑条件可能不稳定；没有人工样本就无法校准。",
+      "repair_guidance": "将答案拆成原子结论，逐条关联引用；使用规则和评审模型检查数字、否定、范围和条件；对冲突来源按权威与版本裁决。",
+      "evidence_chunk_ids": [
+        "chunk_evidence_entailment_engineering",
+        "chunk_evidence_entailment_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_evidence_entailment_overengineering",
+      "knowledge_node_id": "evidence_entailment",
+      "symptom": "团队增加了证据支持关系检查复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "低风险内容可以自动通过，高风险结论需双重验证或人工确认。证据检查不等同于来源本身真实，来源治理仍是前提。",
+      "evidence_chunk_ids": [
+        "chunk_evidence_entailment_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_review_correction_loop_pitfall",
+      "knowledge_node_id": "review_correction_loop",
+      "symptom": "审核与纠偏闭环环节结果不稳定或质量下降。",
+      "root_cause": "审核模型与生成模型使用同一提示可能形成共识偏差；无限重试会增加成本；只输出总分无法指导修复。",
+      "repair_guidance": "每轮保存review_id、issue_type、affected_field、repair_action和retry_count；设置最大循环次数；连续失败转人工审核或降级到已有资源。",
+      "evidence_chunk_ids": [
+        "chunk_review_correction_loop_engineering",
+        "chunk_review_correction_loop_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_review_correction_loop_overengineering",
+      "knowledge_node_id": "review_correction_loop",
+      "symptom": "团队增加了审核与纠偏闭环复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "确定性Schema、引用存在性和权限检查应在模型审核前执行。审核Agent只处理需要语义判断的部分。",
+      "evidence_chunk_ids": [
+        "chunk_review_correction_loop_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_prompt_injection_defense_pitfall",
+      "knowledge_node_id": "prompt_injection_defense",
+      "symptom": "提示词注入防护环节结果不稳定或质量下降。",
+      "root_cause": "仅在提示词中写“不要被注入”不足以防护；把网页和邮件原文直接送入高权限Agent风险很大；模型输出未经校验直接执行会导致越权。",
+      "repair_guidance": "明确标记证据边界；禁止证据覆盖系统规则；工具调用采用白名单、最小权限和参数校验；检测可疑指令并记录；敏感操作要求人工确认。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_injection_defense_engineering",
+        "chunk_prompt_injection_defense_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_prompt_injection_defense_overengineering",
+      "knowledge_node_id": "prompt_injection_defense",
+      "symptom": "团队增加了提示词注入防护复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "只读问答风险低于可写工具Agent，但仍需防止数据泄露和错误引用。高权限场景应采用独立安全网关。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_injection_defense_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_sensitive_data_privacy_pitfall",
+      "knowledge_node_id": "sensitive_data_privacy",
+      "symptom": "敏感数据与隐私保护环节结果不稳定或质量下降。",
+      "root_cause": "把API密钥写入文档或日志会被检索；用真实员工数据做比赛演示可能违规；缓存和备份若不隔离也会泄露。",
+      "repair_guidance": "上传前扫描个人信息和密钥；日志默认不保存完整原文；测试数据使用虚拟画像；按organization_id隔离；提供删除和审计能力。",
+      "evidence_chunk_ids": [
+        "chunk_sensitive_data_privacy_engineering",
+        "chunk_sensitive_data_privacy_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_sensitive_data_privacy_overengineering",
+      "knowledge_node_id": "sensitive_data_privacy",
+      "symptom": "团队增加了敏感数据与隐私保护复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "比赛阶段应全部使用虚拟学习者画像和可公开或授权的知识；企业试点再根据合同与法规配置保留策略。",
+      "evidence_chunk_ids": [
+        "chunk_sensitive_data_privacy_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_retrieval_metrics_pitfall",
+      "knowledge_node_id": "retrieval_metrics",
+      "symptom": "检索评测指标环节结果不稳定或质量下降。",
+      "root_cause": "只报告平均值会掩盖关键知识点失败；把自动生成答案当作检索真值会形成循环偏差；相关性标注不一致会让指标失真。",
+      "repair_guidance": "为每个查询标注可接受chunk_id或knowledge_node_id；分别报告整体、核心知识点、查询类型和无答案集合；使用精确检索作为ANN上限对照。",
+      "evidence_chunk_ids": [
+        "chunk_retrieval_metrics_engineering",
+        "chunk_retrieval_metrics_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_retrieval_metrics_overengineering",
+      "knowledge_node_id": "retrieval_metrics",
+      "symptom": "团队增加了检索评测指标复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "比赛可重点报告Recall@5、MRR和核心知识覆盖；生产系统还需按租户、版本和查询类型监控。",
+      "evidence_chunk_ids": [
+        "chunk_retrieval_metrics_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_generation_metrics_pitfall",
+      "knowledge_node_id": "generation_metrics",
+      "symptom": "生成质量指标环节结果不稳定或质量下降。",
+      "root_cause": "用同一模型生成并评分会有偏差；单一总分难以定位问题；没有证据的开放式“好不好”评分不稳定。",
+      "repair_guidance": "混合使用规则、参考答案、LLM评审和人工抽检；保存评分理由；对数字、步骤和禁止项增加确定性检查；评审模型要用已标注样本校准。",
+      "evidence_chunk_ids": [
+        "chunk_generation_metrics_engineering",
+        "chunk_generation_metrics_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_generation_metrics_overengineering",
+      "knowledge_node_id": "generation_metrics",
+      "symptom": "团队增加了生成质量指标复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "比赛要求的幻觉率应先定义分母、错误类别和人工复核流程，不能仅引用框架默认分数。",
+      "evidence_chunk_ids": [
+        "chunk_generation_metrics_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_end_to_end_evaluation_pitfall",
+      "knowledge_node_id": "end_to_end_evaluation",
+      "symptom": "端到端RAG评测环节结果不稳定或质量下降。",
+      "root_cause": "仅挑选成功案例演示不能证明稳定性；修改知识库后不重跑全流程会引入回归；比较方案时同时更换多个组件无法归因。",
+      "repair_guidance": "定义固定版本的知识库、模型、提示词和数据集；记录每个案例的中间证据；报告质量、P95延迟、Token成本、失败率和人工介入率。",
+      "evidence_chunk_ids": [
+        "chunk_end_to_end_evaluation_engineering",
+        "chunk_end_to_end_evaluation_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_end_to_end_evaluation_overengineering",
+      "knowledge_node_id": "end_to_end_evaluation",
+      "symptom": "团队增加了端到端RAG评测复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "先建立可复现离线测试，再进行有限在线用户反馈。比赛指标与商业指标可共用底层数据，但目标阈值应明确。",
+      "evidence_chunk_ids": [
+        "chunk_end_to_end_evaluation_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_golden_dataset_design_pitfall",
+      "knowledge_node_id": "golden_dataset_design",
+      "symptom": "黄金评测集设计环节结果不稳定或质量下降。",
+      "root_cause": "只用模型自动生成问题会缺少真实表达和困难负例；测试集泄露进提示词会虚高；只有正例无法评价拒答。",
+      "repair_guidance": "从真实需求与专家设计共同采样，划分开发集与锁定测试集；定期做双人标注一致性检查；版本化数据集并记录变更。",
+      "evidence_chunk_ids": [
+        "chunk_golden_dataset_design_engineering",
+        "chunk_golden_dataset_design_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_golden_dataset_design_overengineering",
+      "knowledge_node_id": "golden_dataset_design",
+      "symptom": "团队增加了黄金评测集设计复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "比赛文件要求至少完整测试方案和多画像用例，因此知识库应自带足量可复现案例，但最终指标必须由系统实测。",
+      "evidence_chunk_ids": [
+        "chunk_golden_dataset_design_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_online_monitoring_feedback_pitfall",
+      "knowledge_node_id": "online_monitoring_feedback",
+      "symptom": "在线监控与反馈环节结果不稳定或质量下降。",
+      "root_cause": "只监控服务器可用性看不到语义质量；完整记录原文可能泄露数据；用户点赞不能直接等同于事实正确。",
+      "repair_guidance": "用trace_id串联查询改写、检索、重排、生成、审核和仲裁；建立质量告警，如空召回率、引用失败率和审核驳回率突增；抽样进入回归集。",
+      "evidence_chunk_ids": [
+        "chunk_online_monitoring_feedback_engineering",
+        "chunk_online_monitoring_feedback_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_online_monitoring_feedback_overengineering",
+      "knowledge_node_id": "online_monitoring_feedback",
+      "symptom": "团队增加了在线监控与反馈复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "反馈用于发现问题和构建评测案例，不应未经审核直接修改权威知识或自动提升内容可信等级。",
+      "evidence_chunk_ids": [
+        "chunk_online_monitoring_feedback_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_agentic_rag_pitfall",
+      "knowledge_node_id": "agentic_rag",
+      "symptom": "Agentic RAG环节结果不稳定或质量下降。",
+      "root_cause": "没有停止条件会循环；智能体可能选择错误工具或把生成内容当证据；自由文本通信难以验证和回放。",
+      "repair_guidance": "使用状态机限制步骤、工具和重试；每步输出结构化action、evidence和reason；设置预算、超时和人工介入；保留完整轨迹。",
+      "evidence_chunk_ids": [
+        "chunk_agentic_rag_engineering",
+        "chunk_agentic_rag_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_agentic_rag_overengineering",
+      "knowledge_node_id": "agentic_rag",
+      "symptom": "团队增加了Agentic RAG复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "简单FAQ不需要Agentic RAG。仅在多源、复杂任务或证据不足需迭代时使用，并与固定流程基线比较。",
+      "evidence_chunk_ids": [
+        "chunk_agentic_rag_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_self_rag_pitfall",
+      "knowledge_node_id": "self_rag",
+      "symptom": "Self-RAG自反思检索生成环节结果不稳定或质量下降。",
+      "root_cause": "自评并不天然可靠；训练和部署复杂；若没有外部评测，模型可能对自己错误答案给出高评价。",
+      "repair_guidance": "工程应用可借鉴其思想：在工作流中显式设置need_retrieval、evidence_supported和quality_check节点，而不必直接复现训练方法。",
+      "evidence_chunk_ids": [
+        "chunk_self_rag_engineering",
+        "chunk_self_rag_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_self_rag_overengineering",
+      "knowledge_node_id": "self_rag",
+      "symptom": "团队增加了Self-RAG自反思检索生成复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "比赛系统可实现可解释的规则+审核Agent近似闭环，避免把高级论文名称当作未经验证的功能。",
+      "evidence_chunk_ids": [
+        "chunk_self_rag_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_corrective_rag_pitfall",
+      "knowledge_node_id": "corrective_rag",
+      "symptom": "Corrective RAG环节结果不稳定或质量下降。",
+      "root_cause": "评估器错误会触发不必要检索或放行坏证据；无限补充会增加成本；外部搜索结果可能权威性不足。",
+      "repair_guidance": "定义retrieval_quality状态和阈值；低质量时尝试查询改写、备用数据源或人工审核；所有补充证据仍需通过权限与来源检查。",
+      "evidence_chunk_ids": [
+        "chunk_corrective_rag_engineering",
+        "chunk_corrective_rag_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_corrective_rag_overengineering",
+      "knowledge_node_id": "corrective_rag",
+      "symptom": "团队增加了Corrective RAG复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "适合关键问题和多源系统。企业私有知识不能因失败就自动搜索公网并混入正式答案。",
+      "evidence_chunk_ids": [
+        "chunk_corrective_rag_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_graph_rag_pitfall",
+      "knowledge_node_id": "graph_rag",
+      "symptom": "Graph RAG环节结果不稳定或质量下降。",
+      "root_cause": "实体重复、关系方向错误和抽取幻觉会污染图；全量图构建成本高；图查询并不一定优于混合文本检索。",
+      "repair_guidance": "先定义实体与关系Schema，再做抽取、消歧和证据绑定；对局部问题使用邻域检索，对全局问题使用社区或摘要；建立图质量评测。",
+      "evidence_chunk_ids": [
+        "chunk_graph_rag_engineering",
+        "chunk_graph_rag_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_graph_rag_overengineering",
+      "knowledge_node_id": "graph_rag",
+      "symptom": "团队增加了Graph RAG复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "关系密集、跨文档推理需求明确时才采用。RAG工程实训本身可将知识点前置关系做轻量图，无需一开始构建复杂企业知识图谱。",
+      "evidence_chunk_ids": [
+        "chunk_graph_rag_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_tool_routing_multi_source_pitfall",
+      "knowledge_node_id": "tool_routing_multi_source",
+      "symptom": "多源路由与工具选择环节结果不稳定或质量下降。",
+      "root_cause": "把所有数据源都交给模型自由选择会增加越权和不可控风险；工具返回错误若不校验会被当成事实；多源冲突需要裁决。",
+      "repair_guidance": "为每个工具定义输入Schema、权限、超时和返回证据格式；先用规则处理明确意图，再用模型处理歧义；融合结果时统一evidence_id。",
+      "evidence_chunk_ids": [
+        "chunk_tool_routing_multi_source_engineering",
+        "chunk_tool_routing_multi_source_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_tool_routing_multi_source_overengineering",
+      "knowledge_node_id": "tool_routing_multi_source",
+      "symptom": "团队增加了多源路由与工具选择复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "比赛阶段可实现少量受控工具路由，商业化后再增加企业连接器。写操作必须与只读检索分离并增加审批。",
+      "evidence_chunk_ids": [
+        "chunk_tool_routing_multi_source_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_observability_tracing_pitfall",
+      "knowledge_node_id": "observability_tracing",
+      "symptom": "可观测性与链路追踪环节结果不稳定或质量下降。",
+      "root_cause": "只记录文本日志难以串联并发调用；记录全部提示词可能泄露企业数据；没有统一时间和编号会让跨服务排查困难。",
+      "repair_guidance": "为请求生成trace_id或correlation_id，每个组件创建span；记录模型、提示词、索引和知识库版本；敏感内容用哈希或受控采样。",
+      "evidence_chunk_ids": [
+        "chunk_observability_tracing_engineering",
+        "chunk_observability_tracing_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_observability_tracing_overengineering",
+      "knowledge_node_id": "observability_tracing",
+      "symptom": "团队增加了可观测性与链路追踪复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "比赛原型至少应展示决策轨迹和证据链；生产系统再接入标准可观测平台与告警。",
+      "evidence_chunk_ids": [
+        "chunk_observability_tracing_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_latency_cost_optimization_pitfall",
+      "knowledge_node_id": "latency_cost_optimization",
+      "symptom": "延迟与成本优化环节结果不稳定或质量下降。",
+      "root_cause": "只追求速度会降低召回；无条件缓存个性化答案会串用户；减少证据Token可能损害完整性；并行过多会触发限流。",
+      "repair_guidance": "分别测量P50/P95延迟和Token成本；并行运行独立检索；对简单查询跳过高级步骤；使用小模型做路由或结构检查，大模型处理复杂生成。",
+      "evidence_chunk_ids": [
+        "chunk_latency_cost_optimization_engineering",
+        "chunk_latency_cost_optimization_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_latency_cost_optimization_overengineering",
+      "knowledge_node_id": "latency_cost_optimization",
+      "symptom": "团队增加了延迟与成本优化复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "设定质量底线和预算上限，按场景分级。比赛演示优先稳定，商业系统再做容量与成本工程。",
+      "evidence_chunk_ids": [
+        "chunk_latency_cost_optimization_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_caching_idempotency_pitfall",
+      "knowledge_node_id": "caching_idempotency",
+      "symptom": "缓存与幂等环节结果不稳定或质量下降。",
+      "root_cause": "遗漏organization_id会串租户；知识更新后旧缓存继续返回过时内容；对随机生成内容错误复用会破坏个性化。",
+      "repair_guidance": "定义cache_key与过期策略；知识版本激活时失效相关缓存；写接口要求idempotency_key并保存首次响应；记录缓存命中率。",
+      "evidence_chunk_ids": [
+        "chunk_caching_idempotency_engineering",
+        "chunk_caching_idempotency_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_caching_idempotency_overengineering",
+      "knowledge_node_id": "caching_idempotency",
+      "symptom": "团队增加了缓存与幂等复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "高风险回答可以只缓存检索候选，不缓存最终生成；涉及用户画像的结果必须包含profile_version。",
+      "evidence_chunk_ids": [
+        "chunk_caching_idempotency_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_deployment_fallback_pitfall",
+      "knowledge_node_id": "deployment_fallback",
+      "symptom": "部署与降级环节结果不稳定或质量下降。",
+      "root_cause": "无上限重试会雪崩；自动切换到未验证模型会改变质量；降级路径不测试等于不存在。",
+      "repair_guidance": "向量服务失败可切换关键词检索；审核失败可展示已审核静态资源或转人工；模型不可用时停止生成而不是返回无证据答案；保留运行手册。",
+      "evidence_chunk_ids": [
+        "chunk_deployment_fallback_engineering",
+        "chunk_deployment_fallback_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_deployment_fallback_overengineering",
+      "knowledge_node_id": "deployment_fallback",
+      "symptom": "团队增加了部署与降级复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "关键企业规则不应在降级时绕过审核或权限。比赛演示准备离线Mock降级仅用于保证流程展示，并必须标明。",
+      "evidence_chunk_ids": [
+        "chunk_deployment_fallback_boundary"
+      ]
+    },
+    {
+      "error_case_id": "err_continuous_updates_regression_pitfall",
+      "knowledge_node_id": "continuous_updates_regression",
+      "symptom": "持续更新与回归环节结果不稳定或质量下降。",
+      "root_cause": "只测试新增内容会漏掉旧功能回归；线上直接覆盖无法回滚；评测集长期不更新会与真实问题脱节。",
+      "repair_guidance": "建立变更清单与影响范围；锁定黄金集；比较新旧版本的检索、生成、延迟和成本；核心指标下降或关键案例失败则阻止发布。",
+      "evidence_chunk_ids": [
+        "chunk_continuous_updates_regression_engineering",
+        "chunk_continuous_updates_regression_pitfalls"
+      ]
+    },
+    {
+      "error_case_id": "err_continuous_updates_regression_overengineering",
+      "knowledge_node_id": "continuous_updates_regression",
+      "symptom": "团队增加了持续更新与回归复杂度，但核心指标没有改善。",
+      "root_cause": "未先建立简单基线，或方案超出当前语料、风险和规模需要。",
+      "repair_guidance": "评测集也要版本化，并防止开发者针对测试答案过拟合。商业客户可拥有独立回归集和发布审批。",
+      "evidence_chunk_ids": [
+        "chunk_continuous_updates_regression_boundary"
+      ]
+    }
+  ]
+}

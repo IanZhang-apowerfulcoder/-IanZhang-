@@ -1,0 +1,25 @@
+{
+  "proposal_id": "b953dd33-bfb8-5c82-8814-eb832237de69",
+  "decision_type": "deliver_resource",
+  "selected_proposal_ids": [
+    "3f8ea6e3-f5ef-5a30-bf58-4ed9e2e8fb88",
+    "1f1df45e-3b96-5adc-b633-3830c0fa1f12",
+    "7da87ec7-9c15-59fd-9559-1542ea6fe3ef",
+    "fea46cdc-79a6-5d46-9008-a9b48ae6cc3b"
+  ],
+  "rejected_proposals": [],
+  "target_knowledge_node_ids": [
+    "RAG-M01-N01",
+    "RAG-M01-N02"
+  ],
+  "rationale_summary": "诊断、路径、资源与测评均符合冻结Schema；审核通过且关键陈述有证据支持。",
+  "supporting_evidence_ids": [
+    "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+    "c170ae95-9b55-5e85-9857-46a84b4e7711",
+    "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+    "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3"
+  ],
+  "confidence": 0.8163,
+  "requires_human_review": false,
+  "human_review_reason": null
+}

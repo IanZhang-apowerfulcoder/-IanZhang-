@@ -1,45 +1,33 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "人工审核完成事件",
+  "title": "HumanReviewResolvedEvent",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "event_id",
-    "human_review_task_id",
-    "decision_cycle_id",
-    "resolution_code",
-    "resolved_by_user_id",
-    "occurred_at"
-  ],
   "properties": {
-    "event_id": {
-      "type": "string",
-      "format": "uuid"
-    },
     "human_review_task_id": {
       "type": "string",
       "format": "uuid"
     },
-    "decision_cycle_id": {
-      "type": "string",
-      "format": "uuid"
-    },
     "resolution_code": {
-      "type": "string",
-      "enum": [
-        "approve",
-        "reject",
-        "revise",
-        "continue"
-      ]
+      "type": "string"
     },
-    "resolved_by_user_id": {
+    "reviewer_id": {
       "type": "string",
       "format": "uuid"
     },
-    "occurred_at": {
+    "reason": {
+      "type": "string"
+    },
+    "resolved_at": {
       "type": "string",
       "format": "date-time"
     }
-  }
+  },
+  "required": [
+    "human_review_task_id",
+    "resolution_code",
+    "reviewer_id",
+    "reason",
+    "resolved_at"
+  ]
 }

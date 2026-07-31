@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "default_strategy": "hybrid",
+  "strategies": [
+    {
+      "strategy_id": "metadata_filtered",
+      "kind": "deterministic",
+      "status": "implemented_baseline",
+      "use_for": [
+        "difficulty_filter",
+        "module_filter",
+        "trusted_layer_filter",
+        "resource_type_filter"
+      ]
+    },
+    {
+      "strategy_id": "hybrid",
+      "kind": "retrieval",
+      "status": "implemented_lexical_baseline_dense_hook_reserved",
+      "use_for": [
+        "definition",
+        "single_topic",
+        "ordinary_qa"
+      ]
+    },
+    {
+      "strategy_id": "graph_assisted",
+      "kind": "retrieval",
+      "status": "implemented_local_graph_expansion",
+      "use_for": [
+        "prerequisite",
+        "dependency",
+        "causal_chain",
+        "learning_path",
+        "multi_hop_relation"
+      ]
+    },
+    {
+      "strategy_id": "parent_child",
+      "kind": "retrieval",
+      "status": "implemented_metadata_parent_expansion",
+      "use_for": [
+        "long_document",
+        "chapter_context",
+        "multi_granularity"
+      ]
+    },
+    {
+      "strategy_id": "agentic_decomposition",
+      "kind": "orchestration",
+      "status": "planned_runtime_contract_frozen",
+      "use_for": [
+        "complex_troubleshooting",
+        "multi_question",
+        "insufficient_evidence",
+        "multi_strategy"
+      ]
+    }
+  ],
+  "hard_limits": {
+    "max_agentic_steps": 5,
+    "max_retrieval_retries": 2,
+    "max_parallel_strategies": 3,
+    "max_total_hits_before_fusion": 60
+  }
+}

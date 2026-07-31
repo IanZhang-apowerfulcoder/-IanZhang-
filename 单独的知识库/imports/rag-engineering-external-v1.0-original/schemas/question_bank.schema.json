@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "题库集合",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "items"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.1.0"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "question_id",
+          "knowledge_node_ids",
+          "question_type",
+          "difficulty_level",
+          "stem",
+          "answer_key",
+          "explanation",
+          "evidence_chunk_ids",
+          "review_status",
+          "assessment_tier",
+          "scoring_rubric"
+        ],
+        "properties": {
+          "question_id": {
+            "type": "string"
+          },
+          "knowledge_node_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "question_type": {
+            "type": "string",
+            "enum": [
+              "single_choice",
+              "multiple_choice",
+              "true_false",
+              "short_answer",
+              "code_answer"
+            ]
+          },
+          "difficulty_level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "stem": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "option_id",
+                "option_text"
+              ],
+              "properties": {
+                "option_id": {
+                  "type": "string"
+                },
+                "option_text": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "answer_key": {},
+          "explanation": {
+            "type": "string"
+          },
+          "evidence_chunk_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "review_status": {
+            "type": "string",
+            "enum": [
+              "expert_verified",
+              "internal_verified",
+              "seed_requires_expert_review"
+            ]
+          },
+          "assessment_tier": {
+            "type": "string",
+            "enum": [
+              "foundation",
+              "standard",
+              "advanced"
+            ]
+          },
+          "scoring_rubric": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "error_type_codes": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

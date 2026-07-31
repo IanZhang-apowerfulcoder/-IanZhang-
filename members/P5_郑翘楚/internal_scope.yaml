@@ -1,44 +1,20 @@
+version: 7.0.0
+member_code: P5
 member: 郑翘楚
-owner_interfaces:
-- resource_generation_agent
-design_owner_interfaces: []
-consumer_interfaces:
-- path_planning_agent
-- review_agent
-boundary_numbers:
-- 15
-- 21
-interface_definitions:
-  path_planning_agent:
-    owner: 杨欣怡
-    design_owner: 杨欣怡
-    function_name: run_path_planning
-    input: path_plan_input.schema.json
-    output: path_plan_output.schema.json
-    timeout_seconds: 45
-    max_retries: 2
-    input_schema: contracts/jsonschema/agents/path_plan_input.schema.json
-    output_schema: contracts/jsonschema/agents/path_plan_output.schema.json
-    contract_status: frozen_v6
-  resource_generation_agent:
-    owner: 郑翘楚
-    design_owner: 杨欣怡
-    function_name: run_resource_generation
-    input: resource_input.schema.json
-    output: resource_output.schema.json
-    timeout_seconds: 60
-    max_retries: 2
-    input_schema: contracts/jsonschema/agents/resource_input.schema.json
-    output_schema: contracts/jsonschema/agents/resource_output.schema.json
-    contract_status: frozen_v6
-  review_agent:
-    owner: 李佳乐
-    design_owner: 李佳乐
-    function_name: run_review
-    input: review_input.schema.json
-    output: review_output.schema.json
-    timeout_seconds: 45
-    max_retries: 2
-    input_schema: contracts/jsonschema/agents/review_input.schema.json
-    output_schema: contracts/jsonschema/agents/review_output.schema.json
-    contract_status: frozen_v6
+contracts:
+- api/openapi.yaml
+- api/internal_openapi.yaml
+- api/field_dictionary.yaml
+- api/error_codes.yaml
+- database/schema.sql
+source_docs:
+- docs/06_系统模块边界.md
+- docs/09_数据流与调用链.md
+- docs/10_命名与字段契约.md
+- docs/11_接口所有权与变更流程.md
+- docs/13_数据库与持久化约束.md
+reviewers:
+- P1
+- P2
+- P6
+- P9

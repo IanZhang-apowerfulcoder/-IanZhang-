@@ -1,0 +1,2445 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "question_id": "q_rag_definition_foundation",
+      "knowledge_node_ids": [
+        "rag_definition"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“RAG基本定义”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "理解检索增强生成如何把外部知识检索与语言模型生成结合起来。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "区分模型参数中的知识与可检索外部知识，并理解二者协作方式。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "判断某个业务问题是否应该采用RAG，以及应采用多复杂的方案。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "能够把错误拆分为知识、检索、上下文、生成和治理等不同类别。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "检索增强生成把可更新、可追踪的外部知识作为上下文提供给生成模型。模型参数负责语言理解与组织，外部知识库承担事实记忆与版本更新。工程上应把检索结果、生成提示词和最终回答分开记录，才能定位错误来自检索还是生成。",
+      "evidence_chunk_ids": [
+        "chunk_rag_definition_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:rag_definition"
+      ]
+    },
+    {
+      "question_id": "q_rag_end_to_end_architecture_foundation",
+      "knowledge_node_ids": [
+        "rag_end_to_end_architecture"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“RAG端到端架构”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "判断某个业务问题是否应该采用RAG，以及应采用多复杂的方案。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "掌握从知识接入到检索、生成、引用、反馈和评测的完整链路。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "能够把错误拆分为知识、检索、上下文、生成和治理等不同类别。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "理解检索增强生成如何把外部知识检索与语言模型生成结合起来。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "完整RAG不是一次“检索后拼提示词”的调用，而是两条链路：离线知识链路负责来源治理、解析、切分、向量化和索引；在线问答链路负责查询理解、检索、重排、上下文选择、生成、引用和反馈。",
+      "evidence_chunk_ids": [
+        "chunk_rag_end_to_end_architecture_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:rag_end_to_end_architecture"
+      ]
+    },
+    {
+      "question_id": "q_parametric_nonparametric_memory_foundation",
+      "knowledge_node_ids": [
+        "parametric_nonparametric_memory"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“参数记忆与外部记忆”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "能够把错误拆分为知识、检索、上下文、生成和治理等不同类别。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "理解检索增强生成如何把外部知识检索与语言模型生成结合起来。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "区分模型参数中的知识与可检索外部知识，并理解二者协作方式。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "掌握从知识接入到检索、生成、引用、反馈和评测的完整链路。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "语言模型参数中的知识更新成本高、来源难追踪；外部知识库可以独立更新、版本化并返回出处。RAG的价值不是完全消除模型知识，而是让模型在回答时获得与任务相关的显式证据。",
+      "evidence_chunk_ids": [
+        "chunk_parametric_nonparametric_memory_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:parametric_nonparametric_memory"
+      ]
+    },
+    {
+      "question_id": "q_rag_applicability_foundation",
+      "knowledge_node_ids": [
+        "rag_applicability"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“RAG适用性判断”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "理解检索增强生成如何把外部知识检索与语言模型生成结合起来。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "掌握从知识接入到检索、生成、引用、反馈和评测的完整链路。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "区分模型参数中的知识与可检索外部知识，并理解二者协作方式。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "判断某个业务问题是否应该采用RAG，以及应采用多复杂的方案。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "RAG适合知识可文档化、答案需要来源、内容经常更新或不同用户有权限差异的场景。选择RAG前应明确知识源、查询类型、风险等级、允许延迟、更新频率和评价标准。",
+      "evidence_chunk_ids": [
+        "chunk_rag_applicability_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:rag_applicability"
+      ]
+    },
+    {
+      "question_id": "q_rag_failure_taxonomy_foundation",
+      "knowledge_node_ids": [
+        "rag_failure_taxonomy"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“RAG失败类型”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "能够把错误拆分为知识、检索、上下文、生成和治理等不同类别。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "掌握从知识接入到检索、生成、引用、反馈和评测的完整链路。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "区分模型参数中的知识与可检索外部知识，并理解二者协作方式。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "判断某个业务问题是否应该采用RAG，以及应采用多复杂的方案。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "RAG错误可分为：知识源缺失或错误、解析与切分损失、查询理解失败、候选召回失败、重排失败、上下文选择失败、生成不忠实、引用错误以及权限或版本错误。不同错误需要不同修复手段。",
+      "evidence_chunk_ids": [
+        "chunk_rag_failure_taxonomy_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:rag_failure_taxonomy"
+      ]
+    },
+    {
+      "question_id": "q_knowledge_source_selection_foundation",
+      "knowledge_node_ids": [
+        "knowledge_source_selection"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“知识源选择”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "识别知识来源的版权、使用许可和隐私要求。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "选择覆盖目标岗位且具备权威性、时效性和可授权性的知识来源。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "确保用户只能检索和查看其组织、角色和项目授权的知识。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "为知识片段建立从回答到原始来源的完整证据链。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "知识源质量决定RAG上限。来源应与培训目标和岗位任务直接相关，优先采用官方标准、产品文档、经审核的内部制度和专家确认材料，并记录来源所有者、版本与适用范围。",
+      "evidence_chunk_ids": [
+        "chunk_knowledge_source_selection_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:knowledge_source_selection"
+      ]
+    },
+    {
+      "question_id": "q_source_authority_provenance_foundation",
+      "knowledge_node_ids": [
+        "source_authority_provenance"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“来源权威性与溯源”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "确保用户只能检索和查看其组织、角色和项目授权的知识。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "选择覆盖目标岗位且具备权威性、时效性和可授权性的知识来源。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "为知识片段建立从回答到原始来源的完整证据链。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "控制知识库、文档、片段和索引版本，防止过时内容参与回答。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "溯源要求每个知识片段能回到source_id、文档版本和定位信息，每个答案中的关键结论能回到evidence_chunk_ids。权威等级应与业务风险关联，而不是只用一个“可信”标签。",
+      "evidence_chunk_ids": [
+        "chunk_source_authority_provenance_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:source_authority_provenance"
+      ]
+    },
+    {
+      "question_id": "q_versioning_freshness_foundation",
+      "knowledge_node_ids": [
+        "versioning_freshness"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“版本与时效治理”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "选择覆盖目标岗位且具备权威性、时效性和可授权性的知识来源。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "为知识片段建立从回答到原始来源的完整证据链。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "识别知识来源的版权、使用许可和隐私要求。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "控制知识库、文档、片段和索引版本，防止过时内容参与回答。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "知识库版本应不可变。新资料或修订内容生成新版本，经质量检查后再发布和激活。查询、评测和答案日志必须记录使用的knowledge_base_version_id，便于复现和回滚。",
+      "evidence_chunk_ids": [
+        "chunk_versioning_freshness_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:versioning_freshness"
+      ]
+    },
+    {
+      "question_id": "q_licensing_compliance_foundation",
+      "knowledge_node_ids": [
+        "licensing_compliance"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“许可与合规”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "识别知识来源的版权、使用许可和隐私要求。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "为知识片段建立从回答到原始来源的完整证据链。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "控制知识库、文档、片段和索引版本，防止过时内容参与回答。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "确保用户只能检索和查看其组织、角色和项目授权的知识。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "知识可被访问不等于可被复制、再分发或用于商业训练。知识库应记录许可说明、内容所有者、使用范围和是否允许展示原文。个人信息、商业秘密和受限制数据还需单独治理。",
+      "evidence_chunk_ids": [
+        "chunk_licensing_compliance_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:licensing_compliance"
+      ]
+    },
+    {
+      "question_id": "q_access_control_tenant_isolation_foundation",
+      "knowledge_node_ids": [
+        "access_control_tenant_isolation"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“权限过滤与多租户隔离”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "控制知识库、文档、片段和索引版本，防止过时内容参与回答。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "确保用户只能检索和查看其组织、角色和项目授权的知识。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "识别知识来源的版权、使用许可和隐私要求。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "选择覆盖目标岗位且具备权威性、时效性和可授权性的知识来源。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "RAG权限控制必须发生在检索之前或检索过程中。每个片段应带organization_id、visibility、allowed_roles等元数据，检索查询要强制加入权限过滤，不能检索后再依赖模型隐藏。",
+      "evidence_chunk_ids": [
+        "chunk_access_control_tenant_isolation_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:access_control_tenant_isolation"
+      ]
+    },
+    {
+      "question_id": "q_document_parsing_foundation",
+      "knowledge_node_ids": [
+        "document_parsing"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“文档解析”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "在入库前检测解析完整性、乱码、缺页、来源和结构问题。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "正确处理多栏版面、表格、图注和代码块，避免语义错位。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "从多种文档中提取文本、结构、页码和对象信息。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "去除噪声并统一格式，同时避免删除有业务意义的内容。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "解析不仅是抽取字符，还要保留标题层级、段落、页码、表格、列表、代码块和图片说明等结构。结构信息决定后续切分、引用和检索质量。",
+      "evidence_chunk_ids": [
+        "chunk_document_parsing_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:document_parsing"
+      ]
+    },
+    {
+      "question_id": "q_layout_table_extraction_foundation",
+      "knowledge_node_ids": [
+        "layout_table_extraction"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“版面与表格提取”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "从多种文档中提取文本、结构、页码和对象信息。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "去除噪声并统一格式，同时避免删除有业务意义的内容。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "识别完全重复、近似重复和版本重复，减少检索冗余。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "正确处理多栏版面、表格、图注和代码块，避免语义错位。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "表格信息依赖行列关系，不能简单拼成连续文本。版面解析需要识别阅读顺序、标题与正文、表格单元格、图注和页码，必要时把结构转成Markdown或结构化JSON。",
+      "evidence_chunk_ids": [
+        "chunk_layout_table_extraction_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:layout_table_extraction"
+      ]
+    },
+    {
+      "question_id": "q_text_cleaning_normalization_foundation",
+      "knowledge_node_ids": [
+        "text_cleaning_normalization"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“文本清洗与规范化”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "去除噪声并统一格式，同时避免删除有业务意义的内容。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "正确处理多栏版面、表格、图注和代码块，避免语义错位。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "识别完全重复、近似重复和版本重复，减少检索冗余。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "在入库前检测解析完整性、乱码、缺页、来源和结构问题。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "清洗目标是降低页眉页脚、乱码、重复空白和格式噪声，但保留编号、单位、大小写、代码符号和章节边界。规范化规则必须可配置并可回放。",
+      "evidence_chunk_ids": [
+        "chunk_text_cleaning_normalization_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:text_cleaning_normalization"
+      ]
+    },
+    {
+      "question_id": "q_deduplication_foundation",
+      "knowledge_node_ids": [
+        "deduplication"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“内容去重”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "去除噪声并统一格式，同时避免删除有业务意义的内容。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "识别完全重复、近似重复和版本重复，减少检索冗余。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "在入库前检测解析完整性、乱码、缺页、来源和结构问题。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "从多种文档中提取文本、结构、页码和对象信息。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "重复内容会占用索引、挤压上下文并导致多个相同证据看似互相印证。去重应区分完全哈希重复、文本近似重复和同一文档不同版本。",
+      "evidence_chunk_ids": [
+        "chunk_deduplication_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:deduplication"
+      ]
+    },
+    {
+      "question_id": "q_document_quality_checks_foundation",
+      "knowledge_node_ids": [
+        "document_quality_checks"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“文档质量门禁”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "识别完全重复、近似重复和版本重复，减少检索冗余。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "从多种文档中提取文本、结构、页码和对象信息。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "在入库前检测解析完整性、乱码、缺页、来源和结构问题。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "正确处理多栏版面、表格、图注和代码块，避免语义错位。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "知识库构建前应设置质量门禁，包括解析成功率、空白页比例、乱码率、重复率、来源完整率、页码覆盖率和敏感信息风险。门禁失败的文档不能直接进入正式版本。",
+      "evidence_chunk_ids": [
+        "chunk_document_quality_checks_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:document_quality_checks"
+      ]
+    },
+    {
+      "question_id": "q_chunking_objectives_foundation",
+      "knowledge_node_ids": [
+        "chunking_objectives"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“文档切分目标”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "掌握按字符或Token窗口切分及重叠策略。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "按标题、段落、列表、表格和代码块边界构造片段。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "依据主题变化和句子语义相似度确定边界。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "理解切分对召回、上下文完整性、引用粒度和成本的影响。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "切分要在“片段足够小以便精确检索”和“片段足够大以保留完整语义”之间平衡。合理片段应能独立表达一个可回答的问题，同时保留标题、来源和相邻上下文。",
+      "evidence_chunk_ids": [
+        "chunk_chunking_objectives_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:chunking_objectives"
+      ]
+    },
+    {
+      "question_id": "q_fixed_window_chunking_foundation",
+      "knowledge_node_ids": [
+        "fixed_window_chunking"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“固定窗口切分”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "掌握按字符或Token窗口切分及重叠策略。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "按标题、段落、列表、表格和代码块边界构造片段。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "依据主题变化和句子语义相似度确定边界。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "同时保留小粒度检索精度和大粒度上下文完整性。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "固定窗口切分实现简单、速度快，适合作为基线。它按固定字符或Token数量切分，并用少量重叠减轻边界信息丢失。",
+      "evidence_chunk_ids": [
+        "chunk_fixed_window_chunking_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:fixed_window_chunking"
+      ]
+    },
+    {
+      "question_id": "q_structure_aware_chunking_foundation",
+      "knowledge_node_ids": [
+        "structure_aware_chunking"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“结构感知切分”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "依据主题变化和句子语义相似度确定边界。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "按标题、段落、列表、表格和代码块边界构造片段。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "同时保留小粒度检索精度和大粒度上下文完整性。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "理解切分对召回、上下文完整性、引用粒度和成本的影响。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "结构感知切分利用文档天然层级，优先在章节、段落、列表或代码块边界切分。片段携带完整标题路径，可提高语义独立性和引用可读性。",
+      "evidence_chunk_ids": [
+        "chunk_structure_aware_chunking_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:structure_aware_chunking"
+      ]
+    },
+    {
+      "question_id": "q_semantic_chunking_foundation",
+      "knowledge_node_ids": [
+        "semantic_chunking"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“语义切分”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "同时保留小粒度检索精度和大粒度上下文完整性。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "理解切分对召回、上下文完整性、引用粒度和成本的影响。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "依据主题变化和句子语义相似度确定边界。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "掌握按字符或Token窗口切分及重叠策略。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "语义切分尝试在主题转折处断开，避免固定窗口跨越多个概念。常见方法是比较相邻句子或句群嵌入变化，再结合最小和最大长度约束。",
+      "evidence_chunk_ids": [
+        "chunk_semantic_chunking_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:semantic_chunking"
+      ]
+    },
+    {
+      "question_id": "q_parent_child_multigranular_foundation",
+      "knowledge_node_ids": [
+        "parent_child_multigranular"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“父子与多粒度检索”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "理解切分对召回、上下文完整性、引用粒度和成本的影响。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "掌握按字符或Token窗口切分及重叠策略。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "按标题、段落、列表、表格和代码块边界构造片段。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "同时保留小粒度检索精度和大粒度上下文完整性。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "父子切分用较小子块建立检索表示，命中后返回其较大的父块或邻近上下文。多粒度策略也可同时索引句段、章节摘要和完整章节，以适配不同查询。",
+      "evidence_chunk_ids": [
+        "chunk_parent_child_multigranular_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:parent_child_multigranular"
+      ]
+    },
+    {
+      "question_id": "q_metadata_schema_foundation",
+      "knowledge_node_ids": [
+        "metadata_schema"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“元数据Schema设计”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "定义支持过滤、溯源、版本和评测的片段元数据。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "根据语言、领域、任务、成本和部署约束选择嵌入模型。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "理解余弦相似度、内积和欧氏距离及其配置关系。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "理解精确搜索、HNSW、IVF等索引的召回、延迟和内存权衡。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "元数据是知识检索和治理的控制面。最低字段通常包括source_id、source_locator、knowledge_node_ids、version、language、authority_level、organization_id、visibility和content_hash。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_schema_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:metadata_schema"
+      ]
+    },
+    {
+      "question_id": "q_embedding_fundamentals_foundation",
+      "knowledge_node_ids": [
+        "embedding_fundamentals"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“文本嵌入基础”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "理解余弦相似度、内积和欧氏距离及其配置关系。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "理解双编码器、向量空间和语义相似度的基本机制。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "理解精确搜索、HNSW、IVF等索引的召回、延迟和内存权衡。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "定义支持过滤、溯源、版本和评测的片段元数据。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "文本嵌入把查询和片段映射到同一向量空间，相关文本在该空间中距离更近。双编码器可离线计算文档向量并在线快速检索，但交互能力弱于交叉编码器。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_fundamentals_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:embedding_fundamentals"
+      ]
+    },
+    {
+      "question_id": "q_embedding_model_selection_foundation",
+      "knowledge_node_ids": [
+        "embedding_model_selection"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“嵌入模型选择”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "理解精确搜索、HNSW、IVF等索引的召回、延迟和内存权衡。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "定义支持过滤、溯源、版本和评测的片段元数据。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "根据语言、领域、任务、成本和部署约束选择嵌入模型。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "理解双编码器、向量空间和语义相似度的基本机制。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "模型选择应看目标语种、查询与文档长度、领域分布、是否支持指令、维度、推理速度和许可。通用排行榜只能提供候选，最终必须在自己的检索集上验证。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_model_selection_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:embedding_model_selection"
+      ]
+    },
+    {
+      "question_id": "q_similarity_metrics_foundation",
+      "knowledge_node_ids": [
+        "similarity_metrics"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“向量相似度与归一化”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "定义支持过滤、溯源、版本和评测的片段元数据。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "理解双编码器、向量空间和语义相似度的基本机制。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "根据语言、领域、任务、成本和部署约束选择嵌入模型。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "理解余弦相似度、内积和欧氏距离及其配置关系。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "余弦相似度比较方向，内积受向量模长影响，欧氏距离衡量几何距离。若向量已L2归一化，内积排序与余弦排序等价；索引配置必须和模型输出一致。",
+      "evidence_chunk_ids": [
+        "chunk_similarity_metrics_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:similarity_metrics"
+      ]
+    },
+    {
+      "question_id": "q_vector_index_hnsw_ivf_foundation",
+      "knowledge_node_ids": [
+        "vector_index_hnsw_ivf"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“向量索引与近似最近邻”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "理解精确搜索、HNSW、IVF等索引的召回、延迟和内存权衡。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "理解双编码器、向量空间和语义相似度的基本机制。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "根据语言、领域、任务、成本和部署约束选择嵌入模型。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "理解余弦相似度、内积和欧氏距离及其配置关系。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "向量索引用空间或图结构减少搜索范围。HNSW常以较高内存换取低延迟和较好召回；IVF通过聚类只搜索部分桶；精确搜索适合小规模或评测基线。",
+      "evidence_chunk_ids": [
+        "chunk_vector_index_hnsw_ivf_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:vector_index_hnsw_ivf"
+      ]
+    },
+    {
+      "question_id": "q_bm25_sparse_retrieval_foundation",
+      "knowledge_node_ids": [
+        "bm25_sparse_retrieval"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“BM25与稀疏检索”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "在语义排序前后利用权限、版本、时间、语言和业务标签缩小候选。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "掌握关键词匹配在精确术语、编号和专名查询中的作用。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "通过同义改写、子问题和多角度查询提高召回。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "使用嵌入召回语义相关但词面不同的片段。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "BM25基于词项频率、逆文档频率和文档长度归一化进行排序。它对产品编号、错误码、函数名和罕见专有词通常比纯语义检索更稳定，是重要基线。",
+      "evidence_chunk_ids": [
+        "chunk_bm25_sparse_retrieval_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:bm25_sparse_retrieval"
+      ]
+    },
+    {
+      "question_id": "q_dense_retrieval_foundation",
+      "knowledge_node_ids": [
+        "dense_retrieval"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“稠密语义检索”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "通过同义改写、子问题和多角度查询提高召回。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "掌握关键词匹配在精确术语、编号和专名查询中的作用。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "使用嵌入召回语义相关但词面不同的片段。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "融合稀疏与稠密检索，提高不同查询类型下的鲁棒性。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "稠密检索通过查询与文档向量的相似度召回候选，可处理同义词、自然语言改写和概念级匹配。它依赖训练分布和表示模型，跨领域表现必须实测。",
+      "evidence_chunk_ids": [
+        "chunk_dense_retrieval_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:dense_retrieval"
+      ]
+    },
+    {
+      "question_id": "q_hybrid_retrieval_foundation",
+      "knowledge_node_ids": [
+        "hybrid_retrieval"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“混合检索”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "掌握关键词匹配在精确术语、编号和专名查询中的作用。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "使用嵌入召回语义相关但词面不同的片段。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "在语义排序前后利用权限、版本、时间、语言和业务标签缩小候选。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "融合稀疏与稠密检索，提高不同查询类型下的鲁棒性。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "混合检索让关键词通道覆盖精确匹配，让向量通道覆盖语义匹配。融合可以基于归一化分数、加权排序或RRF等名次融合方法。",
+      "evidence_chunk_ids": [
+        "chunk_hybrid_retrieval_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:hybrid_retrieval"
+      ]
+    },
+    {
+      "question_id": "q_metadata_filtering_foundation",
+      "knowledge_node_ids": [
+        "metadata_filtering"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“元数据过滤”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "在语义排序前后利用权限、版本、时间、语言和业务标签缩小候选。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "使用嵌入召回语义相关但词面不同的片段。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "融合稀疏与稠密检索，提高不同查询类型下的鲁棒性。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "通过同义改写、子问题和多角度查询提高召回。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "元数据过滤用于保证候选满足硬约束，例如组织权限、文档状态、知识库版本、语言、日期和产品型号。硬约束应优先于相似度，不能让高分越权内容进入上下文。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_filtering_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:metadata_filtering"
+      ]
+    },
+    {
+      "question_id": "q_multi_query_expansion_foundation",
+      "knowledge_node_ids": [
+        "multi_query_expansion"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“多查询与查询扩展”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "融合稀疏与稠密检索，提高不同查询类型下的鲁棒性。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "通过同义改写、子问题和多角度查询提高召回。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "在语义排序前后利用权限、版本、时间、语言和业务标签缩小候选。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "掌握关键词匹配在精确术语、编号和专名查询中的作用。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "复杂或含糊问题可以生成多个检索表达式，例如术语改写、关键词补充或子问题分解，再合并候选。目标是提高召回而不是让模型直接回答。",
+      "evidence_chunk_ids": [
+        "chunk_multi_query_expansion_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:multi_query_expansion"
+      ]
+    },
+    {
+      "question_id": "q_query_rewriting_foundation",
+      "knowledge_node_ids": [
+        "query_rewriting"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“查询改写”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "使用查询与候选片段联合编码，提高候选排序精度。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "理解Token级晚交互在效率与细粒度匹配之间的折中。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "将口语化、上下文依赖或不完整的问题转换成可检索查询。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "在相关性和候选多样性之间平衡，减少上下文重复。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "查询改写应保留用户原意，并补全会话中的省略对象、领域限定和关键术语。改写结果服务于检索，不应擅自加入未经确认的事实。",
+      "evidence_chunk_ids": [
+        "chunk_query_rewriting_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:query_rewriting"
+      ]
+    },
+    {
+      "question_id": "q_hyde_retrieval_foundation",
+      "knowledge_node_ids": [
+        "hyde_retrieval"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 3,
+      "stem": "关于“HyDE假设文档检索”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "理解Token级晚交互在效率与细粒度匹配之间的折中。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "在相关性和候选多样性之间平衡，减少上下文重复。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "用排名而非原始分数融合多个检索列表。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "利用生成的假设性文档表示查询语义，以改善零样本稠密检索。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "HyDE先让模型生成一个可能回答问题的假设文档，再对该文本生成嵌入并检索真实文档。它使用假设文本作为语义桥梁，而不是把假设内容当作最终事实。",
+      "evidence_chunk_ids": [
+        "chunk_hyde_retrieval_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:hyde_retrieval"
+      ]
+    },
+    {
+      "question_id": "q_cross_encoder_reranking_foundation",
+      "knowledge_node_ids": [
+        "cross_encoder_reranking"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“交叉编码器重排序”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "使用查询与候选片段联合编码，提高候选排序精度。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "在相关性和候选多样性之间平衡，减少上下文重复。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "用排名而非原始分数融合多个检索列表。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "将口语化、上下文依赖或不完整的问题转换成可检索查询。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "交叉编码器同时读取查询与文档，可建模细粒度交互，通常比双编码器排序更准确，但无法高效遍历全部语料，因此用于对召回候选重排。",
+      "evidence_chunk_ids": [
+        "chunk_cross_encoder_reranking_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:cross_encoder_reranking"
+      ]
+    },
+    {
+      "question_id": "q_colbert_late_interaction_foundation",
+      "knowledge_node_ids": [
+        "colbert_late_interaction"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 3,
+      "stem": "关于“ColBERT晚交互检索”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "用排名而非原始分数融合多个检索列表。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "理解Token级晚交互在效率与细粒度匹配之间的折中。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "将口语化、上下文依赖或不完整的问题转换成可检索查询。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "利用生成的假设性文档表示查询语义，以改善零样本稠密检索。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "ColBERT分别编码查询和文档Token，再在检索时进行晚交互，以保留比单向量更细的匹配信息。它介于双编码器高效召回与交叉编码器高精度之间。",
+      "evidence_chunk_ids": [
+        "chunk_colbert_late_interaction_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:colbert_late_interaction"
+      ]
+    },
+    {
+      "question_id": "q_diversity_mmr_foundation",
+      "knowledge_node_ids": [
+        "diversity_mmr"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“MMR多样性选择”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "将口语化、上下文依赖或不完整的问题转换成可检索查询。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "利用生成的假设性文档表示查询语义，以改善零样本稠密检索。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "在相关性和候选多样性之间平衡，减少上下文重复。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "使用查询与候选片段联合编码，提高候选排序精度。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "MMR在选择新片段时同时考虑它与查询的相关性以及与已选片段的相似度，从而避免多个近重复片段占满上下文。",
+      "evidence_chunk_ids": [
+        "chunk_diversity_mmr_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:diversity_mmr"
+      ]
+    },
+    {
+      "question_id": "q_rank_fusion_rrf_foundation",
+      "knowledge_node_ids": [
+        "rank_fusion_rrf"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“RRF名次融合”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "利用生成的假设性文档表示查询语义，以改善零样本稠密检索。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "使用查询与候选片段联合编码，提高候选排序精度。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "理解Token级晚交互在效率与细粒度匹配之间的折中。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "用排名而非原始分数融合多个检索列表。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "RRF根据文档在各排序列表中的名次累积分数，不要求BM25分数和向量分数处于同一尺度。它是混合检索中稳定、易解释的融合基线。",
+      "evidence_chunk_ids": [
+        "chunk_rank_fusion_rrf_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:rank_fusion_rrf"
+      ]
+    },
+    {
+      "question_id": "q_context_selection_budget_foundation",
+      "knowledge_node_ids": [
+        "context_selection_budget"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“上下文选择与Token预算”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "在有限上下文中选择最有用、互补且可追溯的证据。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "通过明确指令让模型仅基于提供证据回答并声明限制。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "在证据不足、冲突或越权时停止生成确定性答案。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "生成可点击、可核验且真正支持结论的证据引用。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "上下文构造不是把top_k全部拼接。应按相关性、权威性、覆盖、重复度和Token成本选择证据，并确保每个重要子问题至少有支持片段。",
+      "evidence_chunk_ids": [
+        "chunk_context_selection_budget_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:context_selection_budget"
+      ]
+    },
+    {
+      "question_id": "q_lost_in_the_middle_foundation",
+      "knowledge_node_ids": [
+        "lost_in_the_middle"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“长上下文位置效应”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "在证据不足、冲突或越权时停止生成确定性答案。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "理解模型对长上下文中间信息利用不稳定的问题。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "生成可点击、可核验且真正支持结论的证据引用。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "在有限上下文中选择最有用、互补且可追溯的证据。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "研究表明，相关信息位于长上下文中间时，模型利用效果可能下降。RAG系统因此不能只追求更长上下文，还应优化片段顺序和信息密度。",
+      "evidence_chunk_ids": [
+        "chunk_lost_in_the_middle_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:lost_in_the_middle"
+      ]
+    },
+    {
+      "question_id": "q_prompt_grounding_foundation",
+      "knowledge_node_ids": [
+        "prompt_grounding"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“证据约束提示词”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "生成可点击、可核验且真正支持结论的证据引用。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "在有限上下文中选择最有用、互补且可追溯的证据。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "通过明确指令让模型仅基于提供证据回答并声明限制。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "理解模型对长上下文中间信息利用不稳定的问题。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "受控提示词应区分系统规则、用户问题和检索证据，要求关键结论引用证据，证据不足时拒答或说明不确定性。提示词本身不能保证忠实，但能形成可测试行为。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_grounding_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:prompt_grounding"
+      ]
+    },
+    {
+      "question_id": "q_answer_abstention_foundation",
+      "knowledge_node_ids": [
+        "answer_abstention"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“拒答与不确定性”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "在有限上下文中选择最有用、互补且可追溯的证据。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "理解模型对长上下文中间信息利用不稳定的问题。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "通过明确指令让模型仅基于提供证据回答并声明限制。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "在证据不足、冲突或越权时停止生成确定性答案。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "可靠RAG需要定义“何时不回答”。拒答依据可以包括无候选、证据相关度低、来源冲突、问题超出领域、权限不足或审核未通过。",
+      "evidence_chunk_ids": [
+        "chunk_answer_abstention_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:answer_abstention"
+      ]
+    },
+    {
+      "question_id": "q_citation_generation_verification_foundation",
+      "knowledge_node_ids": [
+        "citation_generation_verification"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“引用生成与验证”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "生成可点击、可核验且真正支持结论的证据引用。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "理解模型对长上下文中间信息利用不稳定的问题。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "通过明确指令让模型仅基于提供证据回答并声明限制。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "在证据不足、冲突或越权时停止生成确定性答案。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "引用应指向实际进入上下文的chunk_id，并保留source_id和source_locator。一个引用只有在内容与结论具有支持关系时才有效，相关但不蕴含不算正确引用。",
+      "evidence_chunk_ids": [
+        "chunk_citation_generation_verification_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:citation_generation_verification"
+      ]
+    },
+    {
+      "question_id": "q_hallucination_types_foundation",
+      "knowledge_node_ids": [
+        "hallucination_types"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“幻觉类型与根因”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "防止知识文档或用户输入劫持模型规则、泄露数据或调用危险工具。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "区分无依据生成、证据矛盾、错误归因和过度推断等问题。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "保护企业资料、学习者画像和交互日志中的敏感信息。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "判断证据是否直接支持、反驳或无法判断某个结论。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "RAG中的幻觉不只是不真实陈述，还包括回答超出证据、把一份文档的结论归给另一来源、忽略冲突证据、虚构引用和把推测表述成确定事实。",
+      "evidence_chunk_ids": [
+        "chunk_hallucination_types_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:hallucination_types"
+      ]
+    },
+    {
+      "question_id": "q_evidence_entailment_foundation",
+      "knowledge_node_ids": [
+        "evidence_entailment"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 3,
+      "stem": "关于“证据支持关系检查”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "保护企业资料、学习者画像和交互日志中的敏感信息。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "区分无依据生成、证据矛盾、错误归因和过度推断等问题。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "判断证据是否直接支持、反驳或无法判断某个结论。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "对生成资源、题目和决策进行通过、退回、修复与升级处理。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "证据检查关注结论与片段之间的蕴含关系。结果可分为supported、contradicted和insufficient，而不是只判断文本主题是否相似。",
+      "evidence_chunk_ids": [
+        "chunk_evidence_entailment_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:evidence_entailment"
+      ]
+    },
+    {
+      "question_id": "q_review_correction_loop_foundation",
+      "knowledge_node_ids": [
+        "review_correction_loop"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“审核与纠偏闭环”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "区分无依据生成、证据矛盾、错误归因和过度推断等问题。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "判断证据是否直接支持、反驳或无法判断某个结论。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "防止知识文档或用户输入劫持模型规则、泄露数据或调用危险工具。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "对生成资源、题目和决策进行通过、退回、修复与升级处理。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "审核器应检查结构、证据、专业准确性、难度适配和安全性，并输出pass、revise或reject及问题列表。纠偏要针对具体问题重新检索或重生成，而不是无条件重复调用。",
+      "evidence_chunk_ids": [
+        "chunk_review_correction_loop_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:review_correction_loop"
+      ]
+    },
+    {
+      "question_id": "q_prompt_injection_defense_foundation",
+      "knowledge_node_ids": [
+        "prompt_injection_defense"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 3,
+      "stem": "关于“提示词注入防护”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "防止知识文档或用户输入劫持模型规则、泄露数据或调用危险工具。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "判断证据是否直接支持、反驳或无法判断某个结论。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "对生成资源、题目和决策进行通过、退回、修复与升级处理。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "保护企业资料、学习者画像和交互日志中的敏感信息。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "检索到的文档属于不可信数据，其中可能包含“忽略之前指令”等恶意文本。系统必须在指令层级、工具权限和输出校验上隔离数据与控制。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_injection_defense_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:prompt_injection_defense"
+      ]
+    },
+    {
+      "question_id": "q_sensitive_data_privacy_foundation",
+      "knowledge_node_ids": [
+        "sensitive_data_privacy"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“敏感数据与隐私保护”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "对生成资源、题目和决策进行通过、退回、修复与升级处理。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "保护企业资料、学习者画像和交互日志中的敏感信息。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "防止知识文档或用户输入劫持模型规则、泄露数据或调用危险工具。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "区分无依据生成、证据矛盾、错误归因和过度推断等问题。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "RAG系统同时处理企业知识和个人画像，需进行数据分类、最小收集、访问控制、加密、保留期限和脱敏。向量本身也可能泄露语义，不应视为匿名数据。",
+      "evidence_chunk_ids": [
+        "chunk_sensitive_data_privacy_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:sensitive_data_privacy"
+      ]
+    },
+    {
+      "question_id": "q_retrieval_metrics_foundation",
+      "knowledge_node_ids": [
+        "retrieval_metrics"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 1,
+      "stem": "关于“检索评测指标”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "将线上检索、生成和用户反馈转化为可定位的质量信号。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "评估答案忠实度、正确性、完整性、引用和表达质量。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "使用Recall@K、Precision@K、MRR、nDCG等指标测量候选质量。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "同时评价检索、生成、拒答、延迟、成本和用户任务完成度。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "Recall@K衡量相关证据是否进入前K个候选，MRR关注首个相关结果的位置，nDCG支持分级相关性和排名折损。指标选择要与业务目标和标注方式一致。",
+      "evidence_chunk_ids": [
+        "chunk_retrieval_metrics_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:retrieval_metrics"
+      ]
+    },
+    {
+      "question_id": "q_generation_metrics_foundation",
+      "knowledge_node_ids": [
+        "generation_metrics"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“生成质量指标”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "使用Recall@K、Precision@K、MRR、nDCG等指标测量候选质量。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "同时评价检索、生成、拒答、延迟、成本和用户任务完成度。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "构建覆盖知识、查询类型、难度、画像和失败边界的标注数据。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "评估答案忠实度、正确性、完整性、引用和表达质量。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "生成评测至少区分faithfulness、answer_correctness、answer_relevance、citation_correctness和completeness。一个流畅答案可能不忠实，一个忠实答案也可能不完整。",
+      "evidence_chunk_ids": [
+        "chunk_generation_metrics_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:generation_metrics"
+      ]
+    },
+    {
+      "question_id": "q_end_to_end_evaluation_foundation",
+      "knowledge_node_ids": [
+        "end_to_end_evaluation"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“端到端RAG评测”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "同时评价检索、生成、拒答、延迟、成本和用户任务完成度。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "评估答案忠实度、正确性、完整性、引用和表达质量。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "构建覆盖知识、查询类型、难度、画像和失败边界的标注数据。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "将线上检索、生成和用户反馈转化为可定位的质量信号。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "端到端评测关注系统是否在真实流程中给出可用答案，并能在证据不足时正确拒答。它需要把离线检索、生成质量、画像适配和业务流程结合起来。",
+      "evidence_chunk_ids": [
+        "chunk_end_to_end_evaluation_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:end_to_end_evaluation"
+      ]
+    },
+    {
+      "question_id": "q_golden_dataset_design_foundation",
+      "knowledge_node_ids": [
+        "golden_dataset_design"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“黄金评测集设计”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "同时评价检索、生成、拒答、延迟、成本和用户任务完成度。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "构建覆盖知识、查询类型、难度、画像和失败边界的标注数据。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "将线上检索、生成和用户反馈转化为可定位的质量信号。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "使用Recall@K、Precision@K、MRR、nDCG等指标测量候选质量。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "黄金集应包含普通事实、概念比较、跨片段问题、流程任务、无答案、错误前提和越权问题。每个案例记录期望知识节点、可接受证据、答案要点和拒答要求。",
+      "evidence_chunk_ids": [
+        "chunk_golden_dataset_design_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:golden_dataset_design"
+      ]
+    },
+    {
+      "question_id": "q_online_monitoring_feedback_foundation",
+      "knowledge_node_ids": [
+        "online_monitoring_feedback"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 3,
+      "stem": "关于“在线监控与反馈”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "构建覆盖知识、查询类型、难度、画像和失败边界的标注数据。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "使用Recall@K、Precision@K、MRR、nDCG等指标测量候选质量。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "将线上检索、生成和用户反馈转化为可定位的质量信号。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "评估答案忠实度、正确性、完整性、引用和表达质量。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "线上监控应记录请求链路、模型与索引版本、候选证据、延迟、错误码、拒答和用户反馈，同时避免保存不必要敏感内容。",
+      "evidence_chunk_ids": [
+        "chunk_online_monitoring_feedback_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:online_monitoring_feedback"
+      ]
+    },
+    {
+      "question_id": "q_agentic_rag_foundation",
+      "knowledge_node_ids": [
+        "agentic_rag"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 3,
+      "stem": "关于“Agentic RAG”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "理解模型在生成过程中学习何时检索并评价自身输出的思路。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "在检索质量不足时触发纠错、补充检索或降级。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "利用实体关系、社区摘要或图遍历支持跨文档关联问题。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "让智能体根据任务动态规划检索、工具调用和停止条件。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "Agentic RAG将固定单次检索扩展为可规划流程：识别任务、选择数据源、分解问题、迭代检索、评估证据并决定是否继续。价值来自可控决策，不是简单增加模型调用次数。",
+      "evidence_chunk_ids": [
+        "chunk_agentic_rag_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:agentic_rag"
+      ]
+    },
+    {
+      "question_id": "q_self_rag_foundation",
+      "knowledge_node_ids": [
+        "self_rag"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 4,
+      "stem": "关于“Self-RAG自反思检索生成”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "理解模型在生成过程中学习何时检索并评价自身输出的思路。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "在检索质量不足时触发纠错、补充检索或降级。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "利用实体关系、社区摘要或图遍历支持跨文档关联问题。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "在向量库、关键词索引、数据库、API和知识图谱之间选择合适数据源。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "Self-RAG引入检索与反思信号，使模型在需要时检索，并对相关性、支持性和输出质量进行自评。它展示了把检索决策和批判过程纳入生成的方法。",
+      "evidence_chunk_ids": [
+        "chunk_self_rag_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:self_rag"
+      ]
+    },
+    {
+      "question_id": "q_corrective_rag_foundation",
+      "knowledge_node_ids": [
+        "corrective_rag"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 3,
+      "stem": "关于“Corrective RAG”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "利用实体关系、社区摘要或图遍历支持跨文档关联问题。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "在检索质量不足时触发纠错、补充检索或降级。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "在向量库、关键词索引、数据库、API和知识图谱之间选择合适数据源。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "让智能体根据任务动态规划检索、工具调用和停止条件。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "Corrective RAG的核心是先评估已检索文档质量，再决定直接使用、补充检索、过滤噪声或拒答。它把“检索结果是否可用”变成显式决策。",
+      "evidence_chunk_ids": [
+        "chunk_corrective_rag_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:corrective_rag"
+      ]
+    },
+    {
+      "question_id": "q_graph_rag_foundation",
+      "knowledge_node_ids": [
+        "graph_rag"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 4,
+      "stem": "关于“Graph RAG”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "在向量库、关键词索引、数据库、API和知识图谱之间选择合适数据源。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "让智能体根据任务动态规划检索、工具调用和停止条件。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "利用实体关系、社区摘要或图遍历支持跨文档关联问题。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "理解模型在生成过程中学习何时检索并评价自身输出的思路。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "Graph RAG把实体、关系和文档证据组织为图，可支持跨文档聚合、关系追踪和全局主题总结。图结构必须回链原始来源，不能把抽取关系当作绝对事实。",
+      "evidence_chunk_ids": [
+        "chunk_graph_rag_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:graph_rag"
+      ]
+    },
+    {
+      "question_id": "q_tool_routing_multi_source_foundation",
+      "knowledge_node_ids": [
+        "tool_routing_multi_source"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 3,
+      "stem": "关于“多源路由与工具选择”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "让智能体根据任务动态规划检索、工具调用和停止条件。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "理解模型在生成过程中学习何时检索并评价自身输出的思路。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "在检索质量不足时触发纠错、补充检索或降级。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "在向量库、关键词索引、数据库、API和知识图谱之间选择合适数据源。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "不同问题适合不同工具：文档解释适合文本检索，精确库存或成绩适合数据库，实时状态适合API，关系问题可能适合图查询。路由器应依据意图和权限选择工具。",
+      "evidence_chunk_ids": [
+        "chunk_tool_routing_multi_source_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:tool_routing_multi_source"
+      ]
+    },
+    {
+      "question_id": "q_observability_tracing_foundation",
+      "knowledge_node_ids": [
+        "observability_tracing"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“可观测性与链路追踪”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "追踪一次RAG请求经过的检索、重排、生成、审核和仲裁步骤。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "安全复用稳定结果并防止重试造成重复任务。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "保证模型、向量库或外部服务异常时系统可预测地降级。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "在知识、模型和提示词变化后保持质量可控。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "可观测性包括日志、指标和追踪。语义系统还需要记录版本、候选证据、分数与决策状态，才能解释答案和定位质量回归。",
+      "evidence_chunk_ids": [
+        "chunk_observability_tracing_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:observability_tracing"
+      ]
+    },
+    {
+      "question_id": "q_latency_cost_optimization_foundation",
+      "knowledge_node_ids": [
+        "latency_cost_optimization"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 3,
+      "stem": "关于“延迟与成本优化”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "保证模型、向量库或外部服务异常时系统可预测地降级。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "在质量约束下优化检索、重排、上下文和模型调用成本。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "在知识、模型和提示词变化后保持质量可控。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "追踪一次RAG请求经过的检索、重排、生成、审核和仲裁步骤。"
+        }
+      ],
+      "answer_key": "B",
+      "explanation": "RAG延迟来自查询改写、多个检索通道、重排、生成和审核。优化应先通过追踪找到瓶颈，再在质量不下降的前提下调整候选数、并行度、模型和缓存。",
+      "evidence_chunk_ids": [
+        "chunk_latency_cost_optimization_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择B得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:latency_cost_optimization"
+      ]
+    },
+    {
+      "question_id": "q_caching_idempotency_foundation",
+      "knowledge_node_ids": [
+        "caching_idempotency"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 2,
+      "stem": "关于“缓存与幂等”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "在知识、模型和提示词变化后保持质量可控。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "追踪一次RAG请求经过的检索、重排、生成、审核和仲裁步骤。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "安全复用稳定结果并防止重试造成重复任务。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "在质量约束下优化检索、重排、上下文和模型调用成本。"
+        }
+      ],
+      "answer_key": "C",
+      "explanation": "可缓存嵌入、检索结果、静态知识摘要和已审核资源，但缓存键必须包含租户、知识库版本、权限、查询规范化结果和模型版本。幂等键用于避免重复创建会话、测评或任务。",
+      "evidence_chunk_ids": [
+        "chunk_caching_idempotency_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择C得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:caching_idempotency"
+      ]
+    },
+    {
+      "question_id": "q_deployment_fallback_foundation",
+      "knowledge_node_ids": [
+        "deployment_fallback"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 3,
+      "stem": "关于“部署与降级”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "追踪一次RAG请求经过的检索、重排、生成、审核和仲裁步骤。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "在质量约束下优化检索、重排、上下文和模型调用成本。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "安全复用稳定结果并防止重试造成重复任务。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "保证模型、向量库或外部服务异常时系统可预测地降级。"
+        }
+      ],
+      "answer_key": "D",
+      "explanation": "生产RAG应定义依赖健康检查、超时、重试、熔断和降级。降级目标不是伪装正常，而是保持数据安全并向用户说明当前能力限制。",
+      "evidence_chunk_ids": [
+        "chunk_deployment_fallback_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择D得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:deployment_fallback"
+      ]
+    },
+    {
+      "question_id": "q_continuous_updates_regression_foundation",
+      "knowledge_node_ids": [
+        "continuous_updates_regression"
+      ],
+      "question_type": "single_choice",
+      "difficulty_level": 3,
+      "stem": "关于“持续更新与回归”，以下哪项描述最准确？",
+      "options": [
+        {
+          "option_id": "A",
+          "option_text": "在知识、模型和提示词变化后保持质量可控。"
+        },
+        {
+          "option_id": "B",
+          "option_text": "在质量约束下优化检索、重排、上下文和模型调用成本。"
+        },
+        {
+          "option_id": "C",
+          "option_text": "安全复用稳定结果并防止重试造成重复任务。"
+        },
+        {
+          "option_id": "D",
+          "option_text": "保证模型、向量库或外部服务异常时系统可预测地降级。"
+        }
+      ],
+      "answer_key": "A",
+      "explanation": "RAG是持续变化系统。知识源、切分、嵌入、索引、提示词和模型任一变化都可能影响结果，因此每次变更都需要版本记录和自动回归。",
+      "evidence_chunk_ids": [
+        "chunk_continuous_updates_regression_principle"
+      ],
+      "review_status": "internal_verified",
+      "assessment_tier": "foundation",
+      "scoring_rubric": [
+        "选择A得1分；其他选项0分。"
+      ],
+      "error_type_codes": [
+        "concept_misunderstanding:continuous_updates_regression"
+      ]
+    }
+  ]
+}

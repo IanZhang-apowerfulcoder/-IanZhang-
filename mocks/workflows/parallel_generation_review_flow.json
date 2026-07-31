@@ -1,0 +1,224 @@
+[
+  {
+    "event_id": "aad702b8-a6d1-4959-b2f3-2fdd23ebef3f",
+    "sequence_no": 12,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": null,
+    "retrieval_run_id": null,
+    "parallel_group_id": "1bce79e7-f633-41a2-b5c6-25b924a2d6c5",
+    "event_type": "parallel_group_started",
+    "status": "running",
+    "payload": {
+      "group_type": "generation",
+      "branches": [
+        "explanation",
+        "practice",
+        "quiz"
+      ]
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "cd5bc066-c45a-4d38-9c7a-ea89ad25ce47",
+    "created_at": "2026-07-31T12:00:12Z"
+  },
+  {
+    "event_id": "57a329d0-4522-42b1-8c4b-6c648eb7ea91",
+    "sequence_no": 13,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": "4a284b66-6f9a-43b3-b3e5-1c82d4bec93f",
+    "retrieval_run_id": null,
+    "parallel_group_id": "1bce79e7-f633-41a2-b5c6-25b924a2d6c5",
+    "event_type": "generation_branch_completed",
+    "status": "succeeded",
+    "payload": {
+      "branch": "explanation"
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "aad702b8-a6d1-4959-b2f3-2fdd23ebef3f",
+    "created_at": "2026-07-31T12:00:13Z"
+  },
+  {
+    "event_id": "f70af916-a542-4e5e-bcc1-8550dcdc876a",
+    "sequence_no": 14,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": "e43c9963-ec15-4b70-a482-36ca025b3761",
+    "retrieval_run_id": null,
+    "parallel_group_id": "1bce79e7-f633-41a2-b5c6-25b924a2d6c5",
+    "event_type": "generation_branch_completed",
+    "status": "succeeded",
+    "payload": {
+      "branch": "practice"
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "57a329d0-4522-42b1-8c4b-6c648eb7ea91",
+    "created_at": "2026-07-31T12:00:14Z"
+  },
+  {
+    "event_id": "b0bbe255-c20c-4c87-9adb-7bad8012cb94",
+    "sequence_no": 15,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": "ba1db4a8-dbdd-467e-b079-d8c7605130d3",
+    "retrieval_run_id": null,
+    "parallel_group_id": "1bce79e7-f633-41a2-b5c6-25b924a2d6c5",
+    "event_type": "generation_branch_completed",
+    "status": "succeeded",
+    "payload": {
+      "branch": "quiz"
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "f70af916-a542-4e5e-bcc1-8550dcdc876a",
+    "created_at": "2026-07-31T12:00:15Z"
+  },
+  {
+    "event_id": "2789cb36-5560-4348-91ab-bf8f24540b09",
+    "sequence_no": 16,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": "4aab7690-c9ab-48fe-95ca-6d3fcadbaee7",
+    "retrieval_run_id": null,
+    "parallel_group_id": null,
+    "event_type": "resource_composed",
+    "status": "succeeded",
+    "payload": {
+      "section_count": 7
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "b0bbe255-c20c-4c87-9adb-7bad8012cb94",
+    "created_at": "2026-07-31T12:00:16Z"
+  },
+  {
+    "event_id": "241f432b-c730-440b-be0d-0f9bccc27967",
+    "sequence_no": 17,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": null,
+    "retrieval_run_id": null,
+    "parallel_group_id": "23e4d7a2-291f-485c-a7cb-6c80d86aa9bd",
+    "event_type": "parallel_group_started",
+    "status": "running",
+    "payload": {
+      "group_type": "review",
+      "branches": [
+        "factuality",
+        "difficulty",
+        "assessment_quality",
+        "safety"
+      ]
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "2789cb36-5560-4348-91ab-bf8f24540b09",
+    "created_at": "2026-07-31T12:00:17Z"
+  },
+  {
+    "event_id": "69dfce3b-2493-41ad-a095-b15905453cec",
+    "sequence_no": 18,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": "b2fe6efe-05ae-4dbd-b39a-4911917e0bf7",
+    "retrieval_run_id": null,
+    "parallel_group_id": "23e4d7a2-291f-485c-a7cb-6c80d86aa9bd",
+    "event_type": "review_branch_completed",
+    "status": "succeeded",
+    "payload": {
+      "branch": "factuality",
+      "outcome": "revise"
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "241f432b-c730-440b-be0d-0f9bccc27967",
+    "created_at": "2026-07-31T12:00:18Z"
+  },
+  {
+    "event_id": "22718963-2bd5-4370-8baa-9a9211616ceb",
+    "sequence_no": 19,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": "7d93af12-856e-454e-9521-94c047b0b006",
+    "retrieval_run_id": null,
+    "parallel_group_id": "23e4d7a2-291f-485c-a7cb-6c80d86aa9bd",
+    "event_type": "review_branch_completed",
+    "status": "succeeded",
+    "payload": {
+      "branch": "difficulty",
+      "outcome": "pass"
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "69dfce3b-2493-41ad-a095-b15905453cec",
+    "created_at": "2026-07-31T12:00:19Z"
+  },
+  {
+    "event_id": "858299f5-2a34-46f8-a4ae-a5302b983d17",
+    "sequence_no": 20,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": "48e45795-aa42-4263-99ea-80d85f6cbbd2",
+    "retrieval_run_id": null,
+    "parallel_group_id": "23e4d7a2-291f-485c-a7cb-6c80d86aa9bd",
+    "event_type": "review_branch_completed",
+    "status": "succeeded",
+    "payload": {
+      "branch": "assessment_quality",
+      "outcome": "pass"
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "22718963-2bd5-4370-8baa-9a9211616ceb",
+    "created_at": "2026-07-31T12:00:20Z"
+  },
+  {
+    "event_id": "da77cc82-ce2e-4806-9109-700461e2981e",
+    "sequence_no": 21,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": "e8500b76-4f48-4d9e-a01b-1a9d27971b4d",
+    "retrieval_run_id": null,
+    "parallel_group_id": "23e4d7a2-291f-485c-a7cb-6c80d86aa9bd",
+    "event_type": "review_branch_completed",
+    "status": "succeeded",
+    "payload": {
+      "branch": "safety",
+      "outcome": "pass"
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "858299f5-2a34-46f8-a4ae-a5302b983d17",
+    "created_at": "2026-07-31T12:00:21Z"
+  },
+  {
+    "event_id": "fcc30110-5b32-44fa-acb4-11f3d323af1b",
+    "sequence_no": 22,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": "b997488e-c7d5-4e08-973b-d5a40426b49f",
+    "retrieval_run_id": null,
+    "parallel_group_id": null,
+    "event_type": "review_aggregated",
+    "status": "succeeded",
+    "payload": {
+      "outcome": "revise",
+      "rerun_branches": [
+        "explanation"
+      ]
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "da77cc82-ce2e-4806-9109-700461e2981e",
+    "created_at": "2026-07-31T12:00:22Z"
+  },
+  {
+    "event_id": "fb115d88-1710-48a2-94da-dfaa7fef7630",
+    "sequence_no": 24,
+    "workflow_run_id": "6011a932-9d2f-4eb5-817c-16ea7d57b41a",
+    "session_id": "b167cabe-9089-4f29-91f5-652a24c8b953",
+    "agent_run_id": "c4c511ce-2c0c-4fcc-a49a-f912357d6393",
+    "retrieval_run_id": null,
+    "parallel_group_id": null,
+    "event_type": "review_aggregated",
+    "status": "succeeded",
+    "payload": {
+      "outcome": "pass"
+    },
+    "correlation_id": "aea174ad-8555-4d62-806d-a687c2d19a19",
+    "causation_id": "2a98b808-acbc-41d8-9097-3dfaeb55596e",
+    "created_at": "2026-07-31T12:00:24Z"
+  }
+]

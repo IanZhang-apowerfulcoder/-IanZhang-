@@ -1,0 +1,12 @@
+{
+  "task_id": "UUID",
+  "knowledge_node_id": "RAG-MXX-NXX",
+  "title": "工程任务标题",
+  "scenario": "真实或拟真的工程场景",
+  "instructions": ["任务步骤和约束"],
+  "deliverables": ["必须提交的产物"],
+  "difficulty_level": 3,
+  "estimated_minutes": 90,
+  "rubric_id": "UUID",
+  "evidence_ids": ["UUID"]
+}

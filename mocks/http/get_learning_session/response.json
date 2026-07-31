@@ -1,31 +1,7 @@
 {
-  "operation_id": "get_learning_session",
-  "status_code": 200,
-  "content_type": "application/json",
-  "body": {
-    "code": "SUCCESS",
-    "message": "成功",
-    "data": {
-      "session_id": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
-      "organization_id": "11111111-1111-4111-8111-111111111111",
-      "assignment_id": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
-      "training_program_id": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
-      "learner_id": "33333333-3333-4333-8333-333333333333",
-      "knowledge_base_version_id": "77777777-7777-4777-8777-777777777777",
-      "profile_snapshot_id": "fc111111-1111-4111-8111-111111111111",
-      "session_status": "completed",
-      "current_decision_cycle_id": "3f9c8f7c-f230-4a16-8d8f-bd60bf438a65",
-      "current_action_type": "示例current_action_type",
-      "started_at": "2026-07-30T12:00:00Z",
-      "completed_at": "2026-07-30T12:00:00Z",
-      "updated_at": "2026-07-30T12:00:00Z",
-      "error_code": "示例error_code",
-      "error_message": "示例error_message"
-    },
-    "meta": {
-      "request_id": "fe311111-1111-4111-8111-111111111111",
-      "schema_version": "1.0.0",
-      "timestamp": "2026-07-30T12:00:00Z"
-    }
-  }
+  "data": {
+    "operation_id": "get_learning_session",
+    "status": "mock_success"
+  },
+  "request_id": "00000000-0000-4000-8000-000000000002"
 }

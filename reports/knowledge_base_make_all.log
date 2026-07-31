@@ -1,0 +1,3963 @@
+PYTHONPATH=. python scripts/validate_pack.py
+{
+  "status": "PASS",
+  "version": "2.0.0",
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "nodes": 93,
+    "edges": 252,
+    "chunks": 372,
+    "evidence": 372,
+    "questions": 372,
+    "tasks": 93,
+    "rubrics": 93,
+    "retrieval_eval_cases": 279,
+    "generation_eval_cases": 173,
+    "sources": 42,
+    "trusted_core_nodes": 32,
+    "trusted_ai_generated_nodes": 61,
+    "concept_cards": 93,
+    "faq": 279,
+    "error_cases": 186
+  },
+  "quality_layers": {
+    "trusted_core_full_coverage_rate": 1.0,
+    "trusted_ai_generated_full_coverage_rate": 1.0,
+    "trusted_ai_generated_task_rubric_coverage_rate": 1.0,
+    "all_runtime_chunks_have_evidence": true
+  },
+  "governance": {
+    "imported_nodes_runtime_enabled": true,
+    "imported_nodes_review_status": "pending_team_review",
+    "published_version_is_immutable": true
+  }
+}
+PYTHONPATH=. python scripts/validate_project_compatibility.py
+{
+  "status": "PASS",
+  "learner_case_count": 3,
+  "artifacts_checked": 24,
+  "errors": []
+}
+PYTHONPATH=. python scripts/run_retrieval_eval.py
+{
+  "evaluator": "bm25_char_ngram_metadata_baseline",
+  "knowledge_base_version_id": "cd9998d7-e5d0-5722-b1fa-266d99162266",
+  "case_count": 279,
+  "hit_rate_at_1": 0.9427,
+  "hit_rate_at_5": 1.0,
+  "mean_reciprocal_rank": 0.9682,
+  "target_hit_rate_at_5": 0.9,
+  "target_met": true,
+  "limitations": "词法+元数据基线；不代表稠密向量、重排器或真实生成模型的最终质量。",
+  "case_results": [
+    {
+      "test_case_id": "RET-RAG-M01-N01-01",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-M01-N02",
+        "RAG-SUB-end_to_end_evaluation"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M01-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M02-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-SUB-document_parsing"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-SUB-document_parsing"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M07-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M02-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M02-N04",
+        "RAG-M06-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-SUB-dense_retrieval"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-SUB-embedding_fundamentals"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-SUB-vector_index_hnsw_ivf"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-SUB-vector_index_hnsw_ivf"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-SUB-bm25_sparse_retrieval"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-SUB-hybrid_retrieval"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M03-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-M03-N04",
+        "RAG-SUB-rank_fusion_rrf"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-SUB-query_rewriting"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-SUB-sensitive_data_privacy"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-SUB-access_control_tenant_isolation"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-SUB-cross_encoder_reranking"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-SUB-cross_encoder_reranking"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M04-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-SUB-context_selection_budget"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N01-01",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-SUB-prompt_grounding"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M01-N04",
+        "RAG-M05-N02",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M05-N02",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-SUB-prompt_injection_defense"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M05-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-M05-N04",
+        "RAG-SUB-prompt_injection_defense"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M01-N04",
+        "RAG-M06-N01",
+        "RAG-M06-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-M06-N01",
+        "RAG-SUB-retrieval_metrics"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-M06-N02",
+        "RAG-SUB-generation_metrics"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M02-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M06-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-SUB-observability_tracing"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M02-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M07-N01",
+        "RAG-M02-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-M07-N02",
+        "RAG-SUB-graph_rag"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M02-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M07-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N01-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N01-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N01-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N01",
+        "RAG-M08-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N02-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N02-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N02-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N02",
+        "RAG-M08-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N03-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N03-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N03-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-M08-N03",
+        "RAG-SUB-caching_idempotency"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N04-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N04-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-M08-N04-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-M08-N04",
+        "RAG-SUB-deployment_fallback"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_definition-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-M05-N02",
+        "RAG-SUB-rag_applicability",
+        "RAG-M06-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_definition-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-embedding_fundamentals"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_end_to_end_architecture-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-M01-N04",
+        "RAG-M06-N03",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_end_to_end_architecture-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-parametric_nonparametric_memory-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-parametric_nonparametric_memory-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_applicability-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-rag_applicability",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_applicability-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-evidence_entailment",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-prompt_grounding"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_failure_taxonomy-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M05-N02",
+        "RAG-M06-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_failure_taxonomy-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-document_parsing",
+        "RAG-SUB-golden_dataset_design"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-knowledge_source_selection-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_applicability",
+        "RAG-M04-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-knowledge_source_selection-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-diversity_mmr",
+        "RAG-M01-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-source_authority_provenance-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-source_authority_provenance",
+        "RAG-SUB-source_authority_provenance",
+        "RAG-SUB-source_authority_provenance",
+        "RAG-SUB-source_authority_provenance",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-source_authority_provenance-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-source_authority_provenance",
+        "RAG-SUB-source_authority_provenance",
+        "RAG-SUB-source_authority_provenance",
+        "RAG-SUB-source_authority_provenance",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-observability_tracing",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-corrective_rag"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-versioning_freshness-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-versioning_freshness",
+        "RAG-SUB-versioning_freshness",
+        "RAG-SUB-versioning_freshness",
+        "RAG-SUB-versioning_freshness",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-knowledge_source_selection"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-versioning_freshness-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-versioning_freshness",
+        "RAG-SUB-versioning_freshness",
+        "RAG-SUB-versioning_freshness",
+        "RAG-SUB-versioning_freshness",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-knowledge_source_selection"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-licensing_compliance-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-licensing_compliance",
+        "RAG-SUB-licensing_compliance",
+        "RAG-SUB-licensing_compliance",
+        "RAG-SUB-licensing_compliance",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-licensing_compliance-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-licensing_compliance",
+        "RAG-SUB-licensing_compliance",
+        "RAG-SUB-licensing_compliance",
+        "RAG-SUB-licensing_compliance",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-document_quality_checks"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-access_control_tenant_isolation-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-access_control_tenant_isolation-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-document_parsing-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-document_parsing",
+        "RAG-SUB-document_parsing",
+        "RAG-SUB-document_parsing",
+        "RAG-SUB-document_parsing",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M02-N02",
+        "RAG-M02-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-document_parsing-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-document_parsing",
+        "RAG-SUB-document_parsing",
+        "RAG-SUB-document_parsing",
+        "RAG-SUB-document_parsing",
+        "RAG-M02-N02",
+        "RAG-SUB-document_quality_checks",
+        "RAG-M02-N02",
+        "RAG-M02-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-layout_table_extraction-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-layout_table_extraction-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-text_cleaning_normalization-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-M02-N02",
+        "RAG-M01-N04",
+        "RAG-M03-N03",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-text_cleaning_normalization-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M03-N03",
+        "RAG-M03-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-deduplication-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-deduplication",
+        "RAG-SUB-deduplication",
+        "RAG-SUB-deduplication",
+        "RAG-SUB-deduplication",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M05-N02",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-deduplication-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-deduplication",
+        "RAG-SUB-deduplication",
+        "RAG-SUB-deduplication",
+        "RAG-SUB-deduplication",
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-prompt_grounding"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-document_quality_checks-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-document_quality_checks",
+        "RAG-M01-N04",
+        "RAG-M06-N03",
+        "RAG-SUB-rag_definition",
+        "RAG-M06-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-document_quality_checks-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-document_quality_checks",
+        "RAG-M02-N02",
+        "RAG-M06-N03",
+        "RAG-M02-N02",
+        "RAG-M02-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-chunking_objectives-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-chunking_objectives",
+        "RAG-SUB-chunking_objectives",
+        "RAG-SUB-chunking_objectives",
+        "RAG-SUB-chunking_objectives",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-chunking_objectives-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-chunking_objectives",
+        "RAG-SUB-chunking_objectives",
+        "RAG-SUB-chunking_objectives",
+        "RAG-SUB-chunking_objectives",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-M01-N01",
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-rag_failure_taxonomy"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-fixed_window_chunking-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-M01-N04",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-fixed_window_chunking-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-semantic_chunking"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-structure_aware_chunking-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-M01-N04",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-fixed_window_chunking"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-structure_aware_chunking-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-fixed_window_chunking"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-semantic_chunking-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-semantic_chunking-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-chunking_objectives"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-parent_child_multigranular-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M02-N03",
+        "RAG-M07-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-parent_child_multigranular-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-SUB-chunking_objectives",
+        "RAG-M07-N01",
+        "RAG-M07-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-metadata_schema-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-metadata_schema",
+        "RAG-SUB-metadata_schema",
+        "RAG-SUB-metadata_schema",
+        "RAG-SUB-metadata_schema",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M02-N04",
+        "RAG-M07-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-metadata_schema-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-metadata_schema",
+        "RAG-SUB-metadata_schema",
+        "RAG-SUB-metadata_schema",
+        "RAG-SUB-metadata_schema",
+        "RAG-SUB-golden_dataset_design",
+        "RAG-SUB-metadata_filtering",
+        "RAG-M05-N03",
+        "RAG-SUB-golden_dataset_design"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-embedding_fundamentals-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-embedding_fundamentals-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-rag_end_to_end_architecture"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-embedding_model_selection-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M03-N01",
+        "RAG-M03-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-embedding_model_selection-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-diversity_mmr",
+        "RAG-M07-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-similarity_metrics-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-similarity_metrics",
+        "RAG-SUB-similarity_metrics",
+        "RAG-SUB-similarity_metrics",
+        "RAG-SUB-similarity_metrics",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-similarity_metrics-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-similarity_metrics",
+        "RAG-SUB-similarity_metrics",
+        "RAG-SUB-similarity_metrics",
+        "RAG-SUB-similarity_metrics",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-vector_index_hnsw_ivf-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-vector_index_hnsw_ivf-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-bm25_sparse_retrieval-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-bm25_sparse_retrieval-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-dense_retrieval-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-dense_retrieval",
+        "RAG-SUB-dense_retrieval",
+        "RAG-SUB-dense_retrieval",
+        "RAG-SUB-dense_retrieval",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-hyde_retrieval"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-dense_retrieval-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-dense_retrieval",
+        "RAG-SUB-dense_retrieval",
+        "RAG-SUB-dense_retrieval",
+        "RAG-SUB-dense_retrieval",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-layout_table_extraction"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-hybrid_retrieval-01",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_applicability"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-hybrid_retrieval-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-metadata_filtering-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-metadata_filtering",
+        "RAG-SUB-metadata_filtering",
+        "RAG-SUB-metadata_filtering",
+        "RAG-SUB-metadata_filtering",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-metadata_schema"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-metadata_filtering-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-metadata_filtering",
+        "RAG-SUB-metadata_filtering",
+        "RAG-SUB-metadata_filtering",
+        "RAG-SUB-metadata_filtering",
+        "RAG-SUB-metadata_schema",
+        "RAG-M04-N02",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-rag_failure_taxonomy"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-multi_query_expansion-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-multi_query_expansion",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-multi_query_expansion-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-multi_query_expansion",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-query_rewriting-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-query_rewriting",
+        "RAG-SUB-query_rewriting",
+        "RAG-SUB-query_rewriting",
+        "RAG-SUB-query_rewriting",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M04-N01",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-query_rewriting-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-query_rewriting",
+        "RAG-SUB-query_rewriting",
+        "RAG-SUB-query_rewriting",
+        "RAG-SUB-query_rewriting",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-hyde_retrieval-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-hyde_retrieval-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-prompt_grounding"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-cross_encoder_reranking-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-cross_encoder_reranking-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-colbert_late_interaction-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-M04-N03",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-colbert_late_interaction-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-M04-N03",
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-M05-N03",
+        "RAG-SUB-rag_failure_taxonomy"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-diversity_mmr-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-diversity_mmr",
+        "RAG-SUB-diversity_mmr",
+        "RAG-SUB-diversity_mmr",
+        "RAG-SUB-diversity_mmr",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M04-N03",
+        "RAG-M07-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-diversity_mmr-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-diversity_mmr",
+        "RAG-SUB-diversity_mmr",
+        "RAG-SUB-diversity_mmr",
+        "RAG-SUB-diversity_mmr",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-knowledge_source_selection"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rank_fusion_rrf-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-M03-N04",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rank_fusion_rrf-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-M03-N04",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-M03-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-context_selection_budget-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-context_selection_budget",
+        "RAG-SUB-context_selection_budget",
+        "RAG-SUB-context_selection_budget",
+        "RAG-SUB-context_selection_budget",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-context_selection_budget-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-context_selection_budget",
+        "RAG-SUB-context_selection_budget",
+        "RAG-SUB-context_selection_budget",
+        "RAG-SUB-context_selection_budget",
+        "RAG-M04-N04",
+        "RAG-M01-N03",
+        "RAG-M07-N01",
+        "RAG-M04-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-lost_in_the_middle-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M01-N03",
+        "RAG-M04-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-lost_in_the_middle-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-M01-N03",
+        "RAG-M01-N03",
+        "RAG-M04-N04",
+        "RAG-M01-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-prompt_grounding-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-prompt_injection_defense"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-prompt_grounding-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-M05-N01",
+        "RAG-M05-N01",
+        "RAG-SUB-continuous_updates_regression"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-answer_abstention-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-answer_abstention",
+        "RAG-SUB-answer_abstention",
+        "RAG-SUB-answer_abstention",
+        "RAG-SUB-answer_abstention",
+        "RAG-M01-N04",
+        "RAG-M05-N02",
+        "RAG-SUB-rag_definition",
+        "RAG-M07-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-answer_abstention-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-answer_abstention",
+        "RAG-SUB-answer_abstention",
+        "RAG-SUB-answer_abstention",
+        "RAG-SUB-answer_abstention",
+        "RAG-M05-N03",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_grounding",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-citation_generation_verification-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-citation_generation_verification",
+        "RAG-SUB-citation_generation_verification",
+        "RAG-SUB-citation_generation_verification",
+        "RAG-SUB-citation_generation_verification",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-citation_generation_verification-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-citation_generation_verification",
+        "RAG-SUB-citation_generation_verification",
+        "RAG-SUB-citation_generation_verification",
+        "RAG-SUB-citation_generation_verification",
+        "RAG-M05-N03",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-prompt_grounding",
+        "RAG-M05-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-hallucination_types-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-hallucination_types",
+        "RAG-SUB-hallucination_types",
+        "RAG-SUB-hallucination_types",
+        "RAG-SUB-hallucination_types",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-hallucination_types-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-hallucination_types",
+        "RAG-SUB-hallucination_types",
+        "RAG-SUB-hallucination_types",
+        "RAG-SUB-hallucination_types",
+        "RAG-M05-N03",
+        "RAG-SUB-prompt_grounding",
+        "RAG-M05-N03",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-evidence_entailment-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-evidence_entailment",
+        "RAG-SUB-evidence_entailment",
+        "RAG-SUB-evidence_entailment",
+        "RAG-SUB-evidence_entailment",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M06-N02",
+        "RAG-M06-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-evidence_entailment-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-evidence_entailment",
+        "RAG-SUB-evidence_entailment",
+        "RAG-SUB-evidence_entailment",
+        "RAG-SUB-evidence_entailment",
+        "RAG-M05-N01",
+        "RAG-M05-N03",
+        "RAG-SUB-graph_rag",
+        "RAG-M05-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-review_correction_loop-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-review_correction_loop",
+        "RAG-SUB-review_correction_loop",
+        "RAG-SUB-review_correction_loop",
+        "RAG-SUB-review_correction_loop",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-review_correction_loop-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-review_correction_loop",
+        "RAG-SUB-review_correction_loop",
+        "RAG-SUB-review_correction_loop",
+        "RAG-SUB-review_correction_loop",
+        "RAG-M05-N03",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-prompt_grounding"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-prompt_injection_defense-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-SUB-prompt_grounding",
+        "RAG-M05-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-prompt_injection_defense-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_grounding",
+        "RAG-M05-N04",
+        "RAG-SUB-prompt_grounding"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-sensitive_data_privacy-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-M01-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-sensitive_data_privacy-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-retrieval_metrics-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-retrieval_metrics",
+        "RAG-SUB-retrieval_metrics",
+        "RAG-SUB-retrieval_metrics",
+        "RAG-SUB-retrieval_metrics",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-retrieval_metrics-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-retrieval_metrics",
+        "RAG-SUB-retrieval_metrics",
+        "RAG-SUB-retrieval_metrics",
+        "RAG-SUB-retrieval_metrics",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-generation_metrics"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-generation_metrics-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-generation_metrics",
+        "RAG-SUB-generation_metrics",
+        "RAG-SUB-generation_metrics",
+        "RAG-SUB-generation_metrics",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-generation_metrics-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-generation_metrics",
+        "RAG-SUB-generation_metrics",
+        "RAG-SUB-generation_metrics",
+        "RAG-SUB-generation_metrics",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-retrieval_metrics"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-end_to_end_evaluation-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-M01-N04",
+        "RAG-M06-N03",
+        "RAG-SUB-rag_end_to_end_architecture"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-end_to_end_evaluation-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-golden_dataset_design-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-golden_dataset_design",
+        "RAG-SUB-golden_dataset_design",
+        "RAG-SUB-golden_dataset_design",
+        "RAG-SUB-golden_dataset_design",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-golden_dataset_design-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-golden_dataset_design",
+        "RAG-SUB-golden_dataset_design",
+        "RAG-SUB-golden_dataset_design",
+        "RAG-SUB-golden_dataset_design",
+        "RAG-M01-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04",
+        "RAG-M07-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-online_monitoring_feedback-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-end_to_end_evaluation"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-online_monitoring_feedback-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-M01-N02",
+        "RAG-SUB-rag_failure_taxonomy"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-agentic_rag-01",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M07-N03",
+        "RAG-SUB-rag_definition",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-SUB-agentic_rag",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-agentic_rag-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-agentic_rag",
+        "RAG-SUB-agentic_rag",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-agentic_rag",
+        "RAG-SUB-agentic_rag",
+        "RAG-SUB-document_quality_checks"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-self_rag-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-self_rag",
+        "RAG-SUB-self_rag",
+        "RAG-SUB-self_rag",
+        "RAG-SUB-self_rag",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-self_rag-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-self_rag",
+        "RAG-SUB-self_rag",
+        "RAG-SUB-self_rag",
+        "RAG-SUB-self_rag",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-M05-N03",
+        "RAG-SUB-prompt_grounding"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-corrective_rag-01",
+      "passed": true,
+      "first_relevant_rank": 3,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-corrective_rag",
+        "RAG-SUB-corrective_rag",
+        "RAG-SUB-corrective_rag",
+        "RAG-SUB-corrective_rag",
+        "RAG-SUB-rag_definition",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-corrective_rag-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-corrective_rag",
+        "RAG-SUB-corrective_rag",
+        "RAG-SUB-corrective_rag",
+        "RAG-SUB-corrective_rag",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-document_quality_checks"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-graph_rag-01",
+      "passed": true,
+      "first_relevant_rank": 4,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-graph_rag",
+        "RAG-SUB-graph_rag",
+        "RAG-SUB-graph_rag",
+        "RAG-SUB-graph_rag",
+        "RAG-M05-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-graph_rag-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-graph_rag",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-graph_rag",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-graph_rag",
+        "RAG-SUB-graph_rag",
+        "RAG-SUB-document_quality_checks"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-tool_routing_multi_source-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-M07-N03",
+        "RAG-M07-N04",
+        "RAG-M01-N03",
+        "RAG-M01-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-tool_routing_multi_source-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-M07-N04",
+        "RAG-M07-N03",
+        "RAG-M01-N03",
+        "RAG-M07-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-observability_tracing-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-observability_tracing",
+        "RAG-SUB-observability_tracing",
+        "RAG-SUB-observability_tracing",
+        "RAG-SUB-observability_tracing",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-observability_tracing-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-observability_tracing",
+        "RAG-SUB-observability_tracing",
+        "RAG-SUB-observability_tracing",
+        "RAG-SUB-observability_tracing",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-latency_cost_optimization-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-latency_cost_optimization-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-M01-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-caching_idempotency-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-caching_idempotency",
+        "RAG-SUB-caching_idempotency",
+        "RAG-SUB-caching_idempotency",
+        "RAG-SUB-caching_idempotency",
+        "RAG-M08-N02",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M08-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-caching_idempotency-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-caching_idempotency",
+        "RAG-SUB-caching_idempotency",
+        "RAG-SUB-caching_idempotency",
+        "RAG-SUB-caching_idempotency",
+        "RAG-M08-N02",
+        "RAG-M08-N01",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-M08-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-deployment_fallback-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-deployment_fallback",
+        "RAG-SUB-deployment_fallback",
+        "RAG-SUB-deployment_fallback",
+        "RAG-SUB-deployment_fallback",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M08-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-deployment_fallback-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-deployment_fallback",
+        "RAG-SUB-deployment_fallback",
+        "RAG-SUB-deployment_fallback",
+        "RAG-SUB-deployment_fallback",
+        "RAG-SUB-corrective_rag",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-self_rag",
+        "RAG-SUB-rag_failure_taxonomy"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-continuous_updates_regression-01",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-continuous_updates_regression-02",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-M08-N01",
+        "RAG-M01-N03",
+        "RAG-SUB-source_authority_provenance"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_definition-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-M01-N04",
+        "RAG-M04-N02",
+        "RAG-M05-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_end_to_end_architecture-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-M01-N04",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-M06-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-parametric_nonparametric_memory-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-SUB-parametric_nonparametric_memory",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01",
+        "RAG-M01-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_applicability-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-rag_applicability",
+        "RAG-SUB-rag_applicability",
+        "RAG-M01-N04",
+        "RAG-M05-N03",
+        "RAG-M06-N03",
+        "RAG-M05-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rag_failure_taxonomy-03",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-SUB-rag_failure_taxonomy",
+        "RAG-M05-N02",
+        "RAG-M06-N03",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-knowledge_source_selection-03",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-M04-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-source_authority_provenance-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-source_authority_provenance",
+        "RAG-SUB-source_authority_provenance",
+        "RAG-SUB-source_authority_provenance",
+        "RAG-SUB-source_authority_provenance",
+        "RAG-M01-N04",
+        "RAG-SUB-knowledge_source_selection",
+        "RAG-M04-N04",
+        "RAG-M02-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-versioning_freshness-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-versioning_freshness",
+        "RAG-SUB-versioning_freshness",
+        "RAG-SUB-versioning_freshness",
+        "RAG-SUB-versioning_freshness",
+        "RAG-M01-N04",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-SUB-knowledge_source_selection"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-licensing_compliance-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-licensing_compliance",
+        "RAG-SUB-licensing_compliance",
+        "RAG-SUB-licensing_compliance",
+        "RAG-SUB-licensing_compliance",
+        "RAG-M01-N04",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-access_control_tenant_isolation-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-SUB-access_control_tenant_isolation",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-document_parsing-03",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-SUB-document_parsing",
+        "RAG-SUB-document_parsing",
+        "RAG-SUB-document_parsing",
+        "RAG-SUB-document_parsing",
+        "RAG-M04-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-layout_table_extraction-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-SUB-layout_table_extraction",
+        "RAG-M01-N04",
+        "RAG-M02-N02",
+        "RAG-M02-N02",
+        "RAG-M02-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-text_cleaning_normalization-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-SUB-text_cleaning_normalization",
+        "RAG-M01-N04",
+        "RAG-M03-N03",
+        "RAG-M02-N02",
+        "RAG-M03-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-deduplication-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-deduplication",
+        "RAG-SUB-deduplication",
+        "RAG-M01-N04",
+        "RAG-SUB-deduplication",
+        "RAG-SUB-deduplication",
+        "RAG-M04-N02",
+        "RAG-M04-N04",
+        "RAG-M04-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-document_quality_checks-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-document_quality_checks",
+        "RAG-SUB-document_quality_checks",
+        "RAG-M01-N04",
+        "RAG-M06-N03",
+        "RAG-M06-N03",
+        "RAG-M06-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-chunking_objectives-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-chunking_objectives",
+        "RAG-SUB-chunking_objectives",
+        "RAG-SUB-chunking_objectives",
+        "RAG-SUB-chunking_objectives",
+        "RAG-M01-N04",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-fixed_window_chunking-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-M01-N04",
+        "RAG-SUB-semantic_chunking",
+        "RAG-M05-N03",
+        "RAG-M05-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-structure_aware_chunking-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-SUB-structure_aware_chunking",
+        "RAG-M01-N04",
+        "RAG-SUB-fixed_window_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-semantic_chunking-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-SUB-semantic_chunking",
+        "RAG-M01-N04",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M02-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-parent_child_multigranular-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-SUB-parent_child_multigranular",
+        "RAG-M01-N04",
+        "RAG-M02-N03",
+        "RAG-M02-N03",
+        "RAG-M07-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-metadata_schema-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-metadata_schema",
+        "RAG-SUB-metadata_schema",
+        "RAG-SUB-metadata_schema",
+        "RAG-SUB-metadata_schema",
+        "RAG-M01-N04",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-embedding_fundamentals-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-SUB-embedding_fundamentals",
+        "RAG-M01-N04",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-embedding_model_selection-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-SUB-embedding_model_selection",
+        "RAG-M01-N04",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-similarity_metrics-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-similarity_metrics",
+        "RAG-SUB-similarity_metrics",
+        "RAG-SUB-similarity_metrics",
+        "RAG-SUB-similarity_metrics",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01",
+        "RAG-M03-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-vector_index_hnsw_ivf-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02",
+        "RAG-M03-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-bm25_sparse_retrieval-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-SUB-bm25_sparse_retrieval",
+        "RAG-M01-N04",
+        "RAG-M03-N03",
+        "RAG-M03-N03",
+        "RAG-M03-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-dense_retrieval-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-dense_retrieval",
+        "RAG-SUB-dense_retrieval",
+        "RAG-SUB-dense_retrieval",
+        "RAG-SUB-dense_retrieval",
+        "RAG-M01-N04",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-M03-N03",
+        "RAG-SUB-hyde_retrieval"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-hybrid_retrieval-03",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-SUB-rag_definition",
+        "RAG-M04-N02",
+        "RAG-M03-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-metadata_filtering-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-metadata_filtering",
+        "RAG-SUB-metadata_filtering",
+        "RAG-SUB-metadata_filtering",
+        "RAG-SUB-metadata_filtering",
+        "RAG-M04-N02",
+        "RAG-M01-N04",
+        "RAG-M04-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-multi_query_expansion-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-multi_query_expansion",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-SUB-multi_query_expansion",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-M04-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-query_rewriting-03",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-SUB-query_rewriting",
+        "RAG-SUB-query_rewriting",
+        "RAG-SUB-query_rewriting",
+        "RAG-SUB-query_rewriting",
+        "RAG-M04-N01",
+        "RAG-M04-N01",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-hyde_retrieval-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-SUB-hyde_retrieval",
+        "RAG-M01-N04",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-cross_encoder_reranking-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-SUB-cross_encoder_reranking",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03",
+        "RAG-M04-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-colbert_late_interaction-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-SUB-colbert_late_interaction",
+        "RAG-M01-N04",
+        "RAG-M04-N03",
+        "RAG-M04-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-diversity_mmr-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-diversity_mmr",
+        "RAG-SUB-diversity_mmr",
+        "RAG-SUB-diversity_mmr",
+        "RAG-SUB-diversity_mmr",
+        "RAG-M01-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N03",
+        "RAG-M04-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-rank_fusion_rrf-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-SUB-rank_fusion_rrf",
+        "RAG-SUB-hybrid_retrieval",
+        "RAG-M03-N04",
+        "RAG-M01-N04",
+        "RAG-M03-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-context_selection_budget-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-context_selection_budget",
+        "RAG-SUB-context_selection_budget",
+        "RAG-SUB-context_selection_budget",
+        "RAG-SUB-context_selection_budget",
+        "RAG-M04-N04",
+        "RAG-M01-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-lost_in_the_middle-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-SUB-lost_in_the_middle",
+        "RAG-M04-N04",
+        "RAG-M01-N04",
+        "RAG-M04-N04",
+        "RAG-M04-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-prompt_grounding-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_grounding",
+        "RAG-SUB-prompt_grounding",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M05-N01",
+        "RAG-M05-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-answer_abstention-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-answer_abstention",
+        "RAG-SUB-answer_abstention",
+        "RAG-SUB-answer_abstention",
+        "RAG-SUB-answer_abstention",
+        "RAG-M01-N04",
+        "RAG-M05-N03",
+        "RAG-M05-N02",
+        "RAG-M04-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-citation_generation_verification-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-citation_generation_verification",
+        "RAG-SUB-citation_generation_verification",
+        "RAG-SUB-citation_generation_verification",
+        "RAG-SUB-citation_generation_verification",
+        "RAG-M01-N04",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-hallucination_types-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-hallucination_types",
+        "RAG-SUB-hallucination_types",
+        "RAG-SUB-hallucination_types",
+        "RAG-SUB-hallucination_types",
+        "RAG-M01-N04",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M05-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-evidence_entailment-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-evidence_entailment",
+        "RAG-SUB-evidence_entailment",
+        "RAG-SUB-evidence_entailment",
+        "RAG-SUB-evidence_entailment",
+        "RAG-M01-N04",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-SUB-citation_generation_verification"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-review_correction_loop-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-review_correction_loop",
+        "RAG-SUB-review_correction_loop",
+        "RAG-SUB-review_correction_loop",
+        "RAG-SUB-review_correction_loop",
+        "RAG-M01-N04",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-prompt_injection_defense-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-SUB-prompt_injection_defense",
+        "RAG-M01-N04",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-sensitive_data_privacy-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-SUB-sensitive_data_privacy",
+        "RAG-M01-N04",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-retrieval_metrics-03",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-SUB-retrieval_metrics",
+        "RAG-SUB-retrieval_metrics",
+        "RAG-SUB-retrieval_metrics",
+        "RAG-SUB-retrieval_metrics",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M06-N01"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-generation_metrics-03",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-SUB-generation_metrics",
+        "RAG-SUB-generation_metrics",
+        "RAG-SUB-generation_metrics",
+        "RAG-SUB-generation_metrics",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-end_to_end_evaluation-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-SUB-end_to_end_evaluation",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_end_to_end_architecture",
+        "RAG-M06-N03",
+        "RAG-SUB-rag_end_to_end_architecture"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-golden_dataset_design-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-golden_dataset_design",
+        "RAG-SUB-golden_dataset_design",
+        "RAG-SUB-golden_dataset_design",
+        "RAG-SUB-golden_dataset_design",
+        "RAG-M01-N04",
+        "RAG-M01-N04",
+        "RAG-M05-N03",
+        "RAG-M05-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-online_monitoring_feedback-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-SUB-online_monitoring_feedback",
+        "RAG-M01-N04",
+        "RAG-M01-N02",
+        "RAG-M03-N02",
+        "RAG-SUB-rag_end_to_end_architecture"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-agentic_rag-03",
+      "passed": true,
+      "first_relevant_rank": 2,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-SUB-agentic_rag",
+        "RAG-M07-N03",
+        "RAG-M07-N03",
+        "RAG-SUB-agentic_rag",
+        "RAG-SUB-agentic_rag"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-self_rag-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-self_rag",
+        "RAG-SUB-self_rag",
+        "RAG-SUB-self_rag",
+        "RAG-SUB-self_rag",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition",
+        "RAG-SUB-rag_definition"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-corrective_rag-03",
+      "passed": true,
+      "first_relevant_rank": 3,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M04-N02",
+        "RAG-SUB-corrective_rag",
+        "RAG-M04-N02",
+        "RAG-SUB-corrective_rag",
+        "RAG-M04-N02",
+        "RAG-M05-N03",
+        "RAG-M05-N03"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-graph_rag-03",
+      "passed": true,
+      "first_relevant_rank": 5,
+      "ranked_node_ids": [
+        "RAG-M01-N04",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-SUB-graph_rag",
+        "RAG-M05-N03",
+        "RAG-M05-N03",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-tool_routing_multi_source-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-SUB-tool_routing_multi_source",
+        "RAG-M07-N03",
+        "RAG-M01-N04",
+        "RAG-M01-N03",
+        "RAG-M07-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-observability_tracing-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-observability_tracing",
+        "RAG-SUB-observability_tracing",
+        "RAG-SUB-observability_tracing",
+        "RAG-SUB-observability_tracing",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04",
+        "RAG-M06-N04"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-latency_cost_optimization-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-SUB-latency_cost_optimization",
+        "RAG-M01-N04",
+        "RAG-M03-N02",
+        "RAG-SUB-vector_index_hnsw_ivf",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-caching_idempotency-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-caching_idempotency",
+        "RAG-SUB-caching_idempotency",
+        "RAG-SUB-caching_idempotency",
+        "RAG-SUB-caching_idempotency",
+        "RAG-M01-N04",
+        "RAG-M08-N02",
+        "RAG-M08-N03",
+        "RAG-M08-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-deployment_fallback-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-deployment_fallback",
+        "RAG-SUB-deployment_fallback",
+        "RAG-SUB-deployment_fallback",
+        "RAG-SUB-deployment_fallback",
+        "RAG-M01-N04",
+        "RAG-M04-N02",
+        "RAG-M04-N02",
+        "RAG-M04-N02"
+      ]
+    },
+    {
+      "test_case_id": "RET-RAG-SUB-continuous_updates_regression-03",
+      "passed": true,
+      "first_relevant_rank": 1,
+      "ranked_node_ids": [
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-SUB-continuous_updates_regression",
+        "RAG-M01-N04",
+        "RAG-SUB-rag_definition",
+        "RAG-M07-N03",
+        "RAG-M03-N02"
+      ]
+    }
+  ]
+}
+PYTHONPATH=. pytest -q
+.............                                                            [100%]
+13 passed in 1.44s
+PYTHONPATH=. python scripts/import_to_postgres.py --dsn postgresql://unused --dry-run
+{
+  "domain": "enterprise-rag-engineering-v2",
+  "nodes": 93,
+  "edges": 252,
+  "chunks": 372
+}

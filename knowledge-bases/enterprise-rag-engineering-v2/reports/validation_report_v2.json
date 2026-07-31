@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "version": "2.0.0",
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "nodes": 93,
+    "edges": 252,
+    "chunks": 372,
+    "evidence": 372,
+    "questions": 372,
+    "tasks": 93,
+    "rubrics": 93,
+    "retrieval_eval_cases": 279,
+    "generation_eval_cases": 173,
+    "sources": 42,
+    "trusted_core_nodes": 32,
+    "trusted_ai_generated_nodes": 61,
+    "concept_cards": 93,
+    "faq": 279,
+    "error_cases": 186
+  },
+  "quality_layers": {
+    "trusted_core_full_coverage_rate": 1.0,
+    "trusted_ai_generated_full_coverage_rate": 1.0,
+    "trusted_ai_generated_task_rubric_coverage_rate": 1.0,
+    "all_runtime_chunks_have_evidence": true
+  },
+  "governance": {
+    "imported_nodes_runtime_enabled": true,
+    "imported_nodes_review_status": "pending_team_review",
+    "published_version_is_immutable": true
+  }
+}

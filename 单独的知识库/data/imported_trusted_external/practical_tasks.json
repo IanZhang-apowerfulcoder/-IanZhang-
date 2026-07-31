@@ -1,0 +1,1127 @@
+[
+  {
+    "candidate_task_id": "EXT-task_minimal_rag",
+    "origin_task_id": "task_minimal_rag",
+    "mapped_knowledge_node_ids": [
+      "RAG-M01-N01",
+      "RAG-M01-N02",
+      "RAG-M05-N01"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-rag_definition",
+      "EXT-RAG-rag_end_to_end_architecture",
+      "EXT-RAG-prompt_grounding",
+      "EXT-RAG-citation_generation_verification"
+    ],
+    "title": "搭建可追溯的最小RAG基线",
+    "scenario": "为一组RAG工程文档搭建可运行基线，要求每个答案返回证据编号。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "建立知识片段与来源表。",
+        "expected_result": "形成与“RAG基本定义”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_rag_definition_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "实现稀疏或稠密top_k检索。",
+        "expected_result": "形成与“RAG端到端架构”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_rag_end_to_end_architecture_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "构造带证据编号的提示词。",
+        "expected_result": "形成与“证据约束提示词”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_prompt_grounding_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "输出答案、引用和请求链路日志。",
+        "expected_result": "形成与“引用生成与验证”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_citation_generation_verification_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "code",
+    "acceptance_criteria": [
+      "至少10个测试问题可运行。",
+      "所有答案均返回有效chunk_id。",
+      "证据不足问题能够拒答。"
+    ],
+    "difficulty_level": 2,
+    "estimated_minutes": 120,
+    "prerequisite_node_ids": [],
+    "evidence_ids": [
+      "3d790109-f3fd-5b5a-8ad7-83a413013d4b",
+      "49874bf9-459f-583f-97e3-77f7b5e1b548",
+      "69943873-7567-5f63-b774-d7101a449690",
+      "37bdd36a-e586-5804-94dd-cf9ab7b620c2",
+      "958351d4-786e-5b6f-b1b3-843c68fddd63",
+      "b2ba6559-101c-5817-ae4f-f2082a131ce2",
+      "c9265043-5804-53d2-a0ab-ef2cfa72e582",
+      "8a8ceb98-6cfb-50e7-9554-5051d571c7ca"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_source_registry",
+    "origin_task_id": "task_source_registry",
+    "mapped_knowledge_node_ids": [
+      "RAG-M02-N01",
+      "RAG-M02-N04"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-knowledge_source_selection",
+      "EXT-RAG-source_authority_provenance",
+      "EXT-RAG-versioning_freshness",
+      "EXT-RAG-licensing_compliance"
+    ],
+    "title": "建立知识源登记与版本门禁",
+    "scenario": "为企业培训资料建立来源、版本、许可和审核登记。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "设计source_id和版本字段。",
+        "expected_result": "形成与“知识源选择”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_knowledge_source_selection_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "登记至少5个来源及权威等级。",
+        "expected_result": "形成与“来源权威性与溯源”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_source_authority_provenance_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "定义冲突来源优先级。",
+        "expected_result": "形成与“版本与时效治理”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_versioning_freshness_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "生成待审核与可发布清单。",
+        "expected_result": "形成与“许可与合规”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_licensing_compliance_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "report",
+    "acceptance_criteria": [
+      "每个来源有版本和许可说明。",
+      "核心知识点可映射到至少一个来源。",
+      "未确认来源不会进入正式版本。"
+    ],
+    "difficulty_level": 2,
+    "estimated_minutes": 90,
+    "prerequisite_node_ids": [],
+    "evidence_ids": [
+      "913be86f-aa12-58b9-aece-a840a067a1fc",
+      "7ca80f17-8fa8-5e7f-875d-f85ab0981f9a",
+      "efe9c728-c907-5adf-996e-b84215ce9f83",
+      "1d281baa-ceda-5bbf-a360-ccd5e5fb34f2",
+      "aeb513a8-5c06-5da0-943f-11ec4dae0b5d",
+      "7ca24d70-cebb-5b49-b40f-6d53a27c20e0",
+      "295f7439-cb3d-54a7-93cc-05b3cf21d5e1",
+      "a9b64ad9-e2aa-5033-a2df-452cf06d6ea9"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_parse_quality",
+    "origin_task_id": "task_parse_quality",
+    "mapped_knowledge_node_ids": [
+      "RAG-M02-N02",
+      "RAG-M02-N04"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-document_parsing",
+      "EXT-RAG-layout_table_extraction",
+      "EXT-RAG-text_cleaning_normalization",
+      "EXT-RAG-document_quality_checks"
+    ],
+    "title": "文档解析与质量门禁",
+    "scenario": "解析一份含标题、表格和代码的技术文档并输出质量报告。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "输出统一文档树。",
+        "expected_result": "形成与“文档解析”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_document_parsing_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "保留页码、标题、表格和代码块。",
+        "expected_result": "形成与“版面与表格提取”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_layout_table_extraction_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "执行清洗并生成前后差异。",
+        "expected_result": "形成与“文本清洗与规范化”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_text_cleaning_normalization_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "计算乱码、空页和结构完整率。",
+        "expected_result": "形成与“文档质量门禁”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_document_quality_checks_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "mixed",
+    "acceptance_criteria": [
+      "表格表头与单位未丢失。",
+      "代码缩进可恢复。",
+      "阻断问题会阻止入库。"
+    ],
+    "difficulty_level": 3,
+    "estimated_minutes": 180,
+    "prerequisite_node_ids": [
+      "RAG-M02-N01"
+    ],
+    "evidence_ids": [
+      "d2bfd211-f937-52dd-98ad-25176b528a02",
+      "f117a769-bd8f-5c52-9441-9e2c3e8d21f0",
+      "41200a5e-9017-5235-9103-96d21741846c",
+      "0b862aa5-aa22-5315-9192-292a2d7d7a57",
+      "7e56d693-00a0-592f-ab46-ada6a2ea938f",
+      "6287d8c6-5c5f-5ba2-97fa-49a31235518f",
+      "d1eb2f09-3b3f-5058-a4ea-fc9dbb3776be",
+      "e006724e-f8ab-5826-bb35-f72389012fc3"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_chunking_ab",
+    "origin_task_id": "task_chunking_ab",
+    "mapped_knowledge_node_ids": [
+      "RAG-M02-N03",
+      "RAG-M07-N01"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-chunking_objectives",
+      "EXT-RAG-fixed_window_chunking",
+      "EXT-RAG-structure_aware_chunking",
+      "EXT-RAG-parent_child_multigranular"
+    ],
+    "title": "切分策略A/B实验",
+    "scenario": "比较固定窗口、结构感知和父子切分在同一查询集上的表现。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "准备至少30个标注查询。",
+        "expected_result": "形成与“文档切分目标”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_chunking_objectives_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "生成三套切分与索引。",
+        "expected_result": "形成与“固定窗口切分”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_fixed_window_chunking_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "比较Recall@5、重复率和平均Token。",
+        "expected_result": "形成与“结构感知切分”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_structure_aware_chunking_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "分析失败案例并选择基线。",
+        "expected_result": "形成与“父子与多粒度检索”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_parent_child_multigranular_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "report",
+    "acceptance_criteria": [
+      "给出可复现参数。",
+      "至少一种策略有量化优势或明确无优势。",
+      "结论包含适用边界。"
+    ],
+    "difficulty_level": 3,
+    "estimated_minutes": 180,
+    "prerequisite_node_ids": [
+      "RAG-M02-N02"
+    ],
+    "evidence_ids": [
+      "4067d39d-233e-5b56-b902-20d151a769f1",
+      "7644f7ba-f058-5eb4-ac51-64d5b3e3bc72",
+      "ee46d48c-e991-5c18-97e4-f0f96409f900",
+      "c66e4478-8269-55a1-88bb-f273ea4f3527",
+      "4d6a04e6-90c0-5d11-8138-13af2a13df74",
+      "8115ec5d-4779-54b2-8ba6-802c8c51309c",
+      "d1c1f809-fc4e-5e82-97fd-1cda7d936fb8",
+      "acee56b3-5866-5cd3-b440-c1336cf66b10"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_embedding_ab",
+    "origin_task_id": "task_embedding_ab",
+    "mapped_knowledge_node_ids": [
+      "RAG-M03-N01"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-embedding_fundamentals",
+      "EXT-RAG-embedding_model_selection",
+      "EXT-RAG-similarity_metrics"
+    ],
+    "title": "嵌入模型选择实验",
+    "scenario": "用本领域数据比较两个嵌入模型。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "固定切分和查询集。",
+        "expected_result": "形成与“文本嵌入基础”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_embedding_fundamentals_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "分别构建索引。",
+        "expected_result": "形成与“嵌入模型选择”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_embedding_model_selection_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "测量Recall@5、MRR、延迟和存储。",
+        "expected_result": "形成与“向量相似度与归一化”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_similarity_metrics_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "检查中英混合与精确术语查询。",
+        "expected_result": "形成与“向量相似度与归一化”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_similarity_metrics_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "report",
+    "acceptance_criteria": [
+      "指标和环境完整记录。",
+      "不只依据公开排行榜。",
+      "模型与索引版本可追踪。"
+    ],
+    "difficulty_level": 3,
+    "estimated_minutes": 150,
+    "prerequisite_node_ids": [
+      "RAG-M02-N03"
+    ],
+    "evidence_ids": [
+      "6e015c9b-8abd-5ebf-9056-5571eb2498be",
+      "62776882-bccb-5e7b-83d3-2c0e30b649f6",
+      "34c0f02c-aa2a-5b12-a506-1a7dbf53cb3e",
+      "1332fae7-d5a5-504d-95da-f7cd050002d3",
+      "ba70f2e7-dcbf-507d-bf6b-fc14b8893f58",
+      "ab0bd4d9-1956-5ed3-9225-7a1b302dde12"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_ann_tuning",
+    "origin_task_id": "task_ann_tuning",
+    "mapped_knowledge_node_ids": [
+      "RAG-M03-N01",
+      "RAG-M03-N02"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-vector_index_hnsw_ivf",
+      "EXT-RAG-similarity_metrics"
+    ],
+    "title": "向量索引调优",
+    "scenario": "比较精确检索与HNSW或IVF索引的召回和延迟。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "建立精确搜索基线。",
+        "expected_result": "形成与“向量索引与近似最近邻”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_vector_index_hnsw_ivf_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "构建ANN索引。",
+        "expected_result": "形成与“向量相似度与归一化”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_similarity_metrics_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "调节至少两个关键参数。",
+        "expected_result": "形成与“向量相似度与归一化”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_similarity_metrics_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "测量Recall@10、P95延迟和内存。",
+        "expected_result": "形成与“向量相似度与归一化”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_similarity_metrics_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "report",
+    "acceptance_criteria": [
+      "ANN召回以精确结果为基准。",
+      "参数变化有图表。",
+      "给出规模和更新边界。"
+    ],
+    "difficulty_level": 4,
+    "estimated_minutes": 180,
+    "prerequisite_node_ids": [
+      "RAG-M03-N01"
+    ],
+    "evidence_ids": [
+      "bddadf61-d678-53b4-bf37-809d70da3c45",
+      "457099e3-4745-5b97-911b-bd198511670d",
+      "ba70f2e7-dcbf-507d-bf6b-fc14b8893f58",
+      "ab0bd4d9-1956-5ed3-9225-7a1b302dde12"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_hybrid_retrieval",
+    "origin_task_id": "task_hybrid_retrieval",
+    "mapped_knowledge_node_ids": [
+      "RAG-M03-N01",
+      "RAG-M03-N03",
+      "RAG-M03-N04"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-bm25_sparse_retrieval",
+      "EXT-RAG-dense_retrieval",
+      "EXT-RAG-hybrid_retrieval",
+      "EXT-RAG-rank_fusion_rrf"
+    ],
+    "title": "实现混合检索与融合",
+    "scenario": "融合BM25和向量检索并验证不同查询类型。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "构建BM25与向量通道。",
+        "expected_result": "形成与“BM25与稀疏检索”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_bm25_sparse_retrieval_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "使用RRF融合并去重。",
+        "expected_result": "形成与“稠密语义检索”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_dense_retrieval_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "按术语、语义、编号三类问题评测。",
+        "expected_result": "形成与“混合检索”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_hybrid_retrieval_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "记录每条候选来自哪个通道。",
+        "expected_result": "形成与“RRF名次融合”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_rank_fusion_rrf_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "code",
+    "acceptance_criteria": [
+      "混合结果可解释。",
+      "至少30条查询完成对比。",
+      "无收益时能说明原因。"
+    ],
+    "difficulty_level": 3,
+    "estimated_minutes": 180,
+    "prerequisite_node_ids": [
+      "RAG-M02-N04"
+    ],
+    "evidence_ids": [
+      "4f5df64c-3c90-5305-bde9-10f52c86d299",
+      "7d2f4659-e097-5407-8ee7-13f4bbd037e0",
+      "11208469-b4a2-50c5-8490-f115ad815da1",
+      "cbc34a4e-b21a-551f-978b-fe222556a88d",
+      "2f42aa46-8a49-5b27-a6a3-8c94ccd224d4",
+      "3662d914-79e9-5eb5-8a6f-5a0dba032943",
+      "828582a0-a278-50b6-a839-7995909f0e9d",
+      "cdcbf128-38e9-561f-87dc-53729d83e34c"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_query_rerank",
+    "origin_task_id": "task_query_rerank",
+    "mapped_knowledge_node_ids": [
+      "RAG-M04-N01",
+      "RAG-M04-N03"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-query_rewriting",
+      "EXT-RAG-multi_query_expansion",
+      "EXT-RAG-cross_encoder_reranking"
+    ],
+    "title": "查询改写与重排流水线",
+    "scenario": "为上下文依赖问题实现改写、召回和重排。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "构造省略对象与歧义问题。",
+        "expected_result": "形成与“查询改写”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_query_rewriting_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "输出standalone_query。",
+        "expected_result": "形成与“多查询与查询扩展”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_multi_query_expansion_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "召回候选并交叉编码器重排。",
+        "expected_result": "形成与“交叉编码器重排序”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_cross_encoder_reranking_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "比较改写前后与重排前后指标。",
+        "expected_result": "形成与“交叉编码器重排序”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_cross_encoder_reranking_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "code",
+    "acceptance_criteria": [
+      "原问题和改写结果均被记录。",
+      "改写不擅自加入事实。",
+      "重排仅处理已召回候选。"
+    ],
+    "difficulty_level": 4,
+    "estimated_minutes": 210,
+    "prerequisite_node_ids": [
+      "RAG-M03-N04"
+    ],
+    "evidence_ids": [
+      "01c2c0a0-25c5-5257-ab4d-0e7f9c2755fc",
+      "f1dc1dcb-21f3-5ab4-af52-68fc65dc9ac8",
+      "ff424ac9-b28a-5866-bee5-a9076996b9e6",
+      "efff2d2d-6d6e-53d1-b90a-09bb2c094fac",
+      "1dfc8e3d-18a8-53ac-9022-7d1e417d0781",
+      "ee5fecde-7346-5991-9fd9-9046795965a7"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_context_citation",
+    "origin_task_id": "task_context_citation",
+    "mapped_knowledge_node_ids": [
+      "RAG-M04-N04",
+      "RAG-M05-N01"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-context_selection_budget",
+      "EXT-RAG-lost_in_the_middle",
+      "EXT-RAG-prompt_grounding",
+      "EXT-RAG-citation_generation_verification"
+    ],
+    "title": "上下文预算与引用验证",
+    "scenario": "在有限Token预算内生成逐结论引用的回答。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "对候选做去重与预算选择。",
+        "expected_result": "形成与“上下文选择与Token预算”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_context_selection_budget_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "为证据分配稳定编号。",
+        "expected_result": "形成与“长上下文位置效应”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_lost_in_the_middle_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "要求答案逐项引用。",
+        "expected_result": "形成与“证据约束提示词”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_prompt_grounding_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "扰动证据顺序并验证稳定性。",
+        "expected_result": "形成与“引用生成与验证”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_citation_generation_verification_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "demo",
+    "acceptance_criteria": [
+      "所有引用存在。",
+      "关键结论有支持证据。",
+      "证据不足时拒答。"
+    ],
+    "difficulty_level": 4,
+    "estimated_minutes": 180,
+    "prerequisite_node_ids": [
+      "RAG-M04-N03"
+    ],
+    "evidence_ids": [
+      "81e2d927-b67b-5f17-bf12-61acad55a854",
+      "4c953d28-62f4-5d25-b824-80755df795f0",
+      "95555140-a1fc-5a3a-9675-391b62a56997",
+      "d547baf9-0fa2-5459-bdb5-e2c96b33e751",
+      "958351d4-786e-5b6f-b1b3-843c68fddd63",
+      "b2ba6559-101c-5817-ae4f-f2082a131ce2",
+      "c9265043-5804-53d2-a0ab-ef2cfa72e582",
+      "8a8ceb98-6cfb-50e7-9554-5051d571c7ca"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_security_redteam",
+    "origin_task_id": "task_security_redteam",
+    "mapped_knowledge_node_ids": [
+      "RAG-M04-N02",
+      "RAG-M05-N04"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-prompt_injection_defense",
+      "EXT-RAG-access_control_tenant_isolation",
+      "EXT-RAG-sensitive_data_privacy"
+    ],
+    "title": "RAG安全红队测试",
+    "scenario": "测试提示词注入、跨租户和敏感信息泄露。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "准备恶意文档和越权查询。",
+        "expected_result": "形成与“提示词注入防护”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_prompt_injection_defense_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "验证检索前权限过滤。",
+        "expected_result": "形成与“权限过滤与多租户隔离”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_access_control_tenant_isolation_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "测试缓存键和日志脱敏。",
+        "expected_result": "形成与“敏感数据与隐私保护”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_sensitive_data_privacy_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "记录攻击、结果和修复。",
+        "expected_result": "形成与“敏感数据与隐私保护”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_sensitive_data_privacy_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "report",
+    "acceptance_criteria": [
+      "跨租户召回为0。",
+      "文档中的恶意指令不会改变系统规则。",
+      "日志不含密钥和完整敏感原文。"
+    ],
+    "difficulty_level": 5,
+    "estimated_minutes": 240,
+    "prerequisite_node_ids": [],
+    "evidence_ids": [
+      "fead8104-9c55-5a16-b8e5-5443249199bd",
+      "bdc24c49-cafd-5d8f-9298-38c932396afc",
+      "9fc6f612-7c0b-5b63-85b5-eea3201856db",
+      "5c12e602-cd9d-552a-88ff-dfece71ecff6",
+      "5c0d0769-341f-5e99-931e-bb7f3beb4dca",
+      "82aff707-90af-5295-9ca6-125e7e7426e1"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_eval_suite",
+    "origin_task_id": "task_eval_suite",
+    "mapped_knowledge_node_ids": [
+      "RAG-M06-N01",
+      "RAG-M06-N02",
+      "RAG-M06-N03"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-retrieval_metrics",
+      "EXT-RAG-generation_metrics",
+      "EXT-RAG-end_to_end_evaluation",
+      "EXT-RAG-golden_dataset_design"
+    ],
+    "title": "建立RAG黄金评测集",
+    "scenario": "构建覆盖检索、生成、拒答和画像适配的评测集。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "定义案例Schema。",
+        "expected_result": "形成与“检索评测指标”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_retrieval_metrics_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "准备至少50条问题。",
+        "expected_result": "形成与“生成质量指标”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_generation_metrics_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "标注知识节点、证据和答案要点。",
+        "expected_result": "形成与“端到端RAG评测”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_end_to_end_evaluation_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "报告Recall、忠实度、引用和拒答。",
+        "expected_result": "形成与“黄金评测集设计”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_golden_dataset_design_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "report",
+    "acceptance_criteria": [
+      "开发集与锁定测试集分离。",
+      "包含无答案与错误前提。",
+      "案例可自动重跑。"
+    ],
+    "difficulty_level": 3,
+    "estimated_minutes": 240,
+    "prerequisite_node_ids": [],
+    "evidence_ids": [
+      "9ffaa25f-998d-5c82-b4ef-1ecfe093b81a",
+      "2e9f7564-9ef7-5f56-8ff4-ed90d295d328",
+      "3643e96e-c739-59b7-ab11-37fa92fc22cb",
+      "046667c6-af7e-5565-8d7c-050ba92baa46",
+      "35a6c4ac-739e-5c3e-a06e-a7f1b49a6013",
+      "ae052256-98e6-59c2-bbf5-635fb3fdeb31",
+      "65611a89-5f05-5001-a966-eed813d96857",
+      "3fa7381a-e770-5be3-b68f-74bd4eb991fb"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_review_repair",
+    "origin_task_id": "task_review_repair",
+    "mapped_knowledge_node_ids": [
+      "RAG-M05-N03"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-hallucination_types",
+      "EXT-RAG-evidence_entailment",
+      "EXT-RAG-review_correction_loop"
+    ],
+    "title": "实现审核纠偏闭环",
+    "scenario": "让审核器定位资源或题目的具体问题并触发定向修复。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "定义issue_type和修复动作。",
+        "expected_result": "形成与“幻觉类型与根因”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_hallucination_types_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "构造无依据、矛盾和错引用案例。",
+        "expected_result": "形成与“证据支持关系检查”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_evidence_entailment_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "实现pass/revise/reject。",
+        "expected_result": "形成与“审核与纠偏闭环”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_review_correction_loop_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "设置重试上限和人工升级。",
+        "expected_result": "形成与“审核与纠偏闭环”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_review_correction_loop_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "code",
+    "acceptance_criteria": [
+      "问题定位到字段或结论。",
+      "修复后重新验证。",
+      "不会无限循环。"
+    ],
+    "difficulty_level": 4,
+    "estimated_minutes": 210,
+    "prerequisite_node_ids": [
+      "RAG-M05-N01"
+    ],
+    "evidence_ids": [
+      "4004aa3a-6d55-58f6-b1f5-0ff142cb4a4c",
+      "d98c91d8-22c1-551c-9735-8c0cc26b112c",
+      "55011292-1aa4-5803-a526-d964e4a1f2f6",
+      "52ef18bc-42bb-51c5-94a2-d0b23199fb51",
+      "c8673259-de63-5c62-9afb-e6f09e0a347a",
+      "41dd4738-030d-5383-97ff-2160eb66e5d4"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_agentic_state_machine",
+    "origin_task_id": "task_agentic_state_machine",
+    "mapped_knowledge_node_ids": [
+      "RAG-M07-N03",
+      "RAG-M07-N04"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-agentic_rag",
+      "EXT-RAG-corrective_rag",
+      "EXT-RAG-tool_routing_multi_source"
+    ],
+    "title": "构建受控Agentic RAG状态机",
+    "scenario": "实现规划、检索、证据检查、补充检索和停止条件。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "定义状态和允许转移。",
+        "expected_result": "形成与“Agentic RAG”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_agentic_rag_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "实现两种只读工具。",
+        "expected_result": "形成与“Corrective RAG”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_corrective_rag_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "证据不足时补充检索。",
+        "expected_result": "形成与“多源路由与工具选择”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_tool_routing_multi_source_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "达到预算或失败上限时停止。",
+        "expected_result": "形成与“多源路由与工具选择”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_tool_routing_multi_source_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "code",
+    "acceptance_criteria": [
+      "每一步有结构化事件。",
+      "工具参数经过校验。",
+      "轨迹可回放且有停止原因。"
+    ],
+    "difficulty_level": 5,
+    "estimated_minutes": 300,
+    "prerequisite_node_ids": [
+      "RAG-M05-N03"
+    ],
+    "evidence_ids": [
+      "641ba45a-3bcf-534a-be98-bed08a961ed2",
+      "a8b88d1c-10bf-5316-87d4-d83837b55fcf",
+      "bee26bdc-7484-593f-9eef-5165bf129689",
+      "e6ca280e-506d-57e9-8103-aa5977ce2067",
+      "1c0a2a53-7d43-54df-928f-1e5e04f27f91",
+      "42cd8792-1319-5b63-9754-97819d621db3"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_graph_lightweight",
+    "origin_task_id": "task_graph_lightweight",
+    "mapped_knowledge_node_ids": [
+      "RAG-M02-N04",
+      "RAG-M07-N02"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-graph_rag",
+      "EXT-RAG-metadata_schema"
+    ],
+    "title": "构建轻量知识点图",
+    "scenario": "用知识节点前置、对比和易混关系支持学习路径与检索。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "定义节点和关系类型。",
+        "expected_result": "形成与“Graph RAG”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_graph_rag_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "绑定每条关系的来源或审核状态。",
+        "expected_result": "形成与“元数据Schema设计”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_metadata_schema_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "实现一跳和多跳查询。",
+        "expected_result": "形成与“元数据Schema设计”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_metadata_schema_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "比较图查询与普通检索。",
+        "expected_result": "形成与“元数据Schema设计”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_metadata_schema_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "diagram",
+    "acceptance_criteria": [
+      "不存在孤立核心节点。",
+      "关系可回链证据。",
+      "图不取代原始文档来源。"
+    ],
+    "difficulty_level": 4,
+    "estimated_minutes": 180,
+    "prerequisite_node_ids": [
+      "RAG-M02-N01"
+    ],
+    "evidence_ids": [
+      "6ea62f3c-a09f-52a8-9e36-25516d0b82d3",
+      "0155c732-461a-5882-9f76-a69e4abb4ff0",
+      "51d0e527-641c-54bf-abd7-932e4a7b6911",
+      "413e5128-75be-59f9-bb78-08db052bc10c"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  },
+  {
+    "candidate_task_id": "EXT-task_production_observability",
+    "origin_task_id": "task_production_observability",
+    "mapped_knowledge_node_ids": [
+      "RAG-M06-N03",
+      "RAG-M06-N04",
+      "RAG-M08-N02",
+      "RAG-M08-N03",
+      "RAG-M08-N04"
+    ],
+    "external_subtopic_ids": [
+      "EXT-RAG-observability_tracing",
+      "EXT-RAG-latency_cost_optimization",
+      "EXT-RAG-caching_idempotency",
+      "EXT-RAG-deployment_fallback",
+      "EXT-RAG-continuous_updates_regression"
+    ],
+    "title": "生产级追踪、降级与回归",
+    "scenario": "为RAG流程增加追踪、缓存、降级和发布门禁。",
+    "task_steps": [
+      {
+        "step_no": 1,
+        "instruction": "为组件创建trace span。",
+        "expected_result": "形成与“可观测性与链路追踪”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_observability_tracing_engineering"
+        ]
+      },
+      {
+        "step_no": 2,
+        "instruction": "配置超时、熔断和安全降级。",
+        "expected_result": "形成与“延迟与成本优化”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_latency_cost_optimization_engineering"
+        ]
+      },
+      {
+        "step_no": 3,
+        "instruction": "定义版本化缓存键。",
+        "expected_result": "形成与“缓存与幂等”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_caching_idempotency_engineering"
+        ]
+      },
+      {
+        "step_no": 4,
+        "instruction": "知识或模型变化后自动回归。",
+        "expected_result": "形成与“部署与降级”相关的可检查产物。",
+        "evidence_chunk_ids": [
+          "chunk_deployment_fallback_engineering"
+        ]
+      }
+    ],
+    "deliverable_type": "mixed",
+    "acceptance_criteria": [
+      "可定位P95瓶颈。",
+      "降级不绕过权限与证据规则。",
+      "关键案例失败阻止发布。"
+    ],
+    "difficulty_level": 5,
+    "estimated_minutes": 300,
+    "prerequisite_node_ids": [],
+    "evidence_ids": [
+      "a3c9cfeb-0f14-5e9a-afb7-db73a42e21d7",
+      "ce87e42e-ddfe-54ba-9703-a6a72e013d2f",
+      "ba5ebf83-e152-5a61-a6e8-37377eb8f70d",
+      "60a19eb4-9eee-5ab1-bfbc-442bd1f5531f",
+      "8f218073-5343-59f7-bbe8-291e8136b553",
+      "8a8b0f90-3e0c-505f-8281-06ab2a754bc1",
+      "c2ed1009-3551-5629-9c3a-8e6280594ad8",
+      "569c15e7-5307-5056-9948-d4f7a9bd0ce5",
+      "124686f1-ec2d-5db8-9c43-9de0dea634f1",
+      "e8253c2b-0e9f-5f8a-815b-1139a7e9d199"
+    ],
+    "safety_or_compliance_notes": [
+      "仅使用公开或已授权数据。",
+      "不得在提交物中包含API密钥、真实个人信息或企业机密。"
+    ],
+    "content_status": "candidate",
+    "review_status": "pending_expert_review"
+  }
+]

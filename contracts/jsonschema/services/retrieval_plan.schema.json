@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RetrievalPlan",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "retrieval_plan_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "retrieval_request_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "query_analysis": {
+      "$ref": "query_analysis.schema.json"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "RetrievalStep",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "retrieval_step_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "sequence_no": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "strategy": {
+            "type": "string",
+            "enum": [
+              "metadata_filtered",
+              "hybrid",
+              "graph_assisted",
+              "parent_child",
+              "agentic_decomposition"
+            ]
+          },
+          "query_text": {
+            "type": "string"
+          },
+          "sub_query_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "filters": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "top_k": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 50
+          },
+          "depends_on_step_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "minItems": 0
+          },
+          "parallel_group_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "queued",
+              "running",
+              "succeeded",
+              "failed",
+              "skipped",
+              "cancelled"
+            ]
+          }
+        },
+        "required": [
+          "retrieval_step_id",
+          "sequence_no",
+          "strategy",
+          "query_text",
+          "sub_query_id",
+          "filters",
+          "top_k",
+          "depends_on_step_ids",
+          "parallel_group_id",
+          "status"
+        ]
+      },
+      "minItems": 1
+    },
+    "max_steps": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "max_retries": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "max_parallel_strategies": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "stop_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "retrieval_plan_id",
+    "retrieval_request_id",
+    "query_analysis",
+    "steps",
+    "max_steps",
+    "max_retries",
+    "max_parallel_strategies",
+    "stop_conditions",
+    "created_at"
+  ]
+}

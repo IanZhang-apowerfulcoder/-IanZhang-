@@ -1,26 +1,7 @@
 {
-  "operation_id": "update_knowledge_base",
-  "status_code": 200,
-  "content_type": "application/json",
-  "body": {
-    "code": "SUCCESS",
-    "message": "成功",
-    "data": {
-      "knowledge_base_id": "44444444-4444-4444-8444-444444444444",
-      "name": "大模型应用开发知识库",
-      "description": "用于企业内部大模型应用开发培训的知识库",
-      "status": "ready",
-      "document_count": 3,
-      "active_version": 1,
-      "created_at": "2026-07-30T12:00:00Z",
-      "updated_at": "2026-07-30T12:00:00Z",
-      "active_version_id": "0c10cb03-c880-44e4-81f5-a85dc7d2b126",
-      "active_version_no": 1
-    },
-    "meta": {
-      "request_id": "fe311111-1111-4111-8111-111111111111",
-      "schema_version": "1.0.0",
-      "timestamp": "2026-07-30T12:00:00Z"
-    }
-  }
+  "data": {
+    "operation_id": "update_knowledge_base",
+    "status": "mock_success"
+  },
+  "request_id": "00000000-0000-4000-8000-000000000002"
 }

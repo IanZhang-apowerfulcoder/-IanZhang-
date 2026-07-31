@@ -1,15 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "画像更新命令",
+  "title": "ProfileUpdateCommand",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "learner_id",
-    "base_profile_snapshot_id",
-    "base_profile_version_no",
-    "mastery_delta_by_knowledge_node",
-    "derived_from_decision_cycle_id"
-  ],
   "properties": {
     "learner_id": {
       "type": "string",
@@ -19,21 +12,87 @@
       "type": "string",
       "format": "uuid"
     },
-    "base_profile_version_no": {
-      "type": "integer",
-      "minimum": 1
+    "mastery_updates": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "MasteryItem",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "knowledge_node_id": {
+            "type": "string"
+          },
+          "mastery_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "title": "EvidenceReference",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "evidence_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "knowledge_node_id": {
+                  "type": "string"
+                },
+                "claim_scope": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "evidence_id",
+                "knowledge_node_id"
+              ]
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "knowledge_node_id",
+          "mastery_score",
+          "confidence",
+          "evidence_refs"
+        ]
+      },
+      "minItems": 0
     },
-    "mastery_delta_by_knowledge_node": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "number",
-        "minimum": -1,
-        "maximum": 1
-      }
+    "reason_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
     },
-    "derived_from_decision_cycle_id": {
+    "decision_id": {
       "type": "string",
       "format": "uuid"
     }
-  }
+  },
+  "required": [
+    "learner_id",
+    "base_profile_snapshot_id",
+    "mastery_updates",
+    "reason_refs",
+    "decision_id"
+  ]
 }

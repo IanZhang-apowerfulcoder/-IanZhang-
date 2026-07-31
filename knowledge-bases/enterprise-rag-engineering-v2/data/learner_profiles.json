@@ -1,0 +1,87 @@
+[
+  {
+    "profile_key": "LP-BEGINNER",
+    "display_name": "学习者A：会Python但不了解RAG",
+    "background": {
+      "education": "软件工程本科",
+      "experience": "会Python和基础API调用",
+      "goal": "完成第一个可信RAG原型"
+    },
+    "preferences": [
+      "图解",
+      "短代码",
+      "分步练习"
+    ],
+    "mastery": {
+      "RAG-M01-N01": 0.25,
+      "RAG-M02-N03": 0.1,
+      "RAG-M03-N01": 0.1,
+      "RAG-M03-N04": 0.05,
+      "RAG-M05-N03": 0.05
+    },
+    "recommended_start_nodes": [
+      "RAG-M01-N01",
+      "RAG-M01-N02"
+    ],
+    "target_difficulty": 1
+  },
+  {
+    "profile_key": "LP-INTERMEDIATE",
+    "display_name": "学习者B：做过基础向量问答但质量不稳定",
+    "background": {
+      "education": "计算机相关本科",
+      "experience": "使用过向量数据库和LLM API",
+      "goal": "掌握混合检索、重排和评测"
+    },
+    "preferences": [
+      "工程案例",
+      "对比实验",
+      "代码实操"
+    ],
+    "mastery": {
+      "RAG-M01-N01": 0.85,
+      "RAG-M02-N03": 0.55,
+      "RAG-M03-N01": 0.7,
+      "RAG-M03-N04": 0.3,
+      "RAG-M04-N03": 0.2,
+      "RAG-M06-N01": 0.15
+    },
+    "recommended_start_nodes": [
+      "RAG-M03-N03",
+      "RAG-M03-N04",
+      "RAG-M06-N01"
+    ],
+    "target_difficulty": 3
+  },
+  {
+    "profile_key": "LP-ADVANCED",
+    "display_name": "学习者C：负责企业知识平台架构",
+    "background": {
+      "education": "软件/AI工程经验",
+      "experience": "已部署基本RAG和服务化系统",
+      "goal": "掌握安全、GraphRAG、Agentic RAG和生产治理"
+    },
+    "preferences": [
+      "架构决策",
+      "消融实验",
+      "高风险案例"
+    ],
+    "mastery": {
+      "RAG-M01-N01": 0.95,
+      "RAG-M03-N04": 0.85,
+      "RAG-M04-N04": 0.75,
+      "RAG-M05-N03": 0.6,
+      "RAG-M05-N04": 0.35,
+      "RAG-M07-N02": 0.2,
+      "RAG-M07-N03": 0.2,
+      "RAG-M08-N04": 0.45
+    },
+    "recommended_start_nodes": [
+      "RAG-M05-N04",
+      "RAG-M07-N02",
+      "RAG-M07-N03",
+      "RAG-M08-N04"
+    ],
+    "target_difficulty": 5
+  }
+]

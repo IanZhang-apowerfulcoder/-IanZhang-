@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "评测案例集合",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "items"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.1.0"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "evaluation_case_id",
+          "case_type",
+          "persona_template_code",
+          "prompt",
+          "expected_knowledge_node_ids",
+          "expected_evidence_chunk_ids",
+          "expected_action",
+          "expected_difficulty_level",
+          "must_cite_evidence",
+          "review_status"
+        ],
+        "properties": {
+          "evaluation_case_id": {
+            "type": "string"
+          },
+          "case_type": {
+            "type": "string",
+            "enum": [
+              "knowledge_accuracy",
+              "profile_adaptation",
+              "hallucination_refusal",
+              "coverage",
+              "workflow"
+            ]
+          },
+          "persona_template_code": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "expected_knowledge_node_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "expected_evidence_chunk_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "expected_action": {
+            "type": "string"
+          },
+          "expected_resource_type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "custom_lecture",
+              "practical_guide",
+              "tiered_assessment",
+              "worked_example",
+              "code_walkthrough",
+              "micro_lesson",
+              "mixed",
+              null
+            ]
+          },
+          "expected_difficulty_level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "must_cite_evidence": {
+            "type": "boolean"
+          },
+          "must_refuse_unsupported": {
+            "type": "boolean"
+          },
+          "review_status": {
+            "type": "string",
+            "enum": [
+              "expert_verified",
+              "internal_verified",
+              "seed_requires_expert_review"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

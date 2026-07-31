@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "persona_template_code": "beginner_student",
+      "display_name": "零基础本科生",
+      "education_background": "非计算机专业本科一年级",
+      "prior_skill_tags": [
+        "basic_computer_use"
+      ],
+      "theory_test_score": 28,
+      "learning_goal": "理解RAG基本链路并完成最小演示",
+      "learning_preference_tags": [
+        "diagram_first",
+        "step_by_step"
+      ],
+      "expected_difficulty_level": 1
+    },
+    {
+      "persona_template_code": "theory_strong_student",
+      "display_name": "理论较强的软件工程学生",
+      "education_background": "软件工程本科三年级",
+      "prior_skill_tags": [
+        "python",
+        "database",
+        "machine_learning_theory"
+      ],
+      "theory_test_score": 82,
+      "learning_goal": "掌握检索评测和工程实现",
+      "learning_preference_tags": [
+        "principle_first",
+        "experiment"
+      ],
+      "expected_difficulty_level": 3
+    },
+    {
+      "persona_template_code": "junior_enterprise_engineer",
+      "display_name": "企业初级大模型工程师",
+      "education_background": "计算机相关本科，工作1年",
+      "prior_skill_tags": [
+        "python",
+        "fastapi",
+        "docker",
+        "llm_api"
+      ],
+      "theory_test_score": 68,
+      "learning_goal": "构建可部署、可评测的企业RAG系统",
+      "learning_preference_tags": [
+        "hands_on",
+        "failure_cases"
+      ],
+      "expected_difficulty_level": 3
+    },
+    {
+      "persona_template_code": "backend_switcher",
+      "display_name": "转岗AI的后端工程师",
+      "education_background": "软件工程本科，后端工作3年",
+      "prior_skill_tags": [
+        "java",
+        "sql",
+        "distributed_systems",
+        "security"
+      ],
+      "theory_test_score": 55,
+      "learning_goal": "补齐嵌入与检索知识并完成多租户RAG",
+      "learning_preference_tags": [
+        "code_first",
+        "comparison"
+      ],
+      "expected_difficulty_level": 3
+    },
+    {
+      "persona_template_code": "training_manager",
+      "display_name": "企业培训管理者",
+      "education_background": "管理与信息化背景",
+      "prior_skill_tags": [
+        "training_design",
+        "business_process"
+      ],
+      "theory_test_score": 35,
+      "learning_goal": "能够评估RAG培训系统的质量、风险和效果",
+      "learning_preference_tags": [
+        "case_study",
+        "dashboard"
+      ],
+      "expected_difficulty_level": 2
+    }
+  ]
+}

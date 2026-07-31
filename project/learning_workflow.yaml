@@ -1,0 +1,108 @@
+workflow_key: adaptive_personalized_learning
+version: 7.0.0
+owner: P1
+runtime_owner: P2
+initial_state: created
+terminal_states:
+- completed
+- failed
+- cancelled
+states:
+- created
+- collecting_context
+- diagnosing
+- planning_path
+- routing_retrieval
+- retrieving_evidence
+- checking_evidence
+- generating_parallel_resources
+- composing_resource
+- reviewing_parallel
+- aggregating_review
+- delivering_resource
+- awaiting_submission
+- evaluating_result
+- arbitrating
+- updating_profile
+- completed
+- waiting_human_review
+- retrying
+- degraded
+- failed
+- cancelled
+transitions:
+- from: created
+  to: collecting_context
+  'on': session_started
+- from: collecting_context
+  to: diagnosing
+  'on': context_ready
+- from: diagnosing
+  to: planning_path
+  'on': diagnosis_succeeded
+- from: planning_path
+  to: routing_retrieval
+  'on': path_plan_succeeded
+- from: routing_retrieval
+  to: retrieving_evidence
+  'on': retrieval_plan_created
+- from: retrieving_evidence
+  to: checking_evidence
+  'on': retrieval_strategies_completed
+- from: checking_evidence
+  to: retrieving_evidence
+  'on': evidence_insufficient
+  guard: retrieval_retry_count < 2
+- from: checking_evidence
+  to: waiting_human_review
+  'on': evidence_insufficient
+  guard: retrieval_retry_count >= 2
+- from: checking_evidence
+  to: generating_parallel_resources
+  'on': evidence_sufficient
+- from: generating_parallel_resources
+  to: composing_resource
+  'on': generation_parallel_completed
+- from: composing_resource
+  to: reviewing_parallel
+  'on': resource_composed
+- from: reviewing_parallel
+  to: aggregating_review
+  'on': review_parallel_completed
+- from: aggregating_review
+  to: routing_retrieval
+  'on': review_requires_more_evidence
+- from: aggregating_review
+  to: generating_parallel_resources
+  'on': review_requires_revision
+  guard: generation_retry_count < 2
+- from: aggregating_review
+  to: waiting_human_review
+  'on': review_requires_revision
+  guard: generation_retry_count >= 2
+- from: aggregating_review
+  to: delivering_resource
+  'on': review_passed
+- from: delivering_resource
+  to: awaiting_submission
+  'on': resource_delivered
+- from: awaiting_submission
+  to: evaluating_result
+  'on': learner_submitted
+- from: evaluating_result
+  to: arbitrating
+  'on': evaluation_succeeded
+- from: arbitrating
+  to: updating_profile
+  'on': decision_update_profile
+- from: arbitrating
+  to: waiting_human_review
+  'on': decision_human_review
+- from: updating_profile
+  to: completed
+  'on': profile_updated
+hard_limits:
+  retrieval_retries: 2
+  generation_retries: 2
+  agent_retries: 2
+  total_workflow_minutes: 15

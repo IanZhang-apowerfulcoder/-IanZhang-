@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "审核纠偏智能体输入",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "reviewed_proposal_id",
+    "reviewed_agent_run_id",
+    "target_type",
+    "reviewed_payload",
+    "evidence_ids"
+  ],
+  "properties": {
+    "reviewed_proposal_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "reviewed_agent_run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "target_type": {
+      "type": "string",
+      "enum": [
+        "diagnosis",
+        "path_plan",
+        "resource",
+        "assessment"
+      ]
+    },
+    "reviewed_payload": {
+      "type": "object"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    }
+  }
+}

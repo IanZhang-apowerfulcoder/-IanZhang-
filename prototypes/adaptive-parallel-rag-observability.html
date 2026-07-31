@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>自适应多策略 RAG · 平行 Agent 观测台</title>
+<style>
+:root{color-scheme:dark;--bg:#07111f;--panel:#0d1b2d;--panel2:#11243a;--line:#28435f;--text:#e7f0f7;--muted:#8fa7ba;--accent:#52d3b8;--warn:#ffbf69;--danger:#ff6b6b;--ok:#70e000;--blue:#61a5ff;--violet:#c77dff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 12% 0%,#16304c 0,transparent 32%),var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI","PingFang SC",sans-serif;color:var(--text)}
+button{font:inherit}.app{max-width:1500px;margin:auto;padding:24px}.topbar{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;margin-bottom:18px}.title h1{font-size:28px;margin:0 0 8px}.title p{margin:0;color:var(--muted);max-width:920px}.controls{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:9px 14px;border-radius:10px;cursor:pointer}.btn.primary{background:var(--accent);color:#042019;border-color:transparent;font-weight:700}.btn:hover{filter:brightness(1.12)}
+.stats{display:grid;grid-template-columns:repeat(6,minmax(120px,1fr));gap:10px;margin-bottom:16px}.stat{background:linear-gradient(180deg,#11243a,#0b192a);border:1px solid var(--line);border-radius:14px;padding:14px}.stat .k{font-size:12px;color:var(--muted)}.stat .v{font-size:20px;font-weight:750;margin-top:6px;word-break:break-all}.grid{display:grid;grid-template-columns:minmax(700px,1.55fr) minmax(340px,.75fr);gap:16px}.panel{background:rgba(13,27,45,.93);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 18px 55px rgba(0,0,0,.24)}.panel-h{display:flex;justify-content:space-between;align-items:center;padding:13px 16px;border-bottom:1px solid var(--line);background:rgba(17,36,58,.8)}.panel-h h2{font-size:15px;margin:0}.panel-b{padding:16px}.tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:4px 8px;color:var(--muted)}
+.workflow{display:grid;gap:13px}.lane{border:1px dashed #35536f;border-radius:14px;padding:13px;background:rgba(5,15,27,.45)}.lane-title{font-size:12px;color:var(--muted);margin-bottom:10px;text-transform:uppercase;letter-spacing:.08em}.nodes{display:flex;gap:9px;align-items:stretch;flex-wrap:wrap}.node{position:relative;flex:1 1 145px;min-height:93px;padding:12px;border-radius:12px;background:#0e2034;border:1px solid #2b4661;cursor:pointer;transition:.2s}.node:hover{transform:translateY(-2px)}.node.active{border-color:var(--accent);box-shadow:0 0 0 2px rgba(82,211,184,.16),0 0 24px rgba(82,211,184,.15)}.node.done{border-color:#477a54}.node.failed{border-color:var(--danger)}.node.waiting{opacity:.65}.node .name{font-size:13px;font-weight:720}.node .role{font-size:11px;color:var(--muted);margin-top:5px}.node .status{position:absolute;right:8px;bottom:8px;font-size:10px;padding:3px 6px;border-radius:999px;background:#172d45;color:var(--muted)}.node.active .status{background:rgba(82,211,184,.16);color:var(--accent)}.node.done .status{background:rgba(112,224,0,.12);color:#a7f36e}.arrow{display:flex;align-items:center;color:#547491;font-size:20px}.parallel{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.parallel.three{grid-template-columns:repeat(3,1fr)}
+.trace{max-height:650px;overflow:auto}.event{display:grid;grid-template-columns:66px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid rgba(40,67,95,.6)}.event:last-child{border-bottom:0}.seq{font-size:11px;color:var(--muted)}.event-name{font-size:12px;font-weight:700}.event-desc{font-size:11px;color:var(--muted);margin-top:3px}.event.active .event-name{color:var(--accent)}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.box{background:#0a1828;border:1px solid #233d57;border-radius:11px;padding:11px}.box h3{font-size:11px;color:var(--muted);margin:0 0 7px}.box pre,.json{white-space:pre-wrap;word-break:break-word;font-size:11px;line-height:1.5;margin:0;color:#cfe0ee}.wide{grid-column:1/-1}.evidence{display:grid;gap:7px}.ev{border-left:3px solid var(--blue);background:#0a192a;padding:9px 10px;border-radius:8px}.ev .ev-id{font-size:10px;color:var(--blue)}.ev p{font-size:11px;color:#c9d7e3;margin:5px 0 0}.progress{height:7px;border-radius:999px;background:#172a3f;overflow:hidden}.progress>div{height:100%;background:linear-gradient(90deg,var(--accent),var(--blue));transition:.3s}.legend{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}.footer{color:var(--muted);font-size:11px;margin-top:14px;text-align:center}@media(max-width:1100px){.stats{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}.parallel{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.app{padding:12px}.stats{grid-template-columns:repeat(2,1fr)}.parallel,.parallel.three{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}.topbar{display:block}.controls{margin-top:12px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div class="title"><h1>自适应多策略 RAG · 平行 Agent 观测台</h1><p>展示问题分类、RAG 路由、多策略并行检索、证据融合、三路资源生成、四维审核与唯一仲裁。页面只显示结构化理由与证据，不展示模型隐藏思维链。</p></div>
+    <div class="controls"><button id="reset" class="btn">重置</button><button id="step" class="btn">推进一步</button><button id="play" class="btn primary">自动播放</button></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="k">Workflow Run</div><div class="v">WF-7A91</div></div>
+    <div class="stat"><div class="k">当前状态</div><div class="v" id="currentState">created</div></div>
+    <div class="stat"><div class="k">已完成事件</div><div class="v"><span id="eventCount">0</span>/26</div></div>
+    <div class="stat"><div class="k">检索策略</div><div class="v" id="strategies">-</div></div>
+    <div class="stat"><div class="k">Evidence</div><div class="v" id="evidenceCount">0</div></div>
+    <div class="stat"><div class="k">最终动作</div><div class="v" id="finalAction">-</div></div>
+  </div>
+  <div class="grid">
+    <div class="panel">
+      <div class="panel-h"><h2>工作流拓扑</h2><div class="legend"><span><i class="dot" style="background:var(--accent)"></i>运行中</span><span><i class="dot" style="background:var(--ok)"></i>完成</span><span><i class="dot" style="background:#61758a"></i>等待</span></div></div>
+      <div class="panel-b workflow">
+        <section class="lane"><div class="lane-title">诊断与规划</div><div class="nodes">
+          <div class="node" data-node="diagnosis"><div class="name">Diagnosis Agent</div><div class="role">画像与知识盲区</div><div class="status">等待</div></div><div class="arrow">→</div>
+          <div class="node" data-node="path"><div class="name">Path Planning</div><div class="role">目标节点与训练路径</div><div class="status">等待</div></div><div class="arrow">→</div>
+          <div class="node" data-node="router"><div class="name">RAG Router Agent</div><div class="role">问题分类与 Retrieval Plan</div><div class="status">等待</div></div>
+        </div></section>
+        <section class="lane"><div class="lane-title">多策略并行检索</div><div class="parallel">
+          <div class="node" data-node="metadata"><div class="name">Metadata Filter</div><div class="role">难度/模块/内容层</div><div class="status">等待</div></div>
+          <div class="node" data-node="hybrid"><div class="name">Hybrid Retrieval</div><div class="role">关键词 + 稠密召回</div><div class="status">等待</div></div>
+          <div class="node" data-node="graph"><div class="name">Graph Assisted</div><div class="role">前置/依赖/多跳关系</div><div class="status">等待</div></div>
+          <div class="node" data-node="parent"><div class="name">Parent-Child</div><div class="role">长文档与章节上下文</div><div class="status">条件跳过</div></div>
+        </div><div class="nodes" style="margin-top:9px"><div class="node" data-node="fusion"><div class="name">Evidence Fusion</div><div class="role">去重、融合、重排、冲突标记</div><div class="status">等待</div></div><div class="arrow">→</div><div class="node" data-node="judge"><div class="name">Sufficiency Judge</div><div class="role">证据充分性与补检索</div><div class="status">等待</div></div></div></section>
+        <section class="lane"><div class="lane-title">平行资源生产</div><div class="parallel three">
+          <div class="node" data-node="explanation"><div class="name">Explanation Generator</div><div class="role">个性化讲义</div><div class="status">等待</div></div>
+          <div class="node" data-node="practice"><div class="name">Practice Generator</div><div class="role">工程实操</div><div class="status">等待</div></div>
+          <div class="node" data-node="quiz"><div class="name">Quiz Generator</div><div class="role">分阶测试题</div><div class="status">等待</div></div>
+        </div><div class="nodes" style="margin-top:9px"><div class="node" data-node="compose"><div class="name">Resource Coordinator</div><div class="role">统一学习包与引用</div><div class="status">等待</div></div></div></section>
+        <section class="lane"><div class="lane-title">平行质量审核</div><div class="parallel">
+          <div class="node" data-node="factuality"><div class="name">Factuality Review</div><div class="role">事实与 Evidence</div><div class="status">等待</div></div>
+          <div class="node" data-node="difficulty"><div class="name">Difficulty Review</div><div class="role">画像与难度适配</div><div class="status">等待</div></div>
+          <div class="node" data-node="assessment"><div class="name">Assessment Review</div><div class="role">答案与 Rubric</div><div class="status">等待</div></div>
+          <div class="node" data-node="safety"><div class="name">Safety Review</div><div class="role">权限、注入与隐私</div><div class="status">等待</div></div>
+        </div><div class="nodes" style="margin-top:9px"><div class="node" data-node="review"><div class="name">Review Coordinator</div><div class="role">阻断项与修改建议</div><div class="status">等待</div></div><div class="arrow">→</div><div class="node" data-node="arbitration"><div class="name">Arbitration Agent</div><div class="role">唯一最终裁决</div><div class="status">等待</div></div></div></section>
+        <div class="progress"><div id="progressBar" style="width:0%"></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel" style="margin-bottom:16px"><div class="panel-h"><h2>实时 Event Trace</h2><span class="tag">SSE / Replay</span></div><div class="panel-b trace" id="trace"><div style="color:var(--muted);font-size:12px">点击“推进一步”开始。</div></div></div>
+      <div class="panel"><div class="panel-h"><h2>选中节点详情</h2><span class="tag" id="selectedNode">none</span></div><div class="panel-b detail-grid">
+        <div class="box"><h3>输入摘要</h3><pre id="inputBox">-</pre></div><div class="box"><h3>输出摘要</h3><pre id="outputBox">-</pre></div>
+        <div class="box wide"><h3>结构化理由 / 状态</h3><pre id="reasonBox">-</pre></div>
+        <div class="box wide"><h3>证据</h3><div class="evidence" id="evidenceBox"><span style="color:var(--muted);font-size:11px">暂无</span></div></div>
+      </div></div>
+    </div>
+  </div>
+  <div class="footer">演示模式 · 固定事件回放 · 正式系统由后端 Event Store 与 SSE 驱动</div>
+</div>
+<script>
+const nodeData={
+ diagnosis:{input:'前测结果、历史表现、当前画像',output:'薄弱节点：RAG-M04-N03、RAG-M05-N01',reason:'规则诊断 + 开放题语义诊断，置信度 0.88'},
+ path:{input:'诊断建议、知识图谱前置关系',output:'目标：重排与证据约束生成',reason:'先修复检索质量，再进入生成忠实度训练'},
+ router:{input:'复杂故障问题、画像、目标节点、预算',output:'parallel: metadata_filtered + hybrid + graph_assisted',reason:'问题同时涉及组件关系、故障案例和学习难度；max_steps=5, max_retries=2'},
+ metadata:{input:'难度<=4；trusted_core+trusted_ai_generated',output:'12 hits',reason:'过滤到故障案例、评测案例和当前路径相关节点'},
+ hybrid:{input:'原问题与2个改写查询',output:'20 hits',reason:'关键词与语义召回用于覆盖术语和近义表达'},
+ graph:{input:'目标节点与关系图',output:'8 related nodes',reason:'扩展“召回→重排→上下文→生成审核”依赖路径'},
+ parent:{input:'无长文档章节请求',output:'SKIPPED',reason:'路由器判定本轮不需要父子检索'},
+ fusion:{input:'40个候选 evidence',output:'去重后14个、重排保留8个',reason:'按来源权威、相关性、知识节点覆盖和冲突惩罚融合'},
+ judge:{input:'8个 evidence、4个问题子目标',output:'coverage=0.93, sufficient=true',reason:'四个子目标均有至少一条A/B级来源支撑'},
+ explanation:{input:'画像 + Evidence Bundle',output:'分层讲义 1 份',reason:'保留8个 evidence 引用，按中级学习者压缩定义说明'},
+ practice:{input:'画像 + Evidence Bundle',output:'故障排查实操 1 个',reason:'包含基线、重排、上下文污染与忠实度四步测试'},
+ quiz:{input:'画像 + Evidence Bundle + Rubric',output:'基础/应用/挑战题各2道',reason:'题目与答案均绑定 evidence，避免仅做表面改写'},
+ compose:{input:'三个平行生成结果',output:'统一学习包 v1',reason:'全部分支成功；引用去重；难度梯度完整'},
+ factuality:{input:'资源草稿 + 原始 evidence',output:'PASS',reason:'关键结论均有 evidence 支撑，无来源外扩写'},
+ difficulty:{input:'资源 + 学习者画像',output:'REVISE: 挑战题难度过高',reason:'挑战题涉及未掌握的全局GraphRAG，建议替换为局部关系题'},
+ assessment:{input:'题目、答案、Rubric',output:'PASS',reason:'答案唯一，评分点可执行，难度标签一致'},
+ safety:{input:'资源、权限、来源状态',output:'PASS',reason:'无越权来源、无提示注入执行、无敏感信息泄露'},
+ review:{input:'四维审核结果',output:'REVISE once, then PASS',reason:'仅难度维度要求修改；事实、题目、安全均通过'},
+ arbitration:{input:'审核汇总、重试次数、业务规则',output:'PUBLISH_RESOURCE_AND_AWAIT_SUBMISSION',reason:'修订后全部阻断维度通过；由后端验证幂等和状态后发布'}
+};
+const events=[
+ ['diagnosis','diagnosis_started','正在分析前测与历史表现'],['diagnosis','diagnosis_succeeded','定位两个高优先级薄弱知识点'],
+ ['path','path_plan_started','查询知识图谱前置关系'],['path','path_plan_succeeded','冻结本轮训练目标'],
+ ['router','retrieval_query_classified','识别为复杂故障诊断问题'],['router','retrieval_plan_created','选择三路并行检索'],
+ ['metadata','retrieval_strategy_started','Metadata Filter 启动'],['hybrid','retrieval_strategy_started','Hybrid Retrieval 启动'],['graph','retrieval_strategy_started','Graph Assisted 启动'],
+ ['metadata','retrieval_strategy_completed','返回12条候选'],['hybrid','retrieval_strategy_completed','返回20条候选'],['graph','retrieval_strategy_completed','返回8个关联节点'],
+ ['fusion','evidence_fused','40条候选去重并重排为8条'],['judge','evidence_sufficient','子目标覆盖率0.93'],
+ ['explanation','generation_branch_started','讲义分支启动'],['practice','generation_branch_started','实操分支启动'],['quiz','generation_branch_started','题目分支启动'],
+ ['explanation','generation_branch_completed','讲义分支完成'],['practice','generation_branch_completed','实操分支完成'],['quiz','generation_branch_completed','题目分支完成'],['compose','resource_composed','统一学习包完成'],
+ ['factuality','review_branch_completed','事实审核通过'],['difficulty','review_branch_completed','难度审核要求修订'],['assessment','review_branch_completed','题目审核通过'],['safety','review_branch_completed','安全审核通过'],
+ ['review','review_revision_completed','替换超纲挑战题后全部通过'],['arbitration','route_selected','唯一仲裁：发布资源并等待提交']
+];
+let idx=0,timer=null;const nodes=[...document.querySelectorAll('.node')],trace=document.getElementById('trace');
+function selectNode(name){nodes.forEach(n=>n.classList.toggle('active',n.dataset.node===name));const d=nodeData[name]||{};document.getElementById('selectedNode').textContent=name;document.getElementById('inputBox').textContent=d.input||'-';document.getElementById('outputBox').textContent=d.output||'-';document.getElementById('reasonBox').textContent=d.reason||'-';const ev=document.getElementById('evidenceBox');if(['fusion','judge','explanation','practice','quiz','factuality'].includes(name)){ev.innerHTML=['EV-4A91 · RAG-M04-N03 · 重排与多阶段检索','EV-7C12 · RAG-M04-N04 · 上下文选择与压缩','EV-91D0 · RAG-M05-N01 · 证据约束生成'].map((x,i)=>`<div class="ev"><div class="ev-id">${x}</div><p>${i===0?'解释候选重排与相关性判断。':i===1?'说明上下文污染、截断与排序风险。':'规定生成结论必须被证据支持。'}</p></div>`).join('')}else ev.innerHTML='<span style="color:var(--muted);font-size:11px">该节点未直接消费 Evidence Bundle。</span>'}
+function advance(){if(idx>=events.length){stop();return}const [node,type,desc]=events[idx];if(idx===0)trace.innerHTML='';nodes.forEach(n=>{if(n.classList.contains('active')){n.classList.remove('active');n.classList.add('done');n.querySelector('.status').textContent='完成'}});const el=document.querySelector(`[data-node="${node}"]`);el.classList.remove('waiting');el.classList.add('active');el.querySelector('.status').textContent='运行中';selectNode(node);const row=document.createElement('div');row.className='event active';row.innerHTML=`<div class="seq">#${String(idx+1).padStart(2,'0')}<br>${new Date(2026,6,31,14,0,idx*2).toLocaleTimeString('zh-CN',{hour12:false})}</div><div><div class="event-name">${type}</div><div class="event-desc">${desc}</div></div>`;trace.prepend(row);idx++;document.getElementById('eventCount').textContent=idx;document.getElementById('progressBar').style.width=`${idx/events.length*100}%`;document.getElementById('currentState').textContent=type;if(type==='retrieval_plan_created')document.getElementById('strategies').textContent='Metadata + Hybrid + Graph';if(type==='evidence_fused')document.getElementById('evidenceCount').textContent='8';if(type==='route_selected'){document.getElementById('finalAction').textContent='发布资源';el.classList.remove('active');el.classList.add('done');el.querySelector('.status').textContent='完成'}}
+function reset(){stop();idx=0;trace.innerHTML='<div style="color:var(--muted);font-size:12px">点击“推进一步”开始。</div>';nodes.forEach(n=>{n.classList.remove('active','done','failed');n.querySelector('.status').textContent=n.dataset.node==='parent'?'条件跳过':'等待'});['eventCount','evidenceCount'].forEach(id=>document.getElementById(id).textContent='0');document.getElementById('currentState').textContent='created';document.getElementById('strategies').textContent='-';document.getElementById('finalAction').textContent='-';document.getElementById('progressBar').style.width='0%';document.getElementById('selectedNode').textContent='none';document.getElementById('inputBox').textContent='-';document.getElementById('outputBox').textContent='-';document.getElementById('reasonBox').textContent='-';document.getElementById('evidenceBox').innerHTML='<span style="color:var(--muted);font-size:11px">暂无</span>'}
+function play(){if(timer){stop();return}document.getElementById('play').textContent='暂停';timer=setInterval(()=>{advance();if(idx>=events.length)stop()},520)}function stop(){clearInterval(timer);timer=null;document.getElementById('play').textContent='自动播放'}
+document.getElementById('step').onclick=advance;document.getElementById('reset').onclick=reset;document.getElementById('play').onclick=play;nodes.forEach(n=>n.onclick=()=>selectNode(n.dataset.node));reset();
+</script>
+</body>
+</html>

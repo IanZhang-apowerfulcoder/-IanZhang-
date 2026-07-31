@@ -1,14 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "测评评分结果",
+  "title": "AssessmentScoringResult",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "attempt_id",
-    "score_ratio",
-    "error_type_codes",
-    "mastery_delta_by_knowledge_node"
-  ],
   "properties": {
     "attempt_id": {
       "type": "string",
@@ -19,19 +13,26 @@
       "minimum": 0,
       "maximum": 1
     },
-    "error_type_codes": {
+    "item_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "minItems": 0
+    },
+    "feedback": {
       "type": "array",
       "items": {
         "type": "string"
-      }
-    },
-    "mastery_delta_by_knowledge_node": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "number",
-        "minimum": -1,
-        "maximum": 1
-      }
+      },
+      "minItems": 0
     }
-  }
+  },
+  "required": [
+    "attempt_id",
+    "score_ratio",
+    "item_results",
+    "feedback"
+  ]
 }

@@ -1,0 +1,445 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "comparison_case_id": "compare_001",
+      "title": "参数记忆与外部知识库",
+      "left_node_id": "parametric_nonparametric_memory",
+      "right_node_id": "rag_definition",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "语言模型参数中的知识更新成本高、来源难追踪；外部知识库可以独立更新、版本化并返回出处。RAG的价值不是完全消除模型知识，而是让模型在回答时获得与任务相关的显式证据。",
+      "right_summary": "检索增强生成把可更新、可追踪的外部知识作为上下文提供给生成模型。模型参数负责语言理解与组织，外部知识库承担事实记忆与版本更新。工程上应把检索结果、生成提示词和最终回答分开记录，才能定位错误来自检索还是生成。",
+      "decision_guidance": "在证据不足时应拒答或请求补充资料，而不是让参数记忆补齐企业内部事实。 对完全不依赖外部事实的创意写作、闲聊或纯计算任务，RAG未必有收益；对高风险答案，RAG也不能替代人工审核和业务规则。",
+      "evidence_chunk_ids": [
+        "chunk_parametric_nonparametric_memory_principle",
+        "chunk_rag_definition_principle",
+        "chunk_parametric_nonparametric_memory_boundary",
+        "chunk_rag_definition_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_002",
+      "title": "固定窗口与结构感知切分",
+      "left_node_id": "fixed_window_chunking",
+      "right_node_id": "structure_aware_chunking",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "固定窗口切分实现简单、速度快，适合作为基线。它按固定字符或Token数量切分，并用少量重叠减轻边界信息丢失。",
+      "right_summary": "结构感知切分利用文档天然层级，优先在章节、段落、列表或代码块边界切分。片段携带完整标题路径，可提高语义独立性和引用可读性。",
+      "decision_guidance": "适合结构弱、内容较均匀的文本和快速基线；对表格、代码、制度条款或层级文档，通常应使用结构感知方案。 对结构清晰的手册、课程、API文档和制度文件优先采用；对无结构聊天记录可退回语义或窗口切分。",
+      "evidence_chunk_ids": [
+        "chunk_fixed_window_chunking_principle",
+        "chunk_structure_aware_chunking_principle",
+        "chunk_fixed_window_chunking_boundary",
+        "chunk_structure_aware_chunking_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_003",
+      "title": "结构切分与语义切分",
+      "left_node_id": "structure_aware_chunking",
+      "right_node_id": "semantic_chunking",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "结构感知切分利用文档天然层级，优先在章节、段落、列表或代码块边界切分。片段携带完整标题路径，可提高语义独立性和引用可读性。",
+      "right_summary": "语义切分尝试在主题转折处断开，避免固定窗口跨越多个概念。常见方法是比较相邻句子或句群嵌入变化，再结合最小和最大长度约束。",
+      "decision_guidance": "对结构清晰的手册、课程、API文档和制度文件优先采用；对无结构聊天记录可退回语义或窗口切分。 适合主题连续但标题稀疏的长文本。若结构感知切分已表现良好，不应仅为“高级”而引入语义切分。",
+      "evidence_chunk_ids": [
+        "chunk_structure_aware_chunking_principle",
+        "chunk_semantic_chunking_principle",
+        "chunk_structure_aware_chunking_boundary",
+        "chunk_semantic_chunking_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_004",
+      "title": "语义切分与父子多粒度",
+      "left_node_id": "semantic_chunking",
+      "right_node_id": "parent_child_multigranular",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "语义切分尝试在主题转折处断开，避免固定窗口跨越多个概念。常见方法是比较相邻句子或句群嵌入变化，再结合最小和最大长度约束。",
+      "right_summary": "父子切分用较小子块建立检索表示，命中后返回其较大的父块或邻近上下文。多粒度策略也可同时索引句段、章节摘要和完整章节，以适配不同查询。",
+      "decision_guidance": "适合主题连续但标题稀疏的长文本。若结构感知切分已表现良好，不应仅为“高级”而引入语义切分。 适合需要精确定位但答案依赖上下文的手册、长教程和法规。短FAQ库通常不需要复杂父子结构。",
+      "evidence_chunk_ids": [
+        "chunk_semantic_chunking_principle",
+        "chunk_parent_child_multigranular_principle",
+        "chunk_semantic_chunking_boundary",
+        "chunk_parent_child_multigranular_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_005",
+      "title": "稀疏检索与稠密检索",
+      "left_node_id": "bm25_sparse_retrieval",
+      "right_node_id": "dense_retrieval",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "BM25基于词项频率、逆文档频率和文档长度归一化进行排序。它对产品编号、错误码、函数名和罕见专有词通常比纯语义检索更稳定，是重要基线。",
+      "right_summary": "稠密检索通过查询与文档向量的相似度召回候选，可处理同义词、自然语言改写和概念级匹配。它依赖训练分布和表示模型，跨领域表现必须实测。",
+      "decision_guidance": "即使最终采用混合检索，也应保留BM25基线，用于判断复杂模型是否真正带来收益。 稠密检索适合自然语言查询，但不应默认替代稀疏检索；实际系统通常需要混合和重排。",
+      "evidence_chunk_ids": [
+        "chunk_bm25_sparse_retrieval_principle",
+        "chunk_dense_retrieval_principle",
+        "chunk_bm25_sparse_retrieval_boundary",
+        "chunk_dense_retrieval_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_006",
+      "title": "单通道稠密检索与混合检索",
+      "left_node_id": "dense_retrieval",
+      "right_node_id": "hybrid_retrieval",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "稠密检索通过查询与文档向量的相似度召回候选，可处理同义词、自然语言改写和概念级匹配。它依赖训练分布和表示模型，跨领域表现必须实测。",
+      "right_summary": "混合检索让关键词通道覆盖精确匹配，让向量通道覆盖语义匹配。融合可以基于归一化分数、加权排序或RRF等名次融合方法。",
+      "decision_guidance": "稠密检索适合自然语言查询，但不应默认替代稀疏检索；实际系统通常需要混合和重排。 混合检索适合企业文档、代码和术语混合场景。语料很小或查询单一时，复杂融合可能没有明显收益。",
+      "evidence_chunk_ids": [
+        "chunk_dense_retrieval_principle",
+        "chunk_hybrid_retrieval_principle",
+        "chunk_dense_retrieval_boundary",
+        "chunk_hybrid_retrieval_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_007",
+      "title": "检索架构与排序融合方法",
+      "left_node_id": "hybrid_retrieval",
+      "right_node_id": "rank_fusion_rrf",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "混合检索让关键词通道覆盖精确匹配，让向量通道覆盖语义匹配。融合可以基于归一化分数、加权排序或RRF等名次融合方法。",
+      "right_summary": "RRF根据文档在各排序列表中的名次累积分数，不要求BM25分数和向量分数处于同一尺度。它是混合检索中稳定、易解释的融合基线。",
+      "decision_guidance": "混合检索适合企业文档、代码和术语混合场景。语料很小或查询单一时，复杂融合可能没有明显收益。 适合先建立可靠混合基线。若有大量标注数据，可进一步学习融合权重，但必须保留可解释对照。",
+      "evidence_chunk_ids": [
+        "chunk_hybrid_retrieval_principle",
+        "chunk_rank_fusion_rrf_principle",
+        "chunk_hybrid_retrieval_boundary",
+        "chunk_rank_fusion_rrf_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_008",
+      "title": "交叉编码器与晚交互",
+      "left_node_id": "cross_encoder_reranking",
+      "right_node_id": "colbert_late_interaction",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "交叉编码器同时读取查询与文档，可建模细粒度交互，通常比双编码器排序更准确，但无法高效遍历全部语料，因此用于对召回候选重排。",
+      "right_summary": "ColBERT分别编码查询和文档Token，再在检索时进行晚交互，以保留比单向量更细的匹配信息。它介于双编码器高效召回与交叉编码器高精度之间。",
+      "decision_guidance": "高价值问答和证据要求严格的场景优先使用；极低延迟或大批量查询可只在困难查询上启用。 适合需要高召回且可接受更高索引成本的检索系统；小规模比赛原型不是必选项。",
+      "evidence_chunk_ids": [
+        "chunk_cross_encoder_reranking_principle",
+        "chunk_colbert_late_interaction_principle",
+        "chunk_cross_encoder_reranking_boundary",
+        "chunk_colbert_late_interaction_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_009",
+      "title": "多查询扩展与HyDE",
+      "left_node_id": "multi_query_expansion",
+      "right_node_id": "hyde_retrieval",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "复杂或含糊问题可以生成多个检索表达式，例如术语改写、关键词补充或子问题分解，再合并候选。目标是提高召回而不是让模型直接回答。",
+      "right_summary": "HyDE先让模型生成一个可能回答问题的假设文档，再对该文本生成嵌入并检索真实文档。它使用假设文本作为语义桥梁，而不是把假设内容当作最终事实。",
+      "decision_guidance": "只在长问题、歧义问题或基线召回不足时启用。精确编号查询通常不需要扩展。 适合零样本语义检索困难且有强生成模型的场景。已有高质量领域嵌入或精确查询时不一定需要。",
+      "evidence_chunk_ids": [
+        "chunk_multi_query_expansion_principle",
+        "chunk_hyde_retrieval_principle",
+        "chunk_multi_query_expansion_boundary",
+        "chunk_hyde_retrieval_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_010",
+      "title": "MMR多样性与RRF融合",
+      "left_node_id": "diversity_mmr",
+      "right_node_id": "rank_fusion_rrf",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "MMR在选择新片段时同时考虑它与查询的相关性以及与已选片段的相似度，从而避免多个近重复片段占满上下文。",
+      "right_summary": "RRF根据文档在各排序列表中的名次累积分数，不要求BM25分数和向量分数处于同一尺度。它是混合检索中稳定、易解释的融合基线。",
+      "decision_guidance": "适合多来源知识和概览型问题。对单一明确事实，应以相关性和权威性为主。 适合先建立可靠混合基线。若有大量标注数据，可进一步学习融合权重，但必须保留可解释对照。",
+      "evidence_chunk_ids": [
+        "chunk_diversity_mmr_principle",
+        "chunk_rank_fusion_rrf_principle",
+        "chunk_diversity_mmr_boundary",
+        "chunk_rank_fusion_rrf_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_011",
+      "title": "提示词约束与证据蕴含验证",
+      "left_node_id": "prompt_grounding",
+      "right_node_id": "evidence_entailment",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "受控提示词应区分系统规则、用户问题和检索证据，要求关键结论引用证据，证据不足时拒答或说明不确定性。提示词本身不能保证忠实，但能形成可测试行为。",
+      "right_summary": "证据检查关注结论与片段之间的蕴含关系。结果可分为supported、contradicted和insufficient，而不是只判断文本主题是否相似。",
+      "decision_guidance": "对于计算、权限、审批和安全判断，应由确定性代码执行，不能仅靠提示词约束。 低风险内容可以自动通过，高风险结论需双重验证或人工确认。证据检查不等同于来源本身真实，来源治理仍是前提。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_grounding_principle",
+        "chunk_evidence_entailment_principle",
+        "chunk_prompt_grounding_boundary",
+        "chunk_evidence_entailment_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_012",
+      "title": "拒答与审核纠偏",
+      "left_node_id": "answer_abstention",
+      "right_node_id": "review_correction_loop",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "可靠RAG需要定义“何时不回答”。拒答依据可以包括无候选、证据相关度低、来源冲突、问题超出领域、权限不足或审核未通过。",
+      "right_summary": "审核器应检查结构、证据、专业准确性、难度适配和安全性，并输出pass、revise或reject及问题列表。纠偏要针对具体问题重新检索或重生成，而不是无条件重复调用。",
+      "decision_guidance": "拒答策略应按风险分级。低风险教学解释可给出有限推断，高风险企业制度必须有明确证据。 确定性Schema、引用存在性和权限检查应在模型审核前执行。审核Agent只处理需要语义判断的部分。",
+      "evidence_chunk_ids": [
+        "chunk_answer_abstention_principle",
+        "chunk_review_correction_loop_principle",
+        "chunk_answer_abstention_boundary",
+        "chunk_review_correction_loop_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_013",
+      "title": "检索指标与生成指标",
+      "left_node_id": "retrieval_metrics",
+      "right_node_id": "generation_metrics",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "Recall@K衡量相关证据是否进入前K个候选，MRR关注首个相关结果的位置，nDCG支持分级相关性和排名折损。指标选择要与业务目标和标注方式一致。",
+      "right_summary": "生成评测至少区分faithfulness、answer_correctness、answer_relevance、citation_correctness和completeness。一个流畅答案可能不忠实，一个忠实答案也可能不完整。",
+      "decision_guidance": "比赛可重点报告Recall@5、MRR和核心知识覆盖；生产系统还需按租户、版本和查询类型监控。 比赛要求的幻觉率应先定义分母、错误类别和人工复核流程，不能仅引用框架默认分数。",
+      "evidence_chunk_ids": [
+        "chunk_retrieval_metrics_principle",
+        "chunk_generation_metrics_principle",
+        "chunk_retrieval_metrics_boundary",
+        "chunk_generation_metrics_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_014",
+      "title": "离线端到端评测与线上监控",
+      "left_node_id": "end_to_end_evaluation",
+      "right_node_id": "online_monitoring_feedback",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "端到端评测关注系统是否在真实流程中给出可用答案，并能在证据不足时正确拒答。它需要把离线检索、生成质量、画像适配和业务流程结合起来。",
+      "right_summary": "线上监控应记录请求链路、模型与索引版本、候选证据、延迟、错误码、拒答和用户反馈，同时避免保存不必要敏感内容。",
+      "decision_guidance": "先建立可复现离线测试，再进行有限在线用户反馈。比赛指标与商业指标可共用底层数据，但目标阈值应明确。 反馈用于发现问题和构建评测案例，不应未经审核直接修改权威知识或自动提升内容可信等级。",
+      "evidence_chunk_ids": [
+        "chunk_end_to_end_evaluation_principle",
+        "chunk_online_monitoring_feedback_principle",
+        "chunk_end_to_end_evaluation_boundary",
+        "chunk_online_monitoring_feedback_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_015",
+      "title": "工作流Agentic RAG与Self-RAG",
+      "left_node_id": "agentic_rag",
+      "right_node_id": "self_rag",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "Agentic RAG将固定单次检索扩展为可规划流程：识别任务、选择数据源、分解问题、迭代检索、评估证据并决定是否继续。价值来自可控决策，不是简单增加模型调用次数。",
+      "right_summary": "Self-RAG引入检索与反思信号，使模型在需要时检索，并对相关性、支持性和输出质量进行自评。它展示了把检索决策和批判过程纳入生成的方法。",
+      "decision_guidance": "简单FAQ不需要Agentic RAG。仅在多源、复杂任务或证据不足需迭代时使用，并与固定流程基线比较。 比赛系统可实现可解释的规则+审核Agent近似闭环，避免把高级论文名称当作未经验证的功能。",
+      "evidence_chunk_ids": [
+        "chunk_agentic_rag_principle",
+        "chunk_self_rag_principle",
+        "chunk_agentic_rag_boundary",
+        "chunk_self_rag_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_016",
+      "title": "Self-RAG与Corrective RAG",
+      "left_node_id": "self_rag",
+      "right_node_id": "corrective_rag",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "Self-RAG引入检索与反思信号，使模型在需要时检索，并对相关性、支持性和输出质量进行自评。它展示了把检索决策和批判过程纳入生成的方法。",
+      "right_summary": "Corrective RAG的核心是先评估已检索文档质量，再决定直接使用、补充检索、过滤噪声或拒答。它把“检索结果是否可用”变成显式决策。",
+      "decision_guidance": "比赛系统可实现可解释的规则+审核Agent近似闭环，避免把高级论文名称当作未经验证的功能。 适合关键问题和多源系统。企业私有知识不能因失败就自动搜索公网并混入正式答案。",
+      "evidence_chunk_ids": [
+        "chunk_self_rag_principle",
+        "chunk_corrective_rag_principle",
+        "chunk_self_rag_boundary",
+        "chunk_corrective_rag_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_017",
+      "title": "Agentic RAG与Graph RAG",
+      "left_node_id": "agentic_rag",
+      "right_node_id": "graph_rag",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "Agentic RAG将固定单次检索扩展为可规划流程：识别任务、选择数据源、分解问题、迭代检索、评估证据并决定是否继续。价值来自可控决策，不是简单增加模型调用次数。",
+      "right_summary": "Graph RAG把实体、关系和文档证据组织为图，可支持跨文档聚合、关系追踪和全局主题总结。图结构必须回链原始来源，不能把抽取关系当作绝对事实。",
+      "decision_guidance": "简单FAQ不需要Agentic RAG。仅在多源、复杂任务或证据不足需迭代时使用，并与固定流程基线比较。 关系密集、跨文档推理需求明确时才采用。RAG工程实训本身可将知识点前置关系做轻量图，无需一开始构建复杂企业知识图谱。",
+      "evidence_chunk_ids": [
+        "chunk_agentic_rag_principle",
+        "chunk_graph_rag_principle",
+        "chunk_agentic_rag_boundary",
+        "chunk_graph_rag_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_018",
+      "title": "权限隔离与隐私治理",
+      "left_node_id": "access_control_tenant_isolation",
+      "right_node_id": "sensitive_data_privacy",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "RAG权限控制必须发生在检索之前或检索过程中。每个片段应带organization_id、visibility、allowed_roles等元数据，检索查询要强制加入权限过滤，不能检索后再依赖模型隐藏。",
+      "right_summary": "RAG系统同时处理企业知识和个人画像，需进行数据分类、最小收集、访问控制、加密、保留期限和脱敏。向量本身也可能泄露语义，不应视为匿名数据。",
+      "decision_guidance": "高敏感场景可采用物理隔离索引或独立部署；共享索引适合成本敏感场景，但必须有强制过滤、审计和越权测试。 比赛阶段应全部使用虚拟学习者画像和可公开或授权的知识；企业试点再根据合同与法规配置保留策略。",
+      "evidence_chunk_ids": [
+        "chunk_access_control_tenant_isolation_principle",
+        "chunk_sensitive_data_privacy_principle",
+        "chunk_access_control_tenant_isolation_boundary",
+        "chunk_sensitive_data_privacy_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_019",
+      "title": "缓存幂等与知识版本",
+      "left_node_id": "caching_idempotency",
+      "right_node_id": "versioning_freshness",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "可缓存嵌入、检索结果、静态知识摘要和已审核资源，但缓存键必须包含租户、知识库版本、权限、查询规范化结果和模型版本。幂等键用于避免重复创建会话、测评或任务。",
+      "right_summary": "知识库版本应不可变。新资料或修订内容生成新版本，经质量检查后再发布和激活。查询、评测和答案日志必须记录使用的knowledge_base_version_id，便于复现和回滚。",
+      "decision_guidance": "高风险回答可以只缓存检索候选，不缓存最终生成；涉及用户画像的结果必须包含profile_version。 对时间敏感问题，应在检索阶段加入时间过滤或新鲜度排序；系统不能自动确认的时效内容，应在回答中说明数据截止时间。",
+      "evidence_chunk_ids": [
+        "chunk_caching_idempotency_principle",
+        "chunk_versioning_freshness_principle",
+        "chunk_caching_idempotency_boundary",
+        "chunk_versioning_freshness_boundary"
+      ]
+    },
+    {
+      "comparison_case_id": "compare_020",
+      "title": "运行时降级与发布前回归",
+      "left_node_id": "deployment_fallback",
+      "right_node_id": "continuous_updates_regression",
+      "comparison_dimensions": [
+        "目标",
+        "核心机制",
+        "工程成本",
+        "主要风险",
+        "适用场景"
+      ],
+      "left_summary": "生产RAG应定义依赖健康检查、超时、重试、熔断和降级。降级目标不是伪装正常，而是保持数据安全并向用户说明当前能力限制。",
+      "right_summary": "RAG是持续变化系统。知识源、切分、嵌入、索引、提示词和模型任一变化都可能影响结果，因此每次变更都需要版本记录和自动回归。",
+      "decision_guidance": "关键企业规则不应在降级时绕过审核或权限。比赛演示准备离线Mock降级仅用于保证流程展示，并必须标明。 评测集也要版本化，并防止开发者针对测试答案过拟合。商业客户可拥有独立回归集和发布审批。",
+      "evidence_chunk_ids": [
+        "chunk_deployment_fallback_principle",
+        "chunk_continuous_updates_regression_principle",
+        "chunk_deployment_fallback_boundary",
+        "chunk_continuous_updates_regression_boundary"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "case_id": "9433133c-bbb0-5edc-959c-391ae4510bec",
+  "learner_profile": {
+    "profile_key": "LP-ADVANCED",
+    "display_name": "学习者C：负责企业知识平台架构",
+    "background": {
+      "education": "软件/AI工程经验",
+      "experience": "已部署基本RAG和服务化系统",
+      "goal": "掌握安全、GraphRAG、Agentic RAG和生产治理"
+    },
+    "preferences": [
+      "架构决策",
+      "消融实验",
+      "高风险案例"
+    ],
+    "mastery": {
+      "RAG-M01-N01": 0.95,
+      "RAG-M03-N04": 0.85,
+      "RAG-M04-N04": 0.75,
+      "RAG-M05-N03": 0.6,
+      "RAG-M05-N04": 0.35,
+      "RAG-M07-N02": 0.2,
+      "RAG-M07-N03": 0.2,
+      "RAG-M08-N04": 0.45
+    },
+    "recommended_start_nodes": [
+      "RAG-M05-N04",
+      "RAG-M07-N02",
+      "RAG-M07-N03",
+      "RAG-M08-N04"
+    ],
+    "target_difficulty": 5
+  },
+  "diagnosis_output": {
+    "proposal_id": "cbeb0cfd-37a1-5df0-b4e4-8c7d030fe299",
+    "mastered_knowledge_nodes": [
+      {
+        "knowledge_node_id": "RAG-M01-N01",
+        "mastery_score": 0.95,
+        "evidence_ids": [
+          "b04e4952-9eb2-502e-9cfe-41d8bd62bc49"
+        ]
+      }
+    ],
+    "weak_knowledge_nodes": [
+      {
+        "knowledge_node_id": "RAG-M05-N04",
+        "mastery_score": 0.35,
+        "evidence_ids": [
+          "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+          "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+        ]
+      },
+      {
+        "knowledge_node_id": "RAG-M07-N03",
+        "mastery_score": 0.2,
+        "evidence_ids": [
+          "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+          "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+        ]
+      }
+    ],
+    "error_patterns": [
+      {
+        "error_type_code": "CONCEPT_GAP",
+        "severity": "medium",
+        "description": "在提示注入、不可信文档与知识库安全相关知识上存在证据支持的能力缺口。",
+        "evidence_ids": [
+          "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+          "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+        ]
+      }
+    ],
+    "recommended_focus_node_ids": [
+      "RAG-M05-N04",
+      "RAG-M07-N03"
+    ],
+    "confidence": 0.8887,
+    "evidence_ids": [
+      "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+      "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+      "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+      "56475a80-f5aa-571b-96a9-5cf4a4a59630"
+    ],
+    "reasoning_summary": "根据初始画像和固定测试数据，优先学习提示注入、不可信文档与知识库安全及其直接关联节点。",
+    "requires_human_review": false
+  },
+  "path_plan_output": {
+    "proposal_id": "fa4bc506-6e7d-5b96-b43f-7921f4f57fb4",
+    "goal": "掌握安全、GraphRAG、Agentic RAG和生产治理",
+    "candidate_steps": [
+      {
+        "path_step_id": "0726601f-8a5f-53df-98a3-55429566f2d0",
+        "sequence_no": 1,
+        "knowledge_node_ids": [
+          "RAG-M05-N04"
+        ],
+        "action_type": "learn",
+        "resource_type": "mixed",
+        "difficulty_level": 5,
+        "estimated_minutes": 60,
+        "prerequisite_path_step_ids": [],
+        "success_criteria": [
+          "概念题正确率达到80%",
+          "能说明适用边界"
+        ]
+      },
+      {
+        "path_step_id": "6154bde5-0725-5a4b-b212-e3176ea1f7a3",
+        "sequence_no": 2,
+        "knowledge_node_ids": [
+          "RAG-M07-N03"
+        ],
+        "action_type": "practice",
+        "resource_type": "exercise",
+        "difficulty_level": 5,
+        "estimated_minutes": 90,
+        "prerequisite_path_step_ids": [
+          "0726601f-8a5f-53df-98a3-55429566f2d0"
+        ],
+        "success_criteria": [
+          "完成工程任务",
+          "Rubric得分不低于75"
+        ]
+      }
+    ],
+    "alternative_paths": [
+      {
+        "alternative_path_id": "6408c5ef-233d-5175-9c29-28cbdd54f3a2",
+        "summary": "若关键误区未纠正，则在原难度增加一次概念巩固。",
+        "steps": [
+          {
+            "path_step_id": "ab291765-d94d-50c3-83bd-2b5f2e044a06",
+            "sequence_no": 1,
+            "knowledge_node_ids": [
+              "RAG-M05-N04"
+            ],
+            "action_type": "review",
+            "resource_type": "mixed",
+            "difficulty_level": 5,
+            "estimated_minutes": 60,
+            "prerequisite_path_step_ids": [],
+            "success_criteria": [
+              "概念题正确率达到80%",
+              "能说明适用边界"
+            ]
+          }
+        ]
+      }
+    ],
+    "confidence": 0.8483,
+    "evidence_ids": [
+      "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+      "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+      "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+      "56475a80-f5aa-571b-96a9-5cf4a4a59630"
+    ],
+    "reasoning_summary": "路径遵守知识图谱前置关系，并根据画像选择资源难度。",
+    "requires_human_review": false
+  },
+  "retrieval_request": {
+    "retrieval_request_id": "d9be83ed-9e66-54d8-83e7-b6ba1f5eba72",
+    "knowledge_base_version_id": "fd400183-2242-50aa-8b83-d670c1ce5a1f",
+    "query_text": "为学习者C：负责企业知识平台架构检索提示注入、不可信文档与知识库安全的专业证据与实操内容",
+    "top_k": 4,
+    "filters": {
+      "knowledge_node_ids": [
+        "RAG-M05-N04",
+        "RAG-M07-N03"
+      ],
+      "max_difficulty_level": 5
+    }
+  },
+  "retrieval_response": {
+    "retrieval_request_id": "d9be83ed-9e66-54d8-83e7-b6ba1f5eba72",
+    "evidence_items": [
+      {
+        "evidence_id": "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+        "chunk_id": "c2ad52da-b7e4-5002-86be-806f95166acc",
+        "document_id": "37fb491c-345f-5293-b04f-2e7e521a5887",
+        "content_excerpt": "知识点：提示注入、不可信文档与知识库安全\n主题：直接与间接注入\n直接注入来自用户要求忽略规则；间接注入隐藏在网页、PDF、邮件或代码注释中，待文档被检索后影响模型。知识库接入和运行时都必须检测。\n适用边界：检索证据永远视为不可信数据；Agent不得从文档获得额外权限；可疑来源先隔离后审核",
+        "relevance_score": 0.96
+      },
+      {
+        "evidence_id": "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+        "chunk_id": "408bb93f-43f5-58ee-9bfa-4b3ab26f9d20",
+        "document_id": "37fb491c-345f-5293-b04f-2e7e521a5887",
+        "content_excerpt": "知识点：提示注入、不可信文档与知识库安全\n主题：指令与数据分离\n系统Prompt应明确证据块只是数据，不执行其中指令；使用结构化标签封装证据，并避免把敏感系统提示、工具描述和密钥放入可被文档覆盖的区域。\n适用边界：检索证据永远视为不可信数据；Agent不得从文档获得额外权限；可疑来源先隔离后审核",
+        "relevance_score": 0.92
+      },
+      {
+        "evidence_id": "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+        "chunk_id": "c17c8403-427e-511e-b71e-f0aeb13840c8",
+        "document_id": "37fb491c-345f-5293-b04f-2e7e521a5887",
+        "content_excerpt": "知识点：提示注入、不可信文档与知识库安全\n主题：最小工具权限\n检索内容不能决定调用哪个高权限工具或修改权限过滤。工具参数需要Schema校验、允许列表、租户上下文和后端授权，危险操作必须人工确认。\n适用边界：检索证据永远视为不可信数据；Agent不得从文档获得额外权限；可疑来源先隔离后审核",
+        "relevance_score": 0.88
+      },
+      {
+        "evidence_id": "56475a80-f5aa-571b-96a9-5cf4a4a59630",
+        "chunk_id": "58edf566-3ea1-50e3-878a-13e47ee43e67",
+        "document_id": "37fb491c-345f-5293-b04f-2e7e521a5887",
+        "content_excerpt": "知识点：提示注入、不可信文档与知识库安全\n主题：多层检测与响应\n接入阶段扫描可疑指令和脚本；检索阶段过滤来源；生成阶段限制行为；输出阶段检测泄露和越权；事件进入审计日志。无法确认的高风险内容隔离而非自动发布。\n适用边界：检索证据永远视为不可信数据；Agent不得从文档获得额外权限；可疑来源先隔离后审核",
+        "relevance_score": 0.84
+      }
+    ]
+  },
+  "resource_output": {
+    "proposal_id": "acecef7c-8beb-5553-9cdc-6beedca1dac5",
+    "resource_draft_id": "73f83859-b68f-57e5-b77f-ce3b76ea2baf",
+    "title": "提示注入、不可信文档与知识库安全个性化学习单元",
+    "resource_type": "mixed",
+    "difficulty_level": 5,
+    "target_knowledge_node_ids": [
+      "RAG-M05-N04"
+    ],
+    "summary": "面向学习者C：负责企业知识平台架构的提示注入、不可信文档与知识库安全资源。RAG会把外部文档送入模型，因此文档中的恶意指令可能影响模型。所有检索内容都应被视为不可信数据，不能获得系统指令或工具权限。",
+    "resource_sections": [
+      {
+        "resource_section_id": "dcd44549-728a-5c24-b943-8bf22d75f340",
+        "heading": "直接与间接注入",
+        "body_markdown": "直接注入来自用户要求忽略规则；间接注入隐藏在网页、PDF、邮件或代码注释中，待文档被检索后影响模型。知识库接入和运行时都必须检测。",
+        "key_points": [
+          "直接与间接注入",
+          "检索证据永远视为不可信数据"
+        ],
+        "evidence_ids": [
+          "b04e4952-9eb2-502e-9cfe-41d8bd62bc49"
+        ]
+      },
+      {
+        "resource_section_id": "b35ff7ae-b093-56c1-8d06-dfe10267911f",
+        "heading": "指令与数据分离",
+        "body_markdown": "系统Prompt应明确证据块只是数据，不执行其中指令；使用结构化标签封装证据，并避免把敏感系统提示、工具描述和密钥放入可被文档覆盖的区域。",
+        "key_points": [
+          "指令与数据分离",
+          "检索证据永远视为不可信数据"
+        ],
+        "evidence_ids": [
+          "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+        ]
+      },
+      {
+        "resource_section_id": "abefd9ce-dc0f-503c-82d9-ce73cd22bd5a",
+        "heading": "最小工具权限",
+        "body_markdown": "检索内容不能决定调用哪个高权限工具或修改权限过滤。工具参数需要Schema校验、允许列表、租户上下文和后端授权，危险操作必须人工确认。",
+        "key_points": [
+          "最小工具权限",
+          "检索证据永远视为不可信数据"
+        ],
+        "evidence_ids": [
+          "36517c9a-c0cd-5c02-a8ba-8efdaf33764a"
+        ]
+      }
+    ],
+    "code_examples": [],
+    "evidence_ids": [
+      "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+      "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+      "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+      "56475a80-f5aa-571b-96a9-5cf4a4a59630"
+    ],
+    "confidence": 0.8121
+  },
+  "assessment_output": {
+    "proposal_id": "38c52ab1-53d7-5f86-9da5-56fb5844c0ec",
+    "assessment_draft_id": "0c4b7aaf-1f46-56ec-b2f4-a0579f2f7238",
+    "title": "提示注入、不可信文档与知识库安全分阶测评",
+    "assessment_type": "checkpoint",
+    "instructions": "完成概念辨析与工程边界说明；所有开放题按Rubric评分。",
+    "questions": [
+      {
+        "question_id": "2bfbd982-370e-5755-a96f-b5fa97126e1f",
+        "question_type": "single_choice",
+        "stem": "提示注入、不可信文档与知识库安全的核心目标是什么？",
+        "options": [
+          {
+            "option_id": "9c12a9a7-e2e1-56a0-bf5f-02dbeb2e080f",
+            "option_text": "只有用户输入会提示注入。"
+          },
+          {
+            "option_id": "535d12e4-0827-58dc-bb6b-b6b0fcf77fe8",
+            "option_text": "直接注入来自用户要求忽略规则；间接注入隐藏在网页、PDF、邮件或代码注释中，待文档被检索后影响模型。知识库接入和运行时都必须检测。"
+          },
+          {
+            "option_id": "386f4c0b-ae5f-5e07-9451-59da365155fb",
+            "option_text": "不需要证据或版本管理"
+          },
+          {
+            "option_id": "4d2aeedf-f6e1-5fab-88d3-c7e5fc237781",
+            "option_text": "只用于展示动画"
+          }
+        ],
+        "correct_answer": "535d12e4-0827-58dc-bb6b-b6b0fcf77fe8",
+        "score_points": 10,
+        "scoring_rubric": [
+          "专业事实准确",
+          "包含适用边界",
+          "能给出可验证证据"
+        ],
+        "explanation": "直接注入来自用户要求忽略规则；间接注入隐藏在网页、PDF、邮件或代码注释中，待文档被检索后影响模型。知识库接入和运行时都必须检测。",
+        "evidence_ids": [
+          "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+          "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+        ]
+      },
+      {
+        "question_id": "38236e07-8c38-52d7-8ac5-d297c32207d1",
+        "question_type": "true_false",
+        "stem": "只有用户输入会提示注入。",
+        "options": [
+          {
+            "option_id": "52bb828c-1b2f-59c5-969b-173a14f69a93",
+            "option_text": "正确"
+          },
+          {
+            "option_id": "941094e0-3246-5894-b8f6-30e1614589bc",
+            "option_text": "错误"
+          }
+        ],
+        "correct_answer": "941094e0-3246-5894-b8f6-30e1614589bc",
+        "score_points": 10,
+        "scoring_rubric": [
+          "专业事实准确",
+          "包含适用边界",
+          "能给出可验证证据"
+        ],
+        "explanation": "被检索的外部文档同样可能包含间接注入。",
+        "evidence_ids": [
+          "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+          "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+        ]
+      },
+      {
+        "question_id": "dad2ade1-96f1-5c29-8a22-adf088c9220f",
+        "question_type": "short_answer",
+        "stem": "请说明提示注入、不可信文档与知识库安全的一项适用边界和验收方法。",
+        "options": [],
+        "correct_answer": {
+          "required_points": [
+            "检索证据永远视为不可信数据",
+            "识别用户直接注入和文档间接注入"
+          ]
+        },
+        "score_points": 20,
+        "scoring_rubric": [
+          "专业事实准确",
+          "包含适用边界",
+          "能给出可验证证据"
+        ],
+        "explanation": "被检索的外部文档同样可能包含间接注入。",
+        "evidence_ids": [
+          "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+          "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+        ]
+      }
+    ],
+    "total_score_points": 40,
+    "pass_score_points": 30,
+    "evidence_ids": [
+      "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+      "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+      "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+      "56475a80-f5aa-571b-96a9-5cf4a4a59630"
+    ],
+    "confidence": 0.8922
+  },
+  "review_output": {
+    "review_id": "28f60174-76ff-542b-af56-97a5cc884ff4",
+    "proposal_id": "10c86a07-23b0-5a4d-9f7c-e7a7b17634c0",
+    "reviewed_proposal_id": "acecef7c-8beb-5553-9cdc-6beedca1dac5",
+    "review_result": "approved",
+    "overall_score": 92.0,
+    "checks": {
+      "schema_valid": true,
+      "evidence_supported": true,
+      "factual_consistent": true,
+      "no_conflict": true,
+      "answer_verifiable": true
+    },
+    "issues": [],
+    "repair_action": "none",
+    "repair_instructions": [],
+    "confidence": 0.8113,
+    "requires_human_review": false
+  },
+  "arbitration_output": {
+    "proposal_id": "d8000833-27b3-51a0-aefb-b172aea6a358",
+    "decision_type": "deliver_resource",
+    "selected_proposal_ids": [
+      "cbeb0cfd-37a1-5df0-b4e4-8c7d030fe299",
+      "fa4bc506-6e7d-5b96-b43f-7921f4f57fb4",
+      "acecef7c-8beb-5553-9cdc-6beedca1dac5",
+      "38c52ab1-53d7-5f86-9da5-56fb5844c0ec"
+    ],
+    "rejected_proposals": [],
+    "target_knowledge_node_ids": [
+      "RAG-M05-N04",
+      "RAG-M07-N03"
+    ],
+    "rationale_summary": "诊断、路径、资源与测评均符合冻结Schema；审核通过且关键陈述有证据支持。",
+    "supporting_evidence_ids": [
+      "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+      "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+      "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+      "56475a80-f5aa-571b-96a9-5cf4a4a59630"
+    ],
+    "confidence": 0.9017,
+    "requires_human_review": false,
+    "human_review_reason": null
+  },
+  "expected_feedback_update": {
+    "target_nodes": [
+      "RAG-M05-N04",
+      "RAG-M07-N03"
+    ],
+    "action": "advance",
+    "evidence_required": true
+  }
+}

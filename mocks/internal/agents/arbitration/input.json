@@ -1,0 +1,28 @@
+{
+  "schema_version": "7.0",
+  "run_id": "e8a445e8-05ed-46c9-8567-ba709b12a405",
+  "workflow_run_id": "a8871449-073e-479a-86fa-39a8bf507689",
+  "session_id": "759ffa79-a802-4ab4-bcb8-23ada95abb3c",
+  "organization_id": "cfc408b8-171c-4312-9c07-8542f5c58597",
+  "learner_id": "cf8e6672-9fa0-48b1-8649-7bd4631865aa",
+  "agent_name": "example",
+  "task_type": "example",
+  "context_refs": [
+    {
+      "ref_type": "example",
+      "ref_id": "example"
+    }
+  ],
+  "constraints": {},
+  "requested_at": "2026-07-31T12:00:00Z",
+  "diagnosis_proposal": {},
+  "path_proposal": {},
+  "retrieval_summary": {},
+  "resource_proposal": {},
+  "assessment_result": {},
+  "review_result": {},
+  "history": [
+    {}
+  ],
+  "policy": {}
+}

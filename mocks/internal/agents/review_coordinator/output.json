@@ -1,0 +1,40 @@
+{
+  "schema_version": "7.0",
+  "run_id": "5d3681d8-7de3-49de-b0a4-a97e5831a26a",
+  "agent_name": "example",
+  "status": "succeeded",
+  "confidence": 0.5,
+  "reasoning_summary": "example",
+  "warnings": [
+    "example"
+  ],
+  "requires_human_review": true,
+  "completed_at": "2026-07-31T12:00:00Z",
+  "review_id": "86dca095-63d9-44da-accf-7c3b63621bac",
+  "outcome": "pass",
+  "dimension_results": [
+    {}
+  ],
+  "blocking_issues": [
+    {
+      "issue_id": "example",
+      "severity": "info",
+      "category": "example",
+      "description": "example",
+      "location": "example",
+      "evidence_ids": [
+        "911898c2-fca7-4cec-aac3-300a6d18fdd3"
+      ],
+      "repair_instruction": "example"
+    }
+  ],
+  "repair_instructions": [
+    "example"
+  ],
+  "rerun_branches": [
+    "retrieval"
+  ],
+  "approved_evidence_ids": [
+    "dfacddf8-a2ae-429f-90b8-cdd18a2017ff"
+  ]
+}

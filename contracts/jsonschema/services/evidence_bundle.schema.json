@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvidenceBundle",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "evidence_bundle_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "retrieval_run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "knowledge_base_version_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "query_text": {
+      "type": "string"
+    },
+    "query_analysis": {
+      "$ref": "query_analysis.schema.json"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "evidence_item.schema.json"
+      },
+      "minItems": 0
+    },
+    "coverage_knowledge_node_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "minItems": 0
+    },
+    "strategy_summary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "minItems": 0
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "evidence_bundle_id",
+    "retrieval_run_id",
+    "knowledge_base_version_id",
+    "query_text",
+    "query_analysis",
+    "items",
+    "coverage_knowledge_node_ids",
+    "conflicts",
+    "strategy_summary",
+    "created_at"
+  ]
+}

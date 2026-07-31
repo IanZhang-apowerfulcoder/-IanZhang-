@@ -1,0 +1,10 @@
+{
+  "retrieval_request_id": "335c7927-e05a-4759-9010-0456c4df0d91",
+  "knowledge_base_version_id": "fd400183-2242-50aa-8b83-d670c1ce5a1f",
+  "query_text": "HyDE假设文档检索适合什么场景？",
+  "top_k": 5,
+  "filters": {
+    "include_candidate": true,
+    "max_difficulty_level": 5
+  }
+}

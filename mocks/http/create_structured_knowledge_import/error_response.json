@@ -1,0 +1,8 @@
+{
+  "error_code": "VALIDATION_FAILED",
+  "message": "mock validation error",
+  "request_id": "00000000-0000-4000-8000-000000000003",
+  "details": {
+    "operation_id": "create_structured_knowledge_import"
+  }
+}

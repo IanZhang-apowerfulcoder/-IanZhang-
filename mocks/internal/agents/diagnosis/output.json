@@ -1,0 +1,64 @@
+{
+  "schema_version": "7.0",
+  "run_id": "66c80fb8-651c-4e0d-b157-053ae13eb19b",
+  "agent_name": "example",
+  "status": "succeeded",
+  "confidence": 0.5,
+  "reasoning_summary": "example",
+  "warnings": [
+    "example"
+  ],
+  "requires_human_review": true,
+  "completed_at": "2026-07-31T12:00:00Z",
+  "mastered_nodes": [
+    {
+      "knowledge_node_id": "example",
+      "mastery_score": 0.5,
+      "confidence": 0.5,
+      "evidence_refs": [
+        {
+          "evidence_id": "95f1d7d3-e698-4a04-993e-e06f3084130c",
+          "knowledge_node_id": "example"
+        }
+      ]
+    }
+  ],
+  "weak_nodes": [
+    {
+      "knowledge_node_id": "example",
+      "mastery_score": 0.5,
+      "confidence": 0.5,
+      "evidence_refs": [
+        {
+          "evidence_id": "b8073072-a10a-4d41-a8f5-fb12685a1f34",
+          "knowledge_node_id": "example"
+        }
+      ]
+    }
+  ],
+  "misconceptions": [
+    {
+      "knowledge_node_id": "example",
+      "error_code": "example",
+      "description": "example",
+      "evidence_refs": [
+        {
+          "evidence_id": "0f188dbc-09f0-4f66-bbf2-7fbf07d74a2a",
+          "knowledge_node_id": "example"
+        }
+      ]
+    }
+  ],
+  "learning_needs": [
+    "example"
+  ],
+  "recommended_focus_nodes": [
+    "example"
+  ],
+  "evidence": [
+    {
+      "evidence_id": "67595ae9-3102-4413-8d46-e78149352721",
+      "knowledge_node_id": "example"
+    }
+  ]
+}

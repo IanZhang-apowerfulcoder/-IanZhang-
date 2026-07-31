@@ -1,0 +1,57 @@
+{
+  "proposal_id": "acecef7c-8beb-5553-9cdc-6beedca1dac5",
+  "resource_draft_id": "73f83859-b68f-57e5-b77f-ce3b76ea2baf",
+  "title": "提示注入、不可信文档与知识库安全个性化学习单元",
+  "resource_type": "mixed",
+  "difficulty_level": 5,
+  "target_knowledge_node_ids": [
+    "RAG-M05-N04"
+  ],
+  "summary": "面向学习者C：负责企业知识平台架构的提示注入、不可信文档与知识库安全资源。RAG会把外部文档送入模型，因此文档中的恶意指令可能影响模型。所有检索内容都应被视为不可信数据，不能获得系统指令或工具权限。",
+  "resource_sections": [
+    {
+      "resource_section_id": "dcd44549-728a-5c24-b943-8bf22d75f340",
+      "heading": "直接与间接注入",
+      "body_markdown": "直接注入来自用户要求忽略规则；间接注入隐藏在网页、PDF、邮件或代码注释中，待文档被检索后影响模型。知识库接入和运行时都必须检测。",
+      "key_points": [
+        "直接与间接注入",
+        "检索证据永远视为不可信数据"
+      ],
+      "evidence_ids": [
+        "b04e4952-9eb2-502e-9cfe-41d8bd62bc49"
+      ]
+    },
+    {
+      "resource_section_id": "b35ff7ae-b093-56c1-8d06-dfe10267911f",
+      "heading": "指令与数据分离",
+      "body_markdown": "系统Prompt应明确证据块只是数据，不执行其中指令；使用结构化标签封装证据，并避免把敏感系统提示、工具描述和密钥放入可被文档覆盖的区域。",
+      "key_points": [
+        "指令与数据分离",
+        "检索证据永远视为不可信数据"
+      ],
+      "evidence_ids": [
+        "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+      ]
+    },
+    {
+      "resource_section_id": "abefd9ce-dc0f-503c-82d9-ce73cd22bd5a",
+      "heading": "最小工具权限",
+      "body_markdown": "检索内容不能决定调用哪个高权限工具或修改权限过滤。工具参数需要Schema校验、允许列表、租户上下文和后端授权，危险操作必须人工确认。",
+      "key_points": [
+        "最小工具权限",
+        "检索证据永远视为不可信数据"
+      ],
+      "evidence_ids": [
+        "36517c9a-c0cd-5c02-a8ba-8efdaf33764a"
+      ]
+    }
+  ],
+  "code_examples": [],
+  "evidence_ids": [
+    "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+    "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6",
+    "36517c9a-c0cd-5c02-a8ba-8efdaf33764a",
+    "56475a80-f5aa-571b-96a9-5cf4a4a59630"
+  ],
+  "confidence": 0.8121
+}

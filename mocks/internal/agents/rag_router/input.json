@@ -1,0 +1,61 @@
+{
+  "schema_version": "7.0",
+  "run_id": "b18c1ef5-7900-4aab-98ea-1ace9866d3b1",
+  "workflow_run_id": "c64f2c04-c372-4752-951c-417b476e7fcd",
+  "session_id": "f895ee2e-d39e-41a7-978e-06b5ee10b522",
+  "organization_id": "76e22603-8ecb-4fbc-9bea-34389810183a",
+  "learner_id": "9474c3d1-e846-47bc-888e-b7b181aa26f4",
+  "agent_name": "example",
+  "task_type": "example",
+  "context_refs": [
+    {
+      "ref_type": "example",
+      "ref_id": "example"
+    }
+  ],
+  "constraints": {},
+  "requested_at": "2026-07-31T12:00:00Z",
+  "query_text": "example",
+  "query_task_type": "learning_question",
+  "learner_profile_summary": {
+    "profile_snapshot_id": "e84feef1-a845-42c0-9092-b0f03a99d125",
+    "background": {},
+    "learning_goals": [
+      "example"
+    ],
+    "preferences": [
+      "example"
+    ],
+    "mastery_items": [
+      {
+        "knowledge_node_id": "example",
+        "mastery_score": 0.5,
+        "confidence": 0.5,
+        "evidence_refs": [
+          {
+            "evidence_id": "b67bbe10-3287-4ead-a550-e94e70cb0f42",
+            "knowledge_node_id": "example"
+          }
+        ]
+      }
+    ],
+    "risk_flags": [
+      "example"
+    ]
+  },
+  "target_knowledge_node_ids": [
+    "example"
+  ],
+  "knowledge_base_version_id": "383f7803-39c4-4e41-b923-b3b84d99cfaa",
+  "risk_level": "low",
+  "requested_resource_types": [
+    "example"
+  ],
+  "router_constraints": {
+    "max_difficulty_level": 1,
+    "max_steps": 1,
+    "max_retries": 1,
+    "max_parallel_strategies": 1,
+    "trusted_only": true
+  }
+}

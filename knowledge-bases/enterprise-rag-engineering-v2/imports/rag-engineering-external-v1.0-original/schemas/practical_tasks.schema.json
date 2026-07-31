@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "实操任务集合",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "items"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.1.0"
+    },
+    "items": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/$defs/practical_task"
+      }
+    }
+  },
+  "$defs": {
+    "practical_task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "practical_task_id",
+        "title",
+        "scenario",
+        "target_knowledge_node_ids",
+        "prerequisite_node_ids",
+        "assessment_tier",
+        "difficulty_level",
+        "estimated_minutes",
+        "task_steps",
+        "acceptance_criteria",
+        "deliverable_type",
+        "evidence_chunk_ids",
+        "review_status"
+      ],
+      "properties": {
+        "practical_task_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{2,119}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "scenario": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "target_knowledge_node_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "prerequisite_node_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "assessment_tier": {
+          "type": "string",
+          "enum": [
+            "foundation",
+            "standard",
+            "advanced"
+          ]
+        },
+        "difficulty_level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "estimated_minutes": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 1440
+        },
+        "task_steps": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "#/$defs/task_step"
+          }
+        },
+        "acceptance_criteria": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "deliverable_type": {
+          "type": "string",
+          "enum": [
+            "code",
+            "report",
+            "configuration",
+            "diagram",
+            "demo",
+            "mixed"
+          ]
+        },
+        "safety_or_compliance_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_chunk_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "expert_verified",
+            "internal_verified",
+            "seed_requires_expert_review"
+          ]
+        }
+      }
+    },
+    "task_step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "step_no",
+        "instruction",
+        "expected_result",
+        "evidence_chunk_ids"
+      ],
+      "properties": {
+        "step_no": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "instruction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_chunk_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

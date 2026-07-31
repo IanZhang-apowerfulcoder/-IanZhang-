@@ -1,15 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "检索请求",
+  "title": "RetrievalRequest",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "retrieval_request_id",
-    "knowledge_base_version_id",
-    "query_text",
-    "top_k",
-    "filters"
-  ],
   "properties": {
     "retrieval_request_id": {
       "type": "string",
@@ -20,7 +13,8 @@
       "format": "uuid"
     },
     "query_text": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "top_k": {
       "type": "integer",
@@ -28,7 +22,23 @@
       "maximum": 50
     },
     "filters": {
-      "type": "object"
+      "type": "object",
+      "additionalProperties": true
+    },
+    "requested_mode": {
+      "type": "string",
+      "enum": [
+        "compatible",
+        "adaptive"
+      ]
     }
-  }
+  },
+  "required": [
+    "retrieval_request_id",
+    "knowledge_base_version_id",
+    "query_text",
+    "top_k",
+    "filters",
+    "requested_mode"
+  ]
 }

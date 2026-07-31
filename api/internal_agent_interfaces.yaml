@@ -1,77 +1,84 @@
-version: 3.0.0
-execution_model: single_backend_logical_modules
-runtime_envelope_fields:
-- agent_run_id
-- session_id
-- decision_cycle_id
-- correlation_id
-- causation_id
-- requested_at
-- schema_version
-interfaces:
-  diagnosis_agent:
-    owner: 杨欣怡
-    design_owner: 杨欣怡
-    function_name: run_diagnosis
-    input: diagnosis_input.schema.json
-    output: diagnosis_output.schema.json
-    timeout_seconds: 45
-    max_retries: 2
-    input_schema: contracts/jsonschema/agents/diagnosis_input.schema.json
-    output_schema: contracts/jsonschema/agents/diagnosis_output.schema.json
-    contract_status: frozen_v6
-  path_planning_agent:
-    owner: 杨欣怡
-    design_owner: 杨欣怡
-    function_name: run_path_planning
-    input: path_plan_input.schema.json
-    output: path_plan_output.schema.json
-    timeout_seconds: 45
-    max_retries: 2
-    input_schema: contracts/jsonschema/agents/path_plan_input.schema.json
-    output_schema: contracts/jsonschema/agents/path_plan_output.schema.json
-    contract_status: frozen_v6
-  resource_generation_agent:
-    owner: 郑翘楚
-    design_owner: 杨欣怡
-    function_name: run_resource_generation
-    input: resource_input.schema.json
-    output: resource_output.schema.json
-    timeout_seconds: 60
-    max_retries: 2
-    input_schema: contracts/jsonschema/agents/resource_input.schema.json
-    output_schema: contracts/jsonschema/agents/resource_output.schema.json
-    contract_status: frozen_v6
-  assessment_agent:
-    owner: 李汝萱
-    design_owner: 杨欣怡
-    function_name: run_assessment_generation
-    input: assessment_input.schema.json
-    output: assessment_output.schema.json
-    timeout_seconds: 60
-    max_retries: 2
-    input_schema: contracts/jsonschema/agents/assessment_input.schema.json
-    output_schema: contracts/jsonschema/agents/assessment_output.schema.json
-    contract_status: frozen_v6
-  review_agent:
-    owner: 李佳乐
-    design_owner: 李佳乐
-    function_name: run_review
-    input: review_input.schema.json
-    output: review_output.schema.json
-    timeout_seconds: 45
-    max_retries: 2
-    input_schema: contracts/jsonschema/agents/review_input.schema.json
-    output_schema: contracts/jsonschema/agents/review_output.schema.json
-    contract_status: frozen_v6
-  arbitration_agent:
-    owner: 张英赫
-    design_owner: 张英赫
-    function_name: run_arbitration
-    input: arbitration_input.schema.json
-    output: arbitration_output.schema.json
-    timeout_seconds: 60
-    max_retries: 1
-    input_schema: contracts/jsonschema/agents/arbitration_input.schema.json
-    output_schema: contracts/jsonschema/agents/arbitration_output.schema.json
-    contract_status: frozen_v6
+version: 7.0.0
+core_agents:
+- agent_name: diagnosis
+  owner: P3
+  input_schema: contracts/jsonschema/agents/diagnosis_input.schema.json
+  output_schema: contracts/jsonschema/agents/diagnosis_output.schema.json
+  tools:
+  - get_learner_context
+  - get_knowledge_node_context
+- agent_name: path_planning
+  owner: P3
+  input_schema: contracts/jsonschema/agents/path_plan_input.schema.json
+  output_schema: contracts/jsonschema/agents/path_plan_output.schema.json
+  tools:
+  - get_knowledge_node_context
+- agent_name: rag_router
+  owner: P2
+  input_schema: contracts/jsonschema/agents/rag_router_input.schema.json
+  output_schema: contracts/jsonschema/agents/rag_router_output.schema.json
+  tools:
+  - get_learner_context
+  - get_knowledge_node_context
+- agent_name: resource_coordinator
+  owner: P8
+  input_schema: contracts/jsonschema/agents/resource_input.schema.json
+  output_schema: contracts/jsonschema/agents/resource_output.schema.json
+  parallel_children:
+  - explanation_generator
+  - practice_generator
+  - quiz_draft_generator
+- agent_name: assessment_evaluation
+  owner: P3
+  input_schema: contracts/jsonschema/agents/assessment_input.schema.json
+  output_schema: contracts/jsonschema/agents/assessment_output.schema.json
+  tools:
+  - get_rubric
+  - objective_scoring
+  - code_tests
+- agent_name: review_coordinator
+  owner: P9
+  input_schema: contracts/jsonschema/agents/review_input.schema.json
+  output_schema: contracts/jsonschema/agents/review_output.schema.json
+  parallel_children:
+  - factuality_reviewer
+  - difficulty_reviewer
+  - assessment_quality_reviewer
+  - safety_reviewer
+- agent_name: arbitration
+  owner: P2
+  input_schema: contracts/jsonschema/agents/arbitration_input.schema.json
+  output_schema: contracts/jsonschema/agents/arbitration_output.schema.json
+  tools: []
+parallel_agents:
+- agent_name: explanation_generator
+  owner: P8
+  output_schema: contracts/jsonschema/agents/explanation_output.schema.json
+- agent_name: practice_generator
+  owner: P8
+  output_schema: contracts/jsonschema/agents/practice_output.schema.json
+- agent_name: quiz_draft_generator
+  owner: P8
+  output_schema: contracts/jsonschema/agents/quiz_draft_output.schema.json
+- agent_name: factuality_reviewer
+  owner: P9
+  output_schema: contracts/jsonschema/agents/factuality_review_output.schema.json
+- agent_name: difficulty_reviewer
+  owner: P9
+  semantic_reviewer: P3
+  output_schema: contracts/jsonschema/agents/difficulty_review_output.schema.json
+- agent_name: assessment_quality_reviewer
+  owner: P9
+  semantic_reviewer: P3
+  output_schema: contracts/jsonschema/agents/assessment_review_output.schema.json
+- agent_name: safety_reviewer
+  owner: P9
+  output_schema: contracts/jsonschema/agents/safety_review_output.schema.json
+runtime_limits:
+  max_agent_retries: 2
+  max_retrieval_retries: 2
+  max_agentic_steps: 5
+  max_parallel_strategies: 3
+  max_generation_parallelism: 3
+  max_review_parallelism: 4
+  hard_timeout_seconds: 120

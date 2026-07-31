@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "project_version": "7.0.0",
+  "generated_at": "2026-07-31T14:50:30.884672Z",
+  "baseline_source": "-IanZhang--main-2(1).zip",
+  "team_size": 9,
+  "architecture": {
+    "core_agents": 7,
+    "parallel_specialist_agents": 7,
+    "retrieval_strategies": [
+      "metadata_filtered",
+      "hybrid",
+      "graph_assisted",
+      "parent_child",
+      "bounded_agentic_decomposition"
+    ],
+    "decision_rule": "limited_parallelism_with_single_arbitration"
+  },
+  "contract_validation": {
+    "agent_mock_documents_validated": 28,
+    "agent_modules": 14,
+    "http_mock_operations": 73,
+    "json_files": 436,
+    "json_schemas": 45,
+    "kb_chunks": 372,
+    "kb_edges": 252,
+    "kb_evidence": 372,
+    "kb_generation_eval_cases": 173,
+    "kb_nodes": 93,
+    "kb_questions": 372,
+    "kb_retrieval_eval_cases": 279,
+    "kb_rubrics": 93,
+    "kb_sources": 42,
+    "kb_tasks": 93,
+    "members": 9,
+    "operations:internal_openapi.yaml": 15,
+    "operations:knowledge-api.yaml": 13,
+    "operations:knowledge_domain_api.yaml": 11,
+    "operations:openapi.yaml": 58,
+    "python_files_compiled": 22,
+    "required_docs_checked": 32,
+    "stage_task_cards": 72,
+    "yaml_files": 60,
+    "warnings": 0,
+    "errors": 0,
+    "RESULT": "PASS"
+  },
+  "api_operations": {
+    "public": 58,
+    "internal": 15,
+    "knowledge_domain": 11,
+    "knowledge_service": 13,
+    "total": 97
+  },
+  "knowledge_base": {
+    "version": "2.0.0",
+    "status": "PASS",
+    "counts": {},
+    "quality_layers": {},
+    "retrieval_baseline": {
+      "case_count": 279,
+      "hit_rate_at_1": 0.9427,
+      "hit_rate_at_5": 1.0,
+      "mean_reciprocal_rank": 0.9682,
+      "limitations": "词法+元数据基线；不代表稠密向量、重排器或真实生成模型的最终质量。"
+    }
+  },
+  "member_reference_missing": [],
+  "limitations_document": "reports/known_limitations.md",
+  "member_packs": {
+    "count": 9,
+    "directory": "member-packs-v7.0",
+    "checksum_file": "reports/member_pack_checksums.csv"
+  },
+  "prototype": {
+    "html": "prototypes/adaptive-parallel-rag-observability.html",
+    "events": "prototypes/mock-adaptive-parallel-events.json",
+    "screenshot": "reports/adaptive_parallel_rag_observability.png",
+    "status": "PASS"
+  },
+  "final_checks": {
+    "root_contract_validation": "PASS",
+    "knowledge_tests": "13/13 PASS",
+    "member_pack_zip_integrity": "9/9 PASS",
+    "prototype_javascript": "PASS"
+  }
+}

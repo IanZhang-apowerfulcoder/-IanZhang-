@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "code_case_id": "code_minimal_retrieval",
+      "knowledge_node_ids": [
+        "rag_end_to_end_architecture"
+      ],
+      "language": "Python",
+      "title": "最小检索接口骨架",
+      "code": "def retrieve(query: str, top_k: int = 5) -> list[dict]:\n    # 1. 校验查询与权限上下文\n    # 2. 执行检索并返回chunk_id、score、source_id\n    # 3. 不在此函数中生成答案\n    raise NotImplementedError\n",
+      "usage_notes": "教学骨架，接入项目时必须补充错误处理、权限、测试和依赖配置。",
+      "evidence_chunk_ids": [
+        "chunk_rag_end_to_end_architecture_principle",
+        "chunk_rag_end_to_end_architecture_engineering"
+      ],
+      "review_status": "internal_verified"
+    },
+    {
+      "code_case_id": "code_rrf",
+      "knowledge_node_ids": [
+        "rank_fusion_rrf"
+      ],
+      "language": "Python",
+      "title": "RRF融合示例",
+      "code": "def rrf(lists: list[list[str]], k: int = 60) -> list[tuple[str, float]]:\n    scores: dict[str, float] = {}\n    for ranked in lists:\n        for rank, doc_id in enumerate(ranked, start=1):\n            scores[doc_id] = scores.get(doc_id, 0.0) + 1.0 / (k + rank)\n    return sorted(scores.items(), key=lambda x: x[1], reverse=True)\n",
+      "usage_notes": "教学骨架，接入项目时必须补充错误处理、权限、测试和依赖配置。",
+      "evidence_chunk_ids": [
+        "chunk_rank_fusion_rrf_principle",
+        "chunk_rank_fusion_rrf_engineering"
+      ],
+      "review_status": "internal_verified"
+    },
+    {
+      "code_case_id": "code_mmr",
+      "knowledge_node_ids": [
+        "diversity_mmr"
+      ],
+      "language": "Python",
+      "title": "MMR选择伪代码",
+      "code": "def select_mmr(candidates, query_scores, pairwise_similarity, limit, lambda_=0.7):\n    selected = []\n    while candidates and len(selected) < limit:\n        def score(c):\n            redundancy = max((pairwise_similarity(c, s) for s in selected), default=0.0)\n            return lambda_ * query_scores[c] - (1 - lambda_) * redundancy\n        best = max(candidates, key=score)\n        selected.append(best)\n        candidates.remove(best)\n    return selected\n",
+      "usage_notes": "教学骨架，接入项目时必须补充错误处理、权限、测试和依赖配置。",
+      "evidence_chunk_ids": [
+        "chunk_diversity_mmr_principle",
+        "chunk_diversity_mmr_engineering"
+      ],
+      "review_status": "internal_verified"
+    },
+    {
+      "code_case_id": "code_schema_validation",
+      "knowledge_node_ids": [
+        "prompt_grounding"
+      ],
+      "language": "Python",
+      "title": "结构化输出校验",
+      "code": "from jsonschema import validate\n\ndef validate_agent_output(payload: dict, schema: dict) -> dict:\n    validate(instance=payload, schema=schema)\n    return payload\n",
+      "usage_notes": "教学骨架，接入项目时必须补充错误处理、权限、测试和依赖配置。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_grounding_principle",
+        "chunk_prompt_grounding_engineering"
+      ],
+      "review_status": "internal_verified"
+    },
+    {
+      "code_case_id": "code_tenant_filter",
+      "knowledge_node_ids": [
+        "access_control_tenant_isolation"
+      ],
+      "language": "SQL",
+      "title": "行级隔离示例",
+      "code": "ALTER TABLE knowledge_chunks ENABLE ROW LEVEL SECURITY;\nCREATE POLICY tenant_isolation ON knowledge_chunks\nUSING (organization_id = current_setting('app.organization_id')::uuid);\n",
+      "usage_notes": "教学骨架，接入项目时必须补充错误处理、权限、测试和依赖配置。",
+      "evidence_chunk_ids": [
+        "chunk_access_control_tenant_isolation_principle",
+        "chunk_access_control_tenant_isolation_engineering"
+      ],
+      "review_status": "internal_verified"
+    },
+    {
+      "code_case_id": "code_trace",
+      "knowledge_node_ids": [
+        "observability_tracing"
+      ],
+      "language": "Python",
+      "title": "追踪字段示例",
+      "code": "event = {\n    'correlation_id': correlation_id,\n    'knowledge_base_version_id': version_id,\n    'retrieved_chunk_ids': chunk_ids,\n    'prompt_version': prompt_version,\n    'latency_ms': latency_ms,\n}\n",
+      "usage_notes": "教学骨架，接入项目时必须补充错误处理、权限、测试和依赖配置。",
+      "evidence_chunk_ids": [
+        "chunk_observability_tracing_principle",
+        "chunk_observability_tracing_engineering"
+      ],
+      "review_status": "internal_verified"
+    },
+    {
+      "code_case_id": "code_abstain",
+      "knowledge_node_ids": [
+        "answer_abstention"
+      ],
+      "language": "Python",
+      "title": "拒答决策示例",
+      "code": "def should_abstain(evidence: list[dict], conflicts: bool) -> tuple[bool, str]:\n    if conflicts:\n        return True, 'conflicting_evidence'\n    if not evidence:\n        return True, 'no_evidence'\n    return False, 'sufficient_evidence'\n",
+      "usage_notes": "教学骨架，接入项目时必须补充错误处理、权限、测试和依赖配置。",
+      "evidence_chunk_ids": [
+        "chunk_answer_abstention_principle",
+        "chunk_answer_abstention_engineering"
+      ],
+      "review_status": "internal_verified"
+    },
+    {
+      "code_case_id": "code_idempotency",
+      "knowledge_node_ids": [
+        "caching_idempotency"
+      ],
+      "language": "Python",
+      "title": "幂等写入模式",
+      "code": "def create_once(idempotency_key: str, request_hash: str):\n    existing = idempotency_store.get(idempotency_key)\n    if existing:\n        if existing.request_hash != request_hash:\n            raise ValueError('idempotency_key_conflict')\n        return existing.response\n    # 执行业务并原子保存结果\n",
+      "usage_notes": "教学骨架，接入项目时必须补充错误处理、权限、测试和依赖配置。",
+      "evidence_chunk_ids": [
+        "chunk_caching_idempotency_principle",
+        "chunk_caching_idempotency_engineering"
+      ],
+      "review_status": "internal_verified"
+    }
+  ]
+}

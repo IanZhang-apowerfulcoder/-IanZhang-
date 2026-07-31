@@ -1,40 +1,33 @@
-# 代码协作规则
+# GitHub 协作规则
 
 ## 分支
 
-- `main`：稳定、可演示、可发布。
-- `develop`：已审核的集成分支。
-- `feature/<task-name>`：功能。
-- `fix/<issue-name>`：缺陷修复。
-- `test/<scope>`：评测或测试。
-- `docs/<scope>`：文档。
+- `main`：稳定、可演示、可发布；
+- `develop`：通过阶段内验收的集成分支；
+- `feature/<task-id>-<name>`：功能；
+- `fix/<task-id>-<name>`：缺陷；
+- `test/<task-id>-<scope>`：评测；
+- `docs/<task-id>-<scope>`：文档。
 
-所有正式代码通过 Pull Request 合入 `develop`。`develop` 通过完整回归后再合入 `main`。
+## 核心原则
 
-## 成长型成员任务限制
+1. 一个任务卡对应一个分支和一个 PR；
+2. 公共 API、Schema、状态机、Agent Blueprint、数据库主表和知识版本不得口头修改；
+3. Agent 模块必须按统一输入输出 Schema 开发；
+4. 前端不得直连模型、Agent 或数据库；
+5. Agent 不得直接写权威业务表；
+6. 所有专业结论必须绑定 `evidence_id`；
+7. 平行 Agent 只能提交候选结果，不能各自写最终决策；
+8. 所有核心 PR 至少 1 名 Owner + 1 名跨模块 Reviewer；
+9. 指标必须由固定数据集和脚本复现。
 
-- 一个任务一个分支一个 PR。
-- 一个 PR 只解决一个明确问题。
-- 默认不超过 5 个主要文件、300 行核心改动。
-- 不得修改公共接口、公共类型、数据库核心表、智能体状态机和权限逻辑。
-- 需要修改契约时，先提交 `templates/API_CHANGE_REQUEST.md`，批准后再编码。
+## PR 必须包含
 
-## 提交格式
-
-```text
-feat: 新功能
-fix: 修复问题
-docs: 文档
-test: 测试
-refactor: 重构
-chore: 工程配置
-```
-
-## 合并门禁
-
-- 契约校验通过。
-- 静态检查通过。
-- 单元测试和构建通过。
-- 对应负责人批准。
-- 所有阻塞讨论已解决。
-- 接口行为与 Mock、OpenAPI 和 JSON Schema 一致。
+- 任务卡编号；
+- 修改范围与不修改范围；
+- 依赖的 API/Schema 版本；
+- 自动测试结果；
+- 接口请求/响应样例或 UI 录屏；
+- 已知限制；
+- 回滚方案；
+- 对验收标准逐条自检。

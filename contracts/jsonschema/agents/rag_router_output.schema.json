@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RagRouterOutput",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "7.0"
+    },
+    "run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "agent_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "succeeded",
+        "failed",
+        "needs_input",
+        "degraded"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "reasoning_summary": {
+      "type": "string"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "retrieval_plan_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "query_type": {
+      "type": "string",
+      "enum": [
+        "single_topic",
+        "relation_or_path",
+        "long_context",
+        "complex_troubleshooting",
+        "multi_component",
+        "unsupported"
+      ]
+    },
+    "complexity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "execution_mode": {
+      "type": "string",
+      "enum": [
+        "sequential",
+        "parallel",
+        "agentic",
+        "refuse"
+      ]
+    },
+    "selected_strategies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "metadata_filtered",
+          "hybrid",
+          "graph_assisted",
+          "parent_child",
+          "agentic_decomposition"
+        ]
+      },
+      "minItems": 1
+    },
+    "sub_queries": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "SubQuery",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sub_query_id": {
+            "type": "string"
+          },
+          "query_text": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "target_knowledge_node_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "sub_query_id",
+          "query_text",
+          "purpose",
+          "target_knowledge_node_ids"
+        ]
+      },
+      "minItems": 0
+    },
+    "filters": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "max_steps": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "max_retries": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "candidate_content_allowed": {
+      "type": "boolean"
+    },
+    "reason_summary": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "agent_name",
+    "status",
+    "confidence",
+    "reasoning_summary",
+    "warnings",
+    "requires_human_review",
+    "completed_at",
+    "retrieval_plan_id",
+    "query_type",
+    "complexity",
+    "risk_level",
+    "execution_mode",
+    "selected_strategies",
+    "sub_queries",
+    "filters",
+    "max_steps",
+    "max_retries",
+    "candidate_content_allowed",
+    "reason_summary"
+  ]
+}

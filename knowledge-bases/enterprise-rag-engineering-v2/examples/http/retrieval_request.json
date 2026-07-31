@@ -1,0 +1,10 @@
+{
+  "retrieval_request_id": "b8c16593-d680-5c5d-aa29-16a1a071b2db",
+  "knowledge_base_version_id": "fd400183-2242-50aa-8b83-d670c1ce5a1f",
+  "query_text": "RAG 与微调的边界和选择依据是什么？",
+  "top_k": 5,
+  "filters": {
+    "max_difficulty_level": 3,
+    "core_only": true
+  }
+}

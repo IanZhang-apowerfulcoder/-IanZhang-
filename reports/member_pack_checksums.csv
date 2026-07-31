@@ -1,0 +1,10 @@
+﻿member_code,member,role,filename,sha256,size_bytes
+P1,张英赫,项目负责人、产品与系统总架构、Agent Blueprint 与最终验收,P1_张英赫_独立开发包_v7.0.zip,a716047828f530bd6cf61776b447aaf42ad56e0c68a53f398ec5ae0a3d087b36,2211261
+P2,李佳乐,Agent Runtime、RAG Router Agent、并行调度与仲裁实现,P2_李佳乐_独立开发包_v7.0.zip,f9b7ee0bdaf6f4a56f6fdafae09f42c21dec4501aa6388ce338be1e85eacb871,93114
+P3,杨欣怡,诊断、学习路径、测评评价与学习者画像,P3_杨欣怡_独立开发包_v7.0.zip,6939d72a0039ee7348de4003b74c249d3b042ba0d0f8ddcd4a11f1299881b772,113416
+P4,陈尧,全站前端、用户体验、Agent/RAG 可观测性与数据可视化,P4_陈尧_独立开发包_v7.0.zip,5a6cc395c766e28ffdbdfac963270a2b81082b266202ed1a2f7a26dda6df3fc3,148540
+P5,郑翘楚,业务后端、Public API、权限、业务状态机与集成适配,P5_郑翘楚_独立开发包_v7.0.zip,8e600f554b051170500967b1fd68649423f0b8e32134f347a153372a2d9df96e,159258
+P6,李汝萱,数据库、版本、Event Store、Trace 与指标数据平台,P6_李汝萱_独立开发包_v7.0.zip,bf628bf9953b49c48526aa7eb58cb97d0f639b945d8f6d9b2b8a3cb870c4c670,74913
+P7,陈严谨,知识库持续维护、检索执行器、Evidence Fusion 与 RAG 评测,P7_陈严谨_独立开发包_v7.0.zip,35a51fe8a1dfcf60093e6bb7eee13a433fd72d203400bab2a3e372dc9ffb515f,1681829
+P8,X,平行资源生成 Agent 与资源编排,P8_X_独立开发包_v7.0.zip,352c4be617ef5d18966835861c9e6af079aff5ec651439d38094b906870995e5,235090
+P9,斯汀,平行审核 Agent、独立 Evals、质量门禁、发布与比赛材料,P9_斯汀_独立开发包_v7.0.zip,db54bf62a18c92f421d792ff3da9b65b024e76cf5a9c8989a2f0ae2d84c5eafa,578995

@@ -1,34 +1,4 @@
 {
-  "operation_id": "submit_assessment_attempt",
-  "method": "POST",
-  "path_template": "/api/v1/organizations/{organization_id}/learning-sessions/{session_id}/assessment-attempts",
-  "path_params": {
-    "organization_id": "11111111-1111-4111-8111-111111111111",
-    "session_id": "cccccccc-cccc-4ccc-8ccc-cccccccccccc"
-  },
-  "query_params": {},
-  "headers": {
-    "Authorization": "Bearer mock_access_token"
-  },
-  "content_type": "application/json",
-  "body": {
-    "assessment_id": "f8111111-1111-4111-8111-111111111111",
-    "answers": [
-      {
-        "question_id": "fa111111-1111-4111-8111-111111111111",
-        "answer_type": "selected_options",
-        "selected_option_ids": [
-          "eee923f4-2aa7-4e43-8b06-7ab1b5fa86b9"
-        ],
-        "boolean_value": true,
-        "text_value": "示例text_value",
-        "code_value": "def reverse_list(head):\n    return head",
-        "code_language": "python",
-        "client_answered_at": "2026-07-30T12:00:00Z"
-      }
-    ],
-    "started_at": "2026-07-30T12:00:00Z",
-    "submitted_at": "2026-07-30T12:00:00Z",
-    "idempotency_key": "idem-demo-001"
-  }
+  "request_id": "00000000-0000-4000-8000-000000000001",
+  "operation_id": "submit_assessment_attempt"
 }

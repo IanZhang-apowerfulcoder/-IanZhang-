@@ -1,0 +1,34 @@
+{
+  "schema_version": "7.0",
+  "run_id": "3de6d147-c2f2-4c17-aeac-c47fbe250eb1",
+  "agent_name": "example",
+  "status": "succeeded",
+  "confidence": 0.5,
+  "reasoning_summary": "example",
+  "warnings": [
+    "example"
+  ],
+  "requires_human_review": true,
+  "completed_at": "2026-07-31T12:00:00Z",
+  "review_dimension": "example",
+  "outcome": "pass",
+  "issues": [
+    {
+      "issue_id": "example",
+      "severity": "info",
+      "category": "example",
+      "description": "example",
+      "location": "example",
+      "evidence_ids": [
+        "ba097d38-1642-44f3-904a-df9a9ff813eb"
+      ],
+      "repair_instruction": "example"
+    }
+  ],
+  "predicted_level": 1,
+  "target_level": 1,
+  "fit_score": 0.5,
+  "prerequisite_gaps": [
+    "example"
+  ]
+}

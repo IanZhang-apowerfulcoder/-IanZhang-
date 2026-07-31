@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Knowledge Node",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "module_id",
+    "name",
+    "difficulty",
+    "core",
+    "objectives",
+    "summary",
+    "facts",
+    "misconceptions",
+    "boundaries",
+    "task"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(RAG-M[0-9]{2}-N[0-9]{2}|RAG-SUB-[a-z0-9_-]+)$"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "core": {
+      "type": "boolean"
+    },
+    "objectives": {
+      "type": "array",
+      "minItems": 3
+    },
+    "facts": {
+      "type": "array",
+      "minItems": 4
+    },
+    "misconceptions": {
+      "type": "array",
+      "minItems": 2
+    },
+    "boundaries": {
+      "type": "array",
+      "minItems": 3
+    }
+  }
+}

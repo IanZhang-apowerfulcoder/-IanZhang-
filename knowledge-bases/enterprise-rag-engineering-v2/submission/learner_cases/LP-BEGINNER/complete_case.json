@@ -1,0 +1,414 @@
+{
+  "case_id": "a0a4b9e0-7daa-5159-8156-9bbd932392ac",
+  "learner_profile": {
+    "profile_key": "LP-BEGINNER",
+    "display_name": "学习者A：会Python但不了解RAG",
+    "background": {
+      "education": "软件工程本科",
+      "experience": "会Python和基础API调用",
+      "goal": "完成第一个可信RAG原型"
+    },
+    "preferences": [
+      "图解",
+      "短代码",
+      "分步练习"
+    ],
+    "mastery": {
+      "RAG-M01-N01": 0.25,
+      "RAG-M02-N03": 0.1,
+      "RAG-M03-N01": 0.1,
+      "RAG-M03-N04": 0.05,
+      "RAG-M05-N03": 0.05
+    },
+    "recommended_start_nodes": [
+      "RAG-M01-N01",
+      "RAG-M01-N02"
+    ],
+    "target_difficulty": 1
+  },
+  "diagnosis_output": {
+    "proposal_id": "3f8ea6e3-f5ef-5a30-bf58-4ed9e2e8fb88",
+    "mastered_knowledge_nodes": [
+      {
+        "knowledge_node_id": "RAG-M01-N01",
+        "mastery_score": 0.25,
+        "evidence_ids": [
+          "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34"
+        ]
+      }
+    ],
+    "weak_knowledge_nodes": [
+      {
+        "knowledge_node_id": "RAG-M01-N01",
+        "mastery_score": 0.25,
+        "evidence_ids": [
+          "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+          "c170ae95-9b55-5e85-9857-46a84b4e7711"
+        ]
+      },
+      {
+        "knowledge_node_id": "RAG-M01-N02",
+        "mastery_score": 0.15,
+        "evidence_ids": [
+          "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+          "c170ae95-9b55-5e85-9857-46a84b4e7711"
+        ]
+      }
+    ],
+    "error_patterns": [
+      {
+        "error_type_code": "CONCEPT_GAP",
+        "severity": "high",
+        "description": "在RAG的定义、目标与边界相关知识上存在证据支持的能力缺口。",
+        "evidence_ids": [
+          "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+          "c170ae95-9b55-5e85-9857-46a84b4e7711"
+        ]
+      }
+    ],
+    "recommended_focus_node_ids": [
+      "RAG-M01-N01",
+      "RAG-M01-N02"
+    ],
+    "confidence": 0.8899,
+    "evidence_ids": [
+      "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+      "c170ae95-9b55-5e85-9857-46a84b4e7711",
+      "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+      "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3"
+    ],
+    "reasoning_summary": "根据初始画像和固定测试数据，优先学习RAG的定义、目标与边界及其直接关联节点。",
+    "requires_human_review": false
+  },
+  "path_plan_output": {
+    "proposal_id": "1f1df45e-3b96-5adc-b633-3830c0fa1f12",
+    "goal": "完成第一个可信RAG原型",
+    "candidate_steps": [
+      {
+        "path_step_id": "751c54f7-15e7-5039-8818-2ebe931305e9",
+        "sequence_no": 1,
+        "knowledge_node_ids": [
+          "RAG-M01-N01"
+        ],
+        "action_type": "learn",
+        "resource_type": "mixed",
+        "difficulty_level": 1,
+        "estimated_minutes": 60,
+        "prerequisite_path_step_ids": [],
+        "success_criteria": [
+          "概念题正确率达到80%",
+          "能说明适用边界"
+        ]
+      },
+      {
+        "path_step_id": "2776a6cf-6c5a-5aff-946f-2a406b30d4f9",
+        "sequence_no": 2,
+        "knowledge_node_ids": [
+          "RAG-M01-N02"
+        ],
+        "action_type": "practice",
+        "resource_type": "exercise",
+        "difficulty_level": 2,
+        "estimated_minutes": 90,
+        "prerequisite_path_step_ids": [
+          "751c54f7-15e7-5039-8818-2ebe931305e9"
+        ],
+        "success_criteria": [
+          "完成工程任务",
+          "Rubric得分不低于75"
+        ]
+      }
+    ],
+    "alternative_paths": [
+      {
+        "alternative_path_id": "0eb1798f-cc83-5693-b3aa-0d24b89db2f5",
+        "summary": "若关键误区未纠正，则在原难度增加一次概念巩固。",
+        "steps": [
+          {
+            "path_step_id": "50e98cd5-1be7-5974-abda-39b5ae008dc7",
+            "sequence_no": 1,
+            "knowledge_node_ids": [
+              "RAG-M01-N01"
+            ],
+            "action_type": "review",
+            "resource_type": "mixed",
+            "difficulty_level": 1,
+            "estimated_minutes": 60,
+            "prerequisite_path_step_ids": [],
+            "success_criteria": [
+              "概念题正确率达到80%",
+              "能说明适用边界"
+            ]
+          }
+        ]
+      }
+    ],
+    "confidence": 0.893,
+    "evidence_ids": [
+      "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+      "c170ae95-9b55-5e85-9857-46a84b4e7711",
+      "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+      "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3"
+    ],
+    "reasoning_summary": "路径遵守知识图谱前置关系，并根据画像选择资源难度。",
+    "requires_human_review": false
+  },
+  "retrieval_request": {
+    "retrieval_request_id": "00c791b1-05e8-594a-8370-3f38b694a26f",
+    "knowledge_base_version_id": "fd400183-2242-50aa-8b83-d670c1ce5a1f",
+    "query_text": "为学习者A：会Python但不了解RAG检索RAG的定义、目标与边界的专业证据与实操内容",
+    "top_k": 4,
+    "filters": {
+      "knowledge_node_ids": [
+        "RAG-M01-N01",
+        "RAG-M01-N02"
+      ],
+      "max_difficulty_level": 2
+    }
+  },
+  "retrieval_response": {
+    "retrieval_request_id": "00c791b1-05e8-594a-8370-3f38b694a26f",
+    "evidence_items": [
+      {
+        "evidence_id": "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+        "chunk_id": "4b400c7e-2381-5a49-af38-a222398a6963",
+        "document_id": "8a892313-849d-5576-b06f-1ffe101118e4",
+        "content_excerpt": "知识点：RAG的定义、目标与边界\n主题：核心定义\nRAG把检索器与生成模型组合起来：检索器从显式知识源中返回与任务相关的证据，生成模型再依据任务指令与证据组织输出。知识主要保存在可更新的外部存储中，而不是全部依赖模型参数记忆。\n适用边界：不把RAG等同于模型微调；不承诺绝对零幻觉；知识库外问题应拒答或转人工",
+        "relevance_score": 0.96
+      },
+      {
+        "evidence_id": "c170ae95-9b55-5e85-9857-46a84b4e7711",
+        "chunk_id": "e2b3cfad-fc5f-5b04-936b-554d78fa1bd4",
+        "document_id": "8a892313-849d-5576-b06f-1ffe101118e4",
+        "content_excerpt": "知识点：RAG的定义、目标与边界\n主题：主要工程价值\n企业或课程知识发生变化时，可以更新文档、切片和索引，而不必为了每次事实变化重新训练大模型。证据项还能绑定文档、版本和片段编号，为审核、追责和回归测试提供基础。\n适用边界：不把RAG等同于模型微调；不承诺绝对零幻觉；知识库外问题应拒答或转人工",
+        "relevance_score": 0.92
+      },
+      {
+        "evidence_id": "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+        "chunk_id": "dd3d90e4-259d-5727-9ec1-629521d28635",
+        "document_id": "8a892313-849d-5576-b06f-1ffe101118e4",
+        "content_excerpt": "知识点：RAG的定义、目标与边界\n主题：不等于事实保证\n检索到正确证据并不意味着最终输出一定正确。系统仍可能出现漏检、误检、证据冲突、上下文截断、指令误解和无依据扩写，因此必须分别评测检索质量与生成忠实度，并设置拒答和审核机制。\n适用边界：不把RAG等同于模型微调；不承诺绝对零幻觉；知识库外问题应拒答或转人工",
+        "relevance_score": 0.88
+      },
+      {
+        "evidence_id": "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3",
+        "chunk_id": "905bcd9d-8eb9-5b60-8390-040dd2611ff3",
+        "document_id": "8a892313-849d-5576-b06f-1ffe101118e4",
+        "content_excerpt": "知识点：RAG的定义、目标与边界\n主题：本项目中的角色\n在个性化培训系统中，知识库提供专业事实和实操规范；诊断结果决定检索目标；资源生成智能体据此生成讲义、案例或练习；审核智能体检查每个关键结论是否被证据支持。\n适用边界：不把RAG等同于模型微调；不承诺绝对零幻觉；知识库外问题应拒答或转人工",
+        "relevance_score": 0.84
+      }
+    ]
+  },
+  "resource_output": {
+    "proposal_id": "7da87ec7-9c15-59fd-9559-1542ea6fe3ef",
+    "resource_draft_id": "db764ce9-b2c2-549d-a3aa-3047764bf90b",
+    "title": "RAG的定义、目标与边界个性化学习单元",
+    "resource_type": "text",
+    "difficulty_level": 1,
+    "target_knowledge_node_ids": [
+      "RAG-M01-N01"
+    ],
+    "summary": "面向学习者A：会Python但不了解RAG的RAG的定义、目标与边界资源。RAG是在生成前检索外部知识，并让生成模型在证据约束下完成回答或资源生成的系统方法。它的价值是知识可更新、证据可追踪和任务上下文可控，而不是保证模型永不出错。",
+    "resource_sections": [
+      {
+        "resource_section_id": "60786e12-d9d5-5aeb-ade5-6bc814b659dc",
+        "heading": "核心定义",
+        "body_markdown": "RAG把检索器与生成模型组合起来：检索器从显式知识源中返回与任务相关的证据，生成模型再依据任务指令与证据组织输出。知识主要保存在可更新的外部存储中，而不是全部依赖模型参数记忆。",
+        "key_points": [
+          "核心定义",
+          "不把RAG等同于模型微调"
+        ],
+        "evidence_ids": [
+          "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34"
+        ]
+      },
+      {
+        "resource_section_id": "24b9458e-054f-5111-87ec-3768c935a007",
+        "heading": "主要工程价值",
+        "body_markdown": "企业或课程知识发生变化时，可以更新文档、切片和索引，而不必为了每次事实变化重新训练大模型。证据项还能绑定文档、版本和片段编号，为审核、追责和回归测试提供基础。",
+        "key_points": [
+          "主要工程价值",
+          "不把RAG等同于模型微调"
+        ],
+        "evidence_ids": [
+          "c170ae95-9b55-5e85-9857-46a84b4e7711"
+        ]
+      },
+      {
+        "resource_section_id": "90f202de-cc19-59de-9471-9c404ac95584",
+        "heading": "不等于事实保证",
+        "body_markdown": "检索到正确证据并不意味着最终输出一定正确。系统仍可能出现漏检、误检、证据冲突、上下文截断、指令误解和无依据扩写，因此必须分别评测检索质量与生成忠实度，并设置拒答和审核机制。",
+        "key_points": [
+          "不等于事实保证",
+          "不把RAG等同于模型微调"
+        ],
+        "evidence_ids": [
+          "6651205b-2e94-5f91-a6db-34d0af08c3e0"
+        ]
+      }
+    ],
+    "code_examples": [],
+    "evidence_ids": [
+      "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+      "c170ae95-9b55-5e85-9857-46a84b4e7711",
+      "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+      "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3"
+    ],
+    "confidence": 0.8129
+  },
+  "assessment_output": {
+    "proposal_id": "fea46cdc-79a6-5d46-9008-a9b48ae6cc3b",
+    "assessment_draft_id": "7a3096e6-4c6d-584d-8489-ba5ab8811db7",
+    "title": "RAG的定义、目标与边界分阶测评",
+    "assessment_type": "checkpoint",
+    "instructions": "完成概念辨析与工程边界说明；所有开放题按Rubric评分。",
+    "questions": [
+      {
+        "question_id": "2c887288-ab1b-5c95-876b-3d2d2cc51293",
+        "question_type": "single_choice",
+        "stem": "RAG的定义、目标与边界的核心目标是什么？",
+        "options": [
+          {
+            "option_id": "26ede494-1092-547a-9506-59032caea51e",
+            "option_text": "RAG会把上传文档训练进模型参数。"
+          },
+          {
+            "option_id": "7372b10c-3bc3-5f78-a28e-1e2d310a5851",
+            "option_text": "RAG把检索器与生成模型组合起来：检索器从显式知识源中返回与任务相关的证据，生成模型再依据任务指令与证据组织输出。知识主要保存在可更新的外部存储中，而不是全部依赖模型参数记忆。"
+          },
+          {
+            "option_id": "a048fc2f-7d01-598d-acb0-be679ea6f4e7",
+            "option_text": "不需要证据或版本管理"
+          },
+          {
+            "option_id": "7c58acd9-6995-5ba2-81c1-7874ad0d94c3",
+            "option_text": "只用于展示动画"
+          }
+        ],
+        "correct_answer": "7372b10c-3bc3-5f78-a28e-1e2d310a5851",
+        "score_points": 10,
+        "scoring_rubric": [
+          "专业事实准确",
+          "包含适用边界",
+          "能给出可验证证据"
+        ],
+        "explanation": "RAG把检索器与生成模型组合起来：检索器从显式知识源中返回与任务相关的证据，生成模型再依据任务指令与证据组织输出。知识主要保存在可更新的外部存储中，而不是全部依赖模型参数记忆。",
+        "evidence_ids": [
+          "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+          "c170ae95-9b55-5e85-9857-46a84b4e7711"
+        ]
+      },
+      {
+        "question_id": "740ed305-daf7-547b-a402-1acdc27e70c8",
+        "question_type": "true_false",
+        "stem": "RAG会把上传文档训练进模型参数。",
+        "options": [
+          {
+            "option_id": "1ba3a863-8d28-577a-a38f-e82e119b1c72",
+            "option_text": "正确"
+          },
+          {
+            "option_id": "8fe7d400-9062-5c18-a7d4-b4ffc905cb5a",
+            "option_text": "错误"
+          }
+        ],
+        "correct_answer": "8fe7d400-9062-5c18-a7d4-b4ffc905cb5a",
+        "score_points": 10,
+        "scoring_rubric": [
+          "专业事实准确",
+          "包含适用边界",
+          "能给出可验证证据"
+        ],
+        "explanation": "标准RAG通常在推理阶段检索外部索引，不要求修改基础模型参数。",
+        "evidence_ids": [
+          "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+          "c170ae95-9b55-5e85-9857-46a84b4e7711"
+        ]
+      },
+      {
+        "question_id": "270e4206-4206-5ce8-a1a7-6af51182b58c",
+        "question_type": "short_answer",
+        "stem": "请说明RAG的定义、目标与边界的一项适用边界和验收方法。",
+        "options": [],
+        "correct_answer": {
+          "required_points": [
+            "不把RAG等同于模型微调",
+            "解释RAG中参数化记忆与外部非参数化记忆的分工"
+          ]
+        },
+        "score_points": 20,
+        "scoring_rubric": [
+          "专业事实准确",
+          "包含适用边界",
+          "能给出可验证证据"
+        ],
+        "explanation": "标准RAG通常在推理阶段检索外部索引，不要求修改基础模型参数。",
+        "evidence_ids": [
+          "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+          "c170ae95-9b55-5e85-9857-46a84b4e7711"
+        ]
+      }
+    ],
+    "total_score_points": 40,
+    "pass_score_points": 30,
+    "evidence_ids": [
+      "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+      "c170ae95-9b55-5e85-9857-46a84b4e7711",
+      "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+      "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3"
+    ],
+    "confidence": 0.9375
+  },
+  "review_output": {
+    "review_id": "f7d472c2-4016-531b-bbf2-bc5653f1d800",
+    "proposal_id": "f7572918-43fc-545b-ad03-a1b6ae3a5dbb",
+    "reviewed_proposal_id": "7da87ec7-9c15-59fd-9559-1542ea6fe3ef",
+    "review_result": "approved",
+    "overall_score": 92.0,
+    "checks": {
+      "schema_valid": true,
+      "evidence_supported": true,
+      "factual_consistent": true,
+      "no_conflict": true,
+      "answer_verifiable": true
+    },
+    "issues": [],
+    "repair_action": "none",
+    "repair_instructions": [],
+    "confidence": 0.8857,
+    "requires_human_review": false
+  },
+  "arbitration_output": {
+    "proposal_id": "b953dd33-bfb8-5c82-8814-eb832237de69",
+    "decision_type": "deliver_resource",
+    "selected_proposal_ids": [
+      "3f8ea6e3-f5ef-5a30-bf58-4ed9e2e8fb88",
+      "1f1df45e-3b96-5adc-b633-3830c0fa1f12",
+      "7da87ec7-9c15-59fd-9559-1542ea6fe3ef",
+      "fea46cdc-79a6-5d46-9008-a9b48ae6cc3b"
+    ],
+    "rejected_proposals": [],
+    "target_knowledge_node_ids": [
+      "RAG-M01-N01",
+      "RAG-M01-N02"
+    ],
+    "rationale_summary": "诊断、路径、资源与测评均符合冻结Schema；审核通过且关键陈述有证据支持。",
+    "supporting_evidence_ids": [
+      "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+      "c170ae95-9b55-5e85-9857-46a84b4e7711",
+      "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+      "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3"
+    ],
+    "confidence": 0.8163,
+    "requires_human_review": false,
+    "human_review_reason": null
+  },
+  "expected_feedback_update": {
+    "target_nodes": [
+      "RAG-M01-N01",
+      "RAG-M01-N02"
+    ],
+    "action": "same_level_practice",
+    "evidence_required": true
+  }
+}

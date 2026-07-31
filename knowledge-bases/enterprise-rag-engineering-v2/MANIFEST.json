@@ -1,0 +1,1154 @@
+{
+  "package": "enterprise-rag-engineering-domain-pack",
+  "version": "2.0.0",
+  "generated_at": "2026-07-31T14:54:55.098934Z",
+  "file_count": 229,
+  "total_size_bytes": 8446395,
+  "files": [
+    {
+      "path": ".github/workflows/knowledge-base-quality.yml",
+      "size_bytes": 520,
+      "sha256": "8d0f77d92092e0a30ce401bb5cb5888eb4d1d49eb46176d8e8bb031528633df7"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 85,
+      "sha256": "ccc5e1dd0ab67352e1275c7f5575024bc7ca9cb0b96ff1daa5847902251d95c3"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size_bytes": 927,
+      "sha256": "db9b4a3f8aadd5229bff1fa403a353e53d78381732cb8bc327f1d1a08d4799ab"
+    },
+    {
+      "path": "DELIVERY.md",
+      "size_bytes": 1333,
+      "sha256": "d1a7e50fe1f266688bfabc227a89e313e8db1976c619d2ba6f52fee36a8c1423"
+    },
+    {
+      "path": "LICENSE-KNOWLEDGE-CONTENT.md",
+      "size_bytes": 721,
+      "sha256": "c111806f48a278e67a47ebd697af92d5bf65294610b334e4f1db21f8fa14cc64"
+    },
+    {
+      "path": "Makefile",
+      "size_bytes": 525,
+      "sha256": "dd7f6c0fd882eab31cd1d9ce7aee98b8c2337616261c7dda52896a35116d7ce7"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 2060,
+      "sha256": "9828b7b73748129ebae6342963f197775ec103c0ad443bb839a3bce6cec647cf"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/arbitration_input.schema.json",
+      "size_bytes": 1319,
+      "sha256": "ec6343657951a20781db81f0271ae74be319c3a360f98c0e4b448a51729d1084"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/arbitration_output.schema.json",
+      "size_bytes": 2087,
+      "sha256": "bd622862ef5c8d6b39b07c67cacf2b211511135755bd636fc4a108b13e9707c9"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/assessment_input.schema.json",
+      "size_bytes": 1301,
+      "sha256": "8016f0522f8298ee7ed9ae39d85f6d0f601ca2fc5644f9f47645a8a87f26bfde"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/assessment_output.schema.json",
+      "size_bytes": 3078,
+      "sha256": "0cf6cb593fd6567cffa10240487a93d28383f70aca2fb0c60add97e84be87d7b"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/diagnosis_input.schema.json",
+      "size_bytes": 1179,
+      "sha256": "7408bd5bdc0be7c3f54ca4bfcb5ea4016902c0c4107e8c9599ffc1dd712b1fef"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/diagnosis_output.schema.json",
+      "size_bytes": 2607,
+      "sha256": "aedff5033148888436fcf3d23f7ea74344ec0bca834a0bf264b3b0e800efe928"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/path_plan_input.schema.json",
+      "size_bytes": 723,
+      "sha256": "300e8c54831784a1303442ab513557a81f3e7510909d62c0080936ec115684fa"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/path_plan_output.schema.json",
+      "size_bytes": 3284,
+      "sha256": "34d7d46bdae876a0423628d7fcb7959a500f0fe6b077ae8bde24e633358fb4c5"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/resource_input.schema.json",
+      "size_bytes": 1185,
+      "sha256": "97d920597a5b8aa73c98b810c0f9cf109a0af5cc3c111c0b714ff394ea7dea03"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/resource_output.schema.json",
+      "size_bytes": 2964,
+      "sha256": "be86e91210eab23c117f1a9c089fca828d4ea5281b4df79389281003f7f16144"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/review_input.schema.json",
+      "size_bytes": 833,
+      "sha256": "907b73cec30450bc12c65cc7ecab2e25d01720829efa62fd7eea7c827e2624d8"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/agents/review_output.schema.json",
+      "size_bytes": 2712,
+      "sha256": "b9f730d649e31b36fbe8abadf466d814f2a28e3d3bc5309aa4349c1beb881e96"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/services/retrieval_request.schema.json",
+      "size_bytes": 650,
+      "sha256": "d1dfa2348c78972c85b6c7b01f28bc46c5282e5e0d290804254bb75f99634901"
+    },
+    {
+      "path": "contracts/compatibility/user-repo-v6/services/retrieval_response.schema.json",
+      "size_bytes": 1151,
+      "sha256": "450b3477cf550ba8b433d5da078986a7f95feb1ce22995dbfed1e86156820d51"
+    },
+    {
+      "path": "contracts/jsonschema/domain.schema.json",
+      "size_bytes": 664,
+      "sha256": "3a359c34c76c1a93daddcb1da124b4cc7d7a6d9dabe381506d4478badd6c1fc3"
+    },
+    {
+      "path": "contracts/jsonschema/extended_retrieval_response.schema.json",
+      "size_bytes": 1421,
+      "sha256": "8924149c152bcb2b6c9617ccd29a7525cf72411b16ebd36afee66bb4bfa5db87"
+    },
+    {
+      "path": "contracts/jsonschema/generation_eval_case.schema.json",
+      "size_bytes": 528,
+      "sha256": "20012aadddf6495e28624c1188bc8b020b771c8d51ead1d5fcba471997b8f68b"
+    },
+    {
+      "path": "contracts/jsonschema/knowledge_chunk.schema.json",
+      "size_bytes": 1094,
+      "sha256": "a1150615e958e88e20ccd34a3048fd07dc7babab301d1d3a6c082d5e09f79c09"
+    },
+    {
+      "path": "contracts/jsonschema/knowledge_node.schema.json",
+      "size_bytes": 972,
+      "sha256": "a5e0819dcef788e19a58d944a6976d4ec4bdc348ef2251fe1f7aa4ee716f3a48"
+    },
+    {
+      "path": "contracts/jsonschema/question.schema.json",
+      "size_bytes": 880,
+      "sha256": "2f202667ba12707fb6e79eb8fac0f0334a8d439cfe903bb44377f37930ea1cf9"
+    },
+    {
+      "path": "contracts/jsonschema/retrieval_eval_case.schema.json",
+      "size_bytes": 554,
+      "sha256": "be3fe768eb831396c9ef0897a46f9e56bacae1e54a94204b1471baf8e2eead43"
+    },
+    {
+      "path": "contracts/jsonschema/retrieval_request.schema.json",
+      "size_bytes": 650,
+      "sha256": "d1dfa2348c78972c85b6c7b01f28bc46c5282e5e0d290804254bb75f99634901"
+    },
+    {
+      "path": "contracts/jsonschema/retrieval_response.schema.json",
+      "size_bytes": 1151,
+      "sha256": "450b3477cf550ba8b433d5da078986a7f95feb1ce22995dbfed1e86156820d51"
+    },
+    {
+      "path": "contracts/jsonschema/rubric.schema.json",
+      "size_bytes": 545,
+      "sha256": "ed5658a8236b5fa50e1e35a529aeb06b7a2954f738846252dfe4eee65945903f"
+    },
+    {
+      "path": "contracts/jsonschema/task.schema.json",
+      "size_bytes": 584,
+      "sha256": "98f3fd7ef7a7eb8f33a64fafaebb2146f9d3d64471c5a670eaea59c4b9ae91d8"
+    },
+    {
+      "path": "contracts/knowledge-api.yaml",
+      "size_bytes": 16366,
+      "sha256": "c68e57991e754885c054774bcc5d310a0e65e3ad7d13ab11e882a5db2ab67659"
+    },
+    {
+      "path": "data/assessment_blueprints.json",
+      "size_bytes": 12861,
+      "sha256": "1b0feba796ce721efbf4cd78b427ccb38f0955fbb3f9dd3764ef7b054647de24"
+    },
+    {
+      "path": "data/assistant_retrieval_index.json",
+      "size_bytes": 28676,
+      "sha256": "f2ed83675634cf9339606b82afe1690928a34cabf134e14665e6193922c4b75c"
+    },
+    {
+      "path": "data/boundary_cases.json",
+      "size_bytes": 23631,
+      "sha256": "3fbbd4b40f0d36ff158c79b63b50674bc916555323d55b862f89cb3fc88b2aee"
+    },
+    {
+      "path": "data/code_cases.json",
+      "size_bytes": 3994,
+      "sha256": "f90fcf5c51579ee770adc55507cfb8f89445ef9e3badc0d4b8470a779b35d14b"
+    },
+    {
+      "path": "data/comparison_cases.json",
+      "size_bytes": 11032,
+      "sha256": "1822b607ced8b04c6512e4aa38466d77a8aa3eae2bd0b2095cd5a4502db5c65a"
+    },
+    {
+      "path": "data/complexity_cases.json",
+      "size_bytes": 29187,
+      "sha256": "8bf3ce6694f696fef56c056096619b3a8f121189a5407edef487ebc06a198d5e"
+    },
+    {
+      "path": "data/concept_cards.json",
+      "size_bytes": 173169,
+      "sha256": "6c5e573093eaea978f4d2a7760039aaf3cf9989ad61b950039ddc45492491559"
+    },
+    {
+      "path": "data/documents/RAG-M01_RAG基础与方案选择.md",
+      "size_bytes": 10920,
+      "sha256": "5b9b377391f448298dcf7e3daddd5bcb52d52cc747b46b5a8127b31b89fc7edc"
+    },
+    {
+      "path": "data/documents/RAG-M02_数据治理与知识构建.md",
+      "size_bytes": 10112,
+      "sha256": "120f62e962dc283db29b38dfa463bf31f11f84181148f05b4abcfc1232e09e11"
+    },
+    {
+      "path": "data/documents/RAG-M03_表示、索引与基础检索.md",
+      "size_bytes": 9541,
+      "sha256": "2a20eb18032a17a702dfe76e09857b1ad3f3ccf28c105a58fc31eead863eae63"
+    },
+    {
+      "path": "data/documents/RAG-M04_检索增强与上下文工程.md",
+      "size_bytes": 9662,
+      "sha256": "0f47e5d2cdc32bc55125cf1cafa52227191ab96e31d5db053434c48cb5da5f59"
+    },
+    {
+      "path": "data/documents/RAG-M05_可信生成与安全控制.md",
+      "size_bytes": 9885,
+      "sha256": "f2196f586e67cf2bb68397a1a5f33449a6ad98fae428104cfcea0815bdd95e34"
+    },
+    {
+      "path": "data/documents/RAG-M06_评测、观测与持续改进.md",
+      "size_bytes": 9311,
+      "sha256": "0d7614539ebc0646f49ae64a3befb606c0c6265a992ada50bed029dbf714d855"
+    },
+    {
+      "path": "data/documents/RAG-M07_高级RAG架构.md",
+      "size_bytes": 9548,
+      "sha256": "2b022efcd2deb41f5973e4637839d8e41ce1a8a7c727790c66528c42bf80fc2c"
+    },
+    {
+      "path": "data/documents/RAG-M08_API、性能与生产部署.md",
+      "size_bytes": 9578,
+      "sha256": "554123143f7a5acab29f19ecd282fedcc99675dc92dad7a138bb020f0de23a05"
+    },
+    {
+      "path": "data/domain.json",
+      "size_bytes": 3230,
+      "sha256": "bceebdbee47aa9c3267539e16a6b37bd10540e0324797bd18823a803b939a165"
+    },
+    {
+      "path": "data/error_cases.json",
+      "size_bytes": 132586,
+      "sha256": "f9391e845bb4455f3b839b0f612708702291d4931d9aa97fe7d254b31ab846c2"
+    },
+    {
+      "path": "data/evidence_items.json",
+      "size_bytes": 341258,
+      "sha256": "f91cef47234f9dfb87d5249c43bab30f023dd01aa641439bd143b87d426c60e3"
+    },
+    {
+      "path": "data/faq.json",
+      "size_bytes": 158452,
+      "sha256": "0fbeede51a190539eae40651250319097cd3498d270fa2893c8c3f44a507e8a9"
+    },
+    {
+      "path": "data/generation_eval_cases.json",
+      "size_bytes": 249858,
+      "sha256": "5d786defe0e265b847fef0a3cbc87c2c5f6e94ee20c8d1d29c709e4d19401b5e"
+    },
+    {
+      "path": "data/glossary.json",
+      "size_bytes": 15582,
+      "sha256": "9f2c667c9f00221b807e9cc7ad56d8f59b465c0e0e000e023e4640a46719c07a"
+    },
+    {
+      "path": "data/imported_trusted_external/crosswalk.csv",
+      "size_bytes": 8782,
+      "sha256": "7b8804c8ecd6f9548806d3cc731e0d5561e12488c83fe942dc84e9cd96792065"
+    },
+    {
+      "path": "data/imported_trusted_external/crosswalk.json",
+      "size_bytes": 19768,
+      "sha256": "12ece7ff209c4c0f628c1ab3cfe5120e2c977c3e047850858efa2ee79d6537d7"
+    },
+    {
+      "path": "data/imported_trusted_external/evaluation_cases.json",
+      "size_bytes": 136213,
+      "sha256": "8ce616091f6eb723504fc63fb970d2b62c557b79638d4446629396f6f8fb1209"
+    },
+    {
+      "path": "data/imported_trusted_external/knowledge_edges.json",
+      "size_bytes": 49179,
+      "sha256": "1f2115731cdc5c0b09bbced62a24fff2d4528e64b0e878e9d706f20590de151c"
+    },
+    {
+      "path": "data/imported_trusted_external/manifest.json",
+      "size_bytes": 435,
+      "sha256": "b1473b7ca916e898229ea7b126e738da8c93a1387ca396437bcf2f6637cf2c3c"
+    },
+    {
+      "path": "data/imported_trusted_external/practical_tasks.json",
+      "size_bytes": 38585,
+      "sha256": "4b77d526c83da504b68dc15aeebae73f2396e58ce82f83e1b110d08623e994d5"
+    },
+    {
+      "path": "data/imported_trusted_external/question_bank.json",
+      "size_bytes": 292998,
+      "sha256": "7dfcf480d85ab6959de3150384ebdd914388ed1c2319558e1176c6864fd92274"
+    },
+    {
+      "path": "data/imported_trusted_external/rag_chunks.jsonl",
+      "size_bytes": 447829,
+      "sha256": "6a7a494a56730574699942531de86167e244045c954ce9948d7284abcefb583c"
+    },
+    {
+      "path": "data/imported_trusted_external/review_queue.csv",
+      "size_bytes": 5144,
+      "sha256": "f44a5d0e4bfd4a13032a07137576ac2e3263824c73d675341dd10b42ea641b35"
+    },
+    {
+      "path": "data/imported_trusted_external/review_queue.json",
+      "size_bytes": 28062,
+      "sha256": "52fc43ecda60ac06a83fcb38df0ef4f0578c3229f1fe32266f9b0bdd923cf9cd"
+    },
+    {
+      "path": "data/imported_trusted_external/source_registry.json",
+      "size_bytes": 20559,
+      "sha256": "cdd1daab763b3d0b845881c8d52ba6a34df4dde302b08f00c356b004e59064d2"
+    },
+    {
+      "path": "data/imported_trusted_external/subtopics.json",
+      "size_bytes": 51503,
+      "sha256": "bf0e3afd5a3a35c00cac6adfd1fb059e57900882b65a7250e770e404857407e5"
+    },
+    {
+      "path": "data/knowledge_edges.json",
+      "size_bytes": 110214,
+      "sha256": "734bf09917f73803f0039cb4fd24ea838be077da23d683581796ee7ec0c43d37"
+    },
+    {
+      "path": "data/knowledge_nodes.csv",
+      "size_bytes": 76362,
+      "sha256": "9673216a16fa428e7d00c37aaa148dbde73c5e365ecdf8e1c1f56a2071011d5f"
+    },
+    {
+      "path": "data/knowledge_nodes.json",
+      "size_bytes": 337449,
+      "sha256": "ce3aa19884e38dd2ec1fc9cc61c9b0cbe1c4a59147e4187e37d0f0ecb6094e38"
+    },
+    {
+      "path": "data/learner_profiles.json",
+      "size_bytes": 2125,
+      "sha256": "cb9d9609ac6b345f337503d023d07d7521388998a32c5e71e8b8b7a48895abbd"
+    },
+    {
+      "path": "data/modules.json",
+      "size_bytes": 1157,
+      "sha256": "754a506f8f599f1c40d17eb0592cc028b8d569d187f919a59ca651ceda7b3370"
+    },
+    {
+      "path": "data/personalized_resource_examples.json",
+      "size_bytes": 12216,
+      "sha256": "e20d9a76c81ebcc771e6def96148d15414a2735e52f094efaaad87c49e71a3f8"
+    },
+    {
+      "path": "data/question_bank.csv",
+      "size_bytes": 191704,
+      "sha256": "09433eb7bd44167db26872b59bc06eef8da3f7752c7497da5923400742e531ad"
+    },
+    {
+      "path": "data/question_bank.json",
+      "size_bytes": 501220,
+      "sha256": "3527ff92be7f74ed758c839d376b47b906587893f33f4fdd1e075fc83fa06763"
+    },
+    {
+      "path": "data/rag_chunks.csv",
+      "size_bytes": 177140,
+      "sha256": "e431cd855dfe0f73a3e7a9835dcf01afe46e32e54d3f508eeb556d1f6e54dce7"
+    },
+    {
+      "path": "data/rag_chunks.jsonl",
+      "size_bytes": 727460,
+      "sha256": "0d786736fd63384b8097a9130065ad99853d9a2320f27b8999b79218f453ed2c"
+    },
+    {
+      "path": "data/rag_policy.json",
+      "size_bytes": 1349,
+      "sha256": "592fd195c30fbbaa4bcd9eac5f344eba15650f6c614b2b1b0f097a5101b1b2a2"
+    },
+    {
+      "path": "data/retrieval_eval_cases.json",
+      "size_bytes": 232737,
+      "sha256": "2dfc09818089ea3be52dd27261e15688e386fd3680698c5d2a2c3505f3230add"
+    },
+    {
+      "path": "data/retrieval_strategy_catalog.json",
+      "size_bytes": 1551,
+      "sha256": "460920e7b9287e6cbfef869beff99f9fc8129026cf0ffead89cb9531b62eae81"
+    },
+    {
+      "path": "data/rubrics.json",
+      "size_bytes": 115683,
+      "sha256": "de51e992b782002ddb24e957055784043dbad11310e81f1b209feff5ef042adb"
+    },
+    {
+      "path": "data/source_registry.json",
+      "size_bytes": 29694,
+      "sha256": "001f83c9bd1c986489f5e090e94a0e635813ab3488952806b1dc9717614cac0a"
+    },
+    {
+      "path": "data/task_bank.csv",
+      "size_bytes": 54106,
+      "sha256": "1946593134b4912cdf90815a3fdf06eb0106b80b40f9a0feb85307f6c35cd109"
+    },
+    {
+      "path": "data/task_bank.json",
+      "size_bytes": 121951,
+      "sha256": "467a71b2083a3b5dcae3119b3b279b8c288214e354f83a8272b9ca9491b9de5c"
+    },
+    {
+      "path": "db/migrations/001_domain_pack_extension.sql",
+      "size_bytes": 4139,
+      "sha256": "df43ff17d5d963ef2325220050edb48aed8745ba92f685986e125ad1ab8a62e0"
+    },
+    {
+      "path": "db/migrations/002_trusted_ai_import_review.sql",
+      "size_bytes": 1412,
+      "sha256": "7a5173b20910f7ea1b24013eb2c659d5d18e06d6f38edf20b1d64251b518a046"
+    },
+    {
+      "path": "docs/00_知识库总说明.md",
+      "size_bytes": 701,
+      "sha256": "1ff358bb1b1d2cbec2604ab741fb77073ffd18711654b1d81e80e7f970037c50"
+    },
+    {
+      "path": "docs/01_领域选择与赛题对齐.md",
+      "size_bytes": 1642,
+      "sha256": "5c21fede91f2fbf51bbebea676732fa56242befe43eb2f0850aaa2def7170931"
+    },
+    {
+      "path": "docs/02_知识体系与学习图谱.md",
+      "size_bytes": 1019,
+      "sha256": "8f66f9c0e3ed288a92d72a3640c920db1a0f076cbf6ce931ba3266893bfa0e80"
+    },
+    {
+      "path": "docs/03_来源治理与版权边界.md",
+      "size_bytes": 946,
+      "sha256": "265853fa71f90c9b1dda674f33de776b8fd4253a50cd3dc09543935785b33abf"
+    },
+    {
+      "path": "docs/04_切片_元数据_索引规范.md",
+      "size_bytes": 974,
+      "sha256": "4cd331c468928705321826570ef29b7906792cdf19039862664b6035b3030828"
+    },
+    {
+      "path": "docs/05_检索接口与证据契约.md",
+      "size_bytes": 906,
+      "sha256": "2abf137df80a34c722d91040707ad7273800e1fb382ef14897986a3bfce1502d"
+    },
+    {
+      "path": "docs/06_质量门禁与评测口径.md",
+      "size_bytes": 1022,
+      "sha256": "2ec28eaf114042e9a26afdca070757c20c8327c86b5001e9df615c0e8cf7891e"
+    },
+    {
+      "path": "docs/07_七核心智能体与平行子Agent使用规范.md",
+      "size_bytes": 1099,
+      "sha256": "46b15b9491d7a2ba4a5f81b241c452fe02bb78a76935932e0c8f591be0109461"
+    },
+    {
+      "path": "docs/08_程序接入与数据库导入.md",
+      "size_bytes": 1002,
+      "sha256": "1fc7b57417f53d3076d1bd432b8d3744dd4775b5c976fbb15856c550b18175db"
+    },
+    {
+      "path": "docs/09_比赛提交映射与演示.md",
+      "size_bytes": 909,
+      "sha256": "5f55b691db2c44b6813f3c408dac43c73a54690b23205241ca782fbf9b35ca0d"
+    },
+    {
+      "path": "docs/10_维护_扩展_已知限制.md",
+      "size_bytes": 852,
+      "sha256": "5d417b228cda80be7a1e0f9db274d6699d926f07ce12ccc19746e173899d81a3"
+    },
+    {
+      "path": "docs/11_知识库交付验收检查表.md",
+      "size_bytes": 728,
+      "sha256": "65bd0adb26cdac5cfc980de945396bee903c17d98d88bccbe7a54896185b4c15"
+    },
+    {
+      "path": "docs/12_知识库新增内容施工流程.md",
+      "size_bytes": 1804,
+      "sha256": "761d2b2aaaa39f14a58faa4353920f778e6d897620b3aa449677268997ce4276"
+    },
+    {
+      "path": "docs/13_两份专业AI知识包合并说明.md",
+      "size_bytes": 777,
+      "sha256": "19fbe04668fb696567bc06c268f254012c78156b3d1a79d196d729cc9efec98a"
+    },
+    {
+      "path": "docs/14_自适应多策略RAG接入规范.md",
+      "size_bytes": 990,
+      "sha256": "267efec5398aac377634328a0743a61aeb00d2efa7d71190be3de6fc9b3765d1"
+    },
+    {
+      "path": "examples/curl.md",
+      "size_bytes": 536,
+      "sha256": "a13cc3e3fe1a12c79e85ca1820b0ee304bce0857094a57069465f673517a3f25"
+    },
+    {
+      "path": "examples/http/retrieval_request.json",
+      "size_bytes": 296,
+      "sha256": "ce6a2302cb6f1cb8679242c9f59e8b54d6450a4a49ea89075e2bc108fd09e30d"
+    },
+    {
+      "path": "examples/http/retrieval_request_with_candidate.json",
+      "size_bytes": 298,
+      "sha256": "37235e7b6778627eba21c85f2a445c63977b6f3e66acbad28ba5c47bf6fabd3c"
+    },
+    {
+      "path": "examples/python_client.py",
+      "size_bytes": 602,
+      "sha256": "231588aa0b59c466544122af655a3d9056d68f4b9149588391a0ec40910ac4dc"
+    },
+    {
+      "path": "examples/typescript_client.ts",
+      "size_bytes": 799,
+      "sha256": "a6676798e2c68ab3af924060df13046083b5f7989eaf90613379c3d79d52ec14"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/README.md",
+      "size_bytes": 1051,
+      "sha256": "4213ab7885010a123d672d79b901263cdf2cbfe26527beed1516a6eb7b61328e"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/SOURCE_AND_REVIEW_NOTICE.md",
+      "size_bytes": 552,
+      "sha256": "0451d10543e54c4c76c3b214c231fb57cf61d551bcc5568b5b25e11484185a9e"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/corpora/evaluation_queries.jsonl",
+      "size_bytes": 95372,
+      "sha256": "f7d6da0b5d359b5a2815acbc7485a113043578c822eddd8f5ef223581deb3304"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/corpora/question_bank.jsonl",
+      "size_bytes": 213221,
+      "sha256": "181e86b11051343d0a2b1558f760659a647f1a5ef19dedd4524b1246b226115c"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/corpora/retrieval_corpus.jsonl",
+      "size_bytes": 248411,
+      "sha256": "056f64ea20082163731e14372544b56a1284071ac8de6229bc163dc3d41601dc"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/01_RAG基础.md",
+      "size_bytes": 5116,
+      "sha256": "9a1cd55bf7f362b3d392e7d9c570fa001c5f17b3e46f265a3c9cf9b33e11bebc"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/02_知识源治理.md",
+      "size_bytes": 4876,
+      "sha256": "a77610fcb0d3f656c0f1bdb089379699142c93f63a5c0d49ad8f45a194c4249d"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/03_解析清洗.md",
+      "size_bytes": 4484,
+      "sha256": "376478620900f1acdd8154c3939bf52ff398d0099b15acfa64d007e2cdc7b306"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/04_切分与上下文.md",
+      "size_bytes": 4215,
+      "sha256": "e809ae56f18259886d21ddf10996e3ab8e9257ad9ace3d655cf9cdf97a7349e0"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/05_向量与索引.md",
+      "size_bytes": 4292,
+      "sha256": "2db58530c481511ae1dfeb08c1950adb70db7419b28911adf701f598d6760cd4"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/06_检索策略.md",
+      "size_bytes": 4118,
+      "sha256": "9fd44183a9ce7465faca724a04de93d1dada1a8e158f4cf802b86da65a3cea1e"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/07_查询与重排.md",
+      "size_bytes": 4723,
+      "sha256": "01c242502947e97ff1bf21bfd734d4fe6ee942fbfb15ca5dbbe5b2cdcc66b5ee"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/08_上下文与生成.md",
+      "size_bytes": 4239,
+      "sha256": "3f98b6afd339270c2c0371615501d5216959af87d27f38ebd449fb0688d83319"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/09_可信与安全.md",
+      "size_bytes": 4346,
+      "sha256": "405b19733403d73d49665dd69e6034418defecbb1952af5342a9e804a63ee78b"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/10_评测与监控.md",
+      "size_bytes": 4231,
+      "sha256": "f7a3eb97d93c770661cecaf2cfc7cb55b7f65614728e4ea9050e8a105c5497f5"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/11_高级RAG.md",
+      "size_bytes": 4196,
+      "sha256": "b470cd5549a4a18085949a27ba177f3fc873f653bd44e40e616bcc1edf4670d7"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/documents/12_生产工程.md",
+      "size_bytes": 4097,
+      "sha256": "971a7a1ff936aaf498136e0c1308c07abe0466506ac9358f1b0e9e2ee04cd8e6"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/accuracy_eval_cases.json",
+      "size_bytes": 50734,
+      "sha256": "5e1d57eb81f3d3daa28423067362e39a0d88803a322c5f55f45117292870e2c2"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/assistant_retrieval_index.json",
+      "size_bytes": 50286,
+      "sha256": "0a147cc73fe6372e2751d48963fba80089e1349d7bc0380b8e48de9520046de0"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/boundary_cases.json",
+      "size_bytes": 28571,
+      "sha256": "f7c2b00bb2a100a84ba516ff24a5950214b3cd32c1fe0f5ca9903a049954aea5"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/chapter_assessment_blueprints.json",
+      "size_bytes": 23930,
+      "sha256": "6a63bbcc20899e5611c866d100d5eec04c9744f9d4426b7d4c4a71f512aa8d45"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/code_cases.json",
+      "size_bytes": 6201,
+      "sha256": "52bb74d4ab862cdb089e0ec440d9bb5ee4f1066f5d0478240899b140bd632cd3"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/comparison_cases.json",
+      "size_bytes": 26021,
+      "sha256": "a4abd79d08071c845b0948be66a9b2b4fa716fc3c43409ed205fd847f01575a6"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/complexity_cases.json",
+      "size_bytes": 16975,
+      "sha256": "b21ac9d716c6602ca4a10922ba402d732702645ce00df1689b023204acc1cb42"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/concept_cards.json",
+      "size_bytes": 84480,
+      "sha256": "a6297d559ecad619218a19771f5c2ce8e654d2200eea042ac627846e51c9ab58"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/domain.json",
+      "size_bytes": 726,
+      "sha256": "8b948e2f4ce95a3b6da779abfe2050ba94df3f8f5670a8e0e6045672b4ed3298"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/error_cases.json",
+      "size_bytes": 79638,
+      "sha256": "751a5b5ae4d882db21b3a8dd146bac9df22f739cf565e9ce024d398c101e88fe"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/faq.json",
+      "size_bytes": 83205,
+      "sha256": "5a6565f039cb666c4e0e6940447745f3ebaf8e65195a4f6e3c9a4c37188b651c"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/learner_profiles.json",
+      "size_bytes": 2608,
+      "sha256": "169c49a3345c55d405162ec104269ba9a3c07ddaaff67109a4327c8cd4668dc7"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/micro_quiz_bank.json",
+      "size_bytes": 92393,
+      "sha256": "5a1deec042be6118a5a060f228e996cd3f69bb38f429c671be859c7aa9f2e5b0"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/extended/personalized_training_examples.json",
+      "size_bytes": 4482,
+      "sha256": "90d4690340a7c16e09def16a698118643bff73c4279ae466324aa5ece54944a0"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/importable_package/evaluation_cases.json",
+      "size_bytes": 113444,
+      "sha256": "80429907e672e705d4728cd23cf5947d9de91d4d38a3738e894850fbf05a62e5"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/importable_package/knowledge_edges.json",
+      "size_bytes": 26925,
+      "sha256": "729dfd23ce2b0ac042da12654cdf8a7a3485581b90a06717853848e162633f10"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/importable_package/knowledge_nodes.json",
+      "size_bytes": 28792,
+      "sha256": "cefeedd92622afb8724d343c2db2c1c7789a9ad0646b80485287bbce310fcf60"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/importable_package/manifest.json",
+      "size_bytes": 3557,
+      "sha256": "e1f12cdf05709cee884cb765f4cd35697cfa965f6161251e94b6d9e47a027d13"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/importable_package/practical_tasks.json",
+      "size_bytes": 38609,
+      "sha256": "c93d0eef743e8388d93a5efb0067e7696fac0cd1cc19a673f7b6e1ef8b7904ac"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/importable_package/question_bank.json",
+      "size_bytes": 253225,
+      "sha256": "3af61d67e9192a0fd170690a5238cd9944197cab4542b8bd4fbb5a0a9e98e581"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/importable_package/rag_chunks.json",
+      "size_bytes": 290888,
+      "sha256": "a3c2b3709b198efc9c6c2df5014c81f523f3cb0ce1398bf709628c7236591702"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/importable_package/sources.json",
+      "size_bytes": 14321,
+      "sha256": "cdbcec382696a25a8151d3e0cf426fb4f36d01e20eb2f138da05a3915b18220a"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/integration/API_MAPPING.md",
+      "size_bytes": 609,
+      "sha256": "1db1de20ce63d4978cafb6622889c92400790e7d9d699954feae22d926e289e5"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/integration/knowledge_package_import_request.example.json",
+      "size_bytes": 311,
+      "sha256": "9ab88721f436c67b683625163d04541d5897633c574f71f12f44f8815a492d0d"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/integration/seed_metadata.json",
+      "size_bytes": 296,
+      "sha256": "95193191a69d06644d3cd6921f852bbf559dccce313f58d7a9dbfb2f882ac1bb"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/rag_engineering_competition_v1_importable.zip",
+      "size_bytes": 107256,
+      "sha256": "c650609d9341d371158cff40c15f36643d638d7c753ca1e1a50a13606038a5a2"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/reports/human_review_checklist.md",
+      "size_bytes": 730,
+      "sha256": "e0f009bcf372409507be52ab9b5192ea9bf5c78bbb06fda9a299f98a10a62d84"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/reports/package_checksums.json",
+      "size_bytes": 6023,
+      "sha256": "1cd605f9f1d97198700d88f985aca1a8a6a15a4d32ce996193cf3fdb080a1cf5"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/reports/quality_report.json",
+      "size_bytes": 1136,
+      "sha256": "81049c97f20297c923a2147173adfb1cc372e685e93640240bc0588334f6e679"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/reports/quality_report.md",
+      "size_bytes": 1400,
+      "sha256": "78acc9d2ffdfcb988cacf4e8db8180196c7f30f26dee0d7ee1caf46dcb1aa7e6"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/schemas/evaluation_cases.schema.json",
+      "size_bytes": 2610,
+      "sha256": "6323cc192ed6d121820d3a753f8e6e0d5384ae2ffd6012e83c5d721e52d1d058"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/schemas/knowledge_edges.schema.json",
+      "size_bytes": 1232,
+      "sha256": "842c4e4d388beeec6c2dfcf21423f1718ad928de55faf5c40adc9acd39f0e0d9"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/schemas/knowledge_nodes.schema.json",
+      "size_bytes": 1603,
+      "sha256": "f5b2455e9c200f0a312fc1d8d0564ad5e32e814bd0d8f70ce0d2602c822f279f"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/schemas/manifest.schema.json",
+      "size_bytes": 4313,
+      "sha256": "5439fcd6e45e55b4e96d9db551ab1b80e33376cb14e16c56a61450c6047349ce"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/schemas/practical_tasks.schema.json",
+      "size_bytes": 3888,
+      "sha256": "33a0e97a2c5d5d70d5217ed517fa5247eb4085d192bc63bbabe25b0a9124e038"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/schemas/question_bank.schema.json",
+      "size_bytes": 3032,
+      "sha256": "6dbd0ef7e4d0bad3adc6aafe9e7fbd136c9a0e67ea573d8ac01bec8b392b4fa9"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/schemas/rag_chunks.schema.json",
+      "size_bytes": 1947,
+      "sha256": "4807513ac0c491dc185d083783bdacc50cc3ef59456d25709d2eb34cea5d2d3a"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/schemas/sources.schema.json",
+      "size_bytes": 2076,
+      "sha256": "d987800d2891bb8f41cfdc9f3a579de8f8babd4c30205b1b65fc0d97e93b4ecd"
+    },
+    {
+      "path": "imports/rag-engineering-external-v1.0-original/scripts/validate_knowledge_pack.py",
+      "size_bytes": 1291,
+      "sha256": "4e6965d9da56527e12426a9c0b101f148b46708605384f385c3557d88baa63e5"
+    },
+    {
+      "path": "indexes/README.md",
+      "size_bytes": 126,
+      "sha256": "e5abe4872c43ac4c91fd02bc9efa3a4086a245553787895296c3912cb836fb17"
+    },
+    {
+      "path": "indexes/embedding_manifest.json",
+      "size_bytes": 400,
+      "sha256": "60c99c9022c933ae80c233f8e45d93d81a4dfd2d2ffaf8c366b154d78b6875f0"
+    },
+    {
+      "path": "indexes/knowledge_graph.json",
+      "size_bytes": 386613,
+      "sha256": "dced20907c3a19583e328e87f00d634145a108dfba4116bf856ee10f200fb6db"
+    },
+    {
+      "path": "indexes/metadata_catalog.json",
+      "size_bytes": 19023,
+      "sha256": "0ccef344d6ac0885e2e0e978723d6eb9b7e9f34e88179030a5c24f69b15ffcde"
+    },
+    {
+      "path": "indexes/parent_child_index.json",
+      "size_bytes": 5995,
+      "sha256": "b6cb11c0e7121c6636996a4f09d82a7750de8a835223d706ee1d7c4624fec3d7"
+    },
+    {
+      "path": "indexes/retrieval_aliases.json",
+      "size_bytes": 5678,
+      "sha256": "4f7d5cac4d638a102755465237f6500809912268915948691caaea5b355f291b"
+    },
+    {
+      "path": "integration/32_预建专业知识库主线修订.md",
+      "size_bytes": 854,
+      "sha256": "b60f4529a5bdb08e4c96a6470963113d4659cb2dbef5b098a8bef2e9e3af502f"
+    },
+    {
+      "path": "integration/README.md",
+      "size_bytes": 534,
+      "sha256": "22bce5333e762f44bad3d040c7f24f59754d6b59825848a8fd63efe70d228621"
+    },
+    {
+      "path": "integration/ianzhang-v6-field-mapping.json",
+      "size_bytes": 2747,
+      "sha256": "c42aa47f5fe566f8f82be8bffa12affa27db9bae6bd80eaa1cc7823dd59cca48"
+    },
+    {
+      "path": "prototypes/knowledge-base-browser.html",
+      "size_bytes": 196665,
+      "sha256": "ecba3a714fa2f6021ce881f341bbab7348b6c56bafb58985c83b17bce68e15d9"
+    },
+    {
+      "path": "reports/final_validation_report_v2.json",
+      "size_bytes": 1851,
+      "sha256": "422c7f7fc392b3c15b12eb9c286e005201dbf14f817b0a62aa6c7d1563957365"
+    },
+    {
+      "path": "reports/final_validation_report_v2.md",
+      "size_bytes": 1101,
+      "sha256": "2b913fd141a22a4625fd9375759ced1cb1e452bac83ed3b9894d6e6e486daada"
+    },
+    {
+      "path": "reports/knowledge_quality_report_v2.md",
+      "size_bytes": 372,
+      "sha256": "8944aa7f1c96a9438f6344b3ea19e0c089b733cf7a281cf581991534e710861f"
+    },
+    {
+      "path": "reports/retrieval_baseline_report.json",
+      "size_bytes": 105754,
+      "sha256": "766868b4fbd8777c4ba24657b67e6ba14803d7a1d3db1970f07353fe1231de27"
+    },
+    {
+      "path": "reports/retrieval_baseline_report.md",
+      "size_bytes": 209,
+      "sha256": "eb76cca51c860673f59dd355b3831d844666185e3c692d12f3c73ba81c615e35"
+    },
+    {
+      "path": "reports/validation_report_v2.json",
+      "size_bytes": 845,
+      "sha256": "b173a881539e7d6241ad7a05439c3601344c46dca82283c297daa0cda356d2e2"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 120,
+      "sha256": "2a96048f834658098cf29a1a592851765079d2887ed40e78ba91d0284d41d6a6"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "scripts/build_embeddings.py",
+      "size_bytes": 1860,
+      "sha256": "eab0ba5e9b99451f3ab02aaf87ace5f49e383ee9c2360415e32f1b865d0bbcc2"
+    },
+    {
+      "path": "scripts/import_to_postgres.py",
+      "size_bytes": 3889,
+      "sha256": "d87356bb340603afe73d403e4db42e5938696efa5c6ffdfbcd7468b69cbd9d3b"
+    },
+    {
+      "path": "scripts/run_retrieval_eval.py",
+      "size_bytes": 2574,
+      "sha256": "886cfb2e30a4d50ffe3b4e6610d165ad8a7f010db683311f7f174ea49a27d926"
+    },
+    {
+      "path": "scripts/validate_pack.py",
+      "size_bytes": 10979,
+      "sha256": "b2d5613324ee431bda09a55e85b518a5de499782f6f19f55331d5b4a82edfca9"
+    },
+    {
+      "path": "scripts/validate_project_compatibility.py",
+      "size_bytes": 2306,
+      "sha256": "59f6e06889a8d136d49db3c41b98f4b6da3d03982ddb4bc79cb819de9032fcd0"
+    },
+    {
+      "path": "server/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "server/adaptive_retriever.py",
+      "size_bytes": 3715,
+      "sha256": "569dcbd1bc8e4867d8fcd72294c230ea80b6abd63c23f0c6ac9f20e2dd45f46b"
+    },
+    {
+      "path": "server/app.py",
+      "size_bytes": 5597,
+      "sha256": "efa057caef7ab03cfd550a0cd7bf7041d8a3be1285947f8e1ad062c7493c97aa"
+    },
+    {
+      "path": "server/retriever.py",
+      "size_bytes": 6514,
+      "sha256": "9e4d8b81bd22dcc3210fbcc40dfe9d86e8936132137dbdf54c4d327d98726904"
+    },
+    {
+      "path": "server/router.py",
+      "size_bytes": 2608,
+      "sha256": "a3c66641bb340e91d3c49cd7288f0bcac8a96e030f62e82f7125e7296582b8c8"
+    },
+    {
+      "path": "submission/data_compliance_statement.md",
+      "size_bytes": 377,
+      "sha256": "da5779dfe009a491be171271c633bdad8efc94f053f0f11c3816856535fd71ba"
+    },
+    {
+      "path": "submission/demo_script_knowledge_base.md",
+      "size_bytes": 759,
+      "sha256": "5103d089eee1bffea054bd87d321532fdcba86174aa9975219c8deba22952c5e"
+    },
+    {
+      "path": "submission/knowledge_base_submission_overview.md",
+      "size_bytes": 1292,
+      "sha256": "b993d629275cf62355f6cfbe2ee83afd15ba3eb830c8a11d975730324cc4658d"
+    },
+    {
+      "path": "submission/learner_cases/LP-ADVANCED/arbitration_output.json",
+      "size_bytes": 840,
+      "sha256": "709c0fa3e03883399606e7a7d856ebcc6ee5b4138d71c094a39f69baebd64e08"
+    },
+    {
+      "path": "submission/learner_cases/LP-ADVANCED/assessment_output.json",
+      "size_bytes": 3806,
+      "sha256": "3b76b1342317dbb93a83456d8577fe0403d46b52bc19fcf85145c302953fb2dd"
+    },
+    {
+      "path": "submission/learner_cases/LP-ADVANCED/complete_case.json",
+      "size_bytes": 16548,
+      "sha256": "cee2d884be142541b0b6bb1b7d9efb42d320ba4cb80eb84810ff3e368eed1c81"
+    },
+    {
+      "path": "submission/learner_cases/LP-ADVANCED/diagnosis_output.json",
+      "size_bytes": 1563,
+      "sha256": "963488d4ca12b7df61463fbcf477ce02ce3fada3aa6f41e74d4a358fe3787d9b"
+    },
+    {
+      "path": "submission/learner_cases/LP-ADVANCED/path_plan_output.json",
+      "size_bytes": 2143,
+      "sha256": "d5fe170950195f0f3d602f018595204cfbc11ca0da81e185be3a581eaef1c16e"
+    },
+    {
+      "path": "submission/learner_cases/LP-ADVANCED/resource_output.json",
+      "size_bytes": 2497,
+      "sha256": "755af8dd06ea6d0fd39a5e3ad9c64f40b55e82a4b63e90a556011847d3452ffb"
+    },
+    {
+      "path": "submission/learner_cases/LP-ADVANCED/retrieval_request.json",
+      "size_bytes": 430,
+      "sha256": "641ee688932a5dd967fa50a66ba4f2c2bcc91eb1436ffd321c0b1785e78b6579"
+    },
+    {
+      "path": "submission/learner_cases/LP-ADVANCED/retrieval_response.json",
+      "size_bytes": 2785,
+      "sha256": "c5a8d58d18856338c3018805e47eac4e4b8be421c9333b5f2db2c20455f95c94"
+    },
+    {
+      "path": "submission/learner_cases/LP-ADVANCED/review_output.json",
+      "size_bytes": 531,
+      "sha256": "f587abf7233dd52196b66ce7f486d823f189d97611390ba3a0041c1e5d9f6771"
+    },
+    {
+      "path": "submission/learner_cases/LP-BEGINNER/arbitration_output.json",
+      "size_bytes": 840,
+      "sha256": "f52178d98465609444944e691926e429f5c50d14991b7d863c34e29382a54c6f"
+    },
+    {
+      "path": "submission/learner_cases/LP-BEGINNER/assessment_output.json",
+      "size_bytes": 3977,
+      "sha256": "c7b8ee678c8ba7791e7bad19292dd11ba53f244c29cb1cef82be0a9a41b63212"
+    },
+    {
+      "path": "submission/learner_cases/LP-BEGINNER/complete_case.json",
+      "size_bytes": 16674,
+      "sha256": "57bd4807e7f6c4ae81b2ccd63e5176aee0ecc561e599d923cdffdffe1535b58f"
+    },
+    {
+      "path": "submission/learner_cases/LP-BEGINNER/diagnosis_output.json",
+      "size_bytes": 1526,
+      "sha256": "931776f078cf9efc65b3e0f80fe2ce17bea5e59ba70b4ca8e1972c291a71d281"
+    },
+    {
+      "path": "submission/learner_cases/LP-BEGINNER/path_plan_output.json",
+      "size_bytes": 2120,
+      "sha256": "a6a89fb550a36e1fcd234058ff7ed72b31296c795b8b12b70f9abe86cd464b51"
+    },
+    {
+      "path": "submission/learner_cases/LP-BEGINNER/resource_output.json",
+      "size_bytes": 2640,
+      "sha256": "82c707c5a028f4be01bd4e572e92f4cea565690a7532c82061e5fcc7f2b1c3fb"
+    },
+    {
+      "path": "submission/learner_cases/LP-BEGINNER/retrieval_request.json",
+      "size_bytes": 406,
+      "sha256": "72edb559994a6f0bb005713ad5a030fd49185349c2fcbb043e7be8d882d46eff"
+    },
+    {
+      "path": "submission/learner_cases/LP-BEGINNER/retrieval_response.json",
+      "size_bytes": 2843,
+      "sha256": "984b046d813a654e5a2e48de71de662ce64144a1bddf0207d9b786ff08c1059a"
+    },
+    {
+      "path": "submission/learner_cases/LP-BEGINNER/review_output.json",
+      "size_bytes": 531,
+      "sha256": "d8361326172612a0cf2ac550eee214a73b75d54e4c58842eefb8f7e65ccadf2b"
+    },
+    {
+      "path": "submission/learner_cases/LP-INTERMEDIATE/arbitration_output.json",
+      "size_bytes": 838,
+      "sha256": "7648868d9541ef30092bcbf2ae45c96e4466be50c8805e2e8a6d849b8a2c746d"
+    },
+    {
+      "path": "submission/learner_cases/LP-INTERMEDIATE/assessment_output.json",
+      "size_bytes": 3728,
+      "sha256": "bf62820c75ca059dc0752ed1822472fb087cf9d7749f237ea8fb1a0fc1b6da73"
+    },
+    {
+      "path": "submission/learner_cases/LP-INTERMEDIATE/complete_case.json",
+      "size_bytes": 15893,
+      "sha256": "b37b8e636a6ff5a62119ee47d6963386e212375f55c03aef03033a3280748f5a"
+    },
+    {
+      "path": "submission/learner_cases/LP-INTERMEDIATE/diagnosis_output.json",
+      "size_bytes": 1532,
+      "sha256": "fbdbbe0e0fb954376ab09f45b3fd81e98bc23f72ed098134c5f1d9959c6d692a"
+    },
+    {
+      "path": "submission/learner_cases/LP-INTERMEDIATE/path_plan_output.json",
+      "size_bytes": 2127,
+      "sha256": "eba7436fe36d247bdc0b141b7712c94dc5ec11a8c616e155099094f1361625ba"
+    },
+    {
+      "path": "submission/learner_cases/LP-INTERMEDIATE/resource_output.json",
+      "size_bytes": 2312,
+      "sha256": "2026eebdc76cf7b84e99c9dc4452560d0664a16876057f701ec206bd23bf413b"
+    },
+    {
+      "path": "submission/learner_cases/LP-INTERMEDIATE/retrieval_request.json",
+      "size_bytes": 427,
+      "sha256": "cb5536dd197146e225883ad15f0f5884f63270aaed6e8d91e06dbc67ee484fbc"
+    },
+    {
+      "path": "submission/learner_cases/LP-INTERMEDIATE/retrieval_response.json",
+      "size_bytes": 2525,
+      "sha256": "593317531889edcaf52b115f4f8ecfd3a7214124ed07b62b408ed305dfba7739"
+    },
+    {
+      "path": "submission/learner_cases/LP-INTERMEDIATE/review_output.json",
+      "size_bytes": 531,
+      "sha256": "b34e70aed51a6168bd2a46740b2b2218b1ed44c07bfe0260243ac0ee777cf40d"
+    },
+    {
+      "path": "submission/vertical_domain_knowledge_base_slice.json",
+      "size_bytes": 362881,
+      "sha256": "a86afd8fbeb2817ac6c09d3cbca078fe44c0fd9786ec6378e1ceaa57fcb3f2d6"
+    },
+    {
+      "path": "submission/vertical_domain_knowledge_base_slice.md",
+      "size_bytes": 3337,
+      "sha256": "2a99b0c1c8b0edd048193a8f02917cf6105f3539059bcd05c5315b9f2dac36cf"
+    },
+    {
+      "path": "templates/knowledge_chunk.template.json",
+      "size_bytes": 505,
+      "sha256": "fe455da779082a425289aef672ca95b7d08739d682ffd7464273363036aa10c8"
+    },
+    {
+      "path": "templates/knowledge_node.template.json",
+      "size_bytes": 611,
+      "sha256": "97314e9b345fcce7333f65a7a8bfe9db1a950e8c1992bd8fea2bdd5c0a55aebd"
+    },
+    {
+      "path": "templates/question.template.json",
+      "size_bytes": 284,
+      "sha256": "b0fbbd131cc9582b071677912d39ef5b7d6c76ca6ace2ef3ebad839568019cd2"
+    },
+    {
+      "path": "templates/source_record.template.json",
+      "size_bytes": 436,
+      "sha256": "85e7f9d45ef37858ef58018ce7526ab8cf6758ff0cb655fe3b30a202836839a5"
+    },
+    {
+      "path": "templates/task.template.json",
+      "size_bytes": 336,
+      "sha256": "027a43e6f2e59cf066a0e3e98c30c5399ad08bdf38d76702a9ee2ddb4e4414f9"
+    },
+    {
+      "path": "templates/version_release_checklist.md",
+      "size_bytes": 686,
+      "sha256": "1ec94a5afdcd8bdb402a44c86e79fb97470260db5ac72216957ac3eace58bd31"
+    },
+    {
+      "path": "tests/test_domain_pack.py",
+      "size_bytes": 5129,
+      "sha256": "b5c634d3150335ef4d6e17d1f474c08ee02971abadd460be6155a44067bc03ba"
+    },
+    {
+      "path": "tests/test_domain_pack_v2.py",
+      "size_bytes": 1562,
+      "sha256": "955f1af2b389d4ff00f7317410925d1c8088e46984b06acbe6d3e4b57c876fc8"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+version: 7.0.0
+members:
+- member_code: P1
+  member: 张英赫
+  role: 项目负责人、产品与系统总架构、Agent Blueprint 与最终验收
+  source_docs:
+  - docs/01_项目重点与范围.md
+  - docs/06_系统模块边界.md
+  - docs/07_七核心智能体与平行Agent职责.md
+  - docs/08_联合决策状态机.md
+  - docs/14_测试与验收标准.md
+  - docs/35_自适应多策略RAG与路由Agent.md
+  - docs/36_平行Agent生产与审核架构.md
+  contracts:
+  - api/openapi.yaml
+  - api/internal_openapi.yaml
+  - api/internal_agent_interfaces.yaml
+  - contracts/jsonschema/agents/arbitration_output.schema.json
+  - contracts/jsonschema/services/shared_workflow_state.schema.json
+  reviewers:
+  - P2
+  - P3
+  - P4
+  - P9
+- member_code: P2
+  member: 李佳乐
+  role: Agent Runtime、RAG Router Agent、并行调度与仲裁实现
+  source_docs:
+  - docs/07_七核心智能体与平行Agent职责.md
+  - docs/08_联合决策状态机.md
+  - docs/15_AI辅助开发约束.md
+  - docs/35_自适应多策略RAG与路由Agent.md
+  - docs/36_平行Agent生产与审核架构.md
+  - docs/38_RetrievalTrace与Event事件规范.md
+  contracts:
+  - api/internal_openapi.yaml
+  - api/internal_agent_interfaces.yaml
+  - contracts/jsonschema/agents/rag_router_input.schema.json
+  - contracts/jsonschema/agents/rag_router_output.schema.json
+  - contracts/jsonschema/agents/arbitration_input.schema.json
+  - contracts/jsonschema/agents/arbitration_output.schema.json
+  - contracts/jsonschema/services/retrieval_plan.schema.json
+  - contracts/jsonschema/services/workflow_event.schema.json
+  reviewers:
+  - P1
+  - P5
+  - P7
+  - P9
+- member_code: P3
+  member: 杨欣怡
+  role: 诊断、学习路径、测评评价与学习者画像
+  source_docs:
+  - docs/07_七核心智能体与平行Agent职责.md
+  - docs/09_数据流与调用链.md
+  - docs/13_数据库与持久化约束.md
+  - docs/14_测试与验收标准.md
+  - docs/36_平行Agent生产与审核架构.md
+  contracts:
+  - contracts/jsonschema/agents/diagnosis_input.schema.json
+  - contracts/jsonschema/agents/diagnosis_output.schema.json
+  - contracts/jsonschema/agents/path_plan_input.schema.json
+  - contracts/jsonschema/agents/path_plan_output.schema.json
+  - contracts/jsonschema/agents/assessment_input.schema.json
+  - contracts/jsonschema/agents/assessment_output.schema.json
+  - contracts/jsonschema/agents/difficulty_review_output.schema.json
+  reviewers:
+  - P1
+  - P5
+  - P9
+- member_code: P4
+  member: 陈尧
+  role: 全站前端、用户体验、Agent/RAG 可观测性与数据可视化
+  source_docs:
+  - docs/12_前端页面接口依赖.md
+  - docs/18_演示与评测指标.md
+  - docs/21_端到端用户流程与接口审计.md
+  - docs/38_RetrievalTrace与Event事件规范.md
+  contracts:
+  - api/openapi.yaml
+  - contracts/typescript/contracts.ts
+  - contracts/jsonschema/services/workflow_event.schema.json
+  - contracts/jsonschema/services/retrieval_trace.schema.json
+  reviewers:
+  - P1
+  - P5
+  - P9
+- member_code: P5
+  member: 郑翘楚
+  role: 业务后端、Public API、权限、业务状态机与集成适配
+  source_docs:
+  - docs/06_系统模块边界.md
+  - docs/09_数据流与调用链.md
+  - docs/10_命名与字段契约.md
+  - docs/11_接口所有权与变更流程.md
+  - docs/13_数据库与持久化约束.md
+  contracts:
+  - api/openapi.yaml
+  - api/internal_openapi.yaml
+  - api/field_dictionary.yaml
+  - api/error_codes.yaml
+  - database/schema.sql
+  reviewers:
+  - P1
+  - P2
+  - P6
+  - P9
+- member_code: P6
+  member: 李汝萱
+  role: 数据库、版本、Event Store、Trace 与指标数据平台
+  source_docs:
+  - docs/13_数据库与持久化约束.md
+  - docs/23_标识符与关联键生命周期.md
+  - docs/25_异步任务轮询与状态规则.md
+  - docs/38_RetrievalTrace与Event事件规范.md
+  contracts:
+  - database/schema.sql
+  - database/migrations/007_adaptive_parallel_rag.sql
+  - api/field_dictionary.yaml
+  - contracts/jsonschema/services/workflow_event.schema.json
+  - contracts/jsonschema/services/retrieval_trace.schema.json
+  reviewers:
+  - P1
+  - P5
+  - P9
+- member_code: P7
+  member: 陈严谨
+  role: 知识库持续维护、检索执行器、Evidence Fusion 与 RAG 评测
+  source_docs:
+  - docs/32_预建专业知识库主线修订.md
+  - docs/33_企业级RAG知识库接入与验收.md
+  - docs/34_知识库交付清单与团队接入.md
+  - docs/35_自适应多策略RAG与路由Agent.md
+  - docs/37_知识库持续维护与版本发布.md
+  contracts:
+  - api/knowledge_domain_api.yaml
+  - api/internal_openapi.yaml
+  - contracts/jsonschema/services/retrieval_request.schema.json
+  - contracts/jsonschema/services/retrieval_plan.schema.json
+  - contracts/jsonschema/services/evidence_bundle.schema.json
+  - knowledge-bases/enterprise-rag-engineering-v2/contracts/knowledge-api.yaml
+  reviewers:
+  - P1
+  - P2
+  - P6
+  - P9
+- member_code: P8
+  member: X
+  role: 平行资源生成 Agent 与资源编排
+  source_docs:
+  - docs/07_七核心智能体与平行Agent职责.md
+  - docs/09_数据流与调用链.md
+  - docs/14_测试与验收标准.md
+  - docs/36_平行Agent生产与审核架构.md
+  contracts:
+  - contracts/jsonschema/agents/resource_input.schema.json
+  - contracts/jsonschema/agents/explanation_output.schema.json
+  - contracts/jsonschema/agents/practice_output.schema.json
+  - contracts/jsonschema/agents/quiz_draft_output.schema.json
+  - contracts/jsonschema/agents/resource_output.schema.json
+  - contracts/jsonschema/services/evidence_bundle.schema.json
+  reviewers:
+  - P1
+  - P3
+  - P7
+  - P9
+- member_code: P9
+  member: 斯汀
+  role: 平行审核 Agent、独立 Evals、质量门禁、发布与比赛材料
+  source_docs:
+  - docs/14_测试与验收标准.md
+  - docs/16_任务卡与PR规则.md
+  - docs/18_演示与评测指标.md
+  - docs/20_开发启动清单.md
+  - docs/36_平行Agent生产与审核架构.md
+  - docs/40_比赛提交映射与最终交付清单.md
+  contracts:
+  - contracts/jsonschema/agents/factuality_review_output.schema.json
+  - contracts/jsonschema/agents/difficulty_review_output.schema.json
+  - contracts/jsonschema/agents/assessment_review_output.schema.json
+  - contracts/jsonschema/agents/safety_review_output.schema.json
+  - contracts/jsonschema/agents/review_output.schema.json
+  - reports/final_validation_report.md
+  reviewers:
+  - P1
+  - P2
+  - P3
+  - P7

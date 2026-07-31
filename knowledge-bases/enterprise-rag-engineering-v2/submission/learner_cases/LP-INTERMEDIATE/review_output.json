@@ -1,0 +1,19 @@
+{
+  "review_id": "749fc210-80af-58af-a72c-25ef45d72a1d",
+  "proposal_id": "a9272815-1614-588c-9605-6705b8b67cee",
+  "reviewed_proposal_id": "d2d874dd-2746-56c5-add3-569dd5b367f2",
+  "review_result": "approved",
+  "overall_score": 92.0,
+  "checks": {
+    "schema_valid": true,
+    "evidence_supported": true,
+    "factual_consistent": true,
+    "no_conflict": true,
+    "answer_verifiable": true
+  },
+  "issues": [],
+  "repair_action": "none",
+  "repair_instructions": [],
+  "confidence": 0.9042,
+  "requires_human_review": false
+}

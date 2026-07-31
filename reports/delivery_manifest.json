@@ -1,0 +1,185 @@
+{
+  "package": "IanZhang-challenge-cup-adaptive-parallel-rag",
+  "version": "7.0.0",
+  "generated_at": "2026-07-31T14:55:48.819100Z",
+  "baseline_sources": [
+    {
+      "filename": "-IanZhang--main-2(1).zip",
+      "size_bytes": 2936617,
+      "sha256": "24ddce8e197eea826188c94af71b7586ad09c3e884ef40602f085d0b10624705"
+    },
+    {
+      "filename": "enterprise-rag-engineering-domain-pack-v1.1.zip",
+      "size_bytes": 1248025,
+      "sha256": "2b07768f39a77534849643a143458febe9c3c5a7332009c770474c217d69e9fc"
+    },
+    {
+      "filename": "RAG工程实训知识库_v1.0.zip",
+      "size_bytes": 493228,
+      "sha256": "37ca5214757fafeb25e3d0ce0071c46fec1089807b60f1917ad2796de5c694cb"
+    }
+  ],
+  "team_size": 9,
+  "architecture": {
+    "core_agents": 7,
+    "parallel_specialist_agents": 7,
+    "parallel_generation_branches": 3,
+    "parallel_review_branches": 4,
+    "final_authority": "single_arbitration_agent_plus_deterministic_backend_state_machine",
+    "knowledge_strategy": "prebuilt_versioned_maintainable_domain_pack"
+  },
+  "counts": {
+    "root_docs": 40,
+    "member_directories": 9,
+    "stage_task_cards": 72,
+    "member_packs": 9,
+    "root_json_schemas": 45,
+    "http_mock_operation_directories": 73,
+    "public_api_operations": 58,
+    "internal_api_operations": 15,
+    "knowledge_domain_api_operations": 11,
+    "knowledge_service_api_operations": 13
+  },
+  "knowledge_base": {
+    "status": "PASS",
+    "version": "2.0.0",
+    "package": "enterprise-rag-engineering-v2",
+    "content_validation": {
+      "status": "PASS",
+      "version": "2.0.0",
+      "errors": [],
+      "warnings": [],
+      "counts": {
+        "nodes": 93,
+        "edges": 252,
+        "chunks": 372,
+        "evidence": 372,
+        "questions": 372,
+        "tasks": 93,
+        "rubrics": 93,
+        "retrieval_eval_cases": 279,
+        "generation_eval_cases": 173,
+        "sources": 42,
+        "trusted_core_nodes": 32,
+        "trusted_ai_generated_nodes": 61,
+        "concept_cards": 93,
+        "faq": 279,
+        "error_cases": 186
+      },
+      "quality_layers": {
+        "trusted_core_full_coverage_rate": 1.0,
+        "trusted_ai_generated_basic_coverage_rate": 1.0,
+        "trusted_ai_generated_task_rubric_coverage_rate": 1.0,
+        "all_runtime_chunks_have_evidence": true
+      },
+      "governance": {
+        "imported_nodes_runtime_enabled": true,
+        "imported_nodes_review_status": "pending_team_review",
+        "published_version_is_immutable": true
+      }
+    },
+    "retrieval_baseline": {
+      "evaluator": "bm25_char_ngram_metadata_baseline",
+      "knowledge_base_version_id": "cd9998d7-e5d0-5722-b1fa-266d99162266",
+      "case_count": 279,
+      "hit_rate_at_1": 0.9427,
+      "hit_rate_at_5": 1.0,
+      "mean_reciprocal_rank": 0.9682,
+      "target_hit_rate_at_5": 0.9,
+      "target_met": true,
+      "limitations": "词法+元数据基线；不代表稠密向量、重排器或真实生成模型的最终质量。"
+    },
+    "automated_tests": {
+      "pytest": "13 passed",
+      "compatibility_artifacts": 24,
+      "learner_cases": 3,
+      "database_dry_run": "PASS"
+    },
+    "honesty_limits": [
+      "未接入最终生产embedding与reranker",
+      "未实测最终生成模型幻觉率",
+      "未实测最终画像—资源难度适配率",
+      "trusted_ai_generated内容仍待团队逐项复核"
+    ]
+  },
+  "key_files": [
+    {
+      "path": "README.md",
+      "sha256": "4d081a35795e7cfdb47d725ee4cf3f2fbf9110b5183df2425292621ee84675f6",
+      "size_bytes": 3338
+    },
+    {
+      "path": "DELIVERY.md",
+      "sha256": "fc6b30c02f0860442760a53b286c69cc5bb3ecad72b34e809e1465ce36d2399c",
+      "size_bytes": 2253
+    },
+    {
+      "path": "docs/01_项目重点与范围.md",
+      "sha256": "865e875ca359dffbd39c69081ff170561d5f2a8d8738080a25b2222256e6368f",
+      "size_bytes": 1509
+    },
+    {
+      "path": "docs/02_团队总分工.md",
+      "sha256": "f378d3e13666a4aa5a5020e2319c254936dc6733ad8f22ed4c15fb583f96538d",
+      "size_bytes": 4145
+    },
+    {
+      "path": "docs/07_七核心智能体与平行Agent职责.md",
+      "sha256": "1c69ca0fb87bfd334aeca4e96fbb9bae5eaa6399426f9daf6079265c63722dcf",
+      "size_bytes": 1412
+    },
+    {
+      "path": "docs/35_自适应多策略RAG与路由Agent.md",
+      "sha256": "b4dd855eee0ac0b42db58dc0e14ea7e1c42f31b9af6a948afcaa906ff2d81348",
+      "size_bytes": 1155
+    },
+    {
+      "path": "docs/36_平行Agent生产与审核架构.md",
+      "sha256": "35ddde9afbcc561cd1b07fcb151a7bfff2fac5023b74449ddd1a50e254d5842f",
+      "size_bytes": 948
+    },
+    {
+      "path": "api/openapi.yaml",
+      "sha256": "ea7ec81b0ad7e28ebce7722be36aab3436a0b4b7ac6b43c75578d33869527507",
+      "size_bytes": 98523
+    },
+    {
+      "path": "api/internal_openapi.yaml",
+      "sha256": "73e69f0152e0f27b0c648396dcd818a00f1c67cb910ec6f923a170daeb7f01dc",
+      "size_bytes": 23751
+    },
+    {
+      "path": "database/schema.sql",
+      "sha256": "af6f6e66285cc81c94fd0772c94631b0bac10134bdae4cf929b38426a619f46a",
+      "size_bytes": 20498
+    },
+    {
+      "path": "project/agent_blueprint.yaml",
+      "sha256": "55e40fedd70f6b5056b3bba07c499a580585e28bcd4fe7a21f7645215da820e7",
+      "size_bytes": 1463
+    },
+    {
+      "path": "project/learning_workflow.yaml",
+      "sha256": "efb1c385f64bd92b8dcd7bfa8e6149b2f8deb1089572585dbcdb86e72354254c",
+      "size_bytes": 2588
+    },
+    {
+      "path": "reports/final_validation_report.md",
+      "sha256": "8abda1578a79220f03c359b09d7b4ecbe8a54e6bf27b16f9c5162b6ef027a42e",
+      "size_bytes": 2870
+    },
+    {
+      "path": "knowledge-bases/enterprise-rag-engineering-v2/README.md",
+      "sha256": "9828b7b73748129ebae6342963f197775ec103c0ad443bb839a3bce6cec647cf",
+      "size_bytes": 2060
+    }
+  ],
+  "validation": {
+    "root_contracts": "PASS",
+    "knowledge_pack": "PASS",
+    "knowledge_tests": "13/13 PASS",
+    "member_pack_zip_integrity": "9/9 PASS",
+    "prototype_javascript": "PASS",
+    "known_limitations": "reports/known_limitations.md"
+  }
+}

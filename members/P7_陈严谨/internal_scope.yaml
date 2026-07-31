@@ -1,11 +1,21 @@
+version: 7.0.0
+member_code: P7
 member: 陈严谨
-owner_interfaces: []
-design_owner_interfaces: []
-consumer_interfaces: []
-boundary_numbers:
-- 2
-- 3
-- 6
-- 7
-- 26
-interface_definitions: {}
+contracts:
+- api/knowledge_domain_api.yaml
+- api/internal_openapi.yaml
+- contracts/jsonschema/services/retrieval_request.schema.json
+- contracts/jsonschema/services/retrieval_plan.schema.json
+- contracts/jsonschema/services/evidence_bundle.schema.json
+- knowledge-bases/enterprise-rag-engineering-v2/contracts/knowledge-api.yaml
+source_docs:
+- docs/32_预建专业知识库主线修订.md
+- docs/33_企业级RAG知识库接入与验收.md
+- docs/34_知识库交付清单与团队接入.md
+- docs/35_自适应多策略RAG与路由Agent.md
+- docs/37_知识库持续维护与版本发布.md
+reviewers:
+- P1
+- P2
+- P6
+- P9

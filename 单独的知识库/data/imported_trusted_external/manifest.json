@@ -1,0 +1,17 @@
+{
+  "candidate_extension_id": "45d9563c-f681-5f08-8019-0ee33f8e2d69",
+  "origin_package_id": "rag_engineering_competition_v1",
+  "origin_version": "1.0.0",
+  "content_status": "candidate",
+  "expert_review_status": "pending_review",
+  "default_retrieval_enabled": false,
+  "counts": {
+    "sources": 28,
+    "subtopics": 61,
+    "edges": 100,
+    "chunks": 244,
+    "questions": 183,
+    "tasks": 15,
+    "evaluation_cases": 141
+  }
+}

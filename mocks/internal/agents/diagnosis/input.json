@@ -1,0 +1,51 @@
+{
+  "schema_version": "7.0",
+  "run_id": "ba7693f3-8e89-4db6-93b4-2a155539233e",
+  "workflow_run_id": "83cdb9f5-c707-49e7-95fe-1eea5b75c9c6",
+  "session_id": "f5046de4-e5c5-45ba-9e52-e441ca63fcd7",
+  "organization_id": "19076c52-a6fa-4415-8d9b-24f25388590a",
+  "learner_id": "75737a32-0cd4-44b3-8d44-109e2e71e01f",
+  "agent_name": "example",
+  "task_type": "example",
+  "context_refs": [
+    {
+      "ref_type": "example",
+      "ref_id": "example"
+    }
+  ],
+  "constraints": {},
+  "requested_at": "2026-07-31T12:00:00Z",
+  "learner_snapshot": {
+    "profile_snapshot_id": "fc929104-708b-4d9a-b4b6-4b55ef6d6a1a",
+    "background": {},
+    "learning_goals": [
+      "example"
+    ],
+    "preferences": [
+      "example"
+    ],
+    "mastery_items": [
+      {
+        "knowledge_node_id": "example",
+        "mastery_score": 0.5,
+        "confidence": 0.5,
+        "evidence_refs": [
+          {
+            "evidence_id": "f76fd6c6-c297-420b-9d3b-468a22d1c8bd",
+            "knowledge_node_id": "example"
+          }
+        ]
+      }
+    ],
+    "risk_flags": [
+      "example"
+    ]
+  },
+  "pretest_results": [
+    {}
+  ],
+  "behavior_summary": {},
+  "target_knowledge_node_ids": [
+    "example"
+  ]
+}

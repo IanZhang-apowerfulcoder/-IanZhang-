@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KnowledgeImportResult",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "import_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "validated",
+        "rejected",
+        "imported",
+        "needs_review"
+      ]
+    },
+    "created_node_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "updated_node_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "chunk_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "question_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "task_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "minItems": 0
+    },
+    "review_item_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "minItems": 0
+    },
+    "candidate_version_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "import_id",
+    "status",
+    "created_node_count",
+    "updated_node_count",
+    "chunk_count",
+    "question_count",
+    "task_count",
+    "conflicts",
+    "review_item_ids",
+    "candidate_version_id"
+  ]
+}

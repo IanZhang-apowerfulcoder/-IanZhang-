@@ -1,153 +1,131 @@
-member: 陈尧
+version: 7.0.0
 member_code: P4
-role: 前端架构、联合决策可视化与评测分析
-level: 核心成员
-mentor: null
-reviewers:
-- 张英赫
-required_reading:
-- README.md
-- CONTRIBUTING.md
-- docs/01_项目重点与范围.md
-- docs/06_系统模块边界.md
-- docs/10_命名与字段契约.md
-- docs/11_接口所有权与变更流程.md
-- docs/14_测试与验收标准.md
-- docs/15_AI辅助开发约束.md
-- docs/16_任务卡与PR规则.md
-- docs/21_端到端用户流程与接口审计.md
-- docs/22_跨模块数据传输契约矩阵.md
-- docs/23_标识符与关联键生命周期.md
-- docs/25_异步任务轮询与状态规则.md
-- docs/26_字段冻结清单.md
-- docs/28_九成员开发文件总教程.md
+member: 陈尧
+role: 全站前端、用户体验、Agent/RAG 可观测性与数据可视化
+owns:
+- 学员端
+- 管理端
+- 知识维护台
+- Agent 工作流观测台
+- Retrieval Trace
+- 并行分支可视化
+- 画像与路径图
+- 统一 UI 组件与前端 E2E
+not_owns:
+- 前端直连数据库或模型
+- 私自定义公共字段
+- 在页面中伪造后端状态
+source_docs:
 - docs/12_前端页面接口依赖.md
 - docs/18_演示与评测指标.md
+- docs/21_端到端用户流程与接口审计.md
+- docs/38_RetrievalTrace与Event事件规范.md
+contracts:
 - api/openapi.yaml
-- mocks/http/index.yaml
-- project/boundary_contract_manifest.yaml
-api_scope:
-  contract_owner_operations:
-  - get_agent_metrics
-  implementation_owner_operations: []
-  consumer_operations:
-  - get_agent_metrics
-  - get_agent_run
-  - get_current_action
-  - get_decision_cycle
-  - get_decision_trace
-  - get_evidence
-  - get_human_review_task
-  - get_knowledge_graph
-  - get_latest_decision
-  - get_learner_profile
-  - get_learning_path
-  - get_learning_session
-  - get_quality_report
-  - list_decision_cycles
-  - list_human_review_tasks
-  - list_learning_sessions
-  - list_profile_history
-  - list_session_events
-internal_scope:
-  member: 陈尧
-  owner_interfaces: []
-  design_owner_interfaces: []
-  consumer_interfaces:
-  - diagnosis_agent
-  - path_planning_agent
-  - resource_generation_agent
-  - assessment_agent
-  - review_agent
-  - arbitration_agent
-  boundary_numbers:
-  - 20
-  - 27
-  interface_definitions:
-    arbitration_agent:
-      owner: 张英赫
-      design_owner: 张英赫
-      function_name: run_arbitration
-      input: arbitration_input.schema.json
-      output: arbitration_output.schema.json
-      timeout_seconds: 60
-      max_retries: 1
-      input_schema: contracts/jsonschema/agents/arbitration_input.schema.json
-      output_schema: contracts/jsonschema/agents/arbitration_output.schema.json
-      contract_status: frozen_v6
-    assessment_agent:
-      owner: 李汝萱
-      design_owner: 杨欣怡
-      function_name: run_assessment_generation
-      input: assessment_input.schema.json
-      output: assessment_output.schema.json
-      timeout_seconds: 60
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/assessment_input.schema.json
-      output_schema: contracts/jsonschema/agents/assessment_output.schema.json
-      contract_status: frozen_v6
-    diagnosis_agent:
-      owner: 杨欣怡
-      design_owner: 杨欣怡
-      function_name: run_diagnosis
-      input: diagnosis_input.schema.json
-      output: diagnosis_output.schema.json
-      timeout_seconds: 45
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/diagnosis_input.schema.json
-      output_schema: contracts/jsonschema/agents/diagnosis_output.schema.json
-      contract_status: frozen_v6
-    path_planning_agent:
-      owner: 杨欣怡
-      design_owner: 杨欣怡
-      function_name: run_path_planning
-      input: path_plan_input.schema.json
-      output: path_plan_output.schema.json
-      timeout_seconds: 45
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/path_plan_input.schema.json
-      output_schema: contracts/jsonschema/agents/path_plan_output.schema.json
-      contract_status: frozen_v6
-    resource_generation_agent:
-      owner: 郑翘楚
-      design_owner: 杨欣怡
-      function_name: run_resource_generation
-      input: resource_input.schema.json
-      output: resource_output.schema.json
-      timeout_seconds: 60
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/resource_input.schema.json
-      output_schema: contracts/jsonschema/agents/resource_output.schema.json
-      contract_status: frozen_v6
-    review_agent:
-      owner: 李佳乐
-      design_owner: 李佳乐
-      function_name: run_review
-      input: review_input.schema.json
-      output: review_output.schema.json
-      timeout_seconds: 45
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/review_input.schema.json
-      output_schema: contracts/jsonschema/agents/review_output.schema.json
-      contract_status: frozen_v6
-allowed_modules:
-- apps/web/**
-- contracts/typescript/**
-- mocks/**
-- docs/**
-forbidden_actions:
-- 前端直接解析模型原始输出
-- 绕过公开接口读取后端数据库
-phase_tasks:
-- 阶段0：冻结页面地图、展示模型和图表字段
-- 阶段1：建立前端骨架、请求层和Mock页面
-- 阶段2：知识质量、图谱和引用可视化
-- 阶段3：画像和学习路径可视化
-- 阶段4：资源和测评展示审核
-- 阶段5：时间线、分歧、证据链和仲裁可视化
-- 阶段6：指标看板与演示图表
-- 阶段7：演示与答辩素材
-mock_index: members/P4_陈尧/mock_index.yaml
-openapi_scope: members/P4_陈尧/openapi_scope.yaml
-internal_scope_file: members/P4_陈尧/internal_scope.yaml
-contract_status: frozen_v6
+- contracts/typescript/contracts.ts
+- contracts/jsonschema/services/workflow_event.schema.json
+- contracts/jsonschema/services/retrieval_trace.schema.json
+reviewers:
+- P1
+- P5
+- P9
+stage_tasks:
+  S0:
+    items:
+    - 冻结页面地图、展示模型和可视化字段
+    - 定义 Agent/RAG Trace 交互
+    deliverables:
+    - 页面规格
+    - 图表字段表
+    acceptance:
+    - 所有页面绑定正式 API
+    - 不展示隐藏推理
+    - 状态来自后端事件
+    dependencies:
+    - P1
+    - P5
+  S1:
+    items:
+    - 搭建全站前端壳、请求层和 Mock Server
+    - 完成学员端/管理端基础流程
+    deliverables:
+    - 前端骨架
+    - Mock 页面
+    acceptance:
+    - 所有页面有 loading/empty/error/success
+    - 无直接本地 JSON 读取
+    dependencies:
+    - P5
+  S2:
+    items:
+    - 完成知识库浏览、版本、审核队列、图谱和检索测试页面
+    deliverables:
+    - 知识维护台
+    acceptance:
+    - 93 节点可筛选
+    - 来源和审核状态可见
+    - 版本操作需权限
+    dependencies:
+    - P7
+  S3:
+    items:
+    - 实现 Retrieval Plan、并行策略、Evidence Fusion、补检索时间线
+    deliverables:
+    - RAG Trace 页面
+    acceptance:
+    - 策略原因可见
+    - 并行分支与实际 Event 一致
+    - 回放顺序稳定
+    dependencies:
+    - P2
+    - P6
+    - P7
+  S4:
+    items:
+    - 实现画像、路径、三类资源、测评与进度页面
+    deliverables:
+    - 学员端完整页面
+    acceptance:
+    - 三种资源清晰分区
+    - 引用可打开
+    - 未提交前不泄漏答案
+    dependencies:
+    - P3
+    - P8
+  S5:
+    items:
+    - 实现四维审核、分歧、修订、仲裁和人工审核页面
+    deliverables:
+    - 决策观测台
+    acceptance:
+    - PASS/REVISE/REJECT 清晰
+    - 被拒方案可追溯
+    - 唯一最终决策突出显示
+    dependencies:
+    - P2
+    - P9
+  S6:
+    items:
+    - 响应式、性能、无障碍、E2E 和演示视觉优化
+    deliverables:
+    - 前端质量报告
+    acceptance:
+    - 核心 Web Vitals 达标或有记录
+    - E2E 主流程 100%
+    - 小屏不阻断主流程
+    dependencies:
+    - P5
+    - P9
+  S7:
+    items:
+    - 冻结前端构建
+    - 准备演示账号和离线回放页面
+    deliverables:
+    - 生产构建
+    - 演示操作脚本
+    acceptance:
+    - 构建无错误
+    - 离线回放不依赖模型
+    dependencies:
+    - P1
+    - P9

@@ -1,14 +1,4 @@
 {
-  "operation_id": "get_agent_metrics",
-  "method": "GET",
-  "path_template": "/api/v1/organizations/{organization_id}/metrics/agents",
-  "path_params": {
-    "organization_id": "11111111-1111-4111-8111-111111111111"
-  },
-  "query_params": {},
-  "headers": {
-    "Authorization": "Bearer mock_access_token"
-  },
-  "content_type": null,
-  "body": null
+  "request_id": "00000000-0000-4000-8000-000000000001",
+  "operation_id": "get_agent_metrics"
 }

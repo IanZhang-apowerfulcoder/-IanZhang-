@@ -1,0 +1,33 @@
+python scripts/validate_v7_contracts.py
+V7 CONTRACT VALIDATION
+========================================================================
+agent_mock_documents_validated: 28
+agent_modules: 14
+http_mock_operations: 73
+json_files: 435
+json_schemas: 45
+kb_chunks: 372
+kb_edges: 252
+kb_evidence: 372
+kb_generation_eval_cases: 173
+kb_nodes: 93
+kb_questions: 372
+kb_retrieval_eval_cases: 279
+kb_rubrics: 93
+kb_sources: 42
+kb_tasks: 93
+members: 9
+operations:internal_openapi.yaml: 15
+operations:knowledge-api.yaml: 13
+operations:knowledge_domain_api.yaml: 11
+operations:openapi.yaml: 58
+python_files_compiled: 21
+required_docs_checked: 32
+stage_task_cards: 72
+yaml_files: 60
+warnings: 0
+errors: 0
+RESULT: PASS
+PYTHONPATH=knowledge-bases/enterprise-rag-engineering-v2 pytest -q knowledge-bases/enterprise-rag-engineering-v2/tests
+.............                                                            [100%]
+13 passed in 1.28s

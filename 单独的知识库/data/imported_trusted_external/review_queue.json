@@ -1,0 +1,1100 @@
+[
+  {
+    "candidate_subtopic_id": "EXT-RAG-rag_definition",
+    "name": "RAG基本定义",
+    "mapped_knowledge_node_id": "RAG-M01-N01",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-rag_end_to_end_architecture",
+    "name": "RAG端到端架构",
+    "mapped_knowledge_node_id": "RAG-M01-N02",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-parametric_nonparametric_memory",
+    "name": "参数记忆与外部记忆",
+    "mapped_knowledge_node_id": "RAG-M01-N01",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-rag_applicability",
+    "name": "RAG适用性判断",
+    "mapped_knowledge_node_id": "RAG-M01-N04",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-rag_failure_taxonomy",
+    "name": "RAG失败类型",
+    "mapped_knowledge_node_id": "RAG-M01-N02",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-knowledge_source_selection",
+    "name": "知识源选择",
+    "mapped_knowledge_node_id": "RAG-M02-N01",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-source_authority_provenance",
+    "name": "来源权威性与溯源",
+    "mapped_knowledge_node_id": "RAG-M02-N01",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-versioning_freshness",
+    "name": "版本与时效治理",
+    "mapped_knowledge_node_id": "RAG-M02-N04",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-licensing_compliance",
+    "name": "许可与合规",
+    "mapped_knowledge_node_id": "RAG-M02-N01",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-access_control_tenant_isolation",
+    "name": "权限过滤与多租户隔离",
+    "mapped_knowledge_node_id": "RAG-M04-N02",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-document_parsing",
+    "name": "文档解析",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-layout_table_extraction",
+    "name": "版面与表格提取",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-text_cleaning_normalization",
+    "name": "文本清洗与规范化",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-deduplication",
+    "name": "内容去重",
+    "mapped_knowledge_node_id": "RAG-M02-N02",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-document_quality_checks",
+    "name": "文档质量门禁",
+    "mapped_knowledge_node_id": "RAG-M02-N04",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-chunking_objectives",
+    "name": "文档切分目标",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-fixed_window_chunking",
+    "name": "固定窗口切分",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-structure_aware_chunking",
+    "name": "结构感知切分",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-semantic_chunking",
+    "name": "语义切分",
+    "mapped_knowledge_node_id": "RAG-M02-N03",
+    "priority": "P2",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-parent_child_multigranular",
+    "name": "父子与多粒度检索",
+    "mapped_knowledge_node_id": "RAG-M07-N01",
+    "priority": "P2",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-metadata_schema",
+    "name": "元数据Schema设计",
+    "mapped_knowledge_node_id": "RAG-M02-N04",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-embedding_fundamentals",
+    "name": "文本嵌入基础",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-embedding_model_selection",
+    "name": "嵌入模型选择",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-similarity_metrics",
+    "name": "向量相似度与归一化",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 2,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-vector_index_hnsw_ivf",
+    "name": "向量索引与近似最近邻",
+    "mapped_knowledge_node_id": "RAG-M03-N02",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-bm25_sparse_retrieval",
+    "name": "BM25与稀疏检索",
+    "mapped_knowledge_node_id": "RAG-M03-N03",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-dense_retrieval",
+    "name": "稠密语义检索",
+    "mapped_knowledge_node_id": "RAG-M03-N01",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-hybrid_retrieval",
+    "name": "混合检索",
+    "mapped_knowledge_node_id": "RAG-M03-N04",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-metadata_filtering",
+    "name": "元数据过滤",
+    "mapped_knowledge_node_id": "RAG-M04-N02",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-multi_query_expansion",
+    "name": "多查询与查询扩展",
+    "mapped_knowledge_node_id": "RAG-M04-N01",
+    "priority": "P2",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-query_rewriting",
+    "name": "查询改写",
+    "mapped_knowledge_node_id": "RAG-M04-N01",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-hyde_retrieval",
+    "name": "HyDE假设文档检索",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "priority": "P2",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-cross_encoder_reranking",
+    "name": "交叉编码器重排序",
+    "mapped_knowledge_node_id": "RAG-M04-N03",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-colbert_late_interaction",
+    "name": "ColBERT晚交互检索",
+    "mapped_knowledge_node_id": "RAG-M04-N03",
+    "priority": "P2",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-diversity_mmr",
+    "name": "MMR多样性选择",
+    "mapped_knowledge_node_id": "RAG-M04-N03",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-rank_fusion_rrf",
+    "name": "RRF名次融合",
+    "mapped_knowledge_node_id": "RAG-M03-N04",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-context_selection_budget",
+    "name": "上下文选择与Token预算",
+    "mapped_knowledge_node_id": "RAG-M04-N04",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-lost_in_the_middle",
+    "name": "长上下文位置效应",
+    "mapped_knowledge_node_id": "RAG-M04-N04",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-prompt_grounding",
+    "name": "证据约束提示词",
+    "mapped_knowledge_node_id": "RAG-M05-N01",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 2,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-answer_abstention",
+    "name": "拒答与不确定性",
+    "mapped_knowledge_node_id": "RAG-M05-N02",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-citation_generation_verification",
+    "name": "引用生成与验证",
+    "mapped_knowledge_node_id": "RAG-M05-N01",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 2,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-hallucination_types",
+    "name": "幻觉类型与根因",
+    "mapped_knowledge_node_id": "RAG-M05-N03",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-evidence_entailment",
+    "name": "证据支持关系检查",
+    "mapped_knowledge_node_id": "RAG-M05-N03",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-review_correction_loop",
+    "name": "审核与纠偏闭环",
+    "mapped_knowledge_node_id": "RAG-M05-N03",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-prompt_injection_defense",
+    "name": "提示词注入防护",
+    "mapped_knowledge_node_id": "RAG-M05-N04",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-sensitive_data_privacy",
+    "name": "敏感数据与隐私保护",
+    "mapped_knowledge_node_id": "RAG-M05-N04",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-retrieval_metrics",
+    "name": "检索评测指标",
+    "mapped_knowledge_node_id": "RAG-M06-N01",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-generation_metrics",
+    "name": "生成质量指标",
+    "mapped_knowledge_node_id": "RAG-M06-N02",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-end_to_end_evaluation",
+    "name": "端到端RAG评测",
+    "mapped_knowledge_node_id": "RAG-M06-N03",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-golden_dataset_design",
+    "name": "黄金评测集设计",
+    "mapped_knowledge_node_id": "RAG-M06-N03",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-online_monitoring_feedback",
+    "name": "在线监控与反馈",
+    "mapped_knowledge_node_id": "RAG-M06-N04",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-agentic_rag",
+    "name": "Agentic RAG",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "priority": "P2",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-self_rag",
+    "name": "Self-RAG自反思检索生成",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "priority": "P2",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 0,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-corrective_rag",
+    "name": "Corrective RAG",
+    "mapped_knowledge_node_id": "RAG-M07-N03",
+    "priority": "P2",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-graph_rag",
+    "name": "Graph RAG",
+    "mapped_knowledge_node_id": "RAG-M07-N02",
+    "priority": "P2",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-tool_routing_multi_source",
+    "name": "多源路由与工具选择",
+    "mapped_knowledge_node_id": "RAG-M07-N04",
+    "priority": "P2",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-observability_tracing",
+    "name": "可观测性与链路追踪",
+    "mapped_knowledge_node_id": "RAG-M06-N04",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-latency_cost_optimization",
+    "name": "延迟与成本优化",
+    "mapped_knowledge_node_id": "RAG-M08-N03",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-caching_idempotency",
+    "name": "缓存与幂等",
+    "mapped_knowledge_node_id": "RAG-M08-N02",
+    "priority": "P1",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-deployment_fallback",
+    "name": "部署与降级",
+    "mapped_knowledge_node_id": "RAG-M08-N04",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  },
+  {
+    "candidate_subtopic_id": "EXT-RAG-continuous_updates_regression",
+    "name": "持续更新与回归",
+    "mapped_knowledge_node_id": "RAG-M06-N03",
+    "priority": "P0",
+    "chunk_count": 4,
+    "question_count": 3,
+    "task_reference_count": 1,
+    "required_review": [
+      "source_match",
+      "technical_accuracy",
+      "boundary_accuracy",
+      "question_quality"
+    ],
+    "decision": "pending",
+    "reviewer": null,
+    "reviewed_at": null
+  }
+]

@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "complexity_case_id": "complexity_001",
+      "knowledge_node_id": "rag_end_to_end_architecture",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "建议为每次请求创建correlation_id，并保存query、retrieved_chunk_ids、scores、reranked_order、prompt_version、model_version、answer和latency。离线索引也要记录knowledge_base_version_id，保证结果可复现。",
+        "只记录最终答案会导致故障无法定位；知识库更新后不做回归，会出现旧问题突然失效；离线与在线使用不同切分或嵌入版本也会造成不一致。"
+      ],
+      "optimization_boundary": "比赛原型可将模块部署在同一后端中，但接口和数据边界仍应明确；商业化后再按吞吐、隔离和运维需求拆分服务。",
+      "evidence_chunk_ids": [
+        "chunk_rag_end_to_end_architecture_engineering",
+        "chunk_rag_end_to_end_architecture_pitfalls",
+        "chunk_rag_end_to_end_architecture_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_002",
+      "knowledge_node_id": "structure_aware_chunking",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "解析器先输出文档树，再按节点大小合并或拆分；标题路径加入metadata或上下文前缀；表格和代码块原则上保持完整。",
+        "标题解析错误会放大到所有片段；只按标题切分可能产生极短或超长块；将标题重复写入正文会增加索引噪声。"
+      ],
+      "optimization_boundary": "对结构清晰的手册、课程、API文档和制度文件优先采用；对无结构聊天记录可退回语义或窗口切分。",
+      "evidence_chunk_ids": [
+        "chunk_structure_aware_chunking_engineering",
+        "chunk_structure_aware_chunking_pitfalls",
+        "chunk_structure_aware_chunking_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_003",
+      "knowledge_node_id": "semantic_chunking",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "先分句并生成局部嵌入，使用阈值或聚类寻找边界；必须设置长度上下限和结构保护规则，并在目标查询集上验证收益。",
+        "阈值对领域和模型敏感；计算成本高；对短句、列表和代码语义不稳定；如果缺少结构约束，可能生成大小极不均匀的片段。"
+      ],
+      "optimization_boundary": "适合主题连续但标题稀疏的长文本。若结构感知切分已表现良好，不应仅为“高级”而引入语义切分。",
+      "evidence_chunk_ids": [
+        "chunk_semantic_chunking_engineering",
+        "chunk_semantic_chunking_pitfalls",
+        "chunk_semantic_chunking_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_004",
+      "knowledge_node_id": "embedding_model_selection",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "建立小规模A/B：同一语料、同一切分和索引，比较Recall@K、MRR、延迟、存储和成本；对中文和中英混合查询单独统计。",
+        "只选排行榜第一名可能在本领域退化；更高维度增加存储但不保证更好；模型升级未重建索引会导致查询与文档向量不兼容。"
+      ],
+      "optimization_boundary": "比赛原型可选一个稳定多语模型作为基线，商业部署再根据数据与隐私决定API或本地模型。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_model_selection_engineering",
+        "chunk_embedding_model_selection_pitfalls",
+        "chunk_embedding_model_selection_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_005",
+      "knowledge_node_id": "vector_index_hnsw_ivf",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "用固定查询集测量Recall@K、P95延迟、索引构建时间和内存；分别调节HNSW的构建/搜索参数或IVF的探测数量；保留精确搜索作为上限对照。",
+        "只测延迟不测召回会得到“快但错”的索引；索引参数从样例数据复制到生产规模可能失效；删除和增量更新策略也需验证。"
+      ],
+      "optimization_boundary": "数据量较小时优先简单精确方案；规模增长后再采用ANN。索引选择还受过滤条件、更新频率和部署平台影响。",
+      "evidence_chunk_ids": [
+        "chunk_vector_index_hnsw_ivf_engineering",
+        "chunk_vector_index_hnsw_ivf_pitfalls",
+        "chunk_vector_index_hnsw_ivf_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_006",
+      "knowledge_node_id": "hybrid_retrieval",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "分别运行BM25与向量检索，保留各自top_k和通道信息；先用RRF建立稳定基线，再通过标注查询调整权重；融合后仍需去重和重排。",
+        "直接相加不同尺度分数会产生偏置；固定权重可能只适合某类查询；两个通道都返回同一错误来源时，融合不会自动纠正。"
+      ],
+      "optimization_boundary": "混合检索适合企业文档、代码和术语混合场景。语料很小或查询单一时，复杂融合可能没有明显收益。",
+      "evidence_chunk_ids": [
+        "chunk_hybrid_retrieval_engineering",
+        "chunk_hybrid_retrieval_pitfalls",
+        "chunk_hybrid_retrieval_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_007",
+      "knowledge_node_id": "cross_encoder_reranking",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "先召回20至100个候选，再批量重排到最终top_n；在目标语种和领域上评测；记录reranker_model_version与重排分数。",
+        "候选阶段没有召回正确证据，重排无法补救；候选太多会增加延迟；分数阈值需要校准，不能当成事实可信度。"
+      ],
+      "optimization_boundary": "高价值问答和证据要求严格的场景优先使用；极低延迟或大批量查询可只在困难查询上启用。",
+      "evidence_chunk_ids": [
+        "chunk_cross_encoder_reranking_engineering",
+        "chunk_cross_encoder_reranking_pitfalls",
+        "chunk_cross_encoder_reranking_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_008",
+      "knowledge_node_id": "context_selection_budget",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "先过滤低权威和重复候选，再按预算选取；为每段添加稳定引用编号和简短标题；保留问题、任务规则和证据之间清晰分隔。",
+        "片段越多不一定越好，噪声会干扰模型；只按相似度选取可能缺少关键约束；截断时如果从末尾直接裁剪会破坏完整证据。"
+      ],
+      "optimization_boundary": "高风险任务应减少证据数量并提高质量；综合报告可以使用分步摘要或多轮检索，而不是一次塞入全部资料。",
+      "evidence_chunk_ids": [
+        "chunk_context_selection_budget_engineering",
+        "chunk_context_selection_budget_pitfalls",
+        "chunk_context_selection_budget_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_009",
+      "knowledge_node_id": "evidence_entailment",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "将答案拆成原子结论，逐条关联引用；使用规则和评审模型检查数字、否定、范围和条件；对冲突来源按权威与版本裁决。",
+        "长答案不拆分会让一个正确引用掩盖其他无依据结论；模型评审对细微数值和逻辑条件可能不稳定；没有人工样本就无法校准。"
+      ],
+      "optimization_boundary": "低风险内容可以自动通过，高风险结论需双重验证或人工确认。证据检查不等同于来源本身真实，来源治理仍是前提。",
+      "evidence_chunk_ids": [
+        "chunk_evidence_entailment_engineering",
+        "chunk_evidence_entailment_pitfalls",
+        "chunk_evidence_entailment_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_010",
+      "knowledge_node_id": "agentic_rag",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "使用状态机限制步骤、工具和重试；每步输出结构化action、evidence和reason；设置预算、超时和人工介入；保留完整轨迹。",
+        "没有停止条件会循环；智能体可能选择错误工具或把生成内容当证据；自由文本通信难以验证和回放。"
+      ],
+      "optimization_boundary": "简单FAQ不需要Agentic RAG。仅在多源、复杂任务或证据不足需迭代时使用，并与固定流程基线比较。",
+      "evidence_chunk_ids": [
+        "chunk_agentic_rag_engineering",
+        "chunk_agentic_rag_pitfalls",
+        "chunk_agentic_rag_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_011",
+      "knowledge_node_id": "graph_rag",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "先定义实体与关系Schema，再做抽取、消歧和证据绑定；对局部问题使用邻域检索，对全局问题使用社区或摘要；建立图质量评测。",
+        "实体重复、关系方向错误和抽取幻觉会污染图；全量图构建成本高；图查询并不一定优于混合文本检索。"
+      ],
+      "optimization_boundary": "关系密集、跨文档推理需求明确时才采用。RAG工程实训本身可将知识点前置关系做轻量图，无需一开始构建复杂企业知识图谱。",
+      "evidence_chunk_ids": [
+        "chunk_graph_rag_engineering",
+        "chunk_graph_rag_pitfalls",
+        "chunk_graph_rag_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_012",
+      "knowledge_node_id": "tool_routing_multi_source",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "为每个工具定义输入Schema、权限、超时和返回证据格式；先用规则处理明确意图，再用模型处理歧义；融合结果时统一evidence_id。",
+        "把所有数据源都交给模型自由选择会增加越权和不可控风险；工具返回错误若不校验会被当成事实；多源冲突需要裁决。"
+      ],
+      "optimization_boundary": "比赛阶段可实现少量受控工具路由，商业化后再增加企业连接器。写操作必须与只读检索分离并增加审批。",
+      "evidence_chunk_ids": [
+        "chunk_tool_routing_multi_source_engineering",
+        "chunk_tool_routing_multi_source_pitfalls",
+        "chunk_tool_routing_multi_source_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_013",
+      "knowledge_node_id": "observability_tracing",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "为请求生成trace_id或correlation_id，每个组件创建span；记录模型、提示词、索引和知识库版本；敏感内容用哈希或受控采样。",
+        "只记录文本日志难以串联并发调用；记录全部提示词可能泄露企业数据；没有统一时间和编号会让跨服务排查困难。"
+      ],
+      "optimization_boundary": "比赛原型至少应展示决策轨迹和证据链；生产系统再接入标准可观测平台与告警。",
+      "evidence_chunk_ids": [
+        "chunk_observability_tracing_engineering",
+        "chunk_observability_tracing_pitfalls",
+        "chunk_observability_tracing_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_014",
+      "knowledge_node_id": "latency_cost_optimization",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "分别测量P50/P95延迟和Token成本；并行运行独立检索；对简单查询跳过高级步骤；使用小模型做路由或结构检查，大模型处理复杂生成。",
+        "只追求速度会降低召回；无条件缓存个性化答案会串用户；减少证据Token可能损害完整性；并行过多会触发限流。"
+      ],
+      "optimization_boundary": "设定质量底线和预算上限，按场景分级。比赛演示优先稳定，商业系统再做容量与成本工程。",
+      "evidence_chunk_ids": [
+        "chunk_latency_cost_optimization_engineering",
+        "chunk_latency_cost_optimization_pitfalls",
+        "chunk_latency_cost_optimization_boundary"
+      ]
+    },
+    {
+      "complexity_case_id": "complexity_015",
+      "knowledge_node_id": "continuous_updates_regression",
+      "time_complexity_note": "实际复杂度取决于语料规模、候选数量、模型和索引参数，必须通过目标数据实测。",
+      "space_complexity_note": "存储主要来自原文、元数据、嵌入、索引和可观测日志，应纳入容量预算。",
+      "latency_drivers": [
+        "建立变更清单与影响范围；锁定黄金集；比较新旧版本的检索、生成、延迟和成本；核心指标下降或关键案例失败则阻止发布。",
+        "只测试新增内容会漏掉旧功能回归；线上直接覆盖无法回滚；评测集长期不更新会与真实问题脱节。"
+      ],
+      "optimization_boundary": "评测集也要版本化，并防止开发者针对测试答案过拟合。商业客户可拥有独立回归集和发布审批。",
+      "evidence_chunk_ids": [
+        "chunk_continuous_updates_regression_engineering",
+        "chunk_continuous_updates_regression_pitfalls",
+        "chunk_continuous_updates_regression_boundary"
+      ]
+    }
+  ]
+}

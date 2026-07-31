@@ -1,0 +1,18 @@
+workflow_key: grounded_professional_qa
+version: 7.0.0
+states:
+- question_received
+- routing_retrieval
+- retrieving_evidence
+- checking_evidence
+- generating_answer
+- reviewing_factuality_and_safety
+- completed
+- refused
+- waiting_human_review
+- failed
+parallel_review:
+- factuality_reviewer
+- safety_reviewer
+max_retrieval_retries: 2
+final_writer: apps/api

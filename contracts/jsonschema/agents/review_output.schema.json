@@ -1,133 +1,186 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "审核纠偏智能体输出",
+  "title": "ReviewCoordinatorOutput",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "review_id",
-    "proposal_id",
-    "reviewed_proposal_id",
-    "review_result",
-    "overall_score",
-    "checks",
-    "issues",
-    "repair_action",
-    "repair_instructions",
-    "confidence",
-    "requires_human_review"
-  ],
   "properties": {
-    "review_id": {
+    "schema_version": {
+      "type": "string",
+      "const": "7.0"
+    },
+    "run_id": {
       "type": "string",
       "format": "uuid"
     },
-    "proposal_id": {
-      "type": "string",
-      "format": "uuid"
+    "agent_name": {
+      "type": "string"
     },
-    "reviewed_proposal_id": {
-      "type": "string",
-      "format": "uuid"
-    },
-    "review_result": {
+    "status": {
       "type": "string",
       "enum": [
-        "approved",
-        "rejected",
-        "needs_revision",
-        "human_required"
+        "succeeded",
+        "failed",
+        "needs_input",
+        "degraded"
       ]
-    },
-    "overall_score": {
-      "type": "number",
-      "minimum": 0,
-      "maximum": 100
-    },
-    "checks": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "schema_valid",
-        "evidence_supported",
-        "factual_consistent",
-        "no_conflict",
-        "answer_verifiable"
-      ],
-      "properties": {
-        "schema_valid": {
-          "type": "boolean"
-        },
-        "evidence_supported": {
-          "type": "boolean"
-        },
-        "factual_consistent": {
-          "type": "boolean"
-        },
-        "no_conflict": {
-          "type": "boolean"
-        },
-        "answer_verifiable": {
-          "type": "boolean"
-        }
-      }
-    },
-    "issues": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "issue_type",
-          "severity",
-          "location",
-          "message"
-        ],
-        "properties": {
-          "issue_type": {
-            "type": "string"
-          },
-          "severity": {
-            "type": "string",
-            "enum": [
-              "low",
-              "medium",
-              "high",
-              "blocking"
-            ]
-          },
-          "location": {
-            "type": "string"
-          },
-          "message": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "repair_action": {
-      "type": "string",
-      "enum": [
-        "none",
-        "regenerate",
-        "retrieve_more_evidence",
-        "rerun_diagnosis",
-        "replan_path",
-        "human_review"
-      ]
-    },
-    "repair_instructions": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
     },
     "confidence": {
       "type": "number",
       "minimum": 0,
       "maximum": 1
     },
+    "reasoning_summary": {
+      "type": "string"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
     "requires_human_review": {
       "type": "boolean"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "review_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "revise",
+        "reject",
+        "human_review"
+      ]
+    },
+    "dimension_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "minItems": 1
+    },
+    "blocking_issues": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "ReviewIssue",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "issue_id": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "info",
+              "low",
+              "medium",
+              "high",
+              "critical"
+            ]
+          },
+          "category": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "location": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "minItems": 0
+          },
+          "repair_instruction": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "issue_id",
+          "severity",
+          "category",
+          "description",
+          "location",
+          "evidence_ids",
+          "repair_instruction"
+        ]
+      },
+      "minItems": 0
+    },
+    "repair_instructions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "rerun_branches": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "retrieval",
+          "explanation",
+          "practice",
+          "quiz",
+          "assessment"
+        ]
+      },
+      "minItems": 0
+    },
+    "approved_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "minItems": 0
     }
-  }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "agent_name",
+    "status",
+    "confidence",
+    "reasoning_summary",
+    "warnings",
+    "requires_human_review",
+    "completed_at",
+    "review_id",
+    "outcome",
+    "dimension_results",
+    "blocking_issues",
+    "repair_instructions",
+    "rerun_branches",
+    "approved_evidence_ids"
+  ]
 }

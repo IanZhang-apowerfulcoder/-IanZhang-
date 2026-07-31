@@ -1,0 +1,74 @@
+version: 7.0.0
+pages:
+- route: /login
+  owner: P4
+  operations:
+  - login
+- route: /learner/dashboard
+  owner: P4
+  operations:
+  - get_learner_profile
+  - get_session_path
+  - list_session_resources
+- route: /learner/pretest
+  owner: P4
+  operations:
+  - create_pretest
+  - submit_pretest
+- route: /learner/session/:sessionId
+  owner: P4
+  operations:
+  - get_learning_session
+  - stream_session_events
+  - list_session_resources
+  - list_session_assessments
+  - get_session_decision
+- route: /learner/resource/:resourceId
+  owner: P4
+  operations:
+  - get_session_resource
+- route: /learner/assessment/:assessmentId
+  owner: P4
+  operations:
+  - get_session_assessment
+  - submit_assessment_attempt
+  - get_attempt_result
+- route: /learner/qa
+  owner: P4
+  operations:
+  - create_question_run
+  - get_question_run
+- route: /admin/knowledge
+  owner: P4
+  operations:
+  - list_knowledge_bases
+  - list_knowledge_versions
+  - get_knowledge_quality_report
+  - get_knowledge_graph
+- route: /admin/knowledge/imports
+  owner: P4
+  operations:
+  - create_structured_knowledge_import
+  - get_structured_knowledge_import
+  - list_knowledge_review_queue
+  - decide_knowledge_review_item
+- route: /admin/workflows
+  owner: P4
+  operations:
+  - list_workflow_runs
+  - get_workflow_run
+  - list_workflow_events
+  - get_workflow_trace
+- route: /admin/retrieval
+  owner: P4
+  operations:
+  - list_retrieval_runs
+  - get_retrieval_run
+  - get_retrieval_trace
+- route: /admin/metrics
+  owner: P4
+  operations:
+  - get_quality_metrics
+  - get_agent_metrics
+  - get_retrieval_metrics
+  - get_learning_metrics

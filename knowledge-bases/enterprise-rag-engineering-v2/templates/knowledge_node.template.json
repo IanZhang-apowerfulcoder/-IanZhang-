@@ -1,0 +1,26 @@
+{
+  "id": "RAG-MXX-NXX",
+  "module_id": "RAG-MXX",
+  "name": "知识点名称",
+  "aliases": ["别名"],
+  "summary": "可独立理解且不夸大的专业摘要。",
+  "difficulty": 2,
+  "core": true,
+  "importance": 0.8,
+  "prerequisites": [],
+  "objectives": ["学习者完成后能够做什么"],
+  "facts": [
+    {
+      "heading": "事实主题",
+      "body": "完整专业内容。",
+      "source_ids": ["SRC-UNIQUE-ID"]
+    }
+  ],
+  "misconceptions": [
+    {
+      "wrong": "常见错误认识",
+      "correction": "基于证据的纠正"
+    }
+  ],
+  "boundaries": ["适用边界或拒答边界"]
+}

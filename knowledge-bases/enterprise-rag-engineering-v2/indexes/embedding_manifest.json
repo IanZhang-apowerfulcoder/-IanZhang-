@@ -1,0 +1,15 @@
+{
+  "status": "not_generated",
+  "reason": "Embedding model/provider/dimension not frozen; fake vectors are prohibited.",
+  "required_fields_before_generation": [
+    "provider",
+    "model_id",
+    "model_revision",
+    "dimension",
+    "normalized",
+    "distance",
+    "generated_at"
+  ],
+  "recommended_distance": "cosine",
+  "knowledge_base_version_id": "fd400183-2242-50aa-8b83-d670c1ce5a1f"
+}

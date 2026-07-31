@@ -1,0 +1,1652 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "faq_id": "faq_rag_definition_what",
+      "knowledge_node_id": "rag_definition",
+      "question": "什么是RAG基本定义？",
+      "answer": "检索增强生成把可更新、可追踪的外部知识作为上下文提供给生成模型。模型参数负责语言理解与组织，外部知识库承担事实记忆与版本更新。工程上应把检索结果、生成提示词和最终回答分开记录，才能定位错误来自检索还是生成。",
+      "evidence_chunk_ids": [
+        "chunk_rag_definition_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_rag_definition_how",
+      "knowledge_node_id": "rag_definition",
+      "question": "在工程中怎样落实RAG基本定义？",
+      "answer": "最小实现包含查询输入、检索器、候选证据、上下文构造、生成器和引用输出。先用一个小而可靠的知识库和固定问题集建立基线，再逐步增加查询改写、混合检索和重排序。",
+      "evidence_chunk_ids": [
+        "chunk_rag_definition_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_rag_definition_when",
+      "knowledge_node_id": "rag_definition",
+      "question": "什么时候不应过度使用RAG基本定义？",
+      "answer": "对完全不依赖外部事实的创意写作、闲聊或纯计算任务，RAG未必有收益；对高风险答案，RAG也不能替代人工审核和业务规则。",
+      "evidence_chunk_ids": [
+        "chunk_rag_definition_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_rag_end_to_end_architecture_what",
+      "knowledge_node_id": "rag_end_to_end_architecture",
+      "question": "什么是RAG端到端架构？",
+      "answer": "完整RAG不是一次“检索后拼提示词”的调用，而是两条链路：离线知识链路负责来源治理、解析、切分、向量化和索引；在线问答链路负责查询理解、检索、重排、上下文选择、生成、引用和反馈。",
+      "evidence_chunk_ids": [
+        "chunk_rag_end_to_end_architecture_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_rag_end_to_end_architecture_how",
+      "knowledge_node_id": "rag_end_to_end_architecture",
+      "question": "在工程中怎样落实RAG端到端架构？",
+      "answer": "建议为每次请求创建correlation_id，并保存query、retrieved_chunk_ids、scores、reranked_order、prompt_version、model_version、answer和latency。离线索引也要记录knowledge_base_version_id，保证结果可复现。",
+      "evidence_chunk_ids": [
+        "chunk_rag_end_to_end_architecture_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_rag_end_to_end_architecture_when",
+      "knowledge_node_id": "rag_end_to_end_architecture",
+      "question": "什么时候不应过度使用RAG端到端架构？",
+      "answer": "比赛原型可将模块部署在同一后端中，但接口和数据边界仍应明确；商业化后再按吞吐、隔离和运维需求拆分服务。",
+      "evidence_chunk_ids": [
+        "chunk_rag_end_to_end_architecture_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_parametric_nonparametric_memory_what",
+      "knowledge_node_id": "parametric_nonparametric_memory",
+      "question": "什么是参数记忆与外部记忆？",
+      "answer": "语言模型参数中的知识更新成本高、来源难追踪；外部知识库可以独立更新、版本化并返回出处。RAG的价值不是完全消除模型知识，而是让模型在回答时获得与任务相关的显式证据。",
+      "evidence_chunk_ids": [
+        "chunk_parametric_nonparametric_memory_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_parametric_nonparametric_memory_how",
+      "knowledge_node_id": "parametric_nonparametric_memory",
+      "question": "在工程中怎样落实参数记忆与外部记忆？",
+      "answer": "对事实性字段、企业规则和时效内容，应要求答案由外部证据支持；对语言组织、解释和概括，可利用模型能力。提示词中要明确哪些内容允许推理，哪些内容必须逐项引用。",
+      "evidence_chunk_ids": [
+        "chunk_parametric_nonparametric_memory_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_parametric_nonparametric_memory_when",
+      "knowledge_node_id": "parametric_nonparametric_memory",
+      "question": "什么时候不应过度使用参数记忆与外部记忆？",
+      "answer": "在证据不足时应拒答或请求补充资料，而不是让参数记忆补齐企业内部事实。",
+      "evidence_chunk_ids": [
+        "chunk_parametric_nonparametric_memory_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_rag_applicability_what",
+      "knowledge_node_id": "rag_applicability",
+      "question": "什么是RAG适用性判断？",
+      "answer": "RAG适合知识可文档化、答案需要来源、内容经常更新或不同用户有权限差异的场景。选择RAG前应明确知识源、查询类型、风险等级、允许延迟、更新频率和评价标准。",
+      "evidence_chunk_ids": [
+        "chunk_rag_applicability_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_rag_applicability_how",
+      "knowledge_node_id": "rag_applicability",
+      "question": "在工程中怎样落实RAG适用性判断？",
+      "answer": "先用决策表评估：是否有可靠语料、是否能定义正确答案、是否要求引用、是否需要实时数据、是否涉及工具执行。简单FAQ可用稀疏或混合检索；跨文档关系问题可能需要图结构或多步检索。",
+      "evidence_chunk_ids": [
+        "chunk_rag_applicability_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_rag_applicability_when",
+      "knowledge_node_id": "rag_applicability",
+      "question": "什么时候不应过度使用RAG适用性判断？",
+      "answer": "实时交易、复杂计算或需要写入外部系统的任务，通常还需要工具调用、规则引擎或人工审批，不能仅依靠RAG。",
+      "evidence_chunk_ids": [
+        "chunk_rag_applicability_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_rag_failure_taxonomy_what",
+      "knowledge_node_id": "rag_failure_taxonomy",
+      "question": "什么是RAG失败类型？",
+      "answer": "RAG错误可分为：知识源缺失或错误、解析与切分损失、查询理解失败、候选召回失败、重排失败、上下文选择失败、生成不忠实、引用错误以及权限或版本错误。不同错误需要不同修复手段。",
+      "evidence_chunk_ids": [
+        "chunk_rag_failure_taxonomy_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_rag_failure_taxonomy_how",
+      "knowledge_node_id": "rag_failure_taxonomy",
+      "question": "在工程中怎样落实RAG失败类型？",
+      "answer": "建立错误案例表，至少记录问题、期望证据、实际证据、回答、错误阶段、根因和修复动作。评测报告应分别呈现检索指标和生成指标，避免用一个总分掩盖问题。",
+      "evidence_chunk_ids": [
+        "chunk_rag_failure_taxonomy_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_rag_failure_taxonomy_when",
+      "knowledge_node_id": "rag_failure_taxonomy",
+      "question": "什么时候不应过度使用RAG失败类型？",
+      "answer": "根因无法确定时，先固定生成模型与提示词，对检索进行离线复现；再固定检索结果检查生成行为，逐段隔离问题。",
+      "evidence_chunk_ids": [
+        "chunk_rag_failure_taxonomy_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_knowledge_source_selection_what",
+      "knowledge_node_id": "knowledge_source_selection",
+      "question": "什么是知识源选择？",
+      "answer": "知识源质量决定RAG上限。来源应与培训目标和岗位任务直接相关，优先采用官方标准、产品文档、经审核的内部制度和专家确认材料，并记录来源所有者、版本与适用范围。",
+      "evidence_chunk_ids": [
+        "chunk_knowledge_source_selection_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_knowledge_source_selection_how",
+      "knowledge_node_id": "knowledge_source_selection",
+      "question": "在工程中怎样落实知识源选择？",
+      "answer": "建立来源登记表：source_id、标题、URI或文件标识、版本、发布时间、权限级别、许可说明、审核人和失效日期。导入前先做覆盖映射，确认每个核心知识点至少有可追溯来源。",
+      "evidence_chunk_ids": [
+        "chunk_knowledge_source_selection_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_knowledge_source_selection_when",
+      "knowledge_node_id": "knowledge_source_selection",
+      "question": "什么时候不应过度使用知识源选择？",
+      "answer": "来源存在冲突时，应定义优先级并保留冲突记录；无法确认授权或真实性的材料只能作为待审核种子，不能用于正式高风险结论。",
+      "evidence_chunk_ids": [
+        "chunk_knowledge_source_selection_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_source_authority_provenance_what",
+      "knowledge_node_id": "source_authority_provenance",
+      "question": "什么是来源权威性与溯源？",
+      "answer": "溯源要求每个知识片段能回到source_id、文档版本和定位信息，每个答案中的关键结论能回到evidence_chunk_ids。权威等级应与业务风险关联，而不是只用一个“可信”标签。",
+      "evidence_chunk_ids": [
+        "chunk_source_authority_provenance_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_source_authority_provenance_how",
+      "knowledge_node_id": "source_authority_provenance",
+      "question": "在工程中怎样落实来源权威性与溯源？",
+      "answer": "片段元数据至少保存source_title、source_uri、source_locator、authority_level和content_hash。生成阶段输出引用编号，审核阶段验证引用存在、内容相关且确实支持结论。",
+      "evidence_chunk_ids": [
+        "chunk_source_authority_provenance_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_source_authority_provenance_when",
+      "knowledge_node_id": "source_authority_provenance",
+      "question": "什么时候不应过度使用来源权威性与溯源？",
+      "answer": "对内部保密资料可以隐藏外部URI，但仍需保存内部文档编号和位置；对无法公开的证据，前端可展示受控摘要而非原文。",
+      "evidence_chunk_ids": [
+        "chunk_source_authority_provenance_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_versioning_freshness_what",
+      "knowledge_node_id": "versioning_freshness",
+      "question": "什么是版本与时效治理？",
+      "answer": "知识库版本应不可变。新资料或修订内容生成新版本，经质量检查后再发布和激活。查询、评测和答案日志必须记录使用的knowledge_base_version_id，便于复现和回滚。",
+      "evidence_chunk_ids": [
+        "chunk_versioning_freshness_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_versioning_freshness_how",
+      "knowledge_node_id": "versioning_freshness",
+      "question": "在工程中怎样落实版本与时效治理？",
+      "answer": "为来源设置valid_from、valid_to或review_due_at；构建增量更新流程，变更后只重建受影响片段和索引，并运行固定回归集。生产环境保留当前版本和至少一个可回滚版本。",
+      "evidence_chunk_ids": [
+        "chunk_versioning_freshness_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_versioning_freshness_when",
+      "knowledge_node_id": "versioning_freshness",
+      "question": "什么时候不应过度使用版本与时效治理？",
+      "answer": "对时间敏感问题，应在检索阶段加入时间过滤或新鲜度排序；系统不能自动确认的时效内容，应在回答中说明数据截止时间。",
+      "evidence_chunk_ids": [
+        "chunk_versioning_freshness_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_licensing_compliance_what",
+      "knowledge_node_id": "licensing_compliance",
+      "question": "什么是许可与合规？",
+      "answer": "知识可被访问不等于可被复制、再分发或用于商业训练。知识库应记录许可说明、内容所有者、使用范围和是否允许展示原文。个人信息、商业秘密和受限制数据还需单独治理。",
+      "evidence_chunk_ids": [
+        "chunk_licensing_compliance_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_licensing_compliance_how",
+      "knowledge_node_id": "licensing_compliance",
+      "question": "在工程中怎样落实许可与合规？",
+      "answer": "导入流程增加许可确认与敏感信息扫描；对外展示时优先提供短引用和来源定位，避免大段复制；企业资料按租户隔离并记录访问日志。",
+      "evidence_chunk_ids": [
+        "chunk_licensing_compliance_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_licensing_compliance_when",
+      "knowledge_node_id": "licensing_compliance",
+      "question": "什么时候不应过度使用许可与合规？",
+      "answer": "无法确认许可的来源只用于内部评测或等待授权，不得标记为企业正式知识；涉及法律、医疗或安全规范时应增加专业审批。",
+      "evidence_chunk_ids": [
+        "chunk_licensing_compliance_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_access_control_tenant_isolation_what",
+      "knowledge_node_id": "access_control_tenant_isolation",
+      "question": "什么是权限过滤与多租户隔离？",
+      "answer": "RAG权限控制必须发生在检索之前或检索过程中。每个片段应带organization_id、visibility、allowed_roles等元数据，检索查询要强制加入权限过滤，不能检索后再依赖模型隐藏。",
+      "evidence_chunk_ids": [
+        "chunk_access_control_tenant_isolation_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_access_control_tenant_isolation_how",
+      "knowledge_node_id": "access_control_tenant_isolation",
+      "question": "在工程中怎样落实权限过滤与多租户隔离？",
+      "answer": "服务端从认证上下文获取organization_id，而不是信任客户端提交；数据库可使用行级安全策略，向量检索与关键词检索必须使用同一过滤条件；跨租户测试应进入自动回归。",
+      "evidence_chunk_ids": [
+        "chunk_access_control_tenant_isolation_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_access_control_tenant_isolation_when",
+      "knowledge_node_id": "access_control_tenant_isolation",
+      "question": "什么时候不应过度使用权限过滤与多租户隔离？",
+      "answer": "高敏感场景可采用物理隔离索引或独立部署；共享索引适合成本敏感场景，但必须有强制过滤、审计和越权测试。",
+      "evidence_chunk_ids": [
+        "chunk_access_control_tenant_isolation_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_document_parsing_what",
+      "knowledge_node_id": "document_parsing",
+      "question": "什么是文档解析？",
+      "answer": "解析不仅是抽取字符，还要保留标题层级、段落、页码、表格、列表、代码块和图片说明等结构。结构信息决定后续切分、引用和检索质量。",
+      "evidence_chunk_ids": [
+        "chunk_document_parsing_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_document_parsing_how",
+      "knowledge_node_id": "document_parsing",
+      "question": "在工程中怎样落实文档解析？",
+      "answer": "为每种格式建立解析器适配层，输出统一中间结构；保存原始文件哈希、解析器版本和解析告警。扫描件需要OCR，但OCR结果应标记置信度并抽样复核。",
+      "evidence_chunk_ids": [
+        "chunk_document_parsing_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_document_parsing_when",
+      "knowledge_node_id": "document_parsing",
+      "question": "什么时候不应过度使用文档解析？",
+      "answer": "比赛内置知识包可直接交付结构化内容，企业模式再逐步支持原始文档解析；对复杂表格和图纸，应保留人工确认入口。",
+      "evidence_chunk_ids": [
+        "chunk_document_parsing_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_layout_table_extraction_what",
+      "knowledge_node_id": "layout_table_extraction",
+      "question": "什么是版面与表格提取？",
+      "answer": "表格信息依赖行列关系，不能简单拼成连续文本。版面解析需要识别阅读顺序、标题与正文、表格单元格、图注和页码，必要时把结构转成Markdown或结构化JSON。",
+      "evidence_chunk_ids": [
+        "chunk_layout_table_extraction_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_layout_table_extraction_how",
+      "knowledge_node_id": "layout_table_extraction",
+      "question": "在工程中怎样落实版面与表格提取？",
+      "answer": "为表格生成表名、字段名、单位和行键；检索时可以同时保存自然语言摘要与原始结构。代码块需保持缩进和语言标签，图表应保存说明与来源位置。",
+      "evidence_chunk_ids": [
+        "chunk_layout_table_extraction_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_layout_table_extraction_when",
+      "knowledge_node_id": "layout_table_extraction",
+      "question": "什么时候不应过度使用版面与表格提取？",
+      "answer": "高度依赖图像或空间关系的内容仅靠文本RAG不够，应引入多模态解析或把人工生成的结构化说明作为权威来源。",
+      "evidence_chunk_ids": [
+        "chunk_layout_table_extraction_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_text_cleaning_normalization_what",
+      "knowledge_node_id": "text_cleaning_normalization",
+      "question": "什么是文本清洗与规范化？",
+      "answer": "清洗目标是降低页眉页脚、乱码、重复空白和格式噪声，但保留编号、单位、大小写、代码符号和章节边界。规范化规则必须可配置并可回放。",
+      "evidence_chunk_ids": [
+        "chunk_text_cleaning_normalization_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_text_cleaning_normalization_how",
+      "knowledge_node_id": "text_cleaning_normalization",
+      "question": "在工程中怎样落实文本清洗与规范化？",
+      "answer": "先生成原始文本与清洗文本对照，统计字符损失率和异常符号；对日期、全角半角、Unicode和换行做标准化；保留source_locator以便回查。",
+      "evidence_chunk_ids": [
+        "chunk_text_cleaning_normalization_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_text_cleaning_normalization_when",
+      "knowledge_node_id": "text_cleaning_normalization",
+      "question": "什么时候不应过度使用文本清洗与规范化？",
+      "answer": "对正式规范和代码文档，应采用保守清洗；对论坛或日志可采用更强去噪，但需明确不作为最高权威来源。",
+      "evidence_chunk_ids": [
+        "chunk_text_cleaning_normalization_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_deduplication_what",
+      "knowledge_node_id": "deduplication",
+      "question": "什么是内容去重？",
+      "answer": "重复内容会占用索引、挤压上下文并导致多个相同证据看似互相印证。去重应区分完全哈希重复、文本近似重复和同一文档不同版本。",
+      "evidence_chunk_ids": [
+        "chunk_deduplication_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_deduplication_how",
+      "knowledge_node_id": "deduplication",
+      "question": "在工程中怎样落实内容去重？",
+      "answer": "文件级先比较哈希，片段级可使用规范化文本哈希、MinHash或嵌入相似度；保留canonical_chunk_id和duplicate_of关系，而不是直接丢弃所有副本。",
+      "evidence_chunk_ids": [
+        "chunk_deduplication_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_deduplication_when",
+      "knowledge_node_id": "deduplication",
+      "question": "什么时候不应过度使用内容去重？",
+      "answer": "多来源一致内容可保留一个主片段并关联多个source_id；法律或制度版本应按版本治理，不能只当作重复文本。",
+      "evidence_chunk_ids": [
+        "chunk_deduplication_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_document_quality_checks_what",
+      "knowledge_node_id": "document_quality_checks",
+      "question": "什么是文档质量门禁？",
+      "answer": "知识库构建前应设置质量门禁，包括解析成功率、空白页比例、乱码率、重复率、来源完整率、页码覆盖率和敏感信息风险。门禁失败的文档不能直接进入正式版本。",
+      "evidence_chunk_ids": [
+        "chunk_document_quality_checks_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_document_quality_checks_how",
+      "knowledge_node_id": "document_quality_checks",
+      "question": "在工程中怎样落实文档质量门禁？",
+      "answer": "生成machine-readable质量报告，列出阻断问题和警告；抽样对比原文与解析结果；对扫描件、表格密集文档和低置信OCR提高抽样比例。",
+      "evidence_chunk_ids": [
+        "chunk_document_quality_checks_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_document_quality_checks_when",
+      "knowledge_node_id": "document_quality_checks",
+      "question": "什么时候不应过度使用文档质量门禁？",
+      "answer": "不同文档类型应使用不同阈值；比赛知识包可重点验证结构和引用完整性，企业原始资料还需增加许可与敏感信息检查。",
+      "evidence_chunk_ids": [
+        "chunk_document_quality_checks_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_chunking_objectives_what",
+      "knowledge_node_id": "chunking_objectives",
+      "question": "什么是文档切分目标？",
+      "answer": "切分要在“片段足够小以便精确检索”和“片段足够大以保留完整语义”之间平衡。合理片段应能独立表达一个可回答的问题，同时保留标题、来源和相邻上下文。",
+      "evidence_chunk_ids": [
+        "chunk_chunking_objectives_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_chunking_objectives_how",
+      "knowledge_node_id": "chunking_objectives",
+      "question": "在工程中怎样落实文档切分目标？",
+      "answer": "先按文档结构形成基础块，再根据模型上下文、查询类型和评测结果调整大小与重叠。记录chunk_strategy、token_count和parent_chunk_id，使用固定查询集比较不同方案。",
+      "evidence_chunk_ids": [
+        "chunk_chunking_objectives_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_chunking_objectives_when",
+      "knowledge_node_id": "chunking_objectives",
+      "question": "什么时候不应过度使用文档切分目标？",
+      "answer": "不存在通用最佳长度。合同条款、代码、FAQ和长教程需要不同策略，最终选择必须由检索与生成评测共同决定。",
+      "evidence_chunk_ids": [
+        "chunk_chunking_objectives_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_fixed_window_chunking_what",
+      "knowledge_node_id": "fixed_window_chunking",
+      "question": "什么是固定窗口切分？",
+      "answer": "固定窗口切分实现简单、速度快，适合作为基线。它按固定字符或Token数量切分，并用少量重叠减轻边界信息丢失。",
+      "evidence_chunk_ids": [
+        "chunk_fixed_window_chunking_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_fixed_window_chunking_how",
+      "knowledge_node_id": "fixed_window_chunking",
+      "question": "在工程中怎样落实固定窗口切分？",
+      "answer": "工程上应以Token而非字符估计模型上下文成本；保存chunk_start、chunk_end和overlap_size；先用多个窗口大小做离线对比。",
+      "evidence_chunk_ids": [
+        "chunk_fixed_window_chunking_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_fixed_window_chunking_when",
+      "knowledge_node_id": "fixed_window_chunking",
+      "question": "什么时候不应过度使用固定窗口切分？",
+      "answer": "适合结构弱、内容较均匀的文本和快速基线；对表格、代码、制度条款或层级文档，通常应使用结构感知方案。",
+      "evidence_chunk_ids": [
+        "chunk_fixed_window_chunking_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_structure_aware_chunking_what",
+      "knowledge_node_id": "structure_aware_chunking",
+      "question": "什么是结构感知切分？",
+      "answer": "结构感知切分利用文档天然层级，优先在章节、段落、列表或代码块边界切分。片段携带完整标题路径，可提高语义独立性和引用可读性。",
+      "evidence_chunk_ids": [
+        "chunk_structure_aware_chunking_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_structure_aware_chunking_how",
+      "knowledge_node_id": "structure_aware_chunking",
+      "question": "在工程中怎样落实结构感知切分？",
+      "answer": "解析器先输出文档树，再按节点大小合并或拆分；标题路径加入metadata或上下文前缀；表格和代码块原则上保持完整。",
+      "evidence_chunk_ids": [
+        "chunk_structure_aware_chunking_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_structure_aware_chunking_when",
+      "knowledge_node_id": "structure_aware_chunking",
+      "question": "什么时候不应过度使用结构感知切分？",
+      "answer": "对结构清晰的手册、课程、API文档和制度文件优先采用；对无结构聊天记录可退回语义或窗口切分。",
+      "evidence_chunk_ids": [
+        "chunk_structure_aware_chunking_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_semantic_chunking_what",
+      "knowledge_node_id": "semantic_chunking",
+      "question": "什么是语义切分？",
+      "answer": "语义切分尝试在主题转折处断开，避免固定窗口跨越多个概念。常见方法是比较相邻句子或句群嵌入变化，再结合最小和最大长度约束。",
+      "evidence_chunk_ids": [
+        "chunk_semantic_chunking_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_semantic_chunking_how",
+      "knowledge_node_id": "semantic_chunking",
+      "question": "在工程中怎样落实语义切分？",
+      "answer": "先分句并生成局部嵌入，使用阈值或聚类寻找边界；必须设置长度上下限和结构保护规则，并在目标查询集上验证收益。",
+      "evidence_chunk_ids": [
+        "chunk_semantic_chunking_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_semantic_chunking_when",
+      "knowledge_node_id": "semantic_chunking",
+      "question": "什么时候不应过度使用语义切分？",
+      "answer": "适合主题连续但标题稀疏的长文本。若结构感知切分已表现良好，不应仅为“高级”而引入语义切分。",
+      "evidence_chunk_ids": [
+        "chunk_semantic_chunking_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_parent_child_multigranular_what",
+      "knowledge_node_id": "parent_child_multigranular",
+      "question": "什么是父子与多粒度检索？",
+      "answer": "父子切分用较小子块建立检索表示，命中后返回其较大的父块或邻近上下文。多粒度策略也可同时索引句段、章节摘要和完整章节，以适配不同查询。",
+      "evidence_chunk_ids": [
+        "chunk_parent_child_multigranular_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_parent_child_multigranular_how",
+      "knowledge_node_id": "parent_child_multigranular",
+      "question": "在工程中怎样落实父子与多粒度检索？",
+      "answer": "为每个子块保存parent_chunk_id和section_path；检索命中子块后按去重规则扩展父块；控制扩展后的Token预算并保留命中位置。",
+      "evidence_chunk_ids": [
+        "chunk_parent_child_multigranular_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_parent_child_multigranular_when",
+      "knowledge_node_id": "parent_child_multigranular",
+      "question": "什么时候不应过度使用父子与多粒度检索？",
+      "answer": "适合需要精确定位但答案依赖上下文的手册、长教程和法规。短FAQ库通常不需要复杂父子结构。",
+      "evidence_chunk_ids": [
+        "chunk_parent_child_multigranular_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_metadata_schema_what",
+      "knowledge_node_id": "metadata_schema",
+      "question": "什么是元数据Schema设计？",
+      "answer": "元数据是知识检索和治理的控制面。最低字段通常包括source_id、source_locator、knowledge_node_ids、version、language、authority_level、organization_id、visibility和content_hash。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_schema_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_metadata_schema_how",
+      "knowledge_node_id": "metadata_schema",
+      "question": "在工程中怎样落实元数据Schema设计？",
+      "answer": "字段应有统一类型、枚举和缺省规则；在向量库、关键词索引和数据库之间保持一致；为高频过滤字段建立索引，并在契约中冻结跨模块名称。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_schema_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_metadata_schema_when",
+      "knowledge_node_id": "metadata_schema",
+      "question": "什么时候不应过度使用元数据Schema设计？",
+      "answer": "只保存业务确实使用的字段，避免过度建模；敏感元数据不应直接展示给终端用户。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_schema_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_embedding_fundamentals_what",
+      "knowledge_node_id": "embedding_fundamentals",
+      "question": "什么是文本嵌入基础？",
+      "answer": "文本嵌入把查询和片段映射到同一向量空间，相关文本在该空间中距离更近。双编码器可离线计算文档向量并在线快速检索，但交互能力弱于交叉编码器。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_fundamentals_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_embedding_fundamentals_how",
+      "knowledge_node_id": "embedding_fundamentals",
+      "question": "在工程中怎样落实文本嵌入基础？",
+      "answer": "分别编码query与passage时要使用模型推荐前缀或任务类型；固定模型名称、维度和归一化设置；索引与查询必须使用兼容编码器。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_fundamentals_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_embedding_fundamentals_when",
+      "knowledge_node_id": "embedding_fundamentals",
+      "question": "什么时候不应过度使用文本嵌入基础？",
+      "answer": "嵌入是候选召回手段而非事实验证器。高风险答案仍需重排、证据检查和生成审核。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_fundamentals_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_embedding_model_selection_what",
+      "knowledge_node_id": "embedding_model_selection",
+      "question": "什么是嵌入模型选择？",
+      "answer": "模型选择应看目标语种、查询与文档长度、领域分布、是否支持指令、维度、推理速度和许可。通用排行榜只能提供候选，最终必须在自己的检索集上验证。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_model_selection_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_embedding_model_selection_how",
+      "knowledge_node_id": "embedding_model_selection",
+      "question": "在工程中怎样落实嵌入模型选择？",
+      "answer": "建立小规模A/B：同一语料、同一切分和索引，比较Recall@K、MRR、延迟、存储和成本；对中文和中英混合查询单独统计。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_model_selection_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_embedding_model_selection_when",
+      "knowledge_node_id": "embedding_model_selection",
+      "question": "什么时候不应过度使用嵌入模型选择？",
+      "answer": "比赛原型可选一个稳定多语模型作为基线，商业部署再根据数据与隐私决定API或本地模型。",
+      "evidence_chunk_ids": [
+        "chunk_embedding_model_selection_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_similarity_metrics_what",
+      "knowledge_node_id": "similarity_metrics",
+      "question": "什么是向量相似度与归一化？",
+      "answer": "余弦相似度比较方向，内积受向量模长影响，欧氏距离衡量几何距离。若向量已L2归一化，内积排序与余弦排序等价；索引配置必须和模型输出一致。",
+      "evidence_chunk_ids": [
+        "chunk_similarity_metrics_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_similarity_metrics_how",
+      "knowledge_node_id": "similarity_metrics",
+      "question": "在工程中怎样落实向量相似度与归一化？",
+      "answer": "在建库时记录normalization与distance_metric；用已知正负样本检查分数分布；不要跨不同指标直接复用阈值。",
+      "evidence_chunk_ids": [
+        "chunk_similarity_metrics_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_similarity_metrics_when",
+      "knowledge_node_id": "similarity_metrics",
+      "question": "什么时候不应过度使用向量相似度与归一化？",
+      "answer": "排序优先使用相对名次，拒答阈值需要在标注数据上校准；没有校准时不能声称某个固定分数代表“可信”。",
+      "evidence_chunk_ids": [
+        "chunk_similarity_metrics_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_vector_index_hnsw_ivf_what",
+      "knowledge_node_id": "vector_index_hnsw_ivf",
+      "question": "什么是向量索引与近似最近邻？",
+      "answer": "向量索引用空间或图结构减少搜索范围。HNSW常以较高内存换取低延迟和较好召回；IVF通过聚类只搜索部分桶；精确搜索适合小规模或评测基线。",
+      "evidence_chunk_ids": [
+        "chunk_vector_index_hnsw_ivf_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_vector_index_hnsw_ivf_how",
+      "knowledge_node_id": "vector_index_hnsw_ivf",
+      "question": "在工程中怎样落实向量索引与近似最近邻？",
+      "answer": "用固定查询集测量Recall@K、P95延迟、索引构建时间和内存；分别调节HNSW的构建/搜索参数或IVF的探测数量；保留精确搜索作为上限对照。",
+      "evidence_chunk_ids": [
+        "chunk_vector_index_hnsw_ivf_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_vector_index_hnsw_ivf_when",
+      "knowledge_node_id": "vector_index_hnsw_ivf",
+      "question": "什么时候不应过度使用向量索引与近似最近邻？",
+      "answer": "数据量较小时优先简单精确方案；规模增长后再采用ANN。索引选择还受过滤条件、更新频率和部署平台影响。",
+      "evidence_chunk_ids": [
+        "chunk_vector_index_hnsw_ivf_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_bm25_sparse_retrieval_what",
+      "knowledge_node_id": "bm25_sparse_retrieval",
+      "question": "什么是BM25与稀疏检索？",
+      "answer": "BM25基于词项频率、逆文档频率和文档长度归一化进行排序。它对产品编号、错误码、函数名和罕见专有词通常比纯语义检索更稳定，是重要基线。",
+      "evidence_chunk_ids": [
+        "chunk_bm25_sparse_retrieval_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_bm25_sparse_retrieval_how",
+      "knowledge_node_id": "bm25_sparse_retrieval",
+      "question": "在工程中怎样落实BM25与稀疏检索？",
+      "answer": "建立合适分词、停用词和字段权重；标题、代码和正文可使用不同权重；记录BM25分数但不要把它直接与向量分数相加，除非经过归一化或融合。",
+      "evidence_chunk_ids": [
+        "chunk_bm25_sparse_retrieval_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_bm25_sparse_retrieval_when",
+      "knowledge_node_id": "bm25_sparse_retrieval",
+      "question": "什么时候不应过度使用BM25与稀疏检索？",
+      "answer": "即使最终采用混合检索，也应保留BM25基线，用于判断复杂模型是否真正带来收益。",
+      "evidence_chunk_ids": [
+        "chunk_bm25_sparse_retrieval_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_dense_retrieval_what",
+      "knowledge_node_id": "dense_retrieval",
+      "question": "什么是稠密语义检索？",
+      "answer": "稠密检索通过查询与文档向量的相似度召回候选，可处理同义词、自然语言改写和概念级匹配。它依赖训练分布和表示模型，跨领域表现必须实测。",
+      "evidence_chunk_ids": [
+        "chunk_dense_retrieval_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_dense_retrieval_how",
+      "knowledge_node_id": "dense_retrieval",
+      "question": "在工程中怎样落实稠密语义检索？",
+      "answer": "离线批量生成文档向量，在线编码查询并执行top_k搜索；保存模型版本和索引版本；对正例、难负例和无答案查询分别评测。",
+      "evidence_chunk_ids": [
+        "chunk_dense_retrieval_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_dense_retrieval_when",
+      "knowledge_node_id": "dense_retrieval",
+      "question": "什么时候不应过度使用稠密语义检索？",
+      "answer": "稠密检索适合自然语言查询，但不应默认替代稀疏检索；实际系统通常需要混合和重排。",
+      "evidence_chunk_ids": [
+        "chunk_dense_retrieval_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_hybrid_retrieval_what",
+      "knowledge_node_id": "hybrid_retrieval",
+      "question": "什么是混合检索？",
+      "answer": "混合检索让关键词通道覆盖精确匹配，让向量通道覆盖语义匹配。融合可以基于归一化分数、加权排序或RRF等名次融合方法。",
+      "evidence_chunk_ids": [
+        "chunk_hybrid_retrieval_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_hybrid_retrieval_how",
+      "knowledge_node_id": "hybrid_retrieval",
+      "question": "在工程中怎样落实混合检索？",
+      "answer": "分别运行BM25与向量检索，保留各自top_k和通道信息；先用RRF建立稳定基线，再通过标注查询调整权重；融合后仍需去重和重排。",
+      "evidence_chunk_ids": [
+        "chunk_hybrid_retrieval_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_hybrid_retrieval_when",
+      "knowledge_node_id": "hybrid_retrieval",
+      "question": "什么时候不应过度使用混合检索？",
+      "answer": "混合检索适合企业文档、代码和术语混合场景。语料很小或查询单一时，复杂融合可能没有明显收益。",
+      "evidence_chunk_ids": [
+        "chunk_hybrid_retrieval_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_metadata_filtering_what",
+      "knowledge_node_id": "metadata_filtering",
+      "question": "什么是元数据过滤？",
+      "answer": "元数据过滤用于保证候选满足硬约束，例如组织权限、文档状态、知识库版本、语言、日期和产品型号。硬约束应优先于相似度，不能让高分越权内容进入上下文。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_filtering_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_metadata_filtering_how",
+      "knowledge_node_id": "metadata_filtering",
+      "question": "在工程中怎样落实元数据过滤？",
+      "answer": "服务端生成过滤表达式并做白名单校验；向量与关键词通道使用一致过滤；统计过滤前后候选数量，避免过严条件导致空结果。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_filtering_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_metadata_filtering_when",
+      "knowledge_node_id": "metadata_filtering",
+      "question": "什么时候不应过度使用元数据过滤？",
+      "answer": "软偏好可作为重排特征，权限和版本必须作为硬过滤。空结果时应回退或提示，而不是取消权限条件。",
+      "evidence_chunk_ids": [
+        "chunk_metadata_filtering_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_multi_query_expansion_what",
+      "knowledge_node_id": "multi_query_expansion",
+      "question": "什么是多查询与查询扩展？",
+      "answer": "复杂或含糊问题可以生成多个检索表达式，例如术语改写、关键词补充或子问题分解，再合并候选。目标是提高召回而不是让模型直接回答。",
+      "evidence_chunk_ids": [
+        "chunk_multi_query_expansion_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_multi_query_expansion_how",
+      "knowledge_node_id": "multi_query_expansion",
+      "question": "在工程中怎样落实多查询与查询扩展？",
+      "answer": "限制查询数量并记录原查询与派生查询；对每个查询独立检索，使用RRF或去重融合；对派生查询进行安全和范围校验。",
+      "evidence_chunk_ids": [
+        "chunk_multi_query_expansion_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_multi_query_expansion_when",
+      "knowledge_node_id": "multi_query_expansion",
+      "question": "什么时候不应过度使用多查询与查询扩展？",
+      "answer": "只在长问题、歧义问题或基线召回不足时启用。精确编号查询通常不需要扩展。",
+      "evidence_chunk_ids": [
+        "chunk_multi_query_expansion_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_query_rewriting_what",
+      "knowledge_node_id": "query_rewriting",
+      "question": "什么是查询改写？",
+      "answer": "查询改写应保留用户原意，并补全会话中的省略对象、领域限定和关键术语。改写结果服务于检索，不应擅自加入未经确认的事实。",
+      "evidence_chunk_ids": [
+        "chunk_query_rewriting_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_query_rewriting_how",
+      "knowledge_node_id": "query_rewriting",
+      "question": "在工程中怎样落实查询改写？",
+      "answer": "输入原问题、必要会话摘要和允许的领域词典，输出standalone_query、keywords和filters；保存原查询用于审计，并在评测中比较改写前后召回。",
+      "evidence_chunk_ids": [
+        "chunk_query_rewriting_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_query_rewriting_when",
+      "knowledge_node_id": "query_rewriting",
+      "question": "什么时候不应过度使用查询改写？",
+      "answer": "精确错误码、文件名和短关键词通常直接检索更好；改写模型置信度低时应保留原查询并并行检索。",
+      "evidence_chunk_ids": [
+        "chunk_query_rewriting_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_hyde_retrieval_what",
+      "knowledge_node_id": "hyde_retrieval",
+      "question": "什么是HyDE假设文档检索？",
+      "answer": "HyDE先让模型生成一个可能回答问题的假设文档，再对该文本生成嵌入并检索真实文档。它使用假设文本作为语义桥梁，而不是把假设内容当作最终事实。",
+      "evidence_chunk_ids": [
+        "chunk_hyde_retrieval_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_hyde_retrieval_how",
+      "knowledge_node_id": "hyde_retrieval",
+      "question": "在工程中怎样落实HyDE假设文档检索？",
+      "answer": "保存hypothetical_document并仅用于向量检索；与原查询检索并行，合并后由真实证据和重排决定候选；必须禁止直接引用假设文本。",
+      "evidence_chunk_ids": [
+        "chunk_hyde_retrieval_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_hyde_retrieval_when",
+      "knowledge_node_id": "hyde_retrieval",
+      "question": "什么时候不应过度使用HyDE假设文档检索？",
+      "answer": "适合零样本语义检索困难且有强生成模型的场景。已有高质量领域嵌入或精确查询时不一定需要。",
+      "evidence_chunk_ids": [
+        "chunk_hyde_retrieval_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_cross_encoder_reranking_what",
+      "knowledge_node_id": "cross_encoder_reranking",
+      "question": "什么是交叉编码器重排序？",
+      "answer": "交叉编码器同时读取查询与文档，可建模细粒度交互，通常比双编码器排序更准确，但无法高效遍历全部语料，因此用于对召回候选重排。",
+      "evidence_chunk_ids": [
+        "chunk_cross_encoder_reranking_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_cross_encoder_reranking_how",
+      "knowledge_node_id": "cross_encoder_reranking",
+      "question": "在工程中怎样落实交叉编码器重排序？",
+      "answer": "先召回20至100个候选，再批量重排到最终top_n；在目标语种和领域上评测；记录reranker_model_version与重排分数。",
+      "evidence_chunk_ids": [
+        "chunk_cross_encoder_reranking_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_cross_encoder_reranking_when",
+      "knowledge_node_id": "cross_encoder_reranking",
+      "question": "什么时候不应过度使用交叉编码器重排序？",
+      "answer": "高价值问答和证据要求严格的场景优先使用；极低延迟或大批量查询可只在困难查询上启用。",
+      "evidence_chunk_ids": [
+        "chunk_cross_encoder_reranking_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_colbert_late_interaction_what",
+      "knowledge_node_id": "colbert_late_interaction",
+      "question": "什么是ColBERT晚交互检索？",
+      "answer": "ColBERT分别编码查询和文档Token，再在检索时进行晚交互，以保留比单向量更细的匹配信息。它介于双编码器高效召回与交叉编码器高精度之间。",
+      "evidence_chunk_ids": [
+        "chunk_colbert_late_interaction_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_colbert_late_interaction_how",
+      "knowledge_node_id": "colbert_late_interaction",
+      "question": "在工程中怎样落实ColBERT晚交互检索？",
+      "answer": "评估索引体积、查询延迟和召回收益；对长文档需要合理切分；与BM25和单向量基线在同一数据集比较。",
+      "evidence_chunk_ids": [
+        "chunk_colbert_late_interaction_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_colbert_late_interaction_when",
+      "knowledge_node_id": "colbert_late_interaction",
+      "question": "什么时候不应过度使用ColBERT晚交互检索？",
+      "answer": "适合需要高召回且可接受更高索引成本的检索系统；小规模比赛原型不是必选项。",
+      "evidence_chunk_ids": [
+        "chunk_colbert_late_interaction_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_diversity_mmr_what",
+      "knowledge_node_id": "diversity_mmr",
+      "question": "什么是MMR多样性选择？",
+      "answer": "MMR在选择新片段时同时考虑它与查询的相关性以及与已选片段的相似度，从而避免多个近重复片段占满上下文。",
+      "evidence_chunk_ids": [
+        "chunk_diversity_mmr_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_diversity_mmr_how",
+      "knowledge_node_id": "diversity_mmr",
+      "question": "在工程中怎样落实MMR多样性选择？",
+      "answer": "在重排后的候选上应用MMR，调节相关性与多样性权重；先进行权限过滤与来源去重；记录被多样性规则排除的候选。",
+      "evidence_chunk_ids": [
+        "chunk_diversity_mmr_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_diversity_mmr_when",
+      "knowledge_node_id": "diversity_mmr",
+      "question": "什么时候不应过度使用MMR多样性选择？",
+      "answer": "适合多来源知识和概览型问题。对单一明确事实，应以相关性和权威性为主。",
+      "evidence_chunk_ids": [
+        "chunk_diversity_mmr_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_rank_fusion_rrf_what",
+      "knowledge_node_id": "rank_fusion_rrf",
+      "question": "什么是RRF名次融合？",
+      "answer": "RRF根据文档在各排序列表中的名次累积分数，不要求BM25分数和向量分数处于同一尺度。它是混合检索中稳定、易解释的融合基线。",
+      "evidence_chunk_ids": [
+        "chunk_rank_fusion_rrf_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_rank_fusion_rrf_how",
+      "knowledge_node_id": "rank_fusion_rrf",
+      "question": "在工程中怎样落实RRF名次融合？",
+      "answer": "为每个通道保留足够候选，使用固定rank_constant计算融合，按chunk_id去重；在不同查询类型上比较融合前后Recall与MRR。",
+      "evidence_chunk_ids": [
+        "chunk_rank_fusion_rrf_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_rank_fusion_rrf_when",
+      "knowledge_node_id": "rank_fusion_rrf",
+      "question": "什么时候不应过度使用RRF名次融合？",
+      "answer": "适合先建立可靠混合基线。若有大量标注数据，可进一步学习融合权重，但必须保留可解释对照。",
+      "evidence_chunk_ids": [
+        "chunk_rank_fusion_rrf_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_context_selection_budget_what",
+      "knowledge_node_id": "context_selection_budget",
+      "question": "什么是上下文选择与Token预算？",
+      "answer": "上下文构造不是把top_k全部拼接。应按相关性、权威性、覆盖、重复度和Token成本选择证据，并确保每个重要子问题至少有支持片段。",
+      "evidence_chunk_ids": [
+        "chunk_context_selection_budget_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_context_selection_budget_how",
+      "knowledge_node_id": "context_selection_budget",
+      "question": "在工程中怎样落实上下文选择与Token预算？",
+      "answer": "先过滤低权威和重复候选，再按预算选取；为每段添加稳定引用编号和简短标题；保留问题、任务规则和证据之间清晰分隔。",
+      "evidence_chunk_ids": [
+        "chunk_context_selection_budget_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_context_selection_budget_when",
+      "knowledge_node_id": "context_selection_budget",
+      "question": "什么时候不应过度使用上下文选择与Token预算？",
+      "answer": "高风险任务应减少证据数量并提高质量；综合报告可以使用分步摘要或多轮检索，而不是一次塞入全部资料。",
+      "evidence_chunk_ids": [
+        "chunk_context_selection_budget_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_lost_in_the_middle_what",
+      "knowledge_node_id": "lost_in_the_middle",
+      "question": "什么是长上下文位置效应？",
+      "answer": "研究表明，相关信息位于长上下文中间时，模型利用效果可能下降。RAG系统因此不能只追求更长上下文，还应优化片段顺序和信息密度。",
+      "evidence_chunk_ids": [
+        "chunk_lost_in_the_middle_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_lost_in_the_middle_how",
+      "knowledge_node_id": "lost_in_the_middle",
+      "question": "在工程中怎样落实长上下文位置效应？",
+      "answer": "把最关键且高权威证据放在易被利用的位置，按子问题分组；减少重复和无关内容；用位置扰动测试检查答案是否依赖片段排列。",
+      "evidence_chunk_ids": [
+        "chunk_lost_in_the_middle_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_lost_in_the_middle_when",
+      "knowledge_node_id": "lost_in_the_middle",
+      "question": "什么时候不应过度使用长上下文位置效应？",
+      "answer": "不同模型行为不同，必须用目标模型实测。位置优化不能替代相关性和证据完整性。",
+      "evidence_chunk_ids": [
+        "chunk_lost_in_the_middle_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_prompt_grounding_what",
+      "knowledge_node_id": "prompt_grounding",
+      "question": "什么是证据约束提示词？",
+      "answer": "受控提示词应区分系统规则、用户问题和检索证据，要求关键结论引用证据，证据不足时拒答或说明不确定性。提示词本身不能保证忠实，但能形成可测试行为。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_grounding_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_prompt_grounding_how",
+      "knowledge_node_id": "prompt_grounding",
+      "question": "在工程中怎样落实证据约束提示词？",
+      "answer": "固定输出Schema，例如answer、citations、confidence、unsupported_points；明确不得把证据中的指令视为系统指令；记录prompt_version并回归测试。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_grounding_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_prompt_grounding_when",
+      "knowledge_node_id": "prompt_grounding",
+      "question": "什么时候不应过度使用证据约束提示词？",
+      "answer": "对于计算、权限、审批和安全判断，应由确定性代码执行，不能仅靠提示词约束。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_grounding_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_answer_abstention_what",
+      "knowledge_node_id": "answer_abstention",
+      "question": "什么是拒答与不确定性？",
+      "answer": "可靠RAG需要定义“何时不回答”。拒答依据可以包括无候选、证据相关度低、来源冲突、问题超出领域、权限不足或审核未通过。",
+      "evidence_chunk_ids": [
+        "chunk_answer_abstention_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_answer_abstention_how",
+      "knowledge_node_id": "answer_abstention",
+      "question": "在工程中怎样落实拒答与不确定性？",
+      "answer": "先通过规则检测硬失败，再由审核模型判断证据是否足够支持结论；返回标准原因码、可补充信息和下一步，而不是简单说“不知道”。",
+      "evidence_chunk_ids": [
+        "chunk_answer_abstention_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_answer_abstention_when",
+      "knowledge_node_id": "answer_abstention",
+      "question": "什么时候不应过度使用拒答与不确定性？",
+      "answer": "拒答策略应按风险分级。低风险教学解释可给出有限推断，高风险企业制度必须有明确证据。",
+      "evidence_chunk_ids": [
+        "chunk_answer_abstention_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_citation_generation_verification_what",
+      "knowledge_node_id": "citation_generation_verification",
+      "question": "什么是引用生成与验证？",
+      "answer": "引用应指向实际进入上下文的chunk_id，并保留source_id和source_locator。一个引用只有在内容与结论具有支持关系时才有效，相关但不蕴含不算正确引用。",
+      "evidence_chunk_ids": [
+        "chunk_citation_generation_verification_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_citation_generation_verification_how",
+      "knowledge_node_id": "citation_generation_verification",
+      "question": "在工程中怎样落实引用生成与验证？",
+      "answer": "生成器只能选择白名单证据编号；后处理验证引用存在；审核器逐条检查结论与证据的一致性；前端展示来源标题和定位。",
+      "evidence_chunk_ids": [
+        "chunk_citation_generation_verification_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_citation_generation_verification_when",
+      "knowledge_node_id": "citation_generation_verification",
+      "question": "什么时候不应过度使用引用生成与验证？",
+      "answer": "对综合推理可使用多个证据，但应说明推理步骤；不能公开的内部来源只展示受控标识与摘要。",
+      "evidence_chunk_ids": [
+        "chunk_citation_generation_verification_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_hallucination_types_what",
+      "knowledge_node_id": "hallucination_types",
+      "question": "什么是幻觉类型与根因？",
+      "answer": "RAG中的幻觉不只是不真实陈述，还包括回答超出证据、把一份文档的结论归给另一来源、忽略冲突证据、虚构引用和把推测表述成确定事实。",
+      "evidence_chunk_ids": [
+        "chunk_hallucination_types_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_hallucination_types_how",
+      "knowledge_node_id": "hallucination_types",
+      "question": "在工程中怎样落实幻觉类型与根因？",
+      "answer": "错误标注至少包含unsupported_claim、contradicted_claim、wrong_citation、overgeneralization和out_of_scope。对每类建立测试集和修复策略。",
+      "evidence_chunk_ids": [
+        "chunk_hallucination_types_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_hallucination_types_when",
+      "knowledge_node_id": "hallucination_types",
+      "question": "什么时候不应过度使用幻觉类型与根因？",
+      "answer": "无法自动判断的高风险内容要进入人工审核。系统目标是测量并降低错误，而不是承诺绝对零幻觉。",
+      "evidence_chunk_ids": [
+        "chunk_hallucination_types_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_evidence_entailment_what",
+      "knowledge_node_id": "evidence_entailment",
+      "question": "什么是证据支持关系检查？",
+      "answer": "证据检查关注结论与片段之间的蕴含关系。结果可分为supported、contradicted和insufficient，而不是只判断文本主题是否相似。",
+      "evidence_chunk_ids": [
+        "chunk_evidence_entailment_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_evidence_entailment_how",
+      "knowledge_node_id": "evidence_entailment",
+      "question": "在工程中怎样落实证据支持关系检查？",
+      "answer": "将答案拆成原子结论，逐条关联引用；使用规则和评审模型检查数字、否定、范围和条件；对冲突来源按权威与版本裁决。",
+      "evidence_chunk_ids": [
+        "chunk_evidence_entailment_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_evidence_entailment_when",
+      "knowledge_node_id": "evidence_entailment",
+      "question": "什么时候不应过度使用证据支持关系检查？",
+      "answer": "低风险内容可以自动通过，高风险结论需双重验证或人工确认。证据检查不等同于来源本身真实，来源治理仍是前提。",
+      "evidence_chunk_ids": [
+        "chunk_evidence_entailment_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_review_correction_loop_what",
+      "knowledge_node_id": "review_correction_loop",
+      "question": "什么是审核与纠偏闭环？",
+      "answer": "审核器应检查结构、证据、专业准确性、难度适配和安全性，并输出pass、revise或reject及问题列表。纠偏要针对具体问题重新检索或重生成，而不是无条件重复调用。",
+      "evidence_chunk_ids": [
+        "chunk_review_correction_loop_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_review_correction_loop_how",
+      "knowledge_node_id": "review_correction_loop",
+      "question": "在工程中怎样落实审核与纠偏闭环？",
+      "answer": "每轮保存review_id、issue_type、affected_field、repair_action和retry_count；设置最大循环次数；连续失败转人工审核或降级到已有资源。",
+      "evidence_chunk_ids": [
+        "chunk_review_correction_loop_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_review_correction_loop_when",
+      "knowledge_node_id": "review_correction_loop",
+      "question": "什么时候不应过度使用审核与纠偏闭环？",
+      "answer": "确定性Schema、引用存在性和权限检查应在模型审核前执行。审核Agent只处理需要语义判断的部分。",
+      "evidence_chunk_ids": [
+        "chunk_review_correction_loop_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_prompt_injection_defense_what",
+      "knowledge_node_id": "prompt_injection_defense",
+      "question": "什么是提示词注入防护？",
+      "answer": "检索到的文档属于不可信数据，其中可能包含“忽略之前指令”等恶意文本。系统必须在指令层级、工具权限和输出校验上隔离数据与控制。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_injection_defense_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_prompt_injection_defense_how",
+      "knowledge_node_id": "prompt_injection_defense",
+      "question": "在工程中怎样落实提示词注入防护？",
+      "answer": "明确标记证据边界；禁止证据覆盖系统规则；工具调用采用白名单、最小权限和参数校验；检测可疑指令并记录；敏感操作要求人工确认。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_injection_defense_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_prompt_injection_defense_when",
+      "knowledge_node_id": "prompt_injection_defense",
+      "question": "什么时候不应过度使用提示词注入防护？",
+      "answer": "只读问答风险低于可写工具Agent，但仍需防止数据泄露和错误引用。高权限场景应采用独立安全网关。",
+      "evidence_chunk_ids": [
+        "chunk_prompt_injection_defense_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_sensitive_data_privacy_what",
+      "knowledge_node_id": "sensitive_data_privacy",
+      "question": "什么是敏感数据与隐私保护？",
+      "answer": "RAG系统同时处理企业知识和个人画像，需进行数据分类、最小收集、访问控制、加密、保留期限和脱敏。向量本身也可能泄露语义，不应视为匿名数据。",
+      "evidence_chunk_ids": [
+        "chunk_sensitive_data_privacy_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_sensitive_data_privacy_how",
+      "knowledge_node_id": "sensitive_data_privacy",
+      "question": "在工程中怎样落实敏感数据与隐私保护？",
+      "answer": "上传前扫描个人信息和密钥；日志默认不保存完整原文；测试数据使用虚拟画像；按organization_id隔离；提供删除和审计能力。",
+      "evidence_chunk_ids": [
+        "chunk_sensitive_data_privacy_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_sensitive_data_privacy_when",
+      "knowledge_node_id": "sensitive_data_privacy",
+      "question": "什么时候不应过度使用敏感数据与隐私保护？",
+      "answer": "比赛阶段应全部使用虚拟学习者画像和可公开或授权的知识；企业试点再根据合同与法规配置保留策略。",
+      "evidence_chunk_ids": [
+        "chunk_sensitive_data_privacy_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_retrieval_metrics_what",
+      "knowledge_node_id": "retrieval_metrics",
+      "question": "什么是检索评测指标？",
+      "answer": "Recall@K衡量相关证据是否进入前K个候选，MRR关注首个相关结果的位置，nDCG支持分级相关性和排名折损。指标选择要与业务目标和标注方式一致。",
+      "evidence_chunk_ids": [
+        "chunk_retrieval_metrics_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_retrieval_metrics_how",
+      "knowledge_node_id": "retrieval_metrics",
+      "question": "在工程中怎样落实检索评测指标？",
+      "answer": "为每个查询标注可接受chunk_id或knowledge_node_id；分别报告整体、核心知识点、查询类型和无答案集合；使用精确检索作为ANN上限对照。",
+      "evidence_chunk_ids": [
+        "chunk_retrieval_metrics_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_retrieval_metrics_when",
+      "knowledge_node_id": "retrieval_metrics",
+      "question": "什么时候不应过度使用检索评测指标？",
+      "answer": "比赛可重点报告Recall@5、MRR和核心知识覆盖；生产系统还需按租户、版本和查询类型监控。",
+      "evidence_chunk_ids": [
+        "chunk_retrieval_metrics_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_generation_metrics_what",
+      "knowledge_node_id": "generation_metrics",
+      "question": "什么是生成质量指标？",
+      "answer": "生成评测至少区分faithfulness、answer_correctness、answer_relevance、citation_correctness和completeness。一个流畅答案可能不忠实，一个忠实答案也可能不完整。",
+      "evidence_chunk_ids": [
+        "chunk_generation_metrics_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_generation_metrics_how",
+      "knowledge_node_id": "generation_metrics",
+      "question": "在工程中怎样落实生成质量指标？",
+      "answer": "混合使用规则、参考答案、LLM评审和人工抽检；保存评分理由；对数字、步骤和禁止项增加确定性检查；评审模型要用已标注样本校准。",
+      "evidence_chunk_ids": [
+        "chunk_generation_metrics_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_generation_metrics_when",
+      "knowledge_node_id": "generation_metrics",
+      "question": "什么时候不应过度使用生成质量指标？",
+      "answer": "比赛要求的幻觉率应先定义分母、错误类别和人工复核流程，不能仅引用框架默认分数。",
+      "evidence_chunk_ids": [
+        "chunk_generation_metrics_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_end_to_end_evaluation_what",
+      "knowledge_node_id": "end_to_end_evaluation",
+      "question": "什么是端到端RAG评测？",
+      "answer": "端到端评测关注系统是否在真实流程中给出可用答案，并能在证据不足时正确拒答。它需要把离线检索、生成质量、画像适配和业务流程结合起来。",
+      "evidence_chunk_ids": [
+        "chunk_end_to_end_evaluation_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_end_to_end_evaluation_how",
+      "knowledge_node_id": "end_to_end_evaluation",
+      "question": "在工程中怎样落实端到端RAG评测？",
+      "answer": "定义固定版本的知识库、模型、提示词和数据集；记录每个案例的中间证据；报告质量、P95延迟、Token成本、失败率和人工介入率。",
+      "evidence_chunk_ids": [
+        "chunk_end_to_end_evaluation_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_end_to_end_evaluation_when",
+      "knowledge_node_id": "end_to_end_evaluation",
+      "question": "什么时候不应过度使用端到端RAG评测？",
+      "answer": "先建立可复现离线测试，再进行有限在线用户反馈。比赛指标与商业指标可共用底层数据，但目标阈值应明确。",
+      "evidence_chunk_ids": [
+        "chunk_end_to_end_evaluation_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_golden_dataset_design_what",
+      "knowledge_node_id": "golden_dataset_design",
+      "question": "什么是黄金评测集设计？",
+      "answer": "黄金集应包含普通事实、概念比较、跨片段问题、流程任务、无答案、错误前提和越权问题。每个案例记录期望知识节点、可接受证据、答案要点和拒答要求。",
+      "evidence_chunk_ids": [
+        "chunk_golden_dataset_design_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_golden_dataset_design_how",
+      "knowledge_node_id": "golden_dataset_design",
+      "question": "在工程中怎样落实黄金评测集设计？",
+      "answer": "从真实需求与专家设计共同采样，划分开发集与锁定测试集；定期做双人标注一致性检查；版本化数据集并记录变更。",
+      "evidence_chunk_ids": [
+        "chunk_golden_dataset_design_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_golden_dataset_design_when",
+      "knowledge_node_id": "golden_dataset_design",
+      "question": "什么时候不应过度使用黄金评测集设计？",
+      "answer": "比赛文件要求至少完整测试方案和多画像用例，因此知识库应自带足量可复现案例，但最终指标必须由系统实测。",
+      "evidence_chunk_ids": [
+        "chunk_golden_dataset_design_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_online_monitoring_feedback_what",
+      "knowledge_node_id": "online_monitoring_feedback",
+      "question": "什么是在线监控与反馈？",
+      "answer": "线上监控应记录请求链路、模型与索引版本、候选证据、延迟、错误码、拒答和用户反馈，同时避免保存不必要敏感内容。",
+      "evidence_chunk_ids": [
+        "chunk_online_monitoring_feedback_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_online_monitoring_feedback_how",
+      "knowledge_node_id": "online_monitoring_feedback",
+      "question": "在工程中怎样落实在线监控与反馈？",
+      "answer": "用trace_id串联查询改写、检索、重排、生成、审核和仲裁；建立质量告警，如空召回率、引用失败率和审核驳回率突增；抽样进入回归集。",
+      "evidence_chunk_ids": [
+        "chunk_online_monitoring_feedback_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_online_monitoring_feedback_when",
+      "knowledge_node_id": "online_monitoring_feedback",
+      "question": "什么时候不应过度使用在线监控与反馈？",
+      "answer": "反馈用于发现问题和构建评测案例，不应未经审核直接修改权威知识或自动提升内容可信等级。",
+      "evidence_chunk_ids": [
+        "chunk_online_monitoring_feedback_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_agentic_rag_what",
+      "knowledge_node_id": "agentic_rag",
+      "question": "什么是Agentic RAG？",
+      "answer": "Agentic RAG将固定单次检索扩展为可规划流程：识别任务、选择数据源、分解问题、迭代检索、评估证据并决定是否继续。价值来自可控决策，不是简单增加模型调用次数。",
+      "evidence_chunk_ids": [
+        "chunk_agentic_rag_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_agentic_rag_how",
+      "knowledge_node_id": "agentic_rag",
+      "question": "在工程中怎样落实Agentic RAG？",
+      "answer": "使用状态机限制步骤、工具和重试；每步输出结构化action、evidence和reason；设置预算、超时和人工介入；保留完整轨迹。",
+      "evidence_chunk_ids": [
+        "chunk_agentic_rag_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_agentic_rag_when",
+      "knowledge_node_id": "agentic_rag",
+      "question": "什么时候不应过度使用Agentic RAG？",
+      "answer": "简单FAQ不需要Agentic RAG。仅在多源、复杂任务或证据不足需迭代时使用，并与固定流程基线比较。",
+      "evidence_chunk_ids": [
+        "chunk_agentic_rag_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_self_rag_what",
+      "knowledge_node_id": "self_rag",
+      "question": "什么是Self-RAG自反思检索生成？",
+      "answer": "Self-RAG引入检索与反思信号，使模型在需要时检索，并对相关性、支持性和输出质量进行自评。它展示了把检索决策和批判过程纳入生成的方法。",
+      "evidence_chunk_ids": [
+        "chunk_self_rag_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_self_rag_how",
+      "knowledge_node_id": "self_rag",
+      "question": "在工程中怎样落实Self-RAG自反思检索生成？",
+      "answer": "工程应用可借鉴其思想：在工作流中显式设置need_retrieval、evidence_supported和quality_check节点，而不必直接复现训练方法。",
+      "evidence_chunk_ids": [
+        "chunk_self_rag_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_self_rag_when",
+      "knowledge_node_id": "self_rag",
+      "question": "什么时候不应过度使用Self-RAG自反思检索生成？",
+      "answer": "比赛系统可实现可解释的规则+审核Agent近似闭环，避免把高级论文名称当作未经验证的功能。",
+      "evidence_chunk_ids": [
+        "chunk_self_rag_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_corrective_rag_what",
+      "knowledge_node_id": "corrective_rag",
+      "question": "什么是Corrective RAG？",
+      "answer": "Corrective RAG的核心是先评估已检索文档质量，再决定直接使用、补充检索、过滤噪声或拒答。它把“检索结果是否可用”变成显式决策。",
+      "evidence_chunk_ids": [
+        "chunk_corrective_rag_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_corrective_rag_how",
+      "knowledge_node_id": "corrective_rag",
+      "question": "在工程中怎样落实Corrective RAG？",
+      "answer": "定义retrieval_quality状态和阈值；低质量时尝试查询改写、备用数据源或人工审核；所有补充证据仍需通过权限与来源检查。",
+      "evidence_chunk_ids": [
+        "chunk_corrective_rag_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_corrective_rag_when",
+      "knowledge_node_id": "corrective_rag",
+      "question": "什么时候不应过度使用Corrective RAG？",
+      "answer": "适合关键问题和多源系统。企业私有知识不能因失败就自动搜索公网并混入正式答案。",
+      "evidence_chunk_ids": [
+        "chunk_corrective_rag_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_graph_rag_what",
+      "knowledge_node_id": "graph_rag",
+      "question": "什么是Graph RAG？",
+      "answer": "Graph RAG把实体、关系和文档证据组织为图，可支持跨文档聚合、关系追踪和全局主题总结。图结构必须回链原始来源，不能把抽取关系当作绝对事实。",
+      "evidence_chunk_ids": [
+        "chunk_graph_rag_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_graph_rag_how",
+      "knowledge_node_id": "graph_rag",
+      "question": "在工程中怎样落实Graph RAG？",
+      "answer": "先定义实体与关系Schema，再做抽取、消歧和证据绑定；对局部问题使用邻域检索，对全局问题使用社区或摘要；建立图质量评测。",
+      "evidence_chunk_ids": [
+        "chunk_graph_rag_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_graph_rag_when",
+      "knowledge_node_id": "graph_rag",
+      "question": "什么时候不应过度使用Graph RAG？",
+      "answer": "关系密集、跨文档推理需求明确时才采用。RAG工程实训本身可将知识点前置关系做轻量图，无需一开始构建复杂企业知识图谱。",
+      "evidence_chunk_ids": [
+        "chunk_graph_rag_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_tool_routing_multi_source_what",
+      "knowledge_node_id": "tool_routing_multi_source",
+      "question": "什么是多源路由与工具选择？",
+      "answer": "不同问题适合不同工具：文档解释适合文本检索，精确库存或成绩适合数据库，实时状态适合API，关系问题可能适合图查询。路由器应依据意图和权限选择工具。",
+      "evidence_chunk_ids": [
+        "chunk_tool_routing_multi_source_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_tool_routing_multi_source_how",
+      "knowledge_node_id": "tool_routing_multi_source",
+      "question": "在工程中怎样落实多源路由与工具选择？",
+      "answer": "为每个工具定义输入Schema、权限、超时和返回证据格式；先用规则处理明确意图，再用模型处理歧义；融合结果时统一evidence_id。",
+      "evidence_chunk_ids": [
+        "chunk_tool_routing_multi_source_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_tool_routing_multi_source_when",
+      "knowledge_node_id": "tool_routing_multi_source",
+      "question": "什么时候不应过度使用多源路由与工具选择？",
+      "answer": "比赛阶段可实现少量受控工具路由，商业化后再增加企业连接器。写操作必须与只读检索分离并增加审批。",
+      "evidence_chunk_ids": [
+        "chunk_tool_routing_multi_source_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_observability_tracing_what",
+      "knowledge_node_id": "observability_tracing",
+      "question": "什么是可观测性与链路追踪？",
+      "answer": "可观测性包括日志、指标和追踪。语义系统还需要记录版本、候选证据、分数与决策状态，才能解释答案和定位质量回归。",
+      "evidence_chunk_ids": [
+        "chunk_observability_tracing_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_observability_tracing_how",
+      "knowledge_node_id": "observability_tracing",
+      "question": "在工程中怎样落实可观测性与链路追踪？",
+      "answer": "为请求生成trace_id或correlation_id，每个组件创建span；记录模型、提示词、索引和知识库版本；敏感内容用哈希或受控采样。",
+      "evidence_chunk_ids": [
+        "chunk_observability_tracing_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_observability_tracing_when",
+      "knowledge_node_id": "observability_tracing",
+      "question": "什么时候不应过度使用可观测性与链路追踪？",
+      "answer": "比赛原型至少应展示决策轨迹和证据链；生产系统再接入标准可观测平台与告警。",
+      "evidence_chunk_ids": [
+        "chunk_observability_tracing_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_latency_cost_optimization_what",
+      "knowledge_node_id": "latency_cost_optimization",
+      "question": "什么是延迟与成本优化？",
+      "answer": "RAG延迟来自查询改写、多个检索通道、重排、生成和审核。优化应先通过追踪找到瓶颈，再在质量不下降的前提下调整候选数、并行度、模型和缓存。",
+      "evidence_chunk_ids": [
+        "chunk_latency_cost_optimization_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_latency_cost_optimization_how",
+      "knowledge_node_id": "latency_cost_optimization",
+      "question": "在工程中怎样落实延迟与成本优化？",
+      "answer": "分别测量P50/P95延迟和Token成本；并行运行独立检索；对简单查询跳过高级步骤；使用小模型做路由或结构检查，大模型处理复杂生成。",
+      "evidence_chunk_ids": [
+        "chunk_latency_cost_optimization_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_latency_cost_optimization_when",
+      "knowledge_node_id": "latency_cost_optimization",
+      "question": "什么时候不应过度使用延迟与成本优化？",
+      "answer": "设定质量底线和预算上限，按场景分级。比赛演示优先稳定，商业系统再做容量与成本工程。",
+      "evidence_chunk_ids": [
+        "chunk_latency_cost_optimization_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_caching_idempotency_what",
+      "knowledge_node_id": "caching_idempotency",
+      "question": "什么是缓存与幂等？",
+      "answer": "可缓存嵌入、检索结果、静态知识摘要和已审核资源，但缓存键必须包含租户、知识库版本、权限、查询规范化结果和模型版本。幂等键用于避免重复创建会话、测评或任务。",
+      "evidence_chunk_ids": [
+        "chunk_caching_idempotency_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_caching_idempotency_how",
+      "knowledge_node_id": "caching_idempotency",
+      "question": "在工程中怎样落实缓存与幂等？",
+      "answer": "定义cache_key与过期策略；知识版本激活时失效相关缓存；写接口要求idempotency_key并保存首次响应；记录缓存命中率。",
+      "evidence_chunk_ids": [
+        "chunk_caching_idempotency_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_caching_idempotency_when",
+      "knowledge_node_id": "caching_idempotency",
+      "question": "什么时候不应过度使用缓存与幂等？",
+      "answer": "高风险回答可以只缓存检索候选，不缓存最终生成；涉及用户画像的结果必须包含profile_version。",
+      "evidence_chunk_ids": [
+        "chunk_caching_idempotency_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_deployment_fallback_what",
+      "knowledge_node_id": "deployment_fallback",
+      "question": "什么是部署与降级？",
+      "answer": "生产RAG应定义依赖健康检查、超时、重试、熔断和降级。降级目标不是伪装正常，而是保持数据安全并向用户说明当前能力限制。",
+      "evidence_chunk_ids": [
+        "chunk_deployment_fallback_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_deployment_fallback_how",
+      "knowledge_node_id": "deployment_fallback",
+      "question": "在工程中怎样落实部署与降级？",
+      "answer": "向量服务失败可切换关键词检索；审核失败可展示已审核静态资源或转人工；模型不可用时停止生成而不是返回无证据答案；保留运行手册。",
+      "evidence_chunk_ids": [
+        "chunk_deployment_fallback_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_deployment_fallback_when",
+      "knowledge_node_id": "deployment_fallback",
+      "question": "什么时候不应过度使用部署与降级？",
+      "answer": "关键企业规则不应在降级时绕过审核或权限。比赛演示准备离线Mock降级仅用于保证流程展示，并必须标明。",
+      "evidence_chunk_ids": [
+        "chunk_deployment_fallback_boundary"
+      ]
+    },
+    {
+      "faq_id": "faq_continuous_updates_regression_what",
+      "knowledge_node_id": "continuous_updates_regression",
+      "question": "什么是持续更新与回归？",
+      "answer": "RAG是持续变化系统。知识源、切分、嵌入、索引、提示词和模型任一变化都可能影响结果，因此每次变更都需要版本记录和自动回归。",
+      "evidence_chunk_ids": [
+        "chunk_continuous_updates_regression_principle"
+      ]
+    },
+    {
+      "faq_id": "faq_continuous_updates_regression_how",
+      "knowledge_node_id": "continuous_updates_regression",
+      "question": "在工程中怎样落实持续更新与回归？",
+      "answer": "建立变更清单与影响范围；锁定黄金集；比较新旧版本的检索、生成、延迟和成本；核心指标下降或关键案例失败则阻止发布。",
+      "evidence_chunk_ids": [
+        "chunk_continuous_updates_regression_engineering"
+      ]
+    },
+    {
+      "faq_id": "faq_continuous_updates_regression_when",
+      "knowledge_node_id": "continuous_updates_regression",
+      "question": "什么时候不应过度使用持续更新与回归？",
+      "answer": "评测集也要版本化，并防止开发者针对测试答案过拟合。商业客户可拥有独立回归集和发布审批。",
+      "evidence_chunk_ids": [
+        "chunk_continuous_updates_regression_boundary"
+      ]
+    }
+  ]
+}

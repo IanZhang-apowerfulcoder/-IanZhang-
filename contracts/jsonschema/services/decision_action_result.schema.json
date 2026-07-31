@@ -1,59 +1,37 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "决策动作执行结果",
+  "title": "DecisionActionResult",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "action_execution_id",
-    "execution_status",
-    "current_action_type",
-    "reference_id",
-    "session_status",
-    "executed_at"
-  ],
   "properties": {
-    "action_execution_id": {
+    "decision_id": {
       "type": "string",
       "format": "uuid"
     },
-    "execution_status": {
+    "status": {
       "type": "string",
       "enum": [
-        "succeeded",
-        "failed",
-        "blocked"
+        "applied",
+        "duplicate",
+        "rejected"
       ]
     },
-    "current_action_type": {
-      "type": "string",
-      "enum": [
-        "study_resource",
-        "complete_assessment",
-        "human_review_pending",
-        "session_completed",
-        "session_failed"
-      ]
+    "reference_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
     },
-    "reference_id": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "format": "uuid"
-    },
-    "session_status": {
-      "type": "string",
-      "enum": [
-        "active",
-        "waiting",
-        "completed",
-        "failed",
-        "cancelled"
-      ]
-    },
-    "executed_at": {
+    "created_at": {
       "type": "string",
       "format": "date-time"
     }
-  }
+  },
+  "required": [
+    "decision_id",
+    "status",
+    "reference_ids",
+    "created_at"
+  ]
 }

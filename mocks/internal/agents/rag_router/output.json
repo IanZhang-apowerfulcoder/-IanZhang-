@@ -1,0 +1,36 @@
+{
+  "schema_version": "7.0",
+  "run_id": "8e374123-9775-45fb-aaaa-ebae8e8c9eca",
+  "agent_name": "example",
+  "status": "succeeded",
+  "confidence": 0.5,
+  "reasoning_summary": "example",
+  "warnings": [
+    "example"
+  ],
+  "requires_human_review": true,
+  "completed_at": "2026-07-31T12:00:00Z",
+  "retrieval_plan_id": "b2b75c31-1d80-49c8-aa48-a0487412795b",
+  "query_type": "single_topic",
+  "complexity": "low",
+  "risk_level": "low",
+  "execution_mode": "sequential",
+  "selected_strategies": [
+    "metadata_filtered"
+  ],
+  "sub_queries": [
+    {
+      "sub_query_id": "example",
+      "query_text": "example",
+      "purpose": "example",
+      "target_knowledge_node_ids": [
+        "example"
+      ]
+    }
+  ],
+  "filters": {},
+  "max_steps": 1,
+  "max_retries": 1,
+  "candidate_content_allowed": true,
+  "reason_summary": "example"
+}

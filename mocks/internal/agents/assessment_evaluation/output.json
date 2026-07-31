@@ -1,0 +1,57 @@
+{
+  "schema_version": "7.0",
+  "run_id": "e0807843-5165-4a8f-b35b-dc4e470b235e",
+  "agent_name": "example",
+  "status": "succeeded",
+  "confidence": 0.5,
+  "reasoning_summary": "example",
+  "warnings": [
+    "example"
+  ],
+  "requires_human_review": true,
+  "completed_at": "2026-07-31T12:00:00Z",
+  "mode": "generated",
+  "assessment_draft_id": "e065d593-e1b5-48f0-9f61-c01163c238a7",
+  "items": [
+    {
+      "question_id": "example",
+      "question_type": "single_choice",
+      "stem": "example",
+      "options": [
+        {}
+      ],
+      "correct_answer": {},
+      "scoring_rubric": [
+        "example"
+      ],
+      "explanation": "example",
+      "difficulty_level": 1,
+      "evidence_ids": [
+        "81a07b18-6d31-4a37-999b-4e3ca19beaf0"
+      ]
+    }
+  ],
+  "score_ratio": 0.5,
+  "mastery_updates": [
+    {
+      "knowledge_node_id": "example",
+      "mastery_score": 0.5,
+      "confidence": 0.5,
+      "evidence_refs": [
+        {
+          "evidence_id": "2f750de3-e875-4a17-8830-f6f9922067a9",
+          "knowledge_node_id": "example"
+        }
+      ]
+    }
+  ],
+  "feedback": [
+    "example"
+  ],
+  "evidence": [
+    {
+      "evidence_id": "004adb73-7dcd-4fbb-8bf8-91b7d7f9ae46",
+      "knowledge_node_id": "example"
+    }
+  ]
+}

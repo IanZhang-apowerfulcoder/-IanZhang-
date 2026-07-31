@@ -1,94 +1,126 @@
-member: X
+version: 7.0.0
 member_code: P8
-role: 学习端页面与决策回放实现
-level: 成长型成员
-mentor: 陈尧
-reviewers:
-- 陈尧
-- 张英赫
-- 杨欣怡
-required_reading:
-- README.md
-- CONTRIBUTING.md
-- docs/01_项目重点与范围.md
-- docs/06_系统模块边界.md
-- docs/10_命名与字段契约.md
-- docs/11_接口所有权与变更流程.md
+member: X
+role: 平行资源生成 Agent 与资源编排
+owns:
+- Explanation Generator Agent
+- Practice Generator Agent
+- Quiz Draft Agent
+- Resource Generation Coordinator
+- 个性化讲义/实操/分阶题资源结构
+- 审核打回后的定向修复
+not_owns:
+- 自行检索未授权知识
+- 修改学习路径
+- 自己批准自己的资源
+- 把无 evidence_id 的专业结论发布
+source_docs:
+- docs/07_七核心智能体与平行Agent职责.md
+- docs/09_数据流与调用链.md
 - docs/14_测试与验收标准.md
-- docs/15_AI辅助开发约束.md
-- docs/16_任务卡与PR规则.md
-- docs/21_端到端用户流程与接口审计.md
-- docs/22_跨模块数据传输契约矩阵.md
-- docs/23_标识符与关联键生命周期.md
-- docs/25_异步任务轮询与状态规则.md
-- docs/26_字段冻结清单.md
-- docs/28_九成员开发文件总教程.md
-- docs/12_前端页面接口依赖.md
-- docs/18_演示与评测指标.md
-- api/openapi.yaml
-- project/boundary_contract_manifest.yaml
-api_scope:
-  contract_owner_operations: []
-  implementation_owner_operations: []
-  consumer_operations:
-  - cancel_learning_session
-  - create_session_feedback
-  - get_assessment_attempt_result
-  - get_assignment
-  - get_current_action
-  - get_current_assessment
-  - get_current_user
-  - get_decision_cycle
-  - get_decision_trace
-  - get_evidence
-  - get_latest_decision
-  - get_learner_profile
-  - get_learning_path
-  - get_learning_resource
-  - get_learning_session
-  - get_organization
-  - list_decision_cycles
-  - list_learner_assignments
-  - list_learning_sessions
-  - list_profile_history
-  - list_session_events
-  - list_session_resources
-  - login
-  - logout
-  - record_behavior_events
-  - refresh_token
-  - start_learning_session
-  - submit_assessment_attempt
-  - update_resource_progress
-internal_scope:
-  member: X
-  owner_interfaces: []
-  design_owner_interfaces: []
-  consumer_interfaces: []
-  boundary_numbers:
-  - 1
-  - 8
-  - 20
-  - 27
-  interface_definitions: {}
-allowed_modules:
-- apps/web/src/features/learner/**
-- apps/web/src/features/decision-trace/**
-- tests/learner/**
-forbidden_actions:
-- 直接读取智能体原始输出
-- 自行修改接口返回结构
-- 修改后端业务规则
-phase_tasks:
-- 阶段0：学习端接口切片和Mock
-- 阶段1：任务、会话、当前动作和基础时间线
-- 阶段2：知识来源与构建状态提示
-- 阶段3：画像、路径和任务页面
-- 阶段4：资源与测评页面导航联调
-- 阶段5：分歧、证据、审核和最终决策回放
-- 阶段6：响应式和性能修复
-- 阶段7：演示操作配合
-mock_index: members/P8_X/mock_index.yaml
-openapi_scope: members/P8_X/openapi_scope.yaml
-internal_scope_file: members/P8_X/internal_scope.yaml
-contract_status: frozen_v6
+- docs/36_平行Agent生产与审核架构.md
+contracts:
+- contracts/jsonschema/agents/resource_input.schema.json
+- contracts/jsonschema/agents/explanation_output.schema.json
+- contracts/jsonschema/agents/practice_output.schema.json
+- contracts/jsonschema/agents/quiz_draft_output.schema.json
+- contracts/jsonschema/agents/resource_output.schema.json
+- contracts/jsonschema/services/evidence_bundle.schema.json
+reviewers:
+- P1
+- P3
+- P7
+- P9
+stage_tasks:
+  S0:
+    items:
+    - 冻结三类平行生成 Agent 和 Coordinator 契约
+    - 定义修订指令字段
+    deliverables:
+    - Generation Schemas
+    - 资源模板
+    acceptance:
+    - 三分支职责无重复
+    - 所有专业段落要求 evidence_ids
+    dependencies:
+    - P1
+    - P3
+  S1:
+    items:
+    - 提供讲义/实操/题目分支 Mock 和聚合资源 Mock
+    deliverables:
+    - Generation Mock
+    acceptance:
+    - 三类资源格式完整
+    - 聚合不丢引用
+    dependencies:
+    - P5
+  S2:
+    items:
+    - 使用 Domain Pack v2 样例验证资源模板和引用
+    deliverables:
+    - Grounded Resource Fixtures
+    acceptance:
+    - 所有示例 evidence_id 有效
+    - 不引用未启用内容
+    dependencies:
+    - P7
+  S3:
+    items:
+    - 适配自适应 Evidence Bundle 和多子问题证据
+    deliverables:
+    - Evidence Adapter
+    acceptance:
+    - 多策略来源合并不重复
+    - 证据不足时拒绝生成确定性结论
+    dependencies:
+    - P2
+    - P7
+  S4:
+    items:
+    - 实现 Explanation/Practice/Quiz 三个平行 Agent 和 Resource Coordinator
+    - 实现定向修复
+    deliverables:
+    - Generation Agents v1
+    acceptance:
+    - 三资源形态通过率 >=99%
+    - 内容覆盖目标知识点 >=90%
+    - 修订只重跑受影响分支
+    dependencies:
+    - P3
+    - P9
+  S5:
+    items:
+    - 接入四维审核和修订循环
+    - 优化一致性
+    deliverables:
+    - Reviewed Generation Flow
+    acceptance:
+    - 审核打回后修复成功率 >=85%
+    - 最多重试 2 次
+    - 无自审
+    dependencies:
+    - P2
+    - P9
+  S6:
+    items:
+    - 质量、成本和延迟优化
+    - 生成单路/并行消融
+    deliverables:
+    - Generation Eval Report
+    acceptance:
+    - 并行完整性显著优于单路基线
+    - P95 在预算内
+    - 重复率受控
+    dependencies:
+    - P9
+  S7:
+    items:
+    - 冻结演示资源和 Prompt 版本
+    deliverables:
+    - Generation Release
+    acceptance:
+    - 演示资源可复现
+    - Prompt/模型版本记录完整
+    dependencies:
+    - P1

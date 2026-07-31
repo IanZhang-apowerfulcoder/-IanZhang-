@@ -1,0 +1,8 @@
+{
+  "knowledge_base_name": "RAG工程实训内置领域包",
+  "domain_code": "rag_engineering",
+  "domain_name": "RAG工程实训",
+  "package_file_name": "rag_engineering_competition_v1_importable.zip",
+  "expected_package_schema_version": "1.1.0",
+  "idempotency_key": "rag-engineering-v1-import-20260731"
+}

@@ -1,28 +1,13 @@
-# 接口变更申请
+# API Change Request
 
-- 申请人：
-- 变更接口或 Schema：
-- 当前版本：
-- 目标版本：
-- 变更类型：非破坏 / 破坏
-
-## 原因
-
-## 具体字段变化
-
-## 影响范围
-
-- [ ] 前端
-- [ ] 后端
-- [ ] 智能体
-- [ ] 数据库
-- [ ] Mock
-- [ ] 测试
-
-## 兼容方案
-
-## 迁移步骤
-
-## Owner 审核
-
-## 张英赫最终批准（破坏变更必需）
+- Change ID:
+- Requester:
+- Affected operationId/Schema:
+- Backward compatible:
+- Frontend impact:
+- Backend impact:
+- Agent impact:
+- Database migration:
+- Mock/Test update:
+- Rollback:
+- Approver: P1

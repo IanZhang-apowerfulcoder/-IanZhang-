@@ -1,10 +1,20 @@
+version: 7.0.0
+member_code: P8
 member: X
-owner_interfaces: []
-design_owner_interfaces: []
-consumer_interfaces: []
-boundary_numbers:
-- 1
-- 8
-- 20
-- 27
-interface_definitions: {}
+contracts:
+- contracts/jsonschema/agents/resource_input.schema.json
+- contracts/jsonschema/agents/explanation_output.schema.json
+- contracts/jsonschema/agents/practice_output.schema.json
+- contracts/jsonschema/agents/quiz_draft_output.schema.json
+- contracts/jsonschema/agents/resource_output.schema.json
+- contracts/jsonschema/services/evidence_bundle.schema.json
+source_docs:
+- docs/07_七核心智能体与平行Agent职责.md
+- docs/09_数据流与调用链.md
+- docs/14_测试与验收标准.md
+- docs/36_平行Agent生产与审核架构.md
+reviewers:
+- P1
+- P3
+- P7
+- P9

@@ -1,0 +1,73 @@
+{
+  "proposal_id": "1f1df45e-3b96-5adc-b633-3830c0fa1f12",
+  "goal": "完成第一个可信RAG原型",
+  "candidate_steps": [
+    {
+      "path_step_id": "751c54f7-15e7-5039-8818-2ebe931305e9",
+      "sequence_no": 1,
+      "knowledge_node_ids": [
+        "RAG-M01-N01"
+      ],
+      "action_type": "learn",
+      "resource_type": "mixed",
+      "difficulty_level": 1,
+      "estimated_minutes": 60,
+      "prerequisite_path_step_ids": [],
+      "success_criteria": [
+        "概念题正确率达到80%",
+        "能说明适用边界"
+      ]
+    },
+    {
+      "path_step_id": "2776a6cf-6c5a-5aff-946f-2a406b30d4f9",
+      "sequence_no": 2,
+      "knowledge_node_ids": [
+        "RAG-M01-N02"
+      ],
+      "action_type": "practice",
+      "resource_type": "exercise",
+      "difficulty_level": 2,
+      "estimated_minutes": 90,
+      "prerequisite_path_step_ids": [
+        "751c54f7-15e7-5039-8818-2ebe931305e9"
+      ],
+      "success_criteria": [
+        "完成工程任务",
+        "Rubric得分不低于75"
+      ]
+    }
+  ],
+  "alternative_paths": [
+    {
+      "alternative_path_id": "0eb1798f-cc83-5693-b3aa-0d24b89db2f5",
+      "summary": "若关键误区未纠正，则在原难度增加一次概念巩固。",
+      "steps": [
+        {
+          "path_step_id": "50e98cd5-1be7-5974-abda-39b5ae008dc7",
+          "sequence_no": 1,
+          "knowledge_node_ids": [
+            "RAG-M01-N01"
+          ],
+          "action_type": "review",
+          "resource_type": "mixed",
+          "difficulty_level": 1,
+          "estimated_minutes": 60,
+          "prerequisite_path_step_ids": [],
+          "success_criteria": [
+            "概念题正确率达到80%",
+            "能说明适用边界"
+          ]
+        }
+      ]
+    }
+  ],
+  "confidence": 0.893,
+  "evidence_ids": [
+    "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+    "c170ae95-9b55-5e85-9857-46a84b4e7711",
+    "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+    "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3"
+  ],
+  "reasoning_summary": "路径遵守知识图谱前置关系，并根据画像选择资源难度。",
+  "requires_human_review": false
+}

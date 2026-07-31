@@ -1,0 +1,51 @@
+{
+  "schema_version": "7.0",
+  "run_id": "945ff056-fec8-4bde-ae40-7bf428ab8878",
+  "workflow_run_id": "6aead32c-1b98-4097-90ca-49a1ee004047",
+  "session_id": "fc657cc1-1a2b-4df3-9212-ab67d43a99c7",
+  "organization_id": "c3df381e-c455-4477-a21f-f7e748767e77",
+  "learner_id": "cf375208-169e-452d-af1e-beba5ea374b4",
+  "agent_name": "example",
+  "task_type": "example",
+  "context_refs": [
+    {
+      "ref_type": "example",
+      "ref_id": "example"
+    }
+  ],
+  "constraints": {},
+  "requested_at": "2026-07-31T12:00:00Z",
+  "review_target": {
+    "target_type": "resource",
+    "target_id": "example",
+    "payload": {},
+    "evidence_bundle": {},
+    "learner_snapshot": {
+      "profile_snapshot_id": "0ff074b1-fed5-466f-b0ca-a9ed99e73f14",
+      "background": {},
+      "learning_goals": [
+        "example"
+      ],
+      "preferences": [
+        "example"
+      ],
+      "mastery_items": [
+        {
+          "knowledge_node_id": "example",
+          "mastery_score": 0.5,
+          "confidence": 0.5,
+          "evidence_refs": [
+            {
+              "evidence_id": "61c1231e-fcdb-4ef4-b974-2097381e6674",
+              "knowledge_node_id": "example"
+            }
+          ]
+        }
+      ],
+      "risk_flags": [
+        "example"
+      ]
+    }
+  },
+  "review_policy": {}
+}

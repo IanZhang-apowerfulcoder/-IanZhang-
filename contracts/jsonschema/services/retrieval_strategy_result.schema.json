@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RetrievalStrategyResult",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "retrieval_step_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "strategy": {
+      "type": "string",
+      "enum": [
+        "metadata_filtered",
+        "hybrid",
+        "graph_assisted",
+        "parent_child",
+        "agentic_decomposition"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "succeeded",
+        "failed",
+        "degraded"
+      ]
+    },
+    "latency_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "hits": {
+      "type": "array",
+      "items": {
+        "$ref": "evidence_item.schema.json"
+      },
+      "minItems": 0
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "error_code": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "retrieval_step_id",
+    "strategy",
+    "status",
+    "latency_ms",
+    "hits",
+    "warnings",
+    "error_code"
+  ]
+}

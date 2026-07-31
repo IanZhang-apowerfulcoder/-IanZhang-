@@ -1,30 +1,41 @@
-version: 1.0.0
-contract_status: frozen_v6
+version: 7.0.0
 errors:
-- code: VALIDATION_ERROR
-  http_status: 400
-  meaning: 请求字段名、类型或必填项不符合契约
-- code: UNAUTHORIZED
+- code: AUTH_UNAUTHORIZED
   http_status: 401
-  meaning: 未登录或访问令牌失效
-- code: FORBIDDEN
+  message: 未认证或令牌失效
+- code: AUTH_FORBIDDEN
   http_status: 403
-  meaning: 无组织或资源访问权限
-- code: RESOURCE_NOT_FOUND
-  http_status: 404
-  meaning: 资源不存在或不属于当前组织
-- code: CONFLICT
+  message: 无权访问该组织或资源
+- code: VALIDATION_FAILED
+  http_status: 400
+  message: 请求或 Agent 输出不符合契约
+- code: IDEMPOTENCY_CONFLICT
   http_status: 409
-  meaning: 状态冲突、版本冲突或幂等键冲突
-- code: SCHEMA_VALIDATION_FAILED
+  message: 幂等键已用于不同请求
+- code: KB_VERSION_NOT_ACTIVE
+  http_status: 409
+  message: 知识库版本未激活
+- code: KB_IMPORT_CONFLICT
+  http_status: 409
+  message: 结构化知识导入存在冲突
+- code: RETRIEVAL_INSUFFICIENT
   http_status: 422
-  meaning: 智能体输出未通过JSON Schema校验
-- code: KNOWLEDGE_BUILD_FAILED
-  http_status: 500
-  meaning: 知识构建任务失败
-- code: AGENT_RUN_FAILED
-  http_status: 500
-  meaning: 智能体执行失败
+  message: 证据不足，无法生成可靠结论
+- code: RETRIEVAL_BUDGET_EXCEEDED
+  http_status: 422
+  message: 检索规划已达到预算上限
+- code: AGENT_SCHEMA_INVALID
+  http_status: 502
+  message: Agent 输出 Schema 无效
+- code: AGENT_TIMEOUT
+  http_status: 504
+  message: Agent 超时
+- code: PARALLEL_GROUP_FAILED
+  http_status: 502
+  message: 平行组未达到最低成功分支数
+- code: REVIEW_REJECTED
+  http_status: 422
+  message: 内容未通过审核
 - code: HUMAN_REVIEW_REQUIRED
-  http_status: 409
-  meaning: 流程需要人工审核后继续
+  http_status: 202
+  message: 需要人工审核

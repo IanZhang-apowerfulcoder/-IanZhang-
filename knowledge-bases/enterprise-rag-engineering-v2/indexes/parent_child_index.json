@@ -1,0 +1,246 @@
+[
+  {
+    "parent_node_id": "RAG-M01-N01",
+    "child_node_id": "RAG-SUB-rag_definition"
+  },
+  {
+    "parent_node_id": "RAG-M01-N02",
+    "child_node_id": "RAG-SUB-rag_end_to_end_architecture"
+  },
+  {
+    "parent_node_id": "RAG-M01-N01",
+    "child_node_id": "RAG-SUB-parametric_nonparametric_memory"
+  },
+  {
+    "parent_node_id": "RAG-M01-N04",
+    "child_node_id": "RAG-SUB-rag_applicability"
+  },
+  {
+    "parent_node_id": "RAG-M01-N02",
+    "child_node_id": "RAG-SUB-rag_failure_taxonomy"
+  },
+  {
+    "parent_node_id": "RAG-M02-N01",
+    "child_node_id": "RAG-SUB-knowledge_source_selection"
+  },
+  {
+    "parent_node_id": "RAG-M02-N01",
+    "child_node_id": "RAG-SUB-source_authority_provenance"
+  },
+  {
+    "parent_node_id": "RAG-M02-N04",
+    "child_node_id": "RAG-SUB-versioning_freshness"
+  },
+  {
+    "parent_node_id": "RAG-M02-N01",
+    "child_node_id": "RAG-SUB-licensing_compliance"
+  },
+  {
+    "parent_node_id": "RAG-M04-N02",
+    "child_node_id": "RAG-SUB-access_control_tenant_isolation"
+  },
+  {
+    "parent_node_id": "RAG-M02-N02",
+    "child_node_id": "RAG-SUB-document_parsing"
+  },
+  {
+    "parent_node_id": "RAG-M02-N02",
+    "child_node_id": "RAG-SUB-layout_table_extraction"
+  },
+  {
+    "parent_node_id": "RAG-M02-N02",
+    "child_node_id": "RAG-SUB-text_cleaning_normalization"
+  },
+  {
+    "parent_node_id": "RAG-M02-N02",
+    "child_node_id": "RAG-SUB-deduplication"
+  },
+  {
+    "parent_node_id": "RAG-M02-N04",
+    "child_node_id": "RAG-SUB-document_quality_checks"
+  },
+  {
+    "parent_node_id": "RAG-M02-N03",
+    "child_node_id": "RAG-SUB-chunking_objectives"
+  },
+  {
+    "parent_node_id": "RAG-M02-N03",
+    "child_node_id": "RAG-SUB-fixed_window_chunking"
+  },
+  {
+    "parent_node_id": "RAG-M02-N03",
+    "child_node_id": "RAG-SUB-structure_aware_chunking"
+  },
+  {
+    "parent_node_id": "RAG-M02-N03",
+    "child_node_id": "RAG-SUB-semantic_chunking"
+  },
+  {
+    "parent_node_id": "RAG-M07-N01",
+    "child_node_id": "RAG-SUB-parent_child_multigranular"
+  },
+  {
+    "parent_node_id": "RAG-M02-N04",
+    "child_node_id": "RAG-SUB-metadata_schema"
+  },
+  {
+    "parent_node_id": "RAG-M03-N01",
+    "child_node_id": "RAG-SUB-embedding_fundamentals"
+  },
+  {
+    "parent_node_id": "RAG-M03-N01",
+    "child_node_id": "RAG-SUB-embedding_model_selection"
+  },
+  {
+    "parent_node_id": "RAG-M03-N01",
+    "child_node_id": "RAG-SUB-similarity_metrics"
+  },
+  {
+    "parent_node_id": "RAG-M03-N02",
+    "child_node_id": "RAG-SUB-vector_index_hnsw_ivf"
+  },
+  {
+    "parent_node_id": "RAG-M03-N03",
+    "child_node_id": "RAG-SUB-bm25_sparse_retrieval"
+  },
+  {
+    "parent_node_id": "RAG-M03-N01",
+    "child_node_id": "RAG-SUB-dense_retrieval"
+  },
+  {
+    "parent_node_id": "RAG-M03-N04",
+    "child_node_id": "RAG-SUB-hybrid_retrieval"
+  },
+  {
+    "parent_node_id": "RAG-M04-N02",
+    "child_node_id": "RAG-SUB-metadata_filtering"
+  },
+  {
+    "parent_node_id": "RAG-M04-N01",
+    "child_node_id": "RAG-SUB-multi_query_expansion"
+  },
+  {
+    "parent_node_id": "RAG-M04-N01",
+    "child_node_id": "RAG-SUB-query_rewriting"
+  },
+  {
+    "parent_node_id": "RAG-M07-N03",
+    "child_node_id": "RAG-SUB-hyde_retrieval"
+  },
+  {
+    "parent_node_id": "RAG-M04-N03",
+    "child_node_id": "RAG-SUB-cross_encoder_reranking"
+  },
+  {
+    "parent_node_id": "RAG-M04-N03",
+    "child_node_id": "RAG-SUB-colbert_late_interaction"
+  },
+  {
+    "parent_node_id": "RAG-M04-N03",
+    "child_node_id": "RAG-SUB-diversity_mmr"
+  },
+  {
+    "parent_node_id": "RAG-M03-N04",
+    "child_node_id": "RAG-SUB-rank_fusion_rrf"
+  },
+  {
+    "parent_node_id": "RAG-M04-N04",
+    "child_node_id": "RAG-SUB-context_selection_budget"
+  },
+  {
+    "parent_node_id": "RAG-M04-N04",
+    "child_node_id": "RAG-SUB-lost_in_the_middle"
+  },
+  {
+    "parent_node_id": "RAG-M05-N01",
+    "child_node_id": "RAG-SUB-prompt_grounding"
+  },
+  {
+    "parent_node_id": "RAG-M05-N02",
+    "child_node_id": "RAG-SUB-answer_abstention"
+  },
+  {
+    "parent_node_id": "RAG-M05-N01",
+    "child_node_id": "RAG-SUB-citation_generation_verification"
+  },
+  {
+    "parent_node_id": "RAG-M05-N03",
+    "child_node_id": "RAG-SUB-hallucination_types"
+  },
+  {
+    "parent_node_id": "RAG-M05-N03",
+    "child_node_id": "RAG-SUB-evidence_entailment"
+  },
+  {
+    "parent_node_id": "RAG-M05-N03",
+    "child_node_id": "RAG-SUB-review_correction_loop"
+  },
+  {
+    "parent_node_id": "RAG-M05-N04",
+    "child_node_id": "RAG-SUB-prompt_injection_defense"
+  },
+  {
+    "parent_node_id": "RAG-M05-N04",
+    "child_node_id": "RAG-SUB-sensitive_data_privacy"
+  },
+  {
+    "parent_node_id": "RAG-M06-N01",
+    "child_node_id": "RAG-SUB-retrieval_metrics"
+  },
+  {
+    "parent_node_id": "RAG-M06-N02",
+    "child_node_id": "RAG-SUB-generation_metrics"
+  },
+  {
+    "parent_node_id": "RAG-M06-N03",
+    "child_node_id": "RAG-SUB-end_to_end_evaluation"
+  },
+  {
+    "parent_node_id": "RAG-M06-N03",
+    "child_node_id": "RAG-SUB-golden_dataset_design"
+  },
+  {
+    "parent_node_id": "RAG-M06-N04",
+    "child_node_id": "RAG-SUB-online_monitoring_feedback"
+  },
+  {
+    "parent_node_id": "RAG-M07-N03",
+    "child_node_id": "RAG-SUB-agentic_rag"
+  },
+  {
+    "parent_node_id": "RAG-M07-N03",
+    "child_node_id": "RAG-SUB-self_rag"
+  },
+  {
+    "parent_node_id": "RAG-M07-N03",
+    "child_node_id": "RAG-SUB-corrective_rag"
+  },
+  {
+    "parent_node_id": "RAG-M07-N02",
+    "child_node_id": "RAG-SUB-graph_rag"
+  },
+  {
+    "parent_node_id": "RAG-M07-N04",
+    "child_node_id": "RAG-SUB-tool_routing_multi_source"
+  },
+  {
+    "parent_node_id": "RAG-M06-N04",
+    "child_node_id": "RAG-SUB-observability_tracing"
+  },
+  {
+    "parent_node_id": "RAG-M08-N03",
+    "child_node_id": "RAG-SUB-latency_cost_optimization"
+  },
+  {
+    "parent_node_id": "RAG-M08-N02",
+    "child_node_id": "RAG-SUB-caching_idempotency"
+  },
+  {
+    "parent_node_id": "RAG-M08-N04",
+    "child_node_id": "RAG-SUB-deployment_fallback"
+  },
+  {
+    "parent_node_id": "RAG-M06-N03",
+    "child_node_id": "RAG-SUB-continuous_updates_regression"
+  }
+]

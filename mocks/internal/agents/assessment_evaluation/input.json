@@ -1,0 +1,26 @@
+{
+  "schema_version": "7.0",
+  "run_id": "ff502074-5383-414d-9133-9d6f695fc9f1",
+  "workflow_run_id": "963bbe58-1468-4b39-bd80-5d4750b4ef78",
+  "session_id": "d053b5fc-9e18-40ad-87af-4b0578bb2e2a",
+  "organization_id": "f1505395-325b-46cb-bc52-d282d2126cf8",
+  "learner_id": "9939fd0b-d4fb-42a0-b8c1-9885857860a1",
+  "agent_name": "example",
+  "task_type": "example",
+  "context_refs": [
+    {
+      "ref_type": "example",
+      "ref_id": "example"
+    }
+  ],
+  "constraints": {},
+  "requested_at": "2026-07-31T12:00:00Z",
+  "mode": "generate",
+  "target_knowledge_node_ids": [
+    "example"
+  ],
+  "difficulty_level": 1,
+  "evidence_bundle": {},
+  "assessment_constraints": {},
+  "learner_submission": {}
+}

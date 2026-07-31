@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KnowledgeImportRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "import_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "knowledge_base_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "base_version_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "import_format": {
+      "type": "string",
+      "enum": [
+        "domain_pack_zip",
+        "json_bundle",
+        "jsonl_bundle",
+        "csv_bundle",
+        "markdown_bundle"
+      ]
+    },
+    "storage_reference": {
+      "type": "string"
+    },
+    "dry_run": {
+      "type": "boolean"
+    },
+    "conflict_policy": {
+      "type": "string",
+      "enum": [
+        "reject",
+        "create_review_item",
+        "merge_metadata_only"
+      ]
+    },
+    "requested_by": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "requested_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "import_id",
+    "knowledge_base_id",
+    "base_version_id",
+    "import_format",
+    "storage_reference",
+    "dry_run",
+    "conflict_policy",
+    "requested_by",
+    "requested_at"
+  ]
+}

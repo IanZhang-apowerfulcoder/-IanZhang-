@@ -1,0 +1,42 @@
+{
+  "schema_version": "7.0",
+  "run_id": "0999b953-e80b-42b1-b9e4-8357ad36af48",
+  "agent_name": "example",
+  "status": "succeeded",
+  "confidence": 0.5,
+  "reasoning_summary": "example",
+  "warnings": [
+    "example"
+  ],
+  "requires_human_review": true,
+  "completed_at": "2026-07-31T12:00:00Z",
+  "quiz_title": "example",
+  "items": [
+    {
+      "question_id": "example",
+      "question_type": "single_choice",
+      "stem": "example",
+      "options": [
+        {}
+      ],
+      "correct_answer": {},
+      "scoring_rubric": [
+        "example"
+      ],
+      "explanation": "example",
+      "difficulty_level": 1,
+      "evidence_ids": [
+        "107fa2e2-7411-4bd5-9321-14a0c13583f2"
+      ]
+    }
+  ],
+  "coverage_knowledge_node_ids": [
+    "example"
+  ],
+  "evidence": [
+    {
+      "evidence_id": "f7b21011-5e06-4f2b-97ac-96acc664eb07",
+      "knowledge_node_id": "example"
+    }
+  ]
+}

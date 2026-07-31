@@ -1,149 +1,276 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "测评生成智能体输出",
+  "title": "AssessmentOutput",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "proposal_id",
-    "assessment_draft_id",
-    "title",
-    "assessment_type",
-    "instructions",
-    "questions",
-    "total_score_points",
-    "pass_score_points",
-    "evidence_ids",
-    "confidence"
-  ],
   "properties": {
-    "proposal_id": {
+    "schema_version": {
+      "type": "string",
+      "const": "7.0"
+    },
+    "run_id": {
       "type": "string",
       "format": "uuid"
     },
-    "assessment_draft_id": {
-      "type": "string",
-      "format": "uuid"
-    },
-    "title": {
+    "agent_name": {
       "type": "string"
     },
-    "assessment_type": {
+    "status": {
       "type": "string",
       "enum": [
-        "diagnostic",
-        "practice",
-        "checkpoint",
-        "final"
+        "succeeded",
+        "failed",
+        "needs_input",
+        "degraded"
       ]
-    },
-    "instructions": {
-      "type": "string"
-    },
-    "questions": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/$defs/question"
-      }
-    },
-    "total_score_points": {
-      "type": "number",
-      "minimum": 0
-    },
-    "pass_score_points": {
-      "type": "number",
-      "minimum": 0
-    },
-    "evidence_ids": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "string",
-        "format": "uuid"
-      }
     },
     "confidence": {
       "type": "number",
       "minimum": 0,
       "maximum": 1
-    }
-  },
-  "$defs": {
-    "question": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "question_id",
-        "question_type",
-        "stem",
-        "options",
-        "correct_answer",
-        "score_points",
-        "scoring_rubric",
-        "explanation",
-        "evidence_ids"
-      ],
-      "properties": {
-        "question_id": {
+    },
+    "reasoning_summary": {
+      "type": "string"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "generated",
+        "evaluated"
+      ]
+    },
+    "assessment_draft_id": {
+      "anyOf": [
+        {
           "type": "string",
           "format": "uuid"
         },
-        "question_type": {
-          "type": "string",
-          "enum": [
-            "single_choice",
-            "multiple_choice",
-            "true_false",
-            "short_answer",
-            "code"
-          ]
-        },
-        "stem": {
-          "type": "string"
-        },
-        "options": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "option_id",
-              "option_text"
-            ],
-            "properties": {
-              "option_id": {
-                "type": "string",
-                "format": "uuid"
-              },
-              "option_text": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        "correct_answer": {},
-        "score_points": {
-          "type": "number",
-          "minimum": 0
-        },
-        "scoring_rubric": {
-          "type": "array",
-          "items": {
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "QuizItem",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "question_id": {
             "type": "string"
+          },
+          "question_type": {
+            "type": "string",
+            "enum": [
+              "single_choice",
+              "multiple_choice",
+              "true_false",
+              "short_answer",
+              "code"
+            ]
+          },
+          "stem": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            },
+            "minItems": 0
+          },
+          "correct_answer": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "scoring_rubric": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "difficulty_level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "minItems": 1
           }
         },
-        "explanation": {
-          "type": "string"
+        "required": [
+          "question_id",
+          "question_type",
+          "stem",
+          "options",
+          "correct_answer",
+          "scoring_rubric",
+          "explanation",
+          "difficulty_level",
+          "evidence_ids"
+        ]
+      },
+      "minItems": 0
+    },
+    "score_ratio": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
         },
-        "evidence_ids": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "mastery_updates": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "MasteryItem",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "knowledge_node_id": {
+            "type": "string"
+          },
+          "mastery_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "title": "EvidenceReference",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "evidence_id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "knowledge_node_id": {
+                  "type": "string"
+                },
+                "claim_scope": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "evidence_id",
+                "knowledge_node_id"
+              ]
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "knowledge_node_id",
+          "mastery_score",
+          "confidence",
+          "evidence_refs"
+        ]
+      },
+      "minItems": 0
+    },
+    "feedback": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "EvidenceReference",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "evidence_id": {
             "type": "string",
             "format": "uuid"
+          },
+          "knowledge_node_id": {
+            "type": "string"
+          },
+          "claim_scope": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
-        }
-      }
+        },
+        "required": [
+          "evidence_id",
+          "knowledge_node_id"
+        ]
+      },
+      "minItems": 0
     }
-  }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "agent_name",
+    "status",
+    "confidence",
+    "reasoning_summary",
+    "warnings",
+    "requires_human_review",
+    "completed_at",
+    "mode",
+    "assessment_draft_id",
+    "items",
+    "score_ratio",
+    "mastery_updates",
+    "feedback",
+    "evidence"
+  ]
 }

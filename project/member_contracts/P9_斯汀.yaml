@@ -1,232 +1,141 @@
-member: 斯汀
+version: 7.0.0
 member_code: P9
-role: 质量保障、评测数据与演示材料
-level: 成长型成员
-mentor: 陈尧
-reviewers:
-- 张英赫
-- 李佳乐
-- 杨欣怡
-- 陈尧
-required_reading:
-- README.md
-- CONTRIBUTING.md
-- docs/01_项目重点与范围.md
-- docs/06_系统模块边界.md
-- docs/10_命名与字段契约.md
-- docs/11_接口所有权与变更流程.md
+member: 斯汀
+role: 平行审核 Agent、独立 Evals、质量门禁、发布与比赛材料
+owns:
+- Factuality Reviewer
+- Difficulty Reviewer
+- Assessment Quality Reviewer
+- Safety Reviewer
+- Review Coordinator
+- Agent/RAG/E2E 自动评测
+- 消融实验
+- 缺陷管理
+- 发布门禁
+- 演示与提交材料
+not_owns:
+- 单独批准自己实现的审核 Agent
+- 修改业务状态机
+- 未经脚本复现就写指标
+source_docs:
 - docs/14_测试与验收标准.md
-- docs/15_AI辅助开发约束.md
 - docs/16_任务卡与PR规则.md
-- docs/21_端到端用户流程与接口审计.md
-- docs/22_跨模块数据传输契约矩阵.md
-- docs/23_标识符与关联键生命周期.md
-- docs/25_异步任务轮询与状态规则.md
-- docs/26_字段冻结清单.md
-- docs/28_九成员开发文件总教程.md
-- docs/07_六智能体职责与接口.md
-- docs/08_联合决策状态机.md
-- docs/17_风险与降级.md
 - docs/18_演示与评测指标.md
-- api/openapi.yaml
-- api/internal_agent_interfaces.yaml
-- mocks/http/index.yaml
-- project/boundary_contract_manifest.yaml
-api_scope:
-  contract_owner_operations: []
-  implementation_owner_operations: []
-  consumer_operations:
-  - activate_knowledge_base_version
-  - archive_document
-  - archive_knowledge_base
-  - cancel_build_run
-  - cancel_learning_session
-  - create_assignments
-  - create_build_run
-  - create_knowledge_base
-  - create_session_feedback
-  - create_training_program
-  - get_agent_metrics
-  - get_agent_run
-  - get_assessment_attempt_result
-  - get_assignment
-  - get_build_run
-  - get_current_action
-  - get_current_assessment
-  - get_current_user
-  - get_decision_cycle
-  - get_decision_trace
-  - get_document
-  - get_evidence
-  - get_human_review_task
-  - get_knowledge_base
-  - get_knowledge_base_version
-  - get_knowledge_graph
-  - get_latest_decision
-  - get_learner
-  - get_learner_profile
-  - get_learning_path
-  - get_learning_resource
-  - get_learning_session
-  - get_organization
-  - get_quality_report
-  - get_training_program
-  - health_check
-  - list_build_events
-  - list_build_runs
-  - list_decision_cycles
-  - list_documents
-  - list_human_review_tasks
-  - list_knowledge_base_versions
-  - list_knowledge_bases
-  - list_learner_assignments
-  - list_learners
-  - list_learning_sessions
-  - list_profile_history
-  - list_program_assignments
-  - list_session_events
-  - list_session_resources
-  - list_training_programs
-  - login
-  - logout
-  - publish_knowledge_base_version
-  - publish_training_program
-  - record_behavior_events
-  - refresh_token
-  - resolve_human_review_task
-  - retry_document_parse
-  - run_retrieval_test
-  - start_learning_session
-  - submit_assessment_attempt
-  - update_knowledge_base
-  - update_resource_progress
-  - update_training_program
-  - upload_document
-internal_scope:
-  member: 斯汀
-  owner_interfaces: []
-  design_owner_interfaces: []
-  consumer_interfaces:
-  - diagnosis_agent
-  - path_planning_agent
-  - resource_generation_agent
-  - assessment_agent
-  - review_agent
-  - arbitration_agent
-  boundary_numbers:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
-  - 12
-  - 13
-  - 14
-  - 15
-  - 16
-  - 17
-  - 18
-  - 19
-  - 20
-  - 21
-  - 22
-  - 23
-  - 24
-  - 25
-  - 26
-  - 27
-  interface_definitions:
-    arbitration_agent:
-      owner: 张英赫
-      design_owner: 张英赫
-      function_name: run_arbitration
-      input: arbitration_input.schema.json
-      output: arbitration_output.schema.json
-      timeout_seconds: 60
-      max_retries: 1
-      input_schema: contracts/jsonschema/agents/arbitration_input.schema.json
-      output_schema: contracts/jsonschema/agents/arbitration_output.schema.json
-      contract_status: frozen_v6
-    assessment_agent:
-      owner: 李汝萱
-      design_owner: 杨欣怡
-      function_name: run_assessment_generation
-      input: assessment_input.schema.json
-      output: assessment_output.schema.json
-      timeout_seconds: 60
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/assessment_input.schema.json
-      output_schema: contracts/jsonschema/agents/assessment_output.schema.json
-      contract_status: frozen_v6
-    diagnosis_agent:
-      owner: 杨欣怡
-      design_owner: 杨欣怡
-      function_name: run_diagnosis
-      input: diagnosis_input.schema.json
-      output: diagnosis_output.schema.json
-      timeout_seconds: 45
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/diagnosis_input.schema.json
-      output_schema: contracts/jsonschema/agents/diagnosis_output.schema.json
-      contract_status: frozen_v6
-    path_planning_agent:
-      owner: 杨欣怡
-      design_owner: 杨欣怡
-      function_name: run_path_planning
-      input: path_plan_input.schema.json
-      output: path_plan_output.schema.json
-      timeout_seconds: 45
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/path_plan_input.schema.json
-      output_schema: contracts/jsonschema/agents/path_plan_output.schema.json
-      contract_status: frozen_v6
-    resource_generation_agent:
-      owner: 郑翘楚
-      design_owner: 杨欣怡
-      function_name: run_resource_generation
-      input: resource_input.schema.json
-      output: resource_output.schema.json
-      timeout_seconds: 60
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/resource_input.schema.json
-      output_schema: contracts/jsonschema/agents/resource_output.schema.json
-      contract_status: frozen_v6
-    review_agent:
-      owner: 李佳乐
-      design_owner: 李佳乐
-      function_name: run_review
-      input: review_input.schema.json
-      output: review_output.schema.json
-      timeout_seconds: 45
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/review_input.schema.json
-      output_schema: contracts/jsonschema/agents/review_output.schema.json
-      contract_status: frozen_v6
-allowed_modules:
-- tests/**
-- evaluation/**
-- mocks/**
-- docs/test-reports/**
-- demo-data/**
-forbidden_actions:
-- 直接修改生产逻辑修复测试
-- 修改契约以迁就错误实现
-phase_tasks:
-- 阶段0：验证所有契约和Mock可读
-- 阶段1：验证所有Mock页面状态
-- 阶段2：建立检索、无答案、冲突和租户隔离数据集
-- 阶段3：建立诊断、路径和画像预期样本
-- 阶段4：建立资源质量和题目答案评测集
-- 阶段5：建立分歧、修订、仲裁和人工介入场景
-- 阶段6：执行完整回归并形成指标
-- 阶段7：三轮演示检查
-mock_index: members/P9_斯汀/mock_index.yaml
-openapi_scope: members/P9_斯汀/openapi_scope.yaml
-internal_scope_file: members/P9_斯汀/internal_scope.yaml
-contract_status: frozen_v6
+- docs/20_开发启动清单.md
+- docs/36_平行Agent生产与审核架构.md
+- docs/40_比赛提交映射与最终交付清单.md
+contracts:
+- contracts/jsonschema/agents/factuality_review_output.schema.json
+- contracts/jsonschema/agents/difficulty_review_output.schema.json
+- contracts/jsonschema/agents/assessment_review_output.schema.json
+- contracts/jsonschema/agents/safety_review_output.schema.json
+- contracts/jsonschema/agents/review_output.schema.json
+- reports/validation_report.md
+reviewers:
+- P1
+- P2
+- P3
+- P7
+stage_tasks:
+  S0:
+    items:
+    - 冻结四类审核 Agent、评测集、指标和发布门禁
+    - 定义独立验收关系
+    deliverables:
+    - Review Schemas
+    - Eval Plan
+    acceptance:
+    - 审核维度互斥且覆盖完整
+    - 任何指标有计算公式和数据集
+    dependencies:
+    - P1
+    - P3
+    - P7
+  S1:
+    items:
+    - 验证所有契约/Mock
+    - 建立 CI 和缺陷分级
+    deliverables:
+    - CI Baseline
+    - Mock QA
+    acceptance:
+    - YAML/JSON/OpenAPI 100% 可解析
+    - 72 张任务卡齐全
+    - P0/P1=0
+    dependencies:
+    - ALL
+  S2:
+    items:
+    - 审核知识库合并质量
+    - 建立检索路由和 RAG 评测集
+    deliverables:
+    - KB/RAG Audit
+    acceptance:
+    - 引用完整
+    - 重复/断链为 0
+    - Recall@5 达门禁
+    dependencies:
+    - P7
+  S3:
+    items:
+    - 建立路由标注集、循环/预算/fallback 测试
+    - 实现 Router 独立评测
+    deliverables:
+    - Router Eval
+    acceptance:
+    - 路由准确率 >=90%
+    - 无效循环率 <=2%
+    - 预算违规为 0
+    dependencies:
+    - P2
+  S4:
+    items:
+    - 实现 Factuality/Difficulty/Assessment/Safety 四个 Reviewer 和 Review Coordinator
+    - 建立生成质量评测
+    deliverables:
+    - Review Agents v1
+    - Agent Eval
+    acceptance:
+    - 事实审核 precision/recall 达门禁
+    - 难度适配 >=85%
+    - 答案错误不通过
+    dependencies:
+    - P3
+    - P7
+    - P8
+  S5:
+    items:
+    - 完成冲突、修订、人工介入和仲裁全量测试
+    deliverables:
+    - Full-loop QA
+    acceptance:
+    - 至少 8 类冲突
+    - 事实错误率 <=5%
+    - 审后幻觉率目标达成
+    dependencies:
+    - P2
+    - P5
+  S6:
+    items:
+    - 执行 E2E、性能、安全、故障注入和消融实验
+    - 生成指标看板数据
+    deliverables:
+    - Release Candidate Report
+    acceptance:
+    - 高优先级缺陷 0
+    - 三类画像 x3 连跑
+    - 所有指标脚本可重跑
+    dependencies:
+    - ALL
+  S7:
+    items:
+    - 最终发布验收、视频/PPT/测试数据/部署说明一致性检查
+    deliverables:
+    - Final QA Sign-off
+    - Submission Package
+    acceptance:
+    - 清单 100%
+    - 哈希完整
+    - 离线回放可用
+    dependencies:
+    - P1

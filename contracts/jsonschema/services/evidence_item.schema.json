@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvidenceItem",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "chunk_id": {
+      "type": "string"
+    },
+    "knowledge_node_id": {
+      "type": "string"
+    },
+    "knowledge_base_version_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "content_excerpt": {
+      "type": "string"
+    },
+    "citation_text": {
+      "type": "string"
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "relevance_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "fused_score": {
+      "type": "number",
+      "minimum": 0
+    },
+    "strategy_contributions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      },
+      "minItems": 0
+    },
+    "difficulty_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "content_status": {
+      "type": "string"
+    },
+    "review_status": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "evidence_id",
+    "chunk_id",
+    "knowledge_node_id",
+    "knowledge_base_version_id",
+    "content_excerpt",
+    "citation_text",
+    "source_ids",
+    "relevance_score",
+    "fused_score",
+    "strategy_contributions",
+    "difficulty_level",
+    "content_status",
+    "review_status"
+  ]
+}

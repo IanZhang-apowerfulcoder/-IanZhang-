@@ -1,110 +1,135 @@
-member: 郑翘楚
+version: 7.0.0
 member_code: P5
-role: 资源生成智能体与学习资料页面
-level: 成长型成员
-mentor: 杨欣怡
-reviewers:
-- 杨欣怡
-- 陈尧
-required_reading:
-- README.md
-- CONTRIBUTING.md
-- docs/01_项目重点与范围.md
+member: 郑翘楚
+role: 业务后端、Public API、权限、业务状态机与集成适配
+owns:
+- Public API
+- 身份与权限
+- 学习会话业务状态
+- Agent Job 创建
+- Agent 结果 Schema 校验
+- 权威数据写入
+- 展示模型适配
+- 幂等、错误码与人工审核接口
+not_owns:
+- 修改 Agent Blueprint
+- 前端直出 Agent 原始结果
+- 允许 Agent 直接写权威表
+source_docs:
 - docs/06_系统模块边界.md
+- docs/09_数据流与调用链.md
 - docs/10_命名与字段契约.md
 - docs/11_接口所有权与变更流程.md
-- docs/14_测试与验收标准.md
-- docs/15_AI辅助开发约束.md
-- docs/16_任务卡与PR规则.md
-- docs/21_端到端用户流程与接口审计.md
-- docs/22_跨模块数据传输契约矩阵.md
-- docs/23_标识符与关联键生命周期.md
-- docs/25_异步任务轮询与状态规则.md
-- docs/26_字段冻结清单.md
-- docs/28_九成员开发文件总教程.md
-- docs/07_六智能体职责与接口.md
-- docs/12_前端页面接口依赖.md
-- api/internal_agent_interfaces.yaml
-- contracts/jsonschema/agents/resource_input.schema.json
-- contracts/jsonschema/agents/resource_output.schema.json
-api_scope:
-  contract_owner_operations: []
-  implementation_owner_operations:
-  - get_learning_resource
-  - list_session_resources
-  - update_resource_progress
-  consumer_operations:
-  - get_evidence
-  - get_learner_profile
-  - get_learning_path
-  - get_learning_resource
-  - list_session_resources
-  - update_resource_progress
-internal_scope:
-  member: 郑翘楚
-  owner_interfaces:
-  - resource_generation_agent
-  design_owner_interfaces: []
-  consumer_interfaces:
-  - path_planning_agent
-  - review_agent
-  boundary_numbers:
-  - 15
-  - 21
-  interface_definitions:
-    path_planning_agent:
-      owner: 杨欣怡
-      design_owner: 杨欣怡
-      function_name: run_path_planning
-      input: path_plan_input.schema.json
-      output: path_plan_output.schema.json
-      timeout_seconds: 45
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/path_plan_input.schema.json
-      output_schema: contracts/jsonschema/agents/path_plan_output.schema.json
-      contract_status: frozen_v6
-    resource_generation_agent:
-      owner: 郑翘楚
-      design_owner: 杨欣怡
-      function_name: run_resource_generation
-      input: resource_input.schema.json
-      output: resource_output.schema.json
-      timeout_seconds: 60
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/resource_input.schema.json
-      output_schema: contracts/jsonschema/agents/resource_output.schema.json
-      contract_status: frozen_v6
-    review_agent:
-      owner: 李佳乐
-      design_owner: 李佳乐
-      function_name: run_review
-      input: review_input.schema.json
-      output: review_output.schema.json
-      timeout_seconds: 45
-      max_retries: 2
-      input_schema: contracts/jsonschema/agents/review_input.schema.json
-      output_schema: contracts/jsonschema/agents/review_output.schema.json
-      contract_status: frozen_v6
-allowed_modules:
-- services/agents/resource-generation/**
-- services/resources/**
-- apps/web/src/features/resources/**
-- tests/resources/**
-forbidden_actions:
-- 修改公共字段名
-- 修改路径规划规则
-- 修改检索核心
-- 修改编排器
-phase_tasks:
-- 阶段0：学习资源输入输出契约和Mock
-- 阶段1：用Mock完成资源列表、详情、引用与进度页面
-- 阶段2：修复引用展示问题
-- 阶段3：接入画像和路径上下文
-- 阶段4：实现资源生成智能体并联调
-- 阶段5：实现审核驳回后的重新生成
-- 阶段6：补测试和修复
-- 阶段7：演示配合
-mock_index: members/P5_郑翘楚/mock_index.yaml
-openapi_scope: members/P5_郑翘楚/openapi_scope.yaml
-internal_scope_file: members/P5_郑翘楚/internal_scope.yaml
-contract_status: frozen_v6
+- docs/13_数据库与持久化约束.md
+contracts:
+- api/openapi.yaml
+- api/internal_openapi.yaml
+- api/field_dictionary.yaml
+- api/error_codes.yaml
+- database/schema.sql
+reviewers:
+- P1
+- P2
+- P6
+- P9
+stage_tasks:
+  S0:
+    items:
+    - 冻结 Public/Internal API、错误码、幂等和权限模型
+    - 定义 Agent 结果采纳边界
+    deliverables:
+    - OpenAPI v7
+    - 后端模块说明
+    acceptance:
+    - 接口请求/响应明确
+    - Agent 无数据库写权限
+    - 每个写接口有幂等策略
+    dependencies:
+    - P1
+    - P6
+  S1:
+    items:
+    - 实现后端骨架、鉴权、Mock Adapter 和公开展示模型
+    - 完成 API Contract Test
+    deliverables:
+    - API Skeleton
+    - Mock Backend
+    acceptance:
+    - OpenAPI 路径全部可返回 Mock
+    - 错误格式统一
+    - 前端可独立联调
+    dependencies:
+    - P4
+  S2:
+    items:
+    - 实现知识版本、结构化导入、审核队列、发布/回滚 API
+    - 接入 P7 知识服务
+    deliverables:
+    - Knowledge Admin API
+    acceptance:
+    - 导入可 dry-run
+    - 发布前强制验证
+    - 旧版本可回滚
+    dependencies:
+    - P6
+    - P7
+  S3:
+    items:
+    - 实现 Retrieval Run 业务接口、SSE/Event 查询和权限过滤
+    deliverables:
+    - Retrieval Gateway
+    acceptance:
+    - trace 可分页/续传
+    - 跨租户为 0
+    - 超时返回可恢复状态
+    dependencies:
+    - P2
+    - P6
+  S4:
+    items:
+    - 实现学习会话、资源、测评、作答和路径 API
+    - 验证 Agent 输出后持久化
+    deliverables:
+    - Learning API
+    acceptance:
+    - 前后端全链路可用
+    - 未审核资源不发布
+    - 答案隔离
+    dependencies:
+    - P3
+    - P8
+  S5:
+    items:
+    - 实现审核、修订、仲裁、人工覆盖和画像版本 API
+    deliverables:
+    - Decision API
+    acceptance:
+    - 重复回调幂等
+    - 人工覆盖留审计
+    - 最终决策唯一
+    dependencies:
+    - P2
+    - P6
+    - P9
+  S6:
+    items:
+    - 性能、安全、限流、审计和集成回归
+    deliverables:
+    - Backend QA 报告
+    acceptance:
+    - P95 读接口 <500ms（本地基线）
+    - 越权测试 0 成功
+    - P0/P1 缺陷 0
+    dependencies:
+    - P9
+  S7:
+    items:
+    - 准备生产配置、迁移和部署说明
+    deliverables:
+    - Backend Release
+    acceptance:
+    - 一条命令本地启动
+    - 生产配置与开发配置分离
+    dependencies:
+    - P1
+    - P6

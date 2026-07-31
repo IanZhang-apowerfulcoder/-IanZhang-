@@ -1,0 +1,88 @@
+version: 7.0.0
+steps:
+- step: 1
+  action: create_learning_session
+  public_operation: create_learning_session
+  database:
+  - learning_sessions
+  - workflow_runs
+  event: session_started
+- step: 2
+  action: diagnose
+  agent: diagnosis
+  schemas:
+  - diagnosis_input
+  - diagnosis_output
+  tables:
+  - agent_runs
+  - agent_proposals
+- step: 3
+  action: plan_path
+  agent: path_planning
+  schemas:
+  - path_plan_input
+  - path_plan_output
+- step: 4
+  action: route_retrieval
+  agent: rag_router
+  schemas:
+  - rag_router_input
+  - rag_router_output
+  - retrieval_plan
+- step: 5
+  action: retrieve
+  service: services/retrieval
+  schemas:
+  - retrieval_strategy_result
+  - evidence_bundle
+  - evidence_sufficiency
+  tables:
+  - retrieval_runs
+  - retrieval_steps
+  - retrieval_evidence_links
+- step: 6
+  action: parallel_generate
+  agents:
+  - explanation_generator
+  - practice_generator
+  - quiz_draft_generator
+  schema: parallel_group_result
+- step: 7
+  action: compose
+  agent: resource_coordinator
+  schema: resource_output
+- step: 8
+  action: parallel_review
+  agents:
+  - factuality_reviewer
+  - difficulty_reviewer
+  - assessment_quality_reviewer
+  - safety_reviewer
+- step: 9
+  action: aggregate_review
+  agent: review_coordinator
+  schema: review_output
+- step: 10
+  action: arbitrate
+  agent: arbitration
+  schema: arbitration_output
+  table: final_decisions
+- step: 11
+  action: deliver
+  public_operation: get_session_resource
+  table: learning_resources
+- step: 12
+  action: evaluate
+  agent: assessment_evaluation
+  tables:
+  - assessments
+  - assessment_attempts
+- step: 13
+  action: update_profile
+  service: apps/api
+  schemas:
+  - profile_update_command
+  - profile_update_result
+  tables:
+  - learner_profile_snapshots
+  - profile_mastery_events

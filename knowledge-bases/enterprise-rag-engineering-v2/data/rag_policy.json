@@ -1,0 +1,65 @@
+{
+  "version": "2.0.0",
+  "router": "rag_router_agent",
+  "simple_query": "hybrid",
+  "rules": [
+    {
+      "query_types": [
+        "definition",
+        "single_fact",
+        "single_topic"
+      ],
+      "strategies": [
+        "metadata_filtered",
+        "hybrid"
+      ],
+      "execution_mode": "sequential"
+    },
+    {
+      "query_types": [
+        "prerequisite",
+        "dependency",
+        "causal_chain",
+        "learning_path"
+      ],
+      "strategies": [
+        "metadata_filtered",
+        "graph_assisted",
+        "hybrid"
+      ],
+      "execution_mode": "parallel"
+    },
+    {
+      "query_types": [
+        "long_document",
+        "chapter_context"
+      ],
+      "strategies": [
+        "metadata_filtered",
+        "parent_child",
+        "hybrid"
+      ],
+      "execution_mode": "parallel"
+    },
+    {
+      "query_types": [
+        "complex_troubleshooting",
+        "multi_hop",
+        "multi_component"
+      ],
+      "strategies": [
+        "hybrid",
+        "graph_assisted",
+        "metadata_filtered"
+      ],
+      "execution_mode": "agentic"
+    }
+  ],
+  "candidate_policy": "all unified content is runtime enabled; review_status remains visible",
+  "limits": {
+    "max_agentic_steps": 5,
+    "max_retrieval_retries": 2,
+    "max_parallel_strategies": 3,
+    "max_total_hits_before_fusion": 60
+  }
+}

@@ -1,0 +1,2 @@
+-- Migration baseline is represented by database/schema.sql for greenfield setup.
+-- Existing deployments should create retrieval, parallel group, review, and knowledge maintenance tables in a transactional migration.

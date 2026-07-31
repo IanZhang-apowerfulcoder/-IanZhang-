@@ -1,0 +1,14 @@
+{
+  "source_id": "SRC-UNIQUE-ID",
+  "title": "来源标题",
+  "source_type": "official_documentation",
+  "publisher": "发布机构",
+  "url": "https://example.com/source",
+  "version_or_date": "YYYY-MM-DD or version",
+  "trust_tier": "A",
+  "scope": ["允许支撑的知识范围"],
+  "usage_boundary": "不得超出来源可支持的事实范围",
+  "license_review_status": "pending",
+  "reviewed_by": null,
+  "reviewed_at": null
+}

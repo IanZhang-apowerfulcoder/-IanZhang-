@@ -1,0 +1,610 @@
+[
+  {
+    "boundary_case_id": "9fadabb1-9e1e-595e-8fd7-3344a1d8416b",
+    "knowledge_node_id": "RAG-M01-N01",
+    "scenario": "用户尝试把“RAG的定义、目标与边界”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "不把RAG等同于模型微调",
+      "不承诺绝对零幻觉",
+      "知识库外问题应拒答或转人工"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "RAG会把上传文档训练进模型参数。",
+      "只要接入向量数据库就不会幻觉。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+      "c170ae95-9b55-5e85-9857-46a84b4e7711"
+    ]
+  },
+  {
+    "boundary_case_id": "6a24561f-da0f-5d99-8a7d-f916986102c6",
+    "knowledge_node_id": "RAG-M01-N02",
+    "scenario": "用户尝试把“RAG端到端流水线与责任分层”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "在线流程不得使用未发布知识版本",
+      "关键状态必须可回放",
+      "每个环节必须有失败和降级路径"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "RAG流水线就是“embedding后top-k再问模型”。",
+      "所有阶段由一个Agent完成更简单。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "e03a7e60-d324-5f5e-834f-7381739e0810",
+      "01c56b02-c15f-576b-9b9d-68c47d67916b"
+    ]
+  },
+  {
+    "boundary_case_id": "c1ceecb4-56b9-54aa-9e1b-b40e13f2061a",
+    "knowledge_node_id": "RAG-M01-N03",
+    "scenario": "用户尝试把“RAG、微调、长上下文与工具调用的选择”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "方案选择必须记录业务前提",
+      "实时数据优先使用工具查询",
+      "高频更新事实不得只依赖微调记忆"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "微调以后就不需要知识库。",
+      "上下文窗口足够大就可以永远不检索。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "f2b2fa8a-fee3-586e-bbc3-98b5ecb5f1af",
+      "3bbdce74-b29f-52ac-8394-06056f2e85f0"
+    ]
+  },
+  {
+    "boundary_case_id": "38a2f92a-adcb-546d-a05a-94818293d484",
+    "knowledge_node_id": "RAG-M01-N04",
+    "scenario": "用户尝试把“需求分析、成功指标与RAG架构决策”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "每项指标必须给出计算口径",
+      "评测集需版本化并防止泄漏",
+      "架构选择必须能回溯到知识形态和问题类型"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "先把系统做出来，再找一些问题测试。",
+      "一个准确率就能代表RAG质量。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "3ed623c7-fb38-5e39-bc64-befbff600e5a",
+      "f48d4afb-0300-5ea2-a1e3-aad1427e3a34"
+    ]
+  },
+  {
+    "boundary_case_id": "a208af5b-9dc2-5383-989a-1aec873fae7d",
+    "knowledge_node_id": "RAG-M02-N01",
+    "scenario": "用户尝试把“知识源治理、可信等级与准入”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "未授权敏感资料不得入库",
+      "模型生成草稿不得自动发布",
+      "过期来源必须支持撤回与影响分析"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "公开网页都可以直接作为权威知识。",
+      "模型总结后的内容可以替代原始来源。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "3e812057-6f3c-58b4-879c-b84b70205ca3",
+      "7e8f9330-fd2c-5cf2-aee7-1101bd092085"
+    ]
+  },
+  {
+    "boundary_case_id": "fb8a8fa4-dbf3-5631-9430-fe154cc34528",
+    "knowledge_node_id": "RAG-M02-N02",
+    "scenario": "用户尝试把“文档解析、清洗与结构保真”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "保留原始文件和解析版本",
+      "关键资料解析失败必须阻断发布",
+      "OCR结果需标记置信度与人工复核状态"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "所有PDF都可以直接提取文本。",
+      "解析只要看起来有文字就算成功。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "507145bd-82bf-57de-ba2c-02e7c516d149",
+      "459f4320-ffba-555d-9b05-e679be68ff95"
+    ]
+  },
+  {
+    "boundary_case_id": "cb7ba353-fc22-5c54-bedc-45760a65c8e8",
+    "knowledge_node_id": "RAG-M02-N03",
+    "scenario": "用户尝试把“切片策略、语义边界与父子结构”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "切片必须保留来源位置",
+      "参数变更要创建新索引版本",
+      "不得把表头、否定条件与正文分离"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "chunk size越大，模型得到的信息越多，所以越好。",
+      "overlap越大越保险。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "afb69292-46aa-55c7-b4b5-5b895d9d4513",
+      "42e17c0b-2db3-52ac-b398-eca5dc702b4f"
+    ]
+  },
+  {
+    "boundary_case_id": "f881697f-6a1f-508d-b58e-3a148b93d54d",
+    "knowledge_node_id": "RAG-M02-N04",
+    "scenario": "用户尝试把“元数据、版本、血缘与知识发布”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "发布版本不可原地修改",
+      "所有引用必须可追溯",
+      "权限标签必须在检索前过滤而非生成后遮盖"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "metadata只是方便展示，可以后补。",
+      "修改数据库里的旧切片比新建版本简单。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "110a39ee-0b6b-56b0-9c4f-626fbb785b1a",
+      "de2d06e7-6962-5ce2-b3f9-b8d983be22b8"
+    ]
+  },
+  {
+    "boundary_case_id": "653023f2-3041-50a6-97e5-a16711abf8f2",
+    "knowledge_node_id": "RAG-M03-N01",
+    "scenario": "用户尝试把“文本嵌入、向量表示与相似度”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "嵌入模型和预处理必须记录版本",
+      "专有编号和精确术语需结合关键词检索",
+      "模型更换必须重建索引"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "语义相关就一定事实相关。",
+      "所有模型输出都可以使用同一种距离函数。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "d2603583-8af0-5455-9b44-3d5e989c94c1",
+      "32df7ce1-8afb-5cfb-9b25-91de8fed3532"
+    ]
+  },
+  {
+    "boundary_case_id": "496f9988-b07a-5cd4-b31c-7b7645570cba",
+    "knowledge_node_id": "RAG-M03-N02",
+    "scenario": "用户尝试把“向量存储、精确搜索、HNSW与IVFFlat”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "上线前必须有精确检索基线",
+      "租户和权限过滤不可省略",
+      "索引参数变更必须进入版本记录"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "上了HNSW以后结果和精确搜索完全相同。",
+      "IVFFlat创建后不需要调参。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "0db4adce-4113-5ed8-844f-89563f132422",
+      "5e8ced64-0f8f-5a42-906f-fa6ec450dc0f"
+    ]
+  },
+  {
+    "boundary_case_id": "a126d447-dda6-556b-a1a4-bd0a2efaedbe",
+    "knowledge_node_id": "RAG-M03-N03",
+    "scenario": "用户尝试把“BM25、关键词检索与精确术语召回”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "保留原始查询与规范化查询",
+      "领域词典需要版本化",
+      "关键词权重需通过评测调整"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "向量检索出现后关键词检索已经过时。",
+      "关键词检索不需要数据治理。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "6cf90763-ba94-5e6b-af2b-df4a83374646",
+      "d95931d9-b4cc-59ae-883d-8742ad35e137"
+    ]
+  },
+  {
+    "boundary_case_id": "9ae9e732-8731-530d-adde-681e3bee30b7",
+    "knowledge_node_id": "RAG-M03-N04",
+    "scenario": "用户尝试把“混合检索、分数融合与RRF”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "融合前保留原始排名",
+      "禁止跨权限融合",
+      "必须报告单路与混合的消融结果"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "混合检索就是把两种分数直接相加。",
+      "RRF不需要调参和评测。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "7d448bf9-e164-5a44-81cd-86a76d56dcfa",
+      "3a1befcf-aede-53f8-9b53-b51f618c12b4"
+    ]
+  },
+  {
+    "boundary_case_id": "486178d3-083b-52c1-9506-bc91d703c1bd",
+    "knowledge_node_id": "RAG-M04-N01",
+    "scenario": "用户尝试把“查询理解、意图识别与查询改写”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "关键限定词不得丢失",
+      "每次改写要可追踪",
+      "高不确定性优先追问或多路检索"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "把问题改得越长越容易检索。",
+      "改写后的问题可以替代用户原话。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "2216241f-58cb-509e-abb0-41c1c55bdf1f",
+      "65b31f9f-9013-512f-bbda-cc2200a4f140"
+    ]
+  },
+  {
+    "boundary_case_id": "a74a3ca6-4554-5d5e-b2f8-23f127a9c1b9",
+    "knowledge_node_id": "RAG-M04-N02",
+    "scenario": "用户尝试把“元数据过滤、租户隔离与权限检索”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "权限条件由后端注入且不可被Agent覆盖",
+      "拒绝日志不得包含敏感正文",
+      "版本和有效期过滤为强制字段"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "在Prompt里写“不要泄露敏感信息”就足够。",
+      "top-k返回不足只需降低过滤条件。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "060b18e5-ed29-50d7-9cf1-d2cb7ae22fed",
+      "190248c5-ff2b-5d24-8f12-8dca4b602d96"
+    ]
+  },
+  {
+    "boundary_case_id": "4ae538f2-66c7-5aa2-babe-893086fb7713",
+    "knowledge_node_id": "RAG-M04-N03",
+    "scenario": "用户尝试把“候选重排、交叉编码器与多阶段检索”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "保留重排前后排名",
+      "候选池参数需版本化",
+      "重排超时必须有降级路径"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "重排器可以修复第一阶段漏检。",
+      "重排模型越大越好。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "cea9d066-c4b0-5d51-826e-5bf6970b3b7b",
+      "825fd4ce-5fd5-5a03-b094-ae387480ea2d"
+    ]
+  },
+  {
+    "boundary_case_id": "9f423ea2-c26c-5591-a044-7d49f41cc99b",
+    "knowledge_node_id": "RAG-M04-N04",
+    "scenario": "用户尝试把“上下文选择、压缩、排序与引用封装”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "关键条件不得因压缩丢失",
+      "证据包必须可复现",
+      "冲突证据不得静默合并"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "把检索到的50段全部放进上下文最安全。",
+      "生成式摘要天然等价于原文。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "24c5e9d9-1f5f-5cb1-afb7-793c9235f9c3",
+      "d6441eb5-e28a-5b0b-9cd7-f1b5b94fb8a9"
+    ]
+  },
+  {
+    "boundary_case_id": "93bcb289-f693-5f68-829d-63a359e00468",
+    "knowledge_node_id": "RAG-M05-N01",
+    "scenario": "用户尝试把“证据约束生成、引用与答案结构”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "无证据的专业陈述不得发布",
+      "类比必须标记其边界",
+      "输出先过Schema再进入事实审核"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "提示词写“不要幻觉”就能保证可信。",
+      "答案带了来源链接就一定有依据。"
+    ],
+    "expected_action": "clarify_or_refuse",
+    "evidence_ids": [
+      "5a8c0f89-8b27-5101-ae21-3040ab75bbc2",
+      "09f16411-041b-5ae5-bb68-b3f3c8583d6c"
+    ]
+  },
+  {
+    "boundary_case_id": "3bfc8a38-d5d0-50b8-9602-18da2e174123",
+    "knowledge_node_id": "RAG-M05-N02",
+    "scenario": "用户尝试把“证据不足、拒答、追问与人工转交”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "高风险无证据必须拒答或转人工",
+      "拒答不得暴露受限资料",
+      "每次拒答记录原因代码"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "拒答越多越安全。",
+      "找不到证据时可以用模型常识补充。"
+    ],
+    "expected_action": "clarify_or_refuse",
+    "evidence_ids": [
+      "af19c081-bf31-5030-801c-104069fdfa03",
+      "c56bbccd-b251-5073-b1ff-750e44f7463d"
+    ]
+  },
+  {
+    "boundary_case_id": "15856ff0-66fa-5cfb-8979-964c5fea3d0d",
+    "knowledge_node_id": "RAG-M05-N03",
+    "scenario": "用户尝试把“幻觉分类、事实审核与交叉验证”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "审核不得只使用生成器摘要",
+      "阻断级问题禁止自动发布",
+      "谬误率必须使用固定口径"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "让同一个模型再读一遍就叫交叉验证。",
+      "整体读起来通顺就说明专业正确。"
+    ],
+    "expected_action": "clarify_or_refuse",
+    "evidence_ids": [
+      "d2eaf759-6ded-5884-918f-e0e4e66766ba",
+      "370b0b20-3e5b-5db5-bf19-622c6c4717e1"
+    ]
+  },
+  {
+    "boundary_case_id": "53170404-0723-5aed-8d94-c6db2ef44b35",
+    "knowledge_node_id": "RAG-M05-N04",
+    "scenario": "用户尝试把“提示注入、不可信文档与知识库安全”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "检索证据永远视为不可信数据",
+      "Agent不得从文档获得额外权限",
+      "可疑来源先隔离后审核"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "只有用户输入会提示注入。",
+      "过滤“ignore previous instructions”一个短语即可。"
+    ],
+    "expected_action": "clarify_or_refuse",
+    "evidence_ids": [
+      "b04e4952-9eb2-502e-9cfe-41d8bd62bc49",
+      "82baf3c7-5e46-5051-9dc0-ca20b8b92ff6"
+    ]
+  },
+  {
+    "boundary_case_id": "968e6c40-58a8-5132-bab9-413788b2410f",
+    "knowledge_node_id": "RAG-M06-N01",
+    "scenario": "用户尝试把“检索评测：Hit Rate、Recall、MRR与nDCG”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "测试集需固定版本",
+      "标注需保留依据",
+      "发布报告必须包含分类型指标"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "Hit@5高就说明上下文一定优质。",
+      "用最终模型答案评估检索即可。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "adffd192-5ddc-5a39-b49e-54daa48cbee2",
+      "b5f3a63c-bf7f-5ec5-bc9a-017bdbad9ed8"
+    ]
+  },
+  {
+    "boundary_case_id": "4b835ed2-7584-5a4d-8398-e124697553c7",
+    "knowledge_node_id": "RAG-M06-N02",
+    "scenario": "用户尝试把“生成评测：忠实度、引用、完整性与适配”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "专业谬误率需人工或权威规则确认",
+      "自动评审Prompt和模型要版本化",
+      "适配评测必须覆盖多类画像"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "答案事实正确就代表适合学习者。",
+      "LLM-as-a-judge分数可以直接当最终结论。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "03235f85-f938-56aa-b0ff-4bc1532ba277",
+      "1d95d51a-ea33-537f-b172-a64a41a50afe"
+    ]
+  },
+  {
+    "boundary_case_id": "576822dd-e912-5112-9f81-cca733baca95",
+    "knowledge_node_id": "RAG-M06-N03",
+    "scenario": "用户尝试把“端到端回归、消融实验与发布门禁”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "回归数据集不可随意删除失败案例",
+      "阻断门禁需负责人批准变更",
+      "报告必须保留基线版本"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "新版本总体平均分更高就可以发布。",
+      "消融实验只适合论文。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "e8b6e6b1-8456-52aa-ab72-cb0f6a40cf88",
+      "50735323-f303-5a3e-8a00-d9daade93e7f"
+    ]
+  },
+  {
+    "boundary_case_id": "353db836-6a4d-58dc-9c46-345567365d5e",
+    "knowledge_node_id": "RAG-M06-N04",
+    "scenario": "用户尝试把“可观测性、成本、时延与故障定位”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "前端状态必须来自后端事件",
+      "敏感正文不进入普通日志",
+      "指标需绑定明确版本"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "只记录最终答案和报错就够。",
+      "实时日志可以直接保存全部Prompt和文档。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "f7a56088-095a-51e7-85ad-8b2fe9133c6f",
+      "620c5f33-f3ff-5aea-8bed-876495e857a4"
+    ]
+  },
+  {
+    "boundary_case_id": "0be4c84f-441c-58f2-8b95-dd20d8aa60f1",
+    "knowledge_node_id": "RAG-M07-N01",
+    "scenario": "用户尝试把“父子检索、层级检索与长文档问答”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "父子关系必须可验证",
+      "权限在父子回溯时仍生效",
+      "长文档策略需与普通混合检索对比"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "父子检索只是把chunk size设置成两个值。",
+      "返回完整父章节一定更好。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "8a6d4207-0b73-570f-88a9-0a286da9db8d",
+      "8662dadf-3f31-5802-8bf9-9a4024d1fda3"
+    ]
+  },
+  {
+    "boundary_case_id": "eb27318d-697a-58b7-8b7c-5f5182eda362",
+    "knowledge_node_id": "RAG-M07-N02",
+    "scenario": "用户尝试把“GraphRAG、实体关系与局部/全局查询”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "图边必须有来源证据",
+      "全局查询必须设置成本上限",
+      "图策略上线前需证明相对基线收益"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "GraphRAG在所有问题上都比向量检索强。",
+      "模型抽取出的关系可以直接当事实。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "98506802-b517-54d1-830d-4593bd3abca6",
+      "52ab22c2-b150-504d-a10c-3c4d2f8bf0e5"
+    ]
+  },
+  {
+    "boundary_case_id": "5bf99fb7-43c0-58db-a3bf-4cf3c940a652",
+    "knowledge_node_id": "RAG-M07-N03",
+    "scenario": "用户尝试把“Agentic RAG、问题分解与检索自修复”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "工具与状态边由代码控制",
+      "循环有硬上限",
+      "高风险工具必须人工确认"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "Agentic RAG就是让模型自由决定所有步骤。",
+      "所有问题都应该走多步Agent。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "48d5743b-bdaa-59ed-9b3c-6afd2a6a238d",
+      "9122166e-62a5-5f90-aa9f-6b701a509ac9"
+    ]
+  },
+  {
+    "boundary_case_id": "cabc80f8-ed81-5311-b49c-dc6635c3283d",
+    "knowledge_node_id": "RAG-M07-N04",
+    "scenario": "用户尝试把“结构化、代码与多模态知识路由”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "精确数值优先结构化查询",
+      "代码保留符号关系",
+      "视觉证据保留原始资产引用"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "把表格、代码和图片转成文本就完全等价。",
+      "自动路由模型的选择不需要测试。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "62932873-51ea-5a17-86b5-b386af4b4671",
+      "cc8a5bcb-a904-508d-becf-7c11bae4e059"
+    ]
+  },
+  {
+    "boundary_case_id": "9d572607-c29a-5701-a28c-d75b039d807e",
+    "knowledge_node_id": "RAG-M08-N01",
+    "scenario": "用户尝试把“知识服务API、契约与Agent集成”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "浏览器不得直接访问内部检索服务",
+      "所有输出先过Schema",
+      "破坏性变更需要显式版本"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "Agent之间直接传任意JSON更灵活。",
+      "检索API应该直接返回最终答案。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "a7da9668-9a0f-5eb3-8d65-1e2f8a3f2cfb",
+      "a9903154-d349-5bb0-84f1-96c0c210e11e"
+    ]
+  },
+  {
+    "boundary_case_id": "9a34e800-c457-58e1-8ad4-f462fbfdf396",
+    "knowledge_node_id": "RAG-M08-N02",
+    "scenario": "用户尝试把“持久化、事务、缓存与一致性”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "客户端不持有数据库凭据",
+      "缓存必须可重建",
+      "激活版本切换需要事务与审计"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "数据库也是通过前端API直接连接。",
+      "Redis里的状态足以恢复工作流。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "a0691617-7aef-5cbb-999b-318ce930f4d5",
+      "216cb12a-abee-5c74-a2e2-8ad16395fae0"
+    ]
+  },
+  {
+    "boundary_case_id": "1fde80ff-654d-51a1-82b6-979ad9e2d4b0",
+    "knowledge_node_id": "RAG-M08-N03",
+    "scenario": "用户尝试把“性能、批处理、缓存与容量规划”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "性能优化不得突破质量下限",
+      "所有外部调用有超时",
+      "系统必须有背压和降级"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "减少top-k一定能同时提高速度和质量。",
+      "缓存越多越好。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "8d9b1474-edc1-5907-9284-c13592082a29",
+      "4c1d2fed-7251-5c77-8fb9-405983e2e002"
+    ]
+  },
+  {
+    "boundary_case_id": "ecab2253-cb93-5f04-8e73-f9f5738c8179",
+    "knowledge_node_id": "RAG-M08-N04",
+    "scenario": "用户尝试把“本地开发、容器部署、安全与运维”应用到超出其能力边界的场景。",
+    "must_enforce": [
+      "密钥不进Git",
+      "内部端口不对公网",
+      "发布前必须验证备份和回滚"
+    ],
+    "unsafe_or_incorrect_claims": [
+      "本地开发后部署只需把代码复制到服务器。",
+      "服务在同一台服务器就不需要内部权限。"
+    ],
+    "expected_action": "explain_boundary_and_offer_valid_alternative",
+    "evidence_ids": [
+      "0af1e8e2-843f-554e-af8f-c5115de5ccd8",
+      "9ee66678-89ed-5378-b51f-57bc0edfe9a9"
+    ]
+  }
+]

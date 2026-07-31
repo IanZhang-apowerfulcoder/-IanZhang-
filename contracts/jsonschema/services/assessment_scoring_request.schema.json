@@ -1,32 +1,37 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "测评评分请求",
+  "title": "AssessmentScoringRequest",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "attempt_id",
-    "assessment_id",
-    "answers",
-    "answer_key_reference_id"
-  ],
   "properties": {
-    "attempt_id": {
-      "type": "string",
-      "format": "uuid"
-    },
     "assessment_id": {
       "type": "string",
       "format": "uuid"
     },
-    "answers": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "answer_key_reference_id": {
+    "attempt_id": {
       "type": "string",
       "format": "uuid"
+    },
+    "answers": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "rubric_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
-  }
+  },
+  "required": [
+    "assessment_id",
+    "attempt_id",
+    "answers",
+    "rubric_id"
+  ]
 }

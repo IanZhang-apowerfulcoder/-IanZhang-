@@ -1,25 +1,7 @@
 {
-  "operation_id": "get_agent_metrics",
-  "status_code": 200,
-  "content_type": "application/json",
-  "body": {
-    "code": "SUCCESS",
-    "message": "成功",
-    "data": {
-      "from_time": "2026-07-30T12:00:00Z",
-      "to_time": "2026-07-30T12:00:00Z",
-      "total_decision_cycles": 12,
-      "agent_run_success_rate": 0.96,
-      "review_rejection_rate": 0.18,
-      "auto_repair_success_rate": 0.82,
-      "citation_coverage_rate": 0.94,
-      "average_cycle_latency_ms": 3200,
-      "estimated_total_cost_amount": 1.25
-    },
-    "meta": {
-      "request_id": "fe311111-1111-4111-8111-111111111111",
-      "schema_version": "1.0.0",
-      "timestamp": "2026-07-30T12:00:00Z"
-    }
-  }
+  "data": {
+    "operation_id": "get_agent_metrics",
+    "status": "mock_success"
+  },
+  "request_id": "00000000-0000-4000-8000-000000000002"
 }

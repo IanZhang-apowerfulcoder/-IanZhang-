@@ -1,0 +1,9 @@
+{
+  "knowledge_base_type": "built_in_domain_pack",
+  "knowledge_base_scope": "platform",
+  "is_quick_start_available": true,
+  "package_id": "rag_engineering_competition_v1",
+  "package_version": "1.0.0",
+  "content_readiness": "development_fixture",
+  "expert_review_status": "pending_review"
+}

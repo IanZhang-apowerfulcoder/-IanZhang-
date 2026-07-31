@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "仲裁智能体输入",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "session_id",
+    "decision_cycle_id",
+    "diagnosis_proposal_ids",
+    "path_plan_proposal_ids",
+    "resource_proposal_ids",
+    "assessment_proposal_ids",
+    "review_ids",
+    "profile_snapshot_id"
+  ],
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "decision_cycle_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "diagnosis_proposal_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "path_plan_proposal_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "resource_proposal_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "assessment_proposal_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "review_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "profile_snapshot_id": {
+      "type": "string",
+      "format": "uuid"
+    }
+  }
+}

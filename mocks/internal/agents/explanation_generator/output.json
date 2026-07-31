@@ -1,0 +1,41 @@
+{
+  "schema_version": "7.0",
+  "run_id": "77450f13-0104-4fba-ac32-1e6a2830ca7b",
+  "agent_name": "example",
+  "status": "succeeded",
+  "confidence": 0.5,
+  "reasoning_summary": "example",
+  "warnings": [
+    "example"
+  ],
+  "requires_human_review": true,
+  "completed_at": "2026-07-31T12:00:00Z",
+  "title": "example",
+  "learning_objectives": [
+    "example"
+  ],
+  "sections": [
+    {
+      "heading": "example",
+      "body_markdown": "example",
+      "claims": [
+        {
+          "claim_id": "example",
+          "claim_text": "example",
+          "evidence_ids": [
+            "ce30571d-bdb0-469c-ace9-ffd2031c1b48"
+          ]
+        }
+      ]
+    }
+  ],
+  "examples": [
+    {}
+  ],
+  "evidence": [
+    {
+      "evidence_id": "f1a9d196-8a41-4351-9803-247ea5eaf315",
+      "knowledge_node_id": "example"
+    }
+  ]
+}

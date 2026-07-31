@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "路径规划智能体输出",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "proposal_id",
+    "goal",
+    "candidate_steps",
+    "alternative_paths",
+    "confidence",
+    "evidence_ids",
+    "reasoning_summary",
+    "requires_human_review"
+  ],
+  "properties": {
+    "proposal_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "goal": {
+      "type": "string"
+    },
+    "candidate_steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/path_step"
+      }
+    },
+    "alternative_paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "alternative_path_id",
+          "summary",
+          "steps"
+        ],
+        "properties": {
+          "alternative_path_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/path_step"
+            }
+          }
+        }
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "reasoning_summary": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    }
+  },
+  "$defs": {
+    "path_step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path_step_id",
+        "sequence_no",
+        "knowledge_node_ids",
+        "action_type",
+        "resource_type",
+        "difficulty_level",
+        "estimated_minutes",
+        "prerequisite_path_step_ids",
+        "success_criteria"
+      ],
+      "properties": {
+        "path_step_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "sequence_no": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "knowledge_node_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "action_type": {
+          "type": "string",
+          "enum": [
+            "learn",
+            "review",
+            "practice",
+            "assess"
+          ]
+        },
+        "resource_type": {
+          "type": "string",
+          "enum": [
+            "text",
+            "example",
+            "code",
+            "diagram",
+            "exercise",
+            "mixed"
+          ]
+        },
+        "difficulty_level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "estimated_minutes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 240
+        },
+        "prerequisite_path_step_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "success_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

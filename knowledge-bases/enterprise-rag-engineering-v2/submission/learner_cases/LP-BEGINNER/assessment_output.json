@@ -1,0 +1,103 @@
+{
+  "proposal_id": "fea46cdc-79a6-5d46-9008-a9b48ae6cc3b",
+  "assessment_draft_id": "7a3096e6-4c6d-584d-8489-ba5ab8811db7",
+  "title": "RAG的定义、目标与边界分阶测评",
+  "assessment_type": "checkpoint",
+  "instructions": "完成概念辨析与工程边界说明；所有开放题按Rubric评分。",
+  "questions": [
+    {
+      "question_id": "2c887288-ab1b-5c95-876b-3d2d2cc51293",
+      "question_type": "single_choice",
+      "stem": "RAG的定义、目标与边界的核心目标是什么？",
+      "options": [
+        {
+          "option_id": "26ede494-1092-547a-9506-59032caea51e",
+          "option_text": "RAG会把上传文档训练进模型参数。"
+        },
+        {
+          "option_id": "7372b10c-3bc3-5f78-a28e-1e2d310a5851",
+          "option_text": "RAG把检索器与生成模型组合起来：检索器从显式知识源中返回与任务相关的证据，生成模型再依据任务指令与证据组织输出。知识主要保存在可更新的外部存储中，而不是全部依赖模型参数记忆。"
+        },
+        {
+          "option_id": "a048fc2f-7d01-598d-acb0-be679ea6f4e7",
+          "option_text": "不需要证据或版本管理"
+        },
+        {
+          "option_id": "7c58acd9-6995-5ba2-81c1-7874ad0d94c3",
+          "option_text": "只用于展示动画"
+        }
+      ],
+      "correct_answer": "7372b10c-3bc3-5f78-a28e-1e2d310a5851",
+      "score_points": 10,
+      "scoring_rubric": [
+        "专业事实准确",
+        "包含适用边界",
+        "能给出可验证证据"
+      ],
+      "explanation": "RAG把检索器与生成模型组合起来：检索器从显式知识源中返回与任务相关的证据，生成模型再依据任务指令与证据组织输出。知识主要保存在可更新的外部存储中，而不是全部依赖模型参数记忆。",
+      "evidence_ids": [
+        "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+        "c170ae95-9b55-5e85-9857-46a84b4e7711"
+      ]
+    },
+    {
+      "question_id": "740ed305-daf7-547b-a402-1acdc27e70c8",
+      "question_type": "true_false",
+      "stem": "RAG会把上传文档训练进模型参数。",
+      "options": [
+        {
+          "option_id": "1ba3a863-8d28-577a-a38f-e82e119b1c72",
+          "option_text": "正确"
+        },
+        {
+          "option_id": "8fe7d400-9062-5c18-a7d4-b4ffc905cb5a",
+          "option_text": "错误"
+        }
+      ],
+      "correct_answer": "8fe7d400-9062-5c18-a7d4-b4ffc905cb5a",
+      "score_points": 10,
+      "scoring_rubric": [
+        "专业事实准确",
+        "包含适用边界",
+        "能给出可验证证据"
+      ],
+      "explanation": "标准RAG通常在推理阶段检索外部索引，不要求修改基础模型参数。",
+      "evidence_ids": [
+        "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+        "c170ae95-9b55-5e85-9857-46a84b4e7711"
+      ]
+    },
+    {
+      "question_id": "270e4206-4206-5ce8-a1a7-6af51182b58c",
+      "question_type": "short_answer",
+      "stem": "请说明RAG的定义、目标与边界的一项适用边界和验收方法。",
+      "options": [],
+      "correct_answer": {
+        "required_points": [
+          "不把RAG等同于模型微调",
+          "解释RAG中参数化记忆与外部非参数化记忆的分工"
+        ]
+      },
+      "score_points": 20,
+      "scoring_rubric": [
+        "专业事实准确",
+        "包含适用边界",
+        "能给出可验证证据"
+      ],
+      "explanation": "标准RAG通常在推理阶段检索外部索引，不要求修改基础模型参数。",
+      "evidence_ids": [
+        "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+        "c170ae95-9b55-5e85-9857-46a84b4e7711"
+      ]
+    }
+  ],
+  "total_score_points": 40,
+  "pass_score_points": 30,
+  "evidence_ids": [
+    "30aa7214-53ca-50c1-ba4d-3a8dc49a2e34",
+    "c170ae95-9b55-5e85-9857-46a84b4e7711",
+    "6651205b-2e94-5f91-a6db-34d0af08c3e0",
+    "f27b31af-a9cf-5abc-bd1b-a61c4a459ff3"
+  ],
+  "confidence": 0.9375
+}

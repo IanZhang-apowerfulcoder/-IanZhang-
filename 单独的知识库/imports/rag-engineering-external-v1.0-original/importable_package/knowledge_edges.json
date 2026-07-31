@@ -1,0 +1,705 @@
+{
+  "schema_version": "1.1.0",
+  "items": [
+    {
+      "knowledge_edge_id": "edge_001",
+      "source_node_id": "rag_definition",
+      "target_node_id": "rag_end_to_end_architecture",
+      "relation_type": "prerequisite",
+      "description": "RAG基本定义为学习RAG端到端架构提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_002",
+      "source_node_id": "rag_end_to_end_architecture",
+      "target_node_id": "parametric_nonparametric_memory",
+      "relation_type": "prerequisite",
+      "description": "RAG端到端架构为学习参数记忆与外部记忆提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_003",
+      "source_node_id": "parametric_nonparametric_memory",
+      "target_node_id": "rag_applicability",
+      "relation_type": "prerequisite",
+      "description": "参数记忆与外部记忆为学习RAG适用性判断提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_004",
+      "source_node_id": "rag_applicability",
+      "target_node_id": "rag_failure_taxonomy",
+      "relation_type": "prerequisite",
+      "description": "RAG适用性判断为学习RAG失败类型提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_005",
+      "source_node_id": "knowledge_source_selection",
+      "target_node_id": "source_authority_provenance",
+      "relation_type": "prerequisite",
+      "description": "知识源选择为学习来源权威性与溯源提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_006",
+      "source_node_id": "source_authority_provenance",
+      "target_node_id": "versioning_freshness",
+      "relation_type": "prerequisite",
+      "description": "来源权威性与溯源为学习版本与时效治理提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_007",
+      "source_node_id": "versioning_freshness",
+      "target_node_id": "licensing_compliance",
+      "relation_type": "prerequisite",
+      "description": "版本与时效治理为学习许可与合规提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_008",
+      "source_node_id": "licensing_compliance",
+      "target_node_id": "access_control_tenant_isolation",
+      "relation_type": "prerequisite",
+      "description": "许可与合规为学习权限过滤与多租户隔离提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_009",
+      "source_node_id": "document_parsing",
+      "target_node_id": "layout_table_extraction",
+      "relation_type": "prerequisite",
+      "description": "文档解析为学习版面与表格提取提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_010",
+      "source_node_id": "layout_table_extraction",
+      "target_node_id": "text_cleaning_normalization",
+      "relation_type": "prerequisite",
+      "description": "版面与表格提取为学习文本清洗与规范化提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_011",
+      "source_node_id": "text_cleaning_normalization",
+      "target_node_id": "deduplication",
+      "relation_type": "prerequisite",
+      "description": "文本清洗与规范化为学习内容去重提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_012",
+      "source_node_id": "deduplication",
+      "target_node_id": "document_quality_checks",
+      "relation_type": "prerequisite",
+      "description": "内容去重为学习文档质量门禁提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_013",
+      "source_node_id": "chunking_objectives",
+      "target_node_id": "fixed_window_chunking",
+      "relation_type": "prerequisite",
+      "description": "文档切分目标为学习固定窗口切分提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_014",
+      "source_node_id": "fixed_window_chunking",
+      "target_node_id": "structure_aware_chunking",
+      "relation_type": "prerequisite",
+      "description": "固定窗口切分为学习结构感知切分提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_015",
+      "source_node_id": "structure_aware_chunking",
+      "target_node_id": "semantic_chunking",
+      "relation_type": "prerequisite",
+      "description": "结构感知切分为学习语义切分提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_016",
+      "source_node_id": "semantic_chunking",
+      "target_node_id": "parent_child_multigranular",
+      "relation_type": "prerequisite",
+      "description": "语义切分为学习父子与多粒度检索提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_017",
+      "source_node_id": "metadata_schema",
+      "target_node_id": "embedding_fundamentals",
+      "relation_type": "prerequisite",
+      "description": "元数据Schema设计为学习文本嵌入基础提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_018",
+      "source_node_id": "embedding_fundamentals",
+      "target_node_id": "embedding_model_selection",
+      "relation_type": "prerequisite",
+      "description": "文本嵌入基础为学习嵌入模型选择提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_019",
+      "source_node_id": "embedding_model_selection",
+      "target_node_id": "similarity_metrics",
+      "relation_type": "prerequisite",
+      "description": "嵌入模型选择为学习向量相似度与归一化提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_020",
+      "source_node_id": "similarity_metrics",
+      "target_node_id": "vector_index_hnsw_ivf",
+      "relation_type": "prerequisite",
+      "description": "向量相似度与归一化为学习向量索引与近似最近邻提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_021",
+      "source_node_id": "bm25_sparse_retrieval",
+      "target_node_id": "dense_retrieval",
+      "relation_type": "prerequisite",
+      "description": "BM25与稀疏检索为学习稠密语义检索提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_022",
+      "source_node_id": "dense_retrieval",
+      "target_node_id": "hybrid_retrieval",
+      "relation_type": "prerequisite",
+      "description": "稠密语义检索为学习混合检索提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_023",
+      "source_node_id": "hybrid_retrieval",
+      "target_node_id": "metadata_filtering",
+      "relation_type": "prerequisite",
+      "description": "混合检索为学习元数据过滤提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_024",
+      "source_node_id": "metadata_filtering",
+      "target_node_id": "multi_query_expansion",
+      "relation_type": "prerequisite",
+      "description": "元数据过滤为学习多查询与查询扩展提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_025",
+      "source_node_id": "query_rewriting",
+      "target_node_id": "hyde_retrieval",
+      "relation_type": "prerequisite",
+      "description": "查询改写为学习HyDE假设文档检索提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_026",
+      "source_node_id": "hyde_retrieval",
+      "target_node_id": "cross_encoder_reranking",
+      "relation_type": "prerequisite",
+      "description": "HyDE假设文档检索为学习交叉编码器重排序提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_027",
+      "source_node_id": "cross_encoder_reranking",
+      "target_node_id": "colbert_late_interaction",
+      "relation_type": "prerequisite",
+      "description": "交叉编码器重排序为学习ColBERT晚交互检索提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_028",
+      "source_node_id": "colbert_late_interaction",
+      "target_node_id": "diversity_mmr",
+      "relation_type": "prerequisite",
+      "description": "ColBERT晚交互检索为学习MMR多样性选择提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_029",
+      "source_node_id": "diversity_mmr",
+      "target_node_id": "rank_fusion_rrf",
+      "relation_type": "prerequisite",
+      "description": "MMR多样性选择为学习RRF名次融合提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_030",
+      "source_node_id": "context_selection_budget",
+      "target_node_id": "lost_in_the_middle",
+      "relation_type": "prerequisite",
+      "description": "上下文选择与Token预算为学习长上下文位置效应提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_031",
+      "source_node_id": "lost_in_the_middle",
+      "target_node_id": "prompt_grounding",
+      "relation_type": "prerequisite",
+      "description": "长上下文位置效应为学习证据约束提示词提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_032",
+      "source_node_id": "prompt_grounding",
+      "target_node_id": "answer_abstention",
+      "relation_type": "prerequisite",
+      "description": "证据约束提示词为学习拒答与不确定性提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_033",
+      "source_node_id": "answer_abstention",
+      "target_node_id": "citation_generation_verification",
+      "relation_type": "prerequisite",
+      "description": "拒答与不确定性为学习引用生成与验证提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_034",
+      "source_node_id": "hallucination_types",
+      "target_node_id": "evidence_entailment",
+      "relation_type": "prerequisite",
+      "description": "幻觉类型与根因为学习证据支持关系检查提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_035",
+      "source_node_id": "evidence_entailment",
+      "target_node_id": "review_correction_loop",
+      "relation_type": "prerequisite",
+      "description": "证据支持关系检查为学习审核与纠偏闭环提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_036",
+      "source_node_id": "review_correction_loop",
+      "target_node_id": "prompt_injection_defense",
+      "relation_type": "prerequisite",
+      "description": "审核与纠偏闭环为学习提示词注入防护提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_037",
+      "source_node_id": "prompt_injection_defense",
+      "target_node_id": "sensitive_data_privacy",
+      "relation_type": "prerequisite",
+      "description": "提示词注入防护为学习敏感数据与隐私保护提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_038",
+      "source_node_id": "retrieval_metrics",
+      "target_node_id": "generation_metrics",
+      "relation_type": "prerequisite",
+      "description": "检索评测指标为学习生成质量指标提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_039",
+      "source_node_id": "generation_metrics",
+      "target_node_id": "end_to_end_evaluation",
+      "relation_type": "prerequisite",
+      "description": "生成质量指标为学习端到端RAG评测提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_040",
+      "source_node_id": "end_to_end_evaluation",
+      "target_node_id": "golden_dataset_design",
+      "relation_type": "prerequisite",
+      "description": "端到端RAG评测为学习黄金评测集设计提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_041",
+      "source_node_id": "golden_dataset_design",
+      "target_node_id": "online_monitoring_feedback",
+      "relation_type": "prerequisite",
+      "description": "黄金评测集设计为学习在线监控与反馈提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_042",
+      "source_node_id": "agentic_rag",
+      "target_node_id": "self_rag",
+      "relation_type": "prerequisite",
+      "description": "Agentic RAG为学习Self-RAG自反思检索生成提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_043",
+      "source_node_id": "self_rag",
+      "target_node_id": "corrective_rag",
+      "relation_type": "prerequisite",
+      "description": "Self-RAG自反思检索生成为学习Corrective RAG提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_044",
+      "source_node_id": "corrective_rag",
+      "target_node_id": "graph_rag",
+      "relation_type": "prerequisite",
+      "description": "Corrective RAG为学习Graph RAG提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_045",
+      "source_node_id": "graph_rag",
+      "target_node_id": "tool_routing_multi_source",
+      "relation_type": "prerequisite",
+      "description": "Graph RAG为学习多源路由与工具选择提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_046",
+      "source_node_id": "observability_tracing",
+      "target_node_id": "latency_cost_optimization",
+      "relation_type": "prerequisite",
+      "description": "可观测性与链路追踪为学习延迟与成本优化提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_047",
+      "source_node_id": "latency_cost_optimization",
+      "target_node_id": "caching_idempotency",
+      "relation_type": "prerequisite",
+      "description": "延迟与成本优化为学习缓存与幂等提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_048",
+      "source_node_id": "caching_idempotency",
+      "target_node_id": "deployment_fallback",
+      "relation_type": "prerequisite",
+      "description": "缓存与幂等为学习部署与降级提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_049",
+      "source_node_id": "deployment_fallback",
+      "target_node_id": "continuous_updates_regression",
+      "relation_type": "prerequisite",
+      "description": "部署与降级为学习持续更新与回归提供前置基础。"
+    },
+    {
+      "knowledge_edge_id": "edge_050",
+      "source_node_id": "rag_failure_taxonomy",
+      "target_node_id": "knowledge_source_selection",
+      "relation_type": "prerequisite",
+      "description": "完成上一章节后进入知识源选择。"
+    },
+    {
+      "knowledge_edge_id": "edge_051",
+      "source_node_id": "access_control_tenant_isolation",
+      "target_node_id": "document_parsing",
+      "relation_type": "prerequisite",
+      "description": "完成上一章节后进入文档解析。"
+    },
+    {
+      "knowledge_edge_id": "edge_052",
+      "source_node_id": "document_quality_checks",
+      "target_node_id": "chunking_objectives",
+      "relation_type": "prerequisite",
+      "description": "完成上一章节后进入文档切分目标。"
+    },
+    {
+      "knowledge_edge_id": "edge_053",
+      "source_node_id": "parent_child_multigranular",
+      "target_node_id": "metadata_schema",
+      "relation_type": "prerequisite",
+      "description": "完成上一章节后进入元数据Schema设计。"
+    },
+    {
+      "knowledge_edge_id": "edge_054",
+      "source_node_id": "vector_index_hnsw_ivf",
+      "target_node_id": "bm25_sparse_retrieval",
+      "relation_type": "prerequisite",
+      "description": "完成上一章节后进入BM25与稀疏检索。"
+    },
+    {
+      "knowledge_edge_id": "edge_055",
+      "source_node_id": "multi_query_expansion",
+      "target_node_id": "query_rewriting",
+      "relation_type": "prerequisite",
+      "description": "完成上一章节后进入查询改写。"
+    },
+    {
+      "knowledge_edge_id": "edge_056",
+      "source_node_id": "rank_fusion_rrf",
+      "target_node_id": "context_selection_budget",
+      "relation_type": "prerequisite",
+      "description": "完成上一章节后进入上下文选择与Token预算。"
+    },
+    {
+      "knowledge_edge_id": "edge_057",
+      "source_node_id": "citation_generation_verification",
+      "target_node_id": "hallucination_types",
+      "relation_type": "prerequisite",
+      "description": "完成上一章节后进入幻觉类型与根因。"
+    },
+    {
+      "knowledge_edge_id": "edge_058",
+      "source_node_id": "sensitive_data_privacy",
+      "target_node_id": "retrieval_metrics",
+      "relation_type": "prerequisite",
+      "description": "完成上一章节后进入检索评测指标。"
+    },
+    {
+      "knowledge_edge_id": "edge_059",
+      "source_node_id": "online_monitoring_feedback",
+      "target_node_id": "agentic_rag",
+      "relation_type": "prerequisite",
+      "description": "完成上一章节后进入Agentic RAG。"
+    },
+    {
+      "knowledge_edge_id": "edge_060",
+      "source_node_id": "tool_routing_multi_source",
+      "target_node_id": "observability_tracing",
+      "relation_type": "prerequisite",
+      "description": "完成上一章节后进入可观测性与链路追踪。"
+    },
+    {
+      "knowledge_edge_id": "edge_061",
+      "source_node_id": "knowledge_source_selection",
+      "target_node_id": "source_authority_provenance",
+      "relation_type": "supports",
+      "description": "高质量来源是可追溯证据的前提。"
+    },
+    {
+      "knowledge_edge_id": "edge_062",
+      "source_node_id": "versioning_freshness",
+      "target_node_id": "continuous_updates_regression",
+      "relation_type": "supports",
+      "description": "知识版本变化必须触发回归评测。"
+    },
+    {
+      "knowledge_edge_id": "edge_063",
+      "source_node_id": "access_control_tenant_isolation",
+      "target_node_id": "metadata_filtering",
+      "relation_type": "supports",
+      "description": "权限元数据必须在检索阶段执行硬过滤。"
+    },
+    {
+      "knowledge_edge_id": "edge_064",
+      "source_node_id": "document_parsing",
+      "target_node_id": "structure_aware_chunking",
+      "relation_type": "supports",
+      "description": "解析出的结构用于结构感知切分。"
+    },
+    {
+      "knowledge_edge_id": "edge_065",
+      "source_node_id": "layout_table_extraction",
+      "target_node_id": "structure_aware_chunking",
+      "relation_type": "supports",
+      "description": "表格与代码块边界应被切分策略保护。"
+    },
+    {
+      "knowledge_edge_id": "edge_066",
+      "source_node_id": "deduplication",
+      "target_node_id": "diversity_mmr",
+      "relation_type": "supports",
+      "description": "离线去重与在线多样性选择共同减少重复证据。"
+    },
+    {
+      "knowledge_edge_id": "edge_067",
+      "source_node_id": "chunking_objectives",
+      "target_node_id": "parent_child_multigranular",
+      "relation_type": "supports",
+      "description": "多粒度切分是精度与上下文完整性的折中。"
+    },
+    {
+      "knowledge_edge_id": "edge_068",
+      "source_node_id": "metadata_schema",
+      "target_node_id": "metadata_filtering",
+      "relation_type": "supports",
+      "description": "过滤依赖稳定、完整的元数据Schema。"
+    },
+    {
+      "knowledge_edge_id": "edge_069",
+      "source_node_id": "embedding_model_selection",
+      "target_node_id": "dense_retrieval",
+      "relation_type": "supports",
+      "description": "稠密检索质量受嵌入模型直接影响。"
+    },
+    {
+      "knowledge_edge_id": "edge_070",
+      "source_node_id": "similarity_metrics",
+      "target_node_id": "vector_index_hnsw_ivf",
+      "relation_type": "supports",
+      "description": "索引距离配置必须匹配向量归一化与相似度。"
+    },
+    {
+      "knowledge_edge_id": "edge_071",
+      "source_node_id": "bm25_sparse_retrieval",
+      "target_node_id": "dense_retrieval",
+      "relation_type": "supports",
+      "description": "稀疏与稠密是互补检索范式。"
+    },
+    {
+      "knowledge_edge_id": "edge_072",
+      "source_node_id": "bm25_sparse_retrieval",
+      "target_node_id": "hybrid_retrieval",
+      "relation_type": "supports",
+      "description": "混合检索融合关键词通道。"
+    },
+    {
+      "knowledge_edge_id": "edge_073",
+      "source_node_id": "dense_retrieval",
+      "target_node_id": "hybrid_retrieval",
+      "relation_type": "supports",
+      "description": "混合检索融合语义通道。"
+    },
+    {
+      "knowledge_edge_id": "edge_074",
+      "source_node_id": "hybrid_retrieval",
+      "target_node_id": "rank_fusion_rrf",
+      "relation_type": "supports",
+      "description": "RRF可作为混合检索的稳定融合方法。"
+    },
+    {
+      "knowledge_edge_id": "edge_075",
+      "source_node_id": "multi_query_expansion",
+      "target_node_id": "query_rewriting",
+      "relation_type": "supports",
+      "description": "两者都会改变检索表达，但目的和粒度不同。"
+    },
+    {
+      "knowledge_edge_id": "edge_076",
+      "source_node_id": "query_rewriting",
+      "target_node_id": "hyde_retrieval",
+      "relation_type": "supports",
+      "description": "HyDE是一种更激进的查询表示扩展。"
+    },
+    {
+      "knowledge_edge_id": "edge_077",
+      "source_node_id": "dense_retrieval",
+      "target_node_id": "cross_encoder_reranking",
+      "relation_type": "supports",
+      "description": "双编码器召回后可用交叉编码器提高精度。"
+    },
+    {
+      "knowledge_edge_id": "edge_078",
+      "source_node_id": "cross_encoder_reranking",
+      "target_node_id": "colbert_late_interaction",
+      "relation_type": "supports",
+      "description": "晚交互在效率与细粒度交互之间折中。"
+    },
+    {
+      "knowledge_edge_id": "edge_079",
+      "source_node_id": "diversity_mmr",
+      "target_node_id": "context_selection_budget",
+      "relation_type": "supports",
+      "description": "多样性选择服务于上下文证据组合。"
+    },
+    {
+      "knowledge_edge_id": "edge_080",
+      "source_node_id": "context_selection_budget",
+      "target_node_id": "lost_in_the_middle",
+      "relation_type": "supports",
+      "description": "上下文长度和排序影响模型利用证据。"
+    },
+    {
+      "knowledge_edge_id": "edge_081",
+      "source_node_id": "prompt_grounding",
+      "target_node_id": "answer_abstention",
+      "relation_type": "supports",
+      "description": "证据约束提示词应定义不足时拒答。"
+    },
+    {
+      "knowledge_edge_id": "edge_082",
+      "source_node_id": "citation_generation_verification",
+      "target_node_id": "evidence_entailment",
+      "relation_type": "supports",
+      "description": "引用必须经过支持关系验证。"
+    },
+    {
+      "knowledge_edge_id": "edge_083",
+      "source_node_id": "hallucination_types",
+      "target_node_id": "review_correction_loop",
+      "relation_type": "supports",
+      "description": "错误分类指导审核与修复动作。"
+    },
+    {
+      "knowledge_edge_id": "edge_084",
+      "source_node_id": "prompt_injection_defense",
+      "target_node_id": "tool_routing_multi_source",
+      "relation_type": "supports",
+      "description": "工具路由必须满足最小权限和输入校验。"
+    },
+    {
+      "knowledge_edge_id": "edge_085",
+      "source_node_id": "retrieval_metrics",
+      "target_node_id": "generation_metrics",
+      "relation_type": "supports",
+      "description": "检索与生成需要分别评估。"
+    },
+    {
+      "knowledge_edge_id": "edge_086",
+      "source_node_id": "retrieval_metrics",
+      "target_node_id": "end_to_end_evaluation",
+      "relation_type": "supports",
+      "description": "端到端指标建立在组件指标之上。"
+    },
+    {
+      "knowledge_edge_id": "edge_087",
+      "source_node_id": "golden_dataset_design",
+      "target_node_id": "continuous_updates_regression",
+      "relation_type": "supports",
+      "description": "锁定评测集用于持续回归。"
+    },
+    {
+      "knowledge_edge_id": "edge_088",
+      "source_node_id": "online_monitoring_feedback",
+      "target_node_id": "continuous_updates_regression",
+      "relation_type": "supports",
+      "description": "线上失败案例应进入回归集。"
+    },
+    {
+      "knowledge_edge_id": "edge_089",
+      "source_node_id": "agentic_rag",
+      "target_node_id": "review_correction_loop",
+      "relation_type": "supports",
+      "description": "Agentic流程需要审核和停止条件。"
+    },
+    {
+      "knowledge_edge_id": "edge_090",
+      "source_node_id": "self_rag",
+      "target_node_id": "corrective_rag",
+      "relation_type": "supports",
+      "description": "二者都引入检索与质量自适应，但实现机制不同。"
+    },
+    {
+      "knowledge_edge_id": "edge_091",
+      "source_node_id": "graph_rag",
+      "target_node_id": "tool_routing_multi_source",
+      "relation_type": "supports",
+      "description": "图检索可作为多源工具之一。"
+    },
+    {
+      "knowledge_edge_id": "edge_092",
+      "source_node_id": "observability_tracing",
+      "target_node_id": "latency_cost_optimization",
+      "relation_type": "supports",
+      "description": "链路追踪用于定位延迟和成本瓶颈。"
+    },
+    {
+      "knowledge_edge_id": "edge_093",
+      "source_node_id": "caching_idempotency",
+      "target_node_id": "access_control_tenant_isolation",
+      "relation_type": "supports",
+      "description": "缓存键必须包含租户和权限上下文。"
+    },
+    {
+      "knowledge_edge_id": "edge_094",
+      "source_node_id": "deployment_fallback",
+      "target_node_id": "answer_abstention",
+      "relation_type": "supports",
+      "description": "依赖异常时应安全拒答或降级。"
+    },
+    {
+      "knowledge_edge_id": "edge_095",
+      "source_node_id": "fixed_window_chunking",
+      "target_node_id": "structure_aware_chunking",
+      "relation_type": "contrast",
+      "description": "固定窗口简单稳定，结构感知更能保护语义边界。"
+    },
+    {
+      "knowledge_edge_id": "edge_096",
+      "source_node_id": "bm25_sparse_retrieval",
+      "target_node_id": "dense_retrieval",
+      "relation_type": "contrast",
+      "description": "BM25侧重词面，稠密检索侧重语义。"
+    },
+    {
+      "knowledge_edge_id": "edge_097",
+      "source_node_id": "cross_encoder_reranking",
+      "target_node_id": "colbert_late_interaction",
+      "relation_type": "contrast",
+      "description": "交叉编码器精度高但逐对计算，晚交互预编码文档Token。"
+    },
+    {
+      "knowledge_edge_id": "edge_098",
+      "source_node_id": "agentic_rag",
+      "target_node_id": "rag_end_to_end_architecture",
+      "relation_type": "constraint",
+      "description": "只有固定流程不足以处理复杂多步任务时才引入Agentic RAG。"
+    },
+    {
+      "knowledge_edge_id": "edge_099",
+      "source_node_id": "graph_rag",
+      "target_node_id": "hybrid_retrieval",
+      "relation_type": "constraint",
+      "description": "关系需求不明确时优先验证更简单的混合检索。"
+    },
+    {
+      "knowledge_edge_id": "edge_100",
+      "source_node_id": "prompt_injection_defense",
+      "target_node_id": "rag_applicability",
+      "relation_type": "constraint",
+      "description": "含高权限工具的RAG必须进行额外安全设计。"
+    }
+  ]
+}

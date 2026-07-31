@@ -1,0 +1,1658 @@
+{
+  "schema_version": "1.0.0",
+  "items": [
+    {
+      "intent_id": "intent_rag_definition",
+      "knowledge_node_id": "rag_definition",
+      "canonical_queries": [
+        "RAG基本定义是什么",
+        "RAG基本定义怎么做",
+        "RAG基本定义常见错误",
+        "RAG基本定义适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_rag_definition_principle",
+        "chunk_rag_definition_engineering",
+        "chunk_rag_definition_pitfalls",
+        "chunk_rag_definition_boundary"
+      ],
+      "negative_node_ids": [
+        "knowledge_source_selection",
+        "source_authority_provenance",
+        "versioning_freshness"
+      ],
+      "keywords": [
+        "foundation",
+        "architecture",
+        "retrieval",
+        "generation",
+        "RAG基本定义"
+      ]
+    },
+    {
+      "intent_id": "intent_rag_end_to_end_architecture",
+      "knowledge_node_id": "rag_end_to_end_architecture",
+      "canonical_queries": [
+        "RAG端到端架构是什么",
+        "RAG端到端架构怎么做",
+        "RAG端到端架构常见错误",
+        "RAG端到端架构适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_rag_end_to_end_architecture_principle",
+        "chunk_rag_end_to_end_architecture_engineering",
+        "chunk_rag_end_to_end_architecture_pitfalls",
+        "chunk_rag_end_to_end_architecture_boundary"
+      ],
+      "negative_node_ids": [
+        "knowledge_source_selection",
+        "source_authority_provenance",
+        "versioning_freshness"
+      ],
+      "keywords": [
+        "architecture",
+        "offline_pipeline",
+        "online_pipeline",
+        "observability",
+        "RAG端到端架构"
+      ]
+    },
+    {
+      "intent_id": "intent_parametric_nonparametric_memory",
+      "knowledge_node_id": "parametric_nonparametric_memory",
+      "canonical_queries": [
+        "参数记忆与外部记忆是什么",
+        "参数记忆与外部记忆怎么做",
+        "参数记忆与外部记忆常见错误",
+        "参数记忆与外部记忆适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_parametric_nonparametric_memory_principle",
+        "chunk_parametric_nonparametric_memory_engineering",
+        "chunk_parametric_nonparametric_memory_pitfalls",
+        "chunk_parametric_nonparametric_memory_boundary"
+      ],
+      "negative_node_ids": [
+        "knowledge_source_selection",
+        "source_authority_provenance",
+        "versioning_freshness"
+      ],
+      "keywords": [
+        "parametric_memory",
+        "nonparametric_memory",
+        "provenance",
+        "参数记忆与外部记忆"
+      ]
+    },
+    {
+      "intent_id": "intent_rag_applicability",
+      "knowledge_node_id": "rag_applicability",
+      "canonical_queries": [
+        "RAG适用性判断是什么",
+        "RAG适用性判断怎么做",
+        "RAG适用性判断常见错误",
+        "RAG适用性判断适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_rag_applicability_principle",
+        "chunk_rag_applicability_engineering",
+        "chunk_rag_applicability_pitfalls",
+        "chunk_rag_applicability_boundary"
+      ],
+      "negative_node_ids": [
+        "knowledge_source_selection",
+        "source_authority_provenance",
+        "versioning_freshness"
+      ],
+      "keywords": [
+        "requirements",
+        "risk",
+        "scenario_selection",
+        "RAG适用性判断"
+      ]
+    },
+    {
+      "intent_id": "intent_rag_failure_taxonomy",
+      "knowledge_node_id": "rag_failure_taxonomy",
+      "canonical_queries": [
+        "RAG失败类型是什么",
+        "RAG失败类型怎么做",
+        "RAG失败类型常见错误",
+        "RAG失败类型适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_rag_failure_taxonomy_principle",
+        "chunk_rag_failure_taxonomy_engineering",
+        "chunk_rag_failure_taxonomy_pitfalls",
+        "chunk_rag_failure_taxonomy_boundary"
+      ],
+      "negative_node_ids": [
+        "knowledge_source_selection",
+        "source_authority_provenance",
+        "versioning_freshness"
+      ],
+      "keywords": [
+        "failure_analysis",
+        "debugging",
+        "evaluation",
+        "RAG失败类型"
+      ]
+    },
+    {
+      "intent_id": "intent_knowledge_source_selection",
+      "knowledge_node_id": "knowledge_source_selection",
+      "canonical_queries": [
+        "知识源选择是什么",
+        "知识源选择怎么做",
+        "知识源选择常见错误",
+        "知识源选择适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_knowledge_source_selection_principle",
+        "chunk_knowledge_source_selection_engineering",
+        "chunk_knowledge_source_selection_pitfalls",
+        "chunk_knowledge_source_selection_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "source_governance",
+        "authority",
+        "coverage",
+        "知识源选择"
+      ]
+    },
+    {
+      "intent_id": "intent_source_authority_provenance",
+      "knowledge_node_id": "source_authority_provenance",
+      "canonical_queries": [
+        "来源权威性与溯源是什么",
+        "来源权威性与溯源怎么做",
+        "来源权威性与溯源常见错误",
+        "来源权威性与溯源适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_source_authority_provenance_principle",
+        "chunk_source_authority_provenance_engineering",
+        "chunk_source_authority_provenance_pitfalls",
+        "chunk_source_authority_provenance_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "provenance",
+        "citation",
+        "auditability",
+        "来源权威性与溯源"
+      ]
+    },
+    {
+      "intent_id": "intent_versioning_freshness",
+      "knowledge_node_id": "versioning_freshness",
+      "canonical_queries": [
+        "版本与时效治理是什么",
+        "版本与时效治理怎么做",
+        "版本与时效治理常见错误",
+        "版本与时效治理适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_versioning_freshness_principle",
+        "chunk_versioning_freshness_engineering",
+        "chunk_versioning_freshness_pitfalls",
+        "chunk_versioning_freshness_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "versioning",
+        "freshness",
+        "rollback",
+        "版本与时效治理"
+      ]
+    },
+    {
+      "intent_id": "intent_licensing_compliance",
+      "knowledge_node_id": "licensing_compliance",
+      "canonical_queries": [
+        "许可与合规是什么",
+        "许可与合规怎么做",
+        "许可与合规常见错误",
+        "许可与合规适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_licensing_compliance_principle",
+        "chunk_licensing_compliance_engineering",
+        "chunk_licensing_compliance_pitfalls",
+        "chunk_licensing_compliance_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "licensing",
+        "privacy",
+        "compliance",
+        "许可与合规"
+      ]
+    },
+    {
+      "intent_id": "intent_access_control_tenant_isolation",
+      "knowledge_node_id": "access_control_tenant_isolation",
+      "canonical_queries": [
+        "权限过滤与多租户隔离是什么",
+        "权限过滤与多租户隔离怎么做",
+        "权限过滤与多租户隔离常见错误",
+        "权限过滤与多租户隔离适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_access_control_tenant_isolation_principle",
+        "chunk_access_control_tenant_isolation_engineering",
+        "chunk_access_control_tenant_isolation_pitfalls",
+        "chunk_access_control_tenant_isolation_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "security",
+        "multi_tenancy",
+        "authorization",
+        "权限过滤与多租户隔离"
+      ]
+    },
+    {
+      "intent_id": "intent_document_parsing",
+      "knowledge_node_id": "document_parsing",
+      "canonical_queries": [
+        "文档解析是什么",
+        "文档解析怎么做",
+        "文档解析常见错误",
+        "文档解析适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_document_parsing_principle",
+        "chunk_document_parsing_engineering",
+        "chunk_document_parsing_pitfalls",
+        "chunk_document_parsing_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "parsing",
+        "layout",
+        "ocr",
+        "文档解析"
+      ]
+    },
+    {
+      "intent_id": "intent_layout_table_extraction",
+      "knowledge_node_id": "layout_table_extraction",
+      "canonical_queries": [
+        "版面与表格提取是什么",
+        "版面与表格提取怎么做",
+        "版面与表格提取常见错误",
+        "版面与表格提取适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_layout_table_extraction_principle",
+        "chunk_layout_table_extraction_engineering",
+        "chunk_layout_table_extraction_pitfalls",
+        "chunk_layout_table_extraction_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "layout",
+        "tables",
+        "code_blocks",
+        "版面与表格提取"
+      ]
+    },
+    {
+      "intent_id": "intent_text_cleaning_normalization",
+      "knowledge_node_id": "text_cleaning_normalization",
+      "canonical_queries": [
+        "文本清洗与规范化是什么",
+        "文本清洗与规范化怎么做",
+        "文本清洗与规范化常见错误",
+        "文本清洗与规范化适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_text_cleaning_normalization_principle",
+        "chunk_text_cleaning_normalization_engineering",
+        "chunk_text_cleaning_normalization_pitfalls",
+        "chunk_text_cleaning_normalization_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "cleaning",
+        "normalization",
+        "quality",
+        "文本清洗与规范化"
+      ]
+    },
+    {
+      "intent_id": "intent_deduplication",
+      "knowledge_node_id": "deduplication",
+      "canonical_queries": [
+        "内容去重是什么",
+        "内容去重怎么做",
+        "内容去重常见错误",
+        "内容去重适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_deduplication_principle",
+        "chunk_deduplication_engineering",
+        "chunk_deduplication_pitfalls",
+        "chunk_deduplication_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "deduplication",
+        "canonicalization",
+        "versions",
+        "内容去重"
+      ]
+    },
+    {
+      "intent_id": "intent_document_quality_checks",
+      "knowledge_node_id": "document_quality_checks",
+      "canonical_queries": [
+        "文档质量门禁是什么",
+        "文档质量门禁怎么做",
+        "文档质量门禁常见错误",
+        "文档质量门禁适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_document_quality_checks_principle",
+        "chunk_document_quality_checks_engineering",
+        "chunk_document_quality_checks_pitfalls",
+        "chunk_document_quality_checks_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "quality_gate",
+        "parsing_validation",
+        "blocking_issues",
+        "文档质量门禁"
+      ]
+    },
+    {
+      "intent_id": "intent_chunking_objectives",
+      "knowledge_node_id": "chunking_objectives",
+      "canonical_queries": [
+        "文档切分目标是什么",
+        "文档切分目标怎么做",
+        "文档切分目标常见错误",
+        "文档切分目标适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_chunking_objectives_principle",
+        "chunk_chunking_objectives_engineering",
+        "chunk_chunking_objectives_pitfalls",
+        "chunk_chunking_objectives_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "chunking",
+        "granularity",
+        "context",
+        "文档切分目标"
+      ]
+    },
+    {
+      "intent_id": "intent_fixed_window_chunking",
+      "knowledge_node_id": "fixed_window_chunking",
+      "canonical_queries": [
+        "固定窗口切分是什么",
+        "固定窗口切分怎么做",
+        "固定窗口切分常见错误",
+        "固定窗口切分适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_fixed_window_chunking_principle",
+        "chunk_fixed_window_chunking_engineering",
+        "chunk_fixed_window_chunking_pitfalls",
+        "chunk_fixed_window_chunking_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "chunking",
+        "fixed_window",
+        "baseline",
+        "固定窗口切分"
+      ]
+    },
+    {
+      "intent_id": "intent_structure_aware_chunking",
+      "knowledge_node_id": "structure_aware_chunking",
+      "canonical_queries": [
+        "结构感知切分是什么",
+        "结构感知切分怎么做",
+        "结构感知切分常见错误",
+        "结构感知切分适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_structure_aware_chunking_principle",
+        "chunk_structure_aware_chunking_engineering",
+        "chunk_structure_aware_chunking_pitfalls",
+        "chunk_structure_aware_chunking_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "chunking",
+        "headings",
+        "document_tree",
+        "结构感知切分"
+      ]
+    },
+    {
+      "intent_id": "intent_semantic_chunking",
+      "knowledge_node_id": "semantic_chunking",
+      "canonical_queries": [
+        "语义切分是什么",
+        "语义切分怎么做",
+        "语义切分常见错误",
+        "语义切分适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_semantic_chunking_principle",
+        "chunk_semantic_chunking_engineering",
+        "chunk_semantic_chunking_pitfalls",
+        "chunk_semantic_chunking_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "chunking",
+        "semantic",
+        "embedding",
+        "语义切分"
+      ]
+    },
+    {
+      "intent_id": "intent_parent_child_multigranular",
+      "knowledge_node_id": "parent_child_multigranular",
+      "canonical_queries": [
+        "父子与多粒度检索是什么",
+        "父子与多粒度检索怎么做",
+        "父子与多粒度检索常见错误",
+        "父子与多粒度检索适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_parent_child_multigranular_principle",
+        "chunk_parent_child_multigranular_engineering",
+        "chunk_parent_child_multigranular_pitfalls",
+        "chunk_parent_child_multigranular_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "chunking",
+        "parent_child",
+        "multi_granularity",
+        "父子与多粒度检索"
+      ]
+    },
+    {
+      "intent_id": "intent_metadata_schema",
+      "knowledge_node_id": "metadata_schema",
+      "canonical_queries": [
+        "元数据Schema设计是什么",
+        "元数据Schema设计怎么做",
+        "元数据Schema设计常见错误",
+        "元数据Schema设计适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_metadata_schema_principle",
+        "chunk_metadata_schema_engineering",
+        "chunk_metadata_schema_pitfalls",
+        "chunk_metadata_schema_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "metadata",
+        "schema",
+        "filtering",
+        "元数据Schema设计"
+      ]
+    },
+    {
+      "intent_id": "intent_embedding_fundamentals",
+      "knowledge_node_id": "embedding_fundamentals",
+      "canonical_queries": [
+        "文本嵌入基础是什么",
+        "文本嵌入基础怎么做",
+        "文本嵌入基础常见错误",
+        "文本嵌入基础适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_embedding_fundamentals_principle",
+        "chunk_embedding_fundamentals_engineering",
+        "chunk_embedding_fundamentals_pitfalls",
+        "chunk_embedding_fundamentals_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "embedding",
+        "dual_encoder",
+        "semantic_search",
+        "文本嵌入基础"
+      ]
+    },
+    {
+      "intent_id": "intent_embedding_model_selection",
+      "knowledge_node_id": "embedding_model_selection",
+      "canonical_queries": [
+        "嵌入模型选择是什么",
+        "嵌入模型选择怎么做",
+        "嵌入模型选择常见错误",
+        "嵌入模型选择适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_embedding_model_selection_principle",
+        "chunk_embedding_model_selection_engineering",
+        "chunk_embedding_model_selection_pitfalls",
+        "chunk_embedding_model_selection_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "embedding",
+        "model_selection",
+        "benchmark",
+        "嵌入模型选择"
+      ]
+    },
+    {
+      "intent_id": "intent_similarity_metrics",
+      "knowledge_node_id": "similarity_metrics",
+      "canonical_queries": [
+        "向量相似度与归一化是什么",
+        "向量相似度与归一化怎么做",
+        "向量相似度与归一化常见错误",
+        "向量相似度与归一化适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_similarity_metrics_principle",
+        "chunk_similarity_metrics_engineering",
+        "chunk_similarity_metrics_pitfalls",
+        "chunk_similarity_metrics_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "similarity",
+        "cosine",
+        "inner_product",
+        "向量相似度与归一化"
+      ]
+    },
+    {
+      "intent_id": "intent_vector_index_hnsw_ivf",
+      "knowledge_node_id": "vector_index_hnsw_ivf",
+      "canonical_queries": [
+        "向量索引与近似最近邻是什么",
+        "向量索引与近似最近邻怎么做",
+        "向量索引与近似最近邻常见错误",
+        "向量索引与近似最近邻适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_vector_index_hnsw_ivf_principle",
+        "chunk_vector_index_hnsw_ivf_engineering",
+        "chunk_vector_index_hnsw_ivf_pitfalls",
+        "chunk_vector_index_hnsw_ivf_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "vector_index",
+        "ann",
+        "hnsw",
+        "ivf",
+        "向量索引与近似最近邻"
+      ]
+    },
+    {
+      "intent_id": "intent_bm25_sparse_retrieval",
+      "knowledge_node_id": "bm25_sparse_retrieval",
+      "canonical_queries": [
+        "BM25与稀疏检索是什么",
+        "BM25与稀疏检索怎么做",
+        "BM25与稀疏检索常见错误",
+        "BM25与稀疏检索适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_bm25_sparse_retrieval_principle",
+        "chunk_bm25_sparse_retrieval_engineering",
+        "chunk_bm25_sparse_retrieval_pitfalls",
+        "chunk_bm25_sparse_retrieval_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "bm25",
+        "sparse_retrieval",
+        "lexical",
+        "BM25与稀疏检索"
+      ]
+    },
+    {
+      "intent_id": "intent_dense_retrieval",
+      "knowledge_node_id": "dense_retrieval",
+      "canonical_queries": [
+        "稠密语义检索是什么",
+        "稠密语义检索怎么做",
+        "稠密语义检索常见错误",
+        "稠密语义检索适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_dense_retrieval_principle",
+        "chunk_dense_retrieval_engineering",
+        "chunk_dense_retrieval_pitfalls",
+        "chunk_dense_retrieval_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "dense_retrieval",
+        "semantic_search",
+        "embeddings",
+        "稠密语义检索"
+      ]
+    },
+    {
+      "intent_id": "intent_hybrid_retrieval",
+      "knowledge_node_id": "hybrid_retrieval",
+      "canonical_queries": [
+        "混合检索是什么",
+        "混合检索怎么做",
+        "混合检索常见错误",
+        "混合检索适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_hybrid_retrieval_principle",
+        "chunk_hybrid_retrieval_engineering",
+        "chunk_hybrid_retrieval_pitfalls",
+        "chunk_hybrid_retrieval_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "hybrid_search",
+        "fusion",
+        "rrf",
+        "混合检索"
+      ]
+    },
+    {
+      "intent_id": "intent_metadata_filtering",
+      "knowledge_node_id": "metadata_filtering",
+      "canonical_queries": [
+        "元数据过滤是什么",
+        "元数据过滤怎么做",
+        "元数据过滤常见错误",
+        "元数据过滤适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_metadata_filtering_principle",
+        "chunk_metadata_filtering_engineering",
+        "chunk_metadata_filtering_pitfalls",
+        "chunk_metadata_filtering_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "filtering",
+        "authorization",
+        "metadata",
+        "元数据过滤"
+      ]
+    },
+    {
+      "intent_id": "intent_multi_query_expansion",
+      "knowledge_node_id": "multi_query_expansion",
+      "canonical_queries": [
+        "多查询与查询扩展是什么",
+        "多查询与查询扩展怎么做",
+        "多查询与查询扩展常见错误",
+        "多查询与查询扩展适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_multi_query_expansion_principle",
+        "chunk_multi_query_expansion_engineering",
+        "chunk_multi_query_expansion_pitfalls",
+        "chunk_multi_query_expansion_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "query_expansion",
+        "multi_query",
+        "recall",
+        "多查询与查询扩展"
+      ]
+    },
+    {
+      "intent_id": "intent_query_rewriting",
+      "knowledge_node_id": "query_rewriting",
+      "canonical_queries": [
+        "查询改写是什么",
+        "查询改写怎么做",
+        "查询改写常见错误",
+        "查询改写适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_query_rewriting_principle",
+        "chunk_query_rewriting_engineering",
+        "chunk_query_rewriting_pitfalls",
+        "chunk_query_rewriting_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "query_rewrite",
+        "conversation",
+        "intent",
+        "查询改写"
+      ]
+    },
+    {
+      "intent_id": "intent_hyde_retrieval",
+      "knowledge_node_id": "hyde_retrieval",
+      "canonical_queries": [
+        "HyDE假设文档检索是什么",
+        "HyDE假设文档检索怎么做",
+        "HyDE假设文档检索常见错误",
+        "HyDE假设文档检索适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_hyde_retrieval_principle",
+        "chunk_hyde_retrieval_engineering",
+        "chunk_hyde_retrieval_pitfalls",
+        "chunk_hyde_retrieval_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "hyde",
+        "query_expansion",
+        "zero_shot",
+        "HyDE假设文档检索"
+      ]
+    },
+    {
+      "intent_id": "intent_cross_encoder_reranking",
+      "knowledge_node_id": "cross_encoder_reranking",
+      "canonical_queries": [
+        "交叉编码器重排序是什么",
+        "交叉编码器重排序怎么做",
+        "交叉编码器重排序常见错误",
+        "交叉编码器重排序适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_cross_encoder_reranking_principle",
+        "chunk_cross_encoder_reranking_engineering",
+        "chunk_cross_encoder_reranking_pitfalls",
+        "chunk_cross_encoder_reranking_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "reranking",
+        "cross_encoder",
+        "precision",
+        "交叉编码器重排序"
+      ]
+    },
+    {
+      "intent_id": "intent_colbert_late_interaction",
+      "knowledge_node_id": "colbert_late_interaction",
+      "canonical_queries": [
+        "ColBERT晚交互检索是什么",
+        "ColBERT晚交互检索怎么做",
+        "ColBERT晚交互检索常见错误",
+        "ColBERT晚交互检索适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_colbert_late_interaction_principle",
+        "chunk_colbert_late_interaction_engineering",
+        "chunk_colbert_late_interaction_pitfalls",
+        "chunk_colbert_late_interaction_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "colbert",
+        "late_interaction",
+        "retrieval",
+        "ColBERT晚交互检索"
+      ]
+    },
+    {
+      "intent_id": "intent_diversity_mmr",
+      "knowledge_node_id": "diversity_mmr",
+      "canonical_queries": [
+        "MMR多样性选择是什么",
+        "MMR多样性选择怎么做",
+        "MMR多样性选择常见错误",
+        "MMR多样性选择适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_diversity_mmr_principle",
+        "chunk_diversity_mmr_engineering",
+        "chunk_diversity_mmr_pitfalls",
+        "chunk_diversity_mmr_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "mmr",
+        "diversity",
+        "context_selection",
+        "MMR多样性选择"
+      ]
+    },
+    {
+      "intent_id": "intent_rank_fusion_rrf",
+      "knowledge_node_id": "rank_fusion_rrf",
+      "canonical_queries": [
+        "RRF名次融合是什么",
+        "RRF名次融合怎么做",
+        "RRF名次融合常见错误",
+        "RRF名次融合适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_rank_fusion_rrf_principle",
+        "chunk_rank_fusion_rrf_engineering",
+        "chunk_rank_fusion_rrf_pitfalls",
+        "chunk_rank_fusion_rrf_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "rrf",
+        "rank_fusion",
+        "hybrid_search",
+        "RRF名次融合"
+      ]
+    },
+    {
+      "intent_id": "intent_context_selection_budget",
+      "knowledge_node_id": "context_selection_budget",
+      "canonical_queries": [
+        "上下文选择与Token预算是什么",
+        "上下文选择与Token预算怎么做",
+        "上下文选择与Token预算常见错误",
+        "上下文选择与Token预算适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_context_selection_budget_principle",
+        "chunk_context_selection_budget_engineering",
+        "chunk_context_selection_budget_pitfalls",
+        "chunk_context_selection_budget_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "context",
+        "token_budget",
+        "evidence_selection",
+        "上下文选择与Token预算"
+      ]
+    },
+    {
+      "intent_id": "intent_lost_in_the_middle",
+      "knowledge_node_id": "lost_in_the_middle",
+      "canonical_queries": [
+        "长上下文位置效应是什么",
+        "长上下文位置效应怎么做",
+        "长上下文位置效应常见错误",
+        "长上下文位置效应适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_lost_in_the_middle_principle",
+        "chunk_lost_in_the_middle_engineering",
+        "chunk_lost_in_the_middle_pitfalls",
+        "chunk_lost_in_the_middle_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "long_context",
+        "position_bias",
+        "context_order",
+        "长上下文位置效应"
+      ]
+    },
+    {
+      "intent_id": "intent_prompt_grounding",
+      "knowledge_node_id": "prompt_grounding",
+      "canonical_queries": [
+        "证据约束提示词是什么",
+        "证据约束提示词怎么做",
+        "证据约束提示词常见错误",
+        "证据约束提示词适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_prompt_grounding_principle",
+        "chunk_prompt_grounding_engineering",
+        "chunk_prompt_grounding_pitfalls",
+        "chunk_prompt_grounding_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "prompt",
+        "grounding",
+        "structured_output",
+        "证据约束提示词"
+      ]
+    },
+    {
+      "intent_id": "intent_answer_abstention",
+      "knowledge_node_id": "answer_abstention",
+      "canonical_queries": [
+        "拒答与不确定性是什么",
+        "拒答与不确定性怎么做",
+        "拒答与不确定性常见错误",
+        "拒答与不确定性适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_answer_abstention_principle",
+        "chunk_answer_abstention_engineering",
+        "chunk_answer_abstention_pitfalls",
+        "chunk_answer_abstention_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "abstention",
+        "uncertainty",
+        "risk",
+        "拒答与不确定性"
+      ]
+    },
+    {
+      "intent_id": "intent_citation_generation_verification",
+      "knowledge_node_id": "citation_generation_verification",
+      "canonical_queries": [
+        "引用生成与验证是什么",
+        "引用生成与验证怎么做",
+        "引用生成与验证常见错误",
+        "引用生成与验证适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_citation_generation_verification_principle",
+        "chunk_citation_generation_verification_engineering",
+        "chunk_citation_generation_verification_pitfalls",
+        "chunk_citation_generation_verification_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "citation",
+        "verification",
+        "traceability",
+        "引用生成与验证"
+      ]
+    },
+    {
+      "intent_id": "intent_hallucination_types",
+      "knowledge_node_id": "hallucination_types",
+      "canonical_queries": [
+        "幻觉类型与根因是什么",
+        "幻觉类型与根因怎么做",
+        "幻觉类型与根因常见错误",
+        "幻觉类型与根因适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_hallucination_types_principle",
+        "chunk_hallucination_types_engineering",
+        "chunk_hallucination_types_pitfalls",
+        "chunk_hallucination_types_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "hallucination",
+        "taxonomy",
+        "root_cause",
+        "幻觉类型与根因"
+      ]
+    },
+    {
+      "intent_id": "intent_evidence_entailment",
+      "knowledge_node_id": "evidence_entailment",
+      "canonical_queries": [
+        "证据支持关系检查是什么",
+        "证据支持关系检查怎么做",
+        "证据支持关系检查常见错误",
+        "证据支持关系检查适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_evidence_entailment_principle",
+        "chunk_evidence_entailment_engineering",
+        "chunk_evidence_entailment_pitfalls",
+        "chunk_evidence_entailment_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "entailment",
+        "evidence_check",
+        "faithfulness",
+        "证据支持关系检查"
+      ]
+    },
+    {
+      "intent_id": "intent_review_correction_loop",
+      "knowledge_node_id": "review_correction_loop",
+      "canonical_queries": [
+        "审核与纠偏闭环是什么",
+        "审核与纠偏闭环怎么做",
+        "审核与纠偏闭环常见错误",
+        "审核与纠偏闭环适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_review_correction_loop_principle",
+        "chunk_review_correction_loop_engineering",
+        "chunk_review_correction_loop_pitfalls",
+        "chunk_review_correction_loop_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "review",
+        "repair",
+        "quality_gate",
+        "审核与纠偏闭环"
+      ]
+    },
+    {
+      "intent_id": "intent_prompt_injection_defense",
+      "knowledge_node_id": "prompt_injection_defense",
+      "canonical_queries": [
+        "提示词注入防护是什么",
+        "提示词注入防护怎么做",
+        "提示词注入防护常见错误",
+        "提示词注入防护适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_prompt_injection_defense_principle",
+        "chunk_prompt_injection_defense_engineering",
+        "chunk_prompt_injection_defense_pitfalls",
+        "chunk_prompt_injection_defense_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "security",
+        "prompt_injection",
+        "tool_safety",
+        "提示词注入防护"
+      ]
+    },
+    {
+      "intent_id": "intent_sensitive_data_privacy",
+      "knowledge_node_id": "sensitive_data_privacy",
+      "canonical_queries": [
+        "敏感数据与隐私保护是什么",
+        "敏感数据与隐私保护怎么做",
+        "敏感数据与隐私保护常见错误",
+        "敏感数据与隐私保护适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_sensitive_data_privacy_principle",
+        "chunk_sensitive_data_privacy_engineering",
+        "chunk_sensitive_data_privacy_pitfalls",
+        "chunk_sensitive_data_privacy_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "privacy",
+        "data_protection",
+        "logging",
+        "敏感数据与隐私保护"
+      ]
+    },
+    {
+      "intent_id": "intent_retrieval_metrics",
+      "knowledge_node_id": "retrieval_metrics",
+      "canonical_queries": [
+        "检索评测指标是什么",
+        "检索评测指标怎么做",
+        "检索评测指标常见错误",
+        "检索评测指标适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_retrieval_metrics_principle",
+        "chunk_retrieval_metrics_engineering",
+        "chunk_retrieval_metrics_pitfalls",
+        "chunk_retrieval_metrics_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "evaluation",
+        "recall",
+        "mrr",
+        "ndcg",
+        "检索评测指标"
+      ]
+    },
+    {
+      "intent_id": "intent_generation_metrics",
+      "knowledge_node_id": "generation_metrics",
+      "canonical_queries": [
+        "生成质量指标是什么",
+        "生成质量指标怎么做",
+        "生成质量指标常见错误",
+        "生成质量指标适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_generation_metrics_principle",
+        "chunk_generation_metrics_engineering",
+        "chunk_generation_metrics_pitfalls",
+        "chunk_generation_metrics_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "evaluation",
+        "faithfulness",
+        "correctness",
+        "citations",
+        "生成质量指标"
+      ]
+    },
+    {
+      "intent_id": "intent_end_to_end_evaluation",
+      "knowledge_node_id": "end_to_end_evaluation",
+      "canonical_queries": [
+        "端到端RAG评测是什么",
+        "端到端RAG评测怎么做",
+        "端到端RAG评测常见错误",
+        "端到端RAG评测适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_end_to_end_evaluation_principle",
+        "chunk_end_to_end_evaluation_engineering",
+        "chunk_end_to_end_evaluation_pitfalls",
+        "chunk_end_to_end_evaluation_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "end_to_end",
+        "benchmark",
+        "reproducibility",
+        "端到端RAG评测"
+      ]
+    },
+    {
+      "intent_id": "intent_golden_dataset_design",
+      "knowledge_node_id": "golden_dataset_design",
+      "canonical_queries": [
+        "黄金评测集设计是什么",
+        "黄金评测集设计怎么做",
+        "黄金评测集设计常见错误",
+        "黄金评测集设计适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_golden_dataset_design_principle",
+        "chunk_golden_dataset_design_engineering",
+        "chunk_golden_dataset_design_pitfalls",
+        "chunk_golden_dataset_design_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "dataset",
+        "golden_set",
+        "annotation",
+        "黄金评测集设计"
+      ]
+    },
+    {
+      "intent_id": "intent_online_monitoring_feedback",
+      "knowledge_node_id": "online_monitoring_feedback",
+      "canonical_queries": [
+        "在线监控与反馈是什么",
+        "在线监控与反馈怎么做",
+        "在线监控与反馈常见错误",
+        "在线监控与反馈适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_online_monitoring_feedback_principle",
+        "chunk_online_monitoring_feedback_engineering",
+        "chunk_online_monitoring_feedback_pitfalls",
+        "chunk_online_monitoring_feedback_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "monitoring",
+        "feedback",
+        "tracing",
+        "在线监控与反馈"
+      ]
+    },
+    {
+      "intent_id": "intent_agentic_rag",
+      "knowledge_node_id": "agentic_rag",
+      "canonical_queries": [
+        "Agentic RAG是什么",
+        "Agentic RAG怎么做",
+        "Agentic RAG常见错误",
+        "Agentic RAG适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_agentic_rag_principle",
+        "chunk_agentic_rag_engineering",
+        "chunk_agentic_rag_pitfalls",
+        "chunk_agentic_rag_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "agentic_rag",
+        "planning",
+        "tools",
+        "Agentic RAG"
+      ]
+    },
+    {
+      "intent_id": "intent_self_rag",
+      "knowledge_node_id": "self_rag",
+      "canonical_queries": [
+        "Self-RAG自反思检索生成是什么",
+        "Self-RAG自反思检索生成怎么做",
+        "Self-RAG自反思检索生成常见错误",
+        "Self-RAG自反思检索生成适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_self_rag_principle",
+        "chunk_self_rag_engineering",
+        "chunk_self_rag_pitfalls",
+        "chunk_self_rag_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "self_rag",
+        "reflection",
+        "adaptive_retrieval",
+        "Self-RAG自反思检索生成"
+      ]
+    },
+    {
+      "intent_id": "intent_corrective_rag",
+      "knowledge_node_id": "corrective_rag",
+      "canonical_queries": [
+        "Corrective RAG是什么",
+        "Corrective RAG怎么做",
+        "Corrective RAG常见错误",
+        "Corrective RAG适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_corrective_rag_principle",
+        "chunk_corrective_rag_engineering",
+        "chunk_corrective_rag_pitfalls",
+        "chunk_corrective_rag_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "crag",
+        "corrective_retrieval",
+        "fallback",
+        "Corrective RAG"
+      ]
+    },
+    {
+      "intent_id": "intent_graph_rag",
+      "knowledge_node_id": "graph_rag",
+      "canonical_queries": [
+        "Graph RAG是什么",
+        "Graph RAG怎么做",
+        "Graph RAG常见错误",
+        "Graph RAG适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_graph_rag_principle",
+        "chunk_graph_rag_engineering",
+        "chunk_graph_rag_pitfalls",
+        "chunk_graph_rag_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "graph_rag",
+        "knowledge_graph",
+        "multi_hop",
+        "Graph RAG"
+      ]
+    },
+    {
+      "intent_id": "intent_tool_routing_multi_source",
+      "knowledge_node_id": "tool_routing_multi_source",
+      "canonical_queries": [
+        "多源路由与工具选择是什么",
+        "多源路由与工具选择怎么做",
+        "多源路由与工具选择常见错误",
+        "多源路由与工具选择适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_tool_routing_multi_source_principle",
+        "chunk_tool_routing_multi_source_engineering",
+        "chunk_tool_routing_multi_source_pitfalls",
+        "chunk_tool_routing_multi_source_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "tool_routing",
+        "multi_source",
+        "sql",
+        "api",
+        "多源路由与工具选择"
+      ]
+    },
+    {
+      "intent_id": "intent_observability_tracing",
+      "knowledge_node_id": "observability_tracing",
+      "canonical_queries": [
+        "可观测性与链路追踪是什么",
+        "可观测性与链路追踪怎么做",
+        "可观测性与链路追踪常见错误",
+        "可观测性与链路追踪适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_observability_tracing_principle",
+        "chunk_observability_tracing_engineering",
+        "chunk_observability_tracing_pitfalls",
+        "chunk_observability_tracing_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "observability",
+        "tracing",
+        "metrics",
+        "可观测性与链路追踪"
+      ]
+    },
+    {
+      "intent_id": "intent_latency_cost_optimization",
+      "knowledge_node_id": "latency_cost_optimization",
+      "canonical_queries": [
+        "延迟与成本优化是什么",
+        "延迟与成本优化怎么做",
+        "延迟与成本优化常见错误",
+        "延迟与成本优化适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_latency_cost_optimization_principle",
+        "chunk_latency_cost_optimization_engineering",
+        "chunk_latency_cost_optimization_pitfalls",
+        "chunk_latency_cost_optimization_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "latency",
+        "cost",
+        "optimization",
+        "延迟与成本优化"
+      ]
+    },
+    {
+      "intent_id": "intent_caching_idempotency",
+      "knowledge_node_id": "caching_idempotency",
+      "canonical_queries": [
+        "缓存与幂等是什么",
+        "缓存与幂等怎么做",
+        "缓存与幂等常见错误",
+        "缓存与幂等适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_caching_idempotency_principle",
+        "chunk_caching_idempotency_engineering",
+        "chunk_caching_idempotency_pitfalls",
+        "chunk_caching_idempotency_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "cache",
+        "idempotency",
+        "versioning",
+        "缓存与幂等"
+      ]
+    },
+    {
+      "intent_id": "intent_deployment_fallback",
+      "knowledge_node_id": "deployment_fallback",
+      "canonical_queries": [
+        "部署与降级是什么",
+        "部署与降级怎么做",
+        "部署与降级常见错误",
+        "部署与降级适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_deployment_fallback_principle",
+        "chunk_deployment_fallback_engineering",
+        "chunk_deployment_fallback_pitfalls",
+        "chunk_deployment_fallback_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "deployment",
+        "fallback",
+        "resilience",
+        "部署与降级"
+      ]
+    },
+    {
+      "intent_id": "intent_continuous_updates_regression",
+      "knowledge_node_id": "continuous_updates_regression",
+      "canonical_queries": [
+        "持续更新与回归是什么",
+        "持续更新与回归怎么做",
+        "持续更新与回归常见错误",
+        "持续更新与回归适用场景"
+      ],
+      "positive_chunk_ids": [
+        "chunk_continuous_updates_regression_principle",
+        "chunk_continuous_updates_regression_engineering",
+        "chunk_continuous_updates_regression_pitfalls",
+        "chunk_continuous_updates_regression_boundary"
+      ],
+      "negative_node_ids": [
+        "rag_definition",
+        "rag_end_to_end_architecture",
+        "parametric_nonparametric_memory"
+      ],
+      "keywords": [
+        "continuous_delivery",
+        "regression",
+        "quality_gate",
+        "持续更新与回归"
+      ]
+    }
+  ]
+}
